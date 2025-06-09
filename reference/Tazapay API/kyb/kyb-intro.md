@@ -18,21 +18,21 @@ KYB's are only done once. To check if a user has their KYB completed, you can ca
 
 **For a business entity,** we require:
 
-- Business Name
-- Country
-- Address Proof
-- Incorporation Document
-- Details of Representatives, Directors and Ultimate beneficial owners (UBOs)
+* Business Name
+* Country
+* Address Proof
+* Incorporation Document
+* Details of Representatives, Directors and Ultimate beneficial owners (UBOs)
 
 **For Representatives/Owners (>25% shareholding)  of a business entity**, we require:
 
-- First Name
-- Last Name
-- Role in the business
-- Residence Country
-- Proof of Identity
-- Proof of Address
-- Ownership percent in the business
+* First Name
+* Last Name
+* Role in the business
+* Residence Country
+* Proof of Identity
+* Proof of Address
+* Ownership percent in the business
 
 > For businesses where no-one owns more than 25% of the company, please upload a signed declaration that no-one owns more than 25% of the company.
 
@@ -138,88 +138,86 @@ KYB's are only done once. To check if a user has their KYB completed, you can ca
     }
 ```
 
-
-
 ### Body Parameters:
 
-| Parameter                                   | Description                                                                                                                                                                                                                                                  |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| account_id<br><small>required</small>       | `string` Tazapay account UUID of the user                                                                                                                                                                                                                    |
-| application_type<br><small>required</small> | `string` Type of the application. `individival` or`business` <br>For business details, please check [business](https://developer.tazapay.com/docs/tazapay-API-documentation/ZG9jOjI4MzI2OTA2-post-kyb#business)                                              |
-| entity_name<br><small>required</small>      | `string` Name of the business/Individual (for example - "My Shop"/"John Doe")                                                                                                                                                                                |
-| submit<br><small>required</small>           | `boolean` To ensure the KYB application is picked up for verification, please pass "submit":true.<br><small>You cannot update the KYB application anymore after 'submit' : 'true' is passed. To keep the option of editing, pass 'submit' : 'false'.</small> |
-| business<br><small>required</small>         | `representative` Business details only if business <br> Please check [business](https://developer.tazapay.com/docs/tazapay-API-documentation/ZG9jOjI4MzI2OTA2-post-kyb#business)                                                                             |
-| representative<br><small>required</small>   | `representative` Representative details only if business <br> Please check [representative](https://developer.tazapay.com/docs/tazapay-API-documentation/ZG9jOjI4MzI2OTA2-post-kyb#representative)                                                           |
-| owner<br><small>required</small>            | `owner` List of owner with their details only if business <br> Please check [owner](https://developer.tazapay.com/docs/tazapay-API-documentation/ZG9jOjI4MzI2OTA2-post-kyb#owner)                                                                            |
+| Parameter                                    | Description                                                                                                                                                                                                                                                  |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| account\_id<br><small>required</small>       | `string` Tazapay account UUID of the user                                                                                                                                                                                                                    |
+| application\_type<br><small>required</small> | `string` Type of the application. `individival` or`business` <br>For business details, please check [business](https://developer.tazapay.com/docs/tazapay-API-documentation/ZG9jOjI4MzI2OTA2-post-kyb#business)                                              |
+| entity\_name<br><small>required</small>      | `string` Name of the business/Individual (for example - "My Shop"/"John Doe")                                                                                                                                                                                |
+| submit<br><small>required</small>            | `boolean` To ensure the KYB application is picked up for verification, please pass "submit":true.<br><small>You cannot update the KYB application anymore after 'submit' : 'true' is passed. To keep the option of editing, pass 'submit' : 'false'.</small> |
+| business<br><small>required</small>          | `representative` Business details only if business <br> Please check [business](https://developer.tazapay.com/docs/tazapay-API-documentation/ZG9jOjI4MzI2OTA2-post-kyb#business)                                                                             |
+| representative<br><small>required</small>    | `representative` Representative details only if business <br> Please check [representative](https://developer.tazapay.com/docs/tazapay-API-documentation/ZG9jOjI4MzI2OTA2-post-kyb#representative)                                                           |
+| owner<br><small>required</small>             | `owner` List of owner with their details only if business <br> Please check [owner](https://developer.tazapay.com/docs/tazapay-API-documentation/ZG9jOjI4MzI2OTA2-post-kyb#owner)                                                                            |
 
 ### business:
 
-| Parameter                                         | Description                                                                                                                                                                          |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| name<br><small>required</small>                   | `string` Name of the business. Example: "My Shop"                                                                                                                                    |
-| type<br><small>optional</small>                   | `string` Can be either `Sole Proprietorship`, `Partnership`, `Company` or `Other`                                                                                                    |
-| incorporation_no<br><small>optional</small>       | `string` Incorporation number for the business                                                                                                                                       |
-| address_line_1<br><small>optional</small>         | `string` Address line 1                                                                                                                                                              |
-| address_line_2<br><small>optional</small>         | `string` Address line 2                                                                                                                                                              |
-| city<br><small>optional</small>                   | `string` Business's city                                                                                                                                                             |
-| state<br><small>optional</small>                  | `string` Business's state                                                                                                                                                            |
-| country<br><small>required</small>                | `string` Business's country                                                                                                                                                          |
-| zip_code<br><small>optional</small>               | `string` Zip code - part of the address                                                                                                                                              |
-| trading_name<br><small>optional</small>           | `string` Trading name for the business                                                                                                                                               |
-| years_in_business <br><small>optional</small>     | `string` Number of years in which the business is operational.<br> Can be: `< 1 year`,`1-5 years`,`5-10 years`,or`> 10 years`                                                        |
-| annual_turnover<br><small>optional</small>        | `string` Annual turnover for the Business                                                                                                                                            |
-| website <br><small>optional</small>               | `string` Business website URL                                                                                                                                                        |
-| date_of_incorporation <br><small>optional</small> | `string` Date of incorporation for the business                                                                                                                                      |
-| custom_attrs  <br><small>optional</small>         | `json` Tunnelled add-on fields                                                                                                                                                       |
-| documents <br><small>required</small>             | `object` List of documents to be used for verification<br>Please check [documents](https://developer.tazapay.com/docs/tazapay-API-documentation/ZG9jOjI4MzI2OTA2-post-kyb#documents) |
+| Parameter                                           | Description                                                                                                                                                                          |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| name<br><small>required</small>                     | `string` Name of the business. Example: "My Shop"                                                                                                                                    |
+| type<br><small>optional</small>                     | `string` Can be either `Sole Proprietorship`, `Partnership`, `Company` or `Other`                                                                                                    |
+| incorporation\_no<br><small>optional</small>        | `string` Incorporation number for the business                                                                                                                                       |
+| address\_line\_1<br><small>optional</small>         | `string` Address line 1                                                                                                                                                              |
+| address\_line\_2<br><small>optional</small>         | `string` Address line 2                                                                                                                                                              |
+| city<br><small>optional</small>                     | `string` Business's city                                                                                                                                                             |
+| state<br><small>optional</small>                    | `string` Business's state                                                                                                                                                            |
+| country<br><small>required</small>                  | `string` Business's country                                                                                                                                                          |
+| zip\_code<br><small>optional</small>                | `string` Zip code - part of the address                                                                                                                                              |
+| trading\_name<br><small>optional</small>            | `string` Trading name for the business                                                                                                                                               |
+| years\_in\_business <br><small>optional</small>     | `string` Number of years in which the business is operational.<br> Can be: `< 1 year`,`1-5 years`,`5-10 years`,or`> 10 years`                                                        |
+| annual\_turnover<br><small>optional</small>         | `string` Annual turnover for the Business                                                                                                                                            |
+| website <br><small>optional</small>                 | `string` Business website URL                                                                                                                                                        |
+| date\_of\_incorporation <br><small>optional</small> | `string` Date of incorporation for the business                                                                                                                                      |
+| custom\_attrs  <br><small>optional</small>          | `json` Tunnelled add-on fields                                                                                                                                                       |
+| documents <br><small>required</small>               | `object` List of documents to be used for verification<br>Please check [documents](https://developer.tazapay.com/docs/tazapay-API-documentation/ZG9jOjI4MzI2OTA2-post-kyb#documents) |
 
 ### representative:
 
-| Parameter                                     | Description                                                                                                                                                                       |
-| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| first_name<br><small>required</small>         | `string` Representative's first name                                                                                                                                              |
-| last_name<br><small>required</small>          | `string` Representative's last name                                                                                                                                               |
-| dob<br><small>optional</small>                | `string` Representative's date of birth                                                                                                                                           |
-| address_line_1<br><small>>optional</small>    | `string` Address line 1                                                                                                                                                           |
-| address_line_2<br><small>>optional</small>    | `string` Address line 2                                                                                                                                                           |
-| city<br><small>optional</small>               | `string` Representative's city                                                                                                                                                    |
-| state<br><small>optional</small>              | `string` Representative's state                                                                                                                                                   |
-| country<br><small>optional</small>            | `string` Representative's country                                                                                                                                                 |
-| zip_code<br><small>>optional</small>          | `string` Zip code                                                                                                                                                                 |
-| mobile_number <br><small>optional</small>     | `string` Representative's mobile number                                                                                                                                           |
-| ownership_percent <br><small>required</small> | `int` Representative's ownership percentage. Value must be between 0-100                                                                                                          |
-| roles<br><small>required</small>              | `string[]` Representative's role. Can be one or more than one of these: `Director` `Shareholder` `Beneficial Owner` `Authorised Signatory` `Authorized Representative` or `Other` |
-| documents<br><small>required</small>          | `documents` List of documents to be used for verification <br> Please check [documents](https://developer.tazapay.com/docs/tazapay-API-documentation/bb44cec3c939b-kyb#documents) |
+| Parameter                                      | Description                                                                                                                                                                       |
+| ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| first\_name<br><small>required</small>         | `string` Representative's first name                                                                                                                                              |
+| last\_name<br><small>required</small>          | `string` Representative's last name                                                                                                                                               |
+| dob<br><small>optional</small>                 | `string` Representative's date of birth                                                                                                                                           |
+| address\_line\_1<br><small>>optional</small>   | `string` Address line 1                                                                                                                                                           |
+| address\_line\_2<br><small>>optional</small>   | `string` Address line 2                                                                                                                                                           |
+| city<br><small>optional</small>                | `string` Representative's city                                                                                                                                                    |
+| state<br><small>optional</small>               | `string` Representative's state                                                                                                                                                   |
+| country<br><small>optional</small>             | `string` Representative's country                                                                                                                                                 |
+| zip\_code<br><small>>optional</small>          | `string` Zip code                                                                                                                                                                 |
+| mobile\_number <br><small>optional</small>     | `string` Representative's mobile number                                                                                                                                           |
+| ownership\_percent <br><small>required</small> | `int` Representative's ownership percentage. Value must be between 0-100                                                                                                          |
+| roles<br><small>required</small>               | `string[]` Representative's role. Can be one or more than one of these: `Director` `Shareholder` `Beneficial Owner` `Authorised Signatory` `Authorized Representative` or `Other` |
+| documents<br><small>required</small>           | `documents` List of documents to be used for verification <br> Please check [documents](https://developer.tazapay.com/docs/tazapay-API-documentation/bb44cec3c939b-kyb#documents) |
 
 ### owner:
 
-| Parameter                                     | Description                                                                                                                                                                       |
-| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| first_name<br><small>required</small>         | `string` Owner's first name                                                                                                                                                       |
-| last_name<br><small>required</small>          | `string` Owner's last name                                                                                                                                                        |
-| dob<br><small>optional</small>                | `string` Owner's date of birth                                                                                                                                                    |
-| address_line_1<br><small>optional</small>     | `string` Address line 1                                                                                                                                                           |
-| address_line_2<br><small>optional</small>     | `string` Address line 2                                                                                                                                                           |
-| city<br><small>optional</small>               | `string` Owner's city                                                                                                                                                             |
-| state<br><small>optional</small>              | `string` Owner's state                                                                                                                                                            |
-| country<br><small>optional</small>            | `string` Owner's country                                                                                                                                                          |
-| zip_code<br><small>optional</small>           | `string` Zip code                                                                                                                                                                 |
-| mobile_number <br><small>optional</small>     | `string` Owner's mobile number                                                                                                                                                    |
-| ownership_percent <br><small>required</small> | `int` Owner's ownership percentage. Value must be between 0-100                                                                                                                   |
-| roles<br><small>required</small>              | `string[]` Owner's role. Can be one or more than one of these: `Director`, `Shareholder`, `Beneficial Owner`, `Authorised Signatory`, `Authorized Representative` or `Other`      |
-| documents<br><small>required</small>          | `documents` List of documents to be used for verification <br> Please check [documents](https://developer.tazapay.com/docs/tazapay-API-documentation/bb44cec3c939b-kyb#documents) |
+| Parameter                                      | Description                                                                                                                                                                       |
+| ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| first\_name<br><small>required</small>         | `string` Owner's first name                                                                                                                                                       |
+| last\_name<br><small>required</small>          | `string` Owner's last name                                                                                                                                                        |
+| dob<br><small>optional</small>                 | `string` Owner's date of birth                                                                                                                                                    |
+| address\_line\_1<br><small>optional</small>    | `string` Address line 1                                                                                                                                                           |
+| address\_line\_2<br><small>optional</small>    | `string` Address line 2                                                                                                                                                           |
+| city<br><small>optional</small>                | `string` Owner's city                                                                                                                                                             |
+| state<br><small>optional</small>               | `string` Owner's state                                                                                                                                                            |
+| country<br><small>optional</small>             | `string` Owner's country                                                                                                                                                          |
+| zip\_code<br><small>optional</small>           | `string` Zip code                                                                                                                                                                 |
+| mobile\_number <br><small>optional</small>     | `string` Owner's mobile number                                                                                                                                                    |
+| ownership\_percent <br><small>required</small> | `int` Owner's ownership percentage. Value must be between 0-100                                                                                                                   |
+| roles<br><small>required</small>               | `string[]` Owner's role. Can be one or more than one of these: `Director`, `Shareholder`, `Beneficial Owner`, `Authorised Signatory`, `Authorized Representative` or `Other`      |
+| documents<br><small>required</small>           | `documents` List of documents to be used for verification <br> Please check [documents](https://developer.tazapay.com/docs/tazapay-API-documentation/bb44cec3c939b-kyb#documents) |
 
 ### documents:
 
 | Parameter                                            | Description                                                                               |
 | ---------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| proof_type <br><small>required</small>               | `string` Proof type. Can be `Identity`, `Business`, `Person`, `Additional Doc`, `Address` |
+| proof\_type <br><small>required</small>              | `string` Proof type. Can be `Identity`, `Business`, `Person`, `Additional Doc`, `Address` |
 | type<br><small>required</small>                      | `string` Document type. Can be: `Driver's License`, `National ID`, `Passport`, or `Other` |
 | name<br><small>required only if type=`Other`</small> | `string`  Document type if not listed in "type"                                           |
 | url<br><small>required</small>                       | `string`  Direct download link (dynamically downloadable format)                          |
 | description<br><small>optional</small>               | `string` Description about the document                                                   |
-| file_name<br><small>required</small>                 | `string` Name of the file attached                                                        |
+| file\_name<br><small>required</small>                | `string` Name of the file attached                                                        |
 
-> 🚧 
-> 
+> 🚧
+>
 > The document URL should be uploaded in downloadable format (dynamic)
