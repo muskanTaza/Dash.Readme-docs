@@ -35,7 +35,7 @@ Users can use the below payment method type to create a transaction using VNPTPa
 
 # Limits and Expiration
 
-The following is the upper and lower limits for VNPTPay  transactions:
+The following is the upper and lower limits for VNPTPay transactions:
 
 - **Minimum Limit**: USD 0.07
 - **Maximum Limit**: USD 1800
