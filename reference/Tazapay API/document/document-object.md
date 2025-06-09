@@ -36,14 +36,14 @@ next:
 
 ### Document
 
-| Field       | Type                   | Description                                                                                           |
-| ----------- | ---------------------- | ----------------------------------------------------------------------------------------------------- |
-| id          | string                 | The unique Tazapay identifier for the document.                                                       |
-| object      | string                 | The type of object, which is "document".                                                              |
-| name        | string                 | The name of the document.                                                                             |
-| description | string                 | A description of the document.                                                                        |
-| url         | string                 | The URL where the uploaded document can be accessed.                                                  |
-| type        | enum                   | The type of the document [Values - goods_delivery_proof, service_delivery_proof, tracking_url, other] |
-| reference   | string                 | The Tazapay reference ID of the related object, such as a customer or transaction.                    |
-| created_at  | string (ISO Timestamp) | The date and time when the document was uploaded (in ISO format).                                     |
-| metadata    | json                   | Set of  key value pairs associated with the document.                                                 |
+| Field       | Type                   | Description                                                                                                                                                                            |
+| ----------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id          | string                 | The unique Tazapay identifier for the document.                                                                                                                                        |
+| object      | string                 | The type of object, which is "document".                                                                                                                                               |
+| name        | string                 | The name of the document.                                                                                                                                                              |
+| description | string                 | A description of the document.                                                                                                                                                         |
+| url         | string                 | The URL where the uploaded document can be accessed.                                                                                                                                   |
+| type        | enum                   | The type of the document [Values - goods\_delivery\_proof, service\_delivery\_proof, tracking\_url, other][Values - goods_delivery_proof, service_delivery_proof, tracking_url, other] |
+| reference   | string                 | The Tazapay reference ID of the related object, such as a customer or transaction.                                                                                                     |
+| created\_at | string (ISO Timestamp) | The date and time when the document was uploaded (in ISO format).                                                                                                                      |
+| metadata    | json                   | Set of  key value pairs associated with the document.                                                                                                                                  |
