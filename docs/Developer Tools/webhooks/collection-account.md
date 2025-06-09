@@ -12,12 +12,12 @@ next:
 ---
 # Global Collection Account status specific events
 
-| Event                                    | Description                             | Default (On / Off) |
-| :--------------------------------------- | :-------------------------------------- | :----------------- |
-| collection_account.creation_succeeded    | Triggered when the status is `enabled`  | On                 |
-| collection_account.disablement_succeeded | Triggered when the status is `disabled` | On                 |
+| Event                                      | Description                             | Default (On / Off) |
+| :----------------------------------------- | :-------------------------------------- | :----------------- |
+| collection\_account.creation\_succeeded    | Triggered when the status is `enabled`  | On                 |
+| collection\_account.disablement\_succeeded | Triggered when the status is `disabled` | On                 |
 
-## collection_account.creation_succeeded
+## collection\_account.creation\_succeeded
 
 ```json json
 {
@@ -61,7 +61,7 @@ next:
 }
 ```
 
-## collection_account.disablement_succeeded
+## collection\_account.disablement\_succeeded
 
 ```json
 {
