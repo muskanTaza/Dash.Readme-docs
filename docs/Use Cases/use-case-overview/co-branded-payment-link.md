@@ -32,7 +32,7 @@ For a payment link to be initiated, two user entities need to exist in Tazapay�
 
 The following API calls would need to be used:
 
-1. [Create User](ref:create-user-api)  to create the marketplace and seller entities if they don't exist in Tazapay's database (requires email ID, country, ind_bus_type, and business name or first name/last name as per the ind_bus_type)
+1. [Create User](ref:create-user-api)  to create the marketplace and seller entities if they don't exist in Tazapay's database (requires email ID, country, ind\_bus\_type, and business name or first name/last name as per the ind\_bus\_type)
 2. [Get User by Email](ref:get-user-by-email-api)  for existing Tazapay users and retrieving their UUID
 3. [Add Bank](ref:add-bank-api)  to seller users
 4. [Get Bank](ref:get-bank-api) if the users’ bank account details are on Tazapay already
@@ -44,20 +44,20 @@ As a marketplace/platform, your sellers should enter their buyer & transaction d
 
 Within the same “Generate Payment Link” interface, the transaction details can also be captured. These would include:
 
-1. seller_id: seller’s UUID
-2. buyer_id: UUID created for the buyer after clicking “Generate Payment Link”
-3. initiated_by: the seller’s UUID since this is seller initiated
-4. invoice_amount: actual amount of the transaction
-5. invoice_currency: the currency of the transaction (can be the seller’s local currency or USD)
-6. txn_description: description of the transaction (why is this payment link made)
+1. seller\_id: seller’s UUID
+2. buyer\_id: UUID created for the buyer after clicking “Generate Payment Link”
+3. initiated\_by: the seller’s UUID since this is seller initiated
+4. invoice\_amount: actual amount of the transaction
+5. invoice\_currency: the currency of the transaction (can be the seller’s local currency or USD)
+6. txn\_description: description of the transaction (why is this payment link made)
 
 These details would be entered on the [create escrow](ref:create-escrow-api) API (our unit for creating transactions).
 
- Once the API call is successful, you will get a txn_no that looks like this:`2022-00000`
+ Once the API call is successful, you will get a txn\_no that looks like this:`2022-00000`
 
 ### Creating the Co-Branded Payment Link
 
-Once you have completed the [create escrow](ref:create-escrow-api) API call, take the txn_no and call the [create payment](ref:create-payment-api) API. 
+Once you have completed the [create escrow](ref:create-escrow-api) API call, take the txn\_no and call the [create payment](ref:create-payment-api) API. 
 
 The response message should provide a URL where the seller can collect the payment from their buyer. 
 
