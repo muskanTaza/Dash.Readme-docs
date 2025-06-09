@@ -12,29 +12,14 @@ next:
 ---
 For the best performance of Tazapay's Fraud Detection system, you should integrate the risk SDK into every payment process initiated by shoppers. It captures advanced signals that are leveraged in Tazapay's fraud model. These signals include:
 
-- Device Identification
-- Geolocation
-- Spoofing Attempts
-- Fingerprinting Data
+* Device Identification
+* Geolocation
+* Spoofing Attempts
+* Fingerprinting Data
 
 # How it works
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/fc3ef89-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/fc3ef89-image.png" />
 
 # Integrate the risk SDK
 
@@ -54,9 +39,9 @@ For the best performance of Tazapay's Fraud Detection system, you should integra
 ```
 
 > 🚧 Dynamic Injection
-> 
+>
 > Before injecting the SDK dynamically, please use the following event listener to determine when the script has finished loading.
-> 
+>
 > ```
 > window.addEventListener('tazapaySDKReady', () => {
 > // continue to use library 
@@ -73,23 +58,23 @@ The above code creates an instance of the Tazapay object. This created object no
 
 > You can fetch the public key from the <a href="https://dashboard.tazapay.com"> Tazapay dashboard</a>.
 
-## Retrieve the session_id
+## Retrieve the session\_id
 
-When the customer clicks to pay, publish the device data and retrieve the session_id
+When the customer clicks to pay, publish the device data and retrieve the session\_id
 
 ```Text Javascript
 const session_id = await tazapay.publishRiskData();
 ```
 
-> The function tazapay.publishRiskData() will create a promise when called which resolves into a session_id string.
+> The function tazapay.publishRiskData() will create a promise when called which resolves into a session\_id string.
 
-## Attach the session_id to the transaction
+## Attach the session\_id to the transaction
 
-- Pass the session_id to your server.
-- Pass the session_id in the API calls to the following depending on your use case
-  - <a href = "https://docs.tazapay.com/reference/create-checkout"> Create Checkout</a>
-  - <a href = "https://docs.tazapay.com/reference/create-payin"> Create Payin</a>
-  - <a href = "https://docs.tazapay.com/reference/confirm-payin"> Confirm Payin</a>
-  - <a href = "https://docs.tazapay.com/reference/create-escrow-api"> Create Escrow</a>
+* Pass the session\_id to your server.
+* Pass the session\_id in the API calls to the following depending on your use case
+  * <a href = "https://docs.tazapay.com/reference/create-checkout"> Create Checkout</a>
+  * <a href = "https://docs.tazapay.com/reference/create-payin"> Create Payin</a>
+  * <a href = "https://docs.tazapay.com/reference/confirm-payin"> Confirm Payin</a>
+  * <a href = "https://docs.tazapay.com/reference/create-escrow-api"> Create Escrow</a>
 
-<br>
+<br />
