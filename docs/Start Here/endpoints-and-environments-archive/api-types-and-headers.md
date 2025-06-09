@@ -18,11 +18,12 @@ Tazapay has 2 types of APIs: Hosted Page & Native
 * Hosted page API: When you make a call to a Tazapay hosted API, Tazapay will return a URL, to which the user can be redirected. Once the task is completed, the user will be directed back to your platform.
 
 ## API Headers
+
 For each and every API call, you need to include the following in the header section:
 
-| Key           | Value                                         |
-|---------------|-----------------------------------------------|
-| accesskey     | see: [Getting Started with Tazapay](doc:getting-started)   |
-| salt          | salt used in signature computation            |
-| signature     | see: [Signature Calculation](doc:signature-calculation)                      |
-| timestamp     | timestamp used in signature computation   |
+| Key       | Value                                                    |
+| --------- | -------------------------------------------------------- |
+| accesskey | see: [Getting Started with Tazapay](doc:getting-started) |
+| salt      | salt used in signature computation                       |
+| signature | see: [Signature Calculation](doc:signature-calculation)  |
+| timestamp | timestamp used in signature computation                  |
