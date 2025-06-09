@@ -43,9 +43,9 @@ To ensure your integration can handle different card responses, it's important t
 
 When using test cards, keep the following in mind:
 
-- **Do not use real card information**: Always use the provided test card numbers to avoid any unintended real transactions.
-- **Expiry dates**: You can use any future date for the expiry date unless specified otherwise.
-- **Security code (CVV)**: Use the provided CVV for each card number. For test purposes, any three-digit code should be acceptable.
+* **Do not use real card information**: Always use the provided test card numbers to avoid any unintended real transactions.
+* **Expiry dates**: You can use any future date for the expiry date unless specified otherwise.
+* **Security code (CVV)**: Use the provided CVV for each card number. For test purposes, any three-digit code should be acceptable.
 
 ### Common Testing Scenarios
 
