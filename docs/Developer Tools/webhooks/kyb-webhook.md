@@ -10,13 +10,13 @@ metadata:
 next:
   description: ''
 ---
-| Event               | Description                                             | Default (on/off) |
-| ------------------- | ------------------------------------------------------- | ---------------- |
-| kyb.initiated       | Status of the KYB object when the KYB object is created | On               |
-| kyb.submitted       | Status of the KYB object changes to submitted.          | On               |
-| kyb.requires_action | Status of the KYB object changes to requires_action     | On               |
-| kyb.approved        | Status of the KYB object changes to approved            | On               |
-| kyb.rejected        | Status of the KYB object changes to rejected            | On               |
+| Event                | Description                                             | Default (on/off) |
+| -------------------- | ------------------------------------------------------- | ---------------- |
+| kyb.initiated        | Status of the KYB object when the KYB object is created | On               |
+| kyb.submitted        | Status of the KYB object changes to submitted.          | On               |
+| kyb.requires\_action | Status of the KYB object changes to requires\_action    | On               |
+| kyb.approved         | Status of the KYB object changes to approved            | On               |
+| kyb.rejected         | Status of the KYB object changes to rejected            | On               |
 
 > 👍 📧 For a specific KYB object, each of the above events can be created multiple times
 
@@ -61,7 +61,7 @@ For KYB, the events and subsequent webhooks are based on the status updation for
 }
 ```
 
-### kyb.requires_action
+### kyb.requires\_action
 
 ```json
 {
