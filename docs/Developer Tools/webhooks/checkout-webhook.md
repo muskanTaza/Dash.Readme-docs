@@ -10,13 +10,13 @@ metadata:
 next:
   description: ''
 ---
-## Payment_Status-specific events:
+## Payment\_Status-specific events:
 
-These are the events created and triggered when the payment_status of the checkout object changes. 
+These are the events created and triggered when the payment\_status of the checkout object changes. 
 
-| Event         | Description                                            | Default (on/off) |
-| ------------- | ------------------------------------------------------ | ---------------- |
-| checkout.paid | payment_status of the checkout object changes to paid. | On               |
+| Event         | Description                                             | Default (on/off) |
+| ------------- | ------------------------------------------------------- | ---------------- |
+| checkout.paid | payment\_status of the checkout object changes to paid. | On               |
 
 ## checkout.paid
 
@@ -55,18 +55,18 @@ These are the events created and triggered when the payment_status of the checko
 }
 ```
 
-## Payment_Attempt Specific Events:
+## Payment\_Attempt Specific Events:
 
 These events are created and triggered when something of interest happens for a payment attempt of a checkout.
 
-| Event                      | Description                                            | Default (on/off) |
-| -------------------------- | ------------------------------------------------------ | ---------------- |
-| payment_attempt.created    | When a payment_attempt is created for the checkout     | On               |
-| payment_attempt.failed     | When a payment_attempt fails for the checkout          | On               |
-| payment_attempt.processing | When the payment_attempt moves to the processing state | Off              |
-| payment_attempt.succeeded  | When the payment_attempt succeeds                      | On               |
+| Event                       | Description                                             | Default (on/off) |
+| --------------------------- | ------------------------------------------------------- | ---------------- |
+| payment\_attempt.created    | When a payment\_attempt is created for the checkout     | On               |
+| payment\_attempt.failed     | When a payment\_attempt fails for the checkout          | On               |
+| payment\_attempt.processing | When the payment\_attempt moves to the processing state | Off              |
+| payment\_attempt.succeeded  | When the payment\_attempt succeeds                      | On               |
 
-### payment_attempt.created
+### payment\_attempt.created
 
 ```Text JSON
 {
@@ -86,7 +86,7 @@ These events are created and triggered when something of interest happens for a 
 }
 ```
 
-### payment_attempt.failed
+### payment\_attempt.failed
 
 ```json json
 {
@@ -106,7 +106,7 @@ These events are created and triggered when something of interest happens for a 
 }
 ```
 
-### payment_attempt.processing
+### payment\_attempt.processing
 
 ```json json
 {
@@ -126,7 +126,7 @@ These events are created and triggered when something of interest happens for a 
 }
 ```
 
-### payment_attempt.succeeded
+### payment\_attempt.succeeded
 
 ```json json
 {
@@ -150,11 +150,11 @@ These events are created and triggered when something of interest happens for a 
 
 These events are created and triggered when something interesting happens with the checkout object not related to a status change.
 
-| Event                          | Description                                    | Default (on/off) |
-| ------------------------------ | ---------------------------------------------- | ---------------- |
-| checkout.created               | A checkout object is created                   | Off              |
-| checkout.expired               | An active checkout object gets expired         | On               |
-| checkout.tax_invoice_generated | Triggered when Tazapay generates a tax invoice | On               |
+| Event                            | Description                                    | Default (on/off) |
+| -------------------------------- | ---------------------------------------------- | ---------------- |
+| checkout.created                 | A checkout object is created                   | Off              |
+| checkout.expired                 | An active checkout object gets expired         | On               |
+| checkout.tax\_invoice\_generated | Triggered when Tazapay generates a tax invoice | On               |
 
 ### checkout.created
 
@@ -194,7 +194,7 @@ These events are created and triggered when something interesting happens with t
 }
 ```
 
-### checkout.tax_invoice_generated
+### checkout.tax\_invoice\_generated
 
 ```Text json
 {
