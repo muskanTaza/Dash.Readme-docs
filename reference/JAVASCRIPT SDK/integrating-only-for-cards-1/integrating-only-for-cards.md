@@ -98,12 +98,12 @@ window.tazapay.checkout({
 2. When the user clicks on your custom button, validate the details mentioned in step 4.
 3. You can update the state of your custom button by listening to the PayButtonState event.
 
-> 🚧 
-> 
+> 🚧
+>
 > If you are using a custom payment button, to avoid potential issues such as multiple clicks or double debits, utilize our PayButtonState event to accurately retrieve button states (similar to those we provide for our built-in button). 
-> 
+>
 > You should only enable your Pay button once the customer has passed all the validations and there are no `validation failed` events. 
-> 
+>
 > You should make sure to call the confirmCardPayment() function only after you have disabled the custom pay button. Only enable the pay button after you receive an error callback.
 
 ```javascript
@@ -130,7 +130,7 @@ Validate the payment payload before creating a transaction.
 ### Step 4A: Validate Method
 
 > 👍 Billing Details Validation
-> 
+>
 > It is required for you to make sure that the billingDetails passing are validated from your side. Here are the [validation rules](https://docs.google.com/document/d/19QEKZ0bq1T-Qm9y4Lgj-cOEHWx-h2-rf0sCAtYxNul8/edit) we follow to validate billing details, we recommend that you implement these rules or validate method on your end to validate details as the customer adds billing information, ensuring a seamless payment flow.
 
 1. By default card details will be validated by calling the validate method.
@@ -227,9 +227,9 @@ Once all details validated are valid proceed payment flow
 ### Step 5A: Fetching token for a session (server-side)
 
 > 👍 Idempotent Checkout Sessions
-> 
+>
 > It is required for you to make sure that the requests to create checkout sessions are idempotent. As idempotency key, you can pass the unique order number on your system. You can refer <a href = "https://docs.tazapay.com/reference/idempotent-requests" target="_blank">this guide</a> for the implementation.
-> 
+>
 > This will ensure only unique checkout sessions are created corresponding to a unique customer journey on your website/application.
 
 You can fetch the token from the response of the checkout session. Please refer to [this document](https://docs.tazapay.com/docs/checkout-intro) for creating a checkout session.
