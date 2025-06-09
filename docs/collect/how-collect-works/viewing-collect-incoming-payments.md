@@ -14,52 +14,22 @@ You can view collects in your collection accounts on [Tazapay's dashboard](https
 
 ### Accessing Transactions
 
-- Once logged in, click on the`Transactions` tab located on the left-hand side vertical navigation bar.
-- A listing screen will appear displaying the following columns:
-  - **Payment ID:** A unique identifier for each collect, starts with `col_`
-  - **Status:** The status of the collect - succeeded, failed or on_hold
-  - **Invoice Amt:** The amount in the currency collected
-  - **Date:** The timestamp at which the collect was created
-  - **Payment Method:** Indicates whether the collect was made using Local bank Transfer or Wire Transfer
-  - **Settled Date:** The date on which the collected funds were transferred to your registered bank account.
+* Once logged in, click on the`Transactions` tab located on the left-hand side vertical navigation bar.
+* A listing screen will appear displaying the following columns:
+  * **Payment ID:** A unique identifier for each collect, starts with `col_`
+  * **Status:** The status of the collect - succeeded, failed or on\_hold
+  * **Invoice Amt:** The amount in the currency collected
+  * **Date:** The timestamp at which the collect was created
+  * **Payment Method:** Indicates whether the collect was made using Local bank Transfer or Wire Transfer
+  * **Settled Date:** The date on which the collected funds were transferred to your registered bank account.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8ef873b-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/8ef873b-image.png" />
 
 ### Searching for collection records
 
 Use the search tab at the top-left corner of the screen to find a specific collect ID. You can perform a full search with the exact ID or a partial search with a part of the ID.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/573ff95-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/573ff95-image.png" />
 
 ### Viewing Collect Details
 
@@ -100,25 +70,11 @@ To view the expanded details for a collect, you can simply click on the Payment 
 
 ### Wallet
 
-| Fields                       | Description                                    |
-| :--------------------------- | :--------------------------------------------- |
-| payer_wallet.deposit_address | Deposit address of the send on the block chain |
-| payer_wallet.type            | Type of wallet used like Ethereum , Tron etc   |
+| Fields                         | Description                                    |
+| :----------------------------- | :--------------------------------------------- |
+| payer\_wallet.deposit\_address | Deposit address of the send on the block chain |
+| payer\_wallet.type             | Type of wallet used like Ethereum , Tron etc   |
 
 <br />
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/74e3662-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
+<Image align="center" className="border" border={true} src="https://files.readme.io/74e3662-image.png" />
