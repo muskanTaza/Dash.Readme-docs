@@ -99,7 +99,7 @@ window.tazapay.checkout({
 
 ### Step 3: Trigger the payment flow
 
-Once the client_token is available, use the confirmCardPayment method from SDK to trigger the payment flow.
+Once the client\_token is available, use the confirmCardPayment method from SDK to trigger the payment flow.
 
 1. Pass the client token to SDK via confirmCardPayment method
 2. Additionally pass the billing details object
