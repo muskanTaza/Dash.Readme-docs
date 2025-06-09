@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-The fields -  _address_, _city_, _state_ and _zip_code_ are optional for most of the countries in the POST /v1/bank, but they are mandatory for some specific countries and their respective currencies. Please refer the list below where the parameters - address, city, state and zip_code are Mandatory.
+The fields -  *address*, *city*, *state* and *zip\_code* are optional for most of the countries in the POST /v1/bank, but they are mandatory for some specific countries and their respective currencies. Please refer the list below where the parameters - address, city, state and zip\_code are Mandatory.
 
 | Country              | Currency | Bank Codes           |
 | :------------------- | :------- | :------------------- |
