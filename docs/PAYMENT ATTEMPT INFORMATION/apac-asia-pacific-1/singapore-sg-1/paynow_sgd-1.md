@@ -12,10 +12,10 @@ metadata:
 next:
   description: ''
 ---
-| Field        | type   | Description                                         |
-| :----------- | :----- | :-------------------------------------------------- |
-| payer_name   | string | Verified Name of the payer                          |
-| reference_id | string | Reference number associated with the paynow payment |
+| Field         | type   | Description                                         |
+| :------------ | :----- | :-------------------------------------------------- |
+| payer\_name   | string | Verified Name of the payer                          |
+| reference\_id | string | Reference number associated with the paynow payment |
 
 ```Text JSON
 "payment_method_details":{
