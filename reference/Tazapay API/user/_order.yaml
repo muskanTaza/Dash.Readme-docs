@@ -2,3 +2,4 @@
 - create-user-api
 - get-user-by-email-api
 - get-user-by-id-api
+- update-user-api
