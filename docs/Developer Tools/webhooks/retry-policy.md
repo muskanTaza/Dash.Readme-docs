@@ -14,12 +14,12 @@ If Tazapay does not receive a 2xx status from your endpoint as an acknowledgemen
 
 Tazapay keeps retrying for the below error codes:
 
-- StatusBadRequest - 400
-- StatusNotFound - 404
-- StatusRequestTimeout - 408
-- StatusConflict - 409
-- StatusPreconditionFailed - 412
-- StatusInternalServerError - 500
+* StatusBadRequest - 400
+* StatusNotFound - 404
+* StatusRequestTimeout - 408
+* StatusConflict - 409
+* StatusPreconditionFailed - 412
+* StatusInternalServerError - 500
 
 The time between each retry increases exponentially by a power of 2 with jitter till a period of 8 hours. The first retry starts after 1 second of original webhook delivery. 
 
