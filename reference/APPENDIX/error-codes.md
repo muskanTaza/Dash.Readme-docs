@@ -12,8 +12,8 @@ next:
 ---
 Tazapay uses conventional HTTP responses to indicate success or failure of a request and its intended operation. 2xx status codes denote that a requested operation was performed successfully. 5xx status codes denote an error with Tazapay's servers. 4xx status codes denote that the operation could not be performed given the information passed on the request body, they can be handled by modifying the request body. 
 
-> 📘 
-> 
+> 📘
+>
 > 4xx status codes carry <a href = "https://tazapay-api-developer.readme.io/reference/users-2" target="_blank">error codes</a> which explain in brief the reason the request failed to perform the operation.
 
 ### HTTP Status Codes:
