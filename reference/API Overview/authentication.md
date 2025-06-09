@@ -10,25 +10,25 @@ metadata:
 next:
   description: ''
 ---
-The Tazapay API uses <a href="https://en.wikipedia.org/wiki/Basic_access_authentication" target="_blank">Basic Access Authentication</a> or `BASIC AUTH` to authenticate requests. When you sign up for an account, you can view and manage your keys on <a href="https://dashboard.tazapay.com" target="_blank">the Tazapay dashboard</a>. Tazapay API provides you with two types of keys, the API_Key and the API_Secret. You will need to authenticate by providing the base64 encoded key pair in the request Authorization header. 
+The Tazapay API uses <a href="https://en.wikipedia.org/wiki/Basic_access_authentication" target="_blank">Basic Access Authentication</a> or `BASIC AUTH` to authenticate requests. When you sign up for an account, you can view and manage your keys on <a href="https://dashboard.tazapay.com" target="_blank">the Tazapay dashboard</a>. Tazapay API provides you with two types of keys, the API\_Key and the API\_Secret. You will need to authenticate by providing the base64 encoded key pair in the request Authorization header. 
 
-> 📘 
-> 
+> 📘
+>
 > Tazapay has separate keys for both test and live environments. Test keys can be generated automatically by logging into the <a href = "https://dashboard-sandbox.tazapay.com/" target = "_blank">sandbox dashboard</a> and live keys by logging into the <a href = "https://dashboard.tazapay.com" target = "_blank">live dashboard</a> after clearing KYB.
 
 All requests to Tazapay API must be made over HTTPS. Requests over HTTP will fail. Requests without authentication will also fail.
 
 <i>NOTE: To go from test mode to live mode, you need to change the endpoint URL along with changing the API keys.</i>
 
-> 🚧 API_Secret key is "secret" for a reason!
-> 
+> 🚧 API\_Secret key is "secret" for a reason!
+>
 > Do not share your API keys to any unauthorised parties. This includes publicly accessible areas such as GitHub, client-side code, etc.  An unauthorised party can create transactions on your behalf if they get a hold of your API keys.
 
 ### How to Authenticate
 
-1. `BASIC AUTH` requires a username and a password combined with a colon. Its format is <b>{{username}}:{{password}}</b>.
+1. `BASIC AUTH` requires a username and a password combined with a colon. Its format is <b>\{\{username}}:\{\{password}}</b>.
 
-   <b>NOTE:</b> Your API_Key will serve as the username <<user>> and the API_Secret <<pass>> as the password.
+   <b>NOTE:</b> Your API\_Key will serve as the username {user.user} and the API\_Secret {user.pass} as the password.
 
 2. The resultant value is encoded into a <a href="https://en.wikipedia.org/wiki/Base64" target="_blank">Base64</a> format.
 
