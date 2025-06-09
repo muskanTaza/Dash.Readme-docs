@@ -43,7 +43,7 @@ The following is the upper and lower limits for UPI transactions:
 - **Minimum Limit**: USD 0.02
 - **Maximum Limit**: USD 1000
 
-The default expiration for a transaction is **24 hour. **
+The default expiration for a transaction is **24 hour.**
 
 # User Experience
 
