@@ -14,22 +14,7 @@ next:
 
 The following flowchart details the possible payment status for an escrow status:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2adc953-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/2adc953-image.png" />
 
 | Name       | Description                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -41,26 +26,11 @@ The following flowchart details the possible payment status for an escrow status
 
 The following flowchart details the possible verification status for an escrow.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/3b72409-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
+<Image align="center" className="border" border={true} src="https://files.readme.io/3b72409-image.png" />
 
-
-| Name          | Description                                                                              |
-| ------------- | ---------------------------------------------------------------------------------------- |
-| not_submitted | The required documents are not submitted for the KYB.                                    |
-| processing    | Tazapay is reviewing the documents submitted                                             |
-| succeeded     | The verification is successful. You can expect to receive a payout for this transaction. |
-| failed        | The document verification has failed.                                                    |
+| Name           | Description                                                                              |
+| -------------- | ---------------------------------------------------------------------------------------- |
+| not\_submitted | The required documents are not submitted for the KYB.                                    |
+| processing     | Tazapay is reviewing the documents submitted                                             |
+| succeeded      | The verification is successful. You can expect to receive a payout for this transaction. |
+| failed         | The document verification has failed.                                                    |
