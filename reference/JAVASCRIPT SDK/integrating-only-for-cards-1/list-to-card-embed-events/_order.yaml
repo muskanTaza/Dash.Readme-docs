@@ -1,3 +1,4 @@
 - change-event
 - ready-event
 - focus-event
+- blur-event
