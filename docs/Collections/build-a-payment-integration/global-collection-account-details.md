@@ -20,44 +20,14 @@ You can view the collection accounts configured for your account on the [Tazapay
 
 Look at the left panel of the dashboard after logging in. Click on the tab labelled `Collection Accounts`. You will be navigated to the screen displaying your Collection Account details.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/d50eacc-Screenshot_2024-02-16_at_6.07.54_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/d50eacc-Screenshot_2024-02-16_at_6.07.54_PM.png" />
 
 ### Viewing Collection Account Details
 
-Once on the Collection Accounts screen, all Virtual Account details configured for collection are displayed.  
+Once on the Collection Accounts screen, all Virtual Account details configured for collection are displayed.\
 For each collection account, you can view the Account Name, Account Number, Currency, Bank, Swift Code (if applicable), and Local Routing Number (if applicable).
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5b25382-Screenshot_2024-02-16_at_6.11.22_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/5b25382-Screenshot_2024-02-16_at_6.11.22_PM.png" />
 
 # Viewing Collects (Incoming Payments to the Collection Accounts)
 
@@ -67,52 +37,22 @@ You can view collects in your collection accounts on [Tazapay's dashboard](https
 
 ### Accessing Transactions
 
-- Once logged in, click on the`Transactions` tab located on the left-hand side vertical navigation bar.
-- A listing screen will appear displaying the following columns:
-  - **Payment ID:** A unique identifier for each collect, starts with `col_`
-  - **Status:** The status of the collect - succeeded, failed or on_hold
-  - **Invoice Amt:** The amount in the currency collected
-  - **Date:** The timestamp at which the collect was created
-  - **Payment Method:** Indicates whether the collect was made using Local bank Transfer or Wire Transfer
-  - **Settled Date:** The date on which the collected funds were transferred to your registered bank account.
+* Once logged in, click on the`Transactions` tab located on the left-hand side vertical navigation bar.
+* A listing screen will appear displaying the following columns:
+  * **Payment ID:** A unique identifier for each collect, starts with `col_`
+  * **Status:** The status of the collect - succeeded, failed or on\_hold
+  * **Invoice Amt:** The amount in the currency collected
+  * **Date:** The timestamp at which the collect was created
+  * **Payment Method:** Indicates whether the collect was made using Local bank Transfer or Wire Transfer
+  * **Settled Date:** The date on which the collected funds were transferred to your registered bank account.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8ef873b-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/8ef873b-image.png" />
 
 ### Searching for collection records
 
 Use the search tab at the top-left corner of the screen to find a specific collect ID. You can perform a full search with the exact ID or a partial search with a part of the ID.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/573ff95-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/573ff95-image.png" />
 
 ### Viewing Collect Details
 
@@ -150,26 +90,11 @@ To view the expanded details for a collect, you can simply click on the Payment 
 
 <br />
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/74e3662-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/74e3662-image.png" />
 
 # After Collection
 
 You can choose to do the following with the funds in your collection accounts:
 
-1. **Receive Settlements: **After collection, Tazapay converts and transfers the collected funds to the bank account and currency of your choice on a periodic basis. This is the default configuration for your account.
+1. **Receive Settlements:** After collection, Tazapay converts and transfers the collected funds to the bank account and currency of your choice on a periodic basis. This is the default configuration for your account.
 2. **Make Payouts:** You can choose to make payouts to third-parties in 60+ currencies using the collected funds. You can reach out to [support@tazapay.com](mailto:support@tazapay.com) to disable auto-settlements and enable payouts for your account.
