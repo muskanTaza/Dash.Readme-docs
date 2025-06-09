@@ -10,23 +10,70 @@ metadata:
 next:
   description: ''
 ---
-[block:code]
+```json Sample response for escrow webhook
 {
-  "codes": [
-    {
-      "code": "{\n  \"txn_no\": \"2207-117037\",\n  \"state\": \"Awaiting_Payment\",\n  \"sub_state\": \"Generic\",\n  \"invoice_currency\": \"USD\",\n  \"invoice_amount\": 1000,\n  \"milestone\": {\n    \"code\": \"Scheme 2\",\n    \"short_description\": \"30% advance; 70% on delivery\",\n    \"long_description\": \"Pay 30% advance to the seller and 70% when the shipment gets delivered\",\n    \"breakdowns\": [\n      {\n        \"milestone_no\": 1,\n        \"category\": \"payment\",\n        \"type\": \"passthrough\",\n        \"percentage\": 30,\n        \"milestone_amount\": 300,\n        \"status\": \"new\",\n        \"txn_status\": \"new\",\n        \"doc_status\": \"na\"\n      },\n      {\n        \"milestone_no\": 2,\n        \"category\": \"payout\",\n        \"type\": \"passthrough\",\n        \"percentage\": 30,\n        \"milestone_amount\": 294.6,\n        \"status\": \"new\",\n        \"txn_status\": \"new\",\n        \"doc_status\": \"na\"\n      },\n      {\n        \"milestone_no\": 3,\n        \"category\": \"payment\",\n        \"type\": \"hold\",\n        \"percentage\": 70,\n        \"milestone_amount\": 700,\n        \"status\": \"new\",\n        \"txn_status\": \"new\",\n        \"doc_status\": \"na\"\n      },\n      {\n        \"milestone_no\": 4,\n        \"category\": \"payout\",\n        \"type\": \"hold\",\n        \"percentage\": 70,\n        \"milestone_amount\": 687.4,\n        \"status\": \"new\",\n        \"txn_status\": \"new\",\n        \"doc_status\": \"na\"\n      }\n    ]\n  },\n  \"partner_reference_id\": \"uid1\"\n}",
-      "language": "json",
-      "name": "Sample response for escrow webhook"
-    }
-  ]
+  "txn_no": "2207-117037",
+  "state": "Awaiting_Payment",
+  "sub_state": "Generic",
+  "invoice_currency": "USD",
+  "invoice_amount": 1000,
+  "milestone": {
+    "code": "Scheme 2",
+    "short_description": "30% advance; 70% on delivery",
+    "long_description": "Pay 30% advance to the seller and 70% when the shipment gets delivered",
+    "breakdowns": [
+      {
+        "milestone_no": 1,
+        "category": "payment",
+        "type": "passthrough",
+        "percentage": 30,
+        "milestone_amount": 300,
+        "status": "new",
+        "txn_status": "new",
+        "doc_status": "na"
+      },
+      {
+        "milestone_no": 2,
+        "category": "payout",
+        "type": "passthrough",
+        "percentage": 30,
+        "milestone_amount": 294.6,
+        "status": "new",
+        "txn_status": "new",
+        "doc_status": "na"
+      },
+      {
+        "milestone_no": 3,
+        "category": "payment",
+        "type": "hold",
+        "percentage": 70,
+        "milestone_amount": 700,
+        "status": "new",
+        "txn_status": "new",
+        "doc_status": "na"
+      },
+      {
+        "milestone_no": 4,
+        "category": "payout",
+        "type": "hold",
+        "percentage": 70,
+        "milestone_amount": 687.4,
+        "status": "new",
+        "txn_status": "new",
+        "doc_status": "na"
+      }
+    ]
+  },
+  "partner_reference_id": "uid1"
 }
-[/block]
+```
+
 ## Response Parameters
 
-Parameter                | Description
---------                 | --------
-txn_no                   | `string` Year and 5 digit escrow transcation number
-state                    | `string` State / status of escrow
-sub_state                | `string` Sub state / status of escrow
-invoice_currency         | `string`  Invoice currency
-invoice_amount           | `float` Invoice amount
+| Parameter         | Description                                         |
+| ----------------- | --------------------------------------------------- |
+| txn\_no           | `string` Year and 5 digit escrow transcation number |
+| state             | `string` State / status of escrow                   |
+| sub\_state        | `string` Sub state / status of escrow               |
+| invoice\_currency | `string`  Invoice currency                          |
+| invoice\_amount   | `float` Invoice amount                              |
