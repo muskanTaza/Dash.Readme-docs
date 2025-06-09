@@ -16,10 +16,10 @@ Online Banking enables secure real-time payments directly from Philippine bank a
 
 ## Step 1: Create a payin
 
-Tazapay uses a payin object to represent your intent to collect a payment from your customer. The payin object tracks state changes from bank_push transaction creation to payment completion.  
-Create a payin on your server with an amount, invoice_currency PHP and a transaction_description using the create payin API
+Tazapay uses a payin object to represent your intent to collect a payment from your customer. The payin object tracks state changes from bank\_push transaction creation to payment completion.\
+Create a payin on your server with an amount, invoice\_currency PHP and a transaction\_description using the create payin API
 
-A payin is created with the status requires_payment_method.
+A payin is created with the status requires\_payment\_method.
 
 ### Sample cURL
 
@@ -39,7 +39,7 @@ curl --request POST \
 
 ## Step 2: Confirm a payin
 
-Confirm the payin created in step 1 using the [confirm payin API.](https://docs.tazapay.com/reference/confirm-payin) Upon confirmation of the payin, a redirection URL is generated. The status of the payin moves to requires_action
+Confirm the payin created in step 1 using the [confirm payin API.](https://docs.tazapay.com/reference/confirm-payin) Upon confirmation of the payin, a redirection URL is generated. The status of the payin moves to requires\_action
 
 ### Sample cURL
 
@@ -101,7 +101,7 @@ curl --location 'https://service-sandbox.tazapay.com/v3/payin' \
 
 ## Step 3: Redirect the customer to the payment URL
 
-After confirming the payin, you will receive the following response. You will receive a redirect_url where you can redirect your customer to. You must redirect the customer to `latest_payment_attempt_data.redirect_url` in order to enable them to complete the payment.
+After confirming the payin, you will receive the following response. You will receive a redirect\_url where you can redirect your customer to. You must redirect the customer to `latest_payment_attempt_data.redirect_url` in order to enable them to complete the payment.
 
 ```
 {
@@ -158,10 +158,10 @@ After confirming the payin, you will receive the following response. You will re
 
 Tazapay sends a `payin.succeeded` event as soon as the funds are received from the customer. Tazapay sends these events to the endpoint configured from your dashboard. You can receive these events and run actions (for example, sending an order confirmation email to your customers, logging the sale in a database, starting a shipping workflow, etc.)
 
-| Event                  | Description                                             | Next Steps                                                                     |
-| ---------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| payin.succeeded        | The customer successfully completed the payment request | Fulfill the goods or services that the customer purchased                      |
-| payment_attempt.failed | The customer payment attempt failed                     | Allow the customer to do the payment again with same or another payment method |
+| Event                   | Description                                             | Next Steps                                                                     |
+| ----------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| payin.succeeded         | The customer successfully completed the payment request | Fulfill the goods or services that the customer purchased                      |
+| payment\_attempt.failed | The customer payment attempt failed                     | Allow the customer to do the payment again with same or another payment method |
 
 <br />
 
@@ -184,7 +184,7 @@ This method does not supports partial refunds, that is, only refunds with amount
 
 ### Refunding using dashboard
 
-Refer to this guide: <https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard>
+Refer to this guide: [https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard](https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard)
 
 ### Refund using API
 
