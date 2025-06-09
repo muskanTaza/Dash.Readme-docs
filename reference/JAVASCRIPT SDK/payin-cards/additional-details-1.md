@@ -49,7 +49,6 @@ Below is the list of configurations for the card UI, please check the descriptio
 }
 [/block]
 
-
 ## 2. Cards Events
 
 Below is the list of events for the card UI, please check the description and use the events according to your use case.
