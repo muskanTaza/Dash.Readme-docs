@@ -11,6 +11,7 @@ next:
   description: ''
 ---
 ```
+```json
 {
         "amount": 100,
         "amount_paid": 0,
@@ -166,3 +167,4 @@ next:
 | ------------ | ------ | ----------------------------------------------------------------- |
 | calling_code | string | The international calling code for the phone number.              |
 | number       | string | The phone number associated with the billing or shipping address. |
+```
