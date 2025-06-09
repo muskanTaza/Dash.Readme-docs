@@ -46,7 +46,7 @@ The following is the upper and lower limits for Mobile Banking transactions:
 - **Minimum Limit**: USD 0.6
 - **Maximum Limit**: USD 19000
 
-There is no default expiration for a mobile banking transaction**.** 
+There is no default expiration for a mobile banking transaction.
 
 # User Experience
 
