@@ -41,15 +41,15 @@ CURP: AAAH640409HMSGGR011
 
 # Internet Banking - SEPA debit SOFORT
 
-**Bank Name:** CIMB-CLICKS  
-**Username:** Gaara  
+**Bank Name:** CIMB-CLICKS\
+**Username:** Gaara\
 **Password:** letmepaywithsand
 
 # Internet Banking - Philippines
 
 **Source:** Test Bank Online
 
-**Login Id:** login  
+**Login Id:** login\
 **Password:** pass
 
 > Use of @test.com email domain for a customer will result in an error. Make sure to use an email of a different domain to test
