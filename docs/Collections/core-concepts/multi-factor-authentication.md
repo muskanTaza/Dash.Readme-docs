@@ -18,9 +18,9 @@ Tazapay now supports **Multi-Factor Authentication (MFA)** to enhance account se
 
 Every **Tazapay merchant account** user:
 
-- Must **set up MFA**
-- Can choose from **Passkey**, **SMS OTP**, or **Authenticator App**
-- Can generate **Recovery Codes** as a fallback method
+* Must **set up MFA**
+* Can choose from **Passkey**, **SMS OTP**, or **Authenticator App**
+* Can generate **Recovery Codes** as a fallback method
 
 ***
 
@@ -34,9 +34,9 @@ Enter your **email and password** or **Sign in with Google**
 
 Choose from the available methods:
 
-- **Passkey** (if previously set up)
-- **SMS OTP**
-- **Authenticator App Code**
+* **Passkey** (if previously set up)
+* **SMS OTP**
+* **Authenticator App Code**
 
 ***
 
@@ -44,11 +44,11 @@ Choose from the available methods:
 
 Manage your MFA settings:
 
-- Set up/remove **Passkeys**
-- Add/change **mobile number**
-- Add/change **Authenticator App**
-- Set default 2FA method
-- **Generate Recovery Codes**
+* Set up/remove **Passkeys**
+* Add/change **mobile number**
+* Add/change **Authenticator App**
+* Set default 2FA method
+* **Generate Recovery Codes**
 
 > 🔒 All changes require 2FA verification
 
@@ -69,9 +69,9 @@ If you're locked out of your account:
 
 ## 🕒 7-Day Session Memory
 
-- Checkbox: **"Remember me for 7 days"** on login screen
-- Skips MFA for 7 days **on the same device**
-- Tooltip info:
+* Checkbox: **"Remember me for 7 days"** on login screen
+* Skips MFA for 7 days **on the same device**
+* Tooltip info:
   > “Enabling this option allows you to log in on this device without requiring two-factor authentication for the next 7 days.”
 
 > ⚠️ Only shown if MFA is enabled
@@ -82,16 +82,16 @@ If you're locked out of your account:
 
 Any of these actions require re-authentication if last 2FA > 1 hour ago:
 
-- Payout > $10k
-- Refund > $10k
-- Add/switch bank accounts
-- View/regenerate API keys
-- Add/remove passkeys
-- Change default MFA method
-- Add sub-user / change sub-user rights
-- Change password
+* Payout > $10k
+* Refund > $10k
+* Add/switch bank accounts
+* View/regenerate API keys
+* Add/remove passkeys
+* Change default MFA method
+* Add sub-user / change sub-user rights
+* Change password
 
-> Message: _"Please authenticate yourself as you are going to perform a sensitive operation."_
+> Message: *"Please authenticate yourself as you are going to perform a sensitive operation."*
 
-- Passkey is first preference
-- Email confirmation sent on completion
+* Passkey is first preference
+* Email confirmation sent on completion
