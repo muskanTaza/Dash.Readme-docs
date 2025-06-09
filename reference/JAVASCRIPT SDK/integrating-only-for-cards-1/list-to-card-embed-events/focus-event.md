@@ -17,7 +17,7 @@ The `focus` event is triggered when the embed gains focus. This can happen when 
 1. `event` - mandatory  
    The name of the event, in this case `focus`
 2. `handler` - mandatory  
-   handler(event) => void is a callback function that a merchant will provide that will be called when the event is fired. When called it will be passed an event object with the following properties:
+   handler(event) => void is a callback function that a merchant will provide that will be called when the event is fired. When called it will be passed an event object with the following properties:
 
    | Field     | Sub-field | Type   | Description                                                    |
    | --------- | --------- | ------ | -------------------------------------------------------------- |
