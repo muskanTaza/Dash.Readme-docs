@@ -22,8 +22,8 @@ To complete a checkout with Tazapay, you'll need to:
 
 You can initiate a [Create User](ref:create-user) API call for buyers and sellers if they don't exist in Tazapay's database. To check if the user exists, you can make a [Get User by ID](ref:get-user-by-id-api) or [Get User by Email](ref:get-user-by-email-api) API call. 
 
-> 📘 
-> 
+> 📘
+>
 > This API call needs the entity type as individual or business in `ind_bus_type`, email, country, and name (`first_name` and `last_name` for individuals, `business_name` for businesses) for the purposes of user creation.
 
 Upon creating the user, their `account_id` acts as the `UUID` of the user.
@@ -34,8 +34,8 @@ To optimize load time, you can call the Create User API anytime during checkout 
 
 Once you have the buyer's and seller's `UUID`, you can initiate a [Create Escrow](ref:create-escrow-api)  API call. 
 
-> 📘 
-> 
+> 📘
+>
 > This API call needs the `invoice_amount`, `invoice_currency`, `buyer_id` & `seller_id` in the form of their `UUID`, `initiated_by` to indicate which party initiated the transaction, and a description of the transaction in `txn_description`.
 
 This API also allows you to add supporting documents needed for upload to turn the checkout into escrow.
