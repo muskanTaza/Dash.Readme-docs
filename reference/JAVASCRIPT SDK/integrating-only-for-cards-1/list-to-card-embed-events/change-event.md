@@ -53,10 +53,10 @@ cardEmbed.on('change', function(event) {
     cardNumber: "Enter the card number",
     expiry: "Enter valid expiry date",
     cvv: "",
-    name: "",
-  },,
-  value: { cardholder_name: "" },
+    name: ""
+  },
+  value: { cardholder_name: "" }
 }
 ```
 
-<br>
+<br />
