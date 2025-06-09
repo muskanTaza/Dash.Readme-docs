@@ -25,7 +25,7 @@ style: {
 ```
 
 > 👍 Auto-Generate the Style object:
-> 
+>
 > You can use the tool on [this website](https://demo.tazapay.com/config) to customise the UI component and then generate the style object for your client-side code.
-> 
+>
 > Using the token obtained in Step 2 for the sandbox (test) environment, you can also see a [live demo](https://demo.tazapay.com/preview) of the functioning of your UI component.
