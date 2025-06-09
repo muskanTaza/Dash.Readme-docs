@@ -12,39 +12,11 @@ next:
 ---
 ## Settlements using the SWIFT network
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/63fb4c2222c905dd28cc0cb4f091bc88f8dd0a8ab609792b2371b3006d20c543-image.png",
-        null,
-        null
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/63fb4c2222c905dd28cc0cb4f091bc88f8dd0a8ab609792b2371b3006d20c543-image.png" />
 
 ## Settlements using local rails
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/626511e4b3e6b0ca49f6e8b24a67309bb6ccf1b7c46f7ff883a63ebc215f0d76-image.png",
-        null,
-        null
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/626511e4b3e6b0ca49f6e8b24a67309bb6ccf1b7c46f7ff883a63ebc215f0d76-image.png" />
 
 <br />
 
