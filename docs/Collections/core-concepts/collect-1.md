@@ -47,10 +47,10 @@ next:
 | Field         | Sub-fields             | type      | Description                                                                                                                                                  |
 | :------------ | :--------------------- | :-------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id            |                        | string    | Unique ID of the collect. Starts with `col_`                                                                                                                 |
-| object        |                        | string    | This is `collect`here                                                                                                                                        |
-| amount        |                        | integer   | Amount of the collect in the lowest denomination. Learn more about decimal currencies <a href = "https://docs.tazapay.com/docs/decimal-currencies">here</a>. |
+| object        |                        | string    | This is `collect` here                                                                                                                                        |
+| amount        |                        | integer   | Amount of the collect in the lowest denomination. Learn more about decimal currencies <a href="https://docs.tazapay.com/docs/decimal-currencies">here</a>. |
 | currency      |                        | string    | Currency of the collect                                                                                                                                      |
-| status        |                        | enum      | Status of the collect. Can be `succeeded`, `on_hold`or `failed`                                                                                              |
+| status        |                        | enum      | Status of the collect. Can be `succeeded`, `on_hold` or `failed`                                                                                              |
 | metadata      |                        | json      | Set of key-value pairs attached to the collect object                                                                                                        |
 | created_at    |                        | timestamp | Timestamp at which the collect object is created                                                                                                             |
 | payer_details |                        | json      | Details of the payer                                                                                                                                         |
@@ -75,3 +75,4 @@ next:
 |                | country     | string | Country (ISO 3166 standard alpha-2 code. eg: SG, IN, US, etc.)                        |
 |                | postal_code | string | Postal code or ZIP                                                                    |
 | bank_codes     |             | enum   | Can be `swift_code`, `bic`, `ifs_code`, `aba`, `sort_code`, `branch_code`, `bsb_code` |
+```
