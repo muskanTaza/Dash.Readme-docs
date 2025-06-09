@@ -12,10 +12,10 @@ next:
 ---
 1. **Get QR Code:**
 
-   Get the _qr_code_ from the API response.
+   Get the *qr\_code* from the API response.
 2. **Basic Decode:**
 
-   Decode the _qr_code_ data (which is encoded using Base64 encoding).
+   Decode the *qr\_code* data (which is encoded using Base64 encoding).
 
    Example: In JS,
 
@@ -47,7 +47,7 @@ next:
    ```
 4. Render QR Image:
 
-   set the **qr_url** in the src attribute of image element in HTML.
+   set the **qr\_url** in the src attribute of image element in HTML.
 
    Example:
 
