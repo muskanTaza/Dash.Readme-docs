@@ -16,16 +16,16 @@ You are a marketplace looking to integrate Tazapay’s checkout for a fixed cart
 
 You can pass the following information to Tazapay’s API to orchestrate payouts:
 
-- Buyer’s and seller’s country
-- E-mail ID of the buyer and seller
-- Name
-- Invoice currency (e.g. USD, INR, EUR, etc.)
-- Amount
-- Transaction description
+* Buyer’s and seller’s country
+* E-mail ID of the buyer and seller
+* Name
+* Invoice currency (e.g. USD, INR, EUR, etc.)
+* Amount
+* Transaction description
 
 ## Step 1: Creating User entities
 
-For a transaction to happen, two entities need to exist in Tazapay’s database - a seller entity and a buyer entity. Marketplaces need to create an additional marketplace entity.  
+For a transaction to happen, two entities need to exist in Tazapay’s database - a seller entity and a buyer entity. Marketplaces need to create an additional marketplace entity.\
 To create entities: Use `POST /v1/user.`
 
 For example, Marketplace Minekart, based in Singapore, wants to register itself as an entity at Tazapay.
@@ -41,8 +41,6 @@ Minekart submits the following payload for the body:
 }
 ```
 
-
-
 Tazapay creates an entity for Minekart and returns the following response. 
 
 ```
@@ -55,8 +53,6 @@ Tazapay creates an entity for Minekart and returns the following response.
    }
 }
 ```
-
-
 
 The account id acts as the UUID for Minekart. Minekart stores it in its records.
 
@@ -73,8 +69,6 @@ As soon as Spec Rayes is onboarded on Minekart, Minekart creates a Tazapay entit
 }
 ```
 
-
-
 A Tazapay entity is created for Spec Rayes and the following response is returned.
 
 ```
@@ -88,9 +82,7 @@ A Tazapay entity is created for Spec Rayes and the following response is returne
 }
 ```
 
-
-
-The account_id acts as the `UUID` for Spec Rayes. Minekart stores it in its records.
+The account\_id acts as the `UUID` for Spec Rayes. Minekart stores it in its records.
 
 Arnold from the US wants to buy a pair of branded sunglasses from Spec Rayes. He registers for an account on Minekart to buy from Spec Rayes, and the following user information is also captured during signup using `POST /v1/user`:
 
@@ -103,8 +95,6 @@ Arnold from the US wants to buy a pair of branded sunglasses from Spec Rayes. He
     "last_name":"Darwin"
 }
 ```
-
-
 
 A Tazapay entity is created for Arnold and the following response is returned.
 
@@ -119,9 +109,7 @@ A Tazapay entity is created for Arnold and the following response is returned.
 }
 ```
 
-
-
-Arnold’s account_id acts as his `UUID`. Minekart stores this info in their database.
+Arnold’s account\_id acts as his `UUID`. Minekart stores this info in their database.
 
 To learn more about creating & managing entities on Tazapay’s endpoints, we have a section on [Users](ref:user-intro) here. 
 
@@ -144,8 +132,6 @@ Once Minekart has the details of the buyer captured on checkout, the `POST /v1/e
    "invoice_amount": 98
 }
 ```
-
-
 
 A Tazapay transaction is created and the following response is returned:
 
@@ -171,8 +157,6 @@ A Tazapay transaction is created and the following response is returned:
 }
 ```
 
-
-
 The `txn_no` is a unique number representing this particular transaction. Minekart stores this info in their database and would refer to the transaction number if need be.
 
 Tazapay will deduct USD 1.76 from the transaction before disbursing the remaining amount.
@@ -187,9 +171,7 @@ Minekart needs to use `v1/session/payment API` to generate a checkout page. The 
 }
 ```
 
-
-
-This is the same txn_no from the response for the Create Escrow API.
+This is the same txn\_no from the response for the Create Escrow API.
 
 The URL for checkout is generated in the following response:
 
@@ -202,8 +184,6 @@ The URL for checkout is generated in the following response:
    }
 }
 ```
-
-
 
 Minekart can redirect Arnold to the hosted checkout page where he can select his preferred payment method for his purchase. In this instance, he is presented with two options: local bank transfer or card.
 
@@ -235,8 +215,6 @@ Arnold must first complete his payment before Minekart is able to release the pa
 }
 ```
 
-
-
 This is the response from the above API.
 
 ```
@@ -249,15 +227,13 @@ This is the response from the above API.
 }
 ```
 
-
-
 At this point, the transaction is now complete.
 
 We have more details about the [Release API](ref:release-intro) on our documentation here. 
 
 You may need to use the following APIs at some point during the integration process apart from the steps listed above:
 
-**Post KYB:** KYB stands for Know Your Business, To disburse funds into the seller’s account (in this case, Spec Rayes), the seller will have to undergo a one-time verification exercise before the first disbursal by Tazapay. It is a standard risk management practice aimed at eliminating money laundering. The [KYB](ref:kyb-intro)  
+**Post KYB:** KYB stands for Know Your Business, To disburse funds into the seller’s account (in this case, Spec Rayes), the seller will have to undergo a one-time verification exercise before the first disbursal by Tazapay. It is a standard risk management practice aimed at eliminating money laundering. The [KYB](ref:kyb-intro)\
 `POST/v2/kyb` can be used to add the required documents on Tazapay’s server for KYB verification of the sellers. 
 
 **Get Escrow Status:** To know the status of a particular underlying transaction, marketplaces can use `GET/v1/escrow/{txn_no}`. It will return the state and substate of a particular transaction (in this case, the payout between Slydeshow and the freelancers). This will keep all the stakeholders (marketplace and seller) always informed of the stage of the transaction. For more information about the [Get Escrow Status API](ref:escrow-status-api), please refer to the link.
