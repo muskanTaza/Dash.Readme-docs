@@ -44,7 +44,7 @@ The following is the upper and lower limits for FPX transactions:
 - **Minimum Limit**: USD 0.5
 - **Maximum Limit**: USD 20000
 
-There is no default expiration for a FPX transaction**.**
+There is no default expiration for a FPX transaction.
 
 # User Experience
 
