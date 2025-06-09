@@ -10,6 +10,7 @@ metadata:
 next:
   description: ''
 ---
+```mdx
 <h2>Settlement Overview</h2>
 <p><strong>Settlement</strong> is the process by which Tazapay transfers the funds from completed transactions to the merchants. By default, this happens on a weekly basis, directly into the bank accounts that merchants have provided in their dashboard settings or during the KYB process, which can be managed and viewed <a href="https://dashboard.tazapay.com/settings/bank">here</a>.</p>
 
@@ -37,3 +38,4 @@ next:
 
 <h3>Importance of the Settlement Report for Reconciliation</h3>
 <p>The settlement report is crucial for merchants' financial reconciliation processes. It provides detailed insights into each transaction and settlement, helping merchants verify and reconcile their records accurately. For a deeper understanding of how this ties into overall financial reconciliation, visit the <a href="https://docs.tazapay.com/docs/reconciliation">Reconciliation Documentation</a>.</p>
+```
