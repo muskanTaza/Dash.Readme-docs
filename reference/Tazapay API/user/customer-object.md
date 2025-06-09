@@ -10,50 +10,50 @@ metadata:
 next:
   description: ''
 ---
-```
+```json
 {
-    "id": "cus_haiuhfaonfoiaoijfojfajpj123",
-	  "object": "string",
-    "created_at": "2023-07-18 16:34:32",
+  "id": "cus_haiuhfaonfoiaoijfojfajpj123",
+  "object": "string",
+  "created_at": "2023-07-18 16:34:32",
+  "name": "John Doe",
+  "email": "john.doe@doe.com",
+  "country": "SG",
+  "phone": {
+    "calling_code": "65",
+    "number": "67854321"
+  },
+  "billing": {
     "name": "John Doe",
-    "email": "john.doe@doe.com",
-    "country": "SG",
+    "address": {
+      "line1": "Address Line 1",
+      "line2": "Address Line 2",
+      "city": "Singapore",
+      "state": null,
+      "country": "SG",
+      "postal_code": "76543"
+    },
     "phone": {
-      "calling_code":"65",
-      "number":"67854321"
+      "calling_code": "65",
+      "number": "7982799"
+    }
+  },
+  "shipping": {
+    "name": "John Doe",
+    "address": {
+      "line1": "Address Line 1",
+      "line2": "Address Line 2",
+      "city": "Singapore",
+      "state": null,
+      "country": "SG",
+      "postal_code": "76543"
     },
-    "billing":{
-      "name":"John Doe",
-      "address":{
-        "line1":"Address Line 1",
-        "line2":"Address Line 2",
-        "city":"Singapore",
-        "state":null,
-        "country":"SG",
-        "postal_code":"76543"
-      },
-      "phone":{
-        "calling_code":"65",
-        "number":"7982799"
-      }
-    },
-    "shipping":{
-      "name":"John Doe",
-      "address":{
-        "line1":"Address Line 1",
-        "line2":"Address Line 2",
-        "city":"Singapore",
-        "state":null,
-        "country":"SG",
-        "postal_code":"76543"
-      },
-      "phone":{
-        "calling_code":"65",
-        "number":"7982799"
-      }
-    },
-    "metadata":null
-  }
+    "phone": {
+      "calling_code": "65",
+      "number": "7982799"
+    }
+  },
+  "metadata": null
+}
 ```
 
 ## Parameters
@@ -100,3 +100,4 @@ next:
 | state       | string/null | The state or province of the address (optional). |
 | country     | string      | The country code (e.g., SG for Singapore).       |
 | postal_code | string      | The postal code of the address.                  |
+```
