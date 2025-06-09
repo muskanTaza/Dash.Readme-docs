@@ -10,15 +10,15 @@ metadata:
 next:
   description: ''
 ---
-## Payment_Status-specific events:
+## Payment\_Status-specific events:
 
 These are the events created and triggered when the status of the escrow object is impacted.
 
-| Event       | Description                                          | Default (on/off) |
-| ----------- | ---------------------------------------------------- | ---------------- |
-| escrow.paid | payment_status of the escrow object changes to paid. | On               |
+| Event        | Description                                           | Default (on/off) |
+| ------------ | ----------------------------------------------------- | ---------------- |
+| escrow\.paid | payment\_status of the escrow object changes to paid. | On               |
 
-### escrow.paid
+### escrow\.paid
 
 ```json JSON
 {
@@ -55,7 +55,7 @@ These are the events created and triggered when the status of the escrow object 
 }
 ```
 
-### escrow.unpaid
+### escrow\.unpaid
 
 ```json
 {
@@ -92,18 +92,18 @@ These are the events created and triggered when the status of the escrow object 
 }
 ```
 
-## Payment_Attempt Specific Events:
+## Payment\_Attempt Specific Events:
 
 These events are created and triggered when something of interest happens for a payment attempt of a checkout.
 
-| Event                      | Description                                            | Default (on/off) |
-| -------------------------- | ------------------------------------------------------ | ---------------- |
-| payment_attempt.created    | When a payment_attempt is created for the checkout     | On               |
-| payment_attempt.failed     | When a payment_attempt fails for the checkout          | On               |
-| payment_attempt.processing | When the payment_attempt moves to the processing state | On               |
-| payment_attempt.succeeded  | When the payment_attempt succeeds                      | On               |
+| Event                       | Description                                             | Default (on/off) |
+| --------------------------- | ------------------------------------------------------- | ---------------- |
+| payment\_attempt.created    | When a payment\_attempt is created for the checkout     | On               |
+| payment\_attempt.failed     | When a payment\_attempt fails for the checkout          | On               |
+| payment\_attempt.processing | When the payment\_attempt moves to the processing state | On               |
+| payment\_attempt.succeeded  | When the payment\_attempt succeeds                      | On               |
 
-### payment_attempt.created
+### payment\_attempt.created
 
 ```json
 {
@@ -123,7 +123,7 @@ These events are created and triggered when something of interest happens for a 
 }
 ```
 
-### payment_attempt.failed
+### payment\_attempt.failed
 
 ```json
 {
@@ -143,7 +143,7 @@ These events are created and triggered when something of interest happens for a 
 }
 ```
 
-### payment_attempt.processing
+### payment\_attempt.processing
 
 ```json
 {
@@ -163,7 +163,7 @@ These events are created and triggered when something of interest happens for a 
 }
 ```
 
-### payment_attempt.succeeded
+### payment\_attempt.succeeded
 
 ```json
 {
@@ -187,13 +187,13 @@ These events are created and triggered when something of interest happens for a 
 
 These events are created and triggered when something interesting happens with the escrow object not related to a status change.
 
-| Event                        | Description                                 | Default (on/off) |
-| ---------------------------- | ------------------------------------------- | ---------------- |
-| escrow.created               | A escrow object is created                  | Off              |
-| escrow.expired               | An active escrow object gets expired        | On               |
-| escrow.tax_invoice_generated | Triggered when Tazapay generates an invoice | On               |
+| Event                           | Description                                 | Default (on/off) |
+| ------------------------------- | ------------------------------------------- | ---------------- |
+| escrow\.created                 | A escrow object is created                  | Off              |
+| escrow\.expired                 | An active escrow object gets expired        | On               |
+| escrow\.tax\_invoice\_generated | Triggered when Tazapay generates an invoice | On               |
 
-### escrow.created
+### escrow\.created
 
 ```json
 {
@@ -212,7 +212,7 @@ These events are created and triggered when something interesting happens with t
 }
 ```
 
-### escrow.expired
+### escrow\.expired
 
 ```json
 {
@@ -225,13 +225,13 @@ These events are created and triggered when something interesting happens with t
     ....
     .... //Entire escrow object
     ....
-  }  
+  },
   "id":"evt_auigfianfoangohuehg",
   "object":"event"
 }
 ```
 
-### escrow.tax_invoice_generated
+### escrow\.tax\_invoice\_generated
 
 ```Text json
 {
@@ -251,7 +251,7 @@ These events are created and triggered when something interesting happens with t
     ....
     .... //Entire escrow object
     ....
-  }  
+  },
   "id":"evt_auigfianfoangohuehg",
   "object":"event"
 }
@@ -263,14 +263,14 @@ These events are created and triggered when something interesting happens with t
 
 These are the events created and triggered when documents for the escrow needs to be uploaded by the merchant. The merchant uploads the document(s) either through the document API or from the dashboard.
 
-| Event                               | Description (Triggered when)                                                                                                       | Default (on/off) |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| escrow.verification.processing      | The verification_status of the release document changes to processing                                                              | On               |
-| escrow.verification.requires_action | The verification_status of the release document changes to requires_action. This also contains the details of the action required. | On               |
-| escrow.verification.succeeded       | The verification_status of the release document changes to verified                                                                | On               |
-| escrow.verification.failed          | The verification_status of the release document changes to failed                                                                  | On               |
+| Event                                 | Description (Triggered when)                                                                                                         | Default (on/off) |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------- |
+| escrow\.verification.processing       | The verification\_status of the release document changes to processing                                                               | On               |
+| escrow\.verification.requires\_action | The verification\_status of the release document changes to requires\_action. This also contains the details of the action required. | On               |
+| escrow\.verification.succeeded        | The verification\_status of the release document changes to verified                                                                 | On               |
+| escrow\.verification.failed           | The verification\_status of the release document changes to failed                                                                   | On               |
 
-### escrow.verification.requires_action
+### escrow\.verification.requires\_action
 
 ```json
 {
@@ -283,13 +283,13 @@ These are the events created and triggered when documents for the escrow needs t
     ....
     .... //Entire escrow object
     ....
-  }  
+  },
   "id":"evt_auigfianfoangohuehg",
   "object":"event"
 }
 ```
 
-### escrow.verification.processing
+### escrow\.verification.processing
 
 ```json
 {
@@ -302,13 +302,13 @@ These are the events created and triggered when documents for the escrow needs t
     ....
     .... //Entire escrow object
     ....
-  }  
+  },
   "id":"evt_auigfianfoangohuehg",
   "object":"event"
 }
 ```
 
-### escrow.verification.succeeded
+### escrow\.verification.succeeded
 
 ```json
 {
@@ -321,13 +321,13 @@ These are the events created and triggered when documents for the escrow needs t
     ....
     .... //Entire escrow object
     ....
-  }  
+  },
   "id":"evt_auigfianfoangohuehg",
   "object":"event"
 }
 ```
 
-### escrow.verification.failed
+### escrow\.verification.failed
 
 ```json
 {
@@ -340,7 +340,7 @@ These are the events created and triggered when documents for the escrow needs t
     ....
     .... //Entire escrow object
     ....
-  }  
+  },
   "id":"evt_auigfianfoangohuehg",
   "object":"event"
 }
