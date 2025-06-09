@@ -56,12 +56,12 @@ next:
 
 ## Response parameters:
 
-| Parameter        | Description                                    |
-| ---------------- | ---------------------------------------------- |
-| txn_no           | `string` The txn_no for the request made       |
-| invoice_currency | `string` The invoice currency                  |
-| invoice_amount   | `float` Invoice amount                         |
-| state            | `string` The state / status of the payment     |
-| sub_state        | `string` The sub state / status of the payment |
+| Parameter         | Description                                    |
+| ----------------- | ---------------------------------------------- |
+| txn\_no           | `string` The txn\_no for the request made      |
+| invoice\_currency | `string` The invoice currency                  |
+| invoice\_amount   | `float` Invoice amount                         |
+| state             | `string` The state / status of the payment     |
+| sub\_state        | `string` The sub state / status of the payment |
 
 **Related Guide:** <a href="https://docs.tazapay.com/docs/checkout-object-states" target="_blank">Checkout states and substates</a>
