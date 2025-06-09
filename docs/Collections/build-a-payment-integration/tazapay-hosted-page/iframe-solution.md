@@ -14,8 +14,8 @@ You can integrate with Tazapay's Payment Embed directly on your checkout page. T
 
 ## Standout Features of the Payment Embed
 
-- _Ease of Integration and Maintenance._ The integration process is straightforward with comprehensive documentation. The scalability of the Payment Embed means it can grow with your business, accommodating new payment methods and markets as needed.
-- _High Degree of Customisability._ You can tailor the look and feel of the payment interface to be seamless with your application
-- _Security_. Leveraging Tazapay's security infrastructure, the Payment Embed ensures that all transactions are secure and compliant with global standards such as PCI DSS.
+* *Ease of Integration and Maintenance.* The integration process is straightforward with comprehensive documentation. The scalability of the Payment Embed means it can grow with your business, accommodating new payment methods and markets as needed.
+* *High Degree of Customisability.* You can tailor the look and feel of the payment interface to be seamless with your application
+* *Security*. Leveraging Tazapay's security infrastructure, the Payment Embed ensures that all transactions are secure and compliant with global standards such as PCI DSS.
 
 > Related Guide: <a href="https://docs.tazapay.com/reference/integrating-client-side">Integrating Tazapay's Payment Embed</a>
