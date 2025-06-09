@@ -14,10 +14,10 @@ next:
 ---
 ### How It Works
 
-- The customer has to select their bank.
-- They are then redirected to their online banking environment (or a secure third-party platform).
-- Within their banking environment, they authenticate the payment (e.g., with a password, fingerprint, or one-time code).
-- Once authenticated, the payment is instantly transferred to the merchant.
+* The customer has to select their bank.
+* They are then redirected to their online banking environment (or a secure third-party platform).
+* Within their banking environment, they authenticate the payment (e.g., with a password, fingerprint, or one-time code).
+* Once authenticated, the payment is instantly transferred to the merchant.
 
 ### Where It Works
 
@@ -31,8 +31,8 @@ Austria, Belgium, Bulgaria, Cyprus, Czech Republic, Germany, Denmark, Estonia, S
 
 ## Step 1: Create a payin
 
-Tazapay uses a `payin` object to represent your intent to collect a payment from your customer. The payin object tracks state changes from transaction creation to payment completion via bank initiation.  
-Create a payin on your server with an amount, invoice_currency `EUR` and a transaction_description using the [create payin API](https://docs.tazapay.com/reference/create-payin)
+Tazapay uses a `payin` object to represent your intent to collect a payment from your customer. The payin object tracks state changes from transaction creation to payment completion via bank initiation.\
+Create a payin on your server with an amount, invoice\_currency `EUR` and a transaction\_description using the [create payin API](https://docs.tazapay.com/reference/create-payin)
 
 A payin is created with the status `requires_payment_method`.
 
@@ -180,20 +180,20 @@ Tazapay sends a `payin.processing` event for bank initiated transactions to the 
 
 If the payment is not made by the customer and the URL expires, Tazapay sends a `payment_attempt.failed` after the `payin.processing` event. To generate a new URL, confirm the payin again using Step 2.
 
-| Event                  | Description                                   | Next Steps                                                                                  |
-| ---------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| payin.succeeded        | The customer paid before 30 days              | Fulfill the goods or services that the customer purchased                                   |
-| payment_attempt.failed | The customer did not pay, and the URL expired | Allow the customer to generate a new URL or complete the payment via another payment method |
+| Event                   | Description                                   | Next Steps                                                                                  |
+| ----------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| payin.succeeded         | The customer paid before 30 days              | Fulfill the goods or services that the customer purchased                                   |
+| payment\_attempt.failed | The customer did not pay, and the URL expired | Allow the customer to generate a new URL or complete the payment via another payment method |
 
 # Test the Integration
 
 ## Simulating success
 
-Click on `Simulate Success` CTA on the redirect_url. You will receive a `payin.succeeded` event.
+Click on `Simulate Success` CTA on the redirect\_url. You will receive a `payin.succeeded` event.
 
 ## Simulating Failure / Expiry
 
-Click on `Simulate Failure` / `Simulate Expire` CTA on the redirect_url. You will receive a `payment_attempt.failed` event.
+Click on `Simulate Failure` / `Simulate Expire` CTA on the redirect\_url. You will receive a `payment_attempt.failed` event.
 
 # Integrating Refunds
 
@@ -203,7 +203,7 @@ Bank Initiation supports partial refunds. Specify the amount (lesser than the in
 
 ### Refunding using dashboard
 
-Refer to this guide: <https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard>
+Refer to this guide: [https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard](https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard)
 
 ### Refund using API
 
