@@ -17,15 +17,15 @@ next:
 
 Successful cross-border payments to China via Tazapay require specific parameters:
 
-- **Beneficiary Name**: Must be provided in Chinese characters.
-- **Beneficiary Bank Name**: Must be provided in Chinese characters.
-- **National Identification Number**: Mandatory for individual beneficiaries.
-- **Logistics Tracking Details**: Required information includes:
-  - logistic_provider_name (mandatory)
-  - logistic_provider_code (optional)
-  - tracking_number (mandatory)
-- **Invoice Upload**: Mandatory for all payouts.
-- **Contract Upload**:  Required for specific payout purpose codes (refer to table below):
+* **Beneficiary Name**: Must be provided in Chinese characters.
+* **Beneficiary Bank Name**: Must be provided in Chinese characters.
+* **National Identification Number**: Mandatory for individual beneficiaries.
+* **Logistics Tracking Details**: Required information includes:
+  * logistic\_provider\_name (mandatory)
+  * logistic\_provider\_code (optional)
+  * tracking\_number (mandatory)
+* **Invoice Upload**: Mandatory for all payouts.
+* **Contract Upload**:  Required for specific payout purpose codes (refer to table below):
 
 | **Code** | **Description**                                                                                         |
 | -------- | ------------------------------------------------------------------------------------------------------- |
