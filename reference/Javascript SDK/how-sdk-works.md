@@ -16,19 +16,6 @@ next:
 4. The customer selects their preferred payment method. They then fill out the payment details and click on `Pay`. This completes the checkout experience.
 5. Tazapay notifies your server when the payment is successfully received using webhooks. The webhook data contains the successful payment state as well as the unique transaction number for you to reconcile and perform further necessary actions.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e45b177-Tazapay_Js_native.jpg",
-        null,
-        "How Tazapay's Javascript SDK works"
-      ],
-      "align": "center",
-      "border": true,
-      "caption": "How Tazapay's Javascript SDK works"
-    }
-  ]
-}
-[/block]
+<Image alt="How Tazapay's Javascript SDK works" align="center" border={true} src="https://files.readme.io/e45b177-Tazapay_Js_native.jpg">
+  How Tazapay's Javascript SDK works
+</Image>
