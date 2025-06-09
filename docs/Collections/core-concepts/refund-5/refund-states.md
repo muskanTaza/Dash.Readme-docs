@@ -12,22 +12,7 @@ next:
 ---
 The following flowchart contains the statuses a refund transitions through:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/40145b3-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/40145b3-image.png" />
 
 | State     | Description                                                                                                                                                                                                                                                                |
 | :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
