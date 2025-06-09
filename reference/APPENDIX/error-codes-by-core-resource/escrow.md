@@ -23,7 +23,7 @@ next:
 | 15510      | Either customer details or customer id is mandatory                                         |
 | 15511      | Payment link expiry can not be less than current time                                       |
 | 15515      | Request object passed for this API request is failing. Please provide valid metadata        |
-| 15516      | Escrow ID field is required and must be a valid ID, Example: esc_id                         |
+| 15516      | Escrow ID field is required and must be a valid ID, Example: esc\_id                        |
 | 15519      | Please provide valid line 1 with out Special characters                                     |
 | 15520      | Please provide valid city with out Special characters                                       |
 | 15521      | Please provide valid state                                                                  |
