@@ -33,8 +33,8 @@ Here is the list of payment info available.
 2. **method**: For now only card payment is available in s2s, so by default needs to be sent as a `card`.
 3. **currency**: It resembles collection currency, that is the currency in which the customer/user needs to pay.
 4. **country**: It resembles the customer/user country, that is the country from which the customer pays.
-5. **layout**: It is an optional field. By default, the value will be two-rows. means the card number will be in the first row and the expiration date, cvv will be in the second row.  
-   inline/one-row means all the 3 fields card number, exp date, and CVV will be in one row. Please provide the necessary width for better UI.  
+5. **layout**: It is an optional field. By default, the value will be two-rows. means the card number will be in the first row and the expiration date, cvv will be in the second row.\
+   inline/one-row means all the 3 fields card number, exp date, and CVV will be in one row. Please provide the necessary width for better UI.\
    three-rows mean each will be in one row.
 
 ### 1C: config
@@ -43,15 +43,15 @@ Here is the list of payment configs available.
 
 1. **customPayButton**: By default it is false. change it to true if you need a custom pay button instead of a Tazapay in-built pay button. please refer to [step 3B](https://docs.tazapay.com/reference/integrating-only-for-cards#step-3b-using-the-custom-pay-button) for integration details.
 2. **hideErrors**: Used to hide errors shown on the payment page. By default it is false. if you need to change it to true to hide payment errors, please handle those errors which you also get in paymentErrors event. refer to [step 6](https://docs.tazapay.com/reference/integrating-only-for-cards#step-6-handle-payment-errors) for integration.
-3. **showLabels**: Used to show card field labels like Card Number, Expiry Date, and CVV Number on top of each field.  
+3. **showLabels**: Used to show card field labels like Card Number, Expiry Date, and CVV Number on top of each field.\
    By default it is false. if you need to show these labels add this in the config object and set it to true.
 4. **origins**: Details are not required if your application/site doesn't load our iframe inside any other site/iframe.
-   - In the event the Tazapay iFrame is being rendered from within multiple nested iFrames, all ancestors in the chain must be provided as a comma-separated list.
-   - like If our Tazapay Iframe is embedded in another site/iframe, and you are using that embedded site/iframe inside your application, then you need to provide ancestor origins details as follows:
-   - **Example:**  
-     The primary origin that will be interacting with the Tazapay iFrame: test1.com  
-     Subsequent origins that will render test1.com: test2.com  
-     The origin string would then be <https://test1.com,https://test2.com>
+   * In the event the Tazapay iFrame is being rendered from within multiple nested iFrames, all ancestors in the chain must be provided as a comma-separated list.
+   * like If our Tazapay Iframe is embedded in another site/iframe, and you are using that embedded site/iframe inside your application, then you need to provide ancestor origins details as follows:
+   * **Example:**\
+     The primary origin that will be interacting with the Tazapay iFrame: test1.com\
+     Subsequent origins that will render test1.com: test2.com\
+     The origin string would then be [https://test1.com,https://test2.com](https://test1.com,https://test2.com)
 
 ### 1D: style
 
