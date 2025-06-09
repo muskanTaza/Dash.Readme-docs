@@ -45,19 +45,19 @@ You can fetch the token from the response of the checkout session. Please refer 
 The token can be passed to your client side (or Front End) to instantiate Tazapay’s Javascript SDK which will allow Tazapay to know the unique transaction for which the customer is making the payment.
 
 > 🚧 Your API keys are your responsibility
-> 
+>
 > Since the checkout API involves using your API keys, the checkout session should always be created on your server-side. Do not share your API keys to any unauthorised parties. This includes publicly accessible areas such as GitHub, client-side code, etc. An unauthorised party can create transactions on your behalf if they get a hold of your API keys.
 
 # Step 3: Instantiate Tazapay’s Javascript SDK using token (client-side)
 
-Once you have loaded Tazapay’s Javascript file into your client-side application using Step 1, you can instantiate Tazapay’s UI component for that particular payment using the clientToken that you have passed onto your client side (Refer Step 2).  
+Once you have loaded Tazapay’s Javascript file into your client-side application using Step 1, you can instantiate Tazapay’s UI component for that particular payment using the clientToken that you have passed onto your client side (Refer Step 2).\
 You can refer to the following code snippets to instantiate Tazapay’s UI component on your website/application for a particular checkout session:
 
-- Keep the division tag in your application to load the UI component.
+* Keep the division tag in your application to load the UI component.
   ```Text Division Tag
   <div id="tz-checkout"></div>
   ```
-- Instantiate UI component for checkout using token and other parameters
+* Instantiate UI component for checkout using token and other parameters
 
   ```Text Instantiation
   const options = {
