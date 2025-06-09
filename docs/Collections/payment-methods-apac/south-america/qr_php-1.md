@@ -43,7 +43,7 @@ The following is the upper and lower limits for QR transactions:
 - **Minimum Limit**: USD 0.01
 - **Maximum Limit**: USD 860
 
-The default expiration for a transaction is **30 minutes. **
+The default expiration for a transaction is **30 minutes.**
 
 # User Experience
 
