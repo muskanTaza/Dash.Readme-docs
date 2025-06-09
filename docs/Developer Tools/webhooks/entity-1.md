@@ -12,16 +12,16 @@ next:
 ---
 ## Entity approval status specific events
 
-| Event                             | Description                                                  | Default |
-| --------------------------------- | ------------------------------------------------------------ | ------- |
-| `entity.approval_processing`      | Triggered when the entity approval status is processing      | On      |
-| `entity.approval_requires_action` | Triggered when the entity approval status is requires_action | On      |
-| `entity.approval_succeeded`       | Triggered when the entity approval status is succeeded       | On      |
-| `entity.approval_rejected`        | Triggered when the entity approval status is rejected        | On      |
+| Event                             | Description                                                   | Default |
+| --------------------------------- | ------------------------------------------------------------- | ------- |
+| `entity.approval_processing`      | Triggered when the entity approval status is processing       | On      |
+| `entity.approval_requires_action` | Triggered when the entity approval status is requires\_action | On      |
+| `entity.approval_succeeded`       | Triggered when the entity approval status is succeeded        | On      |
+| `entity.approval_rejected`        | Triggered when the entity approval status is rejected         | On      |
 
 ## Sample Events
 
-### entity.approval_processing
+### entity.approval\_processing
 
 ```
 {
@@ -144,7 +144,7 @@ next:
 
 <br />
 
-### entity.approval_requires_action
+### entity.approval\_requires\_action
 
 ```
 {
@@ -277,7 +277,7 @@ next:
 
 <br />
 
-### entity.approval_succeeded
+### entity.approval\_succeeded
 
 ```
 {
@@ -411,7 +411,7 @@ next:
 
 <br />
 
-### entity.approval_rejected
+### entity.approval\_rejected
 
 ```
 {
