@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
->  
-> 
 > Tazapay recommends creating a checkout session (using the POST /v1/checkout endpoint) as soon as you have the necessary data from the customer (name, country and email). This reduces the time to load Tazapay's UI component for the customer.
 
 ## Reduce the wait time for your customers
@@ -25,8 +23,6 @@ window.addEventListener("load", (event) => {
   window.tazapay.preload(); // no arg required here 
 });
 ```
-
-
 
 ```javascript
 //Call below method only once the clientToken is available 
