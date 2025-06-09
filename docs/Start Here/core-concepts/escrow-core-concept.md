@@ -17,10 +17,7 @@ To create an escrow, we need to know the Tazapay User IDs of the buyer and selle
 Documents are not required to create an escrow but can be provided to indicate additional details about the underlying trade to make the eventual release process smoother for the seller (entity getting paid).
 
 Try the [Create Escrow](ref:create-escrow-api) API out yourself.
-[block:callout]
-{
-  "type": "warning",
-  "title": "",
-  "body": "You'll need to have a user's UUID from either [Create User](ref:create-user-api) or [Get User by ID](ref:get-user-by-id-api) and then create the [payment link](doc:payment-links-core-concept) by calling [Create Payment](ref:create-payment)"
-}
-[/block]
+
+> 🚧
+>
+> You'll need to have a user's UUID from either [Create User](ref:create-user-api) or [Get User by ID](ref:get-user-by-id-api) and then create the [payment link](doc:payment-links-core-concept) by calling [Create Payment](ref:create-payment)
