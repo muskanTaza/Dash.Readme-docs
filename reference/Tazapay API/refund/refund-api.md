@@ -13,6 +13,6 @@ metadata:
 next:
   description: ''
 ---
-> 📘 
-> 
+> 📘
+>
 > Depending on the payment method, Tazapay may not be able to process refunds. For more info, read our [FAQ](https://support.tazapay.com/what-payment-methods-are-unsupported-for-refunds)
