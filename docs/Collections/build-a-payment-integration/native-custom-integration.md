@@ -14,10 +14,10 @@ Tazapay's [Payin API ](https://docs.tazapay.com/reference/create-payin)allows fo
 
 ### Advantages of Native Custom Integration:
 
-- **Custom User Experience:** Design the payment flow to match your application's look and feel.
-- **Flexible Payment Methods:** Easily add or modify payment methods as needed.
-- **Enhanced Security:** Implement security measures tailored to your specific requirements.
-- **Detailed Control:** Gain granular control over the payment process, including error handling and status tracking.
+* **Custom User Experience:** Design the payment flow to match your application's look and feel.
+* **Flexible Payment Methods:** Easily add or modify payment methods as needed.
+* **Enhanced Security:** Implement security measures tailored to your specific requirements.
+* **Detailed Control:** Gain granular control over the payment process, including error handling and status tracking.
 
 # How the Payin API works
 
