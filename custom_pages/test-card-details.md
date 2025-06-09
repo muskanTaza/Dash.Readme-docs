@@ -6,8 +6,8 @@ metadata:
   title: ''
   description: ''
 ---
-| Buyer | Seller | Currency | Card scheme                                     | Test Card Details                       |
-|-------|--------|----------|-------------------------------------------------|-----------------------------------------|
+| Buyer | Seller | Currency | Card scheme                                     | Test Card Details                               |
+| ----- | ------ | -------- | ----------------------------------------------- | ----------------------------------------------- |
 | SG    | SG     | SGD      | Visa, master                                    | 4000 0000 0000 0002 **Exp**: 01/24 **CVV**: 111 |
 | SG    | SG     | SGD      | Amex                                            | 4000 0000 0000 0002 **Exp**: 01/24 **CVV**: 111 |
 | SG    | Any    | SGD      | Visa, master, amex                              | 4242 4242 4242 4242 **Exp**: 01/24 **CVV**: 100 |
