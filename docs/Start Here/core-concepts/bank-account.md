@@ -18,17 +18,13 @@ We provide payouts in both local currency and USD. Check the currencies we carry
 
 Depending on the geography, we would need the following information:
 
-- Account ID of user `UUID`
-- Name on the Bank Account `legal_name`
-- Account Number `account_number`
-- <a href="https://tazapay-api-developer.readme.io/reference/bank-codes" target="_blank">Bank Codes</a>`bank_codes`
-- Bank Name `bank_name`
-- Country code `country_code`
-- Contact number `contact_number`
-- Currency `currency`
-[block:callout]
-{
-  "type": "warning",
-  "body": "Your legal business name should be same as the bank account name in order for us to release the money to your account."
-}
-[/block]
+* Account ID of user `UUID`
+* Name on the Bank Account `legal_name`
+* Account Number `account_number`
+* <a href="https://tazapay-api-developer.readme.io/reference/bank-codes" target="_blank">Bank Codes</a>`bank_codes`
+* Bank Name `bank_name`
+* Country code `country_code`
+* Contact number `contact_number`
+* Currency `currency`
+
+> 🚧 Your legal business name should be same as the bank account name in order for us to release the money to your account.
