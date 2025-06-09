@@ -1,3 +1,4 @@
 - checkout-object
 - create-checkout
 - update-checkout-session
+- get-checkout-session
