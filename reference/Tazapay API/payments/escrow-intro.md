@@ -79,73 +79,273 @@ Documents are not required to create an escrow but can be provided to indicate a
 
 ### Parameters:
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Parameter",
-    "h-1": "Description",
-    "0-0": "state",
-    "0-1": "`string` State / status of escrow",
-    "1-0": "sub_state",
-    "1-1": "`string` Sub state / status of escrow",
-    "2-0": "invoice_currency",
-    "2-1": "`string`  Invoice currency",
-    "3-0": "invoice_amount",
-    "3-1": "`float` Invoice amount",
-    "4-0": "fee_tier",
-    "4-1": "`string` Applicable fee tier",
-    "5-0": "fee_paid_by",
-    "5-1": "`string` Party that bears the fee for the transaction. Can be: `buyer` or `seller`",
-    "6-0": "txn_type",
-    "6-1": "`string`  Type of transaction. Can be: `goods`, `service`",
-    "7-0": "txn_no",
-    "7-1": "`string` Year and 5 digit escrow transcation number",
-    "8-0": "txn_description",
-    "8-1": "`string` A short description of the underlying transaction or trade",
-    "9-0": "release_mechanism",
-    "9-1": "`string`  Party responsible for verifying the release documents. Can be: `marketplace`, `tazapay`, If empty; contracted MP level value will get applied",
-    "10-0": "reference_id",
-    "10-1": "`string` Marketplace identifier value. Example, marketplace escrow number, auto generated value, etc.",
-    "11-0": "initiated_by",
-    "11-1": "`string` Tazapay account UUID of the party who has initiated the transaction",
-    "12-0": "buyer_id",
-    "12-1": "`string`  Tazapay account UUID of the buyer",
-    "13-0": "seller_id",
-    "13-1": "`string` Tazapay account UUID of the seller",
-    "14-0": "invoice_amount",
-    "14-1": "`float` Invoice amount",
-    "15-0": "collect_amount",
-    "15-1": "`float` Collection amount in invoice currency",
-    "16-0": "disburse_amount",
-    "16-1": "`float` Disburse amount in invoice currency",
-    "17-0": "fee_tier_percentage",
-    "17-1": "`string` Fee percentage to be paid by the party that bears the fee for the transaction.",
-    "18-0": "release_docs",
-    "18-1": "`[] release_docs` The list of documents to be provided as completion proof for the verification.  <br> Please check <a href=\"/index.html#release_docs\">release_docs</a>",
-    "19-0": "txn_docs",
-    "19-1": "`[] txn_doc` Supporting documents for transaction. <br>Please check <a href=\"/index.html#txn_doc\">txn_doc</a>",
-    "20-0": "buyer",
-    "20-1": "`buyer` Buyer deatils <br>Please check <a href=\"/index.html#buyer\">buyer</a>",
-    "21-0": "seller",
-    "21-1": "`seller` Seller deatils <br>Please check <a href=\"/index.html#seller\">seller</a>",
-    "22-0": "attributes",
-    "22-1": "`json` Tunnelled add-on fields",
-    "23-0": "initiator_role",
-    "23-1": "`string` Party that initites the transaction. Can be `buyer` or `seller`",
-    "24-0": "fee_amount",
-    "24-1": "`float` Fee in invoice currency"
-  },
-  "cols": 2,
-  "rows": 25,
-  "align": [
-    null,
-    null
-  ]
-}
-[/block]
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Parameter
+      </th>
 
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
 
-#### release_docs:
+  <tbody>
+    <tr>
+      <td>
+        state
+      </td>
+
+      <td>
+        `string` State / status of escrow
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        sub\_state
+      </td>
+
+      <td>
+        `string` Sub state / status of escrow
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        invoice\_currency
+      </td>
+
+      <td>
+        `string`  Invoice currency
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        invoice\_amount
+      </td>
+
+      <td>
+        `float` Invoice amount
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        fee\_tier
+      </td>
+
+      <td>
+        `string` Applicable fee tier
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        fee\_paid\_by
+      </td>
+
+      <td>
+        `string` Party that bears the fee for the transaction. Can be: `buyer` or `seller`
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        txn\_type
+      </td>
+
+      <td>
+        `string`  Type of transaction. Can be: `goods`, `service`
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        txn\_no
+      </td>
+
+      <td>
+        `string` Year and 5 digit escrow transcation number
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        txn\_description
+      </td>
+
+      <td>
+        `string` A short description of the underlying transaction or trade
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        release\_mechanism
+      </td>
+
+      <td>
+        `string`  Party responsible for verifying the release documents. Can be: `marketplace`, `tazapay`, If empty; contracted MP level value will get applied
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        reference\_id
+      </td>
+
+      <td>
+        `string` Marketplace identifier value. Example, marketplace escrow number, auto generated value, etc.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        initiated\_by
+      </td>
+
+      <td>
+        `string` Tazapay account UUID of the party who has initiated the transaction
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        buyer\_id
+      </td>
+
+      <td>
+        `string`  Tazapay account UUID of the buyer
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        seller\_id
+      </td>
+
+      <td>
+        `string` Tazapay account UUID of the seller
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        invoice\_amount
+      </td>
+
+      <td>
+        `float` Invoice amount
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        collect\_amount
+      </td>
+
+      <td>
+        `float` Collection amount in invoice currency
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        disburse\_amount
+      </td>
+
+      <td>
+        `float` Disburse amount in invoice currency
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        fee\_tier\_percentage
+      </td>
+
+      <td>
+        `string` Fee percentage to be paid by the party that bears the fee for the transaction.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        release\_docs
+      </td>
+
+      <td>
+        `[] release_docs` The list of documents to be provided as completion proof for the verification.  <br> Please check <a href="/index.html#release_docs">release\_docs</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        txn\_docs
+      </td>
+
+      <td>
+        `[] txn_doc` Supporting documents for transaction. <br>Please check <a href="/index.html#txn_doc">txn\_doc</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        buyer
+      </td>
+
+      <td>
+        `buyer` Buyer deatils <br>Please check <a href="/index.html#buyer">buyer</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        seller
+      </td>
+
+      <td>
+        `seller` Seller deatils <br>Please check <a href="/index.html#seller">seller</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        attributes
+      </td>
+
+      <td>
+        `json` Tunnelled add-on fields
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        initiator\_role
+      </td>
+
+      <td>
+        `string` Party that initites the transaction. Can be `buyer` or `seller`
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        fee\_amount
+      </td>
+
+      <td>
+        `float` Fee in invoice currency
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+#### release\_docs:
 
 | Parameter | Description                                                                                                                          |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------ |
@@ -153,7 +353,7 @@ Documents are not required to create an escrow but can be provided to indicate a
 | name      | `string`  Name of the doc if user has selected type as others                                                                        |
 | url       | `string`  Direct download link                                                                                                       |
 
-#### txn_doc:
+#### txn\_doc:
 
 | Parameter | Description                                                         |
 | --------- | ------------------------------------------------------------------- |
@@ -163,18 +363,18 @@ Documents are not required to create an escrow but can be provided to indicate a
 
 #### buyer:
 
-| Parameter    | Description                                  |
-| ------------ | -------------------------------------------- |
-| contact_name | `string` Buyer's first and last name         |
-| email        | `string`  Buyer's email address              |
-| country      | `string`  Buyer's country                    |
-| company_name | `string`  Buyer's company name. Can be empty |
+| Parameter     | Description                                  |
+| ------------- | -------------------------------------------- |
+| contact\_name | `string` Buyer's first and last name         |
+| email         | `string`  Buyer's email address              |
+| country       | `string`  Buyer's country                    |
+| company\_name | `string`  Buyer's company name. Can be empty |
 
 #### seller:
 
-| Parameter    | Description                                   |
-| ------------ | --------------------------------------------- |
-| contact_name | `string` Seller's first and last name         |
-| email        | `string`  Seller's email address              |
-| country      | `string` Seller's country                     |
-| company_name | `string`  Seller's company name. Can be empty |
+| Parameter     | Description                                   |
+| ------------- | --------------------------------------------- |
+| contact\_name | `string` Seller's first and last name         |
+| email         | `string`  Seller's email address              |
+| country       | `string` Seller's country                     |
+| company\_name | `string`  Seller's company name. Can be empty |
