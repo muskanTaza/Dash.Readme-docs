@@ -14,7 +14,7 @@ next:
 
 The Tazapay APIs allow you as an online marketplace or platform to create a payment gateway for cross-border transactions as well as to collect, hold, and release payments among multiple parties from multiple countries.
 
-<hr>
+<hr />
 
 ## Get Started
 
