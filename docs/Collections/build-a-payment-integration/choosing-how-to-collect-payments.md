@@ -27,5 +27,5 @@ Tazapay offers flexible integration options to cater to your business needs and 
 <br />
 
 > 👍 Javascript SDK
-> 
+>
 > You can also integrate with Tazapay's Javascript SDK to directly embed the payment iFrame on your website for all the payment methods as well as cards.
