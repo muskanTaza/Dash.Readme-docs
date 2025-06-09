@@ -16,12 +16,12 @@ You are a marketplace looking to pay your beneficiaries (sellers, freelancers, s
 
 You can pass the following information to Tazapay’s API to orchestrate payouts:
 
-- Beneficiary’s country
-- E-mail ID of the beneficiary
-- Beneficiary Name
-- Payment currency (e.g. USD, INR, EUR, etc.)
-- Amount
-- Transaction description
+* Beneficiary’s country
+* E-mail ID of the beneficiary
+* Beneficiary Name
+* Payment currency (e.g. USD, INR, EUR, etc.)
+* Amount
+* Transaction description
 
 ## Step 1: Creating User Entities
 
@@ -55,7 +55,7 @@ Tazapay creates a user entity for Slydeshow and returns the following response.
 }
 ```
 
-**Account_id** in this instance will also be the unique user identifier (**UUID**), which will be used in any form of transactions including payout. 
+**Account\_id** in this instance will also be the unique user identifier (**UUID**), which will be used in any form of transactions including payout. 
 
 Slydeshow wants to execute payout to their freelancers, known as sellers in Tazapay’s parlance, on their platform. They are Alice, Bob, and Charlie. All of these freelancers would need to be in Tazapay’s database, so user entities are created for them using **POST /v1/user**. 
 
@@ -138,7 +138,7 @@ This is for Charlie
 }
 ```
 
-The account_id acts as the UUID for Alice, Bob, and Charlie. Slydeshow stores these IDs in its database.
+The account\_id acts as the UUID for Alice, Bob, and Charlie. Slydeshow stores these IDs in its database.
 
 For more details about how to manage entities using Tazapay’s endpoints, please [click](https://developer.tazapay.com/docs/tazapay-API-documentation/f1e6a64cb9051-users) here to get redirected to the relevant part of our documentation.
 
@@ -193,11 +193,11 @@ This is the payload for Charlie:
 }
 ```
 
-The initiated_by field is Slydeshow’s UUID because the platform is paying out to their users, in this case Alice, Bob, and Charlie. 
+The initiated\_by field is Slydeshow’s UUID because the platform is paying out to their users, in this case Alice, Bob, and Charlie. 
 
-Buyer_id is Slydeshow’s UUID since they are the account paying out to the user, and seller_id is Alice, Bob, and Charlie’s UUID because they are the beneficiary/recipient of the payout. 
+Buyer\_id is Slydeshow’s UUID since they are the account paying out to the user, and seller\_id is Alice, Bob, and Charlie’s UUID because they are the beneficiary/recipient of the payout. 
 
-Transaction_category is set to payout to indicate that it is a payout and not a sale of goods or services. Invoice currency and invoice amount are also entered in the payload. 
+Transaction\_category is set to payout to indicate that it is a payout and not a sale of goods or services. Invoice currency and invoice amount are also entered in the payload. 
 
 The Tazapay transactions will be created and the following responses are returned.
 
@@ -273,13 +273,13 @@ This is the response for Charlie:
 }
 ```
 
-The ‘txn_no’ is a unique number representing this particular transaction. Slydeshow stores this in its database.
+The ‘txn\_no’ is a unique number representing this particular transaction. Slydeshow stores this in its database.
 
 > 📘 Currency and Amount in the Request Body:
-> 
+>
 > The currency and amount that you enter in the request body is the amount and currency that the beneficiary will receive. In case, a bank account is not added in that currency for the beneficiary, there will be an FX conversion before the transfer.
 
-The fee_amount of 45 MYR, 792 INR, and 540 PHP will be deducted by Tazapay respectively before disbursing the funds.
+The fee\_amount of 45 MYR, 792 INR, and 540 PHP will be deducted by Tazapay respectively before disbursing the funds.
 
 > NOTE: You can also customise for the transaction fees to be borne by Slydeshow. For more details, read more in our [Create Escrow](https://developer.tazapay.com/docs/tazapay-API-documentation/ZG9jOjI4MzI2OTA4-create-escrow#body-parameters) part of the documentation.
 
@@ -353,6 +353,6 @@ Apart from the above APIs, you will also need to use the following APIs at some 
 
 1\.**Post KYB**: KYB stands for Know Your Business, To disburse funds into the seller’s account (in this case, Alice, Bob, and Charlie), the seller will have to undergo a one-time verification exercise before the first disbursal by Tazapay. It is a standard risk management practice aimed at eliminating money laundering. POST/v2/kyb can be used to add the required documents on Tazapay’s server for KYB verification of the sellers. For more information about the KYB facilities provided by Tazapay, please click [here](https://developer.tazapay.com/docs/tazapay-API-documentation/27k7of4hztyff-kyb).
 
-2. **Get Escrow Status:** To know the status of a particular underlying transaction, marketplaces can use GET /v1/escrow/{txn_no}. It will return the state and substate of a particular transaction (in this case, the payout between Slydeshow and the freelancers). This will keep all the stakeholders (marketplace and seller) always informed of the stage of the transaction. For more information about the Get Escrow Status API, please click [here](https://developer.tazapay.com/docs/tazapay-API-documentation/feb5f2440b7f2-get-escrow-status).
+2. **Get Escrow Status:** To know the status of a particular underlying transaction, marketplaces can use GET /v1/escrow/\{txn\_no}. It will return the state and substate of a particular transaction (in this case, the payout between Slydeshow and the freelancers). This will keep all the stakeholders (marketplace and seller) always informed of the stage of the transaction. For more information about the Get Escrow Status API, please click [here](https://developer.tazapay.com/docs/tazapay-API-documentation/feb5f2440b7f2-get-escrow-status).
 
 For more details about Tazapay’s pre-built solutions and developer tools, please visit our [documentation](https://developer.tazapay.com).
