@@ -2,3 +2,4 @@
 - ready-event
 - focus-event
 - blur-event
+- escape-event
