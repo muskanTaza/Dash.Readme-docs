@@ -13,6 +13,6 @@ metadata:
 next:
   description: ''
 ---
-> 🚧 
-> 
-> This is just to retrieve data on [milestone schemes](https://docs.tazapay.com/docs/milestone-schemes). If you need a milestone scheme set up, please reach out to support@tazapay.com
+> 🚧
+>
+> This is just to retrieve data on [milestone schemes](https://docs.tazapay.com/docs/milestone-schemes). If you need a milestone scheme set up, please reach out to [support@tazapay.com](mailto:support@tazapay.com)
