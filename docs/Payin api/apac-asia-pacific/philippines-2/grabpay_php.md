@@ -16,10 +16,10 @@ GrabPay is a digital wallet payment method in the Philippines, enabling customer
 
 ## Step 1: Create a payin
 
-Tazapay uses a payin object to represent your intent to collect a payment from your customer. The payin object tracks state changes from grabpay transaction creation to payment completion.  
-Create a payin on your server with an amount, invoice_currency PHP and a transaction_description using the create payin API
+Tazapay uses a payin object to represent your intent to collect a payment from your customer. The payin object tracks state changes from grabpay transaction creation to payment completion.\
+Create a payin on your server with an amount, invoice\_currency PHP and a transaction\_description using the create payin API
 
-A payin is created with the status requires_payment_method.
+A payin is created with the status requires\_payment\_method.
 
 ### Sample cURL
 
@@ -39,7 +39,7 @@ curl --request POST \
 
 ## Step 2: Confirm a payin
 
-Confirm the payin created in step 1 using the [confirm payin API](https://docs.tazapay.com/reference/confirm-payin). Upon confirmation of the payin, a redirection URL is generated. The status of the payin moves to requires_action
+Confirm the payin created in step 1 using the [confirm payin API](https://docs.tazapay.com/reference/confirm-payin). Upon confirmation of the payin, a redirection URL is generated. The status of the payin moves to requires\_action
 
 ### Sample cURL
 
@@ -100,7 +100,7 @@ curl --location 'https://service-sandbox.tazapay.com/v3/payin' \
 
 ## Step 3: Redirect the customer to the payment URL
 
-After confirming the payin, you will receive the following response. You will receive a redirect_url where you can redirect your customer to. You must redirect the customer to `latest_payment_attempt_data.redirect_url` in order to enable them to complete the payment.
+After confirming the payin, you will receive the following response. You will receive a redirect\_url where you can redirect your customer to. You must redirect the customer to `latest_payment_attempt_data.redirect_url` in order to enable them to complete the payment.
 
 ```
 {
@@ -159,10 +159,10 @@ Tazapay sends a `payin.succeeded` event as soon as the funds are received from t
 
 If the payment is not made by the customer within 15 mins minutes and the URL expires, Tazapay sends a `payment_attempt.failed` event. To generate a new URL, confirm the payin again using Step 2.
 
-| Event                  | Description                                                    | Next Steps                                                                                      |
-| ---------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| payin.succeeded        | The customer paid before the expiration of the payment request | Fulfill the goods or services that the customer purchased                                       |
-| payment_attempt.failed | The customer did not pay and the request expired               | Allow the customer to generate a new request or complete the payment via another payment method |
+| Event                   | Description                                                    | Next Steps                                                                                      |
+| ----------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| payin.succeeded         | The customer paid before the expiration of the payment request | Fulfill the goods or services that the customer purchased                                       |
+| payment\_attempt.failed | The customer did not pay and the request expired               | Allow the customer to generate a new request or complete the payment via another payment method |
 
 ## Expiration and cancellation
 
@@ -183,7 +183,7 @@ Grabpay supports partial refunds. Specify the amount (lesser than the invoice am
 
 ### Refunding using dashboard
 
-Refer to this guide: <https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard>
+Refer to this guide: [https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard](https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard)
 
 ### Refund using API
 
