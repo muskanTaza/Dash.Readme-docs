@@ -13,6 +13,6 @@ metadata:
 next:
   description: ''
 ---
-> ❗️ 
-> 
+> ❗️
+>
 > A request to cancel the refund can only be made if the refund object is in the `initiated` state. If the refund is in any other state, the API call will result in an error.
