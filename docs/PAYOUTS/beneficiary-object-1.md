@@ -14,44 +14,44 @@ next:
 
 ```json
 {
-    "id": "bnf_d05lmjp8ddevmnvfp3a0", 
-    "object": "beneficiary",        
-    "created_at": "2025-04-25T09:52:15.739077Z",
-    "beneficiary_details": {
-	    "address": {
-      "line1": "Address line 1",
-      "line2": "Address line 2",
-      "city": "city",
-      "state": "state",
-      "country": "SG",
-      "postal_code": "10090"
-    },
-    "destination": "bnk_d05lmjuq59csbboqt9d0",
-    "destination_details": {
-      "bank": {
-        "account_number": "90980778",
-        "bank_codes": {
-          "ifsc_code": "IFX001"
+    "id": "bnf_d05lmjp8ddevmnvfp3a0",
+    "object": "beneficiary",
+    "created_at": "2025-04-25T09:52:15.739077Z",
+    "beneficiary_details": {
+        "address": {
+            "line1": "Address line 1",
+            "line2": "Address line 2",
+            "city": "city",
+            "state": "state",
+            "country": "SG",
+            "postal_code": "10090"
         },
-        "bank_name": "Bank of India",
-        "branch_name": "",
-        "country": "IN",
-        "currency": "INR",
-        "iban":"",
-        "firc_required": true,
-        "purpose_code": ""
-      },
-      "type": "bank"
-    },
-    "email": "support@tazapay.com",
-    "name": "John Doe",
-    "phone": null,
-    "type": "business"
-  },
-     },
-     "documents": [],                  
-     "metadata": null                  
- }
+        "destination": "bnk_d05lmjuq59csbboqt9d0",
+        "destination_details": {
+            "bank": {
+                "account_number": "90980778",
+                "bank_codes": {
+                    "ifsc_code": "IFX001"
+                },
+                "bank_name": "Bank of India",
+                "branch_name": "",
+                "country": "IN",
+                "currency": "INR",
+                "iban": "",
+                "firc_required": true,
+                "purpose_code": ""
+            },
+            "type": "bank"
+        },
+        "email": "support@tazapay.com",
+        "name": "John Doe",
+        "phone": null,
+        "type": "business"
+    }
+    ,
+    "documents": [],
+    "metadata": null
+}
 ```
 
 | **Field**           | **type**  | **Description**                                                                                                          |
@@ -60,7 +60,7 @@ next:
 | object              | string    | This is 'beneficiary' here                                                                                               |
 | created_at          | timestamp | Timestamp at which the beneficiary object is created. (ISO 8601 format - YYYY-MM-DDTHH:MM:SS±hh:mm)                      |
 | beneficiary_details | json      | Details of the beneficiary. Refer here for beneficiary_details sub-fields                                                |
-| purpose             | enum      | The reason for payout. Refer <https://docs.tazapay.com/docs/reasons-for-payout> for the possible values.                 |
+| purpose             | enum      | The reason for payout. Refer &lt;https://docs.tazapay.com/docs/reasons-for-payout&gt; for the possible values.           |
 | firc_required       | boolean   | Whether FIRC is required for the payout made for this beneficiary. Only applicable when the destination currency is INR. |
 | metadata            | json      | Set of key-value pairs to attach to the payout                                                                           |
 
