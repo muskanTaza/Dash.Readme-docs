@@ -35,7 +35,7 @@ Example of how `event_id` is structured:
 
 ### 2. Extract the Timestamp
 
-The time when the webhook request was received. Extract the created_at field from the webhook response. Please note that we need to extract the `created_at` field that is outside the data json block. The timestamp will be in RFC3339Nano format.
+The time when the webhook request was received. Extract the created\_at field from the webhook response. Please note that we need to extract the `created_at` field that is outside the data json block. The timestamp will be in RFC3339Nano format.
 
 ```Text json
 {
@@ -46,7 +46,7 @@ The time when the webhook request was received. Extract the created_at field fro
 
 ### 3. Concatenate Data for Signing
 
-Once you have the event_id and the timestamp, you need to concatenate them with the payload into a single string. This concatenated string will be used to generate the signature.
+Once you have the event\_id and the timestamp, you need to concatenate them with the payload into a single string. This concatenated string will be used to generate the signature.
 
 ```Text json
 <event_id><payload><timestamp>
@@ -66,11 +66,11 @@ Once you have concatenated the data, you will use HMAC-SHA256 to generate the si
 
 To generate the signature:
 
-1. Concatenate the event_id, payload, and timestamp into a single string.
+1. Concatenate the event\_id, payload, and timestamp into a single string.
 2. Use HMAC-SHA256 to hash the concatenated string using your secret key.
 3. You can find the secret key on the merchant dashboard on the Settings > Webhooks > secret token. Click on reveal to view the secret token
 
-   [block:image]{"images":[{"image":["https://files.readme.io/03c439acea7152575a001bfa423830050182ab0be3a170dfc628ee14614224b0-Screenshot_2025-03-12_at_6.03.25_PM.png","",""],"align":"center"}]}[/block]
+   <Image align="center" src="https://files.readme.io/03c439acea7152575a001bfa423830050182ab0be3a170dfc628ee14614224b0-Screenshot_2025-03-12_at_6.03.25_PM.png" />
 4. Generate the signature in Base64 format.
 
 Example of how the signature will look like for the above concatenated string for secret key  `YKzhhJM4gd8s5MS1LVvWbqSyJqLPvr7j` - 
@@ -83,21 +83,7 @@ T2tZvRcMuZWVyDZrorBlPd7u8XKBx8RTWUSGuTakZqQ=
 
 Once you have generated the signature on your end, you can match it with the signature sent by Tazapay in the webhook header in the field name - `signature`. If both of the signatures match , that means that the webhook is sent by Tazapay and has not been tampered with while transmission.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f15829643fb1f7c1e59a1510c0a20d9259a5fa891437644fc2f2cf18d25f05c1-Screenshot_2025-03-12_at_1.27.02_PM.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/f15829643fb1f7c1e59a1510c0a20d9259a5fa891437644fc2f2cf18d25f05c1-Screenshot_2025-03-12_at_1.27.02_PM.png" />
 
 <br />
 
