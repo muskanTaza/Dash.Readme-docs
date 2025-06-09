@@ -12,7 +12,7 @@ next:
 ---
 | ERROR CODE | Meaning                                                                                     |
 | :--------- | :------------------------------------------------------------------------------------------ |
-| 15500      | Checkout ID field is required and must be a valid ID, Example: chk_id                       |
+| 15500      | Checkout ID field is required and must be a valid ID, Example: chk\_id                      |
 | 15501      | Please provide valid email address                                                          |
 | 15502      | Country is not valid. Must be alpha-2 country code, Example: IN, SG                         |
 | 15503      | The requested invoice currency is not supported in the customer/account country's corridor. |
