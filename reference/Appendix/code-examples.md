@@ -16,14 +16,14 @@ Please find some of the sample codes that you can use to integrate with Tazapay:
 
 ## Sample Codes:
 
-- [Javascript](https://github.com/tazapay/api-examples/tree/main/javascript)
+* [Javascript](https://github.com/tazapay/api-examples/tree/main/javascript)
 
-- [PHP](https://github.com/tazapay/api-examples/tree/main/php)
+* [PHP](https://github.com/tazapay/api-examples/tree/main/php)
 
-- [Java](https://github.com/tazapay/api-examples/tree/main/java)
+* [Java](https://github.com/tazapay/api-examples/tree/main/java)
 
-- [Python](https://github.com/tazapay/api-examples/tree/main/python)
+* [Python](https://github.com/tazapay/api-examples/tree/main/python)
 
-- [C#](https://github.com/tazapay/api-examples/tree/main/c%23)
+* [C#](https://github.com/tazapay/api-examples/tree/main/c%23)
 
-- [Golang](https://github.com/tazapay/api-examples/tree/main/go)
+* [Golang](https://github.com/tazapay/api-examples/tree/main/go)
