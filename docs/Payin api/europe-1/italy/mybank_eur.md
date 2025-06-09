@@ -14,17 +14,17 @@ next:
 ---
 ### How It Works
 
-- During checkout, the customer selects "MyBank" as their payment method.
-- They are then redirected to their online banking environment within the secure MyBank platform.
-- Using their existing online banking credentials, they authenticate the payment.
-- Funds are transferred directly from their account to the merchant in real-time.
+* During checkout, the customer selects "MyBank" as their payment method.
+* They are then redirected to their online banking environment within the secure MyBank platform.
+* Using their existing online banking credentials, they authenticate the payment.
+* Funds are transferred directly from their account to the merchant in real-time.
 
 # Integrating on your website / application
 
 ## Step 1: Create a payin
 
-Tazapay uses a `payin` object to represent your intent to collect a payment from your customer. The payin object tracks state changes from Mybank transaction creation to payment completion.  
-Create a payin on your server with an amount, invoice_currency `EUR` and a transaction_description using the [create payin API](https://docs.tazapay.com/reference/create-payin)
+Tazapay uses a `payin` object to represent your intent to collect a payment from your customer. The payin object tracks state changes from Mybank transaction creation to payment completion.\
+Create a payin on your server with an amount, invoice\_currency `EUR` and a transaction\_description using the [create payin API](https://docs.tazapay.com/reference/create-payin)
 
 A payin is created with the status `requires_payment_method`.
 
@@ -172,20 +172,20 @@ Tazapay sends a `payin.succeeded` event as soon as the funds are received from t
 
 If the payment is not made by the customer within 30 minutes and the URL expires, Tazapay sends a `payment_attempt.failed` event. To generate a new URL, confirm the payin again using Step 2.
 
-| Event                  | Description                                        | Next Steps                                                                                  |
-| ---------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| payin.succeeded        | The customer paid before the expiration of the URL | Fulfill the goods or services that the customer purchased                                   |
-| payment_attempt.failed | The customer did not pay, and the URL expired      | Allow the customer to generate a new URL or complete the payment via another payment method |
+| Event                   | Description                                        | Next Steps                                                                                  |
+| ----------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| payin.succeeded         | The customer paid before the expiration of the URL | Fulfill the goods or services that the customer purchased                                   |
+| payment\_attempt.failed | The customer did not pay, and the URL expired      | Allow the customer to generate a new URL or complete the payment via another payment method |
 
 # Test the Integration
 
 ## Simulating success
 
-Click on `Simulate Success` CTA on the redirect_url. You will receive a `payin.succeeded` event.
+Click on `Simulate Success` CTA on the redirect\_url. You will receive a `payin.succeeded` event.
 
 ## Simulating Failure / Expiry
 
-Click on `Simulate Failure` CTA on the redirect_url. You will receive a `payment_attempt.failed` event.
+Click on `Simulate Failure` CTA on the redirect\_url. You will receive a `payment_attempt.failed` event.
 
 # Integrating Refunds
 
@@ -195,7 +195,7 @@ Mybank also supports partial refunds. Specify the amount (lesser than the invoic
 
 ### Refunding using dashboard
 
-Refer to this guide: <https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard>
+Refer to this guide: [https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard](https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard)
 
 ### Refund using API
 
