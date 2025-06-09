@@ -11,7 +11,7 @@ next:
   description: ''
 ---
 | ERROR CODE | Meaning                                                                                            |
-|------------|----------------------------------------------------------------------------------------------------|
+| ---------- | -------------------------------------------------------------------------------------------------- |
 | 2400       | Please provide account id or UUID of the user                                                      |
 | 2401       | User not found. Please provide a valid UUID                                                        |
 | 2402       | Please provide the bank name                                                                       |
