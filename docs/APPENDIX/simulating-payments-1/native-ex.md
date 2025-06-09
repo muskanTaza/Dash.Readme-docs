@@ -30,7 +30,7 @@ These payment methods are part of native experience offered by Tazapay.
 ### Common Testing Scenarios
 
 1. **Successful Payment**: Ensure that a transaction using a native payment method for a successful simulation returns the expected success response.
-2. **Payment Failure: ** Ensure that a transaction using a native payment method for a failure simulation returns the expected success response.
+2. **Payment Failure:** Ensure that a transaction using a native payment method for a failure simulation returns the expected success response.
 3. **Expiry**: Certain payment methods expire such as QR based payment methods. You can ensure the behavior by simulating the expiry use case.
 
 ### Simulation Steps
@@ -46,9 +46,9 @@ These payment methods are part of native experience offered by Tazapay.
 
 Alternatively, users can test by hitting the following endpoints with required params 
 
-1. For Payins: <https://service-sandbox.tazapay.com/v3/payin>
-   1. For Payin API, all transactions irrespective of the amount that are created in the sandbox environment are marked as successful within ~1-2 mins. Similarly, any payin created with amount as `20000 cents` will be marked as failed.
-2. For Checkout: <https://service-sandbox.tazapay.com/v3/checkout>
+1. For Payins: [https://service-sandbox.tazapay.com/v3/payin](https://service-sandbox.tazapay.com/v3/payin)
+   1. For Payin API, all transactions irrespective of the amount that are created in the sandbox environment are marked as successful within \~1-2 mins. Similarly, any payin created with amount as `20000 cents` will be marked as failed.
+2. For Checkout: [https://service-sandbox.tazapay.com/v3/checkout](https://service-sandbox.tazapay.com/v3/checkout)
 
 ### Conclusion
 
