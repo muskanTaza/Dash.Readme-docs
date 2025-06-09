@@ -14,15 +14,15 @@ next:
 
 These are the events created and triggered when the status of the payin changes. 
 
-| Event                         | Description                                         | Default (on/off) |
-| ----------------------------- | --------------------------------------------------- | ---------------- |
-| payin.requires_payment_method | Triggers when the status is requires_payment_method | On               |
-| payin.requires_action         | Triggers when the status is requires_action         | On               |
-| payin.processing              | Triggers when the status is processing              | On               |
-| payin.succeeded               | Triggers when the status is succeeded               | On               |
-| payin.cancelled               | Triggers when the payin is cancelled                | Off              |
+| Event                           | Description                                           | Default (on/off) |
+| ------------------------------- | ----------------------------------------------------- | ---------------- |
+| payin.requires\_payment\_method | Triggers when the status is requires\_payment\_method | On               |
+| payin.requires\_action          | Triggers when the status is requires\_action          | On               |
+| payin.processing                | Triggers when the status is processing                | On               |
+| payin.succeeded                 | Triggers when the status is succeeded                 | On               |
+| payin.cancelled                 | Triggers when the payin is cancelled                  | Off              |
 
-## payin.requires_payment_method
+## payin.requires\_payment\_method
 
 ```json json
 {
@@ -42,7 +42,7 @@ These are the events created and triggered when the status of the payin changes.
 }
 ```
 
-## payin.requires_action
+## payin.requires\_action
 
 ```json json
 {
@@ -146,16 +146,16 @@ These are the events created and triggered when the status of the payin changes.
 }
 ```
 
-## Payment_Attempt Specific Events:
+## Payment\_Attempt Specific Events:
 
 These events are created and triggered when something of interest happens for a payment attempt.
 
-| Event                     | Description                       | Default (on/off) |
-| ------------------------- | --------------------------------- | ---------------- |
-| payment_attempt.failed    | When a payment_attempt fails      | On               |
-| payment_attempt.succeeded | When the payment_attempt succeeds | Off              |
+| Event                      | Description                        | Default (on/off) |
+| -------------------------- | ---------------------------------- | ---------------- |
+| payment\_attempt.failed    | When a payment\_attempt fails      | On               |
+| payment\_attempt.succeeded | When the payment\_attempt succeeds | Off              |
 
-### payment_attempt.failed
+### payment\_attempt.failed
 
 ```json json
 {
@@ -175,7 +175,7 @@ These events are created and triggered when something of interest happens for a 
 }
 ```
 
-### payment_attempt.succeeded
+### payment\_attempt.succeeded
 
 ```json json
 {
