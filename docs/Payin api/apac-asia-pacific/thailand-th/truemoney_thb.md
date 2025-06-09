@@ -14,15 +14,15 @@ next:
 ---
 ### How It Works
 
-- Users can top up their TrueMoney wallets through various channels like bank transfers, convenience stores, or cash deposits.
-- Payments are made by scanning QR codes, using the app for online transactions, or transferring funds to other users.
+* Users can top up their TrueMoney wallets through various channels like bank transfers, convenience stores, or cash deposits.
+* Payments are made by scanning QR codes, using the app for online transactions, or transferring funds to other users.
 
 # Integrating on your website / application
 
 ## Step 1: Create a payin
 
-Tazapay uses a `payin` object to represent your intent to collect a payment from your customer. The payin object tracks state changes from transaction creation to payment completion via Truemoney.  
-Create a payin on your server with an amount, invoice_currency `THB` and a transaction_description using the [create payin API](https://docs.tazapay.com/reference/create-payin)
+Tazapay uses a `payin` object to represent your intent to collect a payment from your customer. The payin object tracks state changes from transaction creation to payment completion via Truemoney.\
+Create a payin on your server with an amount, invoice\_currency `THB` and a transaction\_description using the [create payin API](https://docs.tazapay.com/reference/create-payin)
 
 A payin is created with the status `requires_payment_method`.
 
@@ -170,20 +170,20 @@ Tazapay sends a `payin.succeeded` event as soon as the funds are received from
 
 If the payment is not made by the customer and the URL expires, Tazapay sends a `payment_attempt.failed`  event. To generate a new URL, confirm the payin again using Step 2.
 
-| Event                  | Description                                   | Next Steps                                                                                  |
-| ---------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| payin.succeeded        | The customer paid before 2 hours.             | Fulfill the goods or services that the customer purchased                                   |
-| payment_attempt.failed | The customer did not pay, and the URL expired | Allow the customer to generate a new URL or complete the payment via another payment method |
+| Event                   | Description                                   | Next Steps                                                                                  |
+| ----------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| payin.succeeded         | The customer paid before 2 hours.             | Fulfill the goods or services that the customer purchased                                   |
+| payment\_attempt.failed | The customer did not pay, and the URL expired | Allow the customer to generate a new URL or complete the payment via another payment method |
 
 # Test the Integration
 
 ## Simulating success
 
-Click on `Simulate Success` CTA on the redirect_url. You will receive a `payin.succeeded` event.
+Click on `Simulate Success` CTA on the redirect\_url. You will receive a `payin.succeeded` event.
 
 ## Simulating Failure / Expiry
 
-Click on  `Simulate failure` CTA on the redirect_url. You will receive a `payment_attempt.failed` event.
+Click on  `Simulate failure` CTA on the redirect\_url. You will receive a `payment_attempt.failed` event.
 
 # Integrating Refunds
 
@@ -193,7 +193,7 @@ Truemoney supports partial refunds. Specify the amount (lesser than the invoice 
 
 ### Refunding using dashboard
 
-Refer to this guide: <https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard>
+Refer to this guide: [https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard](https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard)
 
 ### Refund using API
 
