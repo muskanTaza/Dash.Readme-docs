@@ -16,7 +16,7 @@ next:
 ---
 ## Parameters
 
-```
+```json
 {
         "address": {
             "city": "Test",
@@ -52,8 +52,8 @@ next:
         "name": "test",
         "object": "beneficiary",
         "phone": {
-            "calling_code": "91"
-           "number": "9231231231"
+            "calling_code": "91",
+            "number": "9231231231"
         },
         "tax_id": "",
         "type": "individual"
