@@ -27,9 +27,9 @@ Card payments offer a blend of advantages that make them appealing to both consu
 
 While often grouped together, the main types function differently:
 
-- **Debit Cards:** Linked directly to your bank account. When you pay, funds are deducted from your current balance almost immediately.
-- **Credit Cards:** Allow you to borrow money from the card issuer (usually a bank) up to a certain limit. You receive a bill later and can pay it in full or carry a balance (usually incurring interest).
-- **Prepaid Cards:** Loaded with a specific amount of money beforehand. You can only spend up to the loaded value. They are not linked to a bank account or a line of credit.
+* **Debit Cards:** Linked directly to your bank account. When you pay, funds are deducted from your current balance almost immediately.
+* **Credit Cards:** Allow you to borrow money from the card issuer (usually a bank) up to a certain limit. You receive a bill later and can pay it in full or carry a balance (usually incurring interest).
+* **Prepaid Cards:** Loaded with a specific amount of money beforehand. You can only spend up to the loaded value. They are not linked to a bank account or a line of credit.
 
 ### How Does a Card Payment Actually Work? (A Simplified View)
 
@@ -46,31 +46,31 @@ When you use your card, a complex but rapid sequence of events happens behind th
 
 ### The Key Players (The Ecosystem)
 
-- **Cardholder:** The individual using the card.
-- **Merchant:** The business accepting the card payment.
-- **Acquiring Bank (Acquirer):** The merchant's bank or payment processor that provides them with the ability to accept cards and routes the transaction data.
-- **Issuing Bank (Issuer):** The bank that issued the card to the cardholder and holds their account/credit line.
-- **Card Network:** The infrastructure providers (Visa, Mastercard, etc.) that act as intermediaries, setting rules and routing transactions between acquirers and issuers.
+* **Cardholder:** The individual using the card.
+* **Merchant:** The business accepting the card payment.
+* **Acquiring Bank (Acquirer):** The merchant's bank or payment processor that provides them with the ability to accept cards and routes the transaction data.
+* **Issuing Bank (Issuer):** The bank that issued the card to the cardholder and holds their account/credit line.
+* **Card Network:** The infrastructure providers (Visa, Mastercard, etc.) that act as intermediaries, setting rules and routing transactions between acquirers and issuers.
 
 ### Benefits & Considerations
 
 **For Consumers:**
 
-- **Pros:** Convenience, security, rewards, purchase protection, global acceptance, credit building (credit cards).
-- **Cons:** Potential for debt (credit cards), interest charges, possible fees (annual fees, foreign transaction fees), risk of fraud if details are compromised.
+* **Pros:** Convenience, security, rewards, purchase protection, global acceptance, credit building (credit cards).
+* **Cons:** Potential for debt (credit cards), interest charges, possible fees (annual fees, foreign transaction fees), risk of fraud if details are compromised.
 
 **For Merchants:**
 
-- **Pros:** Increased sales potential, higher average transaction values, improved cash flow, perceived legitimacy, reduced cash handling risks.
-- **Cons:** Processing fees (interchange fees, assessment fees, processor markups), hardware costs (terminals), risk of chargebacks.
+* **Pros:** Increased sales potential, higher average transaction values, improved cash flow, perceived legitimacy, reduced cash handling risks.
+* **Cons:** Processing fees (interchange fees, assessment fees, processor markups), hardware costs (terminals), risk of chargebacks.
 
 ### The Future is Already Here
 
 Card payments continue to evolve rapidly:
 
-- **Contactless (NFC):** Tap-to-pay is becoming the standard for in-person transactions due to speed and convenience.
-- **Mobile Wallets:** Services like Apple Pay, Google Pay, and Samsung Pay use tokenization to store card details securely on smartphones, enabling contactless mobile payments.
-- **Virtual Cards:** Single-use or merchant-specific card numbers generated for online shopping enhance security.
-- **Biometrics:** Fingerprint or facial recognition are increasingly used for authenticating payments, especially on mobile devices.
+* **Contactless (NFC):** Tap-to-pay is becoming the standard for in-person transactions due to speed and convenience.
+* **Mobile Wallets:** Services like Apple Pay, Google Pay, and Samsung Pay use tokenization to store card details securely on smartphones, enabling contactless mobile payments.
+* **Virtual Cards:** Single-use or merchant-specific card numbers generated for online shopping enhance security.
+* **Biometrics:** Fingerprint or facial recognition are increasingly used for authenticating payments, especially on mobile devices.
 
 In conclusion, card payments, led by giants like Visa and Mastercard, form the bedrock of modern global commerce. Their blend of convenience, security features, and widespread acceptance ensures they will remain a vital part of how we transact, even as technology continues to reshape the payment landscape.
