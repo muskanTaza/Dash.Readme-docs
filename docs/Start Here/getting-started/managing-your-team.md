@@ -18,7 +18,7 @@ To manage your team members, you first need to navigate to the correct section w
 
 1. **Log In:** Log in to your Tazapay merchant dashboard using your credentials.
 2. **Navigate to Settings:** Locate the 'Settings' area. This will be listed in a sidebar menu, towards the bottom left of the dashboard.
-3. **Find Team Management:** Within 'Settings', look for an option labelled **'Team Management'**, ‘Manage Team**'**. Click on it.
+3. **Find Team Management:** Within 'Settings', look for an option labelled **'Team Management'**, ‘Manage Tea&#x6D;**'**. Click on it.
 
 This will take you to the main screen where you can view, invite, and manage your team's access.
 
@@ -26,8 +26,8 @@ This will take you to the main screen where you can view, invite, and manage you
 
 Tazapay uses a role-based access control (RBAC) system. Each team member you invite must be assigned a role, which determines what actions they can perform and what data they can see within the dashboard. Assigning the correct role is crucial for security.
 
-- **Owner (Admin):** Has full access to the dashboard. Can manage all settings, view financial data, handle transactions, manage API keys, invite/manage other team members and all other sensitive information.
-- **Manager:** Typically has access to view and download transactions and balance/balance transactions by default. However, this can be modified as per requirement in the ‘**manage team’** section,
+* **Owner (Admin):** Has full access to the dashboard. Can manage all settings, view financial data, handle transactions, manage API keys, invite/manage other team members and all other sensitive information.
+* **Manager:** Typically has access to view and download transactions and balance/balance transactions by default. However, this can be modified as per requirement in the ‘**manage team’** section,
 
 **Important:** Always review the specific permissions associated with each role directly within the Tazapay dashboard before assigning it to ensure it aligns with the team member's responsibilities.
 
@@ -41,8 +41,6 @@ To grant a team memer access to your Tazapay account:
 4. **Select Role:** Choose the appropriate role from the dropdown list based on the access level they require (see Step 2).
 
    1. Modify the access by selecting the options available if the user you’re adding is a manager.
-
-    
 
    ![](https://files.readme.io/0d3da74e15190478d0ed0d85bd8b16c1101c5008dc8ef255aff16f06cbfaa322-image_4.png)
 5. **Send Invitation:** Click the **'Send Invite'**.
