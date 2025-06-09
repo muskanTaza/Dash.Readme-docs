@@ -12,12 +12,12 @@ next:
 ---
 Tazapay provides full control and visibility over your webhook events. This guide explains how to:
 
-- Configure webhook endpoints
-- Enable/Disable webhooks
-- View webhook event logs
-- Re-trigger webhook events
-- Authenticate webhooks
-- Manage user permissions
+* Configure webhook endpoints
+* Enable/Disable webhooks
+* View webhook event logs
+* Re-trigger webhook events
+* Authenticate webhooks
+* Manage user permissions
 
 ***
 
@@ -53,8 +53,8 @@ You can toggle the active status of a webhook at any time.
 
 ### Behavior
 
-- **Enabled**: Events matching the selected types will be sent
-- **Disabled**: No events will be sent until re-enabled
+* **Enabled**: Events matching the selected types will be sent
+* **Disabled**: No events will be sent until re-enabled
 
 > Disabling a webhook does not delete it or affect previously sent events.
 
@@ -71,11 +71,11 @@ You can inspect detailed logs for each webhook event via the dashboard.
 
 ### Webhook Details
 
-- **Webhook Name & URL**
-- **Status**: Enabled/Disabled
-- **Secret Token**
-- **Total Events Triggered**
-- **Event Logs Table** with filters and search
+* **Webhook Name & URL**
+* **Status**: Enabled/Disabled
+* **Secret Token**
+* **Total Events Triggered**
+* **Event Logs Table** with filters and search
 
 ### Log Entry Fields
 
@@ -91,9 +91,9 @@ You can inspect detailed logs for each webhook event via the dashboard.
 
 You can filter logs by:
 
-- Date
-- Event type
-- Response code
+* Date
+* Event type
+* Response code
 
 You can also search by **Event ID** or **Payment ID**.
 
@@ -127,7 +127,7 @@ Tazapay signs each webhook request. You should verify the signature to ensure it
 
 1. Each request includes a `webhook-signature` header.
 2. You need to generate the same signature at your end and verify it with the one sent with the webhook
-3. Signature is build using event_id, payload, timestamp and the secret token
+3. Signature is build using event\_id, payload, timestamp and the secret token
 
 👉 [View detailed implementation guide](https://docs.tazapay.com/docs/webhook-authentication)
 
@@ -156,9 +156,9 @@ Go to `Settings > Manage Team > Edit`
 
 Use the **Sandbox Environment** to test webhook integration safely.
 
-- Supports all webhook events
-- Avoids triggering production workflows
-- Prevents rate limit issues or costs
+* Supports all webhook events
+* Avoids triggering production workflows
+* Prevents rate limit issues or costs
 
 ***
 
