@@ -14,18 +14,18 @@ The following fields have a maximum length of 250 characters
 
 ### POST /v1/user
 
-first_name, last_name, contact_number, business_name
+first\_name, last\_name, contact\_number, business\_name
 
 ### POST /v1/checkout
 
-first_name, last_name, contact_number, business_name, reference_id
+first\_name, last\_name, contact\_number, business\_name, reference\_id
 
-txn\_description _(has a maximum length of 1250 characters)_
+txn\_description *(has a maximum length of 1250 characters)*
 
 ### POST /v1/escrow
 
-reference_id
+reference\_id
 
 ### POST /v2/kyb
 
-address_line_1, address_line_2, city, state, zip_code, mobile_number
+address\_line\_1, address\_line\_2, city, state, zip\_code, mobile\_number
