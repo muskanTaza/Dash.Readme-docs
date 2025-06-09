@@ -12,7 +12,7 @@ next:
 ---
 ## Related Links
 
-- [Settlement Object](https://docs.tazapay.com/docs/settlements)
+* [Settlement Object](https://docs.tazapay.com/docs/settlements)
 
 ## Settlement Status Specific Events:
 
