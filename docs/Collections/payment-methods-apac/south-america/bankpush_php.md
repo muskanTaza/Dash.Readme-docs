@@ -41,7 +41,7 @@ The following is the limits for Bank Push transactions:
 
 - **Minimum Limit**: USD 0.5
 
-There is no default expiration for a bank push transaction**.**
+There is no default expiration for a bank push transaction.
 
 # User Experience
 
