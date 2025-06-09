@@ -15,16 +15,16 @@ next:
 ---
 ### How It Works
 
-- When making a payment, the customer receives a unique reference number and an entity number.
-- They can then make the payment at an ATM using their debit card and entering the provided numbers.
-- Alternatively, they can pay at a bank branch or through their online banking platform.
+* When making a payment, the customer receives a unique reference number and an entity number.
+* They can then make the payment at an ATM using their debit card and entering the provided numbers.
+* Alternatively, they can pay at a bank branch or through their online banking platform.
 
 # Integrating on your website / application
 
 ## Step 1: Create a payin
 
-Tazapay uses a `payin` object to represent your intent to collect a payment from your customer. The payin object tracks state changes from `multibanco_eur` transaction creation to payment completion.  
-Create a payin on your server with an amount, invoice_currency `EUR` and a transaction_description using the [create payin API](https://docs.tazapay.com/reference/create-payin)
+Tazapay uses a `payin` object to represent your intent to collect a payment from your customer. The payin object tracks state changes from `multibanco_eur` transaction creation to payment completion.\
+Create a payin on your server with an amount, invoice\_currency `EUR` and a transaction\_description using the [create payin API](https://docs.tazapay.com/reference/create-payin)
 
 A payin is created with the status `requires_payment_method`.
 
@@ -172,23 +172,23 @@ Tazapay sends a `payin.succeeded` event as soon as the funds are received from t
 
 If the payment is not made by the customer within 7 days and the URL expires, Tazapay sends a `payment_attempt.failed` event. To generate a new URL, confirm the payin again using Step 2.
 
-| Event                  | Description                                        | Next Steps                                                                                  |
-| ---------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| payin.succeeded        | The customer paid before the expiration of the URL | Fulfill the goods or services that the customer purchased                                   |
-| payment_attempt.failed | The customer did not pay, and the URL expired      | Allow the customer to generate a new URL or complete the payment via another payment method |
+| Event                   | Description                                        | Next Steps                                                                                  |
+| ----------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| payin.succeeded         | The customer paid before the expiration of the URL | Fulfill the goods or services that the customer purchased                                   |
+| payment\_attempt.failed | The customer did not pay, and the URL expired      | Allow the customer to generate a new URL or complete the payment via another payment method |
 
 # Test the Integration
 
 ## Simulating success
 
-- Click on the redirect URL.
-- Select dummy `bank` on the redirect page
-- A dummy `username` and `password` are already prefilled.
-- Click on `Simulate Success` CTA on the redirect_url. You will receive a `payin.succeeded` event.
+* Click on the redirect URL.
+* Select dummy `bank` on the redirect page
+* A dummy `username` and `password` are already prefilled.
+* Click on `Simulate Success` CTA on the redirect\_url. You will receive a `payin.succeeded` event.
 
 ## Simulating Failure / Expiry
 
-Click on `Simulate Failure` CTA on the redirect_url. You will receive a `payin.failed` event.
+Click on `Simulate Failure` CTA on the redirect\_url. You will receive a `payin.failed` event.
 
 # Integrating Refunds
 
