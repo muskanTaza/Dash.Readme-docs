@@ -16,7 +16,7 @@ next:
 | :---------------- | :--------------------------------------- | :----------------- |
 | collect.succeeded | Triggered when the status is `succeeded` | On                 |
 | collect.failed    | Triggered when the status is `failed`    | On                 |
-| collect.on_hold   | Triggered when the status is `on_hold`   | On                 |
+| collect.on\_hold  | Triggered when the status is `on_hold`   | On                 |
 
 ## collect.succeeded
 
@@ -206,7 +206,7 @@ next:
 }
 ```
 
-## collect.on_hold
+## collect.on\_hold
 
 ### Virtual Account
 
