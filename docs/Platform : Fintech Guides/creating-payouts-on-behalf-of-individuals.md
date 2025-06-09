@@ -24,17 +24,17 @@ Here’s how you can integrate with Tazapay as a platform / fintech
 
 # Create your own account
 
-You can create your own account by signing up on the Tazapay dashboard at <https://dashboard.tazapay.com.> You can also [add multiple users from your team](https://support.tazapay.com/how-do-i-invite-team-members-into-my-tazapay-account) with different levels of access to your account.
+You can create your own account by signing up on the Tazapay dashboard at [https://dashboard.tazapay.com.](https://dashboard.tazapay.com.) You can also [add multiple users from your team](https://support.tazapay.com/how-do-i-invite-team-members-into-my-tazapay-account) with different levels of access to your account.
 
-For testing, you can sign up on Tazapay’s sandbox environment at <https://dashboard-sandbox.tazapay.com>
+For testing, you can sign up on Tazapay’s sandbox environment at [https://dashboard-sandbox.tazapay.com](https://dashboard-sandbox.tazapay.com)
 
 # Get your account approved
 
 Once you have signed up for your Tazapay account, you’ll need to complete a few steps to get it approved:
 
-- [Submit KYB documents:](https://support.tazapay.com/how-do-i-complete-kyb-kyc) This typically includes the business details, business Representatives / UBO / Director details and the supporting documents
-- Wait for Approval: The approval process can range from 3-5 business days to a few weeks depending on the completeness of documents, verification requirements and complexity of your business. During this time, you will receive email notifications from Tazapay’s compliance for additional requirements.
-- Start Using Tazapay: Once approved, you will receive a confirmation email and your account will be fully activated. You can now start adding sub-merchants.
+* [Submit KYB documents:](https://support.tazapay.com/how-do-i-complete-kyb-kyc) This typically includes the business details, business Representatives / UBO / Director details and the supporting documents
+* Wait for Approval: The approval process can range from 3-5 business days to a few weeks depending on the completeness of documents, verification requirements and complexity of your business. During this time, you will receive email notifications from Tazapay’s compliance for additional requirements.
+* Start Using Tazapay: Once approved, you will receive a confirmation email and your account will be fully activated. You can now start adding sub-merchants.
 
 Tazapay’s sandbox (test) environment does not require approval. All the accounts are approved on sign-up.
 
@@ -132,9 +132,9 @@ Submit an already created entity on your server using Tazapay’s [Submit Entity
 1. Name
 2. type - `individual`
 3. email
-4. registration_address - This represents the address of the individual
+4. registration\_address - This represents the address of the individual
 5. relationship - `customer`
-6. purpose_of_use - This can be collect or payout or both
+6. purpose\_of\_use - This can be collect or payout or both
 7. Proof of Indentity
 8. Proof of Address
 
@@ -255,9 +255,9 @@ You can also create and submit an entity on your server in a single step using T
 1. Name
 2. type - `individual`
 3. email
-4. registration_address - This represents the address of the individual
+4. registration\_address - This represents the address of the individual
 5. relationship - `customer`
-6. purpose_of_use - This can be collect or payout or both
+6. purpose\_of\_use - This can be collect or payout or both
 7. Proof of Indentity
 8. Proof of Address
 
@@ -394,8 +394,8 @@ You can refer to [this guide](https://support.tazapay.com/what-is-the-process-fo
 
 ### Providing additional information using API
 
-- During the approval process, Tazapay’s compliance may request you for additional information / documents. In such cases, the approval_status of the entity will move to `requires_action` and you will receive a corresponding webhook event.
-- The `pending_documents` key in the entity object will contain the list of pending documents.
+* During the approval process, Tazapay’s compliance may request you for additional information / documents. In such cases, the approval\_status of the entity will move to `requires_action` and you will receive a corresponding webhook event.
+* The `pending_documents` key in the entity object will contain the list of pending documents.
 
 Sample Webhook Payload
 
@@ -548,7 +548,7 @@ Sample Webhook Payload
 }
 ```
 
-- Use the [Upload Document API](https://docs.tazapay.com/reference/upload-document) to submit pending documents for further review by Tazapay compliance team
+* Use the [Upload Document API](https://docs.tazapay.com/reference/upload-document) to submit pending documents for further review by Tazapay compliance team\
     Sample Request Body
   ```json
   curl --request POST \
@@ -579,10 +579,10 @@ Sample Webhook Payload
     }
   }
   ```
-- After submitting all the pending documents, the approval_status of the entity will move to processing. In case further documents are required, you will receive a webhook and an email notification and the approval_status of the entity will move to requires_action.
-- On successful approval, you will receive a webhook and the approval_status of the entity will move to approved.  
+* After submitting all the pending documents, the approval\_status of the entity will move to processing. In case further documents are required, you will receive a webhook and an email notification and the approval\_status of the entity will move to requires\_action.
+* On successful approval, you will receive a webhook and the approval\_status of the entity will move to approved.\
   Refer here for the sample webhook structure.
-- Once approved, you are ready to initiate payouts on behalf of the entity (sub-merchant).
+* Once approved, you are ready to initiate payouts on behalf of the entity (sub-merchant).
 
 # Create Payouts on behalf of Entities
 
@@ -594,5 +594,5 @@ Refer to [this guide](https://support.tazapay.com/how-do-i-create-payouts-on-beh
 
 ### Creating Payouts on behalf of entities using API
 
-- Use the on_behalf_of field in the payout API to create a payout on behalf of another entity. Pass the entity ID as the value of the on_behalf_of key while initiating a payout.
-- Refer to [this detailed guide](https://docs.tazapay.com/docs/building-an-integration-payouts) on building a payout integration with Tazapay.
+* Use the on\_behalf\_of field in the payout API to create a payout on behalf of another entity. Pass the entity ID as the value of the on\_behalf\_of key while initiating a payout.
+* Refer to [this detailed guide](https://docs.tazapay.com/docs/building-an-integration-payouts) on building a payout integration with Tazapay.
