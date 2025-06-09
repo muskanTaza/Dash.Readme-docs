@@ -18,43 +18,137 @@ It is mandatory to ensure the following validations for the billing address for 
 
 ## Validations
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Field",
-    "h-1": "Validation",
-    "h-2": "Applicable for countries",
-    "0-0": "billing_details.address.country",
-    "0-1": "ISO 3166-1 alpha-2 country code in uppercase",
-    "0-2": "US, CA",
-    "1-0": "billing_details.address.line1",
-    "1-1": "Min 4 characters, Only alphanumeric characters allowed",
-    "1-2": "US, CA",
-    "2-0": "billing_details.address.city",
-    "2-1": "Only alphanumeric characters allowed",
-    "2-2": "US, CA",
-    "3-0": "billing_details.address.state",
-    "3-1": "Only alphanumeric characters allowed",
-    "3-2": "US, CA",
-    "4-0": "billing_details.address.state",
-    "4-1": "Can be the state name or state code (ISO 3166-2), The state names and code can be accessed from <a href = \"https://www.iso.org/obp/ui/#iso:code:3166:US\" target=\"_blank\">this list</a>",
-    "4-2": "US",
-    "5-0": "billing_details.address.postal_code",
-    "5-1": "For US, valid length is 5 or 9 and the format is NNNNN  \nFor CA, valid length is 6 and the format is ANA NAN (A-Alphabet, N- Number)",
-    "5-2": "US, CA",
-    "6-0": "billing_details.phone.calling_code",
-    "6-1": "Only codes from <a href = \"https://en.wikipedia.org/wiki/List_of_country_calling_codes#Zones_3%E2%80%934:_Europe\" target = \"_blank\"> this list </a>",
-    "6-2": "US, CA",
-    "7-0": "billing_details.phone.number",
-    "7-1": "Only numeric values allowed. Length allowed:  \nUSA: 10  \nCanada: 10",
-    "7-2": "US, CA"
-  },
-  "cols": 3,
-  "rows": 8,
-  "align": [
-    "left",
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
+
+      <th>
+        Validation
+      </th>
+
+      <th>
+        Applicable for countries
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        billing\_details.address.country
+      </td>
+
+      <td>
+        ISO 3166-1 alpha-2 country code in uppercase
+      </td>
+
+      <td>
+        US, CA
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        billing\_details.address.line1
+      </td>
+
+      <td>
+        Min 4 characters, Only alphanumeric characters allowed
+      </td>
+
+      <td>
+        US, CA
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        billing\_details.address.city
+      </td>
+
+      <td>
+        Only alphanumeric characters allowed
+      </td>
+
+      <td>
+        US, CA
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        billing\_details.address.state
+      </td>
+
+      <td>
+        Only alphanumeric characters allowed
+      </td>
+
+      <td>
+        US, CA
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        billing\_details.address.state
+      </td>
+
+      <td>
+        Can be the state name or state code (ISO 3166-2), The state names and code can be accessed from <a href = "https://www.iso.org/obp/ui/#iso:code:3166:US" target="_blank">this list</a>
+      </td>
+
+      <td>
+        US
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        billing\_details.address.postal\_code
+      </td>
+
+      <td>
+        For US, valid length is 5 or 9 and the format is NNNNN\
+        For CA, valid length is 6 and the format is ANA NAN (A-Alphabet, N- Number)
+      </td>
+
+      <td>
+        US, CA
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        billing\_details.phone.calling\_code
+      </td>
+
+      <td>
+        Only codes from <a href = "https://en.wikipedia.org/wiki/List_of_country_calling_codes#Zones_3%E2%80%934:_Europe" target = "_blank"> this list </a>
+      </td>
+
+      <td>
+        US, CA
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        billing\_details.phone.number
+      </td>
+
+      <td>
+        Only numeric values allowed. Length allowed:\
+        USA: 10\
+        Canada: 10
+      </td>
+
+      <td>
+        US, CA
+      </td>
+    </tr>
+  </tbody>
+</Table>
