@@ -25,7 +25,7 @@ next:
 ### Types
 
 1. **Default Redirect**: In this experience, user can directly simulate the payment success or failure on the redirect screen.
-2. **Redirect with input:** There are payment methods which require some additional input from user on the payment screen such as bank selection or user_id, password, etc. For this, we have pre-filled dummy details and user can enter any alphanumeric value to progress. Only once the input is selected, the user can simulate the payment scenarios.
+2. **Redirect with input:** There are payment methods which require some additional input from user on the payment screen such as bank selection or user\_id, password, etc. For this, we have pre-filled dummy details and user can enter any alphanumeric value to progress. Only once the input is selected, the user can simulate the payment scenarios.
 
 ### Prerequisites
 
@@ -52,9 +52,9 @@ next:
 
 Alternatively, users can test by hitting the following endpoints with required params 
 
-1. For Payins: <https://service-sandbox.tazapay.com/v3/payin>
-   1. For Payin API, all transactions irrespective of the amount that are created in the sandbox environment are marked as successful within ~1-2 mins. Similarly, any payin created with amount as `20000 cents` will be marked as failed.
-2. For Checkout: <https://service-sandbox.tazapay.com/v3/checkout>
+1. For Payins: [https://service-sandbox.tazapay.com/v3/payin](https://service-sandbox.tazapay.com/v3/payin)
+   1. For Payin API, all transactions irrespective of the amount that are created in the sandbox environment are marked as successful within \~1-2 mins. Similarly, any payin created with amount as `20000 cents` will be marked as failed.
+2. For Checkout: [https://service-sandbox.tazapay.com/v3/checkout](https://service-sandbox.tazapay.com/v3/checkout)
 
 ### Conclusion
 
