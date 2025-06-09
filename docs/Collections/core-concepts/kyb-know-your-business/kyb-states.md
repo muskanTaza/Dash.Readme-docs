@@ -12,22 +12,7 @@ next:
 ---
 The following flowchart details all possible states a KYB application can transition through
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/fba79db-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/fba79db-image.png" />
 
 | State     | Description                                                                           |
 | --------- | ------------------------------------------------------------------------------------- |
