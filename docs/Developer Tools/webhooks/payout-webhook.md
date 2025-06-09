@@ -12,16 +12,16 @@ next:
 ---
 ## Payout status specific events
 
-| Event                               | Description                                    | Default |
-| ----------------------------------- | ---------------------------------------------- | ------- |
-| `payout.requires_approval`          | Triggered when the status is requires_approval | Off     |
-| `payout.requires_action`            | Triggered when the status is requires_action   | Off     |
-| `payout.requirs_funding`            | Triggered when the status is requires_funding  | On      |
-| `payout.processing`                 | Triggered when the status is processing        | Off     |
-| `payout.succeeded`                  | Triggered when the status is succeeded         | On      |
-| `payout.failed`                     | Triggered when the status is failed            | On      |
-| `payout.cancelled`                  | Triggered when the payout is cancelled         | On      |
-| `payout.proof_of_payment_generated` | Triggered when the proof of payment is updated | On      |
+| Event                               | Description                                     | Default |
+| ----------------------------------- | ----------------------------------------------- | ------- |
+| `payout.requires_approval`          | Triggered when the status is requires\_approval | Off     |
+| `payout.requires_action`            | Triggered when the status is requires\_action   | Off     |
+| `payout.requirs_funding`            | Triggered when the status is requires\_funding  | On      |
+| `payout.processing`                 | Triggered when the status is processing         | Off     |
+| `payout.succeeded`                  | Triggered when the status is succeeded          | On      |
+| `payout.failed`                     | Triggered when the status is failed             | On      |
+| `payout.cancelled`                  | Triggered when the payout is cancelled          | On      |
+| `payout.proof_of_payment_generated` | Triggered when the proof of payment is updated  | On      |
 
 ## Other Events
 
@@ -222,7 +222,7 @@ next:
 
 <br />
 
-### payout.requires_funding
+### payout.requires\_funding
 
 ```
 {
@@ -291,7 +291,7 @@ next:
 
 <br />
 
-### payout.requires_approval
+### payout.requires\_approval
 
 ```
 {
@@ -487,7 +487,7 @@ next:
 
 <br />
 
-### payout.requires_action
+### payout.requires\_action
 
 ```
 {
@@ -561,7 +561,7 @@ next:
 }
 ```
 
-### payout.proof_of_payment_generated
+### payout.proof\_of\_payment\_generated
 
 ```
 {
@@ -623,7 +623,7 @@ next:
 }
 ```
 
-### payout.mt103_generated
+### payout.mt103\_generated
 
 ```
 {
@@ -692,7 +692,7 @@ next:
 }
 ```
 
-### payout.mt199_generated
+### payout.mt199\_generated
 
 ```
 {
@@ -766,7 +766,7 @@ next:
 }
 ```
 
-### payout.firc_generated
+### payout.firc\_generated
 
 ```
 {
@@ -835,7 +835,7 @@ next:
 }
 ```
 
-### payout.other_document_generated
+### payout.other\_document\_generated
 
 ```
 {
