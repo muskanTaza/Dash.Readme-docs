@@ -16,8 +16,8 @@ PayNow QR payment is a convenient and popular method in Singapore that allows cu
 
 ## Step 1: Create a payin
 
-Tazapay uses a `payin` object to represent your intent to collect a payment from your customer. The payin object tracks state changes from paynow qr creation to payment completion.  
-Create a payin on your server with an amount, invoice_currency `SGD`  and a transaction_description using the [create payin API](https://docs.tazapay.com/reference/create-payin)
+Tazapay uses a `payin` object to represent your intent to collect a payment from your customer. The payin object tracks state changes from paynow qr creation to payment completion.\
+Create a payin on your server with an amount, invoice\_currency `SGD`  and a transaction\_description using the [create payin API](https://docs.tazapay.com/reference/create-payin)
 
 A payin is created with the status `requires_payment_method`.
 
@@ -43,7 +43,7 @@ curl --request POST \
 
 Confirm the payin created in step 1 using the confirm payin API. Upon confirmation of the payin, a QR code is generated to display to your customer. The status of the payin moves to `requires_action`
 
-The following sub-fields can be passed in payment_method_details
+The following sub-fields can be passed in payment\_method\_details
 
 ### Sample cURL
 
@@ -166,17 +166,17 @@ Tazapay sends a `payin.succeeded` event as soon as the funds are received from t
 
 If the payment is not made by the customer within the stipulated active time of the QR and the QR expires, Tazapay sends a `payment_attempt.failed` event. Display a CTA on your screen beside the QR to allow the customer to generate a new QR. To generate a new QR, confirm the payin again using Step 2.
 
-| Event                  | Description                                       | Next Steps                                                                                 |
-| ---------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| payin.succeeded        | The customer paid before the expiration of the QR | Fulfill the goods or services that the customer purchased                                  |
-| payment_attempt.failed | The customer did not pay and the QR expired       | Allow the customer to generate a new QR or complete the payment via another payment method |
+| Event                   | Description                                       | Next Steps                                                                                 |
+| ----------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| payin.succeeded         | The customer paid before the expiration of the QR | Fulfill the goods or services that the customer purchased                                  |
+| payment\_attempt.failed | The customer did not pay and the QR expired       | Allow the customer to generate a new QR or complete the payment via another payment method |
 
 # Test the Integration
 
 In test mode (sandbox), 
 
-1. All the paynow_sgd payment attempts will succeed 3 minutes after creation by default. You will receive a `payin.succeeded` event.
-2. All the paynow_sgd payment attempts created with value 100 SGD (invoice_currency - SGD, amount - 10000) will fail 3 minutes after creation by default. You will receive a `payment_attempt.failed` event and the status of the payin will move to `requires_payment_method`.
+1. All the paynow\_sgd payment attempts will succeed 3 minutes after creation by default. You will receive a `payin.succeeded` event.
+2. All the paynow\_sgd payment attempts created with value 100 SGD (invoice\_currency - SGD, amount - 10000) will fail 3 minutes after creation by default. You will receive a `payment_attempt.failed` event and the status of the payin will move to `requires_payment_method`.
 
 # Integrating Refunds
 
@@ -186,7 +186,7 @@ Paynow supports partial refunds. Specify the amount (lesser than the invoice amo
 
 ### Refunding using dashboard.
 
-Refer to this guide: <https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard>
+Refer to this guide: [https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard](https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard)
 
 ### Refund using API
 
