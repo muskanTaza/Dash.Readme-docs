@@ -39,7 +39,7 @@ Users can use the below payment method type to create a transaction using BLIK i
 
 # Limits and Expiration
 
-The following is the upper and lower limits for BLIK  transactions:
+The following is the upper and lower limits for BLIK transactions:
 
 - **Minimum Limit**: USD 0.01
 - **Maximum Limit**: USD 11548
