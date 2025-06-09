@@ -20,6 +20,6 @@ Webhooks allow you to get notified of any updates that happen for a transaction 
 
 Webhooks are also very useful when a customer chooses an asynchronous mode of payment like Local Bank Transfer. Rather than deploying your resources to constantly poll the Status API, Tazapay will itself send a webhook as soon as the funds are received.
 
-> 👍 
-> 
+> 👍
+>
 > Tazapay recommends use of dashboard and GET APIs only for an one-off transaction. For a faster and more-scalable approach, use webhooks.
