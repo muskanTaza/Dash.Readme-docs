@@ -13,6 +13,6 @@ metadata:
 next:
   description: ''
 ---
-> 📘 
-> 
+> 📘
+>
 > Editing & updating the details of a user uses the same "PUT" method
