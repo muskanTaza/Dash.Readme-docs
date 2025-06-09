@@ -20,14 +20,14 @@ Tazapay uses a `payout` object to represent your intent to initiate a payout. Th
 
 Create a payout on your server using Tazapay’s payout API with the following information: 
 
-- Payout Amount and Currency - The amount you want to transfer to the beneficiary
-- Beneficiary Details
-  - Name
-  - Type - `business` or `individual`
-  - Bank Details - Account Number, Bank Name, <a href = "https://docs.tazapay.com/docs/bank-codes">Bank Codes</a>
-- Type of Payout - Local Bank Transfer or Wire Transfer
-- Holding Currency - The currency in your balance you want to fund the payout from
-- Reason for Payout
+* Payout Amount and Currency - The amount you want to transfer to the beneficiary
+* Beneficiary Details
+  * Name
+  * Type - `business` or `individual`
+  * Bank Details - Account Number, Bank Name, <a href = "https://docs.tazapay.com/docs/bank-codes">Bank Codes</a>
+* Type of Payout - Local Bank Transfer or Wire Transfer
+* Holding Currency - The currency in your balance you want to fund the payout from
+* Reason for Payout
 
 ### Sample Request cURL
 
@@ -145,8 +145,8 @@ curl --request POST \
 
 To align with your workflow, you can also choose to split Step 1 into two steps
 
-- Step 1A: Creating a beneficiary using the [Create Beneficiary endpoint](https://docs.tazapay.com/reference/create-beneficiary)
-- Step 1B: Initiating a payout using the [Create Payout endpoint](https://docs.tazapay.com/reference/create-payout)
+* Step 1A: Creating a beneficiary using the [Create Beneficiary endpoint](https://docs.tazapay.com/reference/create-beneficiary)
+* Step 1B: Initiating a payout using the [Create Payout endpoint](https://docs.tazapay.com/reference/create-payout)
 
 ### Step 1A: Creating a Beneficiary
 
@@ -223,11 +223,11 @@ curl --request POST \
 
 Create a payout on your server using Tazapay’s [payout API](https://docs.tazapay.com/reference/create-payout) with the following information: 
 
-- Payout Amount and Currency - The amount you want to transfer to the beneficiary
-- Beneficiary Details
-- Type of Payout - Local Bank Transfer or Wire Transfer
-- Holding Currency - The currency in your balance you want to fund the payout from
-- Reason for Payout
+* Payout Amount and Currency - The amount you want to transfer to the beneficiary
+* Beneficiary Details
+* Type of Payout - Local Bank Transfer or Wire Transfer
+* Holding Currency - The currency in your balance you want to fund the payout from
+* Reason for Payout
 
 ### Sample cURL
 
@@ -326,7 +326,7 @@ curl --request POST \
 
 A payout is in the `processing` state after it is successfully initiated. The payout can move to one of the following three states from the processing state:
 
-1. **requires_action** - This is when the payout requires additional information. These additional information are typically required for reasons of regulatory compliance. Tazapay will reach out to your registered email address specifying the exact requirements and the next steps. After you have provided the necessary information, Tazapay will review and the payout can subsequently move to either `succeeded` or `failed`. 
+1. **requires\_action** - This is when the payout requires additional information. These additional information are typically required for reasons of regulatory compliance. Tazapay will reach out to your registered email address specifying the exact requirements and the next steps. After you have provided the necessary information, Tazapay will review and the payout can subsequently move to either `succeeded` or `failed`. 
 2. **succeeded** - Depending on the beneficiary country, this is the state of the payout when the funds have reach the destination bank or will reach in a few business days.
 3. **failed** - This is the state when the payout fails. Any funds deducted for the payout will be credited back to your account. Tazapay specifies the reason for the failure in the field `status_description`
 
