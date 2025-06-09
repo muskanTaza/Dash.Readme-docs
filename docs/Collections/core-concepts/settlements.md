@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-Settlements refer to the process by which Tazapay transfers (or "sweeps") all collected customer payments into your  added bank account. It involves consolidating payments processed over a specific period and moving these funds , typically on a weekly or scheduled basis.
+Settlements refer to the process by which Tazapay transfers (or "sweeps") all collected customer payments into your added bank account. It involves consolidating payments processed over a specific period and moving these funds, typically on a weekly or scheduled basis.
 
 # The Settlement Object
 
