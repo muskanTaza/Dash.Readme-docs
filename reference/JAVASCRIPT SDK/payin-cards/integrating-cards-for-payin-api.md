@@ -27,9 +27,9 @@ Add the below snippet to your application to load Tazapay’s Javascript SDK
 `<script type="text/javascript" src="https://js.tazapay.com/v3.js"></script>`
 
 > 🚧 Dynamic Injection
-> 
+>
 > Before injecting the SDK JS dynamically, please use the following event listener to determine when the script has finished loading.
-> 
+>
 > ```
 > window.addEventListener('tazapaySDKReady', () => {
 > // continue to use library by following below from step 2 here
@@ -44,7 +44,7 @@ Keep the division tag in your application to load the card collection UI compone
 <div id="payin-card"></div>
 ```
 
-Use window.tazapay(publishableKey) to create an instance of the Tazapay object. The Tazapay object is your entry point to the rest of the Payin.js SDK.
+Use window\.tazapay(publishableKey) to create an instance of the Tazapay object. The Tazapay object is your entry point to the rest of the Payin.js SDK.
 
 1. Please refer to the list of configurations for the card UI [guide](https://docs.tazapay.com/reference/additional-details-1#1-cards-configuration), check the description, and use the configuration according to your use case.
 2. Please refer to the list of events for the card UI [guide](https://docs.tazapay.com/reference/additional-details-1#2-cards-events), check the description, and use the events according to your use case.
@@ -118,15 +118,15 @@ cardEmbed.on('change', function(event) {
 
 once the user clicks the pay button do the following steps.
 
-## Step 4A: Fetching client_token for a session (server-side)
+## Step 4A: Fetching client\_token for a session (server-side)
 
 > 👍 Idempotent Payin Sessions
-> 
+>
 > It is required for you to make sure that the requests to create payin are idempotent. As idempotency key, you can pass the unique order number on your system. You can refer this [guide](https://docs.tazapay.com/reference/idempotent-requests) for the implementation.
-> 
+>
 > This will ensure only unique payin are created corresponding to a unique customer journey on your website/application.
 
-You can fetch the client_token from the response of the create Payin API. Please refer to the [guide](https://docs.tazapay.com/reference/create-payin) for creating a Payin session.
+You can fetch the client\_token from the response of the create Payin API. Please refer to the [guide](https://docs.tazapay.com/reference/create-payin) for creating a Payin session.
 
 ```Text Create Payin Response
 {
@@ -140,7 +140,7 @@ You can fetch the client_token from the response of the create Payin API. Please
 
 ## Step 4B: Call confirmPayment() method
 
-Once you get "client_token", use the confirmPayment method from SDK to trigger the payment confirmation.
+Once you get "client\_token", use the confirmPayment method from SDK to trigger the payment confirmation.
 
 1. Need to pass the below details:-
    1. `client_token` which you get from creating a Payin API response.
@@ -148,7 +148,7 @@ Once you get "client_token", use the confirmPayment method from SDK to trigger t
    3. `customer_details` and `billing_details`Only If the buyer's country is the US or CA. Please refer to this [guide](https://docs.tazapay.com/reference/confirm-payin) for the value structure for the customer and billing details.
 
 > 👍 Billing Details Validation
-> 
+>
 > It is required for you to make sure that the billingDetails passing are validated from your side. Here are the [validation rules](https://docs.google.com/document/d/19QEKZ0bq1T-Qm9y4Lgj-cOEHWx-h2-rf0sCAtYxNul8/edit) we follow to validate billing details, we recommend that you implement these rules on your end to validate details as the customer adds billing information, ensuring a seamless payment flow.
 
 2. Additionally, you can pass a few other details if required in the SDK payload. Please refer to the body params [guide](https://docs.tazapay.com/reference/confirm-payin) for the additional payloads.
