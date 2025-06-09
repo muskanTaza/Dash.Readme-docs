@@ -11,12 +11,9 @@ next:
   description: ''
 ---
 We’ll help you set up ‘Milestone Schemes’ as a configuration linked to your profile. A ‘scheme’ is a pre-defined order of collect and release milestones that can specify multiple payments into and payouts from the escrow.
-[block:callout]
-{
-  "type": "info",
-  "body": "💡 By default, there wouldn't be any milestone schemes set up for users. To request for milestone schemes set up for your account, please contact support@tazapay.com"
-}
-[/block]
+
+> 📘 💡 By default, there wouldn't be any milestone schemes set up for users. To request for milestone schemes set up for your account, please contact [support@tazapay.com](mailto:support@tazapay.com)
+
 **For instance:**
 
  **Milestone scheme 1:** 20% advance, 80% on shipment.
