@@ -14,5 +14,4 @@ Checkout is used to initiate a checkout session on your store or marketplace. Th
 
 We recommend creating a session each time your customer attempts to pay. This will generate a transaction number which will be unique to each session. You and your customer can use this as a reference for future purposes. You can use this number for all after the payment operations including refunds, payouts, etc.
 
-<b><u>Related Guide:</u></b> [Implementing Checkout](https://docs.tazapay.com/docs/single-checkout-api)  
-<b><u>Related API Endpoint:</u></b> <a href="https://docs.tazapay.com/reference/create-checkout" target="_blank">Create Checkout Session</a>
+<b><u>Related Guide:</u></b> [Implementing Checkout](https://docs.tazapay.com/docs/single-checkout-api)\ <b><u>Related API Endpoint:</u></b> <a href="https://docs.tazapay.com/reference/create-checkout" target="_blank">Create Checkout Session</a>
