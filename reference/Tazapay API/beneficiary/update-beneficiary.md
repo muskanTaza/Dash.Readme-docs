@@ -15,10 +15,10 @@ next:
 ---
 ### For beneficiaries having successful payouts, the following information cannot be updated
 
-- Type (business or individual)
-- Beneficiary Name
-- Account Number / IBAN
-- Country
-- Existing Bank Codes (SWIFT, IFSC, BSB_CODE, ABA_CODE, etc.). Additional bank codes can be added.
+* Type (business or individual)
+* Beneficiary Name
+* Account Number / IBAN
+* Country
+* Existing Bank Codes (SWIFT, IFSC, BSB\_CODE, ABA\_CODE, etc.). Additional bank codes can be added.
 
 In these scenarios, you can create a new beneficiary with the updated details.
