@@ -59,7 +59,7 @@ The following is the upper and lower limits for Payeasy transactions:
 - **Minimum Limit**: USD 0.01
 - **Maximum Limit**: USD 7636
 
-The default expiration for a transaction is 8 days and 10 **minutes.**
+The default expiration for a transaction is 8 days and 10 **minutes**.
 
 # User Experience
 
