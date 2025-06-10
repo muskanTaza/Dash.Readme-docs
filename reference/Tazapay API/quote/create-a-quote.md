@@ -1,6 +1,6 @@
 ---
 title: Create a quote
-excerpt: ''
+excerpt: This is available on request
 api:
   file: sandbox.json
   operationId: create-a-quote
