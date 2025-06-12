@@ -99,10 +99,10 @@ Documents are not required to create an escrow but can be provided to indicate a
 | collect\_amount       | `float` Collection amount in invoice currency                                                                                                                            |
 | disburse\_amount      | `float` Disburse amount in invoice currency                                                                                                                              |
 | fee\_tier\_percentage | `string` Fee percentage to be paid by the party that bears the fee for the transaction.                                                                                  |
-| release\_docs         | `[] release_docs` The list of documents to be provided as completion proof for the verification.  <br> Please check <a href="/index.html#release_docs">release\_docs</a> |
-| txn\_docs             | `[] txn_doc` Supporting documents for transaction. <br>Please check <a href="/index.html#txn_doc">txn\_doc</a>                                                           |
-| buyer                 | `buyer` Buyer deatils <br>Please check <a href="/index.html#buyer">buyer</a>                                                                                             |
-| seller                | `seller` Seller deatils <br>Please check <a href="/index.html#seller">seller</a>                                                                                         |
+| release\_docs         | `[] release_docs` The list of documents to be provided as completion proof for the verification.  <br/> Please check <a href="/index.html#release_docs">release\_docs</a> |
+| txn\_docs             | `[] txn_doc` Supporting documents for transaction. <br/>Please check <a href="/index.html#txn_doc">txn\_doc</a>                                                           |
+| buyer                 | `buyer` Buyer deatils <br/>Please check <a href="/index.html#buyer">buyer</a>                                                                                             |
+| seller                | `seller` Seller deatils <br/>Please check <a href="/index.html#seller">seller</a>                                                                                         |
 | attributes            | `json` Tunnelled add-on fields                                                                                                                                           |
 | initiator\_role       | `string` Party that initites the transaction. Can be `buyer` or `seller`                                                                                                 |
 | fee\_amount           | `float` Fee in invoice currency                                                                                                                                          |
