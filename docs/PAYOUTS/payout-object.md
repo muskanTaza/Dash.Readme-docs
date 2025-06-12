@@ -89,13 +89,13 @@ next:
 | id                    | string    | Unique ID for the payout. Begins with 'pot\_'                                                                                                                |
 | object                | string    | This is 'payout' here                                                                                                                                        |
 | created_at            | timestamp | Timestamp at which the payout object is created. (ISO 8601 format - YYYY-MM-DDTHH:MM:SS±hh:mm)                                                               |
-| amount                | integer   | Amount for the payout in cents in the payout currency. Refer <https://docs.tazapay.com/docs/decimal-currencies> for decimal handling for various currencies. |
+| amount                | integer   | Amount for the payout in cents in the payout currency. Refer \<https://docs.tazapay.com/docs/decimal-currencies> for decimal handling for various currencies. |
 | currency              | string    | ISO 4217 standard, in uppercase. This is the payout currency. The amount will be in the payout currency                                                      |
 | beneficiary_details   | json      | Details of the beneficiary. Refer here for beneficiary_details sub-fields                                                                                    |
 | beneficiary           | string    | Unique ID representing the beneficiary for the payout                                                                                                        |
-| purpose               | enum      | The reason for payout. Refer <https://docs.tazapay.com/docs/reasons-for-payout> for the possible values.                                                     |
+| purpose               | enum      | The reason for payout. Refer \<https://docs.tazapay.com/docs/reasons-for-payout> for the possible values.                                                     |
 | statement_descriptor  | string    | Brief text descriptor that will appear on the beneficiary’s bank statement to identify the transaction                                                       |
-| status                | enum      | Status of the payout. Refer <https://docs.tazapay.com/docs/payout-1> for possible values.                                                                    |
+| status                | enum      | Status of the payout. Refer \<https://docs.tazapay.com/docs/payout-1> for possible values.                                                                    |
 | status_description    | string    | This provides additional description about the status, if applicable                                                                                         |
 | tracking_details      | json      | This helps track the payout                                                                                                                                  |
 | type                  | enum      | Type of payout - local or swift or wallet                                                                                                                    |
@@ -160,9 +160,9 @@ next:
 | id            |           | string  | Unique ID for the FX conversion                                                                                                                    |
 | object        |           | string  | fx_transaction here                                                                                                                                |
 | initial       |           | json    | The initial currency and amount                                                                                                                    |
-|               | amount    | integer | Amount in cents in the payout currency. Refer <https://docs.tazapay.com/docs/decimal-currencies> for decimal handling for various currencies.      |
+|               | amount    | integer | Amount in cents in the payout currency. Refer \<https://docs.tazapay.com/docs/decimal-currencies> for decimal handling for various currencies.      |
 |               | currency  | string  | ISO 4217 standard, in uppercase.                                                                                                                   |
 | exchange_rate |           | float   | Exchange Rate to convert initial currency to the final currency                                                                                    |
 | initial       |           | json    | The final currency and amount after conversion                                                                                                     |
-|               | amount    | integer | Amount in cents in the destination currency. Refer <https://docs.tazapay.com/docs/decimal-currencies> for decimal handling for various currencies. |
+|               | amount    | integer | Amount in cents in the destination currency. Refer \<https://docs.tazapay.com/docs/decimal-currencies> for decimal handling for various currencies. |
 |               | currency  | string  | ISO 4217 standard, in uppercase.                                                                                                                   |
