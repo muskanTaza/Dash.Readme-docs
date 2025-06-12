@@ -207,7 +207,7 @@ LinkAja does not support partial refunds, the refund has to be for the full valu
 
 ### Refunding using dashboard
 
-Refer to this guide: <https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard>
+Refer to this guide: \<https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard>
 
 ### Refund using API
 
