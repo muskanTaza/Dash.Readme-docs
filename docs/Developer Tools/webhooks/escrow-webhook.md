@@ -257,7 +257,7 @@ These events are created and triggered when something interesting happens with t
 }
 ```
 
-<br>
+<br/>
 
 ## Document Verification Events:
 
