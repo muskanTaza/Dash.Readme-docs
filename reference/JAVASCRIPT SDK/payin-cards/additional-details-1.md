@@ -14,40 +14,67 @@ next:
 
 Below is the list of configurations for the card UI, please check the description and use depending on the use case.
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Config Property Name",
-    "h-1": "Description",
-    "h-2": "Possible values",
-    "0-0": "**styles**",
-    "0-1": "You can use style configurations to customize most of the user interface elements. ",
-    "0-2": "Please check the [style guide](https://docs.tazapay.com/reference/style-customisation)",
-    "1-0": "**showLabels**",
-    "1-1": "Used to show card field labels like Card Number, Expiry Date, and CVV Number on top of each field.  \nBy default it is false. if you need to show these labels add this in the config object and set it to true.",
-    "1-2": "Boolean(true/false)",
-    "2-0": "**hideErrors**",
-    "2-1": "Used to hide errors shown on the payment page. By default it is false. if you need to change it to true to hide payment errors, please handle those errors which you also get in \"change\" event.",
-    "2-2": "Boolean(true/false)",
-    "3-0": "**layout**",
-    "3-1": "It is an optional field. By default, the value will be \"two-rows\". means the card number will be in the first row and the expiration date, cvv will be in the second row.  \n\"one-row\" means all the 3 fields card number, exp date, and CVV will be in one row. Please provide the necessary width for better UI.  \n\"three-rows\" mean each will be in one row.",
-    "3-2": "String(\"one-row\", \"two-rows\", \"three-rows\")",
-    "4-0": "**cvvMask**",
-    "4-1": "To mask cvv field in card form. By default it is true",
-    "4-2": "Boolean(true/false)",
-    "5-0": "**customPayButton**",
-    "5-1": "By default it is false. change it to true if you need a custom pay button instead of a Tazapay in-built pay button. please refer to [guide](https://docs.tazapay.com/reference/integrating-cards-for-payin-api#step-2b-listen-for-the-click-event-on-the-pay-button) for integration details.",
-    "5-2": "Boolean(true/false)"
-  },
-  "cols": 3,
-  "rows": 6,
-  "align": [
-    "left",
-    "left",
-    "left"
-  ]
-}
-[/block]
+<HTMLBlock>{`
+<table style="width: 100%; border-collapse: collapse;">
+<thead>
+<tr>
+  <th style="border: 1px solid #ddd; padding: 8px;">Config Property Name</th>
+  <th style="border: 1px solid #ddd; padding: 8px;">Description</th>
+  <th style="border: 1px solid #ddd; padding: 8px;">Possible values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p><strong>styles</strong></p>
+</td>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p>You can use style configurations to customize most of the user interface elements. </p>
+</td>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p>Please check the <a href="https://docs.tazapay.com/reference/style-customisation">style guide</a></p>
+</td>
+</tr>
+<tr>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p><strong>showLabels</strong></p>
+</td>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p>Used to show card field labels like Card Number, Expiry Date, and CVV Number on top of each field.<br>By default it is false. if you need to show these labels add this in the config object and set it to true.</p>
+</td>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p>Boolean(true/false)</p>
+</td>
+</tr>
+<tr>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p><strong>hideErrors</strong></p>
+</td>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p>Used to hide errors shown on the payment page. By default it is false. if you need to change it to true to hide payment errors, please handle those errors which you also get in &quot;change&quot; event.</p>
+</td>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p>Boolean(true/false)</p>
+</td>
+</tr>
+<tr>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p><strong>layout</strong></p>
+</td>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p>It is an optional field. By default, the value will be &quot;two-rows&quot;. means the card number will be in the first row and the expiration date, cvv will be in the second row.<br>&quot;one-row&quot; means all the 3 fields card number, exp date, and CVV will be in one row. Please provide the necessary width for better UI.<br>&quot;three-rows&quot; mean each will be in one row.</p>
+</td>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p>String(&quot;one-row&quot;, &quot;two-rows&quot;, &quot;three-rows&quot;)</p>
+</td>
+</tr>
+<tr>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p><strong>cvvMask</strong></p>
+</td>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p>To mask cvv field in card form. By default it is true</p>
+</td>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p>Boolean(true/false)</p>
+</td>
+</tr>
+<tr>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p><strong>customPayButton</strong></p>
+</td>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p>By default it is false. change it to true if you need a custom pay button instead of a Tazapay in-built pay button. please refer to <a href="https://docs.tazapay.com/reference/integrating-cards-for-payin-api#step-2b-listen-for-the-click-event-on-the-pay-button">guide</a> for integration details.</p>
+</td>
+  <td style="border: 1px solid #ddd; padding: 8px;"><p>Boolean(true/false)</p>
+</td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 ## 2. Cards Events
 
