@@ -36,10 +36,10 @@ If the refund request is approved, Tazapay will refund the amount to the source 
 
 | Parameter                            | Description                                                                                                                                                                                               |
 | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| txn\_no<br><small>required</small>   | `String` Transcation number received from create\_escrow API response                                                                                                                                     |
-| Amount<br><small>optional</small>    | `INT` Amount to be refunded. If omitted, the request will be registered for a refund of the full escrow (refund\_amount cannot be greater than the invoice\_amount of the underlying transaction/escrow)   |
-| remarks<br><small>optional</small>   | `string` free text to add any additional details concerning the refund request                                                                                                                            |
-| documents<br><small>optional</small> | `[] release_docs` Any document to support the refund request  <br> Please check [documents](https://developer.tazapay.com/docs/tazapay-API-documentation/ZG9jOjI4MzI2OTEy-release#release_docs)           |
+| txn\_no<br/><small>required</small>   | `String` Transcation number received from create\_escrow API response                                                                                                                                     |
+| Amount<br/><small>optional</small>    | `INT` Amount to be refunded. If omitted, the request will be registered for a refund of the full escrow (refund\_amount cannot be greater than the invoice\_amount of the underlying transaction/escrow)   |
+| remarks<br/><small>optional</small>   | `string` free text to add any additional details concerning the refund request                                                                                                                            |
+| documents<br/><small>optional</small> | `[] release_docs` Any document to support the refund request  <br/> Please check [documents](https://developer.tazapay.com/docs/tazapay-API-documentation/ZG9jOjI4MzI2OTEy-release#release_docs)           |
 
 #### documents
 
