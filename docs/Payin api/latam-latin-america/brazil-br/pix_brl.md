@@ -207,7 +207,7 @@ PIX supports partial refunds. Specify the amount (lesser than the invoice amount
 
 ### Refunding using dashboard
 
-Refer to this guide: <https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard>
+Refer to this guide: \<https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard>
 
 ### Refund using API
 
