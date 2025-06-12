@@ -279,7 +279,7 @@ Documents are not required to create an escrow but can be provided to indicate a
       </td>
 
       <td>
-        `[] release_docs` The list of documents to be provided as completion proof for the verification.  <br> Please check <a href="/index.html#release_docs">release\_docs</a>
+        `[] release_docs` The list of documents to be provided as completion proof for the verification.  <br/> Please check <a href="/index.html#release_docs">release\_docs</a>
       </td>
     </tr>
 
@@ -289,7 +289,7 @@ Documents are not required to create an escrow but can be provided to indicate a
       </td>
 
       <td>
-        `[] txn_doc` Supporting documents for transaction. <br>Please check <a href="/index.html#txn_doc">txn\_doc</a>
+        `[] txn_doc` Supporting documents for transaction. <br/>Please check <a href="/index.html#txn_doc">txn\_doc</a>
       </td>
     </tr>
 
@@ -299,7 +299,7 @@ Documents are not required to create an escrow but can be provided to indicate a
       </td>
 
       <td>
-        `buyer` Buyer deatils <br>Please check <a href="/index.html#buyer">buyer</a>
+        `buyer` Buyer deatils <br/>Please check <a href="/index.html#buyer">buyer</a>
       </td>
     </tr>
 
@@ -309,7 +309,7 @@ Documents are not required to create an escrow but can be provided to indicate a
       </td>
 
       <td>
-        `seller` Seller deatils <br>Please check <a href="/index.html#seller">seller</a>
+        `seller` Seller deatils <br/>Please check <a href="/index.html#seller">seller</a>
       </td>
     </tr>
 
