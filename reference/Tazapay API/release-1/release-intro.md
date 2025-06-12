@@ -50,14 +50,14 @@ The `name` is mandatory if the `type` is set as `Others`.
 
 | Parameter                                | Description                                                                                                                                                                                                                             |
 | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| txn\_no<br><small>required</small>       | `String`  Escrow transcation number received from create\_escrow API response                                                                                                                                                          |
-| release\_docs<br><small>optional</small> | `[] release_docs` The list of documents to be provided as completion proof for the verification.  <br> Please check [release\_docs](https://developer.tazapay.com/docs/tazapay-API-documentation/ZG9jOjI4MzI2OTEy-release#release_docs) |
+| txn\_no<br/><small>required</small>       | `String`  Escrow transcation number received from create\_escrow API response                                                                                                                                                          |
+| release\_docs<br/><small>optional</small> | `[] release_docs` The list of documents to be provided as completion proof for the verification.  <br/> Please check [release\_docs](https://developer.tazapay.com/docs/tazapay-API-documentation/ZG9jOjI4MzI2OTEy-release#release_docs) |
 
 #### release\_docs
 
 | Parameter | Description                                                                                                                                                                                                                                    |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type      | `string` One of the documents <br><br>If txn\_type = goods <br>1. Bill of Lading/ Airway Bill <br>2. Commercial Invoice <br><br>If txn\_type = service <br>1. Invoice <br>2. Proof of Service Delivery<br><br> For both txn\_type<br>1. Others |
+| type      | `string` One of the documents <br/><br/>If txn\_type = goods <br/>1. Bill of Lading/ Airway Bill <br/>2. Commercial Invoice <br/><br/>If txn\_type = service <br/>1. Invoice <br/>2. Proof of Service Delivery<br/><br/> For both txn\_type<br/>1. Others |
 | name      | `string`  Name of the doc if user has selected type as others                                                                                                                                                                                  |
 | url       | `string`  Direct download link                                                                                                                                                                                                                 |
 | filename  | `string`  Name of the file which being uploaded in the above public link                                                                                                                                                                       |
