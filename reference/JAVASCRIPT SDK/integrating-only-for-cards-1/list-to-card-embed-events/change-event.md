@@ -14,20 +14,25 @@ The change event is triggered when the value of the embed changes. The payload o
 
 ## Method Parameters
 
-1. `event` - mandatory  
+1. `event` - mandatory\
    The name of the event, in this case `change`
-2. `handler` - mandatory  
+2. `handler` - mandatory\
    handler(event) => void is a callback function that a merchant will provide that will be called when the event is fired. When called it will be passed an event object with the following properties:
 
-   | Field     | Sub-field       | Type    | Description                                                                                                             |
-   | --------- | --------------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
-   | embedType |                 | string  | The type of embed that emitted this event. In this case card                                                            |
-   | empty     |                 | boolean | true if the embed is empty                                                                                              |
-   | complete  |                 | boolean | true if the embed is well-formed and potentially complete. That is the merchant can use this to enable their pay button |
-   | error     |                 | json    | Any error that we surface to the customer while they are typing                                                         |
-   | value     |                 | json    |                                                                                                                         |
-   |           | cardholder_name | string  | Cardholder name entered by the customer on the embed                                                                    |
-   | scheme    |                 | enum    | Card scheme - visa, mastercard, american_express                                                                        |
+   | Field     | Sub-field        |       | Type    | Description                                                                                                             |
+   | --------- | ---------------- | :---- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
+   | embedType |                  |       | string  | The type of embed that emitted this event. In this case card                                                            |
+   | empty     |                  |       | boolean | true if the embed is empty                                                                                              |
+   | complete  |                  |       | boolean | true if the embed is well-formed and potentially complete. That is the merchant can use this to enable their pay button |
+   | error     |                  |       | json    | Any error that we surface to the customer while they are typing                                                         |
+   | value     |                  |       | json    |                                                                                                                         |
+   |           | cardholder\_name |       | string  | Cardholder name entered by the customer on the embed                                                                    |
+   |           | expiry           |       | json    | Card Expiry Details                                                                                                     |
+   |           |                  | month | integer | Number representing the card’s expiration month                                                                         |
+   |           |                  | year  | integer | Four-digit number representing the card’s expiration year.                                                              |
+   |           | last4            |       | string  | The last 4 digits of the card                                                                                           |
+   |           | first6           |       | string  | The first 6 digits of the card                                                                                          |
+   | scheme    |                  |       | enum    | Card scheme - visa, mastercard, american\_express                                                                       |
 
 ## Handling a card embed change event
 
@@ -58,5 +63,3 @@ cardEmbed.on('change', function(event) {
   value: { cardholder_name: "" }
 }
 ```
-
-<br />
