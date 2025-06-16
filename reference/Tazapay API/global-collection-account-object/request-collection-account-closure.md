@@ -1,6 +1,6 @@
 ---
 title: Request Collection Account Closure
-excerpt: Request for closure of you collection account.
+excerpt: Request for closure of your collection account.
 api:
   file: sandbox.json
   operationId: post_v3collection_account:iddisable
