@@ -17,7 +17,7 @@ next:
 | `payout.requires_approval`          | Triggered when the status is requires\_approval | Off     |
 | `payout.requires_action`            | Triggered when the status is requires\_action   | Off     |
 | `payout.requires_funding`           | Triggered when the status is requires\_funding  | On      |
-| `payout.processing`                 | Triggered when the status is processing         | Off     |
+| `payout.processing`                 | Triggered when the status is processing         | On      |
 | `payout.succeeded`                  | Triggered when the status is succeeded          | On      |
 | `payout.failed`                     | Triggered when the status is failed             | On      |
 | `payout.cancelled`                  | Triggered when the payout is cancelled          | On      |
