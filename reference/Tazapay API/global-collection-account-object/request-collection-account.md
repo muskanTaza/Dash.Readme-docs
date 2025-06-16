@@ -10,3 +10,4 @@ link:
 metadata:
   robots: index
 ---
+Use the parameters below to request a collections account with Tazapay. Please note that account name can either be your business name or a registered entity name incase the account is request on behalf of a entity.
