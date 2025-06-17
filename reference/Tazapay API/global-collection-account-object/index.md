@@ -19,39 +19,40 @@ next:
 ### Virtual account
 
 ```
- {
-    "metadata": {},
-    "virtual_account": {
-      "account_holder_name": "testacc",
-      "account_number": "testacc1234-56-1234",
-      "bank_address": {
-        "address_line_1": "testAdd",
-        "address_line_2": "testAdd1",
-        "country": "United States of America"
-      },
-     "bank_codes": {
-        "ach_routing_number": "testRoutingNumber",
-        "bank_code": "testBankCode",
-        "bsb_code": "testBsbCode",
-        "fedwire_routing_number": "TestFedWire",
-        "routing_code": "testRoutingCode",
-        "sort_code": "testSortCode",
-        "swift_code": "testSwift"
-      },
-      "bank_branch": "testBankBranch",
-      "bank_name": "testBank",
-      "iban": "testIban"
+{
+  "metadata": {},
+  "virtual_account": {
+    "account_holder_name": "John Doe",
+    "account_number": "1234567890-56-7890",
+    "bank_address": {
+      "address_line_1": "123 Main Street",
+      "address_line_2": "Suite 500",
+      "country": "United States of America"
     },
-    "created_at": "2024-09-26T09:39:25.03501Z",
-    "updated_at": "2024-09-26T09:41:43.349835Z",
-    "id": "cva_crqinja9chqqs7moi8rg",
-    "object": "collection_account",
-    "payment_method_type": "local_bank_transfer_cad",
-    "status": "disabled",
-    "currencies": [
-      "CAD"
-    ]
-  }
+    "bank_codes": {
+      "ach_routing_number": "021000021",
+      "bank_code": "001",
+      "bsb_code": "033-001",
+      "fedwire_routing_number": "021000021",
+      "routing_code": "021000021",
+      "sort_code": "12-34-56",
+      "swift_code": "BOFAUS3N"
+    },
+    "bank_branch": "Downtown Branch",
+    "bank_name": "Bank of America",
+    "iban": "US12345678901234567890"
+  },
+  "created_at": "2025-06-17T10:39:25.03501Z",
+  "updated_at": "2025-06-17T10:41:43.349835Z",
+  "id": "cva_crqinja9chqqs7moi8rg",
+  "object": "collection_account",
+  "payment_method_type": "local_bank_transfer_cad",
+  "status": "enabled",
+  "currencies": [
+    "CAD"
+  ]
+}
+
 ```
 
 <br />
@@ -91,7 +92,7 @@ next:
 | updated\_at             | string (ISO Date) | Collection account last updated timestamp                                                                                                                                                                                                                   |
 | id                      | string            | Unique identifier (ID) associated with the collection\_account                                                                                                                                                                                              |
 | object                  | string            | Object structure name - collection\_account in this case.                                                                                                                                                                                                   |
-| payment\_method\_type   | enum              | .......                                                                                                                                                                                                                                                     |
+| payment\_method\_type   | enum              | Payment Method Type used for the account.                                                                                                                                                                                                                   |
 | status                  | enum              | Current status of the collection account. It can either be enabled or disabled, enablement\_requested, disablement\_requested.                                                                                                                              |
 | currencies              | array             | List of supported currencies the collection account can receive funds in                                                                                                                                                                                    |
 
