@@ -8,13 +8,15 @@ metadata:
 &#x20;
 
 ```mermaid
- [*] --> Collection_Account
+stateDiagram-v2
+    [*] --> Collection_Account
     Collection_Account --> Enablement_Requested : Request Enablement
     Enablement_Requested --> Enabled : Approve Enablement
     Enablement_Requested --> Enablement_Rejected : Reject Enablement
     Enabled --> Disablement_Requested : Request Disablement
     Disablement_Requested --> Disabled : Approve Disablement
     Disablement_Requested --> Enabled : Reject Disablement
+
 ```
 
 <br />
