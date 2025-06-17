@@ -6,7 +6,7 @@ excerpt: >-
   network. You can then withdraw the collected funds from the global collection
   accounts into the currency and bank account of your choice.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''
