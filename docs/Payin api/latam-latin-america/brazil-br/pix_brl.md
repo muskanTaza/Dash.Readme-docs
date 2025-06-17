@@ -16,8 +16,8 @@ PIX in Brazil is a single use payment method. It allows users to make payments i
 
 ## Step 1: Create a payin
 
-Tazapay uses a `payin` object to represent your intent to collect a payment from your customer. The payin object tracks state changes from PIX QR creation to payment completion.  
-Create a payin on your server with an amount, invoice_currency `BRL` and a transaction_description using the [create payin API](https://docs.tazapay.com/reference/create-payin)
+Tazapay uses a `payin` object to represent your intent to collect a payment from your customer. The payin object tracks state changes from PIX QR creation to payment completion.\
+Create a payin on your server with an amount, invoice\_currency `BRL` and a transaction\_description using the [create payin API](https://docs.tazapay.com/reference/create-payin)
 
 A payin is created with the status `requires_payment_method`.
 
@@ -27,7 +27,7 @@ A payin is created with the status `requires_payment_method`.
 curl --request POST \
      --url https://service-sandbox.tazapay.com/v3/payin \
      --header 'accept: application/json' \
-     --header 'authorization: Basic YWtfdGVzdF9ZTFNVQUUwVjRCSEpIOFg0ODZPQzpza190ZXN0X0hNOEM3SEVSV1BmODVPZnFCMXhLTUJJMWlENnVWYTEyUWN2VE5ZeVJhSHhRZjVTOW9pZUtoOVZzejg3cnhtSEpaSlcyTHdVc0NSY2RWbUR0d0U4Q0VkdWNIUXRnNVQzVjl1NkltQWludkdiMjhWeXhTVVlsTTFMWWllbU80THFt' \
+     --header 'authorization: Basic XXXXXXXXXXXXXXXXXXXXXXXX' \
      --header 'content-type: application/json' \
      --data '
 {
@@ -43,13 +43,13 @@ curl --request POST \
 
 Confirm the payin created in step 1 using the confirm payin API. Upon confirmation of the payin, a QR code is generated to display to your customer. The status of the payin moves to `requires_action`
 
-The following sub-fields can be passed in payment_method_details
+The following sub-fields can be passed in payment\_method\_details
 
-| Field   | Subfield | type   | Mandatory (Y/N) | Description                                                                                                      |
-| ------- | :------- | ------ | --------------- | ---------------------------------------------------------------------------------------------------------------- |
-| type    |          | enum   | Y               | The type of the payment method. In this case, the value is `pix_brl`                                             |
-| pix_brl |          | json   | Y               | Details of the PIX payment method                                                                                |
-|         | tax_id   | string | Y               | Tax ID (CPF / CPNJ number) entered by the customer, This should be alphanumeric, without any special characters. |
+| Field    | Subfield | type   | Mandatory (Y/N) | Description                                                                                                      |
+| -------- | :------- | ------ | --------------- | ---------------------------------------------------------------------------------------------------------------- |
+| type     |          | enum   | Y               | The type of the payment method. In this case, the value is `pix_brl`                                             |
+| pix\_brl |          | json   | Y               | Details of the PIX payment method                                                                                |
+|          | tax\_id  | string | Y               | Tax ID (CPF / CPNJ number) entered by the customer, This should be alphanumeric, without any special characters. |
 
 ### Sample cURL
 
@@ -57,7 +57,7 @@ The following sub-fields can be passed in payment_method_details
 curl --request POST \
      --url https://service-sandbox.tazapay.com/v3/payin/pay_uiabfuiahfanwofihwnwon/confirm \
      --header 'accept: application/json' \
-     --header 'authorization: Basic YWtfdGVzdF9ZTFNVQUUwVjRCSEpIOFg0ODZPQzpza190ZXN0X0hNOEM3SEVSV1BmODVPZnFCMXhLTUJJMWlENnVWYTEyUWN2VE5ZeVJhSHhRZjVTOW9pZUtoOVZzejg3cnhtSEpaSlcyTHdVc0NSY2RWbUR0d0U4Q0VkdWNIUXRnNVQzVjl1NkltQWludkdiMjhWeXhTVVlsTTFMWWllbU80THFt' \
+     --header 'authorization: Basic XXXXXXXXXXXXXXXXXXXXXXX' \
      --header 'content-type: application/json' \
      --data '
 {
@@ -91,7 +91,7 @@ Also, pass the following field
 ```json
 curl --location 'https://service-sandbox.tazapay.com/v3/payin' \
 --header 'accept: application/json' \
---header 'authorization: Basic YWtfdGVzdF9ZTFNVQUUwVjRCSEpIOFg0ODZPQzpza190ZXN0X0hNOEM3SEVSV1BmODVPZnFCMXhLTUJJMWlENnVWYTEyUWN2VE5ZeVJhSHhRZjVTOW9pZUtoOVZzejg3cnhtSEpaSlcyTHdVc0NSY2RWbUR0d0U4Q0VkdWNIUXRnNVQzVjl1NkltQWludkdiMjhWeXhTVVlsTTFMWWllbU80THFt' \
+--header 'authorization: Basic XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
 --header 'content-type: application/json' \
 --data-raw '{
   "invoice_currency": "BRL",
@@ -113,11 +113,11 @@ curl --location 'https://service-sandbox.tazapay.com/v3/payin' \
 }'
 ```
 
-> In case, the tax_id entered by the customer is invalid, you will receive an error message which you can display to your customer
+> In case, the tax\_id entered by the customer is invalid, you will receive an error message which you can display to your customer
 >
-> "code": 19628,  
-> "message": "Tax ID entered is invalid. Please enter a valid tax ID",  
-> "remarks": "tax_id"
+> "code": 19628,\
+> "message": "Tax ID entered is invalid. Please enter a valid tax ID",
+> "remarks": "tax\_id"
 
 ## Step 3: Display the QR code on your screen
 
@@ -187,17 +187,17 @@ Tazapay sends a `payin.succeeded` event as soon as the funds are received from t
 
 If the payment is not made by the customer within the stipulated active time of the QR and the QR expires, Tazapay sends a `payment_attempt.failed` event. Display a CTA on your screen beside the QR to allow the customer to generate a new QR. To generate a new QR, confirm the payin again using Step 2.
 
-| Event                  | Description                                       | Next Steps                                                                                 |
-| ---------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| payin.succeeded        | The customer paid before the expiration of the QR | Fulfill the goods or services that the customer purchased                                  |
-| payment_attempt.failed | The customer did not pay and the QR expired       | Allow the customer to generate a new QR or complete the payment via another payment method |
+| Event                   | Description                                       | Next Steps                                                                                 |
+| ----------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| payin.succeeded         | The customer paid before the expiration of the QR | Fulfill the goods or services that the customer purchased                                  |
+| payment\_attempt.failed | The customer did not pay and the QR expired       | Allow the customer to generate a new QR or complete the payment via another payment method |
 
 # Test the Integration (Work in Progress | Not live yet)
 
-In test mode (sandbox), set the tax_id as 07341712503 so that it bypasses the tax_id validation.
+In test mode (sandbox), set the tax\_id as 07341712503 so that it bypasses the tax\_id validation.
 
-1. All the pix_brl payment attempts will succeed 3 minutes after creation by default. You will receive a `payin.succeeded` event.
-2. All the pix_brl payment attempts created with value 100 BRL (invoice_currency - BRL, amount - 10000) will fail 3 minutes after creation by default. You will receive a `payment_attempt.failed` event and the status of the payin will move to `requires_payment_method`.
+1. All the pix\_brl payment attempts will succeed 3 minutes after creation by default. You will receive a `payin.succeeded` event.
+2. All the pix\_brl payment attempts created with value 100 BRL (invoice\_currency - BRL, amount - 10000) will fail 3 minutes after creation by default. You will receive a `payment_attempt.failed` event and the status of the payin will move to `requires_payment_method`.
 
 # Integrating Refunds
 
@@ -207,7 +207,7 @@ PIX supports partial refunds. Specify the amount (lesser than the invoice amount
 
 ### Refunding using dashboard
 
-Refer to this guide: \<https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard>
+Refer to this guide: \<[https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard>](https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard>)
 
 ### Refund using API
 
@@ -217,7 +217,7 @@ Sample cURL
 curl --request POST \
      --url https://service-sandbox.tazapay.com/v3/refund \
      --header 'accept: application/json' \
-     --header 'authorization: Basic YWtfdGVzdF9ZTFNVQUUwVjRCSEpIOFg0ODZPQzpza190ZXN0X0hNOEM3SEVSV1BmODVPZnFCMXhLTUJJMWlENnVWYTEyUWN2VE5ZeVJhSHhRZjVTOW9pZUtoOVZzejg3cnhtSEpaSlcyTHdVc0NSY2RWbUR0d0U4Q0VkdWNIUXRnNVQzVjl1NkltQWludkdiMjhWeXhTVVlsTTFMWWllbU80THFt' \
+     --header 'authorization: Basic XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
      --header 'content-type: application/json' \
      --data '
 {
