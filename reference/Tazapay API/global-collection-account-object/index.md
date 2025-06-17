@@ -1,5 +1,5 @@
 ---
-title: Global Collection Account
+title: Global Collection Account - Coming Soon
 excerpt: >-
   Tazapay provides you with global collection accounts which you can share with
   your customers to receive payments in local currencies or using the SWIFT
