@@ -28,7 +28,7 @@ metadata:
 
 ## Wallet
 
-|                  |
-| :--------------- |
-| stablecoin\_usdt |
-| stablecoin\_usdc |
+| Payment Method Type |
+| :------------------ |
+| stablecoin\_usdt    |
+| stablecoin\_usdc    |
