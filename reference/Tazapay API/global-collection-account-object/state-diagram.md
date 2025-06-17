@@ -1,7 +1,7 @@
 ---
 title: State Diagram
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
