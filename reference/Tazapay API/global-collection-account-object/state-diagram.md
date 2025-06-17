@@ -9,8 +9,7 @@ This diagram helps visualize how a collection account moves between different st
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Collection_Account
-    Collection_Account --> Enablement_Requested : Request Enablement
+    [*] --> Enablement_Requested : Request Enablement
     Enablement_Requested --> Enabled : Approve Enablement
     Enablement_Requested --> Enablement_Rejected : Reject Enablement
     Enabled --> Disablement_Requested : Request Disablement
