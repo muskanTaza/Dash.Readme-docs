@@ -1,5 +1,5 @@
 ---
-title: Webhooks
+title: Webhooks Guide
 excerpt: ''
 deprecated: false
 hidden: true
