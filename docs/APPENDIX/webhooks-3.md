@@ -13,7 +13,7 @@ next:
 Tazapay provides full control and visibility over your webhook events. This guide explains how to:
 
 * Configure webhook endpoints
-* Enable/Disable webhooks
+* Enable/Disable webhooks endpoints
 * View webhook event logs
 * Re-trigger webhook events
 * Authenticate webhooks
@@ -37,13 +37,13 @@ To start receiving webhook events, you must first configure your webhook endpoin
 | `URL`                 | The full endpoint URL on your server                                    |
 | `Events to Subscribe` | Select the event types you want (e.g. `checkout.paid`, `payout.failed`) |
 
-Once confirmed , Tazapay will begin sending events to the specified URL when matching actions occur.
+Once confirmed , Tazapay will begin sending events to the specified URL when matching events occur.
 
 ***
 
 ## Enabling or Disabling Webhooks
 
-You can toggle the active status of a webhook at any time.
+You can toggle the active/inactive status of a webhook at any time.
 
 ### How to Toggle
 
@@ -79,19 +79,19 @@ You can inspect detailed logs for each webhook event via the dashboard.
 
 ### Log Entry Fields
 
-| Field           | Description                                                      |
-| --------------- | ---------------------------------------------------------------- |
-| `Log Date`      | Timestamp of last delivery                                       |
-| `Event ID`      | Unique ID, e.g. `evt_ctc0lfqe4e771g7bbof0`                       |
-| `Response Code` | HTTP status returned by your server (e.g., `200`, `503`)         |
-| `Event Type`    | Event name like `checkout.paid` or `payment.failed`              |
-| `Reference Id`  | Payment id related to the webhook e.g. `chk_d1382lo4jjk32r7ri8r` |
+| Field               | Description                                                      |
+| ------------------- | ---------------------------------------------------------------- |
+| `Last Attempt Date` | Timestamp of last delivery                                       |
+| `Event ID`          | Unique ID, e.g. `evt_ctc0lfqe4e771g7bbof0`                       |
+| `Response Code`     | HTTP status returned by your server (e.g., `200`, `503`)         |
+| `Event Type`        | Event name like `checkout.paid` or `payment.failed`              |
+| `Reference Id`      | Payment id related to the webhook e.g. `chk_d1382lo4jjk32r7ri8r` |
 
 ### Filtering and Searching
 
 You can filter logs by:
 
-* Date
+* Created Date - Timestamp when the webhook event was created.
 * Event type
 * Response code
 
@@ -121,7 +121,7 @@ Click the **Resend** button next to the event log. A loading spinner will show w
 
 ## Authenticating Webhooks
 
-Tazapay signs each webhook request. You should verify the signature to ensure it came from us.
+Tazapay signs each webhook request. You should verify the signature to ensure the webhook came from us.
 
 ### How It Works
 
@@ -166,4 +166,4 @@ Use the **Sandbox Environment** to test webhook integration safely.
 
 If you need help:
 
-📩 Email us at [support@tazapay.co](mailto:support@tazapay.com)m
+📩 Email us at [support@tazapay.com](mailto:support@tazapay.com)
