@@ -82,4 +82,4 @@ MFA is required for all accounts, but users initially had 45 days post-launch to
 
 ### When are we launching MFA ?
 
-MFA should be live by mid of July.
+MFA should be live by mid of July, 2025
