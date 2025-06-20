@@ -1,6 +1,6 @@
 ---
 title: Create a quote
-excerpt: This is available on request
+excerpt: This is available on request and still in BETA.
 api:
   file: sandbox.json
   operationId: create-a-quote
