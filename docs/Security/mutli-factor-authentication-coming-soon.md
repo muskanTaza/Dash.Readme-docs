@@ -12,7 +12,7 @@ metadata:
 ---
 ## 1. Setting Up MFA
 
-If you haven’t set up MFA yet, you’ll be prompted to do so during your next login. The setup process is mandatory and takes only a few minutes.
+Post Launch , you’ll be prompted to setup MFA during your next login. The setup process is mandatory and takes only a few minutes.
 
 ### Setup Steps:
 
