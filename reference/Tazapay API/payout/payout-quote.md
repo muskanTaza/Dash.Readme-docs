@@ -7,7 +7,7 @@ api:
   file: sandbox.json
   operationId: post_v3payoutquote
 deprecated: false
-hidden: true
+hidden: false
 link:
   new_tab: false
 metadata:
