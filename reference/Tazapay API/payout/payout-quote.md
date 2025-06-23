@@ -1,5 +1,5 @@
 ---
-title: Payout Quote
+title: Payout Quote (WIP - Coming soon)
 excerpt: >-
   Lock in the exact amount to be deducted a payout. The API returns the fees
   along with exchange rates which will be applicable to the payout
