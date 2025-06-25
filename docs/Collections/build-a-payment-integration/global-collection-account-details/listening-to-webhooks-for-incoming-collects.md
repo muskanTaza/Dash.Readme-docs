@@ -14,5 +14,5 @@ You can configure an endpoint on your server to receive notifications for incomi
 
 > Related Links:
 >
-> 1. Configuring an endpoint on Tazapay's dashboard.
+> 1. <Anchor label="Configuring an endpoint on Tazapay's dashboard." target="_blank" href="https://docs.tazapay.com/docs/webhooks-guides">Configuring an endpoint on Tazapay's dashboard.</Anchor>
 > 2. [List of collect events](https://docs.tazapay.com/docs/collect)
