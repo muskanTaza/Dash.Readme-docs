@@ -21,72 +21,74 @@ next:
 
 ***
 
-Ecommerce-Custom made clothing (to order)\
-Ecommerce-Books Stores
-Ecommerce-Supplements or Nutraceuticals
-Ecommerce-AgriProducts-Florists and Novelty Products
-Ecommerce-AgriProducts-Garden Products and Fertilizers
-Ecommerce-Aroma, Organic & Herbal
-Ecommerce-Art & Craft Materials, Handicraft and tools
-Ecommerce-Artwork / Art Dealers and Galleries
-Ecommerce-Automobiles-Automobile parts/tools, accessories and equipment
-Ecommerce-Automobiles-Automobile tyre sale, installation and repair
-Ecommerce-Automobiles-Bicycles, bicycle parts, accessories and repair.
-Ecommerce-Automobiles-Automobile sale/lease and repair, replacement of parts
-Ecommerce-Automobiles-Car and Truck Dealers (Used Only) Sales, Service, Repairs, Parts, and Leasing
-Ecommerce-Automobiles-Motorcycle Shops and Dealers
-Ecommerce-Automobiles (B2B)-Motor Vehicle Supplies and New Parts
-Ecommerce-Beauty Products & Cosmetics
-Ecommerce-Building & Construction Materials (Floor Covering)
-Ecommerce-Building & Construction Materials (General)
-Ecommerce-Building & Construction Materials (Glass, Paint and Wallpaper)
-Ecommerce-Camera and Photographic Supply Stores
-Ecommerce-Children clothing
-Ecommerce-Clothing rental
-Ecommerce-Consumer Electronics
-Ecommerce-Consumer Electronics (Mobiles)
-Ecommerce-Discount Stores
-Ecommerce-Diversified/Others
-Ecommerce-Drapery, Window Covering, and Upholstery Stores
-Ecommerce-Dropshipping
-Ecommerce-Duty Free Stores
-Ecommerce-Electronic Hardware, Tools & Parts
-Ecommerce-Equipment, Tool, Furniture, and Appliance Rental and Leasing
-Ecommerce-Food & Non-Alcohol Drinks (Bakeries)
-Ecommerce-Food & Non-Alcohol Drinks (Confectionery / Candy)
-Ecommerce-Food & Non-Alcohol Drinks (Dairy products)
-Ecommerce-Food & Non-Alcohol Drinks (Grocery and Supermarkets)
-Ecommerce-Food & Non-Alcohol Drinks (Miscellaneous / Specialty stores)
-Ecommerce-Fur jackets, coats
-Ecommerce-Finished Furniture and accessories
-Ecommerce-General clothing stores (for men and women)
-Ecommerce-General clothing stores (for men, women, children)
-Ecommerce-General Merchandise
-Ecommerce-Gift, Card, Novely and Souvenir Shops
-Ecommerce-Glassware/Crystal Stores
-Ecommerce-Electrical and plumbing supplies, tools and power tools
-Ecommerce-Hardware stores
-Ecommerce-Hobby, Toy, and Game Shops
-Ecommerce-Home Appliances
-Ecommerce-Home, Decor & Furniture-Warehouse Stores
-Ecommerce-Luggage and storage (incl backpacks, briefcases, purses and wallets)
-Ecommerce-Meat & Poultry
-Ecommerce-Men and boys clothing
-Ecommerce-Miscellaneous Clothing (e.g., Swimwear)
-Ecommerce-Home interior fixtures and decorating items
-Ecommerce-Music Stores – Musical Instruments, Pianos, and Sheet Music
-Ecommerce-Packaging, Office & Stationery
-Ecommerce-Pet Food
-Ecommerce-Religious Goods Stores
-Ecommerce-Sewing, Needlework, Fabric and Piece Goods Stores
-Ecommerce-Footwear including athletic footwear
-Ecommerce-Sports & Travel Goods
-Ecommerce-Sports clothing
-Ecommerce-Used Merchandise and Secondhand Stores
-Ecommerce-Wigs, Toupes, hair pieces and extensions
-Ecommerce-Women accessories and specialty shops (e.g., handbags, scarfs, costume jewellery, etc)
-Ecommerce-Women fashion
-Ecommerce-Stamp and Coin Stores
+<br />
+
+* Ecommerce - Home interior fixtures and decorating items
+* Ecommerce - Miscellaneous Clothing (e.g., Swimwear)
+* Ecommerce - Men and boys clothing
+* Ecommerce - Meat & Poultry
+* Ecommerce - Luggage and storage (incl backpacks, briefcases, purses and wallets)
+* Ecommerce - Home, Decor & Furniture-Warehouse Stores
+* Ecommerce - Home Appliances
+* Ecommerce - Hobby, Toy, and Game Shops
+* Ecommerce - Hardware stores
+* Ecommerce - Electrical and plumbing supplies, tools and power tools
+* Ecommerce - Glassware/Crystal Stores
+* Ecommerce - Gift, Card, Novelty and Souvenir Shops
+* Ecommerce - General Merchandise
+* Ecommerce - General clothing stores (for men, women, children)
+* Ecommerce - General clothing stores (for men and women)
+* Ecommerce - Finished Furniture and accessories
+* Ecommerce - Custom made clothing (to order)
+* Ecommerce - Fur jackets, coats
+* Ecommerce - Food & Non-Alcohol Drinks (Miscellaneous / Specialty stores)
+* Ecommerce - Food & Non-Alcohol Drinks (Grocery and Supermarkets)
+* Ecommerce - Food & Non-Alcohol Drinks (Dairy products)
+* Ecommerce - Food & Non-Alcohol Drinks (Confectionery / Candy)
+* Ecommerce - Food & Non-Alcohol Drinks (Bakeries)
+* Ecommerce - Equipment, Tool, Furniture, and Appliance Rental and Leasing
+* Ecommerce - Electronic Hardware, Tools & Parts
+* Ecommerce - Duty Free Stores
+* Ecommerce - Dropshipping
+* Ecommerce - Drapery, Window Covering, and Upholstery Stores
+* Ecommerce - Diversified/Others
+* Ecommerce - Discount Stores
+* Ecommerce - Consumer Electronics (Mobiles)
+* Ecommerce - Consumer Electronics
+* Ecommerce - Clothing rental
+* Ecommerce - Children clothing
+* Ecommerce - Camera and Photographic Supply Stores
+* Ecommerce - Building & Construction Materials (Glass, Paint and Wallpaper)
+* Ecommerce - Building & Construction Materials (General)
+* Ecommerce - Building & Construction Materials (Floor Covering)
+* Ecommerce - Beauty Products & Cosmetics
+* Ecommerce - Automobiles (B2B) - Motor Vehicle Supplies and New Parts
+* Ecommerce - Automobiles - Motorcycle Shops and Dealers
+* Ecommerce - Automobiles - Car and Truck Dealers (Used Only) Sales, Service, Repairs, Parts, and Leasing
+* Ecommerce - Automobiles - Automobile sale/lease and repair, replacement of parts
+* Ecommerce - Automobiles - Bicycles, bicycle parts, accessories and repair
+* Ecommerce - Automobiles - Automobile tyre sale, installation and repair
+* Ecommerce - Automobiles - Automobile parts/tools, accessories and equipment
+* Ecommerce - Artwork / Art Dealers and Galleries
+* Ecommerce - Art & Craft Materials, Handicraft and tools
+* Ecommerce - Aroma, Organic & Herbal
+* Ecommerce - AgriProducts - Garden Products and Fertilizers
+* Ecommerce - AgriProducts - Florists and Novelty Products
+* Ecommerce - Supplements or Nutraceuticals
+* Ecommerce - Sports & Travel Goods
+* Ecommerce - Sports clothing
+* Ecommerce - Stamp and Coin Stores
+* Ecommerce - Used Merchandise and Secondhand Stores
+* Ecommerce - Sewing, Needlework, Fabric and Piece Goods Stores
+* Ecommerce - Religious Goods Stores
+* Ecommerce - Pet Food
+* Ecommerce - Wigs, Toupes, hair pieces and extensions
+* Ecommerce - Footwear including athletic footwear
+* Ecommerce - Women fashion
+* Ecommerce - Women accessories and specialty shops (e.g., handbags, scarfs, costume jewellery, etc)
+* Ecommerce - Books Stores
+* Ecommerce - Packaging, Office & Stationery
+* Ecommerce - Music Stores – Musical Instruments, Pianos, and Sheet Music
 
 ***
 
