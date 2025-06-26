@@ -71,8 +71,7 @@ Ecommerce-Home Appliances
 Ecommerce-Home, Decor & Furniture-Warehouse Stores
 Ecommerce-Luggage and storage (incl backpacks, briefcases, purses and wallets)
 Ecommerce-Meat & Poultry
-
-Ecommerce-Men and boys clothing\
+Ecommerce-Men and boys clothing
 Ecommerce-Miscellaneous Clothing (e.g., Swimwear)
 Ecommerce-Home interior fixtures and decorating items
 Ecommerce-Music Stores – Musical Instruments, Pianos, and Sheet Music
