@@ -2,9 +2,7 @@
 title: Payout Bank
 excerpt: >-
   This allows you to check the requirements with respect to bank fields for a
-  given beneficiary country. These requirements will be made live on 30th April
-  2025, merchants must adhere to these requirements and update the integration
-  on or before the deadline.
+  given beneficiary country. 
 api:
   file: sandbox.json
   operationId: payout-bank
