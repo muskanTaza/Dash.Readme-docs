@@ -12,12 +12,12 @@ metadata:
 next:
   description: ''
 ---
-Digital Products-Apps, eBooks, Blogs & Games\
-Digital Products-Digital Merchandise
-Digital Products-Music, Video, Channels & Podcast
-Digital Products-Online Gaming (based on skill)
-Digital Products-Other Digital Goods
-Digital Products -Large Digital Goods Merchant (>25 Mn Txns annually)
+* Digital Products - Apps, eBooks, Blogs & Games
+* Digital Products - Digital Merchandise
+* Digital Products - Music, Video, Channels & Podcast
+* Digital Products - Online Gaming (based on skill)
+* Digital Products - Other Digital Goods
+* Digital Products - Large Digital Goods Merchant (>25 Mn Txns annually)
 
 ***
 
