@@ -62,7 +62,6 @@ flowchart TD
     H --> I[Platform collects funds from companies]
     I --> J[Tazapay disburses funds to verified bene]
     G -- No --> K[Prompt user to resume eKYC]
-
 ```
 
 ***
