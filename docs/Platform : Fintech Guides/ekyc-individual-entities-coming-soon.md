@@ -53,15 +53,14 @@ Tazapay functions as a PSP under PSD2 regulations and does not directly collect 
 ```mermaid
 flowchart TD
     A[Platform onboards individuals] --> B[Submit entity details to Tazapay]
-    B --> C[Link entity to beneficiary\nDetails must match]
+    B --> C[Link entity to beneficiary. Entity and bene details must match]
     C --> D[Initiate eKYC and get verification link]
-    D --> E[Share eKYC link with individual entity]
-    E --> F[Individual completes eKYC]
-    F --> G{Is eKYC successful?}
-    G -- Yes --> H[User eligible to receive payouts]
-    H --> I[Platform collects funds from companies]
-    I --> J[Tazapay disburses funds to verified bene]
-    G -- No --> K[Prompt user to resume eKYC]
+    D --> E[Individual completes eKYC]
+    E --> F{Is eKYC successful?}
+    F -- Yes --> G[User eligible to receive payouts]
+    G --> H[Platform collects funds from companies]
+    H --> I[Tazapay disburses funds to verified bene]
+    F -- No --> J[Prompt user to resume eKYC]
 ```
 
 ***
