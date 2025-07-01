@@ -7,7 +7,7 @@ metadata:
 ---
 ## Overview
 
-Tazapay enables platforms to onboard and verify individual entities (e.g., employees, contractors, freelancers) and disburse payouts to them using a compliant, secure, and PSD2-aligned payment infrastructure. This document outlines the process flow and responsibilities involved in enabling eKYC and payout capabilities through Tazapay.
+Tazapay enables platforms to onboard and verify individual entities (e.g., employees, contractors, freelancers) and disburse payouts to them using a compliant, secure, and PSD2-aligned payment infrastructure. This guide outlines the process flow and responsibilities involved in enabling eKYC and payout capabilities through Tazapay.
 
 This guide is ideal for platforms such as Employers of Record (EORs), marketplaces, or education platforms that want to:
 
@@ -40,9 +40,9 @@ Tazapay functions as a PSP under PSD2 regulations and does not directly collect 
 
 1. The platform (e.g., EOR) onboards individuals on their side.
 2. The platform submits entity details to Tazapay.
-3. The platform links the entity to a beneficiary (bene).
-4. Tazapay initiates eKYC and shares a verification link.
-5. The user completes eKYC using the provided link.
+3. The platform links the entity to a beneficiary (bene). Entity and beneficiary details should match.
+4. Platform then initiates eKYC and shares a verification link with the individual entity.
+5. The individual entity completes eKYC using the provided link.
 6. On successful verification, the user becomes eligible to receive payouts.
 7. Funds collected by the platform are disbursed to verified beneficiaries through Tazapay.
 
@@ -52,16 +52,17 @@ Tazapay functions as a PSP under PSD2 regulations and does not directly collect 
 
 ```mermaid
 flowchart TD
-    A[G2G onboards seller] --> B[Funds added to TP G2G account]
-    B --> C[G2G creates payouts for onboarded bene]
-    A --> D[G2G submits entity on our platform]
-    D --> E[G2G submits bene details for entity]
-    E --> F[G2G initiates eKYC request]
-    F --> G{User completes eKYC?}
-    G -- Yes --> H[Eligible to receive payouts]
-    G -- No --> I{Session expired?}
-    I -- Yes --> J[Generate new access token]
-    I -- No --> K[Can resume in same session]
+    A[Platform onboards individuals] --> B[Submit entity details to Tazapay]
+    B --> C[Link entity to beneficiary (bene)\nDetails must match]
+    C --> D[Initiate eKYC and get verification link]
+    D --> E[Share eKYC link with individual entity]
+    E --> F[Individual completes eKYC]
+    F --> G{Is eKYC successful?}
+    G -- Yes --> H[User eligible to receive payouts]
+    H --> I[Platform collects funds from companies]
+    I --> J[Tazapay disburses funds to verified bene]
+    G -- No --> K[Prompt user to resume eKYC]
+
 ```
 
 ***
