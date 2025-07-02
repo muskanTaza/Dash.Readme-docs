@@ -67,7 +67,7 @@ Each incoming payment to Tazapay is represented by a collect object. The collect
 
 ### Making Payouts to the bank accounts
 
-1. You can make payouts to the beneficiary destinations created during onboarding using [the Payout API](https://docs.tazapay.com/reference/create-payout).
+1. You can make payouts to the beneficiary destinations on behalf of the entities created during onboarding using [the Payout API](https://docs.tazapay.com/reference/create-payout).
 
 2. Related Guide: [Click here](https://docs.tazapay.com/docs/building-an-integration-payouts)
 
