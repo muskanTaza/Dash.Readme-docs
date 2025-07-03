@@ -1,5 +1,8 @@
 ---
-title: Enabling individuals to collect and withdraw
+title: Orchestrating multi-currency wallets
+excerpt: >-
+  This guides you to use Tazapay's infrastructure to orchestrate multi-currency
+  wallets for your customers
 deprecated: false
 hidden: false
 metadata:
@@ -84,6 +87,8 @@ Suppose Tazapay's pricing is 1% for any collection. There is an incoming payment
 **Funds Withdrawal from Tazapay for Individuals**
 
 Suppose Tazapay's pricing is 1% for any withdrawal. The platform has added a markup on this and has contracted a 2% withdrawal fees with the individual. The balance of an individual is USD 5000 and they wish to withdraw these funds to their bank account.  The platform can initiate a payout for USD 4900 (deducting 2%). USD 4900 will be credited to the individual's local bank account and Tazapay will deduct USD 4949 from the omnibus balance. USD 51 is part of the commission pool for the platform
+
+> Alternatively, you also have the ability to configure tiered pricing on Tazapay for the individuals and Tazapay will settle your commission on a periodic basis to your bank account
 
 ## Withdrawing Commissions from Tazapay
 
