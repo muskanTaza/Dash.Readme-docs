@@ -8,7 +8,7 @@ api:
   file: sandbox.json
   operationId: fetch-balance-transaction
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''
