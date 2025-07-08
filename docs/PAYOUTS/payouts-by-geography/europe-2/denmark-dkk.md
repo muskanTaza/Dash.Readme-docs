@@ -1,5 +1,5 @@
 ---
-title: Denmark (DKK)
+title: Denmark (DK)
 deprecated: false
 hidden: false
 metadata:
