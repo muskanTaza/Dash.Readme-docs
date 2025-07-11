@@ -31,7 +31,6 @@ You can enable one or more authentication methods for flexibility. Each method p
 ### Passkey (Recommended)
 
 * Uses Face ID, fingerprint, or screen lock.
-* No need to type in a code.
 * Works with built-in security on your phone or computer.
 * Once set up, you just approve a prompt when logging in.
 
