@@ -6,7 +6,7 @@ excerpt: >-
   account. You’ll need to complete MFA when logging in or performing sensitive
   actions.
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
