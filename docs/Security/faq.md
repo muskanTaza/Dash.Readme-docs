@@ -43,7 +43,7 @@ You can also set up MFA in **Account Settings > Security > Multi-Factor Authenti
 * Passkey (Recommended): Uses Face ID, fingerprint, or screen lock. No code entry needed.
 * SMS Code: Receives a 6-digit code via text. Ensure your phone number is up to date.
 * Authenticator App (TOTP): Works offline. Apps like Google Authenticator, 1Password, or Authy generate a new 6-digit code every 30 seconds.
-* Recovery Codes: One-time use codes shown during setup. Store securely in an offline location.
+* Recovery Codes: One-time use codes shown during setup. Store securely in an offline location. Only use them when you cannot access any method of authentication.
 
 ***
 
@@ -82,4 +82,4 @@ MFA is required for all accounts, but users initially had 45 days post-launch to
 
 ### When are we launching MFA ?
 
-MFA should be live by mid of July, 2025
+MFA should be live by 21 July, 2025
