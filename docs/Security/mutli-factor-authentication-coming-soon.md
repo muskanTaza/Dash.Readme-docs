@@ -1,5 +1,5 @@
 ---
-title: Mutli Factor Authentication - Coming Soon
+title: Multi Factor Authentication - Coming Soon
 excerpt: >-
   Multi-Factor Authentication (MFA) will soon be enabled for all Tazapay
   accounts. MFA adds an additional layer of security when accessing your
