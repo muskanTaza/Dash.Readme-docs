@@ -14,22 +14,22 @@ next:
 ---
 # How It Works
 
-- The customer has to select their bank.
-- They are then redirected to their online banking environment (or a secure third-party platform).
-- Within their banking environment, they authenticate the payment (e.g., with a password, fingerprint, or one-time code).
-- Once authenticated, the payment is instantly transferred to the merchant.
+* The customer has to select their bank.
+* They are then redirected to their online banking environment (or a secure third-party platform).
+* Within their banking environment, they authenticate the payment (e.g., with a password, fingerprint, or one-time code).
+* Once authenticated, the payment is instantly transferred to the merchant.
 
 ### Where It Works
 
 **Europe (28 EU countries)**
 
-Austria, Belgium, Bulgaria, Cyprus, Czech Republic, Germany, Denmark, Estonia, Spain, Finland, France, Greece, Hungary, Ireland, Italy, Lithuania, Luxembourg, Latvia, Malta, Netherlands, Poland, Portugal, Romania, Sweden, Slovakia.
+Austria, Belgium, Bulgaria, Cyprus, Czech Republic, Germany, Estonia, Spain, Finland, France, Greece, Hungary, Ireland, Italy, Lithuania, Luxembourg, Latvia, Malta, Netherlands, Poland, Portugal, Romania, Sweden, Slovakia.
 
 # Payment Method type
 
 Users can use the below payment method type to create a transaction using Bank Initiation in the available geography
 
-- Europe: `bank_initiation_eur`
+* Europe: `bank_initiation_eur`
 
 # Functionality
 
@@ -45,8 +45,8 @@ Users can use the below payment method type to create a transaction using Bank I
 
 The following is the upper and lower limits for Bank Push transactions:
 
-- **Minimum Limit**: USD 0.5
-- **Maximum Limit**: USD 100000
+* **Minimum Limit**: USD 0.5
+* **Maximum Limit**: USD 100000
 
 There is no default expiration for a transaction.
 
