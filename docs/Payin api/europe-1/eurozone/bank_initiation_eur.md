@@ -23,7 +23,7 @@ next:
 
 **Europe (28 EU countries)**
 
-Austria, Belgium, Bulgaria, Cyprus, Czech Republic, Germany, Denmark, Estonia, Spain, Finland, France, Greece, Hungary, Ireland, Italy, Lithuania, Luxembourg, Latvia, Malta, Netherlands, Poland, Portugal, Romania, Sweden, Slovakia.
+Austria, Belgium, Bulgaria, Cyprus, Czech Republic, Germany, Estonia, Spain, Finland, France, Greece, Hungary, Ireland, Italy, Lithuania, Luxembourg, Latvia, Malta, Netherlands, Poland, Portugal, Romania, Sweden, Slovakia.
 
 `💡The above set of countries are available subject to Tazapay AML Policies`
 
