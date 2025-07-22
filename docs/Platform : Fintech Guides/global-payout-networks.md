@@ -73,4 +73,4 @@ Once the funding is completed, GPN can confirm the payout to be processed. This 
 
 Resources:
 
-1. Confirm Payout API
+1. [Confirm Payout API](https://docs.tazapay.com/reference/confirm-payout)
