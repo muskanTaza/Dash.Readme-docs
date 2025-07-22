@@ -82,11 +82,13 @@ MFA is enforced not only at login, but also when performing high-risk operations
 
 ***
 
-## 5. Security Recommendations
+## 5. Best Practices
 
 * Set up at least two MFA methods to prevent lockout.
 * Store recovery codes in a secure offline location.
 * Prefer Passkeys for the best balance of security and convenience.
+* To ensure smooth operations across your departments (Management, Accounts, Operations) while maintaining account security, we recommend adding multiple users with appropriate role-based access. This way, each team member can log in independently with their own credentials and complete MFA without relying on a central device.\
+  Add new users by navigating to Settings > Manage team > Invite Teammate.
 
 ***
 
