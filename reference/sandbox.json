@@ -4272,7 +4272,7 @@
                       },
                       "date_of_birth": {
                         "type": "string",
-                        "description": "Date of birth of individual, Format DD-MM-YYYY"
+                        "description": "Date of birth of individual, Format DD-MM-YYYY (Mandatory if destination_details.type is a wallet and type is individual)"
                       },
                       "party_classification": {
                         "type": "string",
