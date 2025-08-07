@@ -13204,7 +13204,7 @@
       }
     },
     "/v3/metadata/doc/upload": {
-      "get": {
+      "post": {
         "description": "",
         "operationId": "get_v3metadatadocupload",
         "responses": {
@@ -13212,7 +13212,22 @@
             "description": ""
           }
         },
-        "parameters": []
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "file_name": {
+                    "type": "string",
+                    "description": "Name of the file"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        }
       }
     }
   },
