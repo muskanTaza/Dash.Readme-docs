@@ -13124,11 +13124,16 @@
                       "currency": {
                         "type": "string",
                         "description": "Currency - in ISO format"
+                      },
+                      "country": {
+                        "type": "string",
+                        "description": "Two letter country code - in ISO format"
                       }
                     },
                     "description": "Amount in destination currency (currency in which beneficiary receives the funds)",
                     "required": [
-                      "currency"
+                      "currency",
+                      "country"
                     ]
                   },
                   "local_payment_network": {
