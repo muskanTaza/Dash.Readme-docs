@@ -13127,7 +13127,7 @@
                       },
                       "country": {
                         "type": "string",
-                        "description": "Two letter country code - in ISO format"
+                        "description": "Two letter country code - in ISO format / Represents beneficiary's country"
                       }
                     },
                     "description": "Amount in destination currency (currency in which beneficiary receives the funds)",
