@@ -1,5 +1,5 @@
 ---
-title: Upload Document
+title: Add Document to a Resource
 excerpt: ''
 api:
   file: sandbox.json
