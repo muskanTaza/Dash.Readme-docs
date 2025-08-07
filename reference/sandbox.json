@@ -13204,12 +13204,47 @@
       }
     },
     "/v3/metadata/doc/upload": {
-      "post": {
+      "get": {
         "description": "",
         "operationId": "get_v3metadatadocupload",
         "responses": {
           "200": {
             "description": ""
+          }
+        },
+        "parameters": []
+      },
+      "post": {
+        "description": "",
+        "operationId": "get_v3metadatadocupload",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "New Example": {
+                    "summary": "New Example",
+                    "value": ""
+                  },
+                  "New Example 1": {
+                    "summary": "New Example 1",
+                    "value": ""
+                  },
+                  "Success": {
+                    "summary": "Success",
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "file_name": "1754537949609164452_hello.csv",
+                        "url": "https://s3.ap-southeast-1.amazonaws.com/tazapay-temp-doc/1754537949609164452_hello.csv?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAUGJYD3OS5YF3MV4T%2F20250807%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20250807T033909Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEcaDmFwLXNvdXRoZWFzdC0xIkcwRQIhAI%2Bd83nUhHm6u3Uc%2FeuGBJLdjqRh3n1%2FjMQtr8Z9LN%2FjAiByWlpXq7HXyS8Psbd7f4GNxmPYSNpvPNXtOLeLhIdIAyr9AwiA%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAEaDDI4ODQxNzM3MzA5MyIM%2FMRsdoUNhwhArSlQKtEDfGcws0PlOTY9IM6blInGAUUqprP5xkKVLAuUDYLGPXukiExs7qFBk9I2lJ%2FWVNv%2FfKZQCzgqkYBIdmi0UAfWK7xkXQi7%2BqQPNq%2FKeHjY76fhWzdec6mKU3OpnhYKeDd%2F7vpe85QdhyjzwHmlwLzRl12du9vcVwW6JZJr0rJEW8wLcHSpTgr%2FG0DW9T8IoxrxTphABsAhJnzuzutFQXIHorClm6pFepes3YCLdJo20Gfc7Vko9wxsW4cokUjNnLJ11IFJisyUG%2BpXPz6Lj0X7VQsOdUZQI4u%2FUuRZ8hkxdWXgDqoVdVL3aLv5IUQC0o9OXd%2Fx8cPOGHHdNZv9ChGMuJE0NL6c%2BITEqy5uPzGDEt9q7rq%2FTqCd56guZkRvMDWvV7ldTxzRx45kr0u8qMGBDTWC8wDcs5QmR2SaeBVffz68vemvdDnjdjjNQBqHp05nHsy%2F%2BxcViG0c%2FYIy9Gzi%2FP%2FxCtNkSN3i19j7MI%2FJSDduoHVdFFOzBjhSV7hspJFarOAJ%2FgF2lTURUXpUwSZVWg5%2BqYh62COZ0IIdf%2BFBvUE8D7ESkeHkyQpQb0eI5AVGPI7OS4mnqsAFsb9URb9OKWXjxu%2BqsXDbcN5YC6pAcD4xMOnDz8QGOqUB3ig8F1LrZtdZfcKkkUITk3Wml9%2BmbYYinTVM6QKMSasOdKKhg2wLgBzxKkfTSATyLYsEIL3RNw%2BWkaHrc%2FFJ911reynR8sXTcH5PvpShAxt0mZFSiRri4Cuo9U%2Fx7Qx1DFaEyiuQEm8kCGwnCES7vIRGixBXCvojR49zkAgPMoiGJ%2ByQbgdSEaSbip3RDakiwhPx0%2FegQtICAr8%2FfMLUBifduh4f&X-Amz-SignedHeaders=host&x-id=PutObject&X-Amz-Signature=da46727e5635b0e2493122a44c921038ba7164fee2635dbfc03d835889dd387d"
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "parameters": [],
