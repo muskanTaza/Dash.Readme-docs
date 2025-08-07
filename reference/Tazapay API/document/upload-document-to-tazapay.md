@@ -5,7 +5,7 @@ api:
   file: sandbox.json
   operationId: get_v3metadatadocupload
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
