@@ -13150,6 +13150,16 @@
                       }
                     },
                     "description": "Object containing additional details if the payout type is wallet"
+                  },
+                  "swift": {
+                    "type": "object",
+                    "description": "Object containing additional details if the payout_type is `swift",
+                    "properties": {
+                      "charge_type": {
+                        "type": "string",
+                        "description": "`shared` or `ours`"
+                      }
+                    }
                   }
                 },
                 "type": "object",
