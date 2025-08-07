@@ -13070,7 +13070,7 @@
                   "payout_type": {
                     "type": "string",
                     "default": "local",
-                    "description": "Type of the payout. Possible values - `swift`, `local`, 'local_payment_network`, `wallet`"
+                    "description": "Type of the payout. Possible values - `swift`, `local`, 'local_payment_network`, `wallet`, `tazapay_account`"
                   },
                   "local": {
                     "type": "object",
