@@ -13202,6 +13202,18 @@
           }
         }
       }
+    },
+    "/v3/metadata/doc/upload": {
+      "get": {
+        "description": "",
+        "operationId": "get_v3metadatadocupload",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "parameters": []
+      }
     }
   },
   "x-readme": {
