@@ -9736,7 +9736,7 @@
                     "properties": {
                       "type": {
                         "type": "string",
-                        "description": "bank, wallet or local_payment_network",
+                        "description": "bank, wallet, local_payment_network or tazapay_account",
                         "enum": [
                           "bank",
                           "wallet",
@@ -9881,6 +9881,19 @@
                             "description": "Deposit key corresponding to the type of local payment network (Example, PIX key for PIX, UPI handle for UPI, etc.)"
                           }
                         }
+                      },
+                      "tazapay_account": {
+                        "type": "object",
+                        "properties": {
+                          "deposit_address": {
+                            "type": "string",
+                            "description": "Deposit Address corresponding to a Tazapay account"
+                          }
+                        },
+                        "description": "Destination details if the destination_details.type is tazapay_account",
+                        "required": [
+                          "deposit_address"
+                        ]
                       }
                     }
                   },
