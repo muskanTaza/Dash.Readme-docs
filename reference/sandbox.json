@@ -98,10 +98,6 @@
                     "type": "string",
                     "description": "The URL the customer will be directed to if they decide to cancel payment and return to your website."
                   },
-                  "[Deprecated] webhook_url": {
-                    "type": "string",
-                    "description": "Endpoint on your server for Tazapay to send webhooks"
-                  },
                   "transaction_description": {
                     "type": "string",
                     "description": "A short description to be displayed on the Tazapay hosted checkout screen"
