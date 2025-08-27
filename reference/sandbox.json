@@ -10884,7 +10884,7 @@
                   },
                   "Refund Rejected": {
                     "summary": "Refund Rejected",
-                    "value": "{}"
+                    "value": ""
                   }
                 },
                 "schema": {
