@@ -2,7 +2,7 @@
 title: OpenAPI Specifications
 excerpt: ''
 deprecated: false
-hidden: false
+hidden: true
 link:
   new_tab: true
   url: https://docs.tazapay.com/openapi/648af4980d85b111df64fa17
