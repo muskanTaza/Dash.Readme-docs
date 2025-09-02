@@ -74,8 +74,4 @@ Yes! Go to **Settings > Security > Multi-Factor Authentication** in your Tazapay
 
 ***
 
-### Do I have to set up MFA immediately?
-
-MFA is required for all accounts, but users initially had 45 days post-launch to complete setup before it became mandatory.
-
 <br />
