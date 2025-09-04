@@ -13352,9 +13352,9 @@
         "x-readme": {
           "code-samples": [
             {
-              "code": "",
+              "code": "curl --request POST \\\n     --url https://service-sandbox.tazapay.com/v3/document \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data '\n{\n  \"file_name\": \"Escrow_checkout_and_payin_type_1750763277.csv\"\n}\n'",
               "language": "shell",
-              "name": ""
+              "name": "curl"
             }
           ],
           "samples-languages": [
