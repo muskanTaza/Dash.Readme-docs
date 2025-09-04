@@ -13346,7 +13346,7 @@
               "type": "string"
             },
             "required": true,
-            "description": "File Name of the document that needs to be uploaded. The document size needs to be under 500 MB"
+            "description": "File Name of the document that needs to be uploaded. The document size needs to be under 500 MB."
           }
         ],
         "x-readme": {
