@@ -9,7 +9,7 @@ hidden: true
 metadata:
   robots: index
 ---
-Once you have pre-signed URL, you can use a PUT request to upload your file on this URL.
+Once you have pre-signed URL, you can use a PUT request to upload your file on this URL. The document size should be under 50 MB.
 
 ### Supported File Types
 
