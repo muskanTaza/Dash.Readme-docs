@@ -9,32 +9,32 @@ hidden: true
 metadata:
   robots: index
 ---
-Once you have pre-signed URL, you can use a PUT request to upload your file on this URL. 
+Once you have pre-signed URL, you can use a PUT request to upload your file on this URL.
 
-## Supported File Types
+### Supported File Types
 
 We currently support the following file formats for upload:
 
-### 🖼️ Images
+#### 🖼️ Images
 
 * `.jpg`, `.jpeg`, `.png`, `.bmp`, `.tif`, `.svg`, `.gif`, `.ico`, `.webp`
 
-### 📄 Documents
+#### 📄 Documents
 
 * `.csv`, `.pdf`, `.doc`, `.docx`, `.odt`, `.ott`, `.rtf`, `.txt`, `.md`, `.tex`
 
-### 📊 Spreadsheets
+#### 📊 Spreadsheets
 
 * `.xls`, `.xlsx`, `.ods`, `.ots`
 
-### 📽️ Presentations
+#### 📽️ Presentations
 
 * `.ppt`, `.pptx`
 
-### 📦 Compressed Archives
+#### 📦 Compressed Archives
 
 * `.zip`, `.tar`, `.gz`, `.bz2`, `.xz`, `.7z`, `.rar`
 
-### 🗂️ Data Formats
+#### 🗂️ Data Formats
 
 * `.json`, `.xml`, `.yaml`, `.yml`
