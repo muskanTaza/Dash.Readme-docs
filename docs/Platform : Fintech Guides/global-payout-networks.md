@@ -4,7 +4,7 @@ excerpt: >-
   This guide describes how global payout networks can integrate with Tazapay for
   last mile payouts.
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
