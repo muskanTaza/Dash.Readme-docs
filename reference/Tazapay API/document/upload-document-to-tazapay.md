@@ -17,7 +17,7 @@ We currently support the following file formats for upload:
 
 #### 🖼️ Images
 
-* `.jpg`, `.jpeg`, `.png`, `.bmp`, `.tif`, `.svg`, `.gif`, `.ico`, `.webp`
+* `.jpg`, `.jpeg`, `.png`, `.bmp`, `.tif`, `.gif`, `.ico`, `.webp`
 
 #### 📄 Documents
 
