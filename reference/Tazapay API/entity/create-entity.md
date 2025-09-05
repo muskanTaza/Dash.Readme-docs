@@ -19,7 +19,7 @@ When you use `submit = true` during creation, you create and submit the entity i
 
 <HTMLBlock>{`
 <style>
-.Param-enum-section_compact-label2ssR6JGk5fry {
+.rm-ParamContainer{
   word-break: none !important;
   }
 <style/>
