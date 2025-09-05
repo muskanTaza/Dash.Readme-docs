@@ -1,5 +1,5 @@
 ---
-title: Types of Collections -
+title: Types of Collections
 excerpt: ''
 deprecated: false
 hidden: false
