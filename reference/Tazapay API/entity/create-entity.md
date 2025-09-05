@@ -17,12 +17,4 @@ After the entity is created, provide all the mandatory details and submit the en
 
 When you use `submit = true` during creation, you create and submit the entity in the same API call. You MUST pass the mandatory parameters in the submit API when you supply `submit = true`
 
-<HTMLBlock>{`
-<style>
-.rm-ParamContainer{
-  word-break: none !important;
-  }
-<style/>
-`}</HTMLBlock>
-
 <br />
