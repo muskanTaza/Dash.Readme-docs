@@ -19,7 +19,7 @@ When you use `submit = true` during creation, you create and submit the entity i
 
 <HTMLBlock>{`
 <style>
-.App .rm-ReferenceMain {
+.Param-enum-section_compact-label2ssR6JGk5fry {
   flex: 1 1 auto;
   min-width: 0;
   overflow-wrap: break-word;
