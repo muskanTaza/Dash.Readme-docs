@@ -24,7 +24,7 @@ When you use `submit = true` during creation, you create and submit the entity i
   min-width: 0;
   overflow-wrap: break-word;
   padding: 30px 31px;
-  word-break: none;
+  word-break: none !important;
   }
 <style/>
 `}</HTMLBlock>
