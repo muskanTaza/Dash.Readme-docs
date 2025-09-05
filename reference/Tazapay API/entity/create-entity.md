@@ -16,3 +16,17 @@ next:
 After the entity is created, provide all the mandatory details and submit the entity for approval.
 
 When you use `submit = true` during creation, you create and submit the entity in the same API call. You MUST pass the mandatory parameters in the submit API when you supply `submit = true`
+
+<HTMLBlock>{`
+<style>
+.App .rm-ReferenceMain {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: break-word;
+  padding: 30px 31px;
+  word-break: break-word;
+  }
+<style/>
+`}</HTMLBlock>
+
+<br />
