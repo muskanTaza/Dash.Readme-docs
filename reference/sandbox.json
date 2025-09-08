@@ -4403,6 +4403,10 @@
                   "destination_fx_quote": {
                     "type": "string",
                     "description": "ID of the quote to use locked exchange for conversion from payout to destination currency"
+                  },
+                  "quote": {
+                    "type": "string",
+                    "description": "Quote ID from the payout quote API"
                   }
                 }
               },
