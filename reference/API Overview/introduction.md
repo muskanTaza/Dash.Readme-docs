@@ -1,6 +1,8 @@
 ---
 title: Introduction
-excerpt: How Tazapay's API works to create a payment gateway
+excerpt: >-
+  Tazapay provides a collection of APIs that enable you to integrate with our
+  various products and services.
 deprecated: false
 hidden: false
 metadata:
