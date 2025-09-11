@@ -31,26 +31,6 @@ The **Purpose Code** selected during the payout request determines:
 
 For full details of valid codes, refer to [Purpose Codes Valid for India Payouts](https://docs.tazapay.com/docs/purpose-codes-valid-for-india-payouts).
 
-## RBI Purpose Code Mapping in Tazapay
-
-Below is the mapping of **Tazapay Purpose Codes (TP Codes)** to the corresponding **RBI Purpose Codes**:
-
-| TP Purpose Code | TP Purpose Code Description                        | Remitter Type           | Beneficiary Type        | Mapped PC Code | RBI Purpose Description                                                               | RBI Code |
-| --------------- | -------------------------------------------------- | ----------------------- | ----------------------- | -------------- | ------------------------------------------------------------------------------------- | -------- |
-| PYR001          | Payment for Services                               | Individual / Corporates | Individual / Corporates | PC17           | Export of Services – Business & Management Consultancy (≤ ₹15,00,000 per transaction) | P1006    |
-| PYR002          | Payment for Software                               | Individual / Corporates | Individual / Corporates | PC21           | Export of Services – Software Consultancy (≤ ₹15,00,000 per transaction)              | P0802    |
-| PYR003          | Payments for goods                                 | Individual / Corporates | Individual / Corporates | PC10           | Export of Goods – Export Bills Realization (≤ ₹15,00,000 per transaction)             | P0102    |
-| PYR006          | Transfer to own account                            | Individual              | Individual              | PC01           | Credit to NRE Rupee Accounts maintained by NRIs                                       | P0014    |
-| PYR010          | Salary                                             | Corporates              | Individual              | PC15           | Salary Payments                                                                       | P1401    |
-| PYR018          | Tax Payment                                        | Individual              | Individual / Corporates | PC12           | Tax Payments in India                                                                 | P1306    |
-| PYR025          | Education-related expenses                         | Individual              | Individual / Corporates | PC06           | Tuition, boarding, examination fees to schools/colleges                               | P1107    |
-| PYR026          | Medical Treatment                                  | Individual              | Individual / Corporates | PC07           | Payments to medical institutions & hospitals in India                                 | P1108    |
-| PYR028          | Mutual Fund Investment                             | Individual              | Individual / Corporates | PC03           | Payments to Insurance Companies, Mutual Funds, Postmaster                             | P0601    |
-| PYR031          | Advance Payments for goods                         | Individual / Corporates | Individual / Corporates | PC16           | Export of Goods – Advance Payment (≤ ₹15,00,000 per transaction)                      | P0104    |
-| PYR032          | Vendor/Contractor payouts for software development | Individual / Corporates | Individual / Corporates | PC21           | Export of Services – Software Consultancy (≤ ₹15,00,000 per transaction)              | P0802    |
-
-👉 The full expanded mapping (including all 30+ codes) is available in the [linked documentation](https://docs.tazapay.com/docs/purpose-codes-valid-for-india-payouts).
-
 ***
 
 ## Best Practices for Using Purpose Codes
