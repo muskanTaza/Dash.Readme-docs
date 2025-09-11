@@ -12,7 +12,7 @@ next:
 ---
 A webhook URL can now be provided as a request parameter in request bodies for certain endpoints which will notify you of any change in the underlying object status.
 
-Most users end up setting webhooks on an account level from the dashboard as that gives them an interface to look at any successful or failed webhooks requests and also re-trigger them if required. 
+Most users end up setting webhooks on an account level from the dashboard as that gives them an interface to look at any successful or failed webhooks requests and also re-trigger them if required. Use this [guide](https://docs.tazapay.com/docs/webhooks-guides#/) to setup webhooks
 
 You don’t need to schedule tasks on your side or continuously poll our endpoints to track changes in the status of a Tazapay object. Instead, simply set up webhooks via the Tazapay merchant dashboard for the endpoints you want to receive real-time notifications.
 
