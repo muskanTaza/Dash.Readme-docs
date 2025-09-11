@@ -1,0 +1,15 @@
+---
+title: Pagination
+api:
+  file: sandbox.json
+  operationId: get_
+deprecated: false
+hidden: true
+link:
+  new_tab: false
+metadata:
+  robots: index
+---
+All top-level API resources have support for bulk fetches through “list” API methods. These list API methods share a common structure and accept, at a minimum, the following three parameters: limit, starting_after, and ending_before.
+
+Tazapay's list API methods use cursor-based pagination through the starting_after and ending_before parameters. Both parameters accept an existing object ID value (see below) and return objects in reverse chronological order. The ending_before parameter returns objects listed before the named object. The starting_after parameter returns objects listed after the named object. These parameters are mutually exclusive. You can use either the starting_after or ending_before parameter, but not both simultaneously.
