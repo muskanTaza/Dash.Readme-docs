@@ -38,7 +38,7 @@ next:
 | 20322 | Please provide all the valid bank swift_fields to create a swift payout:%s                                                                                                                                  | 400         |
 | 20299 | Please provide a valid fx quote fx quote is expired or mismatch in from and to currency                                                                                                                     | 400         |
 | 20110 | When the txn source is bfi funding interval should be configured please configure funding interval and try again later                                                                                      | 400         |
-| 20035 | INR payouts purpose code validation is failing. Please check [https://docs.tazapay.com/docs/purpose-codes-valid-for-india-payouts#/](https://docs.tazapay.com/docs/purpose-codes-valid-for-india-payouts#/) |             |
+| 20035 | INR payouts purpose code validation is failing. Please check [https://docs.tazapay.com/docs/purpose-codes-valid-for-india-payouts#/](https://docs.tazapay.com/docs/purpose-codes-valid-for-india-payouts#/) | 400         |
 
 ***
 
