@@ -2,7 +2,7 @@
 - endpoints-environments
 - authentication
 - webhooks-intro
-- postman-setup
 - idempotent-requests
 - tazapay-mcp-server
+- postman-setup
 - pagination
