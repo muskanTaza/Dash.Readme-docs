@@ -1,6 +1,11 @@
 ---
 title: Payin Object
-excerpt: ''
+excerpt: >-
+  A payin refers to the process through which a merchant collects payments
+  through Tazapay’s cross-border payment platform. This can be done through
+  various methods such as credit/debit cards, local payment methods, bank
+  transfers, or e-wallets, depending on the supported payment options in the
+  region.
 deprecated: false
 hidden: true
 metadata:
@@ -11,7 +16,6 @@ next:
   description: ''
 ---
 ```
-```json
 {
         "amount": 100,
         "amount_paid": 0,
@@ -167,4 +171,3 @@ next:
 | ------------ | ------ | ----------------------------------------------------------------- |
 | calling_code | string | The international calling code for the phone number.              |
 | number       | string | The phone number associated with the billing or shipping address. |
-```
