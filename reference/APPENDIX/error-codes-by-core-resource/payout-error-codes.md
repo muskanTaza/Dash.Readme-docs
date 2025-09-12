@@ -12,33 +12,33 @@ next:
 ---
 ### POST v3/payout
 
-| Code  | Message                                                                                                                                  | HTTP Status |
-| ----- | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| 20165 | Please provide either the beneficiary details or a beneficiary ID. One of these fields is mandatory for processing.                      | 422         |
-| 20166 | Payout risk is not enabled to initiate payout                                                                                            | 403         |
-| 20167 | Please provide a valid payout currency                                                                                                   | 400         |
-| 20168 | Please provide a valid holding currency                                                                                                  | 400         |
-| 20169 | Please provide a valid bank swift_code                                                                                                   | 400         |
-| 20170 | Payout creation failed: The bank transfer type is swift which is incompatible with the local payout type                                 | 422         |
-| 20171 | Please provide a valid purpose code to create payout                                                                                     | 400         |
-| 20172 | The requested payout type does not match the beneficiary destination type                                                                | 422         |
-| 20173 | The requested beneficiary is not associated with the account                                                                             | 403         |
-| 20174 | Please provide valid transaction source                                                                                                  | 400         |
-| 20175 | Payout invoice document is not found. Please provide valid invoice document                                                              | 400         |
-| 20198 | Field on_behalf_of is required for creating this payout                                                                                  | 400         |
-| 20199 | Please provide valid on_behalf_of should be valid xid type with prefix 'ent_'                                                            | 400         |
-| 20200 | Entity doesn't match with tazapay compliance policy. Please contact us at [ops@tazapay.com](mailto:ops@tazapay.com)                      | 403         |
-| 20201 | There is insufficient balance in your account to make the desired payout. Please ensure you have added sufficient funds to your account. | 422         |
-| 20296 | Requested payout config is not supported please check the payout config                                                                  | 400         |
-| 20297 | Invalid or missing bank fields. Please provide a valid bank fields                                                                       | 400         |
-| 20298 | The specified transaction amount does not meet the required minimum or maximum limits.                                                   | 422         |
-| 20300 | Field is required and must be either one of cpf/cnpj/email/phone/random                                                                  | 400         |
-| 20320 | Please provide the common bank fields to create a payout either through local or swift:%s                                                | 400         |
-| 20321 | Please provide all the valid bank local_fields to create a local payout:%s                                                               | 400         |
-| 20322 | Please provide all the valid bank swift_fields to create a swift payout:%s                                                               | 400         |
-| 20299 | Please provide a valid fx quote fx quote is expired or mismatch in from and to currency                                                  | 400         |
-| 20110 | When the txn source is bfi funding interval should be configured please configure funding interval and try again later                   | 400         |
-| 20035 | INR purpose code validation is failing. Please check https://docs.tazapay.com/docs/purpose-codes-valid-for-india-payouts#/               |             |
+| Code  | Message                                                                                                                                                                                                     | HTTP Status |
+| ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| 20165 | Please provide either the beneficiary details or a beneficiary ID. One of these fields is mandatory for processing.                                                                                         | 422         |
+| 20166 | Payout risk is not enabled to initiate payout                                                                                                                                                               | 403         |
+| 20167 | Please provide a valid payout currency                                                                                                                                                                      | 400         |
+| 20168 | Please provide a valid holding currency                                                                                                                                                                     | 400         |
+| 20169 | Please provide a valid bank swift_code                                                                                                                                                                      | 400         |
+| 20170 | Payout creation failed: The bank transfer type is swift which is incompatible with the local payout type                                                                                                    | 422         |
+| 20171 | Please provide a valid purpose code to create payout                                                                                                                                                        | 400         |
+| 20172 | The requested payout type does not match the beneficiary destination type                                                                                                                                   | 422         |
+| 20173 | The requested beneficiary is not associated with the account                                                                                                                                                | 403         |
+| 20174 | Please provide valid transaction source                                                                                                                                                                     | 400         |
+| 20175 | Payout invoice document is not found. Please provide valid invoice document                                                                                                                                 | 400         |
+| 20198 | Field on_behalf_of is required for creating this payout                                                                                                                                                     | 400         |
+| 20199 | Please provide valid on_behalf_of should be valid xid type with prefix 'ent_'                                                                                                                               | 400         |
+| 20200 | Entity doesn't match with tazapay compliance policy. Please contact us at [ops@tazapay.com](mailto:ops@tazapay.com)                                                                                         | 403         |
+| 20201 | There is insufficient balance in your account to make the desired payout. Please ensure you have added sufficient funds to your account.                                                                    | 422         |
+| 20296 | Requested payout config is not supported please check the payout config                                                                                                                                     | 400         |
+| 20297 | Invalid or missing bank fields. Please provide a valid bank fields                                                                                                                                          | 400         |
+| 20298 | The specified transaction amount does not meet the required minimum or maximum limits.                                                                                                                      | 422         |
+| 20300 | Field is required and must be either one of cpf/cnpj/email/phone/random                                                                                                                                     | 400         |
+| 20320 | Please provide the common bank fields to create a payout either through local or swift:%s                                                                                                                   | 400         |
+| 20321 | Please provide all the valid bank local_fields to create a local payout:%s                                                                                                                                  | 400         |
+| 20322 | Please provide all the valid bank swift_fields to create a swift payout:%s                                                                                                                                  | 400         |
+| 20299 | Please provide a valid fx quote fx quote is expired or mismatch in from and to currency                                                                                                                     | 400         |
+| 20110 | When the txn source is bfi funding interval should be configured please configure funding interval and try again later                                                                                      | 400         |
+| 20035 | INR payouts purpose code validation is failing. Please check [https://docs.tazapay.com/docs/purpose-codes-valid-for-india-payouts#/](https://docs.tazapay.com/docs/purpose-codes-valid-for-india-payouts#/) |             |
 
 ***
 
