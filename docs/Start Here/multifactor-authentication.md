@@ -1,6 +1,8 @@
 ---
 title: MultiFactor Authentication
-excerpt: Add MFA for enhanced identity assurance and reduced attack surface.
+excerpt: >-
+  MFA ensures only verified users gain access by requiring multiple
+  authentication factors.
 deprecated: false
 hidden: true
 metadata:
