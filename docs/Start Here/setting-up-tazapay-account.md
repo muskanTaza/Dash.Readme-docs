@@ -5,7 +5,7 @@ excerpt: >-
   and documentation to help you start working with Tazapay as quickly as
   possible, and get support if you get stuck.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 next:
