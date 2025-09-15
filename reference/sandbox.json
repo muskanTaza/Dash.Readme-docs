@@ -1416,7 +1416,86 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"amount\": 100,\n        \"amount_paid\": 0,\n        \"billing_details\": {\n            \"address\": {\n                \"city\": \"Singapore\",\n                \"country\": \"SG\",\n                \"line1\": \"1st Street\",\n                \"line2\": \"2nd Avenue\",\n                \"postal_code\": \"43004\",\n                \"state\": \"Singapore\"\n            },\n            \"label\": \"Home\",\n            \"name\": \"Andrea Lark\",\n            \"phone\": {\n                \"calling_code\": \"65\",\n                \"number\": \"87654321\"\n            }\n        },\n        \"cancel_url\": \"https://mystore.com/try_again\",\n        \"cancelled_at\": null,\n        \"client_token\": \"1iJeF0TG3I3wwL8Bcstn6Dcze9AXn2aUgNKoBr_D8hY=\",\n        \"confirm\": false,\n        \"created_at\": \"2024-10-09T06:58:31.354184Z\",\n        \"customer\": \"cus_crtqrhth90j0121gpt50\",\n        \"customer_details\": {\n            \"country\": \"SG\",\n            \"email\": \"andrea@example.com\",\n            \"name\": \"Andrea Lark\",\n            \"phone\": {\n                \"calling_code\": \"65\",\n                \"number\": \"87654321\"\n            }\n        },\n        \"holding_currency\": \"SGD\",\n        \"id\": \"pay_cs32j5j4p26bm5o9k58g\",\n        \"invoice_currency\": \"SGD\",\n        \"items\": [],\n        \"latest_payment_attempt\": \"\",\n        \"latest_payment_attempt_data\": null,\n        \"metadata\": {\n            \"key1\": \"value1\"\n        },\n        \"object\": \"payin\",\n        \"paid_in_excess\": false,\n        \"partially_paid\": false,\n        \"payment_attempts\": [],\n        \"payment_method_details\": {\n            \"paynow_sgd\": {},\n            \"type\": \"paynow_sgd\"\n        },\n        \"reference_id\": \"string\",\n        \"shipping_details\": {\n            \"address\": {\n                \"city\": \"Singapore\",\n                \"country\": \"SG\",\n                \"line1\": \"1st Street\",\n                \"line2\": \"2nd Avenue\",\n                \"postal_code\": \"43004\",\n                \"state\": \"Singapore\"\n            },\n            \"label\": \"Home\",\n            \"name\": \"Andrea Lark\",\n            \"phone\": {\n                \"calling_code\": \"65\",\n                \"number\": \"87654321\"\n            }\n        },\n        \"statement_descriptor\": \"tzp*string\",\n        \"status\": \"requires_payment_method\",\n        \"status_description\": \"\",\n        \"success_url\": \"https://mystore.com/success_page\",\n        \"transaction_data\": [],\n        \"transaction_description\": \"test\",\n        \"transaction_documents\": [],\n        \"webhook_url\": \"https://mystore.com/internal/webhook\"\n    }\n}"
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "amount": 100,
+                        "amount_paid": 0,
+                        "billing_details": {
+                          "address": {
+                            "city": "Singapore",
+                            "country": "SG",
+                            "line1": "1st Street",
+                            "line2": "2nd Avenue",
+                            "postal_code": "43004",
+                            "state": "Singapore"
+                          },
+                          "label": "Home",
+                          "name": "Andrea Lark",
+                          "phone": {
+                            "calling_code": "65",
+                            "number": "87654321"
+                          }
+                        },
+                        "cancel_url": "https://mystore.com/try_again",
+                        "cancelled_at": null,
+                        "client_token": "ZRjM4ROfY6SPjTaQkz00OszWUcVvMA8KhStkPAoamPQ=",
+                        "confirm": false,
+                        "created_at": "2024-10-01T10:08:30.666381739Z",
+                        "customer": "cus_crtqrhth90j0121gpt50",
+                        "customer_details": {
+                          "country": "SG",
+                          "email": "andrea@example.com",
+                          "name": "Andrea Lark",
+                          "phone": {
+                            "calling_code": "65",
+                            "number": "87654321"
+                          }
+                        },
+                        "holding_currency": "INR",
+                        "id": "pay_crtsk7i6avg0t9ndc7l0",
+                        "invoice_currency": "INR",
+                        "items": [],
+                        "latest_payment_attempt": "",
+                        "latest_payment_attempt_data": null,
+                        "metadata": {
+                          "product_reference": "REF_12353"
+                        },
+                        "object": "payin",
+                        "paid_in_excess": false,
+                        "partially_paid": false,
+                        "payment_attempts": [],
+                        "payment_method_details": {
+                          "key": "value"
+                        },
+                        "reference_id": "string",
+                        "shipping_details": {
+                          "address": {
+                            "city": "Singapore",
+                            "country": "SG",
+                            "line1": "1st Street",
+                            "line2": "2nd Avenue",
+                            "postal_code": "43004",
+                            "state": "Singapore"
+                          },
+                          "label": "Home",
+                          "name": "Andrea Lark",
+                          "phone": {
+                            "calling_code": "65",
+                            "number": "87654321"
+                          }
+                        },
+                        "statement_descriptor": "tzp*string",
+                        "status": "requires_payment_method",
+                        "status_description": "",
+                        "success_url": "https://mystore.com/success_page",
+                        "transaction_data": [],
+                        "transaction_description": "test",
+                        "transaction_documents": [],
+                        "webhook_url": "https://mystore.com/internal/webhook"
+                      }
+                    }
                   }
                 },
                 "schema": {
