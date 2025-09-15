@@ -1,7 +1,7 @@
 ---
 title: Setting Up Tazapay Account
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
