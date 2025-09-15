@@ -13,3 +13,4 @@ metadata:
 next:
   description: ''
 ---
+You can update a payin only before it is confirmed.
