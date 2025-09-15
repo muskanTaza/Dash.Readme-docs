@@ -43,7 +43,7 @@ From Settings > Security > MFA, you can:
 * Enable at least two MFA methods to prevent lockout.
 * Store recovery codes securely and offline.
 * Prefer Passkeys for best balance of security and convenience.
-* Use role-based access: add teammates via Settings > Manage team > Invite Teammate so each user has independent MFA.
+* Use [role-based access](https://docs.tazapay.com/update/docs/managing-your-team): add teammates via Settings > Manage team > Invite Teammate so each user has independent MFA.
 
 # Support
 
