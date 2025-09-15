@@ -4,7 +4,7 @@ excerpt: >-
   Managing team access helps maintain secure collaboration by giving each role
   the right level of permissions.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
