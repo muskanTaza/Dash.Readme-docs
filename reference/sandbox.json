@@ -625,7 +625,19 @@
             }
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "x-readme": {
+          "code-samples": [
+            {
+              "code": "{\n\"invoice_currency\": \"SGD\",\n  \"amount\": 10000,\n  \"transaction_description\": \"1 X Goods\",\n  \"webhook_url\": \"https://webhook.site/ref8y92937922\",\n  \"confirm\":true,\n  \"customer_details\": {\n    \"name\": \"Andrea Lark\",\n    \"email\": \"andrea.lark@me.com\",\n    \"country\": \"SG\",\n    \"phone\": {\n        \"calling_code\": \"65\",\n        \"number\": \"87654321\"\n    }\n  },\n  \"billing_details\": {\n    \"address\": {\n        \"city\": \"Singapore\",\n        \"country\": \"SG\",\n        \"line1\": \"1st Street\",\n        \"line2\": \"2nd Avenue\",\n        \"postal_code\": \"43004\",\n        \"state\": \"Singapore\"\n    },\n    \"label\": \"Home\",\n    \"name\": \"Andrea Lark\",\n    \"phone\": {\n        \"calling_code\": \"65\",\n        \"number\": \"87654321\"\n    }\n  },\n  \"statement_descriptor\":\"yahu_traders\",\n  \"shipping_details\": {\n            \"address\": {\n                \"city\": \"Singapore\",\n                \"country\": \"SG\",\n                \"line1\": \"1st Street\",\n                \"line2\": \"2nd Avenue\",\n                \"postal_code\": \"43004\",\n                \"state\": \"Singapore\"\n            },\n            \"label\": \"Home\",\n            \"name\": \"Andrea Lark\",\n            \"phone\": {\n                \"calling_code\": \"65\",\n                \"number\": \"87654321\"\n            }\n  },\n  \"cancel_url\" : \"https://mystore.com/try_again\",\n  \"success_url\": \"https://mystore.com/success_page\",\n  \"payment_method_details\": {\n    \"type\": \"paynow_sgd\"\n  }\n }",
+              "language": "shell",
+              "name": ""
+            }
+          ],
+          "samples-languages": [
+            "shell"
+          ]
+        }
       }
     },
     "/v3/payin/{id}/confirm": {
