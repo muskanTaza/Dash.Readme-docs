@@ -7,7 +7,7 @@ excerpt: >-
   transfers, or e-wallets, depending on the supported payment options in the
   region.
 deprecated: false
-hidden: true
+hidden: false
 icon: far fa-envelope-open-dollar
 metadata:
   title: ''
