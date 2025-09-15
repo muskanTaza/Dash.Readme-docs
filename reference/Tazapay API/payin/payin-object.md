@@ -190,5 +190,5 @@ next:
 &#x20;     "address": "123 Street",
 &#x20;     "city": "Singapore"
 &#x20;   }
-&#x20; }
-\</div> \<!-- Right Column: Table --> \<div style="flex: 1; min-width: 300px;"> \<table> \<thead> \<tr> \<th>Field\</th> \<th>Type\</th> \<th>Description\</th> \</tr> \</thead> \<tbody> \<tr> \<td>amount\</td> \<td>number\</td> \<td>Total amount of the transaction\</td> \</tr> \<tr> \<td>amount\_paid\</td> \<td>number\</td> \<td>Amount already paid\</td> \</tr> \<tr> \<td>billing\_details\</td> \<td>object\</td> \<td>Billing info for the transaction\</td> \</tr> \</tbody> \</table> \</div> \</div> \`\`\`
+&#x20; }\`\`\`
+\</div> \<!-- Right Column: Table --> \<div style="flex: 1; min-width: 300px;"> \<table> \<thead> \<tr> \<th>Field\</th> \<th>Type\</th> \<th>Description\</th> \</tr> \</thead> \<tbody> \<tr> \<td>amount\</td> \<td>number\</td> \<td>Total amount of the transaction\</td> \</tr> \<tr> \<td>amount\_paid\</td> \<td>number\</td> \<td>Amount already paid\</td> \</tr> \<tr> \<td>billing\_details\</td> \<td>object\</td> \<td>Billing info for the transaction\</td> \</tr> \</tbody> \</table> \</div> \</div>
