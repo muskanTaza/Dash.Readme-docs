@@ -13,4 +13,6 @@ metadata:
 next:
   description: ''
 ---
-You can update a payin only before it is confirmed.
+You can update a payin only when a payin is in requires_payment_method state.
+
+<br />
