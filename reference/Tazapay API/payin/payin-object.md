@@ -8,7 +8,7 @@ excerpt: >-
   region.
 deprecated: false
 hidden: true
-icon: far fa-wagon-covered
+icon: far fa-envelope-open-dollar
 metadata:
   title: ''
   description: ''
