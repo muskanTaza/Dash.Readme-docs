@@ -25,3 +25,26 @@ You can also configure MFA in Settings > Security > Multi-Factor Authentication.
 * **SMS Code** - Receive a 6-digit code via text. Ensure your phone number is up to date.
 * **Authenticator App (TOTP)** - Works offline with apps like Google Authenticator, 1Password, or Authy. Generates a new 6-digit code every 30s.
 * **Recovery Codes** - One-time use backup codes provided during setup. Store offline in a secure location.
+
+# Managing MFA
+
+From Settings > Security > MFA, you can:
+
+* Add/remove passkeys
+* Update your SMS number
+* Replace your authenticator app
+* Change your default method
+* View or regenerate recovery codes
+
+***
+
+# Best Practices
+
+* Enable at least two MFA methods to prevent lockout.
+* Store recovery codes securely and offline.
+* Prefer Passkeys for best balance of security and convenience.
+* Use role-based access: add teammates via Settings > Manage team > Invite Teammate so each user has independent MFA.
+
+# Support
+
+If you lose access to all MFA methods and recovery codes, contact [support@tazapay.com](mailto:support@tazapay.com). Identity verification will be required.
