@@ -174,7 +174,7 @@ next:
 
 <Columns layout="auto">
   <Column>
-    <table>...</table>
+    <table> <thead> <tr> <th>Column A</th> <th>Column B</th> </tr> </thead> <tbody> <tr> <td>Row 1</td> <td>Data 1</td> </tr> <tr> <td>Row 2</td> <td>Data 2</td> </tr> <tr> <td>Row 3</td> <td>Data 3</td> </tr> </tbody> </table>
   </Column>
 
   <Column>
