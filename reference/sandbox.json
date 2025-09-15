@@ -36,19 +36,19 @@
                 "required": [
                   "invoice_currency",
                   "amount",
-                  "success_url",
-                  "cancel_url",
                   "transaction_description"
                 ],
                 "properties": {
                   "invoice_currency": {
                     "type": "string",
-                    "description": "Invoice currency for the checkout session (in uppercase, iso-4217 standard). By default, the invoice currency is the holding currency for the transaction."
+                    "description": "Invoice currency for the checkout session (in uppercase, iso-4217 standard). By default, the invoice currency is the holding currency for the transaction.",
+                    "default": "SGD"
                   },
                   "amount": {
                     "type": "integer",
                     "description": "Amount in cents. For example if you want to charge $10.12 pass 1012 as the value. For decimal handling for various currencies, refer to <a href=\"https://docs.tazapay.com/docs/decimal-currencies\" target=\"_blank\"> the guide here</a>",
-                    "format": "int32"
+                    "format": "int32",
+                    "default": "10000"
                   },
                   "customer_details": {
                     "type": "object",
@@ -61,15 +61,18 @@
                     "properties": {
                       "name": {
                         "type": "string",
-                        "description": "Name of the customer"
+                        "description": "Name of the customer",
+                        "default": "Andrea Lark"
                       },
                       "email": {
                         "type": "string",
-                        "description": "Email address of the entity"
+                        "description": "Email address of the entity",
+                        "default": "andrea.lark@me.com"
                       },
                       "country": {
                         "type": "string",
-                        "description": "ISO 3166 standard alpha-2 code. eg: SG, IN, US, etc."
+                        "description": "ISO 3166 standard alpha-2 code. eg: SG, IN, US, etc.",
+                        "default": "SG"
                       },
                       "phone": {
                         "type": "object",
@@ -100,7 +103,8 @@
                   },
                   "transaction_description": {
                     "type": "string",
-                    "description": "A short description to be displayed on the Tazapay hosted checkout screen"
+                    "description": "A short description to be displayed on the Tazapay hosted checkout screen",
+                    "default": "Test"
                   },
                   "shipping_details": {
                     "type": "object",
@@ -631,7 +635,7 @@
             {
               "code": "",
               "language": "shell",
-              "name": "json"
+              "name": "curl"
             }
           ],
           "samples-languages": [
