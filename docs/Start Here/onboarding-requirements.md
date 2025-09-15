@@ -1,7 +1,7 @@
 ---
 title: Onboarding Requirements
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
