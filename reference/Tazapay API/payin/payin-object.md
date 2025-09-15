@@ -171,3 +171,17 @@ next:
 | ------------ | ------ | ----------------------------------------------------------------- |
 | calling_code | string | The international calling code for the phone number.              |
 | number       | string | The phone number associated with the billing or shipping address. |
+
+<Columns layout="auto">
+  <Column>
+    `feucjn`
+  </Column>
+
+  <Column>
+    <table>...</table>
+  </Column>
+
+  <Column>
+    > Ut enim ad minim veniam, quis nostrud ullamco
+  </Column>
+</Columns>
