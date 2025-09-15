@@ -18,7 +18,7 @@ next:
 ---
 <br />
 
-```
+```json
 {
         "amount": 100,
         "amount_paid": 0,
@@ -176,19 +176,3 @@ next:
 | number       | string | The phone number associated with the billing or shipping address. |
 
 <br />
-
-\<div style="display: flex; gap: 20px;">
-
-&#x20; \<!-- Left Column: Code Block -->
-&#x20; \<div style="flex: 1; min-width: 300px;">
-
-&#x20; \`\`\`json
-&#x20; \{
-&#x20;   "amount": 100,
-&#x20;   "amount\_paid": 50,
-&#x20;   "billing\_details": \{
-&#x20;     "address": "123 Street",
-&#x20;     "city": "Singapore"
-&#x20;   }
-&#x20; }\`\`\`
-\</div> \<!-- Right Column: Table --> \<div style="flex: 1; min-width: 300px;"> \<table> \<thead> \<tr> \<th>Field\</th> \<th>Type\</th> \<th>Description\</th> \</tr> \</thead> \<tbody> \<tr> \<td>amount\</td> \<td>number\</td> \<td>Total amount of the transaction\</td> \</tr> \<tr> \<td>amount\_paid\</td> \<td>number\</td> \<td>Amount already paid\</td> \</tr> \<tr> \<td>billing\_details\</td> \<td>object\</td> \<td>Billing info for the transaction\</td> \</tr> \</tbody> \</table> \</div> \</div>
