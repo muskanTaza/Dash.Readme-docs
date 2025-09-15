@@ -1214,11 +1214,6 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": [
-                  "success_url",
-                  "cancel_url",
-                  "payment_method_details"
-                ],
                 "properties": {
                   "customer_details": {
                     "type": "object",
@@ -1718,7 +1713,19 @@
             }
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "x-readme": {
+          "code-samples": [
+            {
+              "code": "{\n    \"metadata\": {\n        \"product_reference\": \"REF_12353\"\n    }\n}",
+              "language": "shell",
+              "name": ""
+            }
+          ],
+          "samples-languages": [
+            "shell"
+          ]
+        }
       },
       "get": {
         "summary": "Fetching a payin",
