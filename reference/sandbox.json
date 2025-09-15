@@ -42,13 +42,13 @@
                   "invoice_currency": {
                     "type": "string",
                     "description": "Invoice currency for the checkout session (in uppercase, iso-4217 standard). By default, the invoice currency is the holding currency for the transaction.",
-                    "default": "SGD"
+                    "default": ""
                   },
                   "amount": {
                     "type": "integer",
                     "description": "Amount in cents. For example if you want to charge $10.12 pass 1012 as the value. For decimal handling for various currencies, refer to <a href=\"https://docs.tazapay.com/docs/decimal-currencies\" target=\"_blank\"> the guide here</a>",
                     "format": "int32",
-                    "default": "10000"
+                    "default": ""
                   },
                   "customer_details": {
                     "type": "object",
@@ -62,17 +62,17 @@
                       "name": {
                         "type": "string",
                         "description": "Name of the customer",
-                        "default": "Andrea Lark"
+                        "default": ""
                       },
                       "email": {
                         "type": "string",
                         "description": "Email address of the entity",
-                        "default": "andrea.lark@me.com"
+                        "default": ""
                       },
                       "country": {
                         "type": "string",
                         "description": "ISO 3166 standard alpha-2 code. eg: SG, IN, US, etc.",
-                        "default": "SG"
+                        "default": ""
                       },
                       "phone": {
                         "type": "object",
@@ -104,7 +104,7 @@
                   "transaction_description": {
                     "type": "string",
                     "description": "A short description to be displayed on the Tazapay hosted checkout screen",
-                    "default": "Test"
+                    "default": ""
                   },
                   "shipping_details": {
                     "type": "object",
