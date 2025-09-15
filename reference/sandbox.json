@@ -635,7 +635,7 @@
             {
               "code": "",
               "language": "shell",
-              "name": "curl"
+              "name": "shell"
             }
           ],
           "samples-languages": [
