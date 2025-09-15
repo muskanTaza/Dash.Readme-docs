@@ -180,90 +180,88 @@ next:
 \<div>
 \<h3>Amount\</h3>
 \<p>Amount of payou\</p>
-&#x20; \</div>\</Column>
+  \</div>\</Column>
 \<Column>
-\`\`\`\{
-&#x20;       "amount": 100,
-&#x20;       "amount\_paid": 0,
-&#x20;       "billing\_details": \{
-&#x20;           "address": \{
-&#x20;               "city": "Singapore",
-&#x20;               "country": "SG",
-&#x20;               "line1": "1st Street",
-&#x20;               "line2": "2nd Avenue",
-&#x20;               "postal\_code": "43004",
-&#x20;               "state": "Singapore"
-&#x20;           },
-&#x20;           "label": "Home",
-&#x20;           "name": "Andrea Lark",
-&#x20;           "phone": \{
-&#x20;               "calling\_code": "65",
-&#x20;               "number": "87654321"
-&#x20;           }
-&#x20;       },
-&#x20;       "cancel\_url": "https\://mystore.com/try\_again",
-&#x20;       "cancelled\_at": null,
-&#x20;       "client\_token": "JsU19R\_Li9cwVksJGUfAajZ3r2A9ArU7Qk3j5r0cpVg=",
-&#x20;       "confirm": false,
-&#x20;       "created\_at": "2024-10-07T07:10:21.894488Z",
-&#x20;       "customer": "cus\_crtqrhth90j0121gpt50",
-&#x20;       "customer\_details": \{
-&#x20;           "country": "SG",
-&#x20;           "email": "andrea\@example.com",
-&#x20;           "name": "Andrea Lark",
-&#x20;           "phone": \{
-&#x20;               "calling\_code": "65",
-&#x20;               "number": "87654321"
-&#x20;           }
-&#x20;       },
-&#x20;       "holding\_currency": "INR",
-&#x20;       "id": "pay\_cs1oina7a5ng2a3ng12g",
-&#x20;       "invoice\_currency": "INR",
-&#x20;       "items": \[],
-&#x20;       "latest\_payment\_attempt": "",
-&#x20;       "latest\_payment\_attempt\_data": null,
-&#x20;       "metadata": \{
-&#x20;           "key1": "value1",
-&#x20;           "key2": "value2",
-&#x20;           "key3": "value3"
-&#x20;       },
-&#x20;       "object": "payin",
-&#x20;       "paid\_in\_excess": false,
-&#x20;       "partially\_paid": false,
-&#x20;       "payment\_attempts": \[],
-&#x20;       "payment\_method\_details": \{
-&#x20;           "paynow\_sgd": \{},
-&#x20;           "type": "paynow\_sgd"
-&#x20;       },
-&#x20;       "reference\_id": "123",
-&#x20;       "shipping\_details": \{
-&#x20;           "address": \{
-&#x20;               "city": "Singapore",
-&#x20;               "country": "SG",
-&#x20;               "line1": "1st Street",
-&#x20;               "line2": "2nd Avenue",
-&#x20;               "postal\_code": "43004",
-&#x20;               "state": "Singapore"
-&#x20;           },
-&#x20;           "label": "Home",
-&#x20;           "name": "Andrea Lark",
-&#x20;           "phone": \{
-&#x20;               "calling\_code": "65",
-&#x20;               "number": "87654321"
-&#x20;           }
-&#x20;       },
-&#x20;       "statement\_descriptor": "tzp\*string",
-&#x20;       "status": "requires\_payment\_method",
-&#x20;       "status\_description": "",
-&#x20;       "success\_url": "https\://mystore.com/success\_page",
-&#x20;       "transaction\_data": \[],
-&#x20;       "transaction\_description": "test",
-&#x20;       "transaction\_documents": \[],
-&#x20;       "webhook\_url": "https\://mystore.com/internal/webhook"
-&#x20;   }\`\`\`
-&#x20; \</Column>
+```{
+        "amount": 100,
+        "amount_paid": 0,
+        "billing_details": \{
+            "address": \{
+                "city": "Singapore",
+                "country": "SG",
+                "line1": "1st Street",
+                "line2": "2nd Avenue",
+                "postal_code": "43004",
+                "state": "Singapore"
+            },
+            "label": "Home",
+            "name": "Andrea Lark",
+            "phone": \{
+                "calling_code": "65",
+                "number": "87654321"
+            }
+        },
+        "cancel_url": "[https://mystore.com/try\_again](https://mystore.com/try_again)",
+        "cancelled_at": null,
+        "client_token": "JsU19R_Li9cwVksJGUfAajZ3r2A9ArU7Qk3j5r0cpVg=",
+        "confirm": false,
+        "created_at": "2024-10-07T07:10:21.894488Z",
+        "customer": "cus_crtqrhth90j0121gpt50",
+        "customer_details": \{
+            "country": "SG",
+            "email": "[andrea@example.com](mailto:andrea@example.com)",
+            "name": "Andrea Lark",
+            "phone": \{
+                "calling_code": "65",
+                "number": "87654321"
+            }
+        },
+        "holding_currency": "INR",
+        "id": "pay_cs1oina7a5ng2a3ng12g",
+        "invoice_currency": "INR",
+        "items": [],
+        "latest_payment_attempt": "",
+        "latest_payment_attempt_data": null,
+        "metadata": \{
+            "key1": "value1",
+            "key2": "value2",
+            "key3": "value3"
+        },
+        "object": "payin",
+        "paid_in_excess": false,
+        "partially_paid": false,
+        "payment_attempts": [],
+        "payment_method_details": \{
+            "paynow_sgd": \{},
+            "type": "paynow_sgd"
+        },
+        "reference_id": "123",
+        "shipping_details": \{
+            "address": \{
+                "city": "Singapore",
+                "country": "SG",
+                "line1": "1st Street",
+                "line2": "2nd Avenue",
+                "postal_code": "43004",
+                "state": "Singapore"
+            },
+            "label": "Home",
+            "name": "Andrea Lark",
+            "phone": \{
+                "calling_code": "65",
+                "number": "87654321"
+            }
+        },
+        "statement_descriptor": "tzp*string",
+        "status": "requires_payment_method",
+        "status_description": "",
+        "success_url": "[https://mystore.com/success\_page](https://mystore.com/success_page)",
+        "transaction_data": [],
+        "transaction_description": "test",
+        "transaction_documents": [],
+        "webhook_url": "[https://mystore.com/internal/webhook](https://mystore.com/internal/webhook)"
+    }```
+  \</Column>
 \</Columns>
-
-
 
 <br />
