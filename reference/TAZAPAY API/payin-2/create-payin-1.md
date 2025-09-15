@@ -10,20 +10,16 @@ metadata:
 next:
   description: ''
 ---
-<Cards columns={4}>
-  <Card title="First Card" href="https://readme.com" icon="fa-home" target="_blank">
-    Neque porro quisquam est qui dolorem ipsum quia
-  </Card>
+<Tabs>
+  <Tab title="First Tab">
+    Welcome to the content that you can only see inside the first Tab.
+  </Tab>
 
-  <Card title="Second Card" icon="fa-user">
-    *Lorem ipsum dolor sit amet, consectetur adipiscing elit*
-  </Card>
+  <Tab title="Second Tab">
+    Here's content that's only inside the second Tab.
+  </Tab>
 
-  <Card title="Third Card" icon="fa-star">
-    > Ut enim ad minim veniam, quis nostrud ullamco
-  </Card>
-
-  <Card title="Fourth Card" icon="fa-question">
-    **Excepteur sint occaecat cupidatat non proident**
-  </Card>
-</Cards>
+  <Tab title="Third Tab">
+    Here's content that's only inside the third Tab.
+  </Tab>
+</Tabs>
