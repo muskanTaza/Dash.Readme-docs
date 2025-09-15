@@ -8,6 +8,11 @@ deprecated: false
 hidden: true
 metadata:
   robots: index
+next:
+  pages:
+    - slug: authentication
+      title: Authentication
+      type: endpoint
 ---
 To get started with Tazapay, you will need to create an account on the <Anchor label="sandbox (test) environment" target="_blank" href="https://dashboard-sandbox.tazapay.com/signup">sandbox (test) environment</Anchor>.
 
