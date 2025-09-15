@@ -633,7 +633,7 @@
         "x-readme": {
           "code-samples": [
             {
-              "code": "",
+              "code": "curl --request POST \\\n     --url https://service-sandbox.tazapay.com/v3/payin/ \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Basic YWtfdGVzdF9XTlJIRUw1MEg5OENDVVUzVFlHTjpza190ZXN0X2xHUm85WW9pUHl1N2pJUkVJcThwbHdrdzA5amVpVmZYRlE1anAzamRYQktiemg5bmNTV1hkbVRDU055WUZmenZ4S212VnFEd3ZPcW5Walo4b3RtT2VhaUxvdkJTVVFEQ21ra0lidEZSeTVOVUlqeDdDTjRKYUZBVnpGZ09HSlV4' \\\n     --header 'content-type: application/json'",
               "language": "shell",
               "name": "shell"
             }
