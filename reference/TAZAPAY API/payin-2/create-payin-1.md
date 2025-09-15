@@ -10,16 +10,16 @@ metadata:
 next:
   description: ''
 ---
-<Tabs>
-  <Tab title="First Tab">
-    Welcome to the content that you can only see inside the first Tab.
-  </Tab>
+<Columns layout="auto">
+  <Column>
+    Neque porro quisquam est qui dolorem ipsum quia
+  </Column>
 
-  <Tab title="Second Tab">
-    Here's content that's only inside the second Tab.
-  </Tab>
+  <Column>
+    *Lorem ipsum dolor sit amet, consectetur adipiscing elit*
+  </Column>
 
-  <Tab title="Third Tab">
-    Here's content that's only inside the third Tab.
-  </Tab>
-</Tabs>
+  <Column>
+    > Ut enim ad minim veniam, quis nostrud ullamco
+  </Column>
+</Columns>
