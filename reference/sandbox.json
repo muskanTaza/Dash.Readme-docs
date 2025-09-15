@@ -1715,13 +1715,6 @@
         },
         "deprecated": false,
         "x-readme": {
-          "code-samples": [
-            {
-              "code": "{\n    \"metadata\": {\n        \"product_reference\": \"REF_12353\"\n    }\n}",
-              "language": "shell",
-              "name": ""
-            }
-          ],
           "samples-languages": [
             "shell"
           ]
