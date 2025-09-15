@@ -8,11 +8,14 @@ hidden: true
 metadata:
   robots: index
 ---
-To manage your team, go to Settings in your Tazapay Dashboard and navigate to `Team Management -> Manage Team`. 
+To manage your team, go to Settings in your Tazapay Dashboard and navigate to `Team Management -> Manage Team`.
 
 # Roles and Permissions
 
-Tazapay uses role-based Access 
+Tazapay uses Role-Based Access Control (RBAC):
+
+* **Owner**: Full access, including settings, transactions, API keys, and team management.
+* **Manager**: Permissions can be adjusted.
 
 <br />
 
