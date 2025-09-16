@@ -5,16 +5,24 @@ hidden: true
 metadata:
   robots: index
 ---
-<HTMLBlock>{`
-<columns>
+<Columns layout="auto">
   <column>
     <h2>Amount</h2>
   </column>
+
   <column>
     <code>fcdksmc</code>
+  </column>
 
-</column>
-</columns>
-`}</HTMLBlock>
+  <Column>
+    Neque porro quisquam est qui dolorem ipsum quia
+  </Column>
 
-<br />
+  <Column>
+    *Lorem ipsum dolor sit amet, consectetur adipiscing elit*
+  </Column>
+
+  <Column>
+    > Ut enim ad minim veniam, quis nostrud ullamco
+  </Column>
+</Columns>
