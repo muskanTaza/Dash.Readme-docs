@@ -26,4 +26,4 @@ To begin using Tazapay on production, all accounts must complete the onboarding 
    3. Proof of Address (Bank Statement, Utility Bills, etc.)
    4. If the authorised representative is not a Director, we need Board Resolution stating that the representative is authorised to open an account with Tazapay.
 
-The above is a general list of requirements. Depending on your industry, business model, or our risk assessment, we may ask for additional documents to complete the process. After submitting your onboarding requirements, you will hear from within 4-7 business days.
+The above is a general list of requirements. Depending on your industry, business model, or our risk assessment, we may ask for additional documents to complete the process. After submitting your onboarding requirements, you will hear from us within 4-7 business days.
