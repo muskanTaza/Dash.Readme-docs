@@ -6,7 +6,8 @@ excerpt: >-
   that you can quickly collect cross-border payments on mobile and desktop
   devices.
 deprecated: false
-hidden: true
+hidden: false
+icon: far fa-sack-dollar
 metadata:
   title: ''
   description: ''
