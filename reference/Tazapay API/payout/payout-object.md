@@ -11,7 +11,7 @@ metadata:
     <h2>Amount</h2>
   </column>
   <column>
-    \`\`\`json{"amount":100}\`\`\`
+    \`\`\`fcdksmc\`\`\`
 
 </column>
 
