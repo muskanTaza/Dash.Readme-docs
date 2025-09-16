@@ -14,7 +14,7 @@ metadata:
 next:
   description: ''
 ---
-## Object
+## Object Structure
 
 ```json
 {
@@ -123,7 +123,7 @@ next:
 
 <br />
 
-## Parameters
+## Object Parameters
 
 ### Checkout
 
