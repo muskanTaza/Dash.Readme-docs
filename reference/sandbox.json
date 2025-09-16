@@ -13485,7 +13485,7 @@
         ]
       }
     },
-    "/v3/metadata/collect?invoice_currency=SGD&customer_country=SG&amount=10000": {
+    "/v3/metadata/collect": {
       "get": {
         "summary": "Collection Methods",
         "description": "This allows you to check the collection methods available for a given buyer/seller country. This also shows the supported collection methods for the invoice currency and country corridor, the banks and type of accounts that will be available.",
