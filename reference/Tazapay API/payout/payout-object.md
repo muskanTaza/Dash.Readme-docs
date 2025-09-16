@@ -11,11 +11,9 @@ metadata:
     <h2>Amount</h2>
   </column>
   <column>
-    \`\`\`fcdksmc\`\`\`
+    <code>fcdksmc</code>
 
 </column>
-
-
 </columns>
 `}</HTMLBlock>
 
