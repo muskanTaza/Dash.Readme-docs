@@ -2,8 +2,10 @@
 title: Checkout Object
 excerpt: >-
   Checkout API object enables businesses to create and manage seamless online
-  payment experiences. It simplifies the payment process, making it easy for
-  customers to make payments on different platforms and apps.
+  payment experiences. It lets you integrate a Tazapay-hosted payment page so
+  that you can quickly collect cross-border payments on mobile and desktop
+  devices. It simplifies the payment process, making it easy for customers to
+  make payments on different platforms and apps.
 deprecated: false
 hidden: true
 metadata:
