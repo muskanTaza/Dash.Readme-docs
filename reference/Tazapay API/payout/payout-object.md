@@ -5,9 +5,18 @@ hidden: true
 metadata:
   robots: index
 ---
-<Accordion title="Address" icon="fa-info-circle">
-  City
-  Country
-</Accordion>
+<HTMLBlock>{`
+<columns>
+  <column>
+    <h2>Amount</h2>
+  </column>
+  <column>
+    \`\`\`json{"amount":100}\`\`\`
+
+</column>
+
+
+</columns>
+`}</HTMLBlock>
 
 <br />
