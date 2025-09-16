@@ -19,106 +19,106 @@ next:
 
 ```json
 {
-		"id": "chk_cirsp2sl4ar024j0akj0",
-		"object": "checkout",
-		"invoice_currency": "USD",
-		"amount": 100000,
-		"amount_paid": 100000,
-		"customer_details": {
-			"country": "SG",
-			"email": "andrea@example.com",
-			"name": "Andrea Lark",
-			"phone": {
-				"calling_code": "65",
-				"number": "87654321"
-			}
-		},
-		"customer": "cus_afobaifawnf",
-		"billing_details": {
-			"address": {
-				"city": "Singapore",
-				"country": "SG",
-				"line1": "1st Street",
-				"line2": "2nd Avenue",
-				"postal_code": "43004",
-				"state": "Singapore"
-			},
-			"label": "Home",
-			"name": "Andrea Lark",
-			"phone": {
-				"calling_code": "65",
-				"number": "87654321"
-			}
+  "id": "chk_cirsp2sl4ar024j0akj0",
+  "object": "checkout",
+  "invoice_currency": "USD",
+  "amount": 100000,
+  "amount_paid": 100000,
+  "customer_details": {
+      "country": "SG",
+      "email": "andrea@example.com",
+      "name": "Andrea Lark",
+      "phone": {
+        "calling_code": "65",
+        "number": "87654321"
+      }
     },
-	  "customer_fee_percentage" : 0,
-		"shipping_details": {
-			"address": {
-				"city": "Singapore",
-				"country": "SG",
-				"line1": "1st Street",
-				"line2": "2nd Avenue",
-				"postal_code": "43004",
-				"state": "Singapore"
-			},
-			"label": "Home",
-			"name": "Andrea Lark",
-			"phone": {
-				"calling_code": "65",
-				"number": "87654321"
-			}
-		},
-		"success_url": "https://mystore.com/success_page",
-		"cancel_url": "https://mystore.com/try_again",
-		"webhook_url": "https://mystore.com/internal/webhook",
-		"payment_methods": [
-			"paynow_sgd", "card"
-		],
-		"transaction_description": "1 x trousers",
-		"expires_at": "2023-07-21T14:01:04.576356Z",
-		"created_at": "2023-07-19T11:44:11.722049185Z",
-		"url": "https://checkout.tazapay.com/transaction=ajfuibfainfaonfa",
-		"payment_status": "paid",
-		"payment_status_description": null,
-		"status": "expired",
-		"payin": "chk_cirsp2sl4ar024j0akj0",
-		"payment_attempts": [{
-			"id": "pat_ahbfiuahfiuaiofnioain",
-			"object": "payment_attempt",
-			"created_at": "2023-07-21T14:00:02.576356Z",
-			"amount": 148000,
-			"charge_currency": "SGD",
-			"payin": "chk_cirsp2sl4ar024j0akj0",
-			"payment_method_details": {
-				"type": "paynow_sgd",
-				"paynow_sgd": {}
-			},
-			"refunded": false,
-			"status": "succeeded",
-			"status_description": null,
-			"final_currency": "USD",
-			"fx_transaction": {
-				"initial": {
-					"currency": "SGD",
-					"amount": 148000
-				},
-				"final": {
-					"currency": "USD",
-					"amount": 100000
-				},
-				"exchange_rate": 1.48
-			},
-			"metadata": null
-		}],
-		"latest_payment_attempt": "pat_ahbfiuahfiuaiofnioain",
-		"partially_paid": false,
-		"paid_in_excess": false,
-		"transaction_documents": [],
-		"reference_id": "mystore_order_00001",
-		"metadata": {
-			"key1": "value1",
-			"key2": "value2",
-			"key3": "value3"
-		}
+  "customer": "cus_afobaifawnf",
+  "billing_details": {
+      "address": {
+        "city": "Singapore",
+        "country": "SG",
+        "line1": "1st Street",
+        "line2": "2nd Avenue",
+        "postal_code": "43004",
+        "state": "Singapore"
+      },
+      "label": "Home",
+      "name": "Andrea Lark",
+      "phone": {
+        "calling_code": "65",
+        "number": "87654321"
+      }
+    },
+  "customer_fee_percentage" : 0,
+  "shipping_details": {
+      "address": {
+        "city": "Singapore",
+        "country": "SG",
+        "line1": "1st Street",
+        "line2": "2nd Avenue",
+        "postal_code": "43004",
+        "state": "Singapore"
+      },
+      "label": "Home",
+      "name": "Andrea Lark",
+      "phone": {
+        "calling_code": "65",
+        "number": "87654321"
+      }
+    },
+  "success_url": "https://mystore.com/success_page",
+  "cancel_url": "https://mystore.com/try_again",
+  "webhook_url": "https://mystore.com/internal/webhook",
+  "payment_methods": [
+      "paynow_sgd", "card"
+    ],
+  "transaction_description": "1 x trousers",
+  "expires_at": "2023-07-21T14:01:04.576356Z",
+  "created_at": "2023-07-19T11:44:11.722049185Z",
+  "url": "https://checkout.tazapay.com/transaction=ajfuibfainfaonfa",
+  "payment_status": "paid",
+  "payment_status_description": null,
+  "status": "expired",
+  "payin": "chk_cirsp2sl4ar024j0akj0",
+  "payment_attempts": [{
+      "id": "pat_ahbfiuahfiuaiofnioain",
+      "object": "payment_attempt",
+      "created_at": "2023-07-21T14:00:02.576356Z",
+      "amount": 148000,
+      "charge_currency": "SGD",
+      "payin": "chk_cirsp2sl4ar024j0akj0",
+      "payment_method_details": {
+        "type": "paynow_sgd",
+        "paynow_sgd": {}
+      },
+      "refunded": false,
+      "status": "succeeded",
+      "status_description": null,
+      "final_currency": "USD",
+      "fx_transaction": {
+        "initial": {
+          "currency": "SGD",
+          "amount": 148000
+        },
+        "final": {
+          "currency": "USD",
+          "amount": 100000
+        },
+        "exchange_rate": 1.48
+      },
+      "metadata": null
+    }],
+  "latest_payment_attempt": "pat_ahbfiuahfiuaiofnioain",
+  "partially_paid": false,
+  "paid_in_excess": false,
+  "transaction_documents": [],
+  "reference_id": "mystore_order_00001",
+  "metadata": {
+      "key1": "value1",
+      "key2": "value2",
+      "key3": "value3"
+    }
 	}
 
 ```
