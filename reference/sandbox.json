@@ -10633,17 +10633,6 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "Checkout": {
-                    "value": "",
-                    "summary": "Checkout"
-                  },
-                  "checkout": {
-                    "summary": "checkout",
-                    "value": ""
-                  },
-                  "Payout": {
-                    "value": ""
-                  },
                   "escrow": {
                     "summary": "escrow",
                     "value": {
@@ -10875,7 +10864,7 @@
                       }
                     }
                   },
-                  "checkout 1": {
+                  "checkout": {
                     "value": {
                       "status": "success",
                       "message": "",
@@ -10915,43 +10904,11 @@
                         "source": "chk_d1jp7s0f3uhv3dumbo70",
                         "type": "checkout"
                       }
-                    }
+                    },
+                    "summary": "checkout"
                   },
-                  "Refund Rejected": {
-                    "summary": "Refund Rejected",
-                    "value": ""
-                  },
-                  "Payout Reversal": {
-                    "summary": "Payout Reversal",
-                    "value": ""
-                  },
-                  "Payout Reversal 1": {
-                    "summary": "Payout Reversal 1",
-                    "value": {
-                      "status": "success",
-                      "message": "",
-                      "data": {
-                        "amount": 1924,
-                        "created_at": "2025-08-26T04:36:55.305Z",
-                        "currency": "USD",
-                        "description": "pot_d1efk3ebq5rqlmbtv8ig",
-                        "fee_details": [],
-                        "fx_conversions": [],
-                        "id": "btr_d2mjjppqiuj7t9e7dla0",
-                        "metadata": {},
-                        "net": {
-                          "amount": 1924,
-                          "currency": "USD"
-                        },
-                        "object": "balance_transaction",
-                        "operation_type": "credit",
-                        "source": "btr_d1efk3ebq5rqlmbtv8m0",
-                        "type": "payout_reversal"
-                      }
-                    }
-                  },
-                  "Refund Reversal": {
-                    "summary": "Refund Reversal",
+                  "refund reversal": {
+                    "summary": "refund reversal",
                     "value": {
                       "status": "success",
                       "message": "",
@@ -10974,6 +10931,31 @@
                         "type": "refund_reversal"
                       }
                     }
+                  },
+                  "payout reversal": {
+                    "summary": "payout reversal",
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "amount": 1924,
+                        "created_at": "2025-08-26T04:36:55.305Z",
+                        "currency": "USD",
+                        "description": "pot_d1efk3ebq5rqlmbtv8ig",
+                        "fee_details": [],
+                        "fx_conversions": [],
+                        "id": "btr_d2mjjppqiuj7t9e7dla0",
+                        "metadata": {},
+                        "net": {
+                          "amount": 1924,
+                          "currency": "USD"
+                        },
+                        "object": "balance_transaction",
+                        "operation_type": "credit",
+                        "source": "btr_d1efk3ebq5rqlmbtv8m0",
+                        "type": "payout_reversal"
+                      }
+                    }
                   }
                 },
                 "schema": {
@@ -10987,12 +10969,6 @@
             "description": "400",
             "content": {
               "application/json": {
-                "examples": {
-                  "Payout": {
-                    "value": "",
-                    "summary": "Payout"
-                  }
-                },
                 "schema": {
                   "type": "object",
                   "properties": {}
