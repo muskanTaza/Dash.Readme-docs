@@ -4,7 +4,7 @@ excerpt: >-
   Onboarding ensures your business is verified and ready for secure money
   movement through Tazapay.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
