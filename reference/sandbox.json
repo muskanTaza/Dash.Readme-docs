@@ -1265,7 +1265,19 @@
             }
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "x-readme": {
+          "code-samples": [
+            {
+              "code": "{\"confirm\":true}",
+              "language": "shell",
+              "name": ""
+            }
+          ],
+          "samples-languages": [
+            "shell"
+          ]
+        }
       }
     },
     "/v3/payin/{id}": {
