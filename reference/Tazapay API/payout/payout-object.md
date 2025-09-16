@@ -5,16 +5,17 @@ hidden: true
 metadata:
   robots: index
 ---
+<br />
+
 \<Columns layout="auto">
-  \<column>
-    \<h2>Amount\</h2>
-  \</column>
-  \<column>
-    ```json
-
-   {
-      "asdxh" : "1243"
-     }```
-
-\</column>
+&#x20; \<column>
+&#x20;   \<h2>Amount\</h2>
+&#x20; \</column>
+&#x20; \`\`\`json
+&#x20; \{ "asd" : 122 }
+&#x20; \<column/>
 \</Columns>
+
+<br />
+
+<br />
