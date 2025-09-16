@@ -8863,150 +8863,6 @@
         "deprecated": false
       }
     },
-    "/v3/metadata/collect": {
-      "get": {
-        "summary": "Collection Methods",
-        "description": "This allows you to check the collection methods available for a given buyer/seller country. This also shows the supported collection methods for the invoice currency and country corridor, the banks and type of accounts that will be available.",
-        "operationId": "collection-methods-api",
-        "parameters": [
-          {
-            "name": "amount",
-            "in": "query",
-            "description": "Amount in cents. For example if you want to charge $10.12 pass 1012 as the value. For decimal handling for various currencies, refer to <a href=\"https://docs.tazapay.com/docs/decimal-currencies\" target=\"_blank\"> the guide here</a>",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "invoice_currency",
-            "in": "query",
-            "description": "Invoice currency, ISO 4217 standard specifies three-letter (\"Alpha-3\") codes. e.g. USD",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "customer_country",
-            "in": "query",
-            "description": "ISO 3166 standard alpha-2 code. eg: SG, IN, US",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "200",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "Result": {
-                    "value": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"country\": \"SG\",\n        \"invoice_currency\": \"USD\",\n        \"amount\": 67000,\n        \"payment_methods\": [\n            {\n                \"type\": \"paynow_sgd\",\n                \"display_name\": \"Paynow QR\",\n                \"family\": \"real_time_payment\",\n                \"group\": \"APM\",\n                \"currency\": \"SGD\",\n                \"exchange_rate\": 1.3,\n                \"amount\": 89110,\n                \"transaction_fee\": 1603,\n                \"banks\": [\"Bank1\", \"Bank2\"],\n                \"logo\": [\"downloadable_logo_url_1\", \"downloadable_logo_url_2\"],\n              \t\"notification_type\":\"synchronous\",\n                \"experience_type\": \"redirect\"\n            }\n        ]\n       \n    }\n}\n\n\n\n\n\n\n"
-                  }
-                },
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "status": {
-                      "type": "string",
-                      "example": "success"
-                    },
-                    "data": {
-                      "type": "object",
-                      "properties": {
-                        "country": {
-                          "type": "string",
-                          "example": "SG"
-                        },
-                        "invoice_currency": {
-                          "type": "string",
-                          "example": "USD"
-                        },
-                        "amount": {
-                          "type": "integer",
-                          "example": 67000,
-                          "default": 0
-                        },
-                        "payment_methods": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "properties": {
-                              "type": {
-                                "type": "string",
-                                "example": "paynow_sgd"
-                              },
-                              "display_name": {
-                                "type": "string",
-                                "example": "Paynow QR"
-                              },
-                              "family": {
-                                "type": "string",
-                                "example": "real_time_payment"
-                              },
-                              "group": {
-                                "type": "string",
-                                "example": "APM"
-                              },
-                              "currency": {
-                                "type": "string",
-                                "example": "SGD"
-                              },
-                              "exchange_rate": {
-                                "type": "number",
-                                "example": 1.3,
-                                "default": 0
-                              },
-                              "amount": {
-                                "type": "integer",
-                                "example": 89110,
-                                "default": 0
-                              },
-                              "transaction_fee": {
-                                "type": "integer",
-                                "example": 1603,
-                                "default": 0
-                              },
-                              "banks": {
-                                "type": "array",
-                                "items": {
-                                  "type": "string",
-                                  "example": "Bank1"
-                                }
-                              },
-                              "logo": {
-                                "type": "array",
-                                "items": {
-                                  "type": "string",
-                                  "example": "downloadable_logo_url_1"
-                                }
-                              },
-                              "notification_type": {
-                                "type": "string",
-                                "example": "synchronous"
-                              },
-                              "experience_type": {
-                                "type": "string",
-                                "example": "redirect"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": false
-      }
-    },
     "/v3/metadata/external_account_details": {
       "get": {
         "summary": "Fetch External Account Details",
@@ -13627,6 +13483,150 @@
             "description": "A cursor to use in pagination. ending_before is an object ID that defines your place in the list. For example, if you make a list request and receive 100 objects, starting with obj_bar, your subsequent call can include ending_before=obj_bar to fetch the previous page of the list."
           }
         ]
+      }
+    },
+    "/v3/metadata/collect?invoice_currency=SGD&customer_country=SG&amount=10000": {
+      "get": {
+        "summary": "Collection Methods",
+        "description": "This allows you to check the collection methods available for a given buyer/seller country. This also shows the supported collection methods for the invoice currency and country corridor, the banks and type of accounts that will be available.",
+        "operationId": "collection-methods-api",
+        "parameters": [
+          {
+            "name": "amount",
+            "in": "query",
+            "description": "Amount in cents. For example if you want to charge $10.12 pass 1012 as the value. For decimal handling for various currencies, refer to <a href=\"https://docs.tazapay.com/docs/decimal-currencies\" target=\"_blank\"> the guide here</a>",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "invoice_currency",
+            "in": "query",
+            "description": "Invoice currency, ISO 4217 standard specifies three-letter (\"Alpha-3\") codes. e.g. USD",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "customer_country",
+            "in": "query",
+            "description": "ISO 3166 standard alpha-2 code. eg: SG, IN, US",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"country\": \"SG\",\n        \"invoice_currency\": \"USD\",\n        \"amount\": 67000,\n        \"payment_methods\": [\n            {\n                \"type\": \"paynow_sgd\",\n                \"display_name\": \"Paynow QR\",\n                \"family\": \"real_time_payment\",\n                \"group\": \"APM\",\n                \"currency\": \"SGD\",\n                \"exchange_rate\": 1.3,\n                \"amount\": 89110,\n                \"transaction_fee\": 1603,\n                \"banks\": [\"Bank1\", \"Bank2\"],\n                \"logo\": [\"downloadable_logo_url_1\", \"downloadable_logo_url_2\"],\n              \t\"notification_type\":\"synchronous\",\n                \"experience_type\": \"redirect\"\n            }\n        ]\n       \n    }\n}\n\n\n\n\n\n\n"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "success"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "country": {
+                          "type": "string",
+                          "example": "SG"
+                        },
+                        "invoice_currency": {
+                          "type": "string",
+                          "example": "USD"
+                        },
+                        "amount": {
+                          "type": "integer",
+                          "example": 67000,
+                          "default": 0
+                        },
+                        "payment_methods": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string",
+                                "example": "paynow_sgd"
+                              },
+                              "display_name": {
+                                "type": "string",
+                                "example": "Paynow QR"
+                              },
+                              "family": {
+                                "type": "string",
+                                "example": "real_time_payment"
+                              },
+                              "group": {
+                                "type": "string",
+                                "example": "APM"
+                              },
+                              "currency": {
+                                "type": "string",
+                                "example": "SGD"
+                              },
+                              "exchange_rate": {
+                                "type": "number",
+                                "example": 1.3,
+                                "default": 0
+                              },
+                              "amount": {
+                                "type": "integer",
+                                "example": 89110,
+                                "default": 0
+                              },
+                              "transaction_fee": {
+                                "type": "integer",
+                                "example": 1603,
+                                "default": 0
+                              },
+                              "banks": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "example": "Bank1"
+                                }
+                              },
+                              "logo": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "example": "downloadable_logo_url_1"
+                                }
+                              },
+                              "notification_type": {
+                                "type": "string",
+                                "example": "synchronous"
+                              },
+                              "experience_type": {
+                                "type": "string",
+                                "example": "redirect"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
       }
     }
   },
