@@ -1267,13 +1267,6 @@
         },
         "deprecated": false,
         "x-readme": {
-          "code-samples": [
-            {
-              "code": "curl --request POST \\\n     --url https://service-sandbox.tazapay.com/v3/payin/pay_d34h443k1kl59dv2u5vg/confirm \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Basic YWtfdGVzdF9XTlJIRUw1MEg5OENDVVUzVFlHTjpza190ZXN0X2xHUm85WW9pUHl1N2pJUkVJcThwbHdrdzA5amVpVmZYRlE1anAzamRYQktiemg5bmNTV1hkbVRDU055WUZmenZ4S212VnFEd3ZPcW5Walo4b3RtT2VhaUxvdkJTVVFEQ21ra0lidEZSeTVOVUlqeDdDTjRKYUZBVnpGZ09HSlV4' \\\n     --header 'content-type: application/json' \\\n     --data '\n{\n  \"customer_details\": {\n    \"name\": \"muskan\",\n    \"email\": \"string\",\n    \"country\": \"string\",\n    \"phone\": {\n      \"calling_code\": \"string\",\n      \"number\": \"string\"\n    }\n  },\n  \"customer\": \"string\",\n  \"success_url\": \"string\",\n  \"cancel_url\": \"string\",\n  \"shipping_details\": {\n    \"name\": \"string\",\n    \"address\": {\n      \"line1\": \"string\",\n      \"line2\": \"string\",\n      \"city\": \"string\",\n      \"state\": \"string\",\n      \"country\": \"string\",\n      \"postal_code\": \"string\"\n    },\n    \"phone\": {\n      \"calling_code\": \"string\",\n      \"number\": \"string\"\n    },\n    \"label\": \"string\"\n  },\n  \"billing_details\": {\n    \"name\": \"string\",\n    \"address\": {\n      \"line1\": \"string\",\n      \"line2\": \"string\",\n      \"city\": \"string\",\n      \"state\": \"string\",\n      \"country\": \"string\",\n      \"postal_code\": \"string\"\n    },\n    \"phone\": {\n      \"calling_code\": \"string\",\n      \"number\": \"string\"\n    },\n    \"label\": \"string\"\n  },\n  \"transaction_documents\": \"string\",\n  \"metadata\": \"string\",\n  \"reference_id\": \"string\",\n  \"statement_descriptor\": \"string\",\n  \"payment_method_details\": \"string\",\n  \"session_id\": \"string\"\n}\n'",
-              "language": "shell",
-              "name": ""
-            }
-          ],
           "samples-languages": [
             "shell"
           ]
