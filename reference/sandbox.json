@@ -13627,39 +13627,28 @@
                     },
                     "created_at": {
                       "type": "string",
-                      "format": "date-time"
+                      "format": "date-time",
+                      "description": "Created At Timestamp"
                     },
                     "currency": {
-                      "type": "string"
+                      "type": "string",
+                      "description": "Currency of collection"
                     },
                     "destination": {
-                      "type": "string"
+                      "type": "string",
+                      "description": "Collection account id"
                     },
                     "destination_details": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "enum": [
-                            "virtual_account",
-                            "wallet"
-                          ]
-                        },
-                        "virtual_account": {
-                          "type": "object",
-                          "properties": {}
-                        },
-                        "wallet": {
-                          "type": "object",
-                          "properties": {}
-                        }
-                      }
+                      "type": "string",
+                      "description": "Collection Account Details"
                     },
                     "holding_currency": {
-                      "type": "string"
+                      "type": "string",
+                      "description": "Balance currency"
                     },
                     "id": {
-                      "type": "string"
+                      "type": "string",
+                      "description": "Id of the collect"
                     },
                     "metadata": {
                       "type": "string"
@@ -13668,27 +13657,33 @@
                       "type": "object",
                       "properties": {
                         "name": {
-                          "type": "string"
+                          "type": "string",
+                          "description": "Name of the payer"
                         },
                         "payer_bank": {
                           "type": "object",
                           "properties": {
                             "account_number": {
-                              "type": "string"
+                              "type": "string",
+                              "description": "Account number of the payer bank"
                             },
                             "address": {
-                              "type": "string"
+                              "type": "string",
+                              "description": "Address of the bank"
                             },
                             "bank_codes": {
-                              "type": "string"
+                              "type": "string",
+                              "description": "Bank codes"
                             },
                             "name": {
-                              "type": "string"
+                              "type": "string",
+                              "description": "Name of the bank"
                             }
                           }
                         },
                         "additional_information": {
-                          "type": "string"
+                          "type": "string",
+                          "description": "Any additional information to be attached with the collect"
                         },
                         "reference_id": {
                           "type": "string"
@@ -13696,17 +13691,20 @@
                       }
                     },
                     "status": {
-                      "type": "string"
+                      "type": "string",
+                      "description": "Status of the collect"
                     },
                     "tracking_details": {
-                      "type": "string"
+                      "type": "string",
+                      "description": "Tracking details of the collect"
                     },
                     "type": {
                       "type": "string",
                       "enum": [
                         "wire_transfer",
                         "local_bank_transfer"
-                      ]
+                      ],
+                      "description": "Type of collect"
                     }
                   }
                 },
