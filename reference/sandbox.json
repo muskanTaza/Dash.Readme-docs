@@ -1668,7 +1668,10 @@
                           "type": "string",
                           "example": "https://mystore.com/try_again"
                         },
-                        "cancelled_at": {},
+                        "cancelled_at": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
                         "client_token": {
                           "type": "string",
                           "example": "1iJeF0TG3I3wwL8Bcstn6Dcze9AXn2aUgNKoBr_D8hY="
@@ -1735,7 +1738,10 @@
                           "type": "string",
                           "example": ""
                         },
-                        "latest_payment_attempt_data": {},
+                        "latest_payment_attempt_data": {
+                          "type": "object",
+                          "properties": {}
+                        },
                         "metadata": {
                           "type": "object",
                           "properties": {
