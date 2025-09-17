@@ -1,5 +1,6 @@
 ---
 title: Fetch Collect
+excerpt: Get details of a collect object
 api:
   file: sandbox.json
   operationId: get_collect{id}
