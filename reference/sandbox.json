@@ -13710,7 +13710,8 @@
             "schema": {
               "type": "string"
             },
-            "required": true
+            "required": true,
+            "description": "Id of the collect"
           }
         ],
         "x-readme": {
