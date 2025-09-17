@@ -82,119 +82,24 @@ card.mount("card-embed");
 ```
 
 * The mount function is a part of the library which attaches the UI component to the DOM container with unique ID.
-* This mounting of the card component does require the existence of a client\_token which is a unique reference for the transaction.
+* This mounting of the card component does require the existence of a client_token which is a unique reference for the transaction.
 
 ## Configurations
 
 You can pass the following configurations while instantiating the card embed.
 
-<Table>
-  <thead>
-    <tr>
-      <th>
-        Property
-      </th>
-
-      <th>
-        Description
-      </th>
-
-      <th>
-        Possible Values
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `style`
-      </td>
-
-      <td>
-        Customize the look of the user interface.
-      </td>
-
-      <td>
-        Refer to the style guide <a href="https://docs.tazapay.com/reference/style-customisation"> here</a>.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `showLabels`
-      </td>
-
-      <td>
-        Show field labels like Card Number, Expiry Date, and CVV on top of each input field. Off by default; set to true to enable.
-      </td>
-
-      <td>
-        `true`/`false`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `hideErrors`
-      </td>
-
-      <td>
-        Hide error messages on the embed as the customer types. Off by default; set to true to hide errors (manage errors in "change" event).
-      </td>
-
-      <td>
-        `true`/`false`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `layout`
-      </td>
-
-      <td>
-        Arrange the card number, expiry, cvv fields in rows. Default is "two-rows" (card number on top, expiry date and CVV below). Options include "one-row" (all fields in a single row) and "three-rows" (each field on its own row).
-      </td>
-
-      <td>
-        `"one-row"`, `"two-rows"`, `"three-rows"`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `cvvMask`
-      </td>
-
-      <td>
-        Mask the CVV field. On by default.
-      </td>
-
-      <td>
-        `true`/`false`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `customPayButton`
-      </td>
-
-      <td>
-        Use a custom pay button instead of the default. Off by default; refer to the integration guide to enable.
-      </td>
-
-      <td>
-        `true`/`false`
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Property          | Description                                                                                                                                                                                                                      | Possible Values                                                                                      |
+| :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
+| `style`           | Customize the look of the user interface.                                                                                                                                                                                        | Refer to the style guide <a href="https://docs.tazapay.com/reference/style-customisation"> here</a>. |
+| `showLabels`      | Show field labels like Card Number, Expiry Date, and CVV on top of each input field. Off by default; set to true to enable.                                                                                                      | `true`/`false`                                                                                       |
+| `hideErrors`      | Hide error messages on the embed as the customer types. Off by default; set to true to hide errors (manage errors in "change" event).                                                                                            | `true`/`false`                                                                                       |
+| `layout`          | Arrange the card number, expiry, cvv fields in rows. Default is "two-rows" (card number on top, expiry date and CVV below). Options include "one-row" (all fields in a single row) and "three-rows" (each field on its own row). | `"one-row"`, `"two-rows"`, `"three-rows"`                                                            |
+| `cvvMask`         | Mask the CVV field. On by default.                                                                                                                                                                                               | `true`/`false`                                                                                       |
+| `customPayButton` | Use a custom pay button instead of the default. Off by default; refer to the integration guide to enable.                                                                                                                        | `true`/`false`                                                                                       |
 
 # Step 5: Listening to events
 
-Tazapay's card embed will automatically validate and display any errors as the customers type. You can listen to <a href = "https://docs.tazapay.com/reference/change-event"> these events</a>
+Tazapay's card embed will automatically validate and display any errors as the customers type. You can listen to <a href="https://docs.tazapay.com/reference/change-event"> these events</a>
 
 # Step 6: Listen for the click event on the Pay button
 
@@ -215,8 +120,8 @@ You can either choose to use your own pay button or use the pay button of the ca
 ## Using your custom pay button
 
 1. First off, let's make sure the inbuilt pay button isn't visible, since you're going to use your own custom button. You can do this by adjusting the `customPayButton` in your configuration in Step 4.
-2. Enable the pay button to accept clicks by listening to the `change` event. Show the pay button only if complete is `true`. And trigger Step 7 when the customer clicks that pay button.\
-   *Additional Guide:<a href="https://docs.tazapay.com/reference/change-event"> Change event</a>*
+2. Enable the pay button to accept clicks by listening to the `change` event. Show the pay button only if complete is `true`. And trigger Step 7 when the customer clicks that pay button.
+   _Additional Guide:<a href="https://docs.tazapay.com/reference/change-event"> Change event</a>_
 
 # Step 7: Submitting the payment to Tazapay to create a charge
 
@@ -225,7 +130,7 @@ Disable the Pay Button for further clicks and perform the following actions once
 ## Fetching the client-token (server-side)
 
 1. Submitting the payment to create a charge will require a `client_token` which is the unique identifier for a payin or a customer session on your website/application.
-2. This unique token is generated as a response of the payin created by a server call to Tazapay's <a href = "https://docs.tazapay.com/reference/create-payin"> payin API</a>.
+2. This unique token is generated as a response of the payin created by a server call to Tazapay's <a href="https://docs.tazapay.com/reference/create-payin"> payin API</a>.
    ```Text JSON
    {
        "status": "success",
@@ -236,125 +141,30 @@ Disable the Pay Button for further clicks and perform the following actions once
    }
    ```
 
-> **Idempotent Payin Sessions:** It is required for you to make sure that the requests to create payin are idempotent. For the value of the idempotency key, you can pass the unique order number on your system.\
-> You can refer to <a href = "https://docs.tazapay.com/reference/idempotent-requests"> this guide</a> for the implementation. This will ensure only unique payin are created corresponding to a unique customer journey on your website/application.
+> **Idempotent Payin Sessions:** It is required for you to make sure that the requests to create payin are idempotent. For the value of the idempotency key, you can pass the unique order number on your system.
+> You can refer to <a href="https://docs.tazapay.com/reference/idempotent-requests"> this guide</a> for the implementation. This will ensure only unique payin are created corresponding to a unique customer journey on your website/application.
 
 ## Call the confirmPayment() method
 
-After you have retrieved the client\_token, call the confirmPayment() method from the SDK to submit a payment to Tazapay to create a charge.
+After you have retrieved the client_token, call the confirmPayment() method from the SDK to submit a payment to Tazapay to create a charge.
 
 The function takes the following parameters as input
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Parameter
-      </th>
-
-      <th>
-        Mandatory / Optional
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        client\_token
-      </td>
-
-      <td>
-        Mandatory
-      </td>
-
-      <td>
-        Refer response of the payin API
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        payment\_method\_details
-      </td>
-
-      <td>
-        Mandatory
-      </td>
-
-      <td>
-        This contains two parameters - `type` and `card`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        customer\_details
-      </td>
-
-      <td>
-        Conditionally Mandatory
-      </td>
-
-      <td>
-        Only required if the customer\_details are not passed from the server-side
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        billing\_details
-      </td>
-
-      <td>
-        Conditionally Mandatory
-      </td>
-
-      <td>
-        Refer to the guide <a href = "https://docs.tazapay.com/docs/address-validations"> here</a>.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        success\_url
-      </td>
-
-      <td>
-        Mandatory
-      </td>
-
-      <td>
-        The customer will be redirected to this URL after a successful charge creation. The customer may be redirected externally to authenticate themselves for 3DS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        cancel\_url
-      </td>
-
-      <td>
-        Mandatory
-      </td>
-
-      <td>
-        The customer will be redirected to this URL after a failed charge. The customer may be redirected externally to authenticate themselves for 3DS.
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Parameter              | Mandatory / Optional    | Description                                                                                                                                                   |
+| :--------------------- | :---------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| client_token           | Mandatory               | Refer response of the payin API                                                                                                                               |
+| payment_method_details | Mandatory               | This contains two parameters - `type` and `card`                                                                                                              |
+| customer_details       | Conditionally Mandatory | Only required if the customer_details are not passed from the server-side                                                                                     |
+| billing_details        | Conditionally Mandatory | Refer to the guide <a href="https://docs.tazapay.com/docs/address-validations"> here</a>.                                                                     |
+| success_url            | Mandatory               | The customer will be redirected to this URL after a successful charge creation. The customer may be redirected externally to authenticate themselves for 3DS. |
+| cancel_url             | Mandatory               | The customer will be redirected to this URL after a failed charge. The customer may be redirected externally to authenticate themselves for 3DS.              |
 
 ```Text Javascript
 const details = {
   payment_method_details: {
     type: "card",
     card: {
-      card: card, // card is a variable which contains card instance, assigned in step2.
+      card: card, // card is a variable which contains card instance, assigned in step 4.
     },
   },
 	customer_details: {
@@ -420,11 +230,11 @@ In case the customer is redirected to an external site to authenticate, the prom
 
 # Step 9: Handle post-payment events
 
-Tazapay sends a `payin.succeeded` event as soon as the funds are received from the customer. Use the webhook\_url field in the payin API to receive these events and run actions (for example, sending an order confirmation email to your customers, logging the sale in a database, starting a shipping workflow, etc.)
+Tazapay sends a `payin.succeeded` event as soon as the funds are received from the customer. Use the webhook_url field in the payin API to receive these events and run actions (for example, sending an order confirmation email to your customers, logging the sale in a database, starting a shipping workflow, etc.)
 
 In case of a failed payment attempt, Tazapay sends a `payment_attempt.failed` event with the reason of failure.
 
-| Event                   | Description                       | Next Steps                                                    |
-| :---------------------- | :-------------------------------- | :------------------------------------------------------------ |
-| payin.succeeded         | The charge creation is successful | Fulfill the goods or services that the customer purchased     |
-| payment\_attempt.failed | The charge creation failed        | Re-enable the pay button and allow the customer to pay again. |
+| Event                  | Description                       | Next Steps                                                    |
+| :--------------------- | :-------------------------------- | :------------------------------------------------------------ |
+| payin.succeeded        | The charge creation is successful | Fulfill the goods or services that the customer purchased     |
+| payment_attempt.failed | The charge creation failed        | Re-enable the pay button and allow the customer to pay again. |
