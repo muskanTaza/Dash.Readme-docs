@@ -4,7 +4,7 @@ api:
   file: sandbox.json
   operationId: get_collect{id}
 deprecated: false
-hidden: false
+hidden: true
 link:
   new_tab: false
 metadata:
