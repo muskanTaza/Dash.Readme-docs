@@ -1,5 +1,5 @@
 ---
-title: Get a Collect
+title: Fetch Collect
 api:
   file: sandbox.json
   operationId: get_collect{id}
