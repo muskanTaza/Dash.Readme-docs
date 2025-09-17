@@ -73,4 +73,71 @@ metadata:
 
 ## Object Parameters
 
+### Collect
+
+| Field               | Subfield               | Type                   | Description                                                          |
+| ------------------- | ---------------------- | ---------------------- | -------------------------------------------------------------------- |
+| amount              |                        | number                 | The total amount of the collect transaction.                         |
+| balance_transaction |                        | string                 | The ID of the balance transaction associated with this collect.      |
+| created_at          |                        | string (ISO timestamp) | The timestamp when the collect transaction was created.              |
+| currency            |                        | string                 | The transaction currency (e.g., SGD).                                |
+| destination         |                        | string                 | The destination ID for the collected funds.                          |
+| destination_details |                        | object                 | Details about the destination account where the funds are collected. |
+|                     | type                   | string                 | The type of destination (e.g., virtual_account).                     |
+|                     | virtual_account        | object                 | Virtual account details (See Virtual Account Table).                 |
+| holding_currency    |                        | string                 | The holding currency used for the transaction.                       |
+| id                  |                        | string                 | The unique Tazapay identifier for the collect transaction.           |
+| metadata            |                        | object                 | Set of key-value pairs attached to the transaction.                  |
+| object              |                        | string                 | The type of object, which is "collect".                              |
+| on_behalf_of        |                        | string                 | The party on whose behalf the funds are collected, if applicable.    |
+| payer_details       |                        | object                 | Details about the payer who initiated the transfer.                  |
+|                     | additional_information | string                 | Additional information about the payment (e.g., payment reference).  |
+|                     | name                   | string                 | Name of the payer.                                                   |
+|                     | payer_bank             | object                 | Payer’s bank details (See Payer Bank Table).                         |
+|                     | reference_id           | string                 | Reference identifier for the payer’s transaction.                    |
+| status              |                        | string                 | The current status of the collect transaction (e.g., succeeded).     |
+| tracking_details    |                        | object/null            | Tracking details for the transaction, if available.                  |
+| type                |                        | string                 | The type of payment method used (e.g., wire_transfer).               |
+
+<br />
+
+### Virtual Account
+
+| Field               | Type   | Description                                               |
+| ------------------- | ------ | --------------------------------------------------------- |
+| account_holder_name | string | The name of the virtual account holder.                   |
+| account_number      | string | The account number for the virtual account.               |
+| bank_address        | object | The bank’s address details. (See Bank Address Table).     |
+| bank_branch         | string | The branch address of the bank.                           |
+| bank_codes          | object | The bank codes associated with the bank. (See Bank Codes) |
+| bank_name           | string | The name of the bank.                                     |
+| currencies          | array  | The list of currencies supported by the account.          |
+| iban                | string | The IBAN of the account, if applicable.                   |
+| id                  | string | The unique identifier of the virtual account.             |
+| object              | string | The type of object, which is "virtual_account".           |
+
+<br />
+
+### Bank Address
+
+| Field          | Type   | Description                                  |
+| -------------- | ------ | -------------------------------------------- |
+| address_line_1 | string | The first line of the bank’s address.        |
+| address_line_2 | string | The second line of the bank’s address.       |
+| city           | string | The city where the bank is located.          |
+| country        | string | The country where the bank is located.       |
+| postal_code    | string | The postal code of the bank’s address.       |
+| state          | string | The state or province of the bank’s address. |
+
+<br />
+
+### Payer Bank
+
+| Field          | Type        | Description                              |
+| -------------- | ----------- | ---------------------------------------- |
+| account_number | string      | The payer’s bank account number.         |
+| address        | object/null | The payer’s bank address, if provided.   |
+| bank_codes     | object      | The payer’s bank codes. (See Bank Codes) |
+| name           | string      | The payer’s bank name.                   |
+
 <br />
