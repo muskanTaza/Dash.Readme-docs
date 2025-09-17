@@ -13636,7 +13636,24 @@
                       "type": "string"
                     },
                     "destination_details": {
-                      "type": "string"
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "virtual_account",
+                            "wallet"
+                          ]
+                        },
+                        "virtual_account": {
+                          "type": "object",
+                          "properties": {}
+                        },
+                        "wallet": {
+                          "type": "object",
+                          "properties": {}
+                        }
+                      }
                     },
                     "holding_currency": {
                       "type": "string"
