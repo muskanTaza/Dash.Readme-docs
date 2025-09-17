@@ -13618,10 +13618,12 @@
                   "type": "object",
                   "properties": {
                     "amount": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Amount of collect"
                     },
                     "balance_transaction": {
-                      "type": "string"
+                      "type": "string",
+                      "description": "Related Balance transaction id"
                     },
                     "created_at": {
                       "type": "string",
