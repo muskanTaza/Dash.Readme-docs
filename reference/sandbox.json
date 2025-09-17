@@ -13694,35 +13694,7 @@
                 "examples": {
                   "New Example": {
                     "summary": "New Example",
-                    "value": {
-                      "amount": 23400,
-                      "balance_transaction": "btr_crr7c2cr39uvfe9u2drg",
-                      "created_at": "2024-09-27T09:08:19.451886Z",
-                      "currency": "UGX",
-                      "destination": "cva_crqj1ri9chqqs7moi980",
-                      "destination_details": null,
-                      "holding_currency": "UGX",
-                      "id": "col_crr7c0sr39uvfe9u2dg0",
-                      "metadata": {},
-                      "object": "collect",
-                      "on_behalf_of": "",
-                      "payer_details": {
-                        "additional_information": "243",
-                        "name": "Anrea Hn",
-                        "payer_bank": {
-                          "account_number": "124309371263881",
-                          "address": null,
-                          "bank_codes": {
-                            "swift": "342"
-                          },
-                          "name": "243"
-                        },
-                        "reference_id": "343"
-                      },
-                      "status": "succeeded",
-                      "tracking_details": null,
-                      "type": "wire_transfer"
-                    }
+                    "value": "{\n        \"amount\": 12829,\n        \"balance_transaction\": \"btr_u7ftrgipu69og2qj1j1pg\",\n        \"created_at\": \"2027-08-15T03:43:46.980214Z\",\n        \"currency\": \"SGD\",\n        \"destination\": \"cva_d2dgk0ka772psfuj1he0\",\n        \"destination_details\": {\n            \"type\": \"virtual_account\",\n            \"virtual_account\": {\n                \"account_holder_name\": \"CM Grand Development Public Company Limited\",\n                \"account_number\": \"0100266363\",\n                \"bank_address\": {\n                    \"address_line_1\": \"\",\n                    \"address_line_2\": \"\",\n                    \"city\": \"\",\n                    \"country\": \"Singapore\",\n                    \"postal_code\": \"\",\n                    \"state\": \"\"\n                },\n                \"bank_branch\": \"8 MARINA BOULEVARD, 27-01, MARINA BAY FINANCIAL CENTRE\",\n                \"bank_codes\": {\n                    \"swift_code\": \"SCBLSG22XXX\"\n                },\n                \"bank_name\": \"STANDARD CHARTERED BANK (SINGAPORE) LIMITED\",\n                \"currencies\": [\n                    \"SGD\"\n                ],\n                \"iban\": \"\",\n                \"id\": \"cva_d2dgk0ka772psfuj1he0\",\n                \"object\": \"virtual_account\"\n            }\n        },\n        \"holding_currency\": \"SGD\",\n        \"id\": \"col_d2fapshu69og2qj0ej5g\",\n        \"metadata\": {},\n        \"object\": \"collect\",\n        \"on_behalf_of\": \"\",\n        \"payer_details\": {\n            \"additional_information\": \"CM Payment for Order 56\",\n            \"name\": \"CMC COMPANY\",\n            \"payer_bank\": {\n                \"account_number\": \"1112014277840\",\n                \"address\": null,\n                \"bank_codes\": {\n                    \"swift_code\": \"AJDU7CHBKXXX\"\n                },\n                \"name\": \"C Bank\"\n            },\n            \"reference_id\": \"\"\n        },\n        \"status\": \"succeeded\",\n        \"tracking_details\": null,\n        \"type\": \"wire_transfer\"\n    }\n}"
                   }
                 }
               }
