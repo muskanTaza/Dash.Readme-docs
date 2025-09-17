@@ -13690,6 +13690,40 @@
                       ]
                     }
                   }
+                },
+                "examples": {
+                  "New Example": {
+                    "summary": "New Example",
+                    "value": {
+                      "amount": 23400,
+                      "balance_transaction": "btr_crr7c2cr39uvfe9u2drg",
+                      "created_at": "2024-09-27T09:08:19.451886Z",
+                      "currency": "UGX",
+                      "destination": "cva_crqj1ri9chqqs7moi980",
+                      "destination_details": null,
+                      "holding_currency": "UGX",
+                      "id": "col_crr7c0sr39uvfe9u2dg0",
+                      "metadata": {},
+                      "object": "collect",
+                      "on_behalf_of": "",
+                      "payer_details": {
+                        "additional_information": "243",
+                        "name": "32r24",
+                        "payer_bank": {
+                          "account_number": "242",
+                          "address": null,
+                          "bank_codes": {
+                            "swift": "342"
+                          },
+                          "name": "243"
+                        },
+                        "reference_id": "343"
+                      },
+                      "status": "succeeded",
+                      "tracking_details": null,
+                      "type": "wire_transfer"
+                    }
+                  }
                 }
               }
             }
