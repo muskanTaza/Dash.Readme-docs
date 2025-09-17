@@ -95,8 +95,10 @@ metadata:
 |                     | name                   | string                 | Name of the payer.                                                   |
 |                     | payer_bank             | object                 | Payer’s bank details (See Payer Bank Table).                         |
 |                     | reference_id           | string                 | Reference identifier for the payer’s transaction.                    |
+|                     | payer_wallet           | object                 | Payer's wallet details (See Payer's wallet table)                    |
 | status              |                        | string                 | The current status of the collect transaction (e.g., succeeded).     |
-| tracking_details    |                        | object/null            | Tracking details for the transaction, if available.                  |
+| tracking_details    |                        | object                 | Tracking details for the transaction, if available.                  |
+|                     | transaction_hash       | string                 | Transaction hash for a crypto transaction                            |
 | type                |                        | string                 | The type of payment method used (e.g., wire_transfer).               |
 
 <br />
@@ -133,11 +135,29 @@ metadata:
 
 ### Payer Bank
 
-| Field          | Type        | Description                              |
-| -------------- | ----------- | ---------------------------------------- |
-| account_number | string      | The payer’s bank account number.         |
-| address        | object/null | The payer’s bank address, if provided.   |
-| bank_codes     | object      | The payer’s bank codes. (See Bank Codes) |
-| name           | string      | The payer’s bank name.                   |
+| Field          | Type        | Description                            |
+| -------------- | ----------- | -------------------------------------- |
+| account_number | string      | The payer’s bank account number.       |
+| address        | object/null | The payer’s bank address, if provided. |
+| bank_codes     | object      | The payer’s bank codes.                |
+| name           | string      | The payer’s bank name.                 |
 
 <br />
+
+## Wallet
+
+| Field           | Type   | Description                                     |
+| --------------- | ------ | ----------------------------------------------- |
+| id              | string | The unique identifier of the wallet.            |
+| type            | string | The blockchain or wallet type (e.g., ethereum). |
+| deposit_address | string | The deposit address of the wallet.              |
+| currencies      | array  | The list of currencies supported by the wallet. |
+
+<br />
+
+## Payer Wallet 
+
+| id              | string | The unique identifier of the wallet.            |
+| --------------- | ------ | ----------------------------------------------- |
+| type            | string | The blockchain or wallet type (e.g., ethereum). |
+| deposit_address | string | The deposit address of the wallet.              |
