@@ -13618,13 +13618,14 @@
                   "type": "object",
                   "properties": {
                     "amount": {
-                      "type": "string"
+                      "type": "number"
                     },
                     "balance_transaction": {
                       "type": "string"
                     },
                     "created_at": {
-                      "type": "string"
+                      "type": "string",
+                      "format": "date-time"
                     },
                     "currency": {
                       "type": "string"
@@ -13645,7 +13646,35 @@
                       "type": "string"
                     },
                     "payer_details": {
-                      "type": "string"
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "payer_bank": {
+                          "type": "object",
+                          "properties": {
+                            "account_number": {
+                              "type": "string"
+                            },
+                            "address": {
+                              "type": "string"
+                            },
+                            "bank_codes": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "additional_information": {
+                          "type": "string"
+                        },
+                        "reference_id": {
+                          "type": "string"
+                        }
+                      }
                     },
                     "status": {
                       "type": "string"
@@ -13654,7 +13683,11 @@
                       "type": "string"
                     },
                     "type": {
-                      "type": "string"
+                      "type": "string",
+                      "enum": [
+                        "wire_transfer",
+                        "local_bank_transfer"
+                      ]
                     }
                   }
                 }
@@ -13671,7 +13704,12 @@
             },
             "required": true
           }
-        ]
+        ],
+        "x-readme": {
+          "samples-languages": [
+            "shell"
+          ]
+        }
       }
     }
   },
