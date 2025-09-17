@@ -1,5 +1,5 @@
 ---
-title: Collects
+title: Collect
 deprecated: false
 hidden: false
 metadata:
