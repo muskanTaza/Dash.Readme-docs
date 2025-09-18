@@ -5046,7 +5046,7 @@
                       }
                     }
                   }
-                },              
+                },
                 "schema": {
                   "type": "object",
                   "properties": {
@@ -5228,7 +5228,9 @@
                                     "type": {
                                       "type": "string",
                                       "description": "Local payment network type",
-                                      "enum": ["pix_brl"]
+                                      "enum": [
+                                        "pix_brl"
+                                      ]
                                     }
                                   }
                                 },
@@ -5258,7 +5260,9 @@
                                     "type": {
                                       "type": "string",
                                       "description": "Blockchain type",
-                                      "enum": ["ethereum"]
+                                      "enum": [
+                                        "ethereum"
+                                      ]
                                     }
                                   }
                                 }
@@ -5318,7 +5322,10 @@
                             "type": {
                               "type": "string",
                               "description": "Beneficiary type",
-                              "enum": ["business", "individual"],
+                              "enum": [
+                                "business",
+                                "individual"
+                              ],
                               "example": "business"
                             }
                           }
@@ -5326,7 +5333,10 @@
                         "charge_type": {
                           "type": "string",
                           "description": "Charge type of payout",
-                          "enum": ["ours", "shared"],
+                          "enum": [
+                            "ours",
+                            "shared"
+                          ],
                           "example": "ours"
                         },
                         "confirmation_documents": {
@@ -5548,7 +5558,11 @@
                             "tracking_type": {
                               "type": "string",
                               "description": "Tracking type used for payout",
-                              "enum": ["uetr", "UTR", "utr", "transaction_hash"],
+                              "enum": [
+                                "uetr",
+                                "utr",
+                                "transaction_hash"
+                              ],
                               "example": "uetr"
                             }
                           }
