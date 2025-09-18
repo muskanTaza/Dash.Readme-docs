@@ -13474,10 +13474,6 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "New Example": {
-                    "summary": "New Example",
-                    "value": ""
-                  },
                   "OK": {
                     "summary": "OK",
                     "value": {
