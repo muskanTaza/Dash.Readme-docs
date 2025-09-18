@@ -1,5 +1,5 @@
 ---
-title: Cancelling a payin
+title: Cancel Payin
 excerpt: ''
 api:
   file: sandbox.json
