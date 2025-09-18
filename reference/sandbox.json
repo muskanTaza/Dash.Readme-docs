@@ -4957,15 +4957,15 @@
                       "message": "",
                       "data": {
                         "amount": 122225,
-                        "balance_transaction": "btr_d35eag4eup1ekl94qrlg",
-                        "beneficiary": "bnf_d35eag4eup1ekl94qrig",
+                        "balance_transaction": "btr_dag4eup1ekl94qrlg",
+                        "beneficiary": "bnf_d35eag4eupl94qrig",
                         "beneficiary_details": {
                           "address": {
-                            "city": "Greather Portmore",
+                            "city": "Vrtmore",
                             "country": "JM",
-                            "line1": "lot12 3north",
+                            "line1": "it12 3cwth",
                             "postal_code": "00000",
-                            "state": "Greather Portmore"
+                            "state": "Vortmore"
                           },
                           "date_of_birth": "2003-04-04",
                           "destination": "",
@@ -4973,13 +4973,13 @@
                             "type": "wallet",
                             "wallet": {
                               "currency": "USDC",
-                              "deposit_address": "0x85952dd59e53bcac0f2e47f8bb7a9faf64789ed8",
+                              "deposit_address": "09e53bcac0f2edxnjsui87f8bb7a9faf64789ed8",
                               "type": "ethereum"
                             }
                           },
                           "documents": [],
                           "email": "",
-                          "name": "Ajani Scott",
+                          "name": "Scott",
                           "name_local": "",
                           "national_identification_number": "",
                           "party_classification": "third_party",
@@ -4992,24 +4992,24 @@
                         "confirmation_documents": [],
                         "created_at": "2025-09-17T16:43:44.378053Z",
                         "currency": "USD",
-                        "destination_fx_quote": "fx_d35eag7figo4p2drbeu0",
+                        "destination_fx_quote": "fx_d35igo4p2drbeu0",
                         "documents": [],
                         "holding_currency": "USD",
-                        "holding_fx_quote": "fx_d35eag7figo4p2drbeug",
+                        "holding_fx_quote": "fx_d35eag74p2drbeug",
                         "holding_fx_transaction": {
                           "exchange_rate": 1,
                           "final": {
                             "amount": 122225,
                             "currency": "USD"
                           },
-                          "id": "fx_d35eag7figo4p2drbeug",
+                          "id": "fx_d35eag74p2drbeug",
                           "initial": {
                             "amount": 122225,
                             "currency": "USD"
                           },
                           "object": "fx_transaction"
                         },
-                        "id": "pot_d35eag4eup1ekl94qri0",
+                        "id": "pot_d35eag4ekl94qri0",
                         "local": {
                           "fund_transfer_network": ""
                         },
@@ -5024,7 +5024,7 @@
                             "amount": 122225,
                             "currency": "USDC"
                           },
-                          "id": "fx_d35eag7figo4p2drbeu0",
+                          "id": "fx_d35igo4p2drbeu0",
                           "initial": {
                             "amount": 122225,
                             "currency": "USD"
@@ -5038,7 +5038,7 @@
                         "status": "succeeded",
                         "status_description": "",
                         "tracking_details": {
-                          "tracking_number": "0xadef30176801278df13779a683c1404e50567e03fb4daef4f850f415789f559f",
+                          "tracking_number": "0xadef30173d3dd42333779a683c1404e50567e03fb4daef4f850f415789f559f",
                           "tracking_type": "transaction_hash"
                         },
                         "transaction_description": "commision",
