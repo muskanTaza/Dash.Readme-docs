@@ -1,5 +1,5 @@
 ---
-title: Create a payin
+title: Create Payin
 excerpt: Creates a payin object.
 api:
   file: sandbox.json
