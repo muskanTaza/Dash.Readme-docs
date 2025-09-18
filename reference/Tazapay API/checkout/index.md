@@ -3,6 +3,7 @@ title: Checkout
 excerpt: ''
 deprecated: false
 hidden: false
+icon: far fa-sack-dollar
 metadata:
   title: ''
   description: ''
