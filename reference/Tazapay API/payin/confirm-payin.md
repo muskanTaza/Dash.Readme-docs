@@ -1,5 +1,5 @@
 ---
-title: Confirm a payin
+title: Confirm Payin
 excerpt: Attach a payment method to the payin and create an attempt
 api:
   file: sandbox.json
