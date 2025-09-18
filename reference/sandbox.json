@@ -13708,7 +13708,9 @@
                       "type": "string",
                       "enum": [
                         "wire_transfer",
-                        "local_bank_transfer"
+                        "local_bank_transfer",
+                        "stablecoin_usdc",
+                        "stablecoin_usdt"
                       ],
                       "description": "Type of collect"
                     }
