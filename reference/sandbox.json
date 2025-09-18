@@ -5052,11 +5052,13 @@
                   "properties": {
                     "status": {
                       "type": "string",
-                      "example": "success"
+                      "example": "success",
+                      "description": "Status of api request"
                     },
                     "message": {
                       "type": "string",
-                      "example": ""
+                      "example": "",
+                      "description": "Message returned as part of the api response"
                     },
                     "data": {
                       "type": "object",
