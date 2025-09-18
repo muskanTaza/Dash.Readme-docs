@@ -13693,6 +13693,20 @@
                         },
                         "reference_id": {
                           "type": "string"
+                        },
+                        "payer_wallet": {
+                          "type": "object",
+                          "properties": {
+                            "desposit_address": {
+                              "type": "string",
+                              "description": "Deposit address of the wallet"
+                            },
+                            "type": {
+                              "type": "string",
+                              "description": "Type of wallet"
+                            }
+                          },
+                          "description": "Payer wallet details"
                         }
                       }
                     },
