@@ -4667,8 +4667,97 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "Result": {
-                    "value": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"amount\": 100000,\n        \"balance_transaction\": \"btr_d35pv4qcl8imrv60\",\n        \"beneficiary\": \"bnf_d3inm6ami8u10oqfg\",\n        \"beneficiary_details\": {\n            \"address\": {\n                \"country\": \"CN\"\n                \"line1\": \"Zhen Rui Yun Lu 66\",\n                \"postal_code\": \"311011\"\n            },\n            \"date_of_birth\": \"\",\n            \"destination\": \"\",\n            \"destination_details\": {\n                \"bank\": {\n                    \"account_number\": \"33050167624000001030\",\n                    \"account_type\": \"\",\n                    \"bank_codes\": {\n                        \"swift_code\": \"PCBCCNBJZJX\"\n                    },\n                    \"bank_name\": \"CHINA CONSTRUCTION BANK, ZHEJIANG BRANCH\",\n                    \"branch_name\": \"\",\n                    \"country\": \"CN\",\n                    \"currency\": \"USD\",\n                    \"firc_required\": false,\n                    \"purpose_code\": \"\",\n                    \"transfer_type\": \"swift\"\n                },\n                \"type\": \"bank\"\n            },\n            \"documents\": [],\n            \"email\": \"\",\n            \"name\": \"IMPORT AND EXPORT CO., LTD\",\n            \"name_local\": \"\",\n            \"national_identification_number\": \"\",\n            \"party_classification\": \"\",\n            \"phone\": {\n                \"calling_code\": \"86\"\n            },\n            \"registration_number\": \"\",\n            \"tax_id\": \"\",\n            \"type\": \"business\"\n        },\n        \"charge_type\": \"ours\",\n        \"confirmation_documents\": [],\n        \"created_at\": \"2025-09-18T10:07:35.101708Z\",\n        \"currency\": \"USD\",\n        \"destination_fx_quote\": \"fx_d35tjpnfi4p2dt2hh0\",\n        \"documents\": [],\n        \"holding_currency\": \"USD\",\n        \"holding_fx_quote\": \"fx_d35tjpnfigp2dt2hgg\",\n        \"holding_fx_transaction\": {\n            \"exchange_rate\": 1,\n            \"final\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"id\": \"fx_d35tjpnfigp2dt2hgg\",\n            \"initial\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"object\": \"fx_transaction\"\n        },\n        \"id\": \"pot_d35tjpn4qcl8iv30\",\n        \"logistics_tracking_details\": [],\n        \"metadata\": null,\n        \"mt103\": \"\",\n        \"object\": \"payout\",\n        \"on_behalf_of\": \"\",\n        \"payout_fx_transaction\": {\n            \"exchange_rate\": 1,\n            \"final\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"id\": \"fx_d35tfigo4p2dt2hh0\",\n            \"initial\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"object\": \"fx_transaction\"\n        },\n        \"payout_quote\": \"\",\n        \"purpose\": \"PYR003\",\n        \"reference_id\": \"\",\n        \"statement_descriptor\": \"\",\n        \"status\": \"succeeded\",\n        \"status_description\": \"\",\n        \"tracking_details\": {\n            \"tracking_number\": \"7833d-34b4-478-aac8-1184beae\",\n            \"tracking_type\": \"uetr\"\n        },\n        \"transaction_description\": \"Payment for goods acc 125\",\n        \"type\": \"swift\"\n    }\n}"
+                  "Swift Payout": {
+                    "value": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"amount\": 100000,\n        \"balance_transaction\": \"btr_d35pv4qcl8imrv60\",\n        \"beneficiary\": \"bnf_d3inm6ami8u10oqfg\",\n        \"beneficiary_details\": {\n            \"address\": {\n                \"country\": \"CN\"\n                \"line1\": \"Zhen Rui Yun Lu 66\",\n                \"postal_code\": \"311011\"\n            },\n            \"date_of_birth\": \"\",\n            \"destination\": \"\",\n            \"destination_details\": {\n                \"bank\": {\n                    \"account_number\": \"33050167624000001030\",\n                    \"account_type\": \"\",\n                    \"bank_codes\": {\n                        \"swift_code\": \"PCBCCNBJZJX\"\n                    },\n                    \"bank_name\": \"CHINA CONSTRUCTION BANK, ZHEJIANG BRANCH\",\n                    \"branch_name\": \"\",\n                    \"country\": \"CN\",\n                    \"currency\": \"USD\",\n                    \"firc_required\": false,\n                    \"purpose_code\": \"\",\n                    \"transfer_type\": \"swift\"\n                },\n                \"type\": \"bank\"\n            },\n            \"documents\": [],\n            \"email\": \"\",\n            \"name\": \"IMPORT AND EXPORT CO., LTD\",\n            \"name_local\": \"\",\n            \"national_identification_number\": \"\",\n            \"party_classification\": \"\",\n            \"phone\": {\n                \"calling_code\": \"86\"\n            },\n            \"registration_number\": \"\",\n            \"tax_id\": \"\",\n            \"type\": \"business\"\n        },\n        \"charge_type\": \"ours\",\n        \"confirmation_documents\": [],\n        \"created_at\": \"2025-09-18T10:07:35.101708Z\",\n        \"currency\": \"USD\",\n        \"destination_fx_quote\": \"fx_d35tjpnfi4p2dt2hh0\",\n        \"documents\": [],\n        \"holding_currency\": \"USD\",\n        \"holding_fx_quote\": \"fx_d35tjpnfigp2dt2hgg\",\n        \"holding_fx_transaction\": {\n            \"exchange_rate\": 1,\n            \"final\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"id\": \"fx_d35tjpnfigp2dt2hgg\",\n            \"initial\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"object\": \"fx_transaction\"\n        },\n        \"id\": \"pot_d35tjpn4qcl8iv30\",\n        \"logistics_tracking_details\": [],\n        \"metadata\": null,\n        \"mt103\": \"\",\n        \"object\": \"payout\",\n        \"on_behalf_of\": \"\",\n        \"payout_fx_transaction\": {\n            \"exchange_rate\": 1,\n            \"final\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"id\": \"fx_d35tfigo4p2dt2hh0\",\n            \"initial\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"object\": \"fx_transaction\"\n        },\n        \"payout_quote\": \"\",\n        \"purpose\": \"PYR003\",\n        \"reference_id\": \"\",\n        \"statement_descriptor\": \"\",\n        \"status\": \"succeeded\",\n        \"status_description\": \"\",\n        \"tracking_details\": {\n            \"tracking_number\": \"7833d-34b4-478-aac8-1184beae\",\n            \"tracking_type\": \"uetr\"\n        },\n        \"transaction_description\": \"Payment for goods acc 125\",\n        \"type\": \"swift\"\n    }\n}",
+                    "summary": "Swift Payout"
+                  },
+                  "Transfer with Tazapay": {
+                    "summary": "Transfer with Tazapay",
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "amount": 44000,
+                        "balance_transaction": "btr_d35sqe74qcl8im850",
+                        "beneficiary": "bnf_d35spsnl8imrh3gv0",
+                        "beneficiary_details": {
+                          "address": {},
+                          "date_of_birth": "",
+                          "destination": "",
+                          "destination_details": {
+                            "tazapay_account": {
+                              "deposit_address": "ce4f51ue@tzp"
+                            },
+                            "type": "tazapay_account"
+                          },
+                          "documents": [],
+                          "email": "info@trading.com",
+                          "name": "T Co., Limited",
+                          "name_local": "",
+                          "national_identification_number": "",
+                          "party_classification": "",
+                          "phone": {},
+                          "registration_number": "",
+                          "tax_id": "",
+                          "type": "business"
+                        },
+                        "charge_type": "",
+                        "confirmation_documents": [],
+                        "created_at": "2025-09-18T09:13:28.633167Z",
+                        "currency": "USD",
+                        "destination_fx_quote": "fx_d35sqe7figo4dsvt00",
+                        "documents": [],
+                        "holding_currency": "USD",
+                        "holding_fx_quote": "fx_d35sfigo4p2dsvsvg",
+                        "holding_fx_transaction": {
+                          "exchange_rate": 1,
+                          "final": {
+                            "amount": 44000,
+                            "currency": "USD"
+                          },
+                          "id": "fx_d35sqe7figo4p2dsvsvg",
+                          "initial": {
+                            "amount": 44000,
+                            "currency": "USD"
+                          },
+                          "object": "fx_transaction"
+                        },
+                        "id": "pot_d5sqe7cl8imrh4810",
+                        "local": {
+                          "fund_transfer_network": ""
+                        },
+                        "logistics_tracking_details": [],
+                        "metadata": null,
+                        "mt103": "",
+                        "object": "payout",
+                        "on_behalf_of": "",
+                        "payout_fx_transaction": {
+                          "exchange_rate": 1,
+                          "final": {
+                            "amount": 44000,
+                            "currency": ""
+                          },
+                          "id": "fx_d35sqe7figo4psvt00",
+                          "initial": {
+                            "amount": 44000,
+                            "currency": "USD"
+                          },
+                          "object": "fx_transaction"
+                        },
+                        "payout_quote": "",
+                        "purpose": "PYR003",
+                        "reference_id": "",
+                        "statement_descriptor": "",
+                        "status": "succeeded",
+                        "status_description": "",
+                        "tracking_details": {
+                          "tracking_number": "",
+                          "tracking_type": ""
+                        },
+                        "transaction_description": "Payment for goods acc 001",
+                        "type": "tazapay_account"
+                      }
+                    }
                   }
                 },
                 "schema": {
