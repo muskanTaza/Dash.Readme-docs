@@ -4949,6 +4949,102 @@
                         "type": "local_payment_network"
                       }
                     }
+                  },
+                  "Crypto Payout": {
+                    "summary": "Crypto Payout",
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "amount": 122225,
+                        "balance_transaction": "btr_d35eag4eup1ekl94qrlg",
+                        "beneficiary": "bnf_d35eag4eup1ekl94qrig",
+                        "beneficiary_details": {
+                          "address": {
+                            "city": "Greather Portmore",
+                            "country": "JM",
+                            "line1": "lot12 3north",
+                            "postal_code": "00000",
+                            "state": "Greather Portmore"
+                          },
+                          "date_of_birth": "2003-04-04",
+                          "destination": "",
+                          "destination_details": {
+                            "type": "wallet",
+                            "wallet": {
+                              "currency": "USDC",
+                              "deposit_address": "0x85952dd59e53bcac0f2e47f8bb7a9faf64789ed8",
+                              "type": "ethereum"
+                            }
+                          },
+                          "documents": [],
+                          "email": "",
+                          "name": "Ajani Scott",
+                          "name_local": "",
+                          "national_identification_number": "",
+                          "party_classification": "third_party",
+                          "phone": {},
+                          "registration_number": "",
+                          "tax_id": "",
+                          "type": "individual"
+                        },
+                        "charge_type": "",
+                        "confirmation_documents": [],
+                        "created_at": "2025-09-17T16:43:44.378053Z",
+                        "currency": "USD",
+                        "destination_fx_quote": "fx_d35eag7figo4p2drbeu0",
+                        "documents": [],
+                        "holding_currency": "USD",
+                        "holding_fx_quote": "fx_d35eag7figo4p2drbeug",
+                        "holding_fx_transaction": {
+                          "exchange_rate": 1,
+                          "final": {
+                            "amount": 122225,
+                            "currency": "USD"
+                          },
+                          "id": "fx_d35eag7figo4p2drbeug",
+                          "initial": {
+                            "amount": 122225,
+                            "currency": "USD"
+                          },
+                          "object": "fx_transaction"
+                        },
+                        "id": "pot_d35eag4eup1ekl94qri0",
+                        "local": {
+                          "fund_transfer_network": ""
+                        },
+                        "logistics_tracking_details": [],
+                        "metadata": null,
+                        "mt103": "",
+                        "object": "payout",
+                        "on_behalf_of": "",
+                        "payout_fx_transaction": {
+                          "exchange_rate": 1,
+                          "final": {
+                            "amount": 122225,
+                            "currency": "USDC"
+                          },
+                          "id": "fx_d35eag7figo4p2drbeu0",
+                          "initial": {
+                            "amount": 122225,
+                            "currency": "USD"
+                          },
+                          "object": "fx_transaction"
+                        },
+                        "payout_quote": "",
+                        "purpose": "PYR030",
+                        "reference_id": "",
+                        "statement_descriptor": "",
+                        "status": "succeeded",
+                        "status_description": "",
+                        "tracking_details": {
+                          "tracking_number": "0xadef30176801278df13779a683c1404e50567e03fb4daef4f850f415789f559f",
+                          "tracking_type": "transaction_hash"
+                        },
+                        "transaction_description": "commision",
+                        "type": "wallet"
+                      }
+                    }
                   }
                 },
                 "schema": {
