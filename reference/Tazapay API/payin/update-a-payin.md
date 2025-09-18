@@ -1,5 +1,5 @@
 ---
-title: Updating a payin
+title: Update Payin
 excerpt: Update a payin without confirming
 api:
   file: sandbox.json
