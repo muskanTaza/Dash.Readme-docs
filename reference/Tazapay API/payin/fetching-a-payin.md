@@ -1,6 +1,6 @@
 ---
-title: Fetching a payin
-excerpt: ''
+title: Fetch Payin
+excerpt: Get the details of the payin object
 api:
   file: sandbox.json
   operationId: fetching-a-payin
