@@ -5,6 +5,7 @@ excerpt: >-
   collect is created whenever there is a credit in the collection accounts.
 deprecated: false
 hidden: false
+icon: far fa-money-check-dollar
 metadata:
   robots: index
 ---
