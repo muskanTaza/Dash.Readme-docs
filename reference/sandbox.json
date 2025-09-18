@@ -13731,8 +13731,54 @@
                   }
                 },
                 "examples": {
-                  "New Example": {
-                    "summary": "New Example",
+                  "Crpto Collect": {
+                    "summary": "Crpto Collect",
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "amount": 480000,
+                        "balance_transaction": "btr_d35s1lt7gtugq24427g",
+                        "created_at": "2025-09-18T08:20:33.090433Z",
+                        "currency": "USD",
+                        "destination": "cwa_jhrv4sad4tf55jrvp0",
+                        "destination_details": {
+                          "type": "wallet",
+                          "wallet": {
+                            "currencies": [
+                              "USD"
+                            ],
+                            "deposit_address": "0x5gtj035ad25fnhioerfujhguri587y43894hfie2",
+                            "id": "cwa_jhrv4sad4tf55jrvp0",
+                            "object": "wallet",
+                            "type": "polygon pos"
+                          }
+                        },
+                        "holding_currency": "USD",
+                        "id": "col_24rtg5gtugq2t3h0bg",
+                        "metadata": {},
+                        "object": "collect",
+                        "on_behalf_of": "",
+                        "payer_details": {
+                          "additional_information": "",
+                          "name": "",
+                          "payer_bank": null,
+                          "payer_wallet": {
+                            "deposit_address": "0x48eb007deaebafmerdogn8470rjm32afa",
+                            "type": "ethereum"
+                          },
+                          "reference_id": ""
+                        },
+                        "status": "succeeded",
+                        "tracking_details": {
+                          "transaction_hash": "0x444b716efrg4b2a23224tf4gcedc91024f25c5bbb0530e99f09930769a"
+                        },
+                        "type": "stablecoin_usdc"
+                      }
+                    }
+                  },
+                  "Fiat Collect": {
+                    "summary": "Fiat Collect",
                     "value": "{\n        \"amount\": 12829,\n        \"balance_transaction\": \"btr_u7ftrgipu69og2qj1j1pg\",\n        \"created_at\": \"2027-08-15T03:43:46.980214Z\",\n        \"currency\": \"SGD\",\n        \"destination\": \"cva_d2dgk0ka772psfuj1he0\",\n        \"destination_details\": {\n            \"type\": \"virtual_account\",\n            \"virtual_account\": {\n                \"account_holder_name\": \"OM Grand Limited\",\n                \"account_number\": \"0109866363\",\n                \"bank_address\": {\n                    \"address_line_1\": \"\",\n                    \"address_line_2\": \"\",\n                    \"city\": \"\",\n                    \"country\": \"Singapore\",\n                    \"postal_code\": \"\",\n                    \"state\": \"\"\n                },\n                \"bank_branch\": \"8 MARINA BOULEVARD, 27-01, MARINA BAY FINANCIAL CENTRE\",\n                \"bank_codes\": {\n                    \"swift_code\": \"SLSGO2XXX\"\n                },\n                \"bank_name\": \"STANDARD BANK LIMITED\",\n                \"currencies\": [\n                    \"SGD\"\n                ],\n                \"iban\": \"\",\n                \"id\": \"cva_d2dgk0552psfuj1he0\",\n                \"object\": \"virtual_account\"\n            }\n        },\n        \"holding_currency\": \"SGD\",\n        \"id\": \"col_d2fapsh76og2qj0ej5g\",\n        \"metadata\": {},\n        \"object\": \"collect\",\n        \"on_behalf_of\": \"\",\n        \"payer_details\": {\n            \"additional_information\": \"CM Payment for Order 56\",\n            \"name\": \"CMC COMPANY\",\n            \"payer_bank\": {\n                \"account_number\": \"1112019837840\",\n                \"address\": null,\n                \"bank_codes\": {\n                    \"swift_code\": \"AJUM7CHBKXXX\"\n                },\n                \"name\": \"C Bank\"\n            },\n            \"reference_id\": \"\"\n        },\n        \"status\": \"succeeded\",\n        \"tracking_details\": null,\n        \"type\": \"wire_transfer\"\n    }\n}"
                   }
                 }
