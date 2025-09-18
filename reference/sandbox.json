@@ -5066,11 +5066,13 @@
                         "amount": {
                           "type": "integer",
                           "example": 100000,
-                          "default": 0
+                          "default": 0,
+                          "description": "Amount of the payout"
                         },
                         "balance_transaction": {
                           "type": "string",
-                          "example": "btr_cvqcf7ni8n67eejtnklg"
+                          "example": "btr_cvqcf7ni8n67eejtnklg",
+                          "description": "Balance transaction id associated with this payout"
                         },
                         "beneficiary": {
                           "type": "string",
