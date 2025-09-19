@@ -7,6 +7,7 @@ excerpt: >-
   accounts into the currency and bank account of your choice.
 deprecated: false
 hidden: false
+icon: far fa-blanket
 metadata:
   title: ''
   description: ''
