@@ -494,97 +494,128 @@ next:
 
 ### Payout
 
-| Field                   | Subfield                       | Type                   | Description                                                                                                                                                                                                                                                                                                                                        |
-| ----------------------- | ------------------------------ | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| amount                  |                                | number                 | The total amount for the payout transaction.                                                                                                                                                                                                                                                                                                       |
-| balance_transaction     |                                | string                 | The Tazapay ID of the balance transaction associated with the payout.                                                                                                                                                                                                                                                                              |
-| beneficiary             |                                | string                 | The Tazapay ID of the beneficiary receiving the payout.                                                                                                                                                                                                                                                                                            |
-| beneficiary_details     |                                | object                 | The details of the beneficiary.                                                                                                                                                                                                                                                                                                                    |
-|                         | address                        | object                 | The address of the beneficiary. (See Address Table)                                                                                                                                                                                                                                                                                                |
-|                         | destination                    | string                 | The ID of the destination account for the payout.                                                                                                                                                                                                                                                                                                  |
-|                         | destination_details            | object                 | The details of the destination account. (See Destination Details Table)                                                                                                                                                                                                                                                                            |
-|                         | documents                      | array                  | The list of documents related to the beneficiary.                                                                                                                                                                                                                                                                                                  |
-|                         | email                          | string                 | The email address of the beneficiary.                                                                                                                                                                                                                                                                                                              |
-|                         | name                           | string                 | The name of the beneficiary.                                                                                                                                                                                                                                                                                                                       |
-|                         | phone                          | object                 | The phone details of the beneficiary. (See Phone Table)                                                                                                                                                                                                                                                                                            |
-|                         | tax_id                         | string                 | The tax identification number of the beneficiary.                                                                                                                                                                                                                                                                                                  |
-|                         | type                           | enum                   | The type of the beneficiary [Values - individual, business].                                                                                                                                                                                                                                                                                       |
-|                         | date_of_birth                  |                        |                                                                                                                                                                                                                                                                                                                                                    |
-|                         | name_local                     |                        |                                                                                                                                                                                                                                                                                                                                                    |
-|                         | national_identification_number |                        |                                                                                                                                                                                                                                                                                                                                                    |
-|                         | party_classification           |                        |                                                                                                                                                                                                                                                                                                                                                    |
-|                         | registration_number            |                        |                                                                                                                                                                                                                                                                                                                                                    |
-| charge_type             |                                | enum                   | The charge type for the payout. [Value - shared, ours]                                                                                                                                                                                                                                                                                             |
-| created_at              |                                | string (ISO Timespamp) | The timestamp when the payout was created.                                                                                                                                                                                                                                                                                                         |
-| currency                |                                | string                 | The currency of the payout amount.                                                                                                                                                                                                                                                                                                                 |
-| documents               |                                | array                  | The list of documents related to the payout.                                                                                                                                                                                                                                                                                                       |
-| holding_currency        |                                | string                 | The currency used for holding funds before payout (e.g., EUR).                                                                                                                                                                                                                                                                                     |
-| holding_fx_transaction  |                                | object                 | The details of the FX transaction for holding currency. (See FX Transaction Table)                                                                                                                                                                                                                                                                 |
-| id                      |                                | string                 | The unique Tazapay identifier for the payout.                                                                                                                                                                                                                                                                                                      |
-| metadata                |                                | json                   | Set of key-value pairs attached to the payout.                                                                                                                                                                                                                                                                                                     |
-| mt103                   |                                | string                 | The MT103 SWIFT message reference for the payout (if applicable).                                                                                                                                                                                                                                                                                  |
-| object                  |                                | string                 | The type of object, which is "payout".                                                                                                                                                                                                                                                                                                             |
-| payout_fx_transaction   |                                | object                 | The details of the FX transaction for payout currency. (See FX Transaction Table)                                                                                                                                                                                                                                                                  |
-| purpose                 |                                | enum                   | Reason for payout. Click [here](https://docs.tazapay.com/docs/reasons-for-payout) for the detailed list. [Values - PYR001, PYR002, PYR003, PYR004, PYR005, PYR006, PYR007, PYR008, PYR009, PYR010, PYR011, PYR012, PYR013, PYR014, PYR015, PYR016, PYR017, PYR018, PYR019, PYR020, PYR021, PYR022, PYR023, PYR024, PYR025, PYR026, PYR027, PYR028] |
-| reference_id            |                                | string                 | The reference ID for the payout.                                                                                                                                                                                                                                                                                                                   |
-| statement_descriptor    |                                | string                 | The statement descriptor for the payout, to appear on the beneficiary’s statement.                                                                                                                                                                                                                                                                 |
-| status                  |                                | enum                   | The current status of the payout [Values - Processing, Requires Approval, Requires Action, Succeeded, Failed, Cancelled]                                                                                                                                                                                                                           |
-| status_description      |                                | string                 | A description of the current payout status (optional).                                                                                                                                                                                                                                                                                             |
-| tracking_details        |                                | object                 | Tracking details of the payout, if applicable.                                                                                                                                                                                                                                                                                                     |
-| transaction_description |                                | string                 | A description of the payout transaction.                                                                                                                                                                                                                                                                                                           |
-| type                    |                                | enum                   | The type of payout [Values - local, swift, wallet]                                                                                                                                                                                                                                                                                                 |
+### Payout
 
-<br />
+| Field                   | Subfield             | Type    | Description                                                                                                                                                                                                                                                |
+| ----------------------- | -------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| amount                  |                      | number  | The total amount for the payout transaction.                                                                                                                                                                                                               |
+| balance_transaction     |                      | string  | The Tazapay ID of the balance transaction associated with the payout.                                                                                                                                                                                      |
+| beneficiary             |                      | string  | The Tazapay ID of the beneficiary receiving the payout.                                                                                                                                                                                                    |
+| beneficiary_details     |                      | object  | The details of the beneficiary. (See **Beneficiary Details Table**)                                                                                                                                                                                        |
+| charge_type             |                      | enum    | The charge type for the payout. [Values: `ours`, `shared`]                                                                                                                                                                                                 |
+| confirmation_documents  |                      | array   | The list of confirmation documents for the payout.                                                                                                                                                                                                         |
+| created_at              |                      | string  | The timestamp when the payout was created (ISO 8601).                                                                                                                                                                                                      |
+| currency                |                      | string  | The currency of the payout amount.                                                                                                                                                                                                                         |
+| destination_fx_quote    |                      | string  | The FX quote ID used for conversion to destination currency.                                                                                                                                                                                               |
+| documents               |                      | array   | The list of documents related to the payout.                                                                                                                                                                                                               |
+| holding_currency        |                      | string  | The currency used for holding funds before payout.                                                                                                                                                                                                         |
+| holding_fx_quote        |                      | string  | The FX quote ID used for holding currency.                                                                                                                                                                                                                 |
+| holding_fx_transaction  |                      | object  | The FX transaction details for the holding currency. (See **FX Transaction Table**)                                                                                                                                                                        |
+| id                      |                      | string  | The unique Tazapay identifier for the payout.                                                                                                                                                                                                              |
+| local                   | fund_transfer_network| string  | The local transfer network used (if applicable).                                                                                                                                                                                                           |
+| logistics_tracking_details |                   | array   | The logistics tracking details if payout is linked with goods.                                                                                                                                                                                             |
+| metadata                |                      | object  | Key-value metadata attached to the payout.                                                                                                                                                                                                                 |
+| mt103                   |                      | string  | The MT103 SWIFT message reference for the payout (if applicable).                                                                                                                                                                                          |
+| object                  |                      | string  | The type of object, always `"payout"`.                                                                                                                                                                                                                     |
+| on_behalf_of            |                      | string  | The account ID if the payout was made on behalf of another entity.                                                                                                                                                                                         |
+| payout_fx_transaction   |                      | object  | The FX transaction details for payout currency. (See **FX Transaction Table**)                                                                                                                                                                             |
+| payout_quote            |                      | string  | The payout quote reference (if applicable).                                                                                                                                                                                                                |
+| purpose                 |                      | enum    | The purpose code for the payout. [Values: PYR001–PYR030]. Full list in [docs](https://docs.tazapay.com/docs/reasons-for-payout).                                                                                                                           |
+| reference_id            |                      | string  | The merchant’s reference ID for the payout.                                                                                                                                                                                                                |
+| statement_descriptor    |                      | string  | The statement descriptor that appears on the beneficiary’s bank statement.                                                                                                                                                                                 |
+| status                  |                      | enum    | The current status of the payout. [Values: `Processing`, `Requires Approval`, `Requires Action`, `Succeeded`, `Failed`, `Cancelled`]                                                                                                                       |
+| status_description      |                      | string  | A description of the current payout status.                                                                                                                                                                                                                |
+| tracking_details        |                      | object  | Tracking details of the payout. (See **Tracking Details Table**)                                                                                                                                                                                           |
+| transaction_description |                      | string  | A description of the payout transaction provided by the merchant.                                                                                                                                                                                          |
+| type                    |                      | enum    | The type of payout. [Values: `swift`, `local`, `wallet`, `local_payment_network`, `tazapay_account`]                                                                                                                                                       |
+
+---
+
+### Beneficiary Details
+
+| Field                          | Type   | Description                                                                 |
+| ------------------------------ | ------ | --------------------------------------------------------------------------- |
+| address                        | object | The address of the beneficiary. (See **Address Table**)                      |
+| date_of_birth                  | string | Date of birth of the beneficiary (for individuals).                          |
+| destination                    | string | The destination identifier (if applicable).                                 |
+| destination_details            | object | The details of the destination account. (See **Destination Details Table**)  |
+| documents                      | array  | The list of documents related to the beneficiary.                            |
+| email                          | string | The email address of the beneficiary.                                       |
+| name                           | string | The name of the beneficiary.                                                |
+| name_local                     | string | The local language name of the beneficiary.                                 |
+| national_identification_number | string | The national ID number of the beneficiary.                                  |
+| party_classification           | string | Classification of the beneficiary (e.g., `self`, `third_party`).            |
+| phone                          | object | The phone details of the beneficiary. (See **Phone Table**)                  |
+| registration_number            | string | The registration number (for business beneficiaries).                        |
+| tax_id                         | string | The tax identification number of the beneficiary.                            |
+| type                           | enum   | The type of the beneficiary. [Values: `business`, `individual`]              |
+
+---
 
 ### Destination Details
 
-| Field                                          | Type    | Description                                                                                |
-| ---------------------------------------------- | ------- | ------------------------------------------------------------------------------------------ |
-| destination_details.bank.account_number        | string  | The account number of the beneficiary's bank.                                              |
-| destination_details.bank.account_type          | string  | The type of bank account (optional).                                                       |
-| destination_details.bank.bank_codes.aba_code   | string  | The ABA routing code of the beneficiary's bank.                                            |
-| destination_details.bank.bank_codes.swift_code | string  | The SWIFT code of the beneficiary's bank.                                                  |
-| destination_details.bank.bank_name             | string  | The name of the beneficiary's bank.                                                        |
-| destination_details.bank.branch_name           | string  | The branch name of the beneficiary's bank (optional).                                      |
-| destination_details.bank.country               | string  | The country of the beneficiary's bank.                                                     |
-| destination_details.bank.currency              | string  | The currency in which the bank account operates.                                           |
-| destination_details.bank.firc_required         | boolean | Indicates if FIRC (Foreign Inward Remittance Certificate) is required for the transaction. |
-| destination_details.bank.purpose_code          | string  | The purpose code for the transaction (optional).                                           |
-| destination_details.type                       | string  | The type of destination (e.g., bank).                                                      |
+| Field               | Subfield        | Type    | Description                                                                 |
+| ------------------- | --------------- | ------- | --------------------------------------------------------------------------- |
+| type                |                 | enum    | The type of destination. [Values: `bank`, `wallet`, `local_payment_network`, `tazapay_account`] |
+| bank                | account_number  | string  | The account number of the beneficiary's bank.                               |
+|                     | account_type    | string  | The type of bank account.                                                   |
+|                     | bank_codes      | object  | The bank codes (ABA / SWIFT).                                               |
+|                     | bank_name       | string  | The name of the beneficiary’s bank.                                         |
+|                     | branch_name     | string  | The branch name of the beneficiary’s bank.                                  |
+|                     | country         | string  | The country of the beneficiary’s bank.                                      |
+|                     | currency        | string  | The currency in which the bank account operates.                            |
+|                     | firc_required   | boolean | Whether FIRC is required.                                                   |
+|                     | purpose_code    | string  | The purpose code for the bank transfer.                                     |
+|                     | transfer_type   | string  | The transfer type (`swift`, `local`, `any`).                                |
+|                     | iban            | string  | The IBAN of the beneficiary’s bank account.                                 |
+| wallet              | currency        | string  | The cryptocurrency type (e.g., `USDC`).                                     |
+|                     | deposit_address | string  | The wallet deposit address.                                                 |
+|                     | type            | enum    | The blockchain type. [Values: `ethereum`]                                   |
+| local_payment_network | currency      | string  | The currency used in the local payment network.                             |
+|                     | deposit_key     | string  | The deposit key (e.g., PIX key in Brazil).                                  |
+|                     | type            | enum    | The local payment network type. [Values: `pix_brl`]                         |
+| tazapay_account     | deposit_address | string  | The Tazapay account deposit address.                                        |
 
-<br />
+---
 
 ### Address
 
-| Field               | Type   | Description                                              |
-| ------------------- | ------ | -------------------------------------------------------- |
-| address             | object | The address of the beneficiary.                          |
-| address.city        | string | The city of the beneficiary.                             |
-| address.country     | string | The country of the beneficiary.                          |
-| address.line1       | string | The first line of the beneficiary's address.             |
-| address.line2       | string | The second line of the beneficiary's address (optional). |
-| address.postal_code | string | The postal code of the beneficiary's address.            |
-| address.state       | string | The state or province of the beneficiary's address.      |
+| Field       | Type   | Description                              |
+| ----------- | ------ | ---------------------------------------- |
+| line1       | string | The first line of the address.           |
+| line2       | string | The second line of the address.          |
+| city        | string | The city of the beneficiary.             |
+| state       | string | The state or province of the address.    |
+| postal_code | string | The postal code of the address.          |
+| country     | string | The country (ISO alpha-2 format).        |
 
-<br />
+---
 
 ### Phone
 
-| Field              | Type   | Description                                                        |
-| ------------------ | ------ | ------------------------------------------------------------------ |
-| phone              | object | Phone details of the beneficiary.                                  |
-| phone.calling_code | string | The international calling code for the beneficiary's phone number. |
-| phone.number       | string | The phone number of the beneficiary.                               |
+| Field        | Type   | Description                          |
+| ------------ | ------ | ------------------------------------ |
+| calling_code | string | The country calling code of the phone |
 
-<br />
+---
 
 ### FX Transaction
 
-| Field            | Type   | Description                                                 |
-| ---------------- | ------ | ----------------------------------------------------------- |
-| exchange_rate    | number | The exchange rate used for the currency conversion.         |
-| final.amount     | number | The final amount after conversion.                          |
-| final.currency   | string | The final currency after conversion.                        |
-| initial.amount   | number | The initial amount before conversion                        |
-| initial.currency | string | The initial currency before conversion.                     |
-| id               | string | The Tazapay ID of the holding foreign exchange transaction. |
+| Field         | Type   | Description                                |
+| ------------- | ------ | ------------------------------------------ |
+| exchange_rate | number | The exchange rate applied for FX.          |
+| final.amount  | number | The final amount after FX conversion.      |
+| final.currency| string | The currency of the final amount.          |
+| initial.amount| number | The initial amount before FX conversion.   |
+| initial.currency | string | The currency of the initial amount.     |
+| id            | string | The FX transaction ID.                     |
+| object        | string | Always `"fx_transaction"`.                 |
+
+---
+
+### Tracking Details
+
+| Field           | Type   | Description                                                         |
+| --------------- | ------ | ------------------------------------------------------------------- |
+| tracking_number | string | The tracking number (UETR, UTR, transaction hash, etc.).             |
+| tracking_type   | enum   | The tracking type. [Values: `uetr`, `UTR`, `utr`, `transaction_hash`] |
