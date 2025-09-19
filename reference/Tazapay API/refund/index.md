@@ -3,6 +3,7 @@ title: Refund
 excerpt: ''
 deprecated: false
 hidden: false
+icon: far fa-money-bill-transfer
 metadata:
   title: ''
   description: ''
