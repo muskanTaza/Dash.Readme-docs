@@ -68,6 +68,49 @@ metadata:
 }
 ```
 ```json Crypto Collect
+{
+  "status": "success",
+  "message": "",
+  "data": {
+    "amount": 480000,
+    "balance_transaction": "btr_d35s1lt7gtugq24427g",
+    "created_at": "2025-09-18T08:20:33.090433Z",
+    "currency": "USD",
+    "destination": "cwa_jhrv4sad4tf55jrvp0",
+    "destination_details": {
+      "type": "wallet",
+      "wallet": {
+        "currencies": [
+          "USD"
+        ],
+        "deposit_address": "0x5gtj035ad25fnhioerfujhguri587y43894hfie2",
+        "id": "cwa_jhrv4sad4tf55jrvp0",
+        "object": "wallet",
+        "type": "polygon pos"
+      }
+    },
+    "holding_currency": "USD",
+    "id": "col_24rtg5gtugq2t3h0bg",
+    "metadata": {},
+    "object": "collect",
+    "on_behalf_of": "",
+    "payer_details": {
+      "additional_information": "",
+      "name": "",
+      "payer_bank": null,
+      "payer_wallet": {
+        "deposit_address": "0x48eb007deaebafmerdogn8470rjm32afa",
+        "type": "ethereum"
+      },
+      "reference_id": ""
+    },
+    "status": "succeeded",
+    "tracking_details": {
+      "transaction_hash": "0x444b716efrg4b2a23224tf4gcedc91024f25c5bbb0530e99f09930769a"
+    },
+    "type": "stablecoin_usdc"
+  }
+}
 ```
 
 <br />
