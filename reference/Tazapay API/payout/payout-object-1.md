@@ -120,7 +120,7 @@ next:
     }
 }
 ```
-```Text Local Bank Payout
+```json Local Bank Payout
 {
   "status": "success",
   "message": "",
@@ -220,7 +220,7 @@ next:
   }
 }
 ```
-```Text Local Payment Network Payout
+```json Local Payment Network Payout
 {
   "status": "success",
   "message": "",
@@ -309,7 +309,7 @@ next:
   }
 }
 ```
-```Text Transfer Within Tazapay
+```json Transfer Within Tazapay
 {
   "status": "success",
   "message": "",
@@ -396,7 +396,7 @@ next:
   }
 }
 ```
-```Text Crypto Payout
+```json Crypto Payout
 {
   "status": "success",
   "message": "",
