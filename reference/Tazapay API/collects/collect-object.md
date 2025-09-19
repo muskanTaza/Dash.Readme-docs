@@ -10,7 +10,7 @@ metadata:
 ---
 ## Object Structure
 
-```json
+```json Fiat Collect
 {
   "amount": 12829,
   "balance_transaction": "btr_u7ftrgipu69og2qj1j1pg",
@@ -66,6 +66,8 @@ metadata:
   "type": "wire_transfer"
 }
 }
+```
+```json Crypto Collect
 ```
 
 <br />
