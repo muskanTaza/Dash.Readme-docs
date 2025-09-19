@@ -120,7 +120,7 @@ next:
     }
 }
 ```
-```
+```Text Local Bank Payout
 {
   "status": "success",
   "message": "",
