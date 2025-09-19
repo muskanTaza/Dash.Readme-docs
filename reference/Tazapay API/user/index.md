@@ -3,6 +3,7 @@ title: Customers
 excerpt: ''
 deprecated: false
 hidden: false
+icon: far fa-user
 metadata:
   title: ''
   description: ''
