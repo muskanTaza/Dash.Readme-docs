@@ -220,6 +220,95 @@ next:
   }
 }
 ```
+```Text Local Payment Network Payout
+{
+  "status": "success",
+  "message": "",
+  "data": {
+    "amount": 144,
+    "balance_transaction": "btr_d35v6ddendp1ul1p0",
+    "beneficiary": "bnf_d2pkuchg06m8tvjg",
+    "beneficiary_details": {
+      "address": null,
+      "date_of_birth": "",
+      "destination": "",
+      "destination_details": {
+        "local_payment_network": {
+          "currency": "BRL",
+          "deposit_key": "fep@gmail.com",
+          "type": "pix_brl"
+        },
+        "type": "local_payment_network"
+      },
+      "documents": [],
+      "email": "fep@gmail.com",
+      "name": "Feete Pereira",
+      "name_local": "",
+      "national_identification_number": "",
+      "party_classification": "",
+      "phone": null,
+      "registration_number": "",
+      "tax_id": "3879876743",
+      "type": "individual"
+    },
+    "charge_type": "",
+    "confirmation_documents": [],
+    "created_at": "2025-09-18T11:56:35.627500Z",
+    "currency": "BRL",
+    "destination_fx_quote": "fx_d35v6go4p2dt8ec0",
+    "documents": [],
+    "holding_currency": "USD",
+    "holding_fx_quote": "fx_d35vfigo4p2dt8ecg",
+    "holding_fx_transaction": {
+      "exchange_rate": 5.158393,
+      "final": {
+        "amount": 144,
+        "currency": "BRL"
+      },
+      "id": "fx_d35vfigo4p2dt8ecg",
+      "initial": {
+        "amount": 28,
+        "currency": "USD"
+      },
+      "object": "fx_transaction"
+    },
+    "id": "pot_d35v6sp8dp1ul1m0",
+    "local": {
+      "fund_transfer_network": ""
+    },
+    "logistics_tracking_details": [],
+    "metadata": null,
+    "mt103": "",
+    "object": "payout",
+    "on_behalf_of": "",
+    "payout_fx_transaction": {
+      "exchange_rate": 1,
+      "final": {
+        "amount": 144,
+        "currency": "BRL"
+      },
+      "id": "fx_d35v6go4p2dt8ec0",
+      "initial": {
+        "amount": 144,
+        "currency": "BRL"
+      },
+      "object": "fx_transaction"
+    },
+    "payout_quote": "",
+    "purpose": "PYR001",
+    "reference_id": "",
+    "statement_descriptor": "",
+    "status": "succeeded",
+    "status_description": "",
+    "tracking_details": {
+      "tracking_number": "",
+      "tracking_type": "utr"
+    },
+    "transaction_description": "",
+    "type": "local_payment_network"
+  }
+}
+```
 
 ### Payout
 
