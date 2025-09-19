@@ -19,91 +19,105 @@ next:
 
 ## Object Parameters
 
-```json
+```json Swift Bank Payout
 {
-    "amount": 100000,
-    "balance_transaction": "btr_crv5u81h1l071n2fk1o0",
-    "beneficiary": "bnf_crv5r71h1l071n2fjvog",
-    "beneficiary_details": {
-        "address": {
-            "city": "test",
-            "country": "US",
-            "line1": "test",
-            "line2": "test",
-            "postal_code": "10038",
-            "state": "test"
-        },
-        "destination": "",
-        "destination_details": {
-            "bank": {
-                "account_number": "test",
-                "account_type": "",
-                "bank_codes": {
-                    "aba_code": "test",
-                    "swift_code": "test"
-                },
-                "bank_name": "city bank",
-                "branch_name": "",
-                "country": "US",
-                "currency": "USD",
-                "firc_required": false,
-                "purpose_code": ""
+  "status": "success",
+  "message": "",
+  "data": {
+      "amount": 100000,
+      "balance_transaction": "btr_d35pv4qcl8imrv60",
+      "beneficiary": "bnf_d3inm6ami8u10oqfg",
+      "beneficiary_details": {
+          "address": {
+              "country": "CN"
+              "line1": "Zhen Rui Yun Lu 66",
+              "postal_code": "311011"
             },
-            "type": "bank"
+          "date_of_birth": "",
+          "destination": "",
+          "destination_details": {
+              "bank": {
+                  "account_number": "33050167624000001030",
+                  "account_type": "",
+                  "bank_codes": {
+                      "swift_code": "PCBCCNBJZJX"
+                    },
+                  "bank_name": "CHINA CONSTRUCTION BANK, ZHEJIANG BRANCH",
+                  "branch_name": "",
+                  "country": "CN",
+                  "currency": "USD",
+                  "firc_required": false,
+                  "purpose_code": "",
+                  "transfer_type": "swift"
+                },
+              "type": "bank"
+            },
+          "documents": [],
+          "email": "",
+          "name": "IMPORT AND EXPORT CO., LTD",
+          "name_local": "",
+          "national_identification_number": "",
+          "party_classification": "",
+          "phone": {
+              "calling_code": "86"
+            },
+          "registration_number": "",
+          "tax_id": "",
+          "type": "business"
         },
-        "documents": [],
-        "email": "test@example.com",
-        "name": "test",
-        "phone": {
-            "calling_code": "1",
-            "number": "12312312345"
+      "charge_type": "ours",
+      "confirmation_documents": [],
+      "created_at": "2025-09-18T10:07:35.101708Z",
+      "currency": "USD",
+      "destination_fx_quote": "fx_d35tjpnfi4p2dt2hh0",
+      "documents": [],
+      "holding_currency": "USD",
+      "holding_fx_quote": "fx_d35tjpnfigp2dt2hgg",
+      "holding_fx_transaction": {
+          "exchange_rate": 1,
+          "final": {
+              "amount": 10000000,
+              "currency": "USD"
+            },
+          "id": "fx_d35tjpnfigp2dt2hgg",
+          "initial": {
+              "amount": 10000000,
+              "currency": "USD"
+            },
+          "object": "fx_transaction"
         },
-        "tax_id": "test",
-        "type": "individual"
-    },
-    "charge_type": "ours",
-    "created_at": "2024-10-03T09:08:48.467222Z",
-    "currency": "USD",
-    "documents": [],
-    "holding_currency": "EUR",
-    "holding_fx_transaction": {
-        "exchange_rate": 1.059191,
-        "final": {
-            "amount": 100000,
-            "currency": "USD"
+      "id": "pot_d35tjpn4qcl8iv30",
+      "logistics_tracking_details": [],
+      "metadata": null,
+      "mt103": "",
+      "object": "payout",
+      "on_behalf_of": "",
+      "payout_fx_transaction": {
+          "exchange_rate": 1,
+          "final": {
+              "amount": 10000000,
+              "currency": "USD"
+            },
+          "id": "fx_d35tfigo4p2dt2hh0",
+          "initial": {
+              "amount": 10000000,
+              "currency": "USD"
+            },
+          "object": "fx_transaction"
         },
-        "id": "fx_crv5u80dj96g452dfr2g",
-        "initial": {
-            "amount": 94411,
-            "currency": "EUR"
+      "payout_quote": "",
+      "purpose": "PYR003",
+      "reference_id": "",
+      "statement_descriptor": "",
+      "status": "succeeded",
+      "status_description": "",
+      "tracking_details": {
+          "tracking_number": "7833d-34b4-478-aac8-1184beae",
+          "tracking_type": "uetr"
         },
-        "object": "fx_transaction"
-    },
-    "id": "pot_crv5u81h1l071n2fk1ng",
-    "metadata": null,
-    "mt103": "",
-    "object": "payout",
-    "payout_fx_transaction": {
-        "exchange_rate": 1,
-        "final": {
-            "amount": 100000,
-            "currency": "USD"
-        },
-        "id": "fx_crv5u80dj96g452dfr20",
-        "initial": {
-            "amount": 100000,
-            "currency": "USD"
-        },
-        "object": "fx_transaction"
-    },
-    "purpose": "PYR001",
-    "reference_id": "Test_Ref",
-    "statement_descriptor": "tzp*Test",
-    "status": "processing",
-    "status_description": "",
-    "tracking_details": null,
-    "transaction_description": "Test Payout",
-    "type": "swift"
+      "transaction_description": "Payment for goods acc 125",
+      "type": "swift"
+    }
 }
 ```
 
