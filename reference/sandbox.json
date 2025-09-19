@@ -4619,7 +4619,96 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{}{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"amount\": 100000,\n        \"balance_transaction\": \"btr_crv5u81h1l071n2fk1o0\",\n        \"beneficiary\": \"bnf_crv5r71h1l071n2fjvog\",\n        \"beneficiary_details\": {\n            \"address\": {\n                \"city\": \"test\",\n                \"country\": \"US\",\n                \"line1\": \"test\",\n                \"line2\": \"test\",\n                \"postal_code\": \"10038\",\n                \"state\": \"test\"\n            },\n            \"destination\": \"bnk_crv5r71gb6vrb4oj77kg\",\n            \"destination_details\": {\n                \"bank\": {\n                    \"account_number\": \"test\",\n                    \"account_type\": \"\",\n                    \"bank_codes\": {\n                        \"aba_code\": \"test\",\n                        \"swift_code\": \"test\"\n                    },\n                    \"bank_name\": \"city bank\",\n                    \"branch_name\": \"\",\n                    \"country\": \"US\",\n                    \"currency\": \"USD\",\n                    \"firc_required\": false,\n                    \"purpose_code\": \"\"\n                },\n                \"type\": \"bank\"\n            },\n            \"documents\": [],\n            \"email\": \"test@example.com\",\n            \"name\": \"test\",\n            \"phone\": {\n                \"calling_code\": \"1\",\n                \"number\": \"12312312345\"\n            },\n            \"tax_id\": \"test\",\n            \"type\": \"individual\"\n        },\n        \"charge_type\": \"ours\",\n        \"created_at\": \"2024-10-03T09:08:48.467222Z\",\n        \"currency\": \"USD\",\n        \"documents\": [],\n        \"holding_currency\": \"EUR\",\n        \"holding_fx_transaction\": {\n            \"exchange_rate\": 1.059191,\n            \"final\": {\n                \"amount\": 100000,\n                \"currency\": \"USD\"\n            },\n            \"id\": \"fx_crv5u80dj96g452dfr2g\",\n            \"initial\": {\n                \"amount\": 94412,\n                \"currency\": \"EUR\"\n            },\n            \"object\": \"fx_transaction\"\n        },\n        \"id\": \"pot_crv5u81h1l071n2fk1ng\",\n        \"metadata\": null,\n        \"mt103\": \"\",\n        \"object\": \"payout\",\n        \"payout_fx_transaction\": {\n            \"exchange_rate\": 1,\n            \"final\": {\n                \"amount\": 100000,\n                \"currency\": \"USD\"\n            },\n            \"id\": \"fx_crv5u80dj96g452dfr20\",\n            \"initial\": {\n                \"amount\": 100000,\n                \"currency\": \"USD\"\n            },\n            \"object\": \"fx_transaction\"\n        },\n        \"purpose\": \"PYR001\",\n        \"reference_id\": \"Test_Ref\",\n        \"statement_descriptor\": \"tzp*Test\",\n        \"status\": \"processing\",\n        \"status_description\": \"\",\n        \"tracking_details\": null,\n        \"transaction_description\": \"Test Payout\",\n        \"type\": \"swift\",\n        \"on_behalf_of\":\"\"\n    }\n}"
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "amount": 100000,
+                        "balance_transaction": "btr_crv5u81h1l071n2fk1o0",
+                        "beneficiary": "bnf_crv5r71h1l071n2fjvog",
+                        "beneficiary_details": {
+                          "address": {
+                            "city": "test",
+                            "country": "US",
+                            "line1": "test",
+                            "line2": "test",
+                            "postal_code": "10038",
+                            "state": "test"
+                          },
+                          "destination": "bnk_crv5r71gb6vrb4oj77kg",
+                          "destination_details": {
+                            "bank": {
+                              "account_number": "test",
+                              "account_type": "",
+                              "bank_codes": {
+                                "aba_code": "test",
+                                "swift_code": "test"
+                              },
+                              "bank_name": "city bank",
+                              "branch_name": "",
+                              "country": "US",
+                              "currency": "USD",
+                              "firc_required": false,
+                              "purpose_code": ""
+                            },
+                            "type": "bank"
+                          },
+                          "documents": [],
+                          "email": "test@example.com",
+                          "name": "test",
+                          "phone": {
+                            "calling_code": "1",
+                            "number": "12312312345"
+                          },
+                          "tax_id": "test",
+                          "type": "individual"
+                        },
+                        "charge_type": "ours",
+                        "created_at": "2024-10-03T09:08:48.467222Z",
+                        "currency": "USD",
+                        "documents": [],
+                        "holding_currency": "EUR",
+                        "holding_fx_transaction": {
+                          "exchange_rate": 1.059191,
+                          "final": {
+                            "amount": 100000,
+                            "currency": "USD"
+                          },
+                          "id": "fx_crv5u80dj96g452dfr2g",
+                          "initial": {
+                            "amount": 94412,
+                            "currency": "EUR"
+                          },
+                          "object": "fx_transaction"
+                        },
+                        "id": "pot_crv5u81h1l071n2fk1ng",
+                        "metadata": null,
+                        "mt103": "",
+                        "object": "payout",
+                        "payout_fx_transaction": {
+                          "exchange_rate": 1,
+                          "final": {
+                            "amount": 100000,
+                            "currency": "USD"
+                          },
+                          "id": "fx_crv5u80dj96g452dfr20",
+                          "initial": {
+                            "amount": 100000,
+                            "currency": "USD"
+                          },
+                          "object": "fx_transaction"
+                        },
+                        "purpose": "PYR001",
+                        "reference_id": "Test_Ref",
+                        "statement_descriptor": "tzp*Test",
+                        "status": "processing",
+                        "status_description": "",
+                        "tracking_details": null,
+                        "transaction_description": "Test Payout",
+                        "type": "swift",
+                        "on_behalf_of": ""
+                      }
+                    }
                   }
                 }
               }
