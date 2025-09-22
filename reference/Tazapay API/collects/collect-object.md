@@ -18,49 +18,49 @@ metadata:
   "currency": "SGD",
   "destination": "cva_d2dgk0ka772psfuj1he0",
   "destination_details": {
-          "type": "virtual_account",
-          "virtual_account": {
-              "account_holder_name": "OM Grand Limited",
-              "account_number": "0109866363",
-              "bank_address": {
-                  "address_line_1": "",
-                  "address_line_2": "",
-                  "city": "",
-                  "country": "Singapore",
-                  "postal_code": "",
-                  "state": ""
-                },
-              "bank_branch": "8 MARINA BOULEVARD, 27-01, MARINA BAY FINANCIAL CENTRE",
-              "bank_codes": {
-                  "swift_code": "SLSGO2XXX"
-                },
-              "bank_name": "STANDARD BANK LIMITED",
-              "currencies": [
-                  "SGD"
-                ],
-              "iban": "",
-              "id": "cva_d2dgk0552psfuj1he0",
-              "object": "virtual_account"
-            }
-        },
+    "type": "virtual_account",
+    "virtual_account": {
+      "account_holder_name": "OM Grand Limited",
+      "account_number": "0109866363",
+      "bank_address": {
+              "address_line_1": "",
+              "address_line_2": "",
+              "city": "",
+              "country": "Singapore",
+              "postal_code": "",
+              "state": ""
+            },
+      "bank_branch": "8 MARINA BOULEVARD, 27-01, MARINA BAY FINANCIAL CENTRE",
+      "bank_codes": {
+              "swift_code": "SLSGO2XXX"
+            },
+      "bank_name": "STANDARD BANK LIMITED",
+      "currencies": [
+              "SGD"
+            ],
+      "iban": "",
+      "id": "cva_d2dgk0552psfuj1he0",
+      "object": "virtual_account"
+    }
+  },
   "holding_currency": "SGD",
   "id": "col_d2fapsh76og2qj0ej5g",
   "metadata": {},
   "object": "collect",
   "on_behalf_of": "",
   "payer_details": {
-          "additional_information": "CM Payment for Order 56",
-          "name": "CMC COMPANY",
-          "payer_bank": {
-              "account_number": "1112019837840",
-              "address": null,
-              "bank_codes": {
-                  "swift_code": "AJUM7CHBKXXX"
-                },
-              "name": "C Bank"
+    "additional_information": "CM Payment for Order 56",
+    "name": "CMC COMPANY",
+    "payer_bank": {
+      "account_number": "1112019837840",
+      "address": null,
+      "bank_codes": {
+              "swift_code": "AJUM7CHBKXXX"
             },
-          "reference_id": ""
-        },
+      "name": "C Bank"
+    },
+    "reference_id": ""
+  },
   "status": "succeeded",
   "tracking_details": null,
   "type": "wire_transfer"
@@ -140,8 +140,6 @@ metadata:
 
 <br />
 
-<br />
-
 ### Bank Address
 
 | Field          | Type   | Description                                  |
@@ -163,8 +161,6 @@ metadata:
 | address        | object/null | The payer’s bank address, if provided. |
 | bank_codes     | object      | The payer’s bank codes.                |
 | name           | string      | The payer’s bank name.                 |
-
-<br />
 
 <br />
 
