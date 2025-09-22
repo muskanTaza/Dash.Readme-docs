@@ -18,4 +18,7 @@ metadata:
 
 ## Object Parameters
 
-<br />
+| Field           | Type   | Description                                                           |
+| --------------- | ------ | --------------------------------------------------------------------- |
+| tracking_number | string | The tracking number (UETR, UTR, transaction hash, etc.).              |
+| tracking_type   | enum   | The tracking type. [Values: `uetr`, `UTR`, `utr`, `transaction_hash`] |
