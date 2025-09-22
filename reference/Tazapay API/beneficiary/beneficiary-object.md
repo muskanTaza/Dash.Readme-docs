@@ -18,46 +18,46 @@ next:
 
 ```json
 {
-        "address": {
-            "city": "Test",
-            "country": "IN",
-            "line1": "Test",
-            "line2": "Test",
-            "postal_code": "110017",
-            "state": "Test"
+  "address": {
+          "city": "Test",
+          "country": "IN",
+          "line1": "Test",
+          "line2": "Test",
+          "postal_code": "110017",
+          "state": "Test"
         },
-        "created_at": "2024-10-03T11:03:40.326462Z",
-        "destination": "bnk_crv7k337eoqgk10pqp40",
-        "destination_details": {
-            "bank": {
-                "account_number": "Test",
-                "account_type": "",
-                "bank_codes": {
-                    "ifsc_code": "Test",
-                    "swift_code": "Test"
+  "created_at": "2024-10-03T11:03:40.326462Z",
+  "destination": "bnk_crv7k337eoqgk10pqp40",
+  "destination_details": {
+          "bank": {
+              "account_number": "Test",
+              "account_type": "",
+              "bank_codes": {
+                  "ifsc_code": "Test",
+                  "swift_code": "Test"
                 },
-                "bank_name": "hdfc",
-                "branch_name": "",
-                "country": "IN",
-                "currency": "INR",
-                "firc_required": true,
-                "purpose_code": "Test"
+              "bank_name": "hdfc",
+              "branch_name": "",
+              "country": "IN",
+              "currency": "INR",
+              "firc_required": true,
+              "purpose_code": "Test"
             },
-            "type": "bank"
+          "type": "bank"
         },
-        "documents": [],
-        "email": "test@example.com",
-        "id": "bnf_crv7k31h1l071n2fkbjg",
-        "metadata": {},
-        "name": "test",
-        "object": "beneficiary",
-        "phone": {
-            "calling_code": "91",
-            "number": "9231231231"
+  "documents": [],
+  "email": "test@example.com",
+  "id": "bnf_crv7k31h1l071n2fkbjg",
+  "metadata": {},
+  "name": "test",
+  "object": "beneficiary",
+  "phone": {
+          "calling_code": "91",
+          "number": "9231231231"
         },
-        "tax_id": "",
-        "type": "individual"
-    }
+  "tax_id": "",
+  "type": "individual"
+}
 ```
 
 <br />
