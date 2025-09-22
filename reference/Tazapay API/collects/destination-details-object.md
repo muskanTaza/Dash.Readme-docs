@@ -47,7 +47,7 @@ metadata:
 
 <br />
 
-### Virtual Account
+## Virtual Account
 
 | Field               | Type   | Description                                           |
 | ------------------- | ------ | ----------------------------------------------------- |
@@ -64,6 +64,19 @@ metadata:
 
 <br />
 
+### Bank Address
+
+| Field          | Type   | Description                                  |
+| -------------- | ------ | -------------------------------------------- |
+| address_line_1 | string | The first line of the bank’s address.        |
+| address_line_2 | string | The second line of the bank’s address.       |
+| city           | string | The city where the bank is located.          |
+| country        | string | The country where the bank is located.       |
+| postal_code    | string | The postal code of the bank’s address.       |
+| state          | string | The state or province of the bank’s address. |
+
+<br />
+
 ## Wallet
 
 | Field           | Type   | Description                                     |
@@ -72,3 +85,7 @@ metadata:
 | type            | string | The blockchain or wallet type (e.g., ethereum). |
 | deposit_address | string | The deposit address of the wallet.              |
 | currencies      | array  | The list of currencies supported by the wallet. |
+
+<br />
+
+<br />
