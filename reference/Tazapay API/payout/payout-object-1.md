@@ -531,27 +531,6 @@ next:
 
 ***
 
-### Beneficiary Details
-
-| Field                          | Type   | Description                                                                 |
-| ------------------------------ | ------ | --------------------------------------------------------------------------- |
-| address                        | object | The address of the beneficiary. (See **Address Table**)                     |
-| date_of_birth                  | string | Date of birth of the beneficiary (for individuals).                         |
-| destination                    | string | The destination identifier (if applicable).                                 |
-| destination_details            | object | The details of the destination account. (See **Destination Details Table**) |
-| documents                      | array  | The list of documents related to the beneficiary.                           |
-| email                          | string | The email address of the beneficiary.                                       |
-| name                           | string | The name of the beneficiary.                                                |
-| name_local                     | string | The local language name of the beneficiary.                                 |
-| national_identification_number | string | The national ID number of the beneficiary.                                  |
-| party_classification           | string | Classification of the beneficiary (e.g., `self`, `third_party`).            |
-| phone                          | object | The phone details of the beneficiary. (See **Phone Table**)                 |
-| registration_number            | string | The registration number (for business beneficiaries).                       |
-| tax_id                         | string | The tax identification number of the beneficiary.                           |
-| type                           | enum   | The type of the beneficiary. [Values: `business`, `individual`]             |
-
-***
-
 ### Destination Details
 
 | Field                 | Subfield        | Type    | Description                                                                                     |
