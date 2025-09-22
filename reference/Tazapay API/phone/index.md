@@ -2,7 +2,7 @@
 title: Phone
 deprecated: false
 hidden: false
-icon: far fa-money-check-dollar-pen
+icon: far fa-phone
 metadata:
   robots: index
 ---
