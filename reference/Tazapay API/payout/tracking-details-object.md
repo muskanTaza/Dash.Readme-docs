@@ -5,3 +5,7 @@ hidden: false
 metadata:
   robots: index
 ---
+## Object Structure
+
+```json
+```
