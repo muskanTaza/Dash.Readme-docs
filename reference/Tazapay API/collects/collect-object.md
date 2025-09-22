@@ -147,8 +147,6 @@ metadata:
 
 <br />
 
-
-
 <br />
 
 ### Bank Address
@@ -175,14 +173,7 @@ metadata:
 
 <br />
 
-## Wallet
 
-| Field           | Type   | Description                                     |
-| --------------- | ------ | ----------------------------------------------- |
-| id              | string | The unique identifier of the wallet.            |
-| type            | string | The blockchain or wallet type (e.g., ethereum). |
-| deposit_address | string | The deposit address of the wallet.              |
-| currencies      | array  | The list of currencies supported by the wallet. |
 
 <br />
 
