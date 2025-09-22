@@ -16,48 +16,80 @@ next:
 ---
 ## Parameters
 
-```json Beneficiary
+```json Individual
 {
   "address": {
-          "city": "Test",
-          "country": "IN",
-          "line1": "Test",
-          "line2": "Test",
-          "postal_code": "110017",
-          "state": "Test"
-        },
-  "created_at": "2024-10-03T11:03:40.326462Z",
-  "destination": "bnk_crv7k337eoqgk10pqp40",
+        "city": "Vrtmore",
+        "country": "JM",
+        "line1": "it12 3cwth",
+        "postal_code": "00000",
+        "state": "Vortmore"
+      },
+  "date_of_birth": "2003-04-04",
+  "destination": "",
   "destination_details": {
-          "bank": {
-              "account_number": "Test",
-              "account_type": "",
-              "bank_codes": {
-                  "ifsc_code": "Test",
-                  "swift_code": "Test"
-                },
-              "bank_name": "hdfc",
-              "branch_name": "",
-              "country": "IN",
-              "currency": "INR",
-              "firc_required": true,
-              "purpose_code": "Test"
-            },
-          "type": "bank"
-        },
+        "type": "wallet",
+        "wallet": {
+          "currency": "USDC",
+          "deposit_address": "09e53bcac0f2edxnjsui87f8bb7a9faf64789ed8",
+          "type": "ethereum"
+        }
+      },
   "documents": [],
-  "email": "test@example.com",
-  "id": "bnf_crv7k31h1l071n2fkbjg",
-  "metadata": {},
-  "name": "test",
-  "object": "beneficiary",
+  "email": "abc@gmail.com",
+  "name": "Scott",
+  "name_local": "",
+  "national_identification_number": "",
+  "party_classification": "third_party",
   "phone": {
-          "calling_code": "91",
-          "number": "9231231231"
-        },
-  "tax_id": "",
+    "calling_code": "91",
+    "number": "9231231231"
+  },
+  "tax_id": "SOXX7291",
   "type": "individual"
 }
+```
+```json Business
+{
+  "address": {
+        "city": "Vrtmore",
+        "country": "JM",
+        "line1": "it12 3cwth",
+        "postal_code": "00000",
+        "state": "Vortmore"
+  },
+  "destination": "",
+  "destination_details": {
+        "bank": {
+          "account_type": "",
+          "bank_codes": {
+            "swift_code": "FBDEFF"
+          },
+          "bank_name": "ER VOLKSBANK EG",
+          "branch_name": "",
+          "country": "DE",
+          "currency": "EUR",
+          "firc_required": false,
+          "iban": "DE535019045650474185",
+          "purpose_code": "",
+          "transfer_type": "any"
+        },
+        "type": "bank"
+      },
+  "documents": [],
+  "email": "",
+  "name": "GMBH",
+  "name_local": "",
+  "national_identification_number": "",
+  "party_classification": "",
+  "phone": {
+    "calling_code": "49",
+    "number": "9231231231"
+  },
+  "registration_number": "",
+  "tax_id": "",
+  "type": "business"
+},
 ```
 
 <br />
