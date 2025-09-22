@@ -62,8 +62,6 @@ next:
 
 <br />
 
-<br />
-
 ### Beneficiary Details
 
 | Field                          | Type                   | Description                                                                   |
