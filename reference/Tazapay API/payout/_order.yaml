@@ -1,4 +1,5 @@
 - payout-object-1
+- fx-transaction-object
 - create-payout
 - fetch-payout
 - update-payout
