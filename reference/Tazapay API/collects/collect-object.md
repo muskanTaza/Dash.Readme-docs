@@ -139,4 +139,3 @@ metadata:
 | type                |                  | string                 | The type of payment method used (e.g., wire_transfer).                                                                                                                     |
 
 <br />
-
