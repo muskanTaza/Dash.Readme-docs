@@ -10349,7 +10349,8 @@
                         "enum": [
                           "bank",
                           "wallet",
-                          "local_payment_network"
+                          "local_payment_network",
+                          "tazapay_account"
                         ]
                       },
                       "bank": {
@@ -10548,7 +10549,11 @@
                   "party_classification": {
                     "type": "string",
                     "description": "Type of relationship between beneficiary and creator of beneficiary Possible values - self, third_party (Mandatory if destination_details.type is a wallet)",
-                    "default": ""
+                    "default": "",
+                    "enum": [
+                      "self",
+                      "third_party"
+                    ]
                   }
                 }
               },
