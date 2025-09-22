@@ -77,28 +77,28 @@ metadata:
 
 ### Wallet
 
-| Subfield        | Type   | Description                               |
-| :-------------- | :----- | :---------------------------------------- |
-| currency        | string | The cryptocurrency type (e.g., `USDC`).   |
-| deposit_address | string | The wallet deposit address.               |
-| type            | enum   | The blockchain type. [Values: `ethereum`] |
+| Subfield        | Type   | Description                                                            |
+| :-------------- | :----- | :--------------------------------------------------------------------- |
+| currency        | string | The cryptocurrency type (e.g., `USDC`).                                |
+| deposit_address | string | The wallet deposit address.                                            |
+| type            | enum   | The blockchain type. [Values: `ethereum`, `tron`, `polygon`, `solana`] |
 
 <br />
 
 ### Local Payment Network
 
-| Subfield    | Type   | Description                                     |
-| :---------- | :----- | :---------------------------------------------- |
-| currency    | string | The currency used in the local payment network. |
-| deposit_key | string | The deposit key (e.g., PIX key in Brazil).      |
+| Subfield    | Type   | Description                                         |
+| :---------- | :----- | :-------------------------------------------------- |
+| currency    | string | The currency used in the local payment network.     |
+| deposit_key | string | The deposit key (e.g., PIX key in Brazil).          |
+| type        | enum   | The local payment network type. [Values: `pix_brl`] |
 
 <br />
 
 ### Tazapay Account
 
-| Subfield        | Type   | Description                                         |
-| :-------------- | :----- | :-------------------------------------------------- |
-| type            | enum   | The local payment network type. [Values: `pix_brl`] |
-| deposit_address | string | The Tazapay account deposit address.                |
+| Subfield        | Type   | Description                          |
+| :-------------- | :----- | :----------------------------------- |
+| deposit_address | string | The Tazapay account deposit address. |
 
 <br />
