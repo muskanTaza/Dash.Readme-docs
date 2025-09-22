@@ -153,25 +153,3 @@ next:
 | webhook_url                 |            | string                 | The URL for webhook notifications related to this transaction.             |
 
 <br />
-
-### Address
-
-| Field       | Type   | Description                                                       |
-| ----------- | ------ | ----------------------------------------------------------------- |
-| city        | string | The city associated with the address.                             |
-| country     | string | The country associated with the address (e.g., SG for Singapore). |
-| line1       | string | The first line of the address.                                    |
-| line2       | string | The second line of the address (optional).                        |
-| postal_code | string | The postal code of the address.                                   |
-| state       | string | The state or province associated with the address.                |
-
-<br />
-
-### Phone
-
-| Field        | Type   | Description                                                       |
-| ------------ | ------ | ----------------------------------------------------------------- |
-| calling_code | string | The international calling code for the phone number.              |
-| number       | string | The phone number associated with the billing or shipping address. |
-
-<br />
