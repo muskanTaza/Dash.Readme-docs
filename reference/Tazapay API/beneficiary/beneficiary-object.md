@@ -45,7 +45,7 @@ next:
     "calling_code": "91",
     "number": "9231231231"
   },
-  "tax_id": "SOXX7291",
+  "tax_id": "",
   "type": "individual"
 }
 ```
@@ -61,7 +61,7 @@ next:
   "destination": "",
   "destination_details": {
         "bank": {
-          "account_type": "",
+          "account_type": "savings",
           "bank_codes": {
             "swift_code": "FBDEFF"
           },
