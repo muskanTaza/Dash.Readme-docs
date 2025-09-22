@@ -531,19 +531,6 @@ next:
 
 <br />
 
-### FX Transaction
-
-| Field            | Type   | Description                              |
-| ---------------- | ------ | ---------------------------------------- |
-| exchange_rate    | number | The exchange rate applied for FX.        |
-| final.amount     | number | The final amount after FX conversion.    |
-| final.currency   | string | The currency of the final amount.        |
-| initial.amount   | number | The initial amount before FX conversion. |
-| initial.currency | string | The currency of the initial amount.      |
-| id               | string | The FX transaction ID.                   |
-
-***
-
 ### Tracking Details
 
 | Field           | Type   | Description                                                           |
