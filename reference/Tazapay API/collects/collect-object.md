@@ -119,24 +119,24 @@ metadata:
 
 ### Collect
 
-| Field               | Subfield         | Type                   | Description                                                                                                                                  |
-| ------------------- | ---------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| amount              |                  | number                 | The total amount of the collect transaction.                                                                                                 |
-| balance_transaction |                  | string                 | The ID of the balance transaction associated with this collect.                                                                              |
-| created_at          |                  | string (ISO timestamp) | The timestamp when the collect transaction was created.                                                                                      |
-| currency            |                  | string                 | The transaction currency (e.g., SGD).                                                                                                        |
-| destination         |                  | string                 | The destination ID for the collected funds.                                                                                                  |
-| destination_details |                  | object                 | Details about the destination account where the funds are collected. Destination details Object.                                             |
-| holding_currency    |                  | string                 | The holding currency used for the transaction.                                                                                               |
-| id                  |                  | string                 | The unique Tazapay identifier for the collect transaction.                                                                                   |
-| metadata            |                  | object                 | Set of key-value pairs attached to the transaction.                                                                                          |
-| object              |                  | string                 | The type of object, which is "collect".                                                                                                      |
-| on_behalf_of        |                  | string                 | The party on whose behalf the funds are collected, if applicable.                                                                            |
-| payer_details       |                  | object                 | Details about the payer who initiated the transfer. [Payer Details Object](https://docs.tazapay.com/update/reference/payer-details-object#/) |
-| status              |                  | string                 | The current status of the collect transaction (e.g., succeeded).                                                                             |
-| tracking_details    |                  | object                 | Tracking details for the transaction, if available.                                                                                          |
-|                     | transaction_hash | string                 | Transaction hash for a crypto transaction                                                                                                    |
-| type                |                  | string                 | The type of payment method used (e.g., wire_transfer).                                                                                       |
+| Field               | Subfield         | Type                   | Description                                                                                                                                                                |
+| ------------------- | ---------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| amount              |                  | number                 | The total amount of the collect transaction.                                                                                                                               |
+| balance_transaction |                  | string                 | The ID of the balance transaction associated with this collect.                                                                                                            |
+| created_at          |                  | string (ISO timestamp) | The timestamp when the collect transaction was created.                                                                                                                    |
+| currency            |                  | string                 | The transaction currency (e.g., SGD).                                                                                                                                      |
+| destination         |                  | string                 | The destination ID for the collected funds.                                                                                                                                |
+| destination_details |                  | object                 | Details about the destination account where the funds are collected. [Destination details Object.](https://docs.tazapay.com/update/reference/destination-details-object#/) |
+| holding_currency    |                  | string                 | The holding currency used for the transaction.                                                                                                                             |
+| id                  |                  | string                 | The unique Tazapay identifier for the collect transaction.                                                                                                                 |
+| metadata            |                  | object                 | Set of key-value pairs attached to the transaction.                                                                                                                        |
+| object              |                  | string                 | The type of object, which is "collect".                                                                                                                                    |
+| on_behalf_of        |                  | string                 | The party on whose behalf the funds are collected, if applicable.                                                                                                          |
+| payer_details       |                  | object                 | Details about the payer who initiated the transfer. [Payer Details Object](https://docs.tazapay.com/update/reference/payer-details-object#/)                               |
+| status              |                  | string                 | The current status of the collect transaction (e.g., succeeded).                                                                                                           |
+| tracking_details    |                  | object                 | Tracking details for the transaction, if available.                                                                                                                        |
+|                     | transaction_hash | string                 | Transaction hash for a crypto transaction                                                                                                                                  |
+| type                |                  | string                 | The type of payment method used (e.g., wire_transfer).                                                                                                                     |
 
 <br />
 
