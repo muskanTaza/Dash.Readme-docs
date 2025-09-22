@@ -134,12 +134,7 @@ metadata:
 | metadata            |                        | object                 | Set of key-value pairs attached to the transaction.                                   |
 | object              |                        | string                 | The type of object, which is "collect".                                               |
 | on_behalf_of        |                        | string                 | The party on whose behalf the funds are collected, if applicable.                     |
-| payer_details       |                        | object                 | Details about the payer who initiated the transfer.                                   |
-|                     | additional_information | string                 | Additional information about the payment (e.g., payment reference).                   |
-|                     | name                   | string                 | Name of the payer.                                                                    |
-|                     | payer_bank             | object                 | Payer’s bank details (See Payer Bank Table).                                          |
-|                     | reference_id           | string                 | Reference identifier for the payer’s transaction.                                     |
-|                     | payer_wallet           | object                 | Payer's wallet details (See Payer's wallet table)                                     |
+| payer_details       |                        | object                 | Details about the payer who initiated the transfer. Payer Details Object              |
 | status              |                        | string                 | The current status of the collect transaction (e.g., succeeded).                      |
 | tracking_details    |                        | object                 | Tracking details for the transaction, if available.                                   |
 |                     | transaction_hash       | string                 | Transaction hash for a crypto transaction                                             |
@@ -172,8 +167,6 @@ metadata:
 | name           | string      | The payer’s bank name.                 |
 
 <br />
-
-
 
 <br />
 
