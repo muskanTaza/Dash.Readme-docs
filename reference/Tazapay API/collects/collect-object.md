@@ -140,20 +140,3 @@ metadata:
 
 <br />
 
-### Payer Bank
-
-| Field          | Type        | Description                            |
-| -------------- | ----------- | -------------------------------------- |
-| account_number | string      | The payer’s bank account number.       |
-| address        | object/null | The payer’s bank address, if provided. |
-| bank_codes     | object      | The payer’s bank codes.                |
-| name           | string      | The payer’s bank name.                 |
-
-<br />
-
-## Payer Wallet
-
-| id              | string | The unique identifier of the wallet.            |
-| --------------- | ------ | ----------------------------------------------- |
-| type            | string | The blockchain or wallet type (e.g., ethereum). |
-| deposit_address | string | The deposit address of the wallet.              |
