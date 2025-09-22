@@ -44,6 +44,14 @@ metadata:
   "type": "local_payment_network"
 }
 ```
+```json Tazapay Account
+{
+  "tazapay_account": {
+    "deposit_address": "ce4f51ue@tzp"
+  },
+    "type": "tazapay_account"
+}
+```
 
 <br />
 
