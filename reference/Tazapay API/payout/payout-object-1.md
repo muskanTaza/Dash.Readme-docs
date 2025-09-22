@@ -496,37 +496,37 @@ next:
 
 ### Payout
 
-| Field                       | Type   | Description                                                                                                                          |
-| --------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| amount                      | number | The total amount for the payout transaction.                                                                                         |
-| balance_transaction         | string | The Tazapay ID of the balance transaction associated with the payout.                                                                |
-| beneficiary                 | string | The Tazapay ID of the beneficiary receiving the payout.                                                                              |
-| beneficiary_details         | object | The details of the beneficiary. (See **Beneficiary Details Table**)                                                                  |
-| charge_type                 | enum   | The charge type for the payout. [Values: `ours`, `shared`]                                                                           |
-| confirmation_documents      | array  | The list of confirmation documents for the payout.                                                                                   |
-| created_at                  | string | The timestamp when the payout was created (ISO 8601).                                                                                |
-| currency                    | string | The currency of the payout amount.                                                                                                   |
-| destination_fx_quote        | string | The FX quote ID used for conversion to destination currency.                                                                         |
-| documents                   | array  | The list of documents related to the payout.                                                                                         |
-| holding_currency            | string | The currency used for holding funds before payout.                                                                                   |
-| holding_fx_quote            | string | The FX quote ID used for holding currency.                                                                                           |
-| holding_fx_transaction      | object | The FX transaction details for the holding currency. (See **FX Transaction Table**)                                                  |
-| id                          | string | The unique Tazapay identifier for the payout.                                                                                        |
-| local.fund_transfer_network | string | The local transfer network used (if applicable).                                                                                     |
-| logistics_tracking_details  | array  | The logistics tracking details if payout is linked with goods.                                                                       |
-| metadata                    | object | Key-value metadata attached to the payout.                                                                                           |
-| mt103                       | string | The MT103 SWIFT message reference for the payout (if applicable).                                                                    |
-| object                      | string | The type of object, always `"payout"`.                                                                                               |
-| on_behalf_of                | string | The account ID if the payout was made on behalf of another entity.                                                                   |
-| payout_fx_transaction       | object | The FX transaction details for payout currency. (See **FX Transaction Table**)                                                       |
-| payout_quote                | string | The payout quote reference (if applicable).                                                                                          |
-| purpose                     | enum   | The purpose code for the payout. [Values: PYR001–PYR030]. Full list in [docs](https://docs.tazapay.com/docs/reasons-for-payout).     |
-| reference_id                | string | The merchant’s reference ID for the payout.                                                                                          |
-| statement_descriptor        | string | The statement descriptor that appears on the beneficiary’s bank statement.                                                           |
-| status                      | enum   | The current status of the payout. [Values: `Processing`, `Requires Approval`, `Requires Action`, `Succeeded`, `Failed`, `Cancelled`] |
-| status_description          | string | A description of the current payout status.                                                                                          |
-| tracking_details            | object | Tracking details of the payout. (See **Tracking Details Table**)                                                                     |
-| transaction_description     | string | A description of the payout transaction provided by the merchant.                                                                    |
-| type                        | enum   | The type of payout. [Values: `swift`, `local`, `wallet`, `local_payment_network`, `tazapay_account`]                                 |
+| Field                       | Type   | Description                                                                                                                                          |
+| --------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| amount                      | number | The total amount for the payout transaction.                                                                                                         |
+| balance_transaction         | string | The Tazapay ID of the balance transaction associated with the payout.                                                                                |
+| beneficiary                 | string | The Tazapay ID of the beneficiary receiving the payout.                                                                                              |
+| beneficiary_details         | object | The details of the beneficiary.  **[Beneficiary Details Object](https://docs.tazapay.com/update/reference/beneficiary-object#/)**                    |
+| charge_type                 | enum   | The charge type for the payout. [Values: `ours`, `shared`]                                                                                           |
+| confirmation_documents      | array  | The list of confirmation documents for the payout.                                                                                                   |
+| created_at                  | string | The timestamp when the payout was created (ISO 8601).                                                                                                |
+| currency                    | string | The currency of the payout amount.                                                                                                                   |
+| destination_fx_quote        | string | The FX quote ID used for conversion to destination currency.                                                                                         |
+| documents                   | array  | The list of documents related to the payout.                                                                                                         |
+| holding_currency            | string | The currency used for holding funds before payout.                                                                                                   |
+| holding_fx_quote            | string | The FX quote ID used for holding currency.                                                                                                           |
+| holding_fx_transaction      | object | The FX transaction details for the holding currency.  **[FX Transaction Object](https://docs.tazapay.com/update/reference/fx-transaction-object#/)** |
+| id                          | string | The unique Tazapay identifier for the payout.                                                                                                        |
+| local.fund_transfer_network | string | The local transfer network used (if applicable).                                                                                                     |
+| logistics_tracking_details  | array  | The logistics tracking details if payout is linked with goods.                                                                                       |
+| metadata                    | object | Key-value metadata attached to the payout.                                                                                                           |
+| mt103                       | string | The MT103 SWIFT message reference for the payout (if applicable).                                                                                    |
+| object                      | string | The type of object, always `"payout"`.                                                                                                               |
+| on_behalf_of                | string | The account ID if the payout was made on behalf of another entity.                                                                                   |
+| payout_fx_transaction       | object | The FX transaction details for payout currency. (**[FX Transaction Object](https://docs.tazapay.com/update/reference/fx-transaction-object#/)**)     |
+| payout_quote                | string | The payout quote reference (if applicable).                                                                                                          |
+| purpose                     | enum   | The purpose code for the payout. [Values: PYR001–PYR030]. Full list in [docs](https://docs.tazapay.com/docs/reasons-for-payout).                     |
+| reference_id                | string | The merchant’s reference ID for the payout.                                                                                                          |
+| statement_descriptor        | string | The statement descriptor that appears on the beneficiary’s bank statement.                                                                           |
+| status                      | enum   | The current status of the payout. [Values: `Processing`, `Requires Approval`, `Requires Action`, `Succeeded`, `Failed`, `Cancelled`]                 |
+| status_description          | string | A description of the current payout status.                                                                                                          |
+| tracking_details            | object | Tracking details of the payout. (**[Tracking Details Object](https://docs.tazapay.com/update/reference/tracking-details-object#/)**)                 |
+| transaction_description     | string | A description of the payout transaction provided by the merchant.                                                                                    |
+| type                        | enum   | The type of payout. [Values: `swift`, `local`, `wallet`, `local_payment_network`, `tazapay_account`]                                                 |
 
 <br />
