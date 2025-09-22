@@ -128,83 +128,61 @@ next:
 
 ### Checkout
 
-| Field                      | Subfield               | Type                   | Description                                                                      |
-| -------------------------- | ---------------------- | ---------------------- | -------------------------------------------------------------------------------- |
-| id                         |                        | string                 | The Tazapay unique identifier for the checkout transaction.                      |
-| object                     |                        | string                 | The type of object, which is "checkout".                                         |
-| invoice_currency           |                        | string                 | The currency of the invoice (e.g., USD).                                         |
-| amount                     |                        | number                 | The total amount to be paid.                                                     |
-| amount_paid                |                        | number                 | The amount that has already been paid.                                           |
-| customer_details           |                        | object                 | The details of the customer.                                                     |
-|                            | country                | string                 | The country of the customer (e.g., SG for Singapore).                            |
-|                            | email                  | string                 | The email address of the customer.                                               |
-|                            | name                   | string                 | The name of the customer.                                                        |
-|                            | phone                  | object                 | The phone details of the customer. (See Phone Table)                             |
-| customer                   |                        | string                 | The customer ID related to the checkout.                                         |
-| billing_details            |                        | object                 | The billing details of the customer.                                             |
-|                            | address                | object                 | The address details of the billing information. (See Address Table)              |
-|                            | label                  | string                 | The label for the billing address (e.g., Home, Office).                          |
-|                            | name                   | string                 | The name of the person being billed.                                             |
-|                            | phone                  | object                 | The phone details for billing. (See Phone Table)                                 |
-| shipping_details           |                        | object                 | The shipping details of the customer.                                            |
-|                            | address                | object                 | The address details of the shipping information. (See Address Table)             |
-|                            | label                  | string                 | The label for the shipping address (e.g., Home, Office).                         |
-|                            | name                   | string                 | The name of the person receiving the shipment.                                   |
-|                            | phone                  | object                 | The phone details for shipping. (See Phone Table)                                |
-| success_url                |                        | string                 | The URL where the user is redirected after a successful transaction.             |
-| cancel_url                 |                        | string                 | The URL where the user is redirected after a cancelled transaction.              |
-| webhook_url                |                        | string                 | The URL for webhook notifications regarding this transaction.                    |
-| payment_methods            |                        | array                  | The list of payment methods available (e.g., paynow_sgd, card).                  |
-| transaction_description    |                        | string                 | A description of the transaction (e.g., "1 x trousers").                         |
-| expires_at                 |                        | string (ISO Timestamp) | The expiry date and time of the checkout session.                                |
-| created_at                 |                        | string (ISO Timestamp) | The creation date and time of the checkout session.                              |
-| url                        |                        | string                 | The URL for the checkout page.                                                   |
-| payment_status             |                        | string                 | The payment status of the transaction (e.g., paid, pending).                     |
-| payment_status_description |                        | string                 | Additional details on the payment status                                         |
-| status                     |                        | string                 | The status of the checkout session (e.g., expired, active).                      |
-| payin                      |                        | string                 | The unique Tazapay ID of the related payin transaction.                          |
-| payment_attempts           |                        | array                  | The list of payment attempts.                                                    |
-|                            | id                     | string                 | The unique Tazapay identifier for the payment attempt.                           |
-|                            | object                 | string                 | The type of object, which is "payment_attempt".                                  |
-|                            | created_at             | string                 | The creation date and time of the payment attempt (ISO format).                  |
-|                            | amount                 | number                 | The amount attempted to be paid.                                                 |
-|                            | charge_currency        | string                 | The currency in which the charge was made (e.g., SGD).                           |
-|                            | payin                  | string                 | The ID of the related payin transaction.                                         |
-|                            | payment_method_details | object                 | The payment method used for the attempt. (See Payment Method Details Table)      |
-|                            | refunded               | boolean                | Indicates if the payment attempt was refunded.                                   |
-|                            | status                 | string                 | The status of the payment attempt (e.g., succeeded, failed).                     |
-|                            | status_description     | string/null            | A description of the status (optional).                                          |
-|                            | final_currency         | string                 | The final currency after any conversion (e.g., USD).                             |
-|                            | fx_transaction         | object                 | The foreign exchange transaction details. (See FX Transaction Table)             |
-| latest_payment_attempt     |                        | string                 | The ID of the latest payment attempt.                                            |
-| partially_paid             |                        | boolean                | Indicates if the payment was partially paid.                                     |
-| paid_in_excess             |                        | boolean                | Indicates if the payment was made in excess.                                     |
-| transaction_documents      |                        | array                  | List of transaction-related documents (if any).                                  |
-| reference_id               |                        | string                 | The reference ID for the transaction (e.g., "mystore_order_00001").              |
-| metadata                   |                        | object                 | Set of key-value pairs attached to the checkout object.                          |
-| customer_fee_percentage    |                        | integer                | Customer fees percentage incase the fees is split between customer and merchant. |
-
-<br />
-
-### Address
-
-| Field       | Type   | Description                                                    |
-| ----------- | ------ | -------------------------------------------------------------- |
-| city        | string | The city of the billing or shipping address.                   |
-| country     | string | The country of the billing or shipping address.                |
-| line1       | string | The first line of the billing or shipping address.             |
-| line2       | string | The second line of the billing or shipping address (optional). |
-| postal_code | string | The postal code of the billing or shipping address.            |
-| state       | string | The state or province of the billing or shipping address.      |
-
-<br />
-
-### Phone
-
-| Field        | Type   | Description                                                        |
-| ------------ | ------ | ------------------------------------------------------------------ |
-| calling_code | string | The international calling code for the beneficiary's phone number. |
-| number       | string | The phone number of the beneficiary.                               |
+| Field                      | Subfield               | Type                   | Description                                                                                                                               |
+| -------------------------- | ---------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| id                         |                        | string                 | The Tazapay unique identifier for the checkout transaction.                                                                               |
+| object                     |                        | string                 | The type of object, which is "checkout".                                                                                                  |
+| invoice_currency           |                        | string                 | The currency of the invoice (e.g., USD).                                                                                                  |
+| amount                     |                        | number                 | The total amount to be paid.                                                                                                              |
+| amount_paid                |                        | number                 | The amount that has already been paid.                                                                                                    |
+| customer_details           |                        | object                 | The details of the customer.                                                                                                              |
+|                            | country                | string                 | The country of the customer (e.g., SG for Singapore).                                                                                     |
+|                            | email                  | string                 | The email address of the customer.                                                                                                        |
+|                            | name                   | string                 | The name of the customer.                                                                                                                 |
+|                            | phone                  | object                 | The phone details of the customer. ([See Phone Table](https://docs.tazapay.com/update/reference/phone-object#/))                          |
+| customer                   |                        | string                 | The customer ID related to the checkout.                                                                                                  |
+| billing_details            |                        | object                 | The billing details of the customer.                                                                                                      |
+|                            | address                | object                 | The address details of the billing information. ([See Address Table](https://docs.tazapay.com/update/reference/address-object#/))         |
+|                            | label                  | string                 | The label for the billing address (e.g., Home, Office).                                                                                   |
+|                            | name                   | string                 | The name of the person being billed.                                                                                                      |
+|                            | phone                  | object                 | The phone details for billing. ([See Phone Table](https://docs.tazapay.com/update/reference/phone-object#/))                              |
+| shipping_details           |                        | object                 | The shipping details of the customer.                                                                                                     |
+|                            | address                | object                 | The address details of the shipping information. ([See Address Table](https://docs.tazapay.com/update/reference/address-object#/))        |
+|                            | label                  | string                 | The label for the shipping address (e.g., Home, Office).                                                                                  |
+|                            | name                   | string                 | The name of the person receiving the shipment.                                                                                            |
+|                            | phone                  | object                 | The phone details for shipping. ( [Phone Table](https://docs.tazapay.com/update/reference/phone-object#/))                                |
+| success_url                |                        | string                 | The URL where the user is redirected after a successful transaction.                                                                      |
+| cancel_url                 |                        | string                 | The URL where the user is redirected after a cancelled transaction.                                                                       |
+| webhook_url                |                        | string                 | The URL for webhook notifications regarding this transaction.                                                                             |
+| payment_methods            |                        | array                  | The list of payment methods available (e.g., paynow_sgd, card).                                                                           |
+| transaction_description    |                        | string                 | A description of the transaction (e.g., "1 x trousers").                                                                                  |
+| expires_at                 |                        | string (ISO Timestamp) | The expiry date and time of the checkout session.                                                                                         |
+| created_at                 |                        | string (ISO Timestamp) | The creation date and time of the checkout session.                                                                                       |
+| url                        |                        | string                 | The URL for the checkout page.                                                                                                            |
+| payment_status             |                        | string                 | The payment status of the transaction (e.g., paid, pending).                                                                              |
+| payment_status_description |                        | string                 | Additional details on the payment status                                                                                                  |
+| status                     |                        | string                 | The status of the checkout session (e.g., expired, active).                                                                               |
+| payin                      |                        | string                 | The unique Tazapay ID of the related payin transaction.                                                                                   |
+| payment_attempts           |                        | array                  | The list of payment attempts.                                                                                                             |
+|                            | id                     | string                 | The unique Tazapay identifier for the payment attempt.                                                                                    |
+|                            | object                 | string                 | The type of object, which is "payment_attempt".                                                                                           |
+|                            | created_at             | string                 | The creation date and time of the payment attempt (ISO format).                                                                           |
+|                            | amount                 | number                 | The amount attempted to be paid.                                                                                                          |
+|                            | charge_currency        | string                 | The currency in which the charge was made (e.g., SGD).                                                                                    |
+|                            | payin                  | string                 | The ID of the related payin transaction.                                                                                                  |
+|                            | payment_method_details | object                 | The payment method used for the attempt. (See Payment Method Details Table)                                                               |
+|                            | refunded               | boolean                | Indicates if the payment attempt was refunded.                                                                                            |
+|                            | status                 | string                 | The status of the payment attempt (e.g., succeeded, failed).                                                                              |
+|                            | status_description     | string/null            | A description of the status (optional).                                                                                                   |
+|                            | final_currency         | string                 | The final currency after any conversion (e.g., USD).                                                                                      |
+|                            | fx_transaction         | object                 | The foreign exchange transaction details. ([See FX Transaction Table](https://docs.tazapay.com/update/reference/fx-transaction-object#/)) |
+| latest_payment_attempt     |                        | string                 | The ID of the latest payment attempt.                                                                                                     |
+| partially_paid             |                        | boolean                | Indicates if the payment was partially paid.                                                                                              |
+| paid_in_excess             |                        | boolean                | Indicates if the payment was made in excess.                                                                                              |
+| transaction_documents      |                        | array                  | List of transaction-related documents (if any).                                                                                           |
+| reference_id               |                        | string                 | The reference ID for the transaction (e.g., "mystore_order_00001").                                                                       |
+| metadata                   |                        | object                 | Set of key-value pairs attached to the checkout object.                                                                                   |
+| customer_fee_percentage    |                        | integer                | Customer fees percentage incase the fees is split between customer and merchant.                                                          |
 
 <br />
 
@@ -216,14 +194,3 @@ next:
 | paynow_sgd | object | Additional details specific to payment method             |
 
 <br />
-
-### FX Transaction
-
-| Field            | Type   | Description                                                 |
-| ---------------- | ------ | ----------------------------------------------------------- |
-| exchange_rate    | number | The exchange rate used for the currency conversion.         |
-| final.amount     | number | The final amount after conversion.                          |
-| final.currency   | string | The final currency after conversion.                        |
-| initial.amount   | number | The initial amount before conversion                        |
-| initial.currency | string | The initial currency before conversion.                     |
-| id               | string | The Tazapay ID of the holding foreign exchange transaction. |
