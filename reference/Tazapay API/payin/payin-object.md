@@ -8,7 +8,6 @@ excerpt: >-
   region.
 deprecated: false
 hidden: false
-icon: far fa-envelope-open-dollar
 metadata:
   title: ''
   description: ''
