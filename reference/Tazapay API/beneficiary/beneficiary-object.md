@@ -6,7 +6,7 @@ excerpt: >-
   the beneficiary, including personal details, bank account information, and any
   other relevant metadata required for processing payments to them.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''
