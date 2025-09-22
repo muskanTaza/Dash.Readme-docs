@@ -47,6 +47,8 @@ metadata:
 
 <br />
 
+## Object Structure
+
 ## Virtual Account
 
 | Field               | Type   | Description                                           |
