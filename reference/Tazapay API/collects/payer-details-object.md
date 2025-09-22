@@ -48,6 +48,8 @@ metadata:
 | bank_codes     | object      | The payer’s bank codes.                |
 | name           | string      | The payer’s bank name.                 |
 
+<br />
+
 ### Payer Wallet
 
 | id              | string | The unique identifier of the wallet.            |
