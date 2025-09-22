@@ -34,6 +34,15 @@ metadata:
 }
 ```
 ```json Wallet
+{
+  "currencies": [
+    "USD"
+  ],
+  "deposit_address": "0x5gtj035ad25fnhioerfujhguri587y43894hfie2",
+  "id": "cwa_jhrv4sad4tf55jrvp0",
+  "object": "wallet",
+  "type": "polygon pos"
+}
 ```
 
 <br />
