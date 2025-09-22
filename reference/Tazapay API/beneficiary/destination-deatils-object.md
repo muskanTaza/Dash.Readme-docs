@@ -34,6 +34,8 @@ metadata:
   "type": "bank"
 }
 ```
+```json Local Payment Network
+```
 
 <br />
 
