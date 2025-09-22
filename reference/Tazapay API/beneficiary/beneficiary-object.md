@@ -60,25 +60,32 @@ next:
     }
 ```
 
-### Beneficiary
+<br />
 
-| Parameter           | Sub Field | Type                   | Description                                                             |
-| ------------------- | :-------- | ---------------------- | ----------------------------------------------------------------------- |
-| id                  |           | string                 | The unique Tazapay identifier for the beneficiary.                      |
-| object              |           | string                 | The type of object, which is "beneficiary".                             |
-| name                |           | string                 | The name of the beneficiary.                                            |
-| type                |           | enum                   | The type of the beneficiary [Values -  individual, business].           |
-| address             |           | object                 | The address details of the beneficiary (see Address Table).             |
-| email               |           | string                 | The email address of the beneficiary.                                   |
-| phone               |           | object                 | The phone details of the beneficiary (see Phone Table).                 |
-| tax_id              |           | string                 | The tax ID of the beneficiary.                                          |
-| destination         |           | string                 | The Tazapay ID of the destination related to the payout.                |
-| destination_details |           | object                 | The details of the destination for the payout.                          |
-|                     | bank      | object                 | The bank details for the beneficiary's destination (see Bank Table).    |
-|                     | type      | string                 | The type of destination (e.g., bank).                                   |
-| documents           |           | array                  | List of documents related to the beneficiary.                           |
-| created_at          |           | string (ISO timestamp) | The date and time when the beneficiary was created.                     |
-| metadata            |           | json                   | Additional  key-value pairs associated with the beneficiary (optional). |
+<br />
+
+### Beneficiary Details
+
+| Field                          | Type                   | Description                                                                   |
+| :----------------------------- | :--------------------- | :---------------------------------------------------------------------------- |
+| id                             | string                 | The unique Tazapay identifier for the beneficiary.                            |
+| address                        | object                 | The address of the beneficiary. (See **Address Table**)                       |
+| date_of_birth                  | string                 | Date of birth of the beneficiary (for individuals).                           |
+| destination                    | string                 | The destination identifier (if applicable).                                   |
+| destination_details            | object                 | The details of the destination account. (See **Destination Details Table**)   |
+| documents                      | array                  | The list of documents related to the beneficiary.                             |
+| email                          | string                 | The email address of the beneficiary.                                         |
+| name                           | string                 | The name of the beneficiary.                                                  |
+| name_local                     | string                 | The local language name of the beneficiary.                                   |
+| national_identification_number | string                 | The national ID number of the beneficiary.                                    |
+| party_classification           | enum                   | Classification of the beneficiary (Possible values -  `self`, `third_party`). |
+| phone                          | object                 | The phone details of the beneficiary. (See **Phone Table**)                   |
+| registration_number            | string                 | The registration number (for business beneficiaries).                         |
+| tax_id                         | string                 | The tax identification number of the beneficiary.                             |
+| created_at                     | string (ISO timestamp) | The date and time when the beneficiary was created.                           |
+| metadata                       | json                   | Additional  key-value pairs associated with the beneficiary (optional).       |
+
+***
 
 <br />
 
