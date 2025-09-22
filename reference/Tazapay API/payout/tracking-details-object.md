@@ -8,4 +8,8 @@ metadata:
 ## Object Structure
 
 ```json
+{
+  "tracking_number": "7833d-34b4-478-aac8-1184beae",
+  "tracking_type": "uetr"
+}
 ```
