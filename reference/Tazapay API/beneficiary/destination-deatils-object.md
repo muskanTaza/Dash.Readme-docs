@@ -35,6 +35,14 @@ metadata:
 }
 ```
 ```json Local Payment Network
+{
+  "local_payment_network": {
+          "currency": "BRL",
+          "deposit_key": "fep@gmail.com",
+          "type": "pix_brl"
+  },
+  "type": "local_payment_network"
+}
 ```
 
 <br />
