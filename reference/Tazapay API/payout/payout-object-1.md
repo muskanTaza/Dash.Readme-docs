@@ -7,7 +7,7 @@ excerpt: >-
   and offering multiple payout options such as bank transfers, digital wallets,
   or local payment methods
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''
@@ -530,4 +530,3 @@ next:
 | type                        | enum   | The type of payout. [Values: `swift`, `local`, `wallet`, `local_payment_network`, `tazapay_account`]                                 |
 
 <br />
-
