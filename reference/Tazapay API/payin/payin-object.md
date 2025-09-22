@@ -135,7 +135,7 @@ next:
 | partially_paid              |            | boolean                | Indicates if the payment was partially paid.                                                                                     |
 | payment_attempts            |            | array                  | The list of payment attempts for this transaction.                                                                               |
 | payment_method_details      |            | object                 | The details of the payment method used.                                                                                          |
-|                             | paynow_sgd | boolean                | Indicates whether PayNow SGD is available for this transaction.                                                                  |
+|                             | paynow_sgd | object                 | Details of the paynow_sgd payment method                                                                                         |
 |                             | type       | string                 | The type of payment method used (e.g., paynow_sgd).                                                                              |
 | reference_id                |            | string                 | The reference ID for the transaction.                                                                                            |
 | shipping_details            |            | object                 | Shipping information for the transaction.                                                                                        |
