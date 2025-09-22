@@ -1,5 +1,5 @@
 ---
-title: Destination Deatils Object
+title: Destination Details Object
 deprecated: false
 hidden: false
 metadata:
@@ -55,26 +55,50 @@ metadata:
 
 <br />
 
-### Object Parameters
+## Object Parameters
 
-| Field                 | Subfield        | Type    | Description                                                                                     |
-| --------------------- | --------------- | ------- | ----------------------------------------------------------------------------------------------- |
-| type                  |                 | enum    | The type of destination. [Values: `bank`, `wallet`, `local_payment_network`, `tazapay_account`] |
-| bank                  | account_number  | string  | The account number of the beneficiary's bank.                                                   |
-|                       | account_type    | string  | The type of bank account.                                                                       |
-|                       | bank_codes      | object  | The bank codes (ABA / SWIFT).                                                                   |
-|                       | bank_name       | string  | The name of the beneficiary’s bank.                                                             |
-|                       | branch_name     | string  | The branch name of the beneficiary’s bank.                                                      |
-|                       | country         | string  | The country of the beneficiary’s bank.                                                          |
-|                       | currency        | string  | The currency in which the bank account operates.                                                |
-|                       | firc_required   | boolean | Whether FIRC is required.                                                                       |
-|                       | purpose_code    | string  | The purpose code for the bank transfer.                                                         |
-|                       | transfer_type   | string  | The transfer type (`swift`, `local`, `any`).                                                    |
-|                       | iban            | string  | The IBAN of the beneficiary’s bank account.                                                     |
-| wallet                | currency        | string  | The cryptocurrency type (e.g., `USDC`).                                                         |
-|                       | deposit_address | string  | The wallet deposit address.                                                                     |
-|                       | type            | enum    | The blockchain type. [Values: `ethereum`]                                                       |
-| local_payment_network | currency        | string  | The currency used in the local payment network.                                                 |
-|                       | deposit_key     | string  | The deposit key (e.g., PIX key in Brazil).                                                      |
-|                       | type            | enum    | The local payment network type. [Values: `pix_brl`]                                             |
-| tazapay_account       | deposit_address | string  | The Tazapay account deposit address.                                                            |
+### Bank
+
+| Subfield       | Type    | Description                                      |
+| -------------- | ------- | ------------------------------------------------ |
+| account_number | string  | The account number of the beneficiary's bank.    |
+| account_type   | string  | The type of bank account.                        |
+| bank_codes     | object  | The bank codes (ABA / SWIFT).                    |
+| bank_name      | string  | The name of the beneficiary’s bank.              |
+| branch_name    | string  | The branch name of the beneficiary’s bank.       |
+| country        | string  | The country of the beneficiary’s bank.           |
+| currency       | string  | The currency in which the bank account operates. |
+| firc_required  | boolean | Whether FIRC is required.                        |
+| purpose_code   | string  | The purpose code for the bank transfer.          |
+| transfer_type  | string  | The transfer type (`swift`, `local`, `any`).     |
+| iban           | string  | The IBAN of the beneficiary’s bank account.      |
+
+<br />
+
+### Wallet
+
+| Subfield        | Type   | Description                               |
+| :-------------- | :----- | :---------------------------------------- |
+| currency        | string | The cryptocurrency type (e.g., `USDC`).   |
+| deposit_address | string | The wallet deposit address.               |
+| type            | enum   | The blockchain type. [Values: `ethereum`] |
+
+<br />
+
+### Local Payment Network
+
+| Subfield    | Type   | Description                                     |
+| :---------- | :----- | :---------------------------------------------- |
+| currency    | string | The currency used in the local payment network. |
+| deposit_key | string | The deposit key (e.g., PIX key in Brazil).      |
+
+<br />
+
+### Tazapay Account
+
+| Subfield        | Type   | Description                                         |
+| :-------------- | :----- | :-------------------------------------------------- |
+| type            | enum   | The local payment network type. [Values: `pix_brl`] |
+| deposit_address | string | The Tazapay account deposit address.                |
+
+<br />
