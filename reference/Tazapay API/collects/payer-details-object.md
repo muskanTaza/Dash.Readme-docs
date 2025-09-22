@@ -28,3 +28,11 @@ metadata:
 ## Object Parameters
 
 <br />
+
+| Field                  | Type   | Description                                                         |
+| :--------------------- | :----- | :------------------------------------------------------------------ |
+| additional_information | string | Additional information about the payment (e.g., payment reference). |
+| name                   | string | Name of the payer.                                                  |
+| payer_bank             | object | Payer’s bank details (See Payer Bank Table).                        |
+| reference_id           | string | Reference identifier for the payer’s transaction.                   |
+| payer_wallet           | object | Payer's wallet details (See Payer's wallet table)                   |
