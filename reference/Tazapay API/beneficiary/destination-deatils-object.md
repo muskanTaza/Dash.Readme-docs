@@ -59,19 +59,19 @@ metadata:
 
 ### Bank
 
-| Subfield       | Type    | Description                                                       |
-| -------------- | ------- | ----------------------------------------------------------------- |
-| account_number | string  | The account number of the beneficiary's bank.                     |
-| account_type   | enum    | The type of bank account. Enum value - Savings, Checking, payment |
-| bank_codes     | object  | The bank codes (ABA / SWIFT).                                     |
-| bank_name      | string  | The name of the beneficiary’s bank.                               |
-| branch_name    | string  | The branch name of the beneficiary’s bank.                        |
-| country        | string  | The country of the beneficiary’s bank.                            |
-| currency       | string  | The currency in which the bank account operates.                  |
-| firc_required  | boolean | Whether FIRC is required.                                         |
-| purpose_code   | string  | The purpose code for the bank transfer.                           |
-| transfer_type  | string  | The transfer type (`swift`, `local`, `any`).                      |
-| iban           | string  | The IBAN of the beneficiary’s bank account.                       |
+| Subfield       | Type    | Description                                                             |
+| -------------- | ------- | ----------------------------------------------------------------------- |
+| account_number | string  | The account number of the beneficiary's bank.                           |
+| account_type   | enum    | The type of bank account. Enum value - `savings`, `checking`, `payment` |
+| bank_codes     | object  | The bank codes (ABA / SWIFT).                                           |
+| bank_name      | string  | The name of the beneficiary’s bank.                                     |
+| branch_name    | string  | The branch name of the beneficiary’s bank.                              |
+| country        | string  | The country of the beneficiary’s bank.                                  |
+| currency       | string  | The currency in which the bank account operates.                        |
+| firc_required  | boolean | Whether FIRC is required.                                               |
+| purpose_code   | string  | The purpose code for the bank transfer.                                 |
+| transfer_type  | enum    | The transfer type (values - `swift`, `local`, `any`).                   |
+| iban           | string  | The IBAN of the beneficiary’s bank account.                             |
 
 <br />
 
