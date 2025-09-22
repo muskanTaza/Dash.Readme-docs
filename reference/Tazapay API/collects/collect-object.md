@@ -147,20 +147,7 @@ metadata:
 
 <br />
 
-### Virtual Account
 
-| Field               | Type   | Description                                           |
-| ------------------- | ------ | ----------------------------------------------------- |
-| account_holder_name | string | The name of the virtual account holder.               |
-| account_number      | string | The account number for the virtual account.           |
-| bank_address        | object | The bank’s address details. (See Bank Address Table). |
-| bank_branch         | string | The branch address of the bank.                       |
-| bank_codes          | object | The bank codes associated with the bank.              |
-| bank_name           | string | The name of the bank.                                 |
-| currencies          | array  | The list of currencies supported by the account.      |
-| iban                | string | The IBAN of the account, if applicable.               |
-| id                  | string | The unique identifier of the virtual account.         |
-| object              | string | The type of object, which is "virtual_account".       |
 
 <br />
 
