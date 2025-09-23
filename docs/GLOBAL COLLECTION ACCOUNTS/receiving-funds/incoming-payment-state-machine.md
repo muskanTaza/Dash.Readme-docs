@@ -2,7 +2,7 @@
 title: Incoming Payment State Machine
 excerpt: Collects can transition through the below states
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
