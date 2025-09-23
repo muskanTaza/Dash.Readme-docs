@@ -15,9 +15,13 @@ Look at the left panel of the dashboard after logging in. Click on the tab label
 
 To insert image post deployment
 
-### Viewing Collection Account Details
+### Viewing Virtual Account Details
 
-Once on the Collection Accounts screen, all Virtual Account details configured for collection are displayed.
+* Once on the Virtual Accounts screen, all Virtual Account details configured are displayed. 
+* If you are configuring virtual accounts on behalf of other entities, the list of virtual entities configured for each entity are displayed.
+* <br />
+
+
 For each collection account, you can view the Account Name, Account Number, Currency, Bank, Swift Code (if applicable), and Local Routing Number (if applicable).
 
 <Image align="center" className="border" border={true} src="https://files.readme.io/5b25382-Screenshot_2024-02-16_at_6.11.22_PM.png" />
