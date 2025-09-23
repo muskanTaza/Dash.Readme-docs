@@ -9,7 +9,7 @@ metadata:
 * Each incoming payment to the virtual account is represented by a collect object.
 * A collect can be created in either of the following states
   * succeeded (it is a terminal state)
-  * compliance_hold (in case Tazapay requires more remitter information); The payout will transition to either failed or succeeded from this state.
+  * compliance_hold (in case Tazapay requires more remitter information); The collect will transition to either failed or succeeded from this state.
 
 ### State Machine for Collects
 
