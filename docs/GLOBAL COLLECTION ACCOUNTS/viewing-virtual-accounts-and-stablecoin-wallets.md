@@ -1,7 +1,7 @@
 ---
 title: Viewing Virtual Accounts and Stablecoin Wallets
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
