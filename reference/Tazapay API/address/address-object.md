@@ -13,7 +13,7 @@ metadata:
   "country": "JM",
   "postal_code": "00000",
   "state": "Vortmore"
-},
+}
 ```
 
 <br />
