@@ -13,7 +13,7 @@ You can view the virtual accounts and stablecoin wallets configured for your acc
 
 Look at the left panel of the dashboard after logging in. Click on the tab labelled `Virtual Accounts`. You will be navigated to the screen displaying all your Virtual Accounts.
 
-<br />
+To insert image post deployment
 
 ### Viewing Collection Account Details
 
