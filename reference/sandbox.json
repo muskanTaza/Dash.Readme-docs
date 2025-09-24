@@ -7574,11 +7574,13 @@
                 "properties": {
                   "name": {
                     "type": "string",
-                    "description": "Customer's name"
+                    "description": "Customer's name",
+                    "default": ""
                   },
                   "email": {
                     "type": "string",
-                    "description": "Customer's email address"
+                    "description": "Customer's email address",
+                    "default": ""
                   },
                   "country": {
                     "type": "string",
