@@ -8,7 +8,7 @@ metadata:
 ```json
 {
   "line1": "it12 3cwth",
-	"line1": "streat 3",	
+  "line1": "streat 3",	
   "city": "Vrtmore",
   "country": "JM",
   "postal_code": "00000",
