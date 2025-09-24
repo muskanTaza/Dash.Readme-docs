@@ -18,7 +18,7 @@ To insert image post deployment
 # Viewing Virtual Account Details
 
 * Once on the Virtual Accounts screen, all Virtual Account details configured are displayed.
-* If you are configuring virtual accounts on behalf of other entities, the list of virtual entities configured for each entity are displayed.
+* If you are configuring virtual accounts on behalf of other entities, the list of virtual accounts configured for each entity are displayed.
 * For each virtual account, you can view the Account Name, Account Number, Currency, Bank, Swift Code (if applicable), and Local Routing Number (if applicable).
 
 To insert image post deployment
