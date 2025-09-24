@@ -2,7 +2,7 @@
 title: Escrow
 excerpt: ''
 deprecated: false
-hidden: false
+hidden: true
 icon: far fa-file-invoice-dollar
 metadata:
   title: ''
