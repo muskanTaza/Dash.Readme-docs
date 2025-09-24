@@ -45,7 +45,7 @@ To view the expanded details for a collect, you can simply click on the Payment 
 | :------------------------------ | :------------------------------------------------------------------------------------------------ |
 | Collection Amount               | The amount credited for the payment                                                               |
 | Fees                            | Tazapay Fees for the payment                                                                      |
-| Payment Method                  | The payment method                                                                                |
+| Payment Method                  | The payment method (Local Bank Transfer or Wire Transfer or Stablecoin)                           |
 | Receiving Account Number / IBAN | The account number (or IBAN in case the currency is EUR) of the receiving account for the payment |
 | Status                          | The status of the collect - its usually `succeeded`. Rarely can be `on_hold` or `failed`          |
 | Transaction Hash                | Unique identifier assigned to this blockchain transaction                                         |
@@ -65,9 +65,9 @@ To view the expanded details for a collect, you can simply click on the Payment 
 
 ### Wallet
 
-| Fields                       | Description                                    |
-| :--------------------------- | :--------------------------------------------- |
-| payer_wallet.deposit_address | Deposit address of the send on the block chain |
-| payer_wallet.type            | Type of wallet used like Ethereum , Tron etc   |
+| Fields          | Description                                                |
+| :-------------- | :--------------------------------------------------------- |
+| Deposit Address | Deposit address of the send on the block chain             |
+| Type            | Type of wallet or blockchain used like Ethereum , Tron etc |
 
 <Image align="center" className="border" border={true} src="https://files.readme.io/74e3662-image.png" />
