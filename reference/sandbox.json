@@ -7750,7 +7750,57 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{\n\t\"status\": \"success\",\n\t\"message\": \"customer created successfully\",\n\t\"data\": {\n\t\t\"id\": \"cus_haiuhnfoiaoijfojfajpj123\",\n\t\t\"object\": \"customer\",\n\t\t\"created_at\": \"2023-07-18 16:34:32\",\n\t\t\"name\": \"Andrew Robin\",\n\t\t\"email\": \"andrew.robin@example.com\",\n\t\t\"country\": \"US\",\n\t\t\"phone\": {\n\t\t\t\"calling_code\": \"\",\n\t\t\t\"number\": \"\"\n\t\t},\n\t\t\"billing\": [{\n\t\t\t\"name\": \"\",\n\t\t\t\"address\": {\n\t\t\t\t\"line1\": \"\",\n\t\t\t\t\"line2\": \"\",\n\t\t\t\t\"city\": \"\",\n\t\t\t\t\"state\": \"\",\n\t\t\t\t\"country\": \"\",\n\t\t\t\t\"postal_code\": \"\"\n\t\t\t},\n\t\t\t\"phone\": {\n\t\t\t\t\"calling_code\": \"\",\n\t\t\t\t\"number\": \"\"\n\t\t\t}\n\t\t}],\n\t\t\"shipping\": [{\n\t\t\t\"name\": \"\",\n\t\t\t\"address\": {\n\t\t\t\t\"line1\": \"\",\n\t\t\t\t\"line2\": \"\",\n\t\t\t\t\"city\": \"\",\n\t\t\t\t\"state\": \"\",\n\t\t\t\t\"country\": \"\",\n\t\t\t\t\"postal_code\": \"\"\n\t\t\t},\n\t\t\t\"phone\": {\n\t\t\t\t\"calling_code\": \"\",\n\t\t\t\t\"number\": \"\"\n\t\t\t}\n\t\t}],\n\t\t\"metadata\": null\n\t}\n}"
+                    "value": {
+                      "status": "success",
+                      "message": "customer created successfully",
+                      "data": {
+                        "id": "cus_haiuhnfoiaoijfojfajpj123",
+                        "object": "customer",
+                        "created_at": "2023-07-18 16:34:32",
+                        "name": "Andrew Robin",
+                        "email": "andrew.robin@example.com",
+                        "country": "US",
+                        "phone": {
+                          "calling_code": "",
+                          "number": ""
+                        },
+                        "billing_address": [
+                          {
+                            "name": "",
+                            "address": {
+                              "line1": "",
+                              "line2": "",
+                              "city": "",
+                              "state": "",
+                              "country": "",
+                              "postal_code": ""
+                            },
+                            "phone": {
+                              "calling_code": "",
+                              "number": ""
+                            }
+                          }
+                        ],
+                        "shipping_address": [
+                          {
+                            "name": "",
+                            "address": {
+                              "line1": "",
+                              "line2": "",
+                              "city": "",
+                              "state": "",
+                              "country": "",
+                              "postal_code": ""
+                            },
+                            "phone": {
+                              "calling_code": "",
+                              "number": ""
+                            }
+                          }
+                        ],
+                        "metadata": null
+                      }
+                    }
                   }
                 },
                 "schema": {
