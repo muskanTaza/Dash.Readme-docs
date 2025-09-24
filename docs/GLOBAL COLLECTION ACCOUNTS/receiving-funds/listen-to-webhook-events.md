@@ -7,4 +7,8 @@ metadata:
 ---
 Tazapay sends emails and webhooks for events of interest related to a collection account and collect. You can subscribe to the events by configuring an endpoint using the <Anchor label="Tazapay Dashboard." target="_blank" href="dashboard.tazapay.com">Tazapay Dashboard.</Anchor>
 
-<br />
+### Related Links
+
+1. Collect Events
+2. Collection Account Events
+3. Configuring an Endpoint and subscribing to events
