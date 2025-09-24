@@ -17,6 +17,7 @@ Tazapay offers flexible integration options to cater to your business needs and 
 | _API to Integrate_                     | /v3/checkout                                                                                          | /v3/checkout                                                             | /v3/payin                                                                                                            |
 | _What is sent as part of API response_ | A redirection URL pointing to a Tazapay hosted page                                                   | A redirection URL pointing to a Tazapay hosted page                      | Information corresponding to the payment method. You can choose how best to display this information to the customer |
 | _Effort to Maintain_                   | Low                                                                                                   | Very low                                                                 | Medium                                                                                                               |
+| _Integration Guide_                    |                                                                                                       |                                                                          |                                                                                                                      |
 
 > 👍 Javascript SDK
 >
