@@ -7602,7 +7602,7 @@
                       }
                     }
                   },
-                  "billing": {
+                  "billing_address": {
                     "type": "array",
                     "description": "Customer's billing details",
                     "items": {
@@ -7663,7 +7663,7 @@
                       "type": "object"
                     }
                   },
-                  "shipping": {
+                  "shipping_address": {
                     "type": "array",
                     "description": "Customer's shipping details",
                     "items": {
