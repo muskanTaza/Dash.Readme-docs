@@ -1,7 +1,7 @@
 ---
 title: Build a Payment Integration
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
