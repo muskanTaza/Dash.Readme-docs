@@ -1,7 +1,7 @@
 ---
 title: Stablecoins
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
