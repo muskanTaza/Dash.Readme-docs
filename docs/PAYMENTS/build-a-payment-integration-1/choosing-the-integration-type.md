@@ -1,7 +1,7 @@
 ---
 title: Choosing the integration type
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
