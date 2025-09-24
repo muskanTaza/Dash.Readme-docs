@@ -9,6 +9,6 @@ Tazapay sends emails and webhooks for events of interest related to a collection
 
 ### Related Links
 
-1. Collect Events
-2. Collection Account Events
-3. Configuring an Endpoint and subscribing to events
+1. Collect Events -- insert link
+2. Collection Account Events -- insert link
+3. Configuring an Endpoint and subscribing to events-- insert link
