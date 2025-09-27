@@ -14504,7 +14504,7 @@
                     "type": "integer",
                     "format": "int64",
                     "description": "Amount in BTC. The precision is 8 decimal places",
-                    "default": "123456"
+                    "default": "12345600"
                   },
                   "d_tag_memo": {
                     "type": "string",
