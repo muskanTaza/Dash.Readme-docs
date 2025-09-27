@@ -21,9 +21,9 @@ Successful cross-border payments to China via Tazapay require specific parameter
 * **Beneficiary Bank Name**: Must be provided in Chinese characters.
 * **National Identification Number**: Mandatory for individual beneficiaries.
 * **Logistics Tracking Details**: Required information includes:
-  * logistic\_provider\_name (mandatory)
-  * logistic\_provider\_code (optional)
-  * tracking\_number (mandatory)
+  * logistic_provider_name (mandatory)
+  * logistic_provider_code (optional)
+  * tracking_number (mandatory)
 * **Invoice Upload**: Mandatory for all payouts.
 * **Contract Upload**:  Required for specific payout purpose codes (refer to table below):
 
@@ -72,7 +72,8 @@ curl --request POST \
       "type": "bank",
       "bank": {
         "bank_codes": {
-          "swift_code": "Testswift"
+          "swift_code": "Testswift",
+					"cnaps":"2749827482"
         },
         "account_number": "124353",
         "bank_name": "圳市腾",
@@ -124,7 +125,9 @@ curl --request POST \
                 "bank": {
                     "account_number": "124353",
                     "account_type": "",
-                    "bank_codes": {
+                  "bank_codes": {
+											"swift_code": "Testswift",
+											"cnaps":"2749827482"
                     },
                     "bank_name": "圳市腾",
                     "country": "CN",
@@ -140,7 +143,7 @@ curl --request POST \
                 "name":"Cargowave",
                 "code":"CGW"
               },
-              "tracking_number":"924U798274"}
+              "tracking_number":"924U798274"},
             "email": "",
             "name": "深圳市腾***有限公司",
             "phone": null,
