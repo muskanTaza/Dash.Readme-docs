@@ -14437,7 +14437,18 @@
         }
       }
     },
-    "/new-endpoint-1": {}
+    "/v3/lightning_invoice_bolt11": {
+      "post": {
+        "description": "",
+        "operationId": "post_v3lightning_invoice_bolt11",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "parameters": []
+      }
+    }
   },
   "x-readme": {
     "headers": [],
