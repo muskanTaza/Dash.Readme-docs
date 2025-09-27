@@ -14536,7 +14536,7 @@
         "x-readme": {
           "code-samples": [
             {
-              "code": "{\n  \"amount\": 123456,\n  \"d_tag_memo\": \"Payment for order #7890\",\n  \"expiry_interval\": 4800\n}",
+              "code": "",
               "language": "json",
               "name": ""
             }
