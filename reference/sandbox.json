@@ -14444,44 +14444,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "string",
-                      "default": "",
-                      "description": "Unique ID representing the lightning invoice bolt 11 object. Starts with l11_"
-                    },
-                    "object": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "examples": {
-                  "OK": {
-                    "summary": "OK",
-                    "value": {
-                      "id": "l11_abc123xyz",
-                      "object": "lightning_invoice_bolt11",
-                      "amount": 123456,
-                      "d_tag_memo": "Payment for order #7890",
-                      "collect": "col_98765",
-                      "expiry_interval": 3600,
-                      "metadata": {
-                        "order_id": "7890",
-                        "customer_id": "cust_456"
-                      },
-                      "status": "active",
-                      "payment_status": "unpaid",
-                      "created_at": "2025-09-28T08:15:30Z",
-                      "updated_at": "2025-09-28T08:20:45Z"
-                    }
-                  }
-                }
-              }
-            }
+            "content": {}
           }
         },
         "parameters": [],
