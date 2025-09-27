@@ -14444,7 +14444,28 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {}
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "description": "success or failure"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Message related to the action"
+                    },
+                    "data": {
+                      "type": "string",
+                      "description": "The lightning invoice bolt11 object",
+                      "format": "json"
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "parameters": [],
