@@ -14457,8 +14457,28 @@
                     "type": "integer",
                     "format": "int64",
                     "description": "Amount in BTC. The precision is 8 decimal places"
+                  },
+                  "d_tag_memo": {
+                    "type": "string",
+                    "description": "This will be included in the d-tag. If both d_tag_memo and h_tag_memo are provided, only h_tag will be used"
+                  },
+                  "h_tag_memo": {
+                    "type": "string",
+                    "description": "SHA-256 of the d_tag_memo. If both d_tag_memo and h_tag_memo are provided, only h_tag_memo will be used"
+                  },
+                  "expiry_interval": {
+                    "type": "integer",
+                    "description": "The expiry of the invoice in seconds. Default value is 3600 (1 hour)"
+                  },
+                  "metadata": {
+                    "type": "object",
+                    "properties": {},
+                    "description": "Set of key-value pairs to attach to the lightning_invoice_bolt11 object"
                   }
-                }
+                },
+                "required": [
+                  "amount"
+                ]
               }
             }
           }
