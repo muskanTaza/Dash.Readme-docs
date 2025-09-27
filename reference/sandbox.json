@@ -10606,6 +10606,10 @@
                       "self",
                       "third_party"
                     ]
+                  },
+                  "name_local": {
+                    "type": "string",
+                    "description": "Name in local language"
                   }
                 }
               },
