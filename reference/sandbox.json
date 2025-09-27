@@ -14451,8 +14451,8 @@
                   "properties": {}
                 },
                 "examples": {
-                  "New Example": {
-                    "summary": "New Example",
+                  "OK": {
+                    "summary": "OK",
                     "value": {
                       "id": "l11_abc123xyz",
                       "object": "lightning_invoice_bolt11",
