@@ -5,7 +5,7 @@ api:
   file: sandbox.json
   operationId: post_v3lightning_invoice_bolt11
 deprecated: false
-hidden: true
+hidden: false
 link:
   new_tab: false
 metadata:
