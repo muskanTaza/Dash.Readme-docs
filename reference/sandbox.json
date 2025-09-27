@@ -14608,6 +14608,70 @@
             "shell"
           ]
         }
+      },
+      "put": {
+        "description": "",
+        "operationId": "put_v3lightning_invoice_bolt11{id}",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "description": "The status of the request - success or failure"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Additional information about the status"
+                    },
+                    "data": {
+                      "type": "string",
+                      "description": "The updated lightning_invoice_bolt11 object"
+                    }
+                  }
+                },
+                "examples": {
+                  "OK": {
+                    "summary": "OK",
+                    "value": "\"status\": \"success\",\n  \"message\": \"\",\n  \"data\": {\n    \"id\": \"l11_abc123xyz\",\n    \"object\": \"lightning_invoice_bolt11\",\n    \"amount\": 123456,\n    \"d_tag_memo\": \"Payment for order #7890\",\n    \"h_tag\"\n    \"collect\": \"col_98765\",\n    \"expiry_interval\": 3600,\n    \"metadata\": {\n      \"order_id\": \"7890\",\n      \"customer_id\": \"cust_456\"\n    },\n    \"status\": \"active\",\n    \"payment_status\": \"unpaid\",\n    \"created_at\": \"2025-09-28T08:15:30Z\",\n    \"updated_at\": \"2025-09-28T08:20:45Z\"\n  }\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string",
+              "default": "l11_ag7a8f7agegfa"
+            },
+            "required": true,
+            "description": "ID of an existing lightning invoice"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "metadata": {
+                    "type": "string",
+                    "format": "json",
+                    "description": "Set of key-value pairs to attach to the lightning_invoice object"
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   },
