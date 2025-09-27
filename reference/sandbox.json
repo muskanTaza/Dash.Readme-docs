@@ -14446,7 +14446,23 @@
             "description": ""
           }
         },
-        "parameters": []
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "integer",
+                    "format": "int64",
+                    "description": "Amount in BTC. The precision is 8 decimal places"
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   },
