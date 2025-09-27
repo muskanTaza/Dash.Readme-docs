@@ -81,7 +81,8 @@ curl --request POST \
         "currency": "CNY"
       }
     },
-    "name": "深圳市腾***有限公司",
+    "name_local": "深圳市腾***有限公司",
+		"name":"John Doe",
     "type": "individual",
     "national_identification_number": "1234567890" 
   },
@@ -137,7 +138,7 @@ curl --request POST \
                 },
                 "type": "bank"
             },
-            "chinese_id": "361723721",
+            "national_identification_number": "361723721",
             "logistics_tracking_details":{
               "logistics_provider":{
                 "name":"Cargowave",
@@ -145,7 +146,8 @@ curl --request POST \
               },
               "tracking_number":"924U798274"},
             "email": "",
-            "name": "深圳市腾***有限公司",
+          "name_local": "深圳市腾***有限公司",
+					"name":"John Doe",
             "phone": null,
             "tax_id": "",
             "type": "individual"
