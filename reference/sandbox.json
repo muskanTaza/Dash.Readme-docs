@@ -14453,6 +14453,9 @@
                       "type": "string",
                       "default": "",
                       "description": "Unique ID representing the lightning invoice bolt 11 object. Starts with l11_"
+                    },
+                    "object": {
+                      "type": "string"
                     }
                   }
                 },
