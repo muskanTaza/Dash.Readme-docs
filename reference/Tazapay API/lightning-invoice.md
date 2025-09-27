@@ -1,7 +1,7 @@
 ---
 title: Lightning Invoice
 deprecated: false
-hidden: false
+hidden: true
 icon: ⚡
 metadata:
   robots: index
