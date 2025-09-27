@@ -14503,11 +14503,13 @@
                   "amount": {
                     "type": "integer",
                     "format": "int64",
-                    "description": "Amount in BTC. The precision is 8 decimal places"
+                    "description": "Amount in BTC. The precision is 8 decimal places",
+                    "default": "123456"
                   },
                   "d_tag_memo": {
                     "type": "string",
-                    "description": "This will be included in the d-tag. If both d_tag_memo and h_tag_memo are provided, only h_tag will be used"
+                    "description": "This will be included in the d-tag. If both d_tag_memo and h_tag_memo are provided, only h_tag will be used",
+                    "default": "Payment for order #7890"
                   },
                   "h_tag_memo": {
                     "type": "string",
@@ -14515,7 +14517,8 @@
                   },
                   "expiry_interval": {
                     "type": "integer",
-                    "description": "The expiry of the invoice in seconds. Default value is 3600 (1 hour)"
+                    "description": "The expiry of the invoice in seconds. Default value is 3600 (1 hour)",
+                    "default": "4800"
                   },
                   "metadata": {
                     "type": "string",
