@@ -14471,9 +14471,9 @@
                     "description": "The expiry of the invoice in seconds. Default value is 3600 (1 hour)"
                   },
                   "metadata": {
-                    "type": "object",
-                    "properties": {},
-                    "description": "Set of key-value pairs to attach to the lightning_invoice_bolt11 object"
+                    "type": "string",
+                    "description": "Set of key-value pairs to attach to the lightning_invoice_bolt11 object",
+                    "format": "json"
                   }
                 },
                 "required": [
