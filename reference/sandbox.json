@@ -4454,6 +4454,10 @@
                       "party_classification": {
                         "type": "string",
                         "description": "Type of relationship between beneficiary and creator of beneficiary Possible values - self, third_party (Mandatory if destination_details.type is a wallet)"
+                      },
+                      "name_local": {
+                        "type": "string",
+                        "description": "Name in local language"
                       }
                     }
                   },
