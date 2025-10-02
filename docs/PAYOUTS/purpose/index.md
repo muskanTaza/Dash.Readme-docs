@@ -45,6 +45,3 @@ next:
 | PYR029 | Currency Exchange                                                                                       |
 | PYR030 | User Withdrawal                                                                                         |
 | PYR031 | Advance Payments for goods                                                                              |
-| PYR032 | Personal Remittance                                                                                     |
-| PYR033 | Merchant Settlement                                                                                     |
-| PYR034 | Repatriation Fund Settlement                                                                            |
