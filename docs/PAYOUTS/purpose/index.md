@@ -46,3 +46,7 @@ next:
 | PYR030 | User Withdrawal                                                                                         |
 | PYR031 | Advance Payments for goods                                                                              |
 | PYR032 | Vendor / Contractor payouts for software development                                                    |
+| PYR033 | Merchant Settlement                                                                                     |
+| PYR034 | Repatriation Fund Settlement                                                                            |
+
+<br />
