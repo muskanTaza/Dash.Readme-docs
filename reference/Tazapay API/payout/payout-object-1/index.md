@@ -29,11 +29,11 @@ next:
       "beneficiary": "bnf_d3inm6ami8u10oqfg",
       "beneficiary_details": {
           "address": {
-              "country": "CN"
+              "country": "CN",
               "line1": "Zhen Rui Yun Lu 66",
               "postal_code": "311011"
             },
-          "date_of_birth": "",
+          "date_of_birth": "2003-04-04",
           "destination": "",
           "destination_details": {
               "bank": {
