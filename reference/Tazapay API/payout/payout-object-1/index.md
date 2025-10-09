@@ -21,104 +21,101 @@ next:
 
 ```json Swift Bank Payout
 {
-  "status": "success",
-  "message": "",
-  "data": {
-      "amount": 100000,
-      "balance_transaction": "btr_d35pv4qcl8imrv60",
-      "beneficiary": "bnf_d3inm6ami8u10oqfg",
-      "beneficiary_details": {
-          "address": {
-              "country": "CN",
-              "line1": "Zhen Rui Yun Lu 66",
-              "postal_code": "311011"
-            },
-          "date_of_birth": "2003-04-04",
-          "destination": "",
-          "destination_details": {
-              "bank": {
-                  "account_number": "33050167624000001030",
-                  "account_type": "",
-                  "bank_codes": {
-                      "swift_code": "PCBCCNBJZJX"
-                    },
-                  "bank_name": "CHINA CONSTRUCTION BANK, ZHEJIANG BRANCH",
-                  "branch_name": "",
-                  "country": "CN",
-                  "currency": "USD",
-                  "firc_required": false,
-                  "purpose_code": "",
-                  "transfer_type": "swift"
-                },
-              "type": "bank"
-            },
-          "documents": [],
-          "email": "",
-          "name": "IMPORT AND EXPORT CO., LTD",
-          "name_local": "",
-          "national_identification_number": "",
-          "party_classification": "",
-          "phone": {
-              "calling_code": "86"
-            },
-          "registration_number": "",
-          "tax_id": "",
-          "type": "business"
-        },
-      "charge_type": "ours",
-      "confirmation_documents": [],
-      "created_at": "2025-09-18T10:07:35.101708Z",
-      "currency": "USD",
-      "destination_fx_quote": "fx_d35tjpnfi4p2dt2hh0",
-      "documents": [],
-      "holding_currency": "USD",
-      "holding_fx_quote": "fx_d35tjpnfigp2dt2hgg",
-      "holding_fx_transaction": {
-          "exchange_rate": 1,
-          "final": {
-              "amount": 10000000,
-              "currency": "USD"
-            },
-          "id": "fx_d35tjpnfigp2dt2hgg",
-          "initial": {
-              "amount": 10000000,
-              "currency": "USD"
-            },
-          "object": "fx_transaction"
-        },
-      "id": "pot_d35tjpn4qcl8iv30",
-      "logistics_tracking_details": [],
-      "metadata": null,
-      "mt103": "",
-      "object": "payout",
-      "on_behalf_of": "",
-      "payout_fx_transaction": {
-          "exchange_rate": 1,
-          "final": {
-              "amount": 10000000,
-              "currency": "USD"
-            },
-          "id": "fx_d35tfigo4p2dt2hh0",
-          "initial": {
-              "amount": 10000000,
-              "currency": "USD"
-            },
-          "object": "fx_transaction"
-        },
-      "payout_quote": "",
-      "purpose": "PYR003",
-      "reference_id": "",
-      "statement_descriptor": "",
-      "status": "succeeded",
-      "status_description": "",
-      "tracking_details": {
-          "tracking_number": "7833d-34b4-478-aac8-1184beae",
-          "tracking_type": "uetr"
-        },
-      "transaction_description": "Payment for goods acc 125",
-      "type": "swift"
-    }
+  "amount": 100000,
+  "balance_transaction": "btr_d35pv4qcl8imrv60",
+  "beneficiary": "bnf_d3inm6ami8u10oqfg",
+  "beneficiary_details": {
+        "address": {
+            "country": "CN",
+            "line1": "Zhen Rui Yun Lu 66",
+            "postal_code": "311011"
+          },
+        "date_of_birth": "2003-04-04",
+        "destination": "bnk_crv7k337eoqgk10pqp40",
+        "destination_details": {
+            "bank": {
+                "account_number": "33050167624000001030",
+                "account_type": "",
+                "bank_codes": {
+                    "swift_code": "PCBCCNBJZJX"
+                  },
+                "bank_name": "CHINA CONSTRUCTION BANK, ZHEJIANG BRANCH",
+                "branch_name": "",
+                "country": "CN",
+                "currency": "USD",
+                "firc_required": false,
+                "purpose_code": "",
+                "transfer_type": "swift"
+              },
+            "type": "bank"
+          },
+        "documents": [],
+        "email": "",
+        "name": "IMPORT AND EXPORT CO., LTD",
+        "name_local": "",
+        "national_identification_number": "",
+        "party_classification": "",
+        "phone": {
+            "calling_code": "86"
+          },
+        "registration_number": "",
+        "tax_id": "",
+        "type": "business"
+      },
+  "charge_type": "ours",
+  "confirmation_documents": [],
+  "created_at": "2025-09-18T10:07:35.101708Z",
+  "currency": "USD",
+  "destination_fx_quote": "fx_d35tjpnfi4p2dt2hh0",
+  "documents": [],
+  "holding_currency": "USD",
+  "holding_fx_quote": "fx_d35tjpnfigp2dt2hgg",
+  "holding_fx_transaction": {
+        "exchange_rate": 1,
+        "final": {
+            "amount": 10000000,
+            "currency": "USD"
+          },
+        "id": "fx_d35tjpnfigp2dt2hgg",
+        "initial": {
+            "amount": 10000000,
+            "currency": "USD"
+          },
+        "object": "fx_transaction"
+      },
+  "id": "pot_d35tjpn4qcl8iv30",
+  "logistics_tracking_details": [],
+  "metadata": null,
+  "mt103": "",
+  "object": "payout",
+  "on_behalf_of": "",
+  "payout_fx_transaction": {
+        "exchange_rate": 1,
+        "final": {
+            "amount": 10000000,
+            "currency": "USD"
+          },
+        "id": "fx_d35tfigo4p2dt2hh0",
+        "initial": {
+            "amount": 10000000,
+            "currency": "USD"
+          },
+        "object": "fx_transaction"
+      },
+  "payout_quote": "",
+  "purpose": "PYR003",
+  "reference_id": "",
+  "statement_descriptor": "",
+  "status": "succeeded",
+  "status_description": "",
+  "tracking_details": {
+        "tracking_number": "7833d-34b4-478-aac8-1184beae",
+        "tracking_type": "uetr"
+      },
+  "transaction_description": "Payment for goods acc 125",
+  "type": "swift"
 }
+
 ```
 ```json Local Bank Payout
 {
