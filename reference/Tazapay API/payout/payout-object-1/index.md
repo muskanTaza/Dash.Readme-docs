@@ -84,7 +84,12 @@ next:
         "object": "fx_transaction"
       },
   "id": "pot_d35tjpn4qcl8iv30",
-  "logistics_tracking_details": [],
+  "logistics_tracking_details": [
+    {
+     	"tracking_number":"5436789",
+      "logistics_provider":{"name":"test","code":"testCode"}
+     }
+	],
   "metadata": null,
   "mt103": "{1:FHFLEND0XXX0000000000}{2:I103SCBLUS33XXXXN}{3:{108:ST10302510092922}{111:001}{121:372ff3b1-\nd12d-431c-8c9f-f19eb2507285}}{4:\n:20:ST1050254092922\n:23B:CRED\n:32A:251009USD4863,52\n:33B:USD4863,52\n:50K:/10096543269\nTrade Pe Tech Private Limited\nBarrister Rajni Patel Marg, Nariman\nPoint 61, Mittal Chambers 400021 Mu\nmbai Maharashtra/INDIA\n:52D:/0105552976\nTAZAPAY PTE. LTD.\n8 VEDAEK BOULEVARD,15-02, SUFEC T\nOWYT THREE,SINGAPORE,ZIP 038988\n/SINGAPORE\n:57A:ICICINBBCTS\n:59:/119405003646\nTRADE PE TECH PVT LTD-OPGSP MRROR N\nOSTRO A/C\nIN\n/INDIA\n:70:Nostro Payout for settlement\n:71A:OUR\n:72:/ACC/INCKIEBCTS/CITI BANK N.A./\n-}",
   "object": "payout",
