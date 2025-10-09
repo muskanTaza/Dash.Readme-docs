@@ -35,12 +35,12 @@ next:
         "destination_details": {
             "bank": {
                 "account_number": "33050167624000001030",
-                "account_type": "",
+                "account_type": "savings",
                 "bank_codes": {
                     "swift_code": "PCBCCNBJZJX"
                   },
                 "bank_name": "CHINA CONSTRUCTION BANK, ZHEJIANG BRANCH",
-                "branch_name": "",
+                "branch_name": "Sheik Sarai",
                 "country": "CN",
                 "currency": "USD",
                 "firc_required": false,
