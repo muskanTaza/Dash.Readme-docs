@@ -4205,7 +4205,8 @@
                   "amount": {
                     "type": "integer",
                     "description": "Amount in cents. For example if you want to payout $10.12 pass 1012 as the value. For decimal handling for various currencies, refer to <a href=\"https://docs.tazapay.com/docs/decimal-currencies\" target=\"_blank\"> the guide here</a>",
-                    "format": "int32"
+                    "format": "int32",
+                    "default": "1000"
                   },
                   "currency": {
                     "type": "string",
@@ -4258,9 +4259,6 @@
                           "postal_code": {
                             "type": "string",
                             "description": "Postal Code"
-                          },
-                          "": {
-                            "type": "string"
                           }
                         }
                       },
@@ -4458,6 +4456,9 @@
                       "name_local": {
                         "type": "string",
                         "description": "Name in local language"
+                      },
+                      "property1": {
+                        "type": "string"
                       }
                     }
                   },
@@ -4740,7 +4741,12 @@
             }
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "x-readme": {
+          "samples-languages": [
+            "shell"
+          ]
+        }
       }
     },
     "/v3/payout/{id}": {
