@@ -78,16 +78,16 @@ next:
 
 ***
 
-### POST v3/payout/:id/confirm 
+### POST v3/payout/:id/confirm
 
 | Code  | Message                                                                                                                                     | HTTP Status |
 | :---- | :------------------------------------------------------------------------------------------------------------------------------------------ | :---------- |
-| 20391 | Field cannot be empty, must be valid xid type with prefix 'col_'                                                                            |             |
-| 20393 | Payout status is invalid to perform this action or payout has moved to higher status.                                                       |             |
-| 20475 | The collect created is already linked to a payout. Please try with different collect id or transaction hash.                                |             |
-| 20477 | The balance impact or the currency of the collect does not match with the payout. Please try with different transaction hash or collect id. |             |
-| 20478 | The account ID of the payout does not match the account ID of the collect. Please ensure both transactions belong to the same account.      |             |
-| 20479 | Collect status is invalid to perform this action                                                                                            |             |
+| 20391 | Field cannot be empty, must be valid xid type with prefix 'col_'                                                                            | 400         |
+| 20393 | Payout status is invalid to perform this action or payout has moved to higher status.                                                       | 400         |
+| 20475 | The collect created is already linked to a payout. Please try with different collect id or transaction hash.                                | 400         |
+| 20477 | The balance impact or the currency of the collect does not match with the payout. Please try with different transaction hash or collect id. | 400         |
+| 20478 | The account ID of the payout does not match the account ID of the collect. Please ensure both transactions belong to the same account.      | 400         |
+| 20479 | Collect status is invalid to perform this action                                                                                            | 400         |
 
 <br />
 
