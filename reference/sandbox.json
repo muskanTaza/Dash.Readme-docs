@@ -4568,21 +4568,26 @@
                     "description": "ID of the entity the payout is created on behalf of"
                   },
                   "logistics_tracking_details": {
-                    "type": "object",
+                    "type": "array",
                     "description": "Logistics tracking details of the order",
-                    "properties": {
-                      "logistics_provider_name": {
-                        "type": "string",
-                        "description": "Name of the logistics provider"
+                    "items": {
+                      "properties": {
+                        "logistics_provider": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "code": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "tracking_number": {
+                          "type": "string"
+                        }
                       },
-                      "logistics_provider_code": {
-                        "type": "string",
-                        "description": "Code of logistics provider (e.g. DHL, FDX, etc.)"
-                      },
-                      "tracking_number": {
-                        "type": "string",
-                        "description": "Order tracking number"
-                      }
+                      "type": "object"
                     }
                   },
                   "destination_fx_quote": {
