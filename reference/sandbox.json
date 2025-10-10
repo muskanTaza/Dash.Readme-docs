@@ -5418,114 +5418,33 @@
                 "examples": {
                   "Result": {
                     "value": {
-                      "status": "success",
-                      "message": "",
-                      "data": {
-                        "amount": 81861,
-                        "balance_transaction": "btr_d34lvi5frlneaajg",
-                        "beneficiary": "bnf_d34h2lnlvne6vpg",
-                        "beneficiary_details": {
-                          "address": {
-                            "city": "DELHI",
-                            "country": "IN",
-                            "line1": "B-39, FIRST FLOOR, VIHAR, PHASE-1, DELHI-110052, INDIA",
-                            "postal_code": "189052",
-                            "state": "DELHI"
-                          },
-                          "date_of_birth": "",
-                          "destination": "",
-                          "destination_details": {
-                            "bank": {
-                              "account_number": "0507890002478",
-                              "account_type": "",
-                              "bank_codes": {
-                                "swift_code": "ORBCIBH6OSP"
-                              },
-                              "bank_name": "PUNJAB NATIONAL BANK",
-                              "branch_name": "",
-                              "country": "IN",
-                              "currency": "USD",
-                              "firc_required": false,
-                              "purpose_code": "",
-                              "transfer_type": "swift"
-                            },
-                            "type": "bank"
-                          },
-                          "documents": [],
-                          "email": "",
-                          "name": "bLIK AUTOTECH",
-                          "name_local": "",
-                          "national_identification_number": "",
-                          "party_classification": "",
-                          "phone": {
-                            "calling_code": "91"
-                          },
-                          "registration_number": "",
-                          "tax_id": "",
-                          "type": "business"
-                        },
-                        "charge_type": "ours",
-                        "confirmation_documents": [],
-                        "created_at": "2025-09-16T08:24:57.090677Z",
-                        "currency": "USD",
-                        "destination_fx_quote": "fx_d34htm7lc7lp34c10",
-                        "documents": [],
-                        "holding_currency": "USD",
-                        "holding_fx_quote": "fx_d34htm7lc7lp34c1g",
-                        "holding_fx_transaction": {
-                          "exchange_rate": 1,
-                          "final": {
-                            "amount": 8118861,
-                            "currency": "USD"
-                          },
-                          "id": "fx_d34htm7lc7lp34c1g",
-                          "initial": {
-                            "amount": 8118861,
-                            "currency": "USD"
-                          },
-                          "object": "fx_transaction"
-                        },
-                        "id": "pot_d34hvi5frlneaagg",
-                        "local": {
-                          "fund_transfer_network": ""
-                        },
-                        "logistics_tracking_details": [],
-                        "metadata": null,
-                        "mt103": "",
-                        "object": "payout",
-                        "on_behalf_of": "",
-                        "payout_fx_transaction": {
-                          "exchange_rate": 1,
-                          "final": {
-                            "amount": 8118861,
-                            "currency": "USD"
-                          },
-                          "id": "fx_d34htm7lc7lp34c10",
-                          "initial": {
-                            "amount": 8118861,
-                            "currency": "USD"
-                          },
-                          "object": "fx_transaction"
-                        },
-                        "payout_quote": "",
-                        "purpose": "PYR003",
-                        "reference_id": "",
-                        "statement_descriptor": "",
-                        "status": "failed",
-                        "status_description": "PO1012 incorrect_swift_code",
-                        "tracking_details": {
-                          "tracking_number": "",
-                          "tracking_type": ""
-                        },
-                        "transaction_description": "Payment for goods acc 0915",
-                        "type": "swift"
-                      }
+                      "status": "error",
+                      "message": "Resource not found",
+                      "errors": [
+                        {
+                          "code": 105,
+                          "message": "The resource you are trying to retrieve is not present. This error code happens when trying to Get or Read a data point (eg: transaction, user, KYB, etc) that does not exist.",
+                          "remarks": ""
+                        }
+                      ]
                     }
                   }
                 },
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "code": {
+                      "type": "number",
+                      "description": "The error code."
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "The Error message"
+                    },
+                    "remarks": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
