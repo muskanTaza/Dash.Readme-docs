@@ -4206,7 +4206,7 @@
                     "type": "integer",
                     "description": "Amount in cents. For example if you want to payout $10.12 pass 1012 as the value. For decimal handling for various currencies, refer to <a href=\"https://docs.tazapay.com/docs/decimal-currencies\" target=\"_blank\"> the guide here</a>",
                     "format": "int32",
-                    "default": "1000"
+                    "default": ""
                   },
                   "currency": {
                     "type": "string",
