@@ -6049,303 +6049,347 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "status": {
-                      "type": "string",
-                      "example": "success"
+                    "amount": {
+                      "type": "number",
+                      "example": 1000000,
+                      "description": "Amount of the payout in payout currency"
                     },
-                    "message": {
+                    "balance_transaction": {
                       "type": "string",
-                      "example": ""
+                      "example": "btr_fahfaniaf0023902",
+                      "description": "ID of the balance transaction object linked to this payout"
                     },
-                    "data": {
+                    "beneficiary": {
+                      "type": "string",
+                      "example": "bnf_cta4erf3l65o6mqvace0",
+                      "description": "Unique identifier of the payout beneficiary"
+                    },
+                    "beneficiary_details": {
                       "type": "object",
+                      "description": "Details of the payout beneficiary",
                       "properties": {
-                        "amount": {
-                          "type": "integer",
-                          "example": 1000000,
-                          "default": 0
+                        "address": {
+                          "type": "null",
+                          "example": null,
+                          "description": "Address of the beneficiary"
                         },
-                        "balance_transaction": {
+                        "destination": {
                           "type": "string",
-                          "example": "btr_fahfaniaf0023902"
+                          "example": "",
+                          "description": "Destination account or payment identifier"
                         },
-                        "beneficiary": {
-                          "type": "string",
-                          "example": "bnf_cta4erf3l65o6mqvace0"
-                        },
-                        "beneficiary_details": {
+                        "destination_details": {
                           "type": "object",
+                          "description": "Details of the destination account or bank",
                           "properties": {
-                            "address": {},
-                            "destination": {
-                              "type": "string",
-                              "example": ""
-                            },
-                            "destination_details": {
+                            "bank": {
                               "type": "object",
+                              "description": "Bank details of the beneficiary",
                               "properties": {
-                                "bank": {
+                                "account_number": {
+                                  "type": "string",
+                                  "example": "6492749274",
+                                  "description": "Bank account number"
+                                },
+                                "account_type": {
+                                  "type": "string",
+                                  "example": "",
+                                  "description": "Type of the bank account"
+                                },
+                                "bank_codes": {
                                   "type": "object",
+                                  "description": "Bank identification codes such as ABA or SWIFT",
                                   "properties": {
-                                    "account_number": {
+                                    "aba_code": {
                                       "type": "string",
-                                      "example": "6492749274"
+                                      "example": "AIOHFAONF",
+                                      "description": "ABA routing code"
                                     },
-                                    "account_type": {
+                                    "swift_code": {
                                       "type": "string",
-                                      "example": ""
-                                    },
-                                    "bank_codes": {
-                                      "type": "object",
-                                      "properties": {
-                                        "aba_code": {
-                                          "type": "string",
-                                          "example": "AIOHFAONF"
-                                        },
-                                        "swift_code": {
-                                          "type": "string",
-                                          "example": "SWIFT CODE"
-                                        }
-                                      }
-                                    },
-                                    "bank_name": {
-                                      "type": "string",
-                                      "example": "Bank of America"
-                                    },
-                                    "branch_name": {
-                                      "type": "string",
-                                      "example": ""
-                                    },
-                                    "country": {
-                                      "type": "string",
-                                      "example": "US"
-                                    },
-                                    "currency": {
-                                      "type": "string",
-                                      "example": "USD"
-                                    },
-                                    "firc_required": {
-                                      "type": "boolean",
-                                      "example": false,
-                                      "default": true
-                                    },
-                                    "purpose_code": {
-                                      "type": "string",
-                                      "example": ""
+                                      "example": "SWIFT CODE",
+                                      "description": "SWIFT/BIC code of the bank"
                                     }
                                   }
                                 },
-                                "type": {
+                                "bank_name": {
                                   "type": "string",
-                                  "example": "bank"
+                                  "example": "Bank of America",
+                                  "description": "Name of the bank"
+                                },
+                                "branch_name": {
+                                  "type": "string",
+                                  "example": "",
+                                  "description": "Branch name of the bank"
+                                },
+                                "country": {
+                                  "type": "string",
+                                  "example": "US",
+                                  "description": "Country of the bank"
+                                },
+                                "currency": {
+                                  "type": "string",
+                                  "example": "USD",
+                                  "description": "Currency of the bank account"
+                                },
+                                "firc_required": {
+                                  "type": "boolean",
+                                  "example": false,
+                                  "description": "Indicates if FIRC document is required"
+                                },
+                                "purpose_code": {
+                                  "type": "string",
+                                  "example": "",
+                                  "description": "Purpose code for the transaction"
                                 }
                               }
-                            },
-                            "documents": {
-                              "type": "array"
-                            },
-                            "email": {
-                              "type": "string",
-                              "example": ""
-                            },
-                            "name": {
-                              "type": "string",
-                              "example": "Test Account USA"
-                            },
-                            "phone": {
-                              "type": "object",
-                              "properties": {
-                                "calling_code": {
-                                  "type": "string",
-                                  "example": "1"
-                                }
-                              }
-                            },
-                            "tax_id": {
-                              "type": "string",
-                              "example": ""
                             },
                             "type": {
                               "type": "string",
-                              "example": "business"
+                              "example": "bank",
+                              "description": "Type of destination (e.g., bank)"
                             }
                           }
-                        },
-                        "charge_type": {
-                          "type": "string",
-                          "example": "shared"
-                        },
-                        "created_at": {
-                          "type": "string",
-                          "example": "2024-12-17T07:15:14.691660Z"
-                        },
-                        "currency": {
-                          "type": "string",
-                          "example": "USD"
                         },
                         "documents": {
                           "type": "array",
-                          "items": {
-                            "type": "object",
-                            "properties": {
-                              "id": {
-                                "type": "string",
-                                "example": "doc_ctgia0ng9n1vh5ns81f0"
-                              },
-                              "type": {
-                                "type": "string",
-                                "example": "invoice"
-                              },
-                              "url": {
-                                "type": "string",
-                                "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-payout-document/pot_ctgia0ng9n1vh5ns81cg/1734419711360340856_image%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAUGJYD3OSSENYIX45%2F20241217%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20241217T072015Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHYaDmFwLXNvdXRoZWFzdC0xIkcwRQIhAM9um7eR7Mr0x9x7nPCUHqNfsNQOl%2FGYlyBCZU25t1ZaAiA1Qg%2BnFaZXl0ynXNu9cEvoGFXfz86d%2B2CSrPacMzDaOSr0Awg%2FEAEaDDI4ODQxNzM3MzA5MyIM41LZ42vlF4tAc69tKtED12ChC8dNuaNE3xjx6BuhDm6SFBy58FENrzdHcI%2FBV2AA1cjmom4CzMLgXvv29Sf8Iy7s12Kxq3dz5pct5ya9ZVzh8iFjlIX52iQo%2BslhQNiCUKrQqEpwLMiUmDyAb7OV4tARhttrSvbLUOC51KTdyIS4bKqJrncHKzDlzTIRoO9PdM%2BPEFFXUY786C2a23W1sM5GqgnhKd1EUb1iN3AxO7fd7wPhXC6o%2Fym6Wh2TNTGz0uaxXHtLzcDAZJwMNEeKQDaa1YD%2BG3xWSN9m6yyysaDoGewhqrUAeqr1AQvTR47sbdIkFKn7m%2B6wDjK86cQNxpHU61FpgCYwbXBNCaMKqIrXcmamSAiK8m7C4BfxWlrCz7iQXqR3vKGf3Y%2BHhqpkXGk0mHRk%2FI4VWWAeoDxEogdfarZ%2FMk1BEAThH689NDSiCwrf%2FcWw3B0AlRfXWuy5oKyXgDPlku9WYzN7XnbR3ACCOW8NbzJ0nSCiZb71932okKiEpYyrU10BivAboncdGfHpwcQerBlz40ESSpVzKJFFaIRL6LALRzd8ybzofdFgzs5GAoU%2Bbbn6ZqbGXFIGzsoIh4umuOMMEbhoCJnY3np%2FS5pdSjqaZ%2FhKLMipnAoeMNKuhLsGOqUBBIcJEaO3lTmzl9%2B3Kwkun6q5OVe0fLnarcASVwfK12G4TQEfKimM9EbAoOtGqSbIduTaDaW8PbJndpSVHue%2FC%2BeAgjGhIC%2FoUFpUxoGoVuxBdI%2BAuHEf%2FNKnplTjBTT2YBraCnEGjiRLE38owzZ8M1fU3Iymp9KlBTNhCCkp%2BZKPhUD81sv0T3Rh%2FQTSygt3ML9wakZBxvTFosGDKy%2BIbAUUxQ6h&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B&response-content-type=image%2Fpng&x-id=GetObject&X-Amz-Signature=8be0fdb60f69daad7d4cb4b92b2790b5ff3e8f5ef8a5ecebe6f84140a211ec91"
-                              }
+                          "example": [],
+                          "description": "List of documents linked to the beneficiary"
+                        },
+                        "email": {
+                          "type": "string",
+                          "example": "",
+                          "description": "Email address of the beneficiary"
+                        },
+                        "name": {
+                          "type": "string",
+                          "example": "Test Account USA",
+                          "description": "Name of the payout beneficiary"
+                        },
+                        "phone": {
+                          "type": "object",
+                          "description": "Phone information of the beneficiary",
+                          "properties": {
+                            "calling_code": {
+                              "type": "string",
+                              "example": "1",
+                              "description": "Country calling code"
                             }
                           }
                         },
-                        "holding_currency": {
+                        "tax_id": {
                           "type": "string",
-                          "example": "SEK"
+                          "example": "",
+                          "description": "Tax ID of the beneficiary"
                         },
-                        "holding_fx_transaction": {
+                        "type": {
+                          "type": "string",
+                          "example": "business",
+                          "description": "Type of the beneficiary (individual or business)"
+                        }
+                      }
+                    },
+                    "charge_type": {
+                      "type": "string",
+                      "example": "shared",
+                      "description": "Charge type for the payout (e.g., ours, shared, beneficiary)"
+                    },
+                    "created_at": {
+                      "type": "string",
+                      "example": "2024-12-17T07:15:14.691660Z",
+                      "description": "Timestamp when the payout was created"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "example": "USD",
+                      "description": "Currency of the payout"
+                    },
+                    "documents": {
+                      "type": "array",
+                      "example": [
+                        {
+                          "id": "doc_ctgia0ng9n1vh5ns81f0",
+                          "type": "invoice",
+                          "url": "https://s3.ap-southeast-1.amazonaws.com/tazapay-payout-document/pot_ctgia0ng9n1vh5ns81cg/1734419711360340856_image%20%281%29.png"
+                        }
+                      ],
+                      "description": "List of payout-related documents"
+                    },
+                    "holding_currency": {
+                      "type": "string",
+                      "example": "SEK",
+                      "description": "Currency used to hold funds before payout"
+                    },
+                    "holding_fx_transaction": {
+                      "type": "object",
+                      "description": "Details of FX transaction for holding currency conversion",
+                      "properties": {
+                        "exchange_rate": {
+                          "type": "number",
+                          "example": 0.087096,
+                          "description": "Exchange rate used in holding FX"
+                        },
+                        "final": {
                           "type": "object",
+                          "description": "Final FX conversion details",
                           "properties": {
-                            "exchange_rate": {
+                            "amount": {
                               "type": "number",
-                              "example": 0.087096,
-                              "default": 0
+                              "example": 1000000,
+                              "description": "Final amount after FX conversion"
                             },
-                            "final": {
-                              "type": "object",
-                              "properties": {
-                                "amount": {
-                                  "type": "integer",
-                                  "example": 1000000,
-                                  "default": 0
-                                },
-                                "currency": {
-                                  "type": "string",
-                                  "example": "USD"
-                                }
-                              }
-                            },
-                            "id": {
+                            "currency": {
                               "type": "string",
-                              "example": "fx_ctgia0lpk5p8ci902fsg"
-                            },
-                            "initial": {
-                              "type": "object",
-                              "properties": {
-                                "amount": {
-                                  "type": "integer",
-                                  "example": 11481567,
-                                  "default": 0
-                                },
-                                "currency": {
-                                  "type": "string",
-                                  "example": "SEK"
-                                }
-                              }
-                            },
-                            "object": {
-                              "type": "string",
-                              "example": "fx_transaction"
+                              "example": "USD",
+                              "description": "Final currency after FX conversion"
                             }
                           }
                         },
                         "id": {
                           "type": "string",
-                          "example": "pot_ctgia0ng9n1vh5ns81cg"
+                          "example": "fx_ctgia0lpk5p8ci902fsg",
+                          "description": "ID of the FX transaction"
                         },
-                        "metadata": {},
-                        "mt103": {
-                          "type": "string",
-                          "example": ""
-                        },
-                        "object": {
-                          "type": "string",
-                          "example": "payout"
-                        },
-                        "on_behalf_of": {
-                          "type": "string",
-                          "example": ""
-                        },
-                        "payout_fx_transaction": {
+                        "initial": {
                           "type": "object",
+                          "description": "Initial FX details before conversion",
                           "properties": {
-                            "exchange_rate": {
-                              "type": "integer",
-                              "example": 1,
-                              "default": 0
+                            "amount": {
+                              "type": "number",
+                              "example": 11481567,
+                              "description": "Initial amount before conversion"
                             },
-                            "final": {
-                              "type": "object",
-                              "properties": {
-                                "amount": {
-                                  "type": "integer",
-                                  "example": 1000000,
-                                  "default": 0
-                                },
-                                "currency": {
-                                  "type": "string",
-                                  "example": "USD"
-                                }
-                              }
-                            },
-                            "id": {
+                            "currency": {
                               "type": "string",
-                              "example": "fx_ctgia0lpk5p8ci902fs0"
-                            },
-                            "initial": {
-                              "type": "object",
-                              "properties": {
-                                "amount": {
-                                  "type": "integer",
-                                  "example": 1000000,
-                                  "default": 0
-                                },
-                                "currency": {
-                                  "type": "string",
-                                  "example": "USD"
-                                }
-                              }
-                            },
-                            "object": {
-                              "type": "string",
-                              "example": "fx_transaction"
+                              "example": "SEK",
+                              "description": "Initial currency before conversion"
                             }
                           }
                         },
-                        "purpose": {
+                        "object": {
                           "type": "string",
-                          "example": "PYR002"
-                        },
-                        "reference_id": {
-                          "type": "string",
-                          "example": ""
-                        },
-                        "statement_descriptor": {
-                          "type": "string",
-                          "example": ""
-                        },
-                        "status": {
-                          "type": "string",
-                          "example": "processing"
-                        },
-                        "status_description": {
-                          "type": "string",
-                          "example": ""
-                        },
-                        "tracking_details": {},
-                        "transaction_description": {
-                          "type": "string",
-                          "example": ""
-                        },
-                        "type": {
-                          "type": "string",
-                          "example": "swift"
+                          "example": "fx_transaction",
+                          "description": "Object type representing FX transaction"
                         }
                       }
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "pot_ctgia0ng9n1vh5ns81cg",
+                      "description": "Unique payout ID"
+                    },
+                    "metadata": {
+                      "type": "null",
+                      "example": null,
+                      "description": "Metadata associated with the payout"
+                    },
+                    "mt103": {
+                      "type": "string",
+                      "example": "",
+                      "description": "SWIFT MT103 reference (if applicable)"
+                    },
+                    "object": {
+                      "type": "string",
+                      "example": "payout",
+                      "description": "Type of object (payout)"
+                    },
+                    "on_behalf_of": {
+                      "type": "string",
+                      "example": "",
+                      "description": "Entity on whose behalf the payout is made"
+                    },
+                    "payout_fx_transaction": {
+                      "type": "object",
+                      "description": "FX transaction details for payout currency",
+                      "properties": {
+                        "exchange_rate": {
+                          "type": "number",
+                          "example": 1,
+                          "description": "Exchange rate for payout FX"
+                        },
+                        "final": {
+                          "type": "object",
+                          "description": "Final FX transaction details",
+                          "properties": {
+                            "amount": {
+                              "type": "number",
+                              "example": 1000000,
+                              "description": "Final payout amount"
+                            },
+                            "currency": {
+                              "type": "string",
+                              "example": "USD",
+                              "description": "Final payout currency"
+                            }
+                          }
+                        },
+                        "id": {
+                          "type": "string",
+                          "example": "fx_ctgia0lpk5p8ci902fs0",
+                          "description": "FX transaction ID"
+                        },
+                        "initial": {
+                          "type": "object",
+                          "description": "Initial FX transaction details",
+                          "properties": {
+                            "amount": {
+                              "type": "number",
+                              "example": 1000000,
+                              "description": "Initial payout amount"
+                            },
+                            "currency": {
+                              "type": "string",
+                              "example": "USD",
+                              "description": "Initial payout currency"
+                            }
+                          }
+                        },
+                        "object": {
+                          "type": "string",
+                          "example": "fx_transaction",
+                          "description": "Type of FX transaction object"
+                        }
+                      }
+                    },
+                    "purpose": {
+                      "type": "string",
+                      "example": "PYR002",
+                      "description": "Purpose code for the payout"
+                    },
+                    "reference_id": {
+                      "type": "string",
+                      "example": "",
+                      "description": "External reference ID for payout"
+                    },
+                    "statement_descriptor": {
+                      "type": "string",
+                      "example": "",
+                      "description": "Statement descriptor for the payout"
+                    },
+                    "status": {
+                      "type": "string",
+                      "example": "processing",
+                      "description": "Current status of the payout"
+                    },
+                    "status_description": {
+                      "type": "string",
+                      "example": "",
+                      "description": "Detailed status description"
+                    },
+                    "tracking_details": {
+                      "type": "null",
+                      "example": null,
+                      "description": "Tracking information if applicable"
+                    },
+                    "transaction_description": {
+                      "type": "string",
+                      "example": "",
+                      "description": "Description or memo for the payout transaction"
+                    },
+                    "type": {
+                      "type": "string",
+                      "example": "swift",
+                      "description": "Type of payout (e.g., swift, local)"
                     }
                   }
                 }
@@ -14193,7 +14237,151 @@
                       "updated_at": "2025-06-23T20:16:00+08:00"
                     }
                   }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "example": "poq_aohnraoinrfaoinrao",
+                      "description": "Unique identifier for the payout quote"
+                    },
+                    "object": {
+                      "type": "string",
+                      "example": "payout_quote",
+                      "description": "Type of the object"
+                    },
+                    "payout_type": {
+                      "type": "string",
+                      "example": "local",
+                      "description": "Type of payout (e.g., local, swift)"
+                    },
+                    "holding_info": {
+                      "type": "object",
+                      "description": "Details about the holding currency and amount",
+                      "properties": {
+                        "currency": {
+                          "type": "string",
+                          "example": "sats",
+                          "description": "Currency of the holding balance"
+                        },
+                        "amount": {
+                          "type": "number",
+                          "example": 9876800,
+                          "description": "Amount available in holding currency"
+                        }
+                      }
+                    },
+                    "payout_info": {
+                      "type": "object",
+                      "description": "Information about payout currency and amount",
+                      "properties": {
+                        "currency": {
+                          "type": "string",
+                          "example": "usd",
+                          "description": "Currency of the payout"
+                        },
+                        "amount": {
+                          "type": "number",
+                          "example": 9000,
+                          "description": "Payout amount in payout currency"
+                        }
+                      }
+                    },
+                    "destination_info": {
+                      "type": "object",
+                      "description": "Information about destination currency and amount",
+                      "properties": {
+                        "currency": {
+                          "type": "string",
+                          "example": "inr",
+                          "description": "Currency of the destination"
+                        },
+                        "amount": {
+                          "type": "number",
+                          "example": 765000,
+                          "description": "Amount received in destination currency"
+                        }
+                      }
+                    },
+                    "fee_info": {
+                      "type": "object",
+                      "description": "Breakdown of fixed and variable fees",
+                      "properties": {
+                        "fixed": {
+                          "type": "object",
+                          "description": "Fixed fee details",
+                          "properties": {
+                            "in_holding_currency": {
+                              "type": "number",
+                              "example": 0,
+                              "description": "Fixed fee amount in holding currency"
+                            },
+                            "in_payout_currency": {
+                              "type": "number",
+                              "example": 0,
+                              "description": "Fixed fee amount in payout currency"
+                            }
+                          }
+                        },
+                        "variable": {
+                          "type": "object",
+                          "description": "Variable fee details",
+                          "properties": {
+                            "in_holding_currency": {
+                              "type": "number",
+                              "example": 987680,
+                              "description": "Variable fee amount in holding currency"
+                            },
+                            "in_payout_currency": {
+                              "type": "number",
+                              "example": 1000,
+                              "description": "Variable fee amount in payout currency"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "exchange_rates": {
+                      "type": "object",
+                      "description": "Exchange rates used in the payout quote",
+                      "properties": {
+                        "holding_to_payout": {
+                          "type": "number",
+                          "example": 0.000911,
+                          "description": "Exchange rate from holding to payout currency"
+                        },
+                        "payout_to_destination": {
+                          "type": "number",
+                          "example": 85,
+                          "description": "Exchange rate from payout to destination currency"
+                        }
+                      }
+                    },
+                    "valid_until": {
+                      "type": "string",
+                      "example": "2025-06-23T20:17:00+08:00",
+                      "description": "Timestamp until which the quote is valid (ISO 8601 format)"
+                    },
+                    "status": {
+                      "type": "string",
+                      "example": "active",
+                      "description": "Status of the payout quote"
+                    },
+                    "created_at": {
+                      "type": "string",
+                      "example": "2025-06-23T20:16:00+08:00",
+                      "description": "Timestamp when the payout quote was created"
+                    },
+                    "updated_at": {
+                      "type": "string",
+                      "example": "2025-06-23T20:16:00+08:00",
+                      "description": "Timestamp when the payout quote was last updated"
+                    }
+                  }
                 }
+
+
               }
             }
           }
@@ -14331,6 +14519,398 @@
                   "OK": {
                     "summary": "OK",
                     "value": "{\n  \"amount\": 5000,\n  \"balance_transaction\": \"btr_d24adsvfccunngaiu2bg\",\n  \"beneficiary\": \"bnf_d24adp7fccunngaiu20g\",\n  \"beneficiary_details\": {\n    \"address\": null,\n    \"date_of_birth\": \"\",\n    \"destination\": \"\",\n    \"destination_details\": {\n      \"bank\": {\n        \"account_type\": \"\",\n        \"bank_codes\": {},\n        \"bank_name\": \"testfxbank\",\n        \"branch_name\": \"\",\n        \"country\": \"FR\",\n        \"currency\": \"EUR\",\n        \"firc_required\": false,\n        \"iban\": \"31\",\n        \"purpose_code\": \"\",\n        \"transfer_type\": \"local\"\n      },\n      \"type\": \"bank\"\n    },\n    \"documents\": [],\n    \"email\": \"\",\n    \"name\": \"Jackie Morissette\",\n    \"national_identification_number\": \"\",\n    \"party_classification\": \"\",\n    \"phone\": {\n      \"calling_code\": \"33\"\n    },\n    \"registration_number\": \"\",\n    \"tax_id\": \"\",\n    \"type\": \"individual\"\n  },\n  \"charge_type\": \"\",\n  \"confirmation_documents\": [],\n  \"created_at\": \"2025-07-29T10:48:19.014533Z\",\n  \"currency\": \"EUR\",\n  \"documents\": [],\n  \"holding_currency\": \"USD\",\n  \"holding_fx_transaction\": {\n    \"exchange_rate\": 0.828672,\n    \"final\": {\n      \"amount\": 5000,\n      \"currency\": \"EUR\"\n    },\n    \"id\": \"fx_d24adsmp89reuemeaujg\",\n    \"initial\": {\n      \"amount\": 6034,\n      \"currency\": \"USD\"\n    },\n    \"object\": \"fx_transaction\"\n  },\n  \"id\": \"pot_d24adsnfccunngaiu280\",\n  \"local\": {\n    \"fund_transfer_network\": \"\"\n  },\n  \"logistics_tracking_details\": [],\n  \"metadata\": {\n    \"collect_id\": \"col_d24ae102tsfj74sj23s0\",\n    \"transaction_hash\": \"0xie4el49kctwen8rf6urv7wirrtemva9bqhjlct7j1v9jp8r4eya4zg08c80xkgxo\"\n  },\n  \"mt103\": \"\",\n  \"object\": \"payout\",\n  \"on_behalf_of\": \"\",\n  \"payout_fx_transaction\": {\n    \"exchange_rate\": 1,\n    \"final\": {\n      \"amount\": 5000,\n      \"currency\": \"EUR\"\n    },\n    \"id\": \"fx_d24adsmp89reuemeauj0\",\n    \"initial\": {\n      \"amount\": 5000,\n      \"currency\": \"EUR\"\n    },\n    \"object\": \"fx_transaction\"\n  },\n  \"purpose\": \"PYR008\",\n  \"reference_id\": \"\",\n  \"source\": \"col_d24ae102tsfj74sj23s0\",\n  \"statement_descriptor\": \"\",\n  \"status\": \"processing\",\n  \"status_description\": \"\",\n  \"tracking_details\": null,\n  \"transaction_description\": \"Payout Description\",\n  \"type\": \"local\"\n}}"
+                  }
+                },                
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number",
+                      "example": 5000,
+                      "description": "Amount of the payout in payout currency"
+                    },
+                    "balance_transaction": {
+                      "type": "string",
+                      "example": "btr_d24adsvfccunngaiu2bg",
+                      "description": "ID of the balance transaction associated with this payout"
+                    },
+                    "beneficiary": {
+                      "type": "string",
+                      "example": "bnf_d24adp7fccunngaiu20g",
+                      "description": "Unique identifier of the payout beneficiary"
+                    },
+                    "beneficiary_details": {
+                      "type": "object",
+                      "description": "Detailed information about the beneficiary",
+                      "properties": {
+                        "address": {
+                          "type": "null",
+                          "example": null,
+                          "description": "Beneficiary address information"
+                        },
+                        "date_of_birth": {
+                          "type": "string",
+                          "example": "",
+                          "description": "Date of birth of the beneficiary (if applicable)"
+                        },
+                        "destination": {
+                          "type": "string",
+                          "example": "",
+                          "description": "Destination account or identifier"
+                        },
+                        "destination_details": {
+                          "type": "object",
+                          "description": "Destination bank or payment details",
+                          "properties": {
+                            "bank": {
+                              "type": "object",
+                              "description": "Bank details of the beneficiary",
+                              "properties": {
+                                "account_type": {
+                                  "type": "string",
+                                  "example": "",
+                                  "description": "Type of bank account"
+                                },
+                                "bank_codes": {
+                                  "type": "object",
+                                  "example": {},
+                                  "description": "Bank identification codes such as SWIFT or ABA"
+                                },
+                                "bank_name": {
+                                  "type": "string",
+                                  "example": "testfxbank",
+                                  "description": "Name of the beneficiary bank"
+                                },
+                                "branch_name": {
+                                  "type": "string",
+                                  "example": "",
+                                  "description": "Branch name of the bank"
+                                },
+                                "country": {
+                                  "type": "string",
+                                  "example": "FR",
+                                  "description": "Country of the bank"
+                                },
+                                "currency": {
+                                  "type": "string",
+                                  "example": "EUR",
+                                  "description": "Currency of the beneficiary account"
+                                },
+                                "firc_required": {
+                                  "type": "boolean",
+                                  "example": false,
+                                  "description": "Indicates whether FIRC document is required"
+                                },
+                                "iban": {
+                                  "type": "string",
+                                  "example": "31",
+                                  "description": "IBAN number of the beneficiary account"
+                                },
+                                "purpose_code": {
+                                  "type": "string",
+                                  "example": "",
+                                  "description": "Purpose code for the transaction"
+                                },
+                                "transfer_type": {
+                                  "type": "string",
+                                  "example": "local",
+                                  "description": "Type of transfer (e.g., local, SWIFT)"
+                                }
+                              }
+                            },
+                            "type": {
+                              "type": "string",
+                              "example": "bank",
+                              "description": "Type of destination (e.g., bank, wallet)"
+                            }
+                          }
+                        },
+                        "documents": {
+                          "type": "array",
+                          "example": [],
+                          "description": "List of documents linked to the beneficiary"
+                        },
+                        "email": {
+                          "type": "string",
+                          "example": "",
+                          "description": "Email address of the beneficiary"
+                        },
+                        "name": {
+                          "type": "string",
+                          "example": "Jackie Morissette",
+                          "description": "Full name of the beneficiary"
+                        },
+                        "national_identification_number": {
+                          "type": "string",
+                          "example": "",
+                          "description": "National ID or social security number"
+                        },
+                        "party_classification": {
+                          "type": "string",
+                          "example": "",
+                          "description": "Classification of the beneficiary party (if applicable)"
+                        },
+                        "phone": {
+                          "type": "object",
+                          "description": "Phone information of the beneficiary",
+                          "properties": {
+                            "calling_code": {
+                              "type": "string",
+                              "example": "33",
+                              "description": "Country calling code"
+                            }
+                          }
+                        },
+                        "registration_number": {
+                          "type": "string",
+                          "example": "",
+                          "description": "Company registration number if the beneficiary is a business"
+                        },
+                        "tax_id": {
+                          "type": "string",
+                          "example": "",
+                          "description": "Tax identification number of the beneficiary"
+                        },
+                        "type": {
+                          "type": "string",
+                          "example": "individual",
+                          "description": "Type of beneficiary (individual or business)"
+                        }
+                      }
+                    },
+                    "charge_type": {
+                      "type": "string",
+                      "example": "",
+                      "description": "Type of charge (e.g., shared, ours, beneficiary)"
+                    },
+                    "confirmation_documents": {
+                      "type": "array",
+                      "example": [],
+                      "description": "List of confirmation documents uploaded for the payout"
+                    },
+                    "created_at": {
+                      "type": "string",
+                      "example": "2025-07-29T10:48:19.014533Z",
+                      "description": "Timestamp when the payout was created"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "example": "EUR",
+                      "description": "Currency of the payout"
+                    },
+                    "documents": {
+                      "type": "array",
+                      "example": [],
+                      "description": "List of payout-related documents"
+                    },
+                    "holding_currency": {
+                      "type": "string",
+                      "example": "USD",
+                      "description": "Currency in which funds are held before conversion"
+                    },
+                    "holding_fx_transaction": {
+                      "type": "object",
+                      "description": "Details of FX transaction from holding to payout currency",
+                      "properties": {
+                        "exchange_rate": {
+                          "type": "number",
+                          "example": 0.828672,
+                          "description": "Exchange rate applied"
+                        },
+                        "final": {
+                          "type": "object",
+                          "description": "Final FX details",
+                          "properties": {
+                            "amount": {
+                              "type": "number",
+                              "example": 5000,
+                              "description": "Final payout amount after FX"
+                            },
+                            "currency": {
+                              "type": "string",
+                              "example": "EUR",
+                              "description": "Final currency after FX"
+                            }
+                          }
+                        },
+                        "id": {
+                          "type": "string",
+                          "example": "fx_d24adsmp89reuemeaujg",
+                          "description": "FX transaction ID"
+                        },
+                        "initial": {
+                          "type": "object",
+                          "description": "Initial FX details before conversion",
+                          "properties": {
+                            "amount": {
+                              "type": "number",
+                              "example": 6034,
+                              "description": "Initial amount before FX"
+                            },
+                            "currency": {
+                              "type": "string",
+                              "example": "USD",
+                              "description": "Initial currency before FX"
+                            }
+                          }
+                        },
+                        "object": {
+                          "type": "string",
+                          "example": "fx_transaction",
+                          "description": "Type of object"
+                        }
+                      }
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "pot_d24adsnfccunngaiu280",
+                      "description": "Unique payout ID"
+                    },
+                    "local": {
+                      "type": "object",
+                      "description": "Local payout information",
+                      "properties": {
+                        "fund_transfer_network": {
+                          "type": "string",
+                          "example": "",
+                          "description": "Network used for local transfer"
+                        }
+                      }
+                    },
+                    "logistics_tracking_details": {
+                      "type": "array",
+                      "example": [],
+                      "description": "Tracking details for logistics-related payouts (if applicable)"
+                    },
+                    "metadata": {
+                      "type": "object",
+                      "description": "Metadata information related to payout",
+                      "properties": {
+                        "collect_id": {
+                          "type": "string",
+                          "example": "col_d24ae102tsfj74sj23s0",
+                          "description": "Collection ID linked to this payout"
+                        },
+                        "transaction_hash": {
+                          "type": "string",
+                          "example": "0xie4el49kctwen8rf6urv7wirrtemva9bqhjlct7j1v9jp8r4eya4zg08c80xkgxo",
+                          "description": "Blockchain transaction hash (if applicable)"
+                        }
+                      }
+                    },
+                    "mt103": {
+                      "type": "string",
+                      "example": "",
+                      "description": "SWIFT MT103 reference number, if applicable"
+                    },
+                    "object": {
+                      "type": "string",
+                      "example": "payout",
+                      "description": "Type of object"
+                    },
+                    "on_behalf_of": {
+                      "type": "string",
+                      "example": "",
+                      "description": "Entity on whose behalf the payout is made"
+                    },
+                    "payout_fx_transaction": {
+                      "type": "object",
+                      "description": "FX transaction details for payout conversion",
+                      "properties": {
+                        "exchange_rate": {
+                          "type": "number",
+                          "example": 1,
+                          "description": "FX exchange rate for payout conversion"
+                        },
+                        "final": {
+                          "type": "object",
+                          "description": "Final FX transaction details",
+                          "properties": {
+                            "amount": {
+                              "type": "number",
+                              "example": 5000,
+                              "description": "Final payout amount"
+                            },
+                            "currency": {
+                              "type": "string",
+                              "example": "EUR",
+                              "description": "Final payout currency"
+                            }
+                          }
+                        },
+                        "id": {
+                          "type": "string",
+                          "example": "fx_d24adsmp89reuemeauj0",
+                          "description": "FX transaction ID"
+                        },
+                        "initial": {
+                          "type": "object",
+                          "description": "Initial FX transaction details",
+                          "properties": {
+                            "amount": {
+                              "type": "number",
+                              "example": 5000,
+                              "description": "Initial amount before FX"
+                            },
+                            "currency": {
+                              "type": "string",
+                              "example": "EUR",
+                              "description": "Initial currency before FX"
+                            }
+                          }
+                        },
+                        "object": {
+                          "type": "string",
+                          "example": "fx_transaction",
+                          "description": "Type of FX object"
+                        }
+                      }
+                    },
+                    "purpose": {
+                      "type": "string",
+                      "example": "PYR008",
+                      "description": "Purpose code or reason for the payout"
+                    },
+                    "reference_id": {
+                      "type": "string",
+                      "example": "",
+                      "description": "External reference ID"
+                    },
+                    "source": {
+                      "type": "string",
+                      "example": "col_d24ae102tsfj74sj23s0",
+                      "description": "Source collection ID for the payout"
+                    },
+                    "statement_descriptor": {
+                      "type": "string",
+                      "example": "",
+                      "description": "Statement descriptor shown on recipient’s statement"
+                    },
+                    "status": {
+                      "type": "string",
+                      "example": "processing",
+                      "description": "Current status of the payout"
+                    },
+                    "status_description": {
+                      "type": "string",
+                      "example": "",
+                      "description": "Additional status description"
+                    },
+                    "tracking_details": {
+                      "type": "null",
+                      "example": null,
+                      "description": "Tracking details if available"
+                    },
+                    "transaction_description": {
+                      "type": "string",
+                      "example": "Payout Description",
+                      "description": "Description or purpose of the payout transaction"
+                    },
+                    "type": {
+                      "type": "string",
+                      "example": "local",
+                      "description": "Type of payout (e.g., local, swift)"
+                    }
                   }
                 }
               }
