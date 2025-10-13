@@ -15,9 +15,7 @@ metadata:
 next:
   description: ''
 ---
-## Payout Object
-
-## Object Parameters
+# Object Structure
 
 ```json Swift Bank Payout
 {
@@ -494,9 +492,11 @@ next:
 }
 ```
 
-### Payout
+<br />
 
-### Payout
+# Object Parameters
+
+## Payout
 
 | Field                       | Type   | Description                                                                                                                                          |
 | --------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -532,3 +532,10 @@ next:
 | type                        | enum   | The type of payout. [Values: `swift`, `local`, `wallet`, `local_payment_network`, `tazapay_account`]                                                 |
 
 <br />
+
+## Tracking Details
+
+| Field           | Type   | Description                                                    |
+| --------------- | ------ | -------------------------------------------------------------- |
+| tracking_number | string | The tracking number (UETR, UTR, transaction hash, etc.).       |
+| tracking_type   | enum   | The tracking type. [Values: `uetr`, `utr`, `transaction_hash`] |
