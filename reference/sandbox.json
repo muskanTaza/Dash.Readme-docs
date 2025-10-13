@@ -4725,15 +4725,214 @@
                   "type": "object",
                   "properties": {
                     "amount": {
-                      "type": "string",
+                      "type": "number",
                       "description": "Amount of the payout"
                     },
                     "balance_transaction": {
                       "type": "string",
-                      "description": "Id of the balance transaction object linked to this payout."
+                      "description": "Id of the balance transaction object linked to this payout"
+                    },
+                    "beneficiary": {
+                      "type": "string",
+                      "description": "Unique identifier of the beneficiary"
+                    },
+                    "beneficiary_details": {
+                      "type": "object",
+                      "description": "Details of the payout beneficiary",
+                      "properties": {
+                        "address": {
+                          "type": "object",
+                          "properties": {
+                            "city": { "type": "string", "description": "City of the beneficiary" },
+                            "country": { "type": "string", "description": "Country of the beneficiary" },
+                            "line1": { "type": "string", "description": "Address line 1" },
+                            "line2": { "type": "string", "description": "Address line 2" },
+                            "postal_code": { "type": "string", "description": "Postal code" },
+                            "state": { "type": "string", "description": "State or province" }
+                          }
+                        },
+                        "destination": {
+                          "type": "string",
+                          "description": "Destination account or bank id"
+                        },
+                        "destination_details": {
+                          "type": "object",
+                          "properties": {
+                            "bank": {
+                              "type": "object",
+                              "properties": {
+                                "account_number": { "type": "string", "description": "Bank account number" },
+                                "account_type": { "type": "string", "description": "Type of bank account" },
+                                "bank_codes": {
+                                  "type": "object",
+                                  "properties": {
+                                    "aba_code": { "type": "string", "description": "ABA routing code" },
+                                    "swift_code": { "type": "string", "description": "SWIFT/BIC code" }
+                                  }
+                                },
+                                "bank_name": { "type": "string", "description": "Name of the bank" },
+                                "branch_name": { "type": "string", "description": "Branch name of the bank" },
+                                "country": { "type": "string", "description": "Bank country" },
+                                "currency": { "type": "string", "description": "Currency of the bank account" },
+                                "firc_required": { "type": "boolean", "description": "Whether FIRC document is required" },
+                                "purpose_code": { "type": "string", "description": "Purpose code for the transaction" }
+                              }
+                            },
+                            "type": { "type": "string", "description": "Destination type (e.g. bank)" }
+                          }
+                        },
+                        "documents": {
+                          "type": "array",
+                          "items": {},
+                          "description": "List of beneficiary documents"
+                        },
+                        "email": {
+                          "type": "string",
+                          "description": "Beneficiary email address"
+                        },
+                        "name": {
+                          "type": "string",
+                          "description": "Beneficiary name"
+                        },
+                        "phone": {
+                          "type": "object",
+                          "properties": {
+                            "calling_code": { "type": "string", "description": "Country calling code" },
+                            "number": { "type": "string", "description": "Phone number" }
+                          }
+                        },
+                        "tax_id": {
+                          "type": "string",
+                          "description": "Tax ID of the beneficiary"
+                        },
+                        "type": {
+                          "type": "string",
+                          "description": "Beneficiary type (individual/business)"
+                        }
+                      }
+                    },
+                    "charge_type": {
+                      "type": "string",
+                      "description": "Charge type for payout (e.g. ours/beneficiary)"
+                    },
+                    "created_at": {
+                      "type": "string",
+                      "description": "Payout creation timestamp (ISO 8601 format)"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "description": "Currency of the payout"
+                    },
+                    "documents": {
+                      "type": "array",
+                      "items": {},
+                      "description": "Associated documents"
+                    },
+                    "holding_currency": {
+                      "type": "string",
+                      "description": "Currency used for holding the funds before payout"
+                    },
+                    "holding_fx_transaction": {
+                      "type": "object",
+                      "description": "FX transaction details for holding currency",
+                      "properties": {
+                        "exchange_rate": { "type": "number", "description": "FX exchange rate used" },
+                        "final": {
+                          "type": "object",
+                          "properties": {
+                            "amount": { "type": "number", "description": "Final amount after FX" },
+                            "currency": { "type": "string", "description": "Final currency" }
+                          }
+                        },
+                        "id": { "type": "string", "description": "FX transaction ID" },
+                        "initial": {
+                          "type": "object",
+                          "properties": {
+                            "amount": { "type": "number", "description": "Initial amount before FX" },
+                            "currency": { "type": "string", "description": "Initial currency" }
+                          }
+                        },
+                        "object": { "type": "string", "description": "Object type (fx_transaction)" }
+                      }
+                    },
+                    "id": {
+                      "type": "string",
+                      "description": "Unique payout ID"
+                    },
+                    "metadata": {
+                      "type": "null",
+                      "description": "Metadata associated with payout"
+                    },
+                    "mt103": {
+                      "type": "string",
+                      "description": "SWIFT MT103 reference number"
+                    },
+                    "object": {
+                      "type": "string",
+                      "description": "Type of object (payout)"
+                    },
+                    "payout_fx_transaction": {
+                      "type": "object",
+                      "description": "FX transaction details for payout currency",
+                      "properties": {
+                        "exchange_rate": { "type": "number", "description": "Exchange rate for payout FX" },
+                        "final": {
+                          "type": "object",
+                          "properties": {
+                            "amount": { "type": "number", "description": "Final amount" },
+                            "currency": { "type": "string", "description": "Final currency" }
+                          }
+                        },
+                        "id": { "type": "string", "description": "FX transaction ID" },
+                        "initial": {
+                          "type": "object",
+                          "properties": {
+                            "amount": { "type": "number", "description": "Initial amount" },
+                            "currency": { "type": "string", "description": "Initial currency" }
+                          }
+                        },
+                        "object": { "type": "string", "description": "Object type (fx_transaction)" }
+                      }
+                    },
+                    "purpose": {
+                      "type": "string",
+                      "description": "Purpose code or note for payout"
+                    },
+                    "reference_id": {
+                      "type": "string",
+                      "description": "External reference ID for payout"
+                    },
+                    "statement_descriptor": {
+                      "type": "string",
+                      "description": "Statement descriptor for transaction"
+                    },
+                    "status": {
+                      "type": "string",
+                      "description": "Current payout status"
+                    },
+                    "status_description": {
+                      "type": "string",
+                      "description": "Description of payout status"
+                    },
+                    "tracking_details": {
+                      "type": "null",
+                      "description": "Tracking information if applicable"
+                    },
+                    "transaction_description": {
+                      "type": "string",
+                      "description": "Description of the transaction"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "Type of payout (e.g. swift, ach)"
+                    },
+                    "on_behalf_of": {
+                      "type": "string",
+                      "description": "Entity on whose behalf payout is made"
                     }
                   }
                 }
+
               }
             }
           },
