@@ -3,6 +3,7 @@ title: Document
 excerpt: ''
 deprecated: false
 hidden: false
+icon: far fa-paperclip
 metadata:
   title: ''
   description: ''

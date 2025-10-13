@@ -13,7 +13,7 @@ next:
 # Purpose for payouts
 
 | Code   | Description                                                                                             |
-| ------ | ------------------------------------------------------------------------------------------------------- |
+| :----- | :------------------------------------------------------------------------------------------------------ |
 | PYR001 | Payment for Services                                                                                    |
 | PYR002 | Payment for Software                                                                                    |
 | PYR003 | Payments for imported goods                                                                             |
@@ -45,6 +45,8 @@ next:
 | PYR029 | Currency Exchange                                                                                       |
 | PYR030 | User Withdrawal                                                                                         |
 | PYR031 | Advance Payments for goods                                                                              |
-| PYR032 | Personal Remittance                                                                                     |
+| PYR032 | Vendor / Contractor payouts for software development                                                    |
 | PYR033 | Merchant Settlement                                                                                     |
 | PYR034 | Repatriation Fund Settlement                                                                            |
+
+<br />

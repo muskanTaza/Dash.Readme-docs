@@ -3,6 +3,7 @@ title: Metadata
 excerpt: ''
 deprecated: false
 hidden: false
+icon: far fa-database
 metadata:
   title: ''
   description: ''

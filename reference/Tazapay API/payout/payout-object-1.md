@@ -7,7 +7,7 @@ excerpt: >-
   and offering multiple payout options such as bank transfers, digital wallets,
   or local payment methods
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''
@@ -15,191 +15,527 @@ metadata:
 next:
   description: ''
 ---
-## Payout Object
+# Object Structure
 
-## Object Parameters
-
-```json
+```json Swift Bank Payout
 {
-    "amount": 100000,
-    "balance_transaction": "btr_crv5u81h1l071n2fk1o0",
-    "beneficiary": "bnf_crv5r71h1l071n2fjvog",
-    "beneficiary_details": {
+  "amount": 100000,
+  "balance_transaction": "btr_d35pv4qcl8imrv60",
+  "beneficiary": "bnf_d3inm6ami8u10oqfg",
+  "beneficiary_details": {
         "address": {
-            "city": "test",
-            "country": "US",
-            "line1": "test",
-            "line2": "test",
-            "postal_code": "10038",
-            "state": "test"
-        },
-        "destination": "",
+            "country": "CN",
+            "line1": "Zhen Rui Yun Lu 66",
+            "postal_code": "311011"
+          },
+        "date_of_birth": "2003-04-04",
+        "destination": "bnk_crv7k337eoqgk10pqp40",
         "destination_details": {
             "bank": {
-                "account_number": "test",
-                "account_type": "",
+                "account_number": "33050167624000001030",
+                "account_type": "savings",
                 "bank_codes": {
-                    "aba_code": "test",
-                    "swift_code": "test"
-                },
-                "bank_name": "city bank",
-                "branch_name": "",
-                "country": "US",
+                    "swift_code": "PCBCCNBJZJX"
+                  },
+                "bank_name": "CHINA CONSTRUCTION BANK, ZHEJIANG BRANCH",
+                "branch_name": "Sheik Sarai",
+                "country": "CN",
                 "currency": "USD",
                 "firc_required": false,
-                "purpose_code": ""
-            },
+                "purpose_code": "",
+                "transfer_type": "swift"
+              },
             "type": "bank"
-        },
+          },
         "documents": [],
-        "email": "test@example.com",
-        "name": "test",
+        "email": "importandexport@gmail.com",
+        "name": "IMPORT AND EXPORT CO., LTD",
+        "name_local": "进出口有限公司",
+        "national_identification_number": "",
+        "party_classification": "",
         "phone": {
-            "calling_code": "1",
-            "number": "12312312345"
-        },
-        "tax_id": "test",
-        "type": "individual"
-    },
-    "charge_type": "ours",
-    "created_at": "2024-10-03T09:08:48.467222Z",
-    "currency": "USD",
-    "documents": [],
-    "holding_currency": "EUR",
-    "holding_fx_transaction": {
-        "exchange_rate": 1.059191,
+            "calling_code": "86"
+          },
+        "registration_number": "648302704",
+        "tax_id": "",
+        "type": "business"
+      },
+  "charge_type": "ours",
+  "confirmation_documents": [],
+  "created_at": "2025-09-18T10:07:35.101708Z",
+  "currency": "USD",
+  "destination_fx_quote": "fx_d35tjpnfi4p2dt2hh0",
+  "documents": [],
+  "holding_currency": "USD",
+  "holding_fx_quote": "fx_d35tjpnfigp2dt2hgg",
+  "holding_fx_transaction": {
+        "exchange_rate": 1,
         "final": {
-            "amount": 100000,
+            "amount": 10000000,
             "currency": "USD"
-        },
-        "id": "fx_crv5u80dj96g452dfr2g",
+          },
+        "id": "fx_d35tjpnfigp2dt2hgg",
         "initial": {
-            "amount": 94411,
-            "currency": "EUR"
-        },
+            "amount": 10000000,
+            "currency": "USD"
+          },
         "object": "fx_transaction"
+      },
+  "id": "pot_d35tjpn4qcl8iv30",
+  "logistics_tracking_details": [
+    {
+     	"tracking_number":"5436789",
+      "logistics_provider":{"name":"test","code":"testCode"}
+     }
+	],
+  "metadata": null,
+  "mt103": "{1:FHFLEND0XXX0000000000}{2:I103SCBLUS33XXXXN}{3:{108:ST10302510092922}{111:001}{121:372ff3b1-\nd12d-431c-8c9f-f19eb2507285}}{4:\n:20:ST1050254092922\n:23B:CRED\n:32A:251009USD4863,52\n:33B:USD4863,52\n:50K:/10096543269\nTrade Pe Tech Private Limited\nBarrister Rajni Patel Marg, Nariman\nPoint 61, Mittal Chambers 400021 Mu\nmbai Maharashtra/INDIA\n:52D:/0105552976\nTAZAPAY PTE. LTD.\n8 VEDAEK BOULEVARD,15-02, SUFEC T\nOWYT THREE,SINGAPORE,ZIP 038988\n/SINGAPORE\n:57A:ICICINBBCTS\n:59:/119405003646\nTRADE PE TECH PVT LTD-OPGSP MRROR N\nOSTRO A/C\nIN\n/INDIA\n:70:Nostro Payout for settlement\n:71A:OUR\n:72:/ACC/INCKIEBCTS/CITI BANK N.A./\n-}",
+  "object": "payout",
+  "on_behalf_of": "",
+  "payout_fx_transaction": {
+        "exchange_rate": 1,
+        "final": {
+            "amount": 10000000,
+            "currency": "USD"
+          },
+        "id": "fx_d35tfigo4p2dt2hh0",
+        "initial": {
+            "amount": 10000000,
+            "currency": "USD"
+          },
+        "object": "fx_transaction"
+      },
+  "payout_quote": "",
+  "purpose": "PYR003",
+  "reference_id": "",
+  "statement_descriptor": "",
+  "status": "succeeded",
+  "status_description": "",
+  "tracking_details": {
+        "tracking_number": "7833d-34b4-478-aac8-1184beae",
+        "tracking_type": "uetr"
+      },
+  "transaction_description": "Payment for goods acc 125",
+  "type": "swift"
+}
+
+```
+```json Local Bank Payout
+{
+  "status": "success",
+  "message": "",
+  "data": {
+    "amount": 3000000,
+    "balance_transaction": "btr_dhuvflvi5frlneafr0",
+    "beneficiary": "bnf_d0dla9u8dpp4edio0",
+    "beneficiary_details": {
+      "address": null,
+      "date_of_birth": "",
+      "destination": "",
+      "destination_details": {
+        "bank": {
+          "account_type": "",
+          "bank_codes": {
+            "swift_code": "FBDEFF"
+          },
+          "bank_name": "ER VOLKSBANK EG",
+          "branch_name": "",
+          "country": "DE",
+          "currency": "EUR",
+          "firc_required": false,
+          "iban": "DE535019045650474185",
+          "purpose_code": "",
+          "transfer_type": "any"
+        },
+        "type": "bank"
+      },
+      "documents": [],
+      "email": "",
+      "name": "GMBH",
+      "name_local": "",
+      "national_identification_number": "",
+      "party_classification": "",
+      "phone": {
+        "calling_code": "49"
+      },
+      "registration_number": "",
+      "tax_id": "",
+      "type": "business"
     },
-    "id": "pot_crv5u81h1l071n2fk1ng",
+    "charge_type": "",
+    "confirmation_documents": [],
+    "created_at": "2025-09-16T08:27:41.832790Z",
+    "currency": "EUR",
+    "destination_fx_quote": "fx_d34hc7loipp34fm0",
+    "documents": [],
+    "holding_currency": "USD",
+    "holding_fx_quote": "fx_d34hc7loipp34fmg",
+    "holding_fx_transaction": {
+      "exchange_rate": 0.846438,
+      "final": {
+        "amount": 3000000,
+        "currency": "EUR"
+      },
+      "id": "fx_d34flc7loipp34fmg",
+      "initial": {
+        "amount": 3544266,
+        "currency": "USD"
+      },
+      "object": "fx_transaction"
+    },
+    "id": "pot_d34hlvi5frlneafo0",
+    "local": {
+      "fund_transfer_network": ""
+    },
+    "logistics_tracking_details": [],
     "metadata": null,
     "mt103": "",
     "object": "payout",
+    "on_behalf_of": "",
     "payout_fx_transaction": {
-        "exchange_rate": 1,
-        "final": {
-            "amount": 100000,
-            "currency": "USD"
-        },
-        "id": "fx_crv5u80dj96g452dfr20",
-        "initial": {
-            "amount": 100000,
-            "currency": "USD"
-        },
-        "object": "fx_transaction"
+      "exchange_rate": 1,
+      "final": {
+        "amount": 3000000,
+        "currency": "EUR"
+      },
+      "id": "fx_d34huvflc7pp34fm0",
+      "initial": {
+        "amount": 3000000,
+        "currency": "EUR"
+      },
+      "object": "fx_transaction"
     },
+    "payout_quote": "",
     "purpose": "PYR001",
-    "reference_id": "Test_Ref",
-    "statement_descriptor": "tzp*Test",
-    "status": "processing",
+    "reference_id": "",
+    "statement_descriptor": "",
+    "status": "succeeded",
     "status_description": "",
-    "tracking_details": null,
-    "transaction_description": "Test Payout",
-    "type": "swift"
+    "tracking_details": {
+      "tracking_number": "098771252590P9A",
+      "tracking_type": "UTR"
+    },
+    "transaction_description": "Payment for logistic services 9-09",
+    "type": "local"
+  }
+}
+```
+```json Local Payment Network Payout
+{
+  "status": "success",
+  "message": "",
+  "data": {
+    "amount": 144,
+    "balance_transaction": "btr_d35v6ddendp1ul1p0",
+    "beneficiary": "bnf_d2pkuchg06m8tvjg",
+    "beneficiary_details": {
+      "address": null,
+      "date_of_birth": "",
+      "destination": "",
+      "destination_details": {
+        "local_payment_network": {
+          "currency": "BRL",
+          "deposit_key": "fep@gmail.com",
+          "type": "pix_brl"
+        },
+        "type": "local_payment_network"
+      },
+      "documents": [],
+      "email": "fep@gmail.com",
+      "name": "Feete Pereira",
+      "name_local": "",
+      "national_identification_number": "",
+      "party_classification": "",
+      "phone": null,
+      "registration_number": "",
+      "tax_id": "3879876743",
+      "type": "individual"
+    },
+    "charge_type": "",
+    "confirmation_documents": [],
+    "created_at": "2025-09-18T11:56:35.627500Z",
+    "currency": "BRL",
+    "destination_fx_quote": "fx_d35v6go4p2dt8ec0",
+    "documents": [],
+    "holding_currency": "USD",
+    "holding_fx_quote": "fx_d35vfigo4p2dt8ecg",
+    "holding_fx_transaction": {
+      "exchange_rate": 5.158393,
+      "final": {
+        "amount": 144,
+        "currency": "BRL"
+      },
+      "id": "fx_d35vfigo4p2dt8ecg",
+      "initial": {
+        "amount": 28,
+        "currency": "USD"
+      },
+      "object": "fx_transaction"
+    },
+    "id": "pot_d35v6sp8dp1ul1m0",
+    "local": {
+      "fund_transfer_network": ""
+    },
+    "logistics_tracking_details": [],
+    "metadata": null,
+    "mt103": "",
+    "object": "payout",
+    "on_behalf_of": "",
+    "payout_fx_transaction": {
+      "exchange_rate": 1,
+      "final": {
+        "amount": 144,
+        "currency": "BRL"
+      },
+      "id": "fx_d35v6go4p2dt8ec0",
+      "initial": {
+        "amount": 144,
+        "currency": "BRL"
+      },
+      "object": "fx_transaction"
+    },
+    "payout_quote": "",
+    "purpose": "PYR001",
+    "reference_id": "",
+    "statement_descriptor": "",
+    "status": "succeeded",
+    "status_description": "",
+    "tracking_details": {
+      "tracking_number": "",
+      "tracking_type": "utr"
+    },
+    "transaction_description": "",
+    "type": "local_payment_network"
+  }
+}
+```
+```json Transfer Within Tazapay
+{
+  "status": "success",
+  "message": "",
+  "data": {
+    "amount": 44000,
+    "balance_transaction": "btr_d35sqe74qcl8im850",
+    "beneficiary": "bnf_d35spsnl8imrh3gv0",
+    "beneficiary_details": {
+      "address": {},
+      "date_of_birth": "",
+      "destination": "",
+      "destination_details": {
+        "tazapay_account": {
+          "deposit_address": "ce4f51ue@tzp"
+        },
+        "type": "tazapay_account"
+      },
+      "documents": [],
+      "email": "info@trading.com",
+      "name": "T Co., Limited",
+      "name_local": "",
+      "national_identification_number": "",
+      "party_classification": "",
+      "phone": {},
+      "registration_number": "",
+      "tax_id": "",
+      "type": "business"
+    },
+    "charge_type": "",
+    "confirmation_documents": [],
+    "created_at": "2025-09-18T09:13:28.633167Z",
+    "currency": "USD",
+    "destination_fx_quote": "fx_d35sqe7figo4dsvt00",
+    "documents": [],
+    "holding_currency": "USD",
+    "holding_fx_quote": "fx_d35sfigo4p2dsvsvg",
+    "holding_fx_transaction": {
+      "exchange_rate": 1,
+      "final": {
+        "amount": 44000,
+        "currency": "USD"
+      },
+      "id": "fx_d35sqe7figo4p2dsvsvg",
+      "initial": {
+        "amount": 44000,
+        "currency": "USD"
+      },
+      "object": "fx_transaction"
+    },
+    "id": "pot_d5sqe7cl8imrh4810",
+    "local": {
+      "fund_transfer_network": ""
+    },
+    "logistics_tracking_details": [],
+    "metadata": null,
+    "mt103": "",
+    "object": "payout",
+    "on_behalf_of": "",
+    "payout_fx_transaction": {
+      "exchange_rate": 1,
+      "final": {
+        "amount": 44000,
+        "currency": ""
+      },
+      "id": "fx_d35sqe7figo4psvt00",
+      "initial": {
+        "amount": 44000,
+        "currency": "USD"
+      },
+      "object": "fx_transaction"
+    },
+    "payout_quote": "",
+    "purpose": "PYR003",
+    "reference_id": "",
+    "statement_descriptor": "",
+    "status": "succeeded",
+    "status_description": "",
+    "tracking_details": {
+      "tracking_number": "",
+      "tracking_type": ""
+    },
+    "transaction_description": "Payment for goods acc 001",
+    "type": "tazapay_account"
+  }
+}
+```
+```json Crypto Payout
+{
+  "status": "success",
+  "message": "",
+  "data": {
+    "amount": 122225,
+    "balance_transaction": "btr_dag4eup1ekl94qrlg",
+    "beneficiary": "bnf_d35eag4eupl94qrig",
+    "beneficiary_details": {
+      "address": {
+        "city": "Vrtmore",
+        "country": "JM",
+        "line1": "it12 3cwth",
+        "postal_code": "00000",
+        "state": "Vortmore"
+      },
+      "date_of_birth": "2003-04-04",
+      "destination": "",
+      "destination_details": {
+        "type": "wallet",
+        "wallet": {
+          "currency": "USDC",
+          "deposit_address": "09e53bcac0f2edxnjsui87f8bb7a9faf64789ed8",
+          "type": "ethereum"
+        }
+      },
+      "documents": [],
+      "email": "",
+      "name": "Scott",
+      "name_local": "",
+      "national_identification_number": "",
+      "party_classification": "third_party",
+      "phone": {},
+      "registration_number": "",
+      "tax_id": "",
+      "type": "individual"
+    },
+    "charge_type": "",
+    "confirmation_documents": [],
+    "created_at": "2025-09-17T16:43:44.378053Z",
+    "currency": "USD",
+    "destination_fx_quote": "fx_d35igo4p2drbeu0",
+    "documents": [],
+    "holding_currency": "USD",
+    "holding_fx_quote": "fx_d35eag74p2drbeug",
+    "holding_fx_transaction": {
+      "exchange_rate": 1,
+      "final": {
+        "amount": 122225,
+        "currency": "USD"
+      },
+      "id": "fx_d35eag74p2drbeug",
+      "initial": {
+        "amount": 122225,
+        "currency": "USD"
+      },
+      "object": "fx_transaction"
+    },
+    "id": "pot_d35eag4ekl94qri0",
+    "local": {
+      "fund_transfer_network": ""
+    },
+    "logistics_tracking_details": [],
+    "metadata": null,
+    "mt103": "",
+    "object": "payout",
+    "on_behalf_of": "",
+    "payout_fx_transaction": {
+      "exchange_rate": 1,
+      "final": {
+        "amount": 122225,
+        "currency": "USDC"
+      },
+      "id": "fx_d35igo4p2drbeu0",
+      "initial": {
+        "amount": 122225,
+        "currency": "USD"
+      },
+      "object": "fx_transaction"
+    },
+    "payout_quote": "",
+    "purpose": "PYR030",
+    "reference_id": "",
+    "statement_descriptor": "",
+    "status": "succeeded",
+    "status_description": "",
+    "tracking_details": {
+      "tracking_number": "0xadef30173d3dd42333779a683c1404e50567e03fb4daef4f850f415789f559f",
+      "tracking_type": "transaction_hash"
+    },
+    "transaction_description": "commision",
+    "type": "wallet"
+  }
 }
 ```
 
-### Payout
+<br />
 
-| Field                   | Subfield                       | Type                   | Description                                                                                                                                                                                                                                                                                                                                        |
-| ----------------------- | ------------------------------ | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| amount                  |                                | number                 | The total amount for the payout transaction.                                                                                                                                                                                                                                                                                                       |
-| balance_transaction     |                                | string                 | The Tazapay ID of the balance transaction associated with the payout.                                                                                                                                                                                                                                                                              |
-| beneficiary             |                                | string                 | The Tazapay ID of the beneficiary receiving the payout.                                                                                                                                                                                                                                                                                            |
-| beneficiary_details     |                                | object                 | The details of the beneficiary.                                                                                                                                                                                                                                                                                                                    |
-|                         | address                        | object                 | The address of the beneficiary. (See Address Table)                                                                                                                                                                                                                                                                                                |
-|                         | destination                    | string                 | The ID of the destination account for the payout.                                                                                                                                                                                                                                                                                                  |
-|                         | destination_details            | object                 | The details of the destination account. (See Destination Details Table)                                                                                                                                                                                                                                                                            |
-|                         | documents                      | array                  | The list of documents related to the beneficiary.                                                                                                                                                                                                                                                                                                  |
-|                         | email                          | string                 | The email address of the beneficiary.                                                                                                                                                                                                                                                                                                              |
-|                         | name                           | string                 | The name of the beneficiary.                                                                                                                                                                                                                                                                                                                       |
-|                         | phone                          | object                 | The phone details of the beneficiary. (See Phone Table)                                                                                                                                                                                                                                                                                            |
-|                         | tax_id                         | string                 | The tax identification number of the beneficiary.                                                                                                                                                                                                                                                                                                  |
-|                         | type                           | enum                   | The type of the beneficiary [Values - individual, business].                                                                                                                                                                                                                                                                                       |
-|                         | date_of_birth                  |                        |                                                                                                                                                                                                                                                                                                                                                    |
-|                         | name_local                     |                        |                                                                                                                                                                                                                                                                                                                                                    |
-|                         | national_identification_number |                        |                                                                                                                                                                                                                                                                                                                                                    |
-|                         | party_classification           |                        |                                                                                                                                                                                                                                                                                                                                                    |
-|                         | registration_number            |                        |                                                                                                                                                                                                                                                                                                                                                    |
-| charge_type             |                                | enum                   | The charge type for the payout. [Value - shared, ours]                                                                                                                                                                                                                                                                                             |
-| created_at              |                                | string (ISO Timespamp) | The timestamp when the payout was created.                                                                                                                                                                                                                                                                                                         |
-| currency                |                                | string                 | The currency of the payout amount.                                                                                                                                                                                                                                                                                                                 |
-| documents               |                                | array                  | The list of documents related to the payout.                                                                                                                                                                                                                                                                                                       |
-| holding_currency        |                                | string                 | The currency used for holding funds before payout (e.g., EUR).                                                                                                                                                                                                                                                                                     |
-| holding_fx_transaction  |                                | object                 | The details of the FX transaction for holding currency. (See FX Transaction Table)                                                                                                                                                                                                                                                                 |
-| id                      |                                | string                 | The unique Tazapay identifier for the payout.                                                                                                                                                                                                                                                                                                      |
-| metadata                |                                | json                   | Set of key-value pairs attached to the payout.                                                                                                                                                                                                                                                                                                     |
-| mt103                   |                                | string                 | The MT103 SWIFT message reference for the payout (if applicable).                                                                                                                                                                                                                                                                                  |
-| object                  |                                | string                 | The type of object, which is "payout".                                                                                                                                                                                                                                                                                                             |
-| payout_fx_transaction   |                                | object                 | The details of the FX transaction for payout currency. (See FX Transaction Table)                                                                                                                                                                                                                                                                  |
-| purpose                 |                                | enum                   | Reason for payout. Click [here](https://docs.tazapay.com/docs/reasons-for-payout) for the detailed list. [Values - PYR001, PYR002, PYR003, PYR004, PYR005, PYR006, PYR007, PYR008, PYR009, PYR010, PYR011, PYR012, PYR013, PYR014, PYR015, PYR016, PYR017, PYR018, PYR019, PYR020, PYR021, PYR022, PYR023, PYR024, PYR025, PYR026, PYR027, PYR028] |
-| reference_id            |                                | string                 | The reference ID for the payout.                                                                                                                                                                                                                                                                                                                   |
-| statement_descriptor    |                                | string                 | The statement descriptor for the payout, to appear on the beneficiary’s statement.                                                                                                                                                                                                                                                                 |
-| status                  |                                | enum                   | The current status of the payout [Values - Processing, Requires Approval, Requires Action, Succeeded, Failed, Cancelled]                                                                                                                                                                                                                           |
-| status_description      |                                | string                 | A description of the current payout status (optional).                                                                                                                                                                                                                                                                                             |
-| tracking_details        |                                | object                 | Tracking details of the payout, if applicable.                                                                                                                                                                                                                                                                                                     |
-| transaction_description |                                | string                 | A description of the payout transaction.                                                                                                                                                                                                                                                                                                           |
-| type                    |                                | enum                   | The type of payout [Values - local, swift, wallet]                                                                                                                                                                                                                                                                                                 |
+# Object Parameters
+
+## Payout
+
+| Field                       | Type   | Description                                                                                                                                          |
+| --------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| amount                      | number | The total amount for the payout transaction.                                                                                                         |
+| balance_transaction         | string | The Tazapay ID of the balance transaction associated with the payout.                                                                                |
+| beneficiary                 | string | The Tazapay ID of the beneficiary receiving the payout.                                                                                              |
+| beneficiary_details         | object | The details of the beneficiary.  **[Beneficiary Details Object](https://docs.tazapay.com/update/reference/beneficiary-object#/)**                    |
+| charge_type                 | enum   | The charge type for the payout. [Values: `ours`, `shared`]                                                                                           |
+| confirmation_documents      | array  | The list of confirmation documents for the payout.                                                                                                   |
+| created_at                  | string | The timestamp when the payout was created (ISO 8601).                                                                                                |
+| currency                    | string | The currency of the payout amount.                                                                                                                   |
+| destination_fx_quote        | string | The FX quote ID used for conversion to destination currency.                                                                                         |
+| documents                   | array  | The list of documents related to the payout.                                                                                                         |
+| holding_currency            | string | The currency used for holding funds before payout.                                                                                                   |
+| holding_fx_quote            | string | The FX quote ID used for holding currency.                                                                                                           |
+| holding_fx_transaction      | object | The FX transaction details for the holding currency.  **[FX Transaction Object](https://docs.tazapay.com/update/reference/fx-transaction-object#/)** |
+| id                          | string | The unique Tazapay identifier for the payout.                                                                                                        |
+| local.fund_transfer_network | string | The local transfer network used (if applicable).                                                                                                     |
+| logistics_tracking_details  | array  | The logistics tracking details if payout is linked with goods.                                                                                       |
+| metadata                    | object | Key-value metadata attached to the payout.                                                                                                           |
+| mt103                       | string | The MT103 SWIFT message reference for the payout (if applicable).                                                                                    |
+| object                      | string | The type of object, always `"payout"`.                                                                                                               |
+| on_behalf_of                | string | The account ID if the payout was made on behalf of another entity.                                                                                   |
+| payout_fx_transaction       | object | The FX transaction details for payout currency. (**[FX Transaction Object](https://docs.tazapay.com/update/reference/fx-transaction-object#/)**)     |
+| payout_quote                | string | The payout quote reference (if applicable).                                                                                                          |
+| purpose                     | enum   | The purpose code for the payout. [Values: PYR001–PYR030]. Full list in [docs](https://docs.tazapay.com/docs/reasons-for-payout).                     |
+| reference_id                | string | The merchant’s reference ID for the payout.                                                                                                          |
+| statement_descriptor        | string | The statement descriptor that appears on the beneficiary’s bank statement.                                                                           |
+| status                      | enum   | The current status of the payout. [Values: `Processing`, `Requires Approval`, `Requires Action`, `Succeeded`, `Failed`, `Cancelled`]                 |
+| status_description          | string | A description of the current payout status.                                                                                                          |
+| tracking_details            | object | Tracking details of the payout. (**[Tracking Details Object](https://docs.tazapay.com/update/reference/tracking-details-object#/)**)                 |
+| transaction_description     | string | A description of the payout transaction provided by the merchant.                                                                                    |
+| type                        | enum   | The type of payout. [Values: `swift`, `local`, `wallet`, `local_payment_network`, `tazapay_account`]                                                 |
 
 <br />
 
-### Destination Details
+## Tracking Details
 
-| Field                                          | Type    | Description                                                                                |
-| ---------------------------------------------- | ------- | ------------------------------------------------------------------------------------------ |
-| destination_details.bank.account_number        | string  | The account number of the beneficiary's bank.                                              |
-| destination_details.bank.account_type          | string  | The type of bank account (optional).                                                       |
-| destination_details.bank.bank_codes.aba_code   | string  | The ABA routing code of the beneficiary's bank.                                            |
-| destination_details.bank.bank_codes.swift_code | string  | The SWIFT code of the beneficiary's bank.                                                  |
-| destination_details.bank.bank_name             | string  | The name of the beneficiary's bank.                                                        |
-| destination_details.bank.branch_name           | string  | The branch name of the beneficiary's bank (optional).                                      |
-| destination_details.bank.country               | string  | The country of the beneficiary's bank.                                                     |
-| destination_details.bank.currency              | string  | The currency in which the bank account operates.                                           |
-| destination_details.bank.firc_required         | boolean | Indicates if FIRC (Foreign Inward Remittance Certificate) is required for the transaction. |
-| destination_details.bank.purpose_code          | string  | The purpose code for the transaction (optional).                                           |
-| destination_details.type                       | string  | The type of destination (e.g., bank).                                                      |
-
-<br />
-
-### Address
-
-| Field               | Type   | Description                                              |
-| ------------------- | ------ | -------------------------------------------------------- |
-| address             | object | The address of the beneficiary.                          |
-| address.city        | string | The city of the beneficiary.                             |
-| address.country     | string | The country of the beneficiary.                          |
-| address.line1       | string | The first line of the beneficiary's address.             |
-| address.line2       | string | The second line of the beneficiary's address (optional). |
-| address.postal_code | string | The postal code of the beneficiary's address.            |
-| address.state       | string | The state or province of the beneficiary's address.      |
-
-<br />
-
-### Phone
-
-| Field              | Type   | Description                                                        |
-| ------------------ | ------ | ------------------------------------------------------------------ |
-| phone              | object | Phone details of the beneficiary.                                  |
-| phone.calling_code | string | The international calling code for the beneficiary's phone number. |
-| phone.number       | string | The phone number of the beneficiary.                               |
-
-<br />
-
-### FX Transaction
-
-| Field            | Type   | Description                                                 |
-| ---------------- | ------ | ----------------------------------------------------------- |
-| exchange_rate    | number | The exchange rate used for the currency conversion.         |
-| final.amount     | number | The final amount after conversion.                          |
-| final.currency   | string | The final currency after conversion.                        |
-| initial.amount   | number | The initial amount before conversion                        |
-| initial.currency | string | The initial currency before conversion.                     |
-| id               | string | The Tazapay ID of the holding foreign exchange transaction. |
+| Field           | Type   | Description                                                    |
+| --------------- | ------ | -------------------------------------------------------------- |
+| tracking_number | string | The tracking number (UETR, UTR, transaction hash, etc.).       |
+| tracking_type   | enum   | The tracking type. [Values: `uetr`, `utr`, `transaction_hash`] |

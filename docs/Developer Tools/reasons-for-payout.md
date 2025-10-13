@@ -2,7 +2,7 @@
 title: Reasons for payout
 excerpt: ''
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''

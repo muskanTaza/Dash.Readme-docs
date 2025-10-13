@@ -30,5 +30,7 @@ Tazapay's [Payin API ](https://docs.tazapay.com/reference/create-payin)allows fo
 > Related Links:
 >
 > 1. [Payin API](https://docs.tazapay.com/reference/create-payin)
-> 2. [Guide to integrate with individual local payment methods](https://docs.tazapay.com/docs/native-integration-guides)
+> 2. <Anchor label="Guide to integrate with individual local payment methods" target="_blank" href="https://docs.tazapay.com/docs/upi_inr-1">Guide to integrate with individual local payment methods</Anchor>
 > 3. [Integrating with Cards](https://docs.tazapay.com/reference/custom-flow)
+
+<br />

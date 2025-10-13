@@ -2,7 +2,8 @@
 title: Payout Quote
 excerpt: >-
   Lock in the exact amount to be deducted a payout. The API returns the fees
-  along with exchange rates which will be applicable to the payout
+  along with exchange rates which will be applicable to the payout. The payout
+  quote generated will be unique to your account.
 api:
   file: sandbox.json
   operationId: post_v3payoutquote

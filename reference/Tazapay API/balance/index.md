@@ -3,6 +3,7 @@ title: Balance
 excerpt: ''
 deprecated: false
 hidden: false
+icon: far fa-scale-balanced
 metadata:
   title: ''
   description: ''

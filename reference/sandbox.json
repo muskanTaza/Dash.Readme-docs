@@ -4205,7 +4205,8 @@
                   "amount": {
                     "type": "integer",
                     "description": "Amount in cents. For example if you want to payout $10.12 pass 1012 as the value. For decimal handling for various currencies, refer to <a href=\"https://docs.tazapay.com/docs/decimal-currencies\" target=\"_blank\"> the guide here</a>",
-                    "format": "int32"
+                    "format": "int32",
+                    "default": ""
                   },
                   "currency": {
                     "type": "string",
@@ -4258,9 +4259,6 @@
                           "postal_code": {
                             "type": "string",
                             "description": "Postal Code"
-                          },
-                          "": {
-                            "type": "string"
                           }
                         }
                       },
@@ -4454,6 +4452,13 @@
                       "party_classification": {
                         "type": "string",
                         "description": "Type of relationship between beneficiary and creator of beneficiary Possible values - self, third_party (Mandatory if destination_details.type is a wallet)"
+                      },
+                      "name_local": {
+                        "type": "string",
+                        "description": "Name in local language"
+                      },
+                      "property1": {
+                        "type": "string"
                       }
                     }
                   },
@@ -4564,21 +4569,26 @@
                     "description": "ID of the entity the payout is created on behalf of"
                   },
                   "logistics_tracking_details": {
-                    "type": "object",
+                    "type": "array",
                     "description": "Logistics tracking details of the order",
-                    "properties": {
-                      "logistics_provider_name": {
-                        "type": "string",
-                        "description": "Name of the logistics provider"
+                    "items": {
+                      "properties": {
+                        "logistics_provider": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "code": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "tracking_number": {
+                          "type": "string"
+                        }
                       },
-                      "logistics_provider_code": {
-                        "type": "string",
-                        "description": "Code of logistics provider (e.g. DHL, FDX, etc.)"
-                      },
-                      "tracking_number": {
-                        "type": "string",
-                        "description": "Order tracking number"
-                      }
+                      "type": "object"
                     }
                   },
                   "destination_fx_quote": {
@@ -4619,7 +4629,109 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{}{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"amount\": 100000,\n        \"balance_transaction\": \"btr_crv5u81h1l071n2fk1o0\",\n        \"beneficiary\": \"bnf_crv5r71h1l071n2fjvog\",\n        \"beneficiary_details\": {\n            \"address\": {\n                \"city\": \"test\",\n                \"country\": \"US\",\n                \"line1\": \"test\",\n                \"line2\": \"test\",\n                \"postal_code\": \"10038\",\n                \"state\": \"test\"\n            },\n            \"destination\": \"bnk_crv5r71gb6vrb4oj77kg\",\n            \"destination_details\": {\n                \"bank\": {\n                    \"account_number\": \"test\",\n                    \"account_type\": \"\",\n                    \"bank_codes\": {\n                        \"aba_code\": \"test\",\n                        \"swift_code\": \"test\"\n                    },\n                    \"bank_name\": \"city bank\",\n                    \"branch_name\": \"\",\n                    \"country\": \"US\",\n                    \"currency\": \"USD\",\n                    \"firc_required\": false,\n                    \"purpose_code\": \"\"\n                },\n                \"type\": \"bank\"\n            },\n            \"documents\": [],\n            \"email\": \"test@example.com\",\n            \"name\": \"test\",\n            \"phone\": {\n                \"calling_code\": \"1\",\n                \"number\": \"12312312345\"\n            },\n            \"tax_id\": \"test\",\n            \"type\": \"individual\"\n        },\n        \"charge_type\": \"ours\",\n        \"created_at\": \"2024-10-03T09:08:48.467222Z\",\n        \"currency\": \"USD\",\n        \"documents\": [],\n        \"holding_currency\": \"EUR\",\n        \"holding_fx_transaction\": {\n            \"exchange_rate\": 1.059191,\n            \"final\": {\n                \"amount\": 100000,\n                \"currency\": \"USD\"\n            },\n            \"id\": \"fx_crv5u80dj96g452dfr2g\",\n            \"initial\": {\n                \"amount\": 94412,\n                \"currency\": \"EUR\"\n            },\n            \"object\": \"fx_transaction\"\n        },\n        \"id\": \"pot_crv5u81h1l071n2fk1ng\",\n        \"metadata\": null,\n        \"mt103\": \"\",\n        \"object\": \"payout\",\n        \"payout_fx_transaction\": {\n            \"exchange_rate\": 1,\n            \"final\": {\n                \"amount\": 100000,\n                \"currency\": \"USD\"\n            },\n            \"id\": \"fx_crv5u80dj96g452dfr20\",\n            \"initial\": {\n                \"amount\": 100000,\n                \"currency\": \"USD\"\n            },\n            \"object\": \"fx_transaction\"\n        },\n        \"purpose\": \"PYR001\",\n        \"reference_id\": \"Test_Ref\",\n        \"statement_descriptor\": \"tzp*Test\",\n        \"status\": \"processing\",\n        \"status_description\": \"\",\n        \"tracking_details\": null,\n        \"transaction_description\": \"Test Payout\",\n        \"type\": \"swift\",\n        \"on_behalf_of\":\"\"\n    }\n}"
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "amount": 100000,
+                        "balance_transaction": "btr_crv5u81h1l071n2fk1o0",
+                        "beneficiary": "bnf_crv5r71h1l071n2fjvog",
+                        "beneficiary_details": {
+                          "address": {
+                            "city": "test",
+                            "country": "US",
+                            "line1": "test",
+                            "line2": "test",
+                            "postal_code": "10038",
+                            "state": "test"
+                          },
+                          "destination": "bnk_crv5r71gb6vrb4oj77kg",
+                          "destination_details": {
+                            "bank": {
+                              "account_number": "test",
+                              "account_type": "",
+                              "bank_codes": {
+                                "aba_code": "test",
+                                "swift_code": "test"
+                              },
+                              "bank_name": "city bank",
+                              "branch_name": "",
+                              "country": "US",
+                              "currency": "USD",
+                              "firc_required": false,
+                              "purpose_code": ""
+                            },
+                            "type": "bank"
+                          },
+                          "documents": [],
+                          "email": "test@example.com",
+                          "name": "test",
+                          "phone": {
+                            "calling_code": "1",
+                            "number": "12312312345"
+                          },
+                          "tax_id": "test",
+                          "type": "individual"
+                        },
+                        "charge_type": "ours",
+                        "created_at": "2024-10-03T09:08:48.467222Z",
+                        "currency": "USD",
+                        "documents": [],
+                        "holding_currency": "EUR",
+                        "holding_fx_transaction": {
+                          "exchange_rate": 1.059191,
+                          "final": {
+                            "amount": 100000,
+                            "currency": "USD"
+                          },
+                          "id": "fx_crv5u80dj96g452dfr2g",
+                          "initial": {
+                            "amount": 94412,
+                            "currency": "EUR"
+                          },
+                          "object": "fx_transaction"
+                        },
+                        "id": "pot_crv5u81h1l071n2fk1ng",
+                        "metadata": null,
+                        "mt103": "",
+                        "object": "payout",
+                        "payout_fx_transaction": {
+                          "exchange_rate": 1,
+                          "final": {
+                            "amount": 100000,
+                            "currency": "USD"
+                          },
+                          "id": "fx_crv5u80dj96g452dfr20",
+                          "initial": {
+                            "amount": 100000,
+                            "currency": "USD"
+                          },
+                          "object": "fx_transaction"
+                        },
+                        "purpose": "PYR001",
+                        "reference_id": "Test_Ref",
+                        "statement_descriptor": "tzp*Test",
+                        "status": "processing",
+                        "status_description": "",
+                        "tracking_details": null,
+                        "transaction_description": "Test Payout",
+                        "type": "swift",
+                        "on_behalf_of": ""
+                      }
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "string",
+                      "description": "Amount of the payout"
+                    },
+                    "balance_transaction": {
+                      "type": "string",
+                      "description": "Id of the balance transaction object linked to this payout."
+                    }
                   }
                 }
               }
@@ -4642,7 +4754,12 @@
             }
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "x-readme": {
+          "samples-languages": [
+            "shell"
+          ]
+        }
       }
     },
     "/v3/payout/{id}": {
@@ -5598,114 +5715,33 @@
                 "examples": {
                   "Result": {
                     "value": {
-                      "status": "success",
-                      "message": "",
-                      "data": {
-                        "amount": 81861,
-                        "balance_transaction": "btr_d34lvi5frlneaajg",
-                        "beneficiary": "bnf_d34h2lnlvne6vpg",
-                        "beneficiary_details": {
-                          "address": {
-                            "city": "DELHI",
-                            "country": "IN",
-                            "line1": "B-39, FIRST FLOOR, VIHAR, PHASE-1, DELHI-110052, INDIA",
-                            "postal_code": "189052",
-                            "state": "DELHI"
-                          },
-                          "date_of_birth": "",
-                          "destination": "",
-                          "destination_details": {
-                            "bank": {
-                              "account_number": "0507890002478",
-                              "account_type": "",
-                              "bank_codes": {
-                                "swift_code": "ORBCIBH6OSP"
-                              },
-                              "bank_name": "PUNJAB NATIONAL BANK",
-                              "branch_name": "",
-                              "country": "IN",
-                              "currency": "USD",
-                              "firc_required": false,
-                              "purpose_code": "",
-                              "transfer_type": "swift"
-                            },
-                            "type": "bank"
-                          },
-                          "documents": [],
-                          "email": "",
-                          "name": "bLIK AUTOTECH",
-                          "name_local": "",
-                          "national_identification_number": "",
-                          "party_classification": "",
-                          "phone": {
-                            "calling_code": "91"
-                          },
-                          "registration_number": "",
-                          "tax_id": "",
-                          "type": "business"
-                        },
-                        "charge_type": "ours",
-                        "confirmation_documents": [],
-                        "created_at": "2025-09-16T08:24:57.090677Z",
-                        "currency": "USD",
-                        "destination_fx_quote": "fx_d34htm7lc7lp34c10",
-                        "documents": [],
-                        "holding_currency": "USD",
-                        "holding_fx_quote": "fx_d34htm7lc7lp34c1g",
-                        "holding_fx_transaction": {
-                          "exchange_rate": 1,
-                          "final": {
-                            "amount": 8118861,
-                            "currency": "USD"
-                          },
-                          "id": "fx_d34htm7lc7lp34c1g",
-                          "initial": {
-                            "amount": 8118861,
-                            "currency": "USD"
-                          },
-                          "object": "fx_transaction"
-                        },
-                        "id": "pot_d34hvi5frlneaagg",
-                        "local": {
-                          "fund_transfer_network": ""
-                        },
-                        "logistics_tracking_details": [],
-                        "metadata": null,
-                        "mt103": "",
-                        "object": "payout",
-                        "on_behalf_of": "",
-                        "payout_fx_transaction": {
-                          "exchange_rate": 1,
-                          "final": {
-                            "amount": 8118861,
-                            "currency": "USD"
-                          },
-                          "id": "fx_d34htm7lc7lp34c10",
-                          "initial": {
-                            "amount": 8118861,
-                            "currency": "USD"
-                          },
-                          "object": "fx_transaction"
-                        },
-                        "payout_quote": "",
-                        "purpose": "PYR003",
-                        "reference_id": "",
-                        "statement_descriptor": "",
-                        "status": "failed",
-                        "status_description": "PO1012 incorrect_swift_code",
-                        "tracking_details": {
-                          "tracking_number": "",
-                          "tracking_type": ""
-                        },
-                        "transaction_description": "Payment for goods acc 0915",
-                        "type": "swift"
-                      }
+                      "status": "error",
+                      "message": "Resource not found",
+                      "errors": [
+                        {
+                          "code": 105,
+                          "message": "The resource you are trying to retrieve is not present. This error code happens when trying to Get or Read a data point (eg: transaction, user, KYB, etc) that does not exist.",
+                          "remarks": ""
+                        }
+                      ]
                     }
                   }
                 },
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "code": {
+                      "type": "number",
+                      "description": "The error code."
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "The Error message"
+                    },
+                    "remarks": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -7763,11 +7799,13 @@
                 "properties": {
                   "name": {
                     "type": "string",
-                    "description": "Customer's name"
+                    "description": "Customer's name",
+                    "default": ""
                   },
                   "email": {
                     "type": "string",
-                    "description": "Customer's email address"
+                    "description": "Customer's email address",
+                    "default": ""
                   },
                   "country": {
                     "type": "string",
@@ -7791,7 +7829,7 @@
                       }
                     }
                   },
-                  "billing": {
+                  "billing_address": {
                     "type": "array",
                     "description": "Customer's billing details",
                     "items": {
@@ -7852,7 +7890,7 @@
                       "type": "object"
                     }
                   },
-                  "shipping": {
+                  "shipping_address": {
                     "type": "array",
                     "description": "Customer's shipping details",
                     "items": {
@@ -7939,7 +7977,57 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{\n\t\"status\": \"success\",\n\t\"message\": \"customer created successfully\",\n\t\"data\": {\n\t\t\"id\": \"cus_haiuhnfoiaoijfojfajpj123\",\n\t\t\"object\": \"customer\",\n\t\t\"created_at\": \"2023-07-18 16:34:32\",\n\t\t\"name\": \"Andrew Robin\",\n\t\t\"email\": \"andrew.robin@example.com\",\n\t\t\"country\": \"US\",\n\t\t\"phone\": {\n\t\t\t\"calling_code\": \"\",\n\t\t\t\"number\": \"\"\n\t\t},\n\t\t\"billing\": [{\n\t\t\t\"name\": \"\",\n\t\t\t\"address\": {\n\t\t\t\t\"line1\": \"\",\n\t\t\t\t\"line2\": \"\",\n\t\t\t\t\"city\": \"\",\n\t\t\t\t\"state\": \"\",\n\t\t\t\t\"country\": \"\",\n\t\t\t\t\"postal_code\": \"\"\n\t\t\t},\n\t\t\t\"phone\": {\n\t\t\t\t\"calling_code\": \"\",\n\t\t\t\t\"number\": \"\"\n\t\t\t}\n\t\t}],\n\t\t\"shipping\": [{\n\t\t\t\"name\": \"\",\n\t\t\t\"address\": {\n\t\t\t\t\"line1\": \"\",\n\t\t\t\t\"line2\": \"\",\n\t\t\t\t\"city\": \"\",\n\t\t\t\t\"state\": \"\",\n\t\t\t\t\"country\": \"\",\n\t\t\t\t\"postal_code\": \"\"\n\t\t\t},\n\t\t\t\"phone\": {\n\t\t\t\t\"calling_code\": \"\",\n\t\t\t\t\"number\": \"\"\n\t\t\t}\n\t\t}],\n\t\t\"metadata\": null\n\t}\n}"
+                    "value": {
+                      "status": "success",
+                      "message": "customer created successfully",
+                      "data": {
+                        "id": "cus_haiuhnfoiaoijfojfajpj123",
+                        "object": "customer",
+                        "created_at": "2023-07-18 16:34:32",
+                        "name": "Andrew Robin",
+                        "email": "andrew.robin@example.com",
+                        "country": "US",
+                        "phone": {
+                          "calling_code": "",
+                          "number": ""
+                        },
+                        "billing_address": [
+                          {
+                            "name": "",
+                            "address": {
+                              "line1": "",
+                              "line2": "",
+                              "city": "",
+                              "state": "",
+                              "country": "",
+                              "postal_code": ""
+                            },
+                            "phone": {
+                              "calling_code": "",
+                              "number": ""
+                            }
+                          }
+                        ],
+                        "shipping_address": [
+                          {
+                            "name": "",
+                            "address": {
+                              "line1": "",
+                              "line2": "",
+                              "city": "",
+                              "state": "",
+                              "country": "",
+                              "postal_code": ""
+                            },
+                            "phone": {
+                              "calling_code": "",
+                              "number": ""
+                            }
+                          }
+                        ],
+                        "metadata": null
+                      }
+                    }
                   }
                 },
                 "schema": {
@@ -10538,7 +10626,8 @@
                         "enum": [
                           "bank",
                           "wallet",
-                          "local_payment_network"
+                          "local_payment_network",
+                          "tazapay_account"
                         ]
                       },
                       "bank": {
@@ -10737,7 +10826,15 @@
                   "party_classification": {
                     "type": "string",
                     "description": "Type of relationship between beneficiary and creator of beneficiary Possible values - self, third_party (Mandatory if destination_details.type is a wallet)",
-                    "default": ""
+                    "default": "",
+                    "enum": [
+                      "self",
+                      "third_party"
+                    ]
+                  },
+                  "name_local": {
+                    "type": "string",
+                    "description": "Name in local language"
                   }
                 }
               },
@@ -14102,7 +14199,7 @@
                       "status": "success",
                       "message": "",
                       "data": {
-                        "file_name": "Escrow_checkout_and_payin_type_1750763277.csv",
+                        "file_name": "1753786909477561713_checkout_and_payin_type_1750763277.csv",
                         "url": "https://s3.ap-southeast-1.amazonaws.com/tazapay-temp-doc-qa/1753175183427867519_Business.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAQKC7OY4N2U7MEUJ7%2F20250722%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20250722T090623Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLXNvdXRoZWFzdC0xIkgwRgIhAKi73Tb9EF4fXtPRSBgeOaJyR7U99BWI4Zhj3knl9DG2AiEA4gcn9eF315LIe8bY4GITJUa85IebTe%2BlsYZDa%2BSQ948qiwQI5f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgwwMjE2NzUwMzQzOTUiDOpccsZalyTF4%2F1GOirfA01v0iF0UZ0ZVVmtbKS9Mb2qgd4Mkk8la86molWPcTzuctEsdKne0i08Yx1bXFDEl2HBzsEyXdqpmnndEFqNO3asPjNGBMJrXpuWuvTroXTJm0wTcEid4g6nyQa7PgRYPnKBnfU8WigkSXie3o5YgzV1n1U5kWviQgjf0LUreqX7d5f6qW%2Ba3bq4nCJ%2Fvg90ilGmw1leYbKUjO2LKJZUaRQIY2Xc3d866f7vTAzDg%2BnH6zGeNgAUYQiu%2BU39vGNiRcumFI6eWB%2BJSLtEZXM6gYxk7Gwj35zlj1MbCLz4sMCHpL71KADGuTfXxo129KuXZ%2BTzDEBQ4gZB0P8faPuBZQJinH%2BTrsWLxcyaUKRVHIlxpU%2B%2BWSu5Xir%2FZt4N%2BanoXIcNPqeTCN6uy6vMwVlxygKh%2Fv9h9UTwAdmzL4ouVqNJ%2B6Z0%2F7ydH2KeYd80JedyeBsOPWc1hfCOyDlgLXUSM1hCNqgFt55Z60r3YDGbOs7Xc55fXXNNKiye8sfJgLsBFdjtrdOucyZrlooq0phklra6P5MyNm9fgE%2BJyLkc7AdKAhiYpWny4AOQfkFrLxwW5N%2FXpr4dYDLlRoUSaYuhDLVbYli67R7WJVgEY%2Fgd0ND2sKBXOvsGLngZ%2F4BlmJFkMPyS%2FMMGOqQB2K4Y29YW5eGpMv4My4rE1qbjWpg3KyrdyYtX5rXC9DW87krfcUncaSBf4spXvxnOhrqmis392K4oVEIUlzPusRMnPUpohjAIxNBck2jJErqzfJXHMvrMXSrwZTskxQiotkrii8Z4HZyjG84FYAGLmnqgePiReOUTBLHWOSi%2F6N6Du%2FImD3mmtJCnO%2F9vvmbb4HmFMdP3sSPj7dCZhleNm17sJdY%3D&X-Amz-SignedHeaders=host&x-id=PutObject&X-Amz-Signature=493d3f95c747dbade0f21f18c588700dd67bdafaa019ea5eaab4ee442b6359f8"
                       }
                     }
@@ -14126,7 +14223,7 @@
         "x-readme": {
           "code-samples": [
             {
-              "code": "curl --request POST \\\n     --url https://service-sandbox.tazapay.com/v3/metadata/doc/upload \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data '\n{\n  \"file_name\": \"Escrow_checkout_and_payin_type_1750763277.csv\"\n}\n'",
+              "code": "curl --request POST \\\n     --url https://service-sandbox.tazapay.com/v3/metadata/doc/upload \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data '\n{\n  \"file_name\": \"checkout_and_payin_type_1750763277.csv\"\n}\n'",
               "language": "shell",
               "name": "curl"
             }
@@ -14561,7 +14658,243 @@
         }
       }
     },
-    "/new-endpoint-1": {}
+    "/v3/lightning_invoice_bolt11": {
+      "post": {
+        "description": "",
+        "operationId": "post_v3lightning_invoice_bolt11",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "description": "success or failure"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Message related to the action"
+                    },
+                    "data": {
+                      "type": "string",
+                      "description": "The lightning invoice bolt11 object",
+                      "format": "json"
+                    }
+                  }
+                },
+                "examples": {
+                  "OK": {
+                    "summary": "OK",
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "id": "l11_abc123xyz",
+                        "object": "lightning_invoice_bolt11",
+                        "amount": 123456,
+                        "d_tag_memo": "Payment for order #7890",
+                        "collect": "col_98765",
+                        "expiry_interval": 3600,
+                        "metadata": {
+                          "order_id": "7890",
+                          "customer_id": "cust_456"
+                        },
+                        "status": "active",
+                        "payment_status": "unpaid",
+                        "created_at": "2025-09-28T08:15:30Z",
+                        "updated_at": "2025-09-28T08:20:45Z"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "integer",
+                    "format": "int64",
+                    "description": "Amount in BTC. The precision is 8 decimal places",
+                    "default": "12345600"
+                  },
+                  "d_tag_memo": {
+                    "type": "string",
+                    "description": "This will be included in the d-tag. If both d_tag_memo and h_tag_memo are provided, only h_tag will be used",
+                    "default": "Payment for order #7890"
+                  },
+                  "h_tag_memo": {
+                    "type": "string",
+                    "description": "SHA-256 of the d_tag_memo. If both d_tag_memo and h_tag_memo are provided, only h_tag_memo will be used"
+                  },
+                  "expiry_interval": {
+                    "type": "integer",
+                    "description": "The expiry of the invoice in seconds. Default value is 3600 (1 hour)",
+                    "default": "4800"
+                  },
+                  "metadata": {
+                    "type": "string",
+                    "description": "Set of key-value pairs to attach to the lightning_invoice_bolt11 object",
+                    "format": "json"
+                  }
+                },
+                "required": [
+                  "amount"
+                ]
+              }
+            }
+          }
+        },
+        "x-readme": {
+          "code-samples": [
+            {
+              "code": "",
+              "language": "json",
+              "name": ""
+            }
+          ],
+          "samples-languages": [
+            "json"
+          ]
+        }
+      }
+    },
+    "/v3/lightning_invoice_bolt11/{id}": {
+      "get": {
+        "description": "",
+        "operationId": "get_v3lightning_invoice_bolt11{id}",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "description": "Status of the request"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Additional message describing the status"
+                    },
+                    "data": {
+                      "type": "string",
+                      "format": "json",
+                      "description": "The lightning_invoice_bolt11 object"
+                    }
+                  }
+                },
+                "examples": {
+                  "OK": {
+                    "summary": "OK",
+                    "value": "{\n  \"status\": \"success\",\n  \"message\": \"\",\n  \"data\": {\n    \"id\": \"l11_abc123xyz\",\n    \"object\": \"lightning_invoice_bolt11\",\n    \"amount\": 123456,\n    \"d_tag_memo\": \"Payment for order #7890\",\n    \"h_tag\"\n    \"collect\": \"col_98765\",\n    \"expiry_interval\": 3600,\n    \"metadata\": {\n      \"order_id\": \"7890\",\n      \"customer_id\": \"cust_456\"\n    },\n    \"status\": \"active\",\n    \"payment_status\": \"unpaid\",\n    \"created_at\": \"2025-09-28T08:15:30Z\",\n    \"updated_at\": \"2025-09-28T08:20:45Z\"\n  }\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string",
+              "default": "l11_8qyr8ah89fyaryf9ga7tyfa"
+            },
+            "required": true,
+            "description": "ID of an existing lightning_invoice_bolt11"
+          }
+        ],
+        "x-readme": {
+          "code-samples": [
+            {
+              "code": "",
+              "language": "shell",
+              "name": ""
+            }
+          ],
+          "samples-languages": [
+            "shell"
+          ]
+        }
+      },
+      "put": {
+        "description": "",
+        "operationId": "put_v3lightning_invoice_bolt11{id}",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "description": "The status of the request - success or failure"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Additional information about the status"
+                    },
+                    "data": {
+                      "type": "string",
+                      "description": "The updated lightning_invoice_bolt11 object"
+                    }
+                  }
+                },
+                "examples": {
+                  "OK": {
+                    "summary": "OK",
+                    "value": "\"status\": \"success\",\n  \"message\": \"\",\n  \"data\": {\n    \"id\": \"l11_abc123xyz\",\n    \"object\": \"lightning_invoice_bolt11\",\n    \"amount\": 123456,\n    \"d_tag_memo\": \"Payment for order #7890\",\n    \"h_tag\"\n    \"collect\": \"col_98765\",\n    \"expiry_interval\": 3600,\n    \"metadata\": {\n      \"order_id\": \"7890\",\n      \"customer_id\": \"cust_456\"\n    },\n    \"status\": \"active\",\n    \"payment_status\": \"unpaid\",\n    \"created_at\": \"2025-09-28T08:15:30Z\",\n    \"updated_at\": \"2025-09-28T08:20:45Z\"\n  }\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string",
+              "default": "l11_ag7a8f7agegfa"
+            },
+            "required": true,
+            "description": "ID of an existing lightning invoice"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "metadata": {
+                    "type": "string",
+                    "format": "json",
+                    "description": "Set of key-value pairs to attach to the lightning_invoice object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   },
   "x-readme": {
     "headers": [],
