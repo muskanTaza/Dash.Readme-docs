@@ -4720,6 +4720,19 @@
                       }
                     }
                   }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "string",
+                      "description": "Amount of the payout"
+                    },
+                    "balance_transaction": {
+                      "type": "string",
+                      "description": "Id of the balance transaction object linked to this payout."
+                    }
+                  }
                 }
               }
             }
