@@ -115,9 +115,9 @@ metadata:
 
 <br />
 
-## Object Parameters
+# Object Parameters
 
-### Collect
+## Collect
 
 | Field               | Subfield         | Type                   | Description                                                                                                                                                                |
 | ------------------- | ---------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -140,7 +140,7 @@ metadata:
 
 <br />
 
-## Virtual Account
+## Destination Details - Virtual Account
 
 | Field               | Type   | Description                                           |
 | ------------------- | ------ | ----------------------------------------------------- |
@@ -166,7 +166,7 @@ metadata:
 | postal_code    | string | The postal code of the bank’s address.       |
 | state          | string | The state or province of the bank’s address. |
 
-## Wallet
+## Destination Details - Wallet
 
 | Field           | Type   | Description                                     |
 | --------------- | ------ | ----------------------------------------------- |
@@ -177,7 +177,7 @@ metadata:
 
 <br />
 
-### Payer Details
+## Payer Details
 
 | Field                  | Type   | Description                                                         |
 | :--------------------- | :----- | :------------------------------------------------------------------ |
