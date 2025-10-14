@@ -1,5 +1,5 @@
 ---
-title: Collect Webhook
+title: Collect Webhooks
 deprecated: false
 hidden: false
 metadata:
