@@ -5,8 +5,6 @@ hidden: true
 metadata:
   robots: index
 ---
-<br />
-
 Tazapay offers flexible integration options to cater to your business needs and technical capabilities. You can either redirect to a `Tazapay Hosted Page` or build a `Custom Native Integration`. Tazapay also provides various [no-code](https://docs.tazapay.com/docs/no-code-options) payment options to help you get started quickly.
 
 ## Choosing the right integration option
