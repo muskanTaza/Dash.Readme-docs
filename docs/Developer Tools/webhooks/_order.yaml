@@ -6,6 +6,5 @@
 - refund-webhook
 - settlement
 - payout-webhook
-- retry-policy
 - collection-account
 - entity-webhooks
