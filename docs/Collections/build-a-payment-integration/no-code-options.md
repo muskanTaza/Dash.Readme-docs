@@ -16,7 +16,6 @@ For businesses seeking to integrate Tazapay without extensive coding or technica
 
 * You can create and share customisable payment links with your customers via email, SMS or social media.
 * You can create these links from [the Tazapay dashboard](https://dashboard.tazapay.com).
-* This is ideal for small businesses and service providers who need a simple way to request payments.
 
 ## E-commerce Plugins
 
