@@ -5,8 +5,6 @@ hidden: false
 metadata:
   robots: index
 ---
-<br />
-
 ## Payout status specific events
 
 | Event                               | Description                                    | Default |
