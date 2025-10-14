@@ -1,7 +1,7 @@
 ---
 title: Whitelabelling
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
