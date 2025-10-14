@@ -13,7 +13,7 @@ Tazapay Checkout is a prebuilt, hosted payment page optimized for conversion. It
 
 ## Step 1: Set up your Tazapay account
 
-Before integrating Tazapay Checkout, ensure you have a Tazapay account. [Sign up](https://dashboard.tazapay.com/) if you haven't already.
+Before integrating Tazapay Checkout, ensure you have an approved Tazapay account with API keys available.
 
 ## Step 2: Create a Checkout Session
 
@@ -94,8 +94,7 @@ Calling the checkout API in Step 2 provides the following response. Redirect the
     "transaction_data": [],
     "transaction_description": "1 x T-shirt",
     "transaction_documents": [],
-    "url": "https://checkout-sandbox.tazapay.com/transaction/tGxhgHg5USrT3Gizxu-aL-GFF5FhyaCT4KHyXQXcxZE=",
-    "webhook_url": ""
+    "url": "https://checkout-sandbox.tazapay.com/transaction/tGxhgHg5USrT3Gizxu-aL-GFF5FhyaCT4KHyXQXcxZE="
   }
 }
 ```
