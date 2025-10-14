@@ -2,7 +2,7 @@
 title: Payout
 excerpt: These are the events for which webhooks will be triggered
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''
