@@ -1,7 +1,7 @@
 ---
 title: Fetch Details for a Collect
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
