@@ -884,3 +884,69 @@ metadata:
   }
 }
 ```
+
+<br />
+
+### payout.compliance_hold 
+
+```json
+{
+  "type": "payout.compliance_hold",
+  "id": "evt_d3n3iavvima100lp71kg",
+  "object": "event",
+  "created_at": "2025-10-14T11:51:07.422226364Z",
+  "data": {
+    "local": {},
+    "created_at": "2025-10-14T11:50:56.075199Z",
+    "beneficiary_details": {
+      "destination_details": {
+        "bank": {
+          "bank_codes": {
+            "swift_code": "sw32432"
+          },
+          "account_number": "3423435427899",
+          "bank_name": "Central Bank",
+          "country": "CN",
+          "currency": "CNY"
+        },
+        "type": "bank"
+      },
+      "name": "Allen",
+      "type": "business"
+    },
+    "payout_fx_transaction": {
+      "initial": {
+        "currency": "CNY",
+        "amount": 10000
+      },
+      "final": {
+        "currency": "CNY",
+        "amount": 10000
+      },
+      "id": "fx_d3n3i7tfs5v4tkcn6ktg",
+      "object": "fx_transaction",
+      "exchange_rate": 1
+    },
+    "purpose": "PYR004",
+    "status": "compliance_hold",
+    "charge_type": "ours",
+    "id": "pot_d3n3i7t2amni271p7qd0",
+    "holding_currency": "EUR",
+    "currency": "CNY",
+    "beneficiary": "bnf_d3n3hrl2amni271p7q8g",
+    "transaction_description": "asd",
+    "balance_transaction": "btr_d3n3i852amni271p7qh0",
+    "type": "swift",
+    "holding_fx_quote": "fx_d3n3i7tfs5v4tkcn6ku0",
+    "destination_fx_quote": "fx_d3n3i7tfs5v4tkcn6ktg",
+    "documents": [
+      {
+        "id": "doc_d3n3i852amni271p7qdg",
+        "type": "invoice",
+        "url": "https://s3.ap-southeast-1.amazonaws.com/tazapay-payout-document-qa/pot_d3n3i7t2amni271p7qd0"
+      }
+    ],
+    "amount": 10000
+  }
+}
+```
