@@ -5,8 +5,6 @@ hidden: false
 metadata:
   robots: index
 ---
-<br />
-
 # Collect status specific events
 
 | Event             | Description                              | Default (On / Off) |
