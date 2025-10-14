@@ -1,7 +1,7 @@
 ---
 title: bank_push_php
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
