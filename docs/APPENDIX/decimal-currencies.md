@@ -29,4 +29,4 @@ The `amount` key for will always accept the denomination value with 2 decimal pl
 ### Cryto/Stablecoin Payouts
 
 * For stablecoin currencies, `USDT` and `USDC`, the `amount` key for will always accept the denomination value with 2 decimal places in an integer format.
-* For supported crypto currencies, `BTC` and `ETH`,  the `amount` key for will always accept the denomination value with 8 decimal places in an integer format.
+* For supported crypto currencies, `BTC` and `ETH`, the `amount` key for will always accept the denomination value with 8 decimal places in an integer format.
