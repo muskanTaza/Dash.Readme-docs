@@ -13,8 +13,4 @@ metadata:
 next:
   description: ''
 ---
-Allows you to look up details of existing users on Tazapay's database with their email ID.
-
-> ❗️ Known Issues
->
-> Testing GET User by Email on our documentation will always show errors due to URL encoding. Please try it on an alternative platform like [Postman](ref:postman-setup) for now.
+Allows you to look up details of existing customers on Tazapay's database with the customer id.
