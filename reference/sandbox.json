@@ -8154,7 +8154,61 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{\n\t\"status\": \"success\",\n\t\"message\": \"customer updated successfully\",\n\t\"data\": {\n\t\t\"id\": \"cus_haiuhnfoiaoijfojfajpj123\",\n\t\t\"object\": \"customer\",\n\t\t\"created_at\": \"2023-07-18 16:34:32\",\n\t\t\"name\": \"Andrew Robin\",\n\t\t\"email\": \"andrew.robin@example.com\",\n\t\t\"country\": \"US\",\n\t\t\"phone\": {\n\t\t\t\"calling_code\": \"1\",\n\t\t\t\"number\": \"9876543210\"\n\t\t},\n\t\t\"billing\": [{\n\t\t\t\"name\": \"Andrew Robin\",\n\t\t\t\"address\": {\n\t\t\t\t\"line1\": \"9th West\",\n\t\t\t\t\"line2\": \"57th Street\",\n\t\t\t\t\"city\": \"New York\",\n\t\t\t\t\"state\": \"New York\",\n\t\t\t\t\"country\": \"US\",\n\t\t\t\t\"postal_code\": \"10019\"\n\t\t\t},\n\t\t\t\"phone\": {\n\t\t\t\t\"calling_code\": \"1\",\n\t\t\t\t\"number\": \"9876543210\"\n\t\t\t}\n\t\t}],\n\t\t\"shipping\": [{\n\t\t\t\"name\": \"Andrew Robin\",\n\t\t\t\"address\": {\n\t\t\t\t\"line1\": \"9th West\",\n\t\t\t\t\"line2\": \"57th Street\",\n\t\t\t\t\"city\": \"New York\",\n\t\t\t\t\"state\": \"New York\",\n\t\t\t\t\"country\": \"US\",\n\t\t\t\t\"postal_code\": \"10019\"\n\t\t\t},\n\t\t\t\"phone\": {\n\t\t\t\t\"calling_code\": \"1\",\n\t\t\t\t\"number\": \"9876543210\"\n\t\t\t}\n\t\t}],\n\t\t\"metadata\": {\n\t\t\t\"key1\": \"value1\",\n\t\t\t\"key2\": \"value2\"\n\t\t}\n\t}\n}"
+                    "value": {
+                      "status": "success",
+                      "message": "customer created successfully",
+                      "data": {
+                        "id": "cus_abc123xyz456",
+                        "object": "customer",
+                        "created_at": "2025-10-13T14:30:00Z",
+                        "name": "Andrew Robin",
+                        "email": "andrew.robin@example.com",
+                        "country": "US",
+                        "phone": {
+                          "calling_code": "1",
+                          "number": "2025550183"
+                        },
+                        "billing_address": [
+                          {
+                            "name": "Andrew Robin",
+                            "address": {
+                              "line1": "123 Main Street",
+                              "line2": "Apt 45B",
+                              "city": "New York",
+                              "state": "NY",
+                              "country": "US",
+                              "postal_code": "10001"
+                            },
+                            "phone": {
+                              "calling_code": "1",
+                              "number": "2125550199"
+                            }
+                          }
+                        ],
+                        "shipping_address": [
+                          {
+                            "name": "Andrew Robin",
+                            "address": {
+                              "line1": "789 Broadway Avenue",
+                              "line2": "Suite 500",
+                              "city": "New York",
+                              "state": "NY",
+                              "country": "US",
+                              "postal_code": "10003"
+                            },
+                            "phone": {
+                              "calling_code": "1",
+                              "number": "9175550132"
+                            }
+                          }
+                        ],
+                        "metadata": {
+                          "customer_type": "premium",
+                          "preferred_language": "en",
+                          "referral_code": "REF2025ABC"
+                        }
+                      }
+                    }
                   }
                 },
                 "schema": {
