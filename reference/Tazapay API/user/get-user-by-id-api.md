@@ -5,7 +5,7 @@ api:
   file: sandbox.json
   operationId: get-user-by-id-api
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''
