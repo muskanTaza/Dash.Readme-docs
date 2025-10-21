@@ -14478,7 +14478,12 @@
             }
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "x-readme": {
+          "samples-languages": [
+            "shell"
+          ]
+        }
       }
     }
   },
