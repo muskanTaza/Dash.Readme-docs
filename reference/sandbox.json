@@ -8417,7 +8417,7 @@
                   "Result": {
                     "value": {
                       "status": "success",
-                      "message": "customer created successfully",
+                      "message": "",
                       "data": {
                         "id": "cus_abc123xyz456",
                         "object": "customer",
