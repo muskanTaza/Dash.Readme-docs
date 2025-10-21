@@ -9421,7 +9421,137 @@
             },
             "required": true
           }
-        ]
+        ],
+          "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "reason": {
+                    "type": "string",
+                    "description": "Reason for the refund"
+                  },
+                  "metadata": {
+                    "type": "string",
+                    "description": "Set of key-value pairs to attach to the refund object"
+                  }
+                }
+              },
+              "examples": {
+                "Request Example": {
+                  "value": {
+                    "reason": "Damaged Goods",
+                    "metadata": {
+                      "key1": "value1",
+                      "key2": "value2"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n\t\"status\": \"success\",\n\t\"message\": \"refund updated successfully\",\n\t\"data\": {\n\t\t\"id\": \"rfd_afiuabfia23wifaiofnioa12nfianf\",\n\t\t\"object\": \"refund\",\n\t\t\"payin\": \"chk_cirsp2sl4ar024j0akj0\",\n\t\t\"amount\": 90000,\n\t\t\"currency\": \"USD\",\n\t\t\"customer_receives\": {\n\t\t\t\"currency\": \"\",\n\t\t\t\"amount\": null\n\t\t},\n\t\t\"payment_attempt\": \"pat_ahbfiuahfiuaiofnioain\",\n\t\t\"reason\": \"Damaged Goods\",\n\t\t\"metadata\": {\n\t\t\t\"key1\": \"value1\",\n\t\t\t\"key2\": \"value2\"\n\t\t},\n\t\t\"status\": \"pending\",\n\t\t\"status_description\": \"\",\n\t\t\"webhook_url\": \"https://mystore.webhook.tazapay.refund/\",\n\t\t\"created_at\": \"2023-07-23 23:59:56\"\n\t}\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "success"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "refund updated successfully"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "example": "rfd_afiuabfia23wifaiofnioa12nfianf"
+                        },
+                        "object": {
+                          "type": "string",
+                          "example": "refund"
+                        },
+                        "payin": {
+                          "type": "string",
+                          "example": "chk_cirsp2sl4ar024j0akj0"
+                        },
+                        "amount": {
+                          "type": "integer",
+                          "example": 90000,
+                          "default": 0
+                        },
+                        "currency": {
+                          "type": "string",
+                          "example": "USD"
+                        },
+                        "customer_receives": {
+                          "type": "object",
+                          "properties": {
+                            "currency": {
+                              "type": "string",
+                              "example": ""
+                            },
+                            "amount": {}
+                          }
+                        },
+                        "payment_attempt": {
+                          "type": "string",
+                          "example": "pat_ahbfiuahfiuaiofnioain"
+                        },
+                        "reason": {
+                          "type": "string",
+                          "example": "Damaged Goods"
+                        },
+                        "metadata": {
+                          "type": "object",
+                          "properties": {
+                            "key1": {
+                              "type": "string",
+                              "example": "value1"
+                            },
+                            "key2": {
+                              "type": "string",
+                              "example": "value2"
+                            }
+                          }
+                        },
+                        "status": {
+                          "type": "string",
+                          "example": "pending"
+                        },
+                        "status_description": {
+                          "type": "string",
+                          "example": ""
+                        },
+                        "webhook_url": {
+                          "type": "string",
+                          "example": "https://mystore.webhook.tazapay.refund/"
+                        },
+                        "created_at": {
+                          "type": "string",
+                          "example": "2023-07-23 23:59:56"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/v3/refund/{id}": {
