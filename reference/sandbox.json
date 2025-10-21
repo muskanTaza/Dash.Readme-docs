@@ -8952,7 +8952,61 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{\n\t\"status\":\"success\",\n  \"data\":{\n    \"id\": \"cus_haiuhfaonfoiaoijfojfajpj123\",\n\t  \"object\": \"string\",\n    \"created_at\": \"2023-07-18 16:34:32\",\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@doe.com\",\n    \"country\": \"SG\",\n    \"phone\": {\n      \"calling_code\":\"65\",\n      \"number\":\"67854321\"\n    },\n    \"billing\":{\n      \"name\":\"John Doe\",\n      \"address\":{\n        \"line1\":\"Address Line 1\",\n        \"line2\":\"Address Line 2\",\n        \"city\":\"Singapore\",\n        \"state\":null,\n        \"country\":\"SG\",\n        \"postal_code\":\"76543\"\n      },\n      \"phone\":{\n        \"calling_code\":\"65\",\n        \"number\":\"7982799\"\n      }\n    },\n    \"shipping\":{\n      \"name\":\"John Doe\",\n      \"address\":{\n        \"line1\":\"Address Line 1\",\n        \"line2\":\"Address Line 2\",\n        \"city\":\"Singapore\",\n        \"state\":null,\n        \"country\":\"SG\",\n        \"postal_code\":\"76543\"\n      },\n      \"phone\":{\n        \"calling_code\":\"65\",\n        \"number\":\"7982799\"\n      }\n    },\n    \"metadata\":null\n  }\n}"
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "id": "cus_abc123xyz456",
+                        "object": "customer",
+                        "created_at": "2025-10-13T14:30:00Z",
+                        "name": "Andrew Robin",
+                        "email": "andrew.robin@example.com",
+                        "country": "US",
+                        "phone": {
+                          "calling_code": "1",
+                          "number": "2025550183"
+                        },
+                        "billing_address": [
+                          {
+                            "name": "Andrew Robin",
+                            "address": {
+                              "line1": "123 Main Street",
+                              "line2": "Apt 45B",
+                              "city": "New York",
+                              "state": "NY",
+                              "country": "US",
+                              "postal_code": "10001"
+                            },
+                            "phone": {
+                              "calling_code": "1",
+                              "number": "2125550199"
+                            }
+                          }
+                        ],
+                        "shipping_address": [
+                          {
+                            "name": "Andrew Robin",
+                            "address": {
+                              "line1": "789 Broadway Avenue",
+                              "line2": "Suite 500",
+                              "city": "New York",
+                              "state": "NY",
+                              "country": "US",
+                              "postal_code": "10003"
+                            },
+                            "phone": {
+                              "calling_code": "1",
+                              "number": "9175550132"
+                            }
+                          }
+                        ],
+                        "metadata": {
+                          "referral_code": "REF2025ABC"
+                        },
+                        "reference_id": "",
+                        "risk_rule": "none"
+                      }
+                    }
                   }
                 },
                 "schema": {
@@ -9368,19 +9422,72 @@
             "required": true
           }
         ],
+    "/v3/refund": {
+      "post": {
+        "summary": "Initiate Refund",
+        "description": "To initiate a refund of an existing paid transaction back to source",
+        "operationId": "refund-api",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "type": "object",
+                "required": [
+                  "payin"
+                ],
                 "properties": {
+                  "payin": {
+                    "type": "string",
+                    "description": "ID of the payin for which refund is being created"
+                  },
+                  "amount": {
+                    "type": "integer",
+                    "description": "Amount to be refunded. If omitted, the request will be registered for a refund of the full transaction amount. For decimal handling for various currencies, refer to <a href=\"https://docs.tazapay.com/docs/decimal-currencies\" target=\"_blank\"> the guide here</a>",
+                    "format": "int32"
+                  },
+                  "currency": {
+                    "type": "string",
+                    "description": "Three-letter ISO currency code in lowercase"
+                  },
                   "reason": {
                     "type": "string",
                     "description": "Reason for the refund"
                   },
+                  "payment_attempt": {
+                    "type": "string",
+                    "description": "ID of the payment Attempt for which the refund is being created"
+                  },
                   "metadata": {
                     "type": "string",
-                    "description": "Set of key-value pairs to attach to the refund object"
+                    "description": "Set of key-value pairs to attach to the refund object",
+                    "format": "json"
+                  },
+                  "customer_details": {
+                    "type": "object",
+                    "description": "Customer Details for the refund",
+                    "required": [
+                      "email"
+                    ],
+                    "properties": {
+                      "email": {
+                        "type": "string",
+                        "description": "Customer Email"
+                      },
+                      "phone": {
+                        "type": "object",
+                        "description": "Customer Phone",
+                        "properties": {
+                          "calling_code": {
+                            "type": "string",
+                            "description": "Calling country code (for example, '1' for United States, '91' for India)"
+                          },
+                          "number": {
+                            "type": "string",
+                            "description": "Phone Number"
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               },
@@ -9392,6 +9499,11 @@
                       "key1": "value1",
                       "key2": "value2"
                     }
+                    "payin": "chk_cirsp2sl4ar024j0akj0",
+                    "amount": 90000,
+                    "currency": "USD",
+                    "reason": "Customer Return",
+                    "webhook_url": "https://mystore.webhook.tazapay.refund/"
                   }
                 }
               }
@@ -9574,6 +9686,30 @@
                               "example": 133200,
                               "default": 0
                             }
+                          }
+                        },
+                        },
+                        "payin": {
+                          "type": "string",
+                          "example": "chk_cirsp2sl4ar024j0akj0"
+                        },
+                        "amount": {
+                          "type": "integer",
+                          "example": 90000,
+                          "default": 0
+                        },
+                        "currency": {
+                          "type": "string",
+                          "example": "USD"
+                        },
+                        "customer_receives": {
+                          "type": "object",
+                          "properties": {
+                            "currency": {
+                              "type": "string",
+                              "example": ""
+                            },
+                            "amount": {}
                           }
                         },
                         "payment_attempt": {
