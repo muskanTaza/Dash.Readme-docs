@@ -9148,378 +9148,6 @@
         "deprecated": false
       }
     },
-    "/v3/customer/{id}/{type}": {
-      "post": {
-        "summary": "Add Billing/Shipping",
-        "description": "This endpoint adds billing/shipping details to an already existing customer object",
-        "operationId": "add-billingshipping",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "ID of an already existing customer object",
-            "schema": {
-              "type": "string"
-            },
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "billing": {
-                    "type": "object",
-                    "description": "Billing Details",
-                    "properties": {
-                      "name": {
-                        "type": "string",
-                        "description": "Name"
-                      },
-                      "address": {
-                        "type": "object",
-                        "description": "Address",
-                        "properties": {
-                          "line1": {
-                            "type": "string",
-                            "description": "Address Line 1"
-                          },
-                          "line2": {
-                            "type": "string",
-                            "description": "Address Line 2"
-                          },
-                          "city": {
-                            "type": "string",
-                            "description": "Address city"
-                          },
-                          "state": {
-                            "type": "string",
-                            "description": "Address state"
-                          },
-                          "country": {
-                            "type": "string",
-                            "description": "Address country (Country (ISO 3166-1 alpha_2 country code)"
-                          },
-                          "postal_code": {
-                            "type": "string",
-                            "description": "Postal Code"
-                          }
-                        }
-                      },
-                      "phone": {
-                        "type": "object",
-                        "description": "Phone",
-                        "properties": {
-                          "calling_code": {
-                            "type": "string",
-                            "description": "Calling country code (for example, '1' for United States, '91' for India)"
-                          },
-                          "number": {
-                            "type": "string",
-                            "description": "Phone Number"
-                          }
-                        }
-                      },
-                      "label": {
-                        "type": "string",
-                        "description": "Denotes the type of address (Example - home, work)"
-                      }
-                    }
-                  },
-                  "shipping": {
-                    "type": "object",
-                    "description": "Shipping Details",
-                    "properties": {
-                      "name": {
-                        "type": "string",
-                        "description": "Name"
-                      },
-                      "address": {
-                        "type": "object",
-                        "description": "Address",
-                        "properties": {
-                          "line1": {
-                            "type": "string",
-                            "description": "Address Line 1"
-                          },
-                          "line2": {
-                            "type": "string",
-                            "description": "Address Line 2"
-                          },
-                          "city": {
-                            "type": "string",
-                            "description": "Address city"
-                          },
-                          "state": {
-                            "type": "string",
-                            "description": "Address state"
-                          },
-                          "country": {
-                            "type": "string",
-                            "description": "Address country (Country (ISO 3166-1 alpha_2 country code)"
-                          },
-                          "postal_code": {
-                            "type": "string",
-                            "description": "Postal Code"
-                          }
-                        }
-                      },
-                      "phone": {
-                        "type": "object",
-                        "description": "Phone",
-                        "properties": {
-                          "calling_code": {
-                            "type": "string",
-                            "description": "Calling country code (for example, '1' for United States, '91' for India)"
-                          },
-                          "number": {
-                            "type": "string",
-                            "description": "Phone Number"
-                          }
-                        }
-                      },
-                      "label": {
-                        "type": "string",
-                        "description": "Denotes the type of address (Example - home, work)"
-                      }
-                    }
-                  }
-                }
-              },
-              "examples": {
-                "Request Example": {
-                  "value": {
-                    "billing": {
-                      "name": "Andrew Robin",
-                      "address": {
-                        "line1": "29-35",
-                        "line2": "9th Ave",
-                        "city": "New York",
-                        "state": "New York",
-                        "country": "US",
-                        "postal_code": "10014"
-                      },
-                      "phone": {
-                        "calling_code": "1",
-                        "number": "9876543214"
-                      }
-                    },
-                    "shipping": {
-                      "name": "Andrew Robin",
-                      "address": {
-                        "line1": "1000",
-                        "line2": "5th Ave",
-                        "city": "New York",
-                        "state": "New York",
-                        "country": "US",
-                        "postal_code": "10028"
-                      },
-                      "phone": {
-                        "calling_code": "1",
-                        "number": "9876543214"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "200",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "Result": {
-                    "value": "{\n\t\"status\": \"success\",\n\t\"message\": \"address updated successfully\",\n\t\"data\": {\n\t\t\"id\": \"cus_haiuhnfoiaoijfojfajpj123\",\n\t\t\"object\": \"customer\",\n\t\t\"created_at\": \"2023-07-18 16:34:32\",\n\t\t\"name\": \"Andrew Robin\",\n\t\t\"email\": \"andrew.robin@example.com\",\n\t\t\"country\": \"US\",\n\t\t\"phone\": {\n\t\t\t\"calling_code\": \"1\",\n\t\t\t\"number\": \"9876543210\"\n\t\t},\n\t\t\"billing\": [{\n\t\t\t\t\"name\": \"Andrew Robin\",\n\t\t\t\t\"address\": {\n\t\t\t\t\t\"line1\": \"9th West\",\n\t\t\t\t\t\"line2\": \"57th Street\",\n\t\t\t\t\t\"city\": \"New York\",\n\t\t\t\t\t\"state\": \"New York\",\n\t\t\t\t\t\"country\": \"US\",\n\t\t\t\t\t\"postal_code\": \"10019\"\n\t\t\t\t},\n\t\t\t\t\"phone\": {\n\t\t\t\t\t\"calling_code\": \"1\",\n\t\t\t\t\t\"number\": \"9876543210\"\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Andrew Robin\",\n\t\t\t\t\"address\": {\n\t\t\t\t\t\"line1\": \"29-35\",\n\t\t\t\t\t\"line2\": \"9th Ave\",\n\t\t\t\t\t\"city\": \"New York\",\n\t\t\t\t\t\"state\": \"New York\",\n\t\t\t\t\t\"country\": \"US\",\n\t\t\t\t\t\"postal_code\": \"10014\"\n\t\t\t\t},\n\t\t\t\t\"phone\": {\n\t\t\t\t\t\"calling_code\": \"1\",\n\t\t\t\t\t\"number\": \"9876543214\"\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\t\"shipping\": [{\n\t\t\t\t\"name\": \"Andrew Robin\",\n\t\t\t\t\"address\": {\n\t\t\t\t\t\"line1\": \"9th West\",\n\t\t\t\t\t\"line2\": \"57th Street\",\n\t\t\t\t\t\"city\": \"New York\",\n\t\t\t\t\t\"state\": \"New York\",\n\t\t\t\t\t\"country\": \"US\",\n\t\t\t\t\t\"postal_code\": \"10019\"\n\t\t\t\t},\n\t\t\t\t\"phone\": {\n\t\t\t\t\t\"calling_code\": \"1\",\n\t\t\t\t\t\"number\": \"9876543210\"\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Andrew Robin\",\n\t\t\t\t\"address\": {\n\t\t\t\t\t\"line1\": \"1000\",\n\t\t\t\t\t\"line2\": \"5th Ave\",\n\t\t\t\t\t\"city\": \"New York\",\n\t\t\t\t\t\"state\": \"New York\",\n\t\t\t\t\t\"country\": \"US\",\n\t\t\t\t\t\"postal_code\": \"10028\"\n\t\t\t\t},\n\t\t\t\t\"phone\": {\n\t\t\t\t\t\"calling_code\": \"1\",\n\t\t\t\t\t\"number\": \"9876543214\"\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\t\"metadata\": {\n\t\t\t\"key1\": \"value1\",\n\t\t\t\"key2\": \"value2\"\n\t\t}\n\t}\n}"
-                  }
-                },
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "status": {
-                      "type": "string",
-                      "example": "success"
-                    },
-                    "message": {
-                      "type": "string",
-                      "example": "address updated successfully"
-                    },
-                    "data": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "string",
-                          "example": "cus_haiuhnfoiaoijfojfajpj123"
-                        },
-                        "object": {
-                          "type": "string",
-                          "example": "customer"
-                        },
-                        "created_at": {
-                          "type": "string",
-                          "example": "2023-07-18 16:34:32"
-                        },
-                        "name": {
-                          "type": "string",
-                          "example": "Andrew Robin"
-                        },
-                        "email": {
-                          "type": "string",
-                          "example": "andrew.robin@example.com"
-                        },
-                        "country": {
-                          "type": "string",
-                          "example": "US"
-                        },
-                        "phone": {
-                          "type": "object",
-                          "properties": {
-                            "calling_code": {
-                              "type": "string",
-                              "example": "1"
-                            },
-                            "number": {
-                              "type": "string",
-                              "example": "9876543210"
-                            }
-                          }
-                        },
-                        "billing": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "properties": {
-                              "name": {
-                                "type": "string",
-                                "example": "Andrew Robin"
-                              },
-                              "address": {
-                                "type": "object",
-                                "properties": {
-                                  "line1": {
-                                    "type": "string",
-                                    "example": "9th West"
-                                  },
-                                  "line2": {
-                                    "type": "string",
-                                    "example": "57th Street"
-                                  },
-                                  "city": {
-                                    "type": "string",
-                                    "example": "New York"
-                                  },
-                                  "state": {
-                                    "type": "string",
-                                    "example": "New York"
-                                  },
-                                  "country": {
-                                    "type": "string",
-                                    "example": "US"
-                                  },
-                                  "postal_code": {
-                                    "type": "string",
-                                    "example": "10019"
-                                  }
-                                }
-                              },
-                              "phone": {
-                                "type": "object",
-                                "properties": {
-                                  "calling_code": {
-                                    "type": "string",
-                                    "example": "1"
-                                  },
-                                  "number": {
-                                    "type": "string",
-                                    "example": "9876543210"
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "shipping": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "properties": {
-                              "name": {
-                                "type": "string",
-                                "example": "Andrew Robin"
-                              },
-                              "address": {
-                                "type": "object",
-                                "properties": {
-                                  "line1": {
-                                    "type": "string",
-                                    "example": "9th West"
-                                  },
-                                  "line2": {
-                                    "type": "string",
-                                    "example": "57th Street"
-                                  },
-                                  "city": {
-                                    "type": "string",
-                                    "example": "New York"
-                                  },
-                                  "state": {
-                                    "type": "string",
-                                    "example": "New York"
-                                  },
-                                  "country": {
-                                    "type": "string",
-                                    "example": "US"
-                                  },
-                                  "postal_code": {
-                                    "type": "string",
-                                    "example": "10019"
-                                  }
-                                }
-                              },
-                              "phone": {
-                                "type": "object",
-                                "properties": {
-                                  "calling_code": {
-                                    "type": "string",
-                                    "example": "1"
-                                  },
-                                  "number": {
-                                    "type": "string",
-                                    "example": "9876543210"
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "metadata": {
-                          "type": "object",
-                          "properties": {
-                            "key1": {
-                              "type": "string",
-                              "example": "value1"
-                            },
-                            "key2": {
-                              "type": "string",
-                              "example": "value2"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": false
-      }
-    },
     "/v3/refund": {
       "post": {
         "summary": "Initiate Refund",
@@ -15784,6 +15412,391 @@
             }
           }
         }
+      }
+    },
+    "/v3/customer/{id}/{type}": {
+      "post": {
+        "summary": "Add Billing/Shipping",
+        "description": "This endpoint adds billing/shipping details to an already existing customer object",
+        "operationId": "add-billingshipping",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of an already existing customer object",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "type",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "billing",
+                "shipping"
+              ]
+            },
+            "required": true,
+            "description": "The type of address you want to add."
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "address_details": {
+                    "type": "object",
+                    "description": "Billing Details",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "Name"
+                      },
+                      "address": {
+                        "type": "object",
+                        "description": "Address",
+                        "properties": {
+                          "line1": {
+                            "type": "string",
+                            "description": "Address Line 1"
+                          },
+                          "line2": {
+                            "type": "string",
+                            "description": "Address Line 2"
+                          },
+                          "city": {
+                            "type": "string",
+                            "description": "Address city"
+                          },
+                          "state": {
+                            "type": "string",
+                            "description": "Address state"
+                          },
+                          "country": {
+                            "type": "string",
+                            "description": "Address country (Country (ISO 3166-1 alpha_2 country code)"
+                          },
+                          "postal_code": {
+                            "type": "string",
+                            "description": "Postal Code"
+                          }
+                        }
+                      },
+                      "phone": {
+                        "type": "object",
+                        "description": "Phone",
+                        "properties": {
+                          "calling_code": {
+                            "type": "string",
+                            "description": "Calling country code (for example, '1' for United States, '91' for India)"
+                          },
+                          "number": {
+                            "type": "string",
+                            "description": "Phone Number"
+                          }
+                        }
+                      },
+                      "label": {
+                        "type": "string",
+                        "description": "Denotes the type of address (Example - home, work)"
+                      }
+                    }
+                  },
+                  "shipping": {
+                    "type": "object",
+                    "description": "Shipping Details",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "Name"
+                      },
+                      "address": {
+                        "type": "object",
+                        "description": "Address",
+                        "properties": {
+                          "line1": {
+                            "type": "string",
+                            "description": "Address Line 1"
+                          },
+                          "line2": {
+                            "type": "string",
+                            "description": "Address Line 2"
+                          },
+                          "city": {
+                            "type": "string",
+                            "description": "Address city"
+                          },
+                          "state": {
+                            "type": "string",
+                            "description": "Address state"
+                          },
+                          "country": {
+                            "type": "string",
+                            "description": "Address country (Country (ISO 3166-1 alpha_2 country code)"
+                          },
+                          "postal_code": {
+                            "type": "string",
+                            "description": "Postal Code"
+                          }
+                        }
+                      },
+                      "phone": {
+                        "type": "object",
+                        "description": "Phone",
+                        "properties": {
+                          "calling_code": {
+                            "type": "string",
+                            "description": "Calling country code (for example, '1' for United States, '91' for India)"
+                          },
+                          "number": {
+                            "type": "string",
+                            "description": "Phone Number"
+                          }
+                        }
+                      },
+                      "label": {
+                        "type": "string",
+                        "description": "Denotes the type of address (Example - home, work)"
+                      }
+                    }
+                  }
+                }
+              },
+              "examples": {
+                "Request Example": {
+                  "value": {
+                    "billing": {
+                      "name": "Andrew Robin",
+                      "address": {
+                        "line1": "29-35",
+                        "line2": "9th Ave",
+                        "city": "New York",
+                        "state": "New York",
+                        "country": "US",
+                        "postal_code": "10014"
+                      },
+                      "phone": {
+                        "calling_code": "1",
+                        "number": "9876543214"
+                      }
+                    },
+                    "shipping": {
+                      "name": "Andrew Robin",
+                      "address": {
+                        "line1": "1000",
+                        "line2": "5th Ave",
+                        "city": "New York",
+                        "state": "New York",
+                        "country": "US",
+                        "postal_code": "10028"
+                      },
+                      "phone": {
+                        "calling_code": "1",
+                        "number": "9876543214"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n\t\"status\": \"success\",\n\t\"message\": \"address updated successfully\",\n\t\"data\": {\n\t\t\"id\": \"cus_haiuhnfoiaoijfojfajpj123\",\n\t\t\"object\": \"customer\",\n\t\t\"created_at\": \"2023-07-18 16:34:32\",\n\t\t\"name\": \"Andrew Robin\",\n\t\t\"email\": \"andrew.robin@example.com\",\n\t\t\"country\": \"US\",\n\t\t\"phone\": {\n\t\t\t\"calling_code\": \"1\",\n\t\t\t\"number\": \"9876543210\"\n\t\t},\n\t\t\"billing\": [{\n\t\t\t\t\"name\": \"Andrew Robin\",\n\t\t\t\t\"address\": {\n\t\t\t\t\t\"line1\": \"9th West\",\n\t\t\t\t\t\"line2\": \"57th Street\",\n\t\t\t\t\t\"city\": \"New York\",\n\t\t\t\t\t\"state\": \"New York\",\n\t\t\t\t\t\"country\": \"US\",\n\t\t\t\t\t\"postal_code\": \"10019\"\n\t\t\t\t},\n\t\t\t\t\"phone\": {\n\t\t\t\t\t\"calling_code\": \"1\",\n\t\t\t\t\t\"number\": \"9876543210\"\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Andrew Robin\",\n\t\t\t\t\"address\": {\n\t\t\t\t\t\"line1\": \"29-35\",\n\t\t\t\t\t\"line2\": \"9th Ave\",\n\t\t\t\t\t\"city\": \"New York\",\n\t\t\t\t\t\"state\": \"New York\",\n\t\t\t\t\t\"country\": \"US\",\n\t\t\t\t\t\"postal_code\": \"10014\"\n\t\t\t\t},\n\t\t\t\t\"phone\": {\n\t\t\t\t\t\"calling_code\": \"1\",\n\t\t\t\t\t\"number\": \"9876543214\"\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\t\"shipping\": [{\n\t\t\t\t\"name\": \"Andrew Robin\",\n\t\t\t\t\"address\": {\n\t\t\t\t\t\"line1\": \"9th West\",\n\t\t\t\t\t\"line2\": \"57th Street\",\n\t\t\t\t\t\"city\": \"New York\",\n\t\t\t\t\t\"state\": \"New York\",\n\t\t\t\t\t\"country\": \"US\",\n\t\t\t\t\t\"postal_code\": \"10019\"\n\t\t\t\t},\n\t\t\t\t\"phone\": {\n\t\t\t\t\t\"calling_code\": \"1\",\n\t\t\t\t\t\"number\": \"9876543210\"\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Andrew Robin\",\n\t\t\t\t\"address\": {\n\t\t\t\t\t\"line1\": \"1000\",\n\t\t\t\t\t\"line2\": \"5th Ave\",\n\t\t\t\t\t\"city\": \"New York\",\n\t\t\t\t\t\"state\": \"New York\",\n\t\t\t\t\t\"country\": \"US\",\n\t\t\t\t\t\"postal_code\": \"10028\"\n\t\t\t\t},\n\t\t\t\t\"phone\": {\n\t\t\t\t\t\"calling_code\": \"1\",\n\t\t\t\t\t\"number\": \"9876543214\"\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\t\"metadata\": {\n\t\t\t\"key1\": \"value1\",\n\t\t\t\"key2\": \"value2\"\n\t\t}\n\t}\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "success"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "address updated successfully"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "example": "cus_haiuhnfoiaoijfojfajpj123"
+                        },
+                        "object": {
+                          "type": "string",
+                          "example": "customer"
+                        },
+                        "created_at": {
+                          "type": "string",
+                          "example": "2023-07-18 16:34:32"
+                        },
+                        "name": {
+                          "type": "string",
+                          "example": "Andrew Robin"
+                        },
+                        "email": {
+                          "type": "string",
+                          "example": "andrew.robin@example.com"
+                        },
+                        "country": {
+                          "type": "string",
+                          "example": "US"
+                        },
+                        "phone": {
+                          "type": "object",
+                          "properties": {
+                            "calling_code": {
+                              "type": "string",
+                              "example": "1"
+                            },
+                            "number": {
+                              "type": "string",
+                              "example": "9876543210"
+                            }
+                          }
+                        },
+                        "billing": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "type": "string",
+                                "example": "Andrew Robin"
+                              },
+                              "address": {
+                                "type": "object",
+                                "properties": {
+                                  "line1": {
+                                    "type": "string",
+                                    "example": "9th West"
+                                  },
+                                  "line2": {
+                                    "type": "string",
+                                    "example": "57th Street"
+                                  },
+                                  "city": {
+                                    "type": "string",
+                                    "example": "New York"
+                                  },
+                                  "state": {
+                                    "type": "string",
+                                    "example": "New York"
+                                  },
+                                  "country": {
+                                    "type": "string",
+                                    "example": "US"
+                                  },
+                                  "postal_code": {
+                                    "type": "string",
+                                    "example": "10019"
+                                  }
+                                }
+                              },
+                              "phone": {
+                                "type": "object",
+                                "properties": {
+                                  "calling_code": {
+                                    "type": "string",
+                                    "example": "1"
+                                  },
+                                  "number": {
+                                    "type": "string",
+                                    "example": "9876543210"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "shipping": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "type": "string",
+                                "example": "Andrew Robin"
+                              },
+                              "address": {
+                                "type": "object",
+                                "properties": {
+                                  "line1": {
+                                    "type": "string",
+                                    "example": "9th West"
+                                  },
+                                  "line2": {
+                                    "type": "string",
+                                    "example": "57th Street"
+                                  },
+                                  "city": {
+                                    "type": "string",
+                                    "example": "New York"
+                                  },
+                                  "state": {
+                                    "type": "string",
+                                    "example": "New York"
+                                  },
+                                  "country": {
+                                    "type": "string",
+                                    "example": "US"
+                                  },
+                                  "postal_code": {
+                                    "type": "string",
+                                    "example": "10019"
+                                  }
+                                }
+                              },
+                              "phone": {
+                                "type": "object",
+                                "properties": {
+                                  "calling_code": {
+                                    "type": "string",
+                                    "example": "1"
+                                  },
+                                  "number": {
+                                    "type": "string",
+                                    "example": "9876543210"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "metadata": {
+                          "type": "object",
+                          "properties": {
+                            "key1": {
+                              "type": "string",
+                              "example": "value1"
+                            },
+                            "key2": {
+                              "type": "string",
+                              "example": "value2"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
       }
     }
   },
