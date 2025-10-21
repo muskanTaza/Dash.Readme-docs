@@ -8986,7 +8986,9 @@
                         ],
                         "metadata": {
                           "referral_code": "REF2025ABC"
-                        }
+                        },
+                        "reference_id": "",
+                        "risk_rule": "none"
                       }
                     }
                   }
