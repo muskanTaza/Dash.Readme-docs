@@ -12636,7 +12636,191 @@
                 },
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "description": "Indicates whether the balance transaction retrieval was successful.",
+                      "example": "success"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Additional message or information about the response.",
+                      "example": ""
+                    },
+                    "data": {
+                      "type": "object",
+                      "description": "Details of the balance transaction.",
+                      "properties": {
+                        "amount": {
+                          "type": "integer",
+                          "description": "Total transaction amount in the smallest currency unit. A negative value represents a debit.",
+                          "example": -100000
+                        },
+                        "created_at": {
+                          "type": "string",
+                          "description": "Timestamp when the balance transaction was created (ISO 8601 format).",
+                          "example": "2025-07-04T09:08:31.487Z"
+                        },
+                        "currency": {
+                          "type": "string",
+                          "description": "Currency of the balance transaction, in ISO 4217 format.",
+                          "example": "INR"
+                        },
+                        "description": {
+                          "type": "string",
+                          "description": "Description or memo associated with the balance transaction.",
+                          "example": ""
+                        },
+                        "fee_details": {
+                          "type": "array",
+                          "description": "Details of fees applied to this balance transaction.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "amount": {
+                                "type": "integer",
+                                "description": "Fee amount applied, in the smallest currency unit. A negative value indicates deduction.",
+                                "example": -500
+                              },
+                              "currency": {
+                                "type": "string",
+                                "description": "Currency in which the fee was charged.",
+                                "example": "USD"
+                              },
+                              "type": {
+                                "type": "string",
+                                "description": "Type of fee applied (e.g., fixed_fee, variable_fee).",
+                                "example": "fixed_fee"
+                              }
+                            }
+                          },
+                          "example": [
+                            {
+                              "amount": -500,
+                              "currency": "USD",
+                              "type": "fixed_fee"
+                            }
+                          ]
+                        },
+                        "fx_conversions": {
+                          "type": "array",
+                          "description": "Details of foreign exchange conversions applied within this transaction.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "exchange_rate": {
+                                "type": "number",
+                                "description": "Exchange rate applied for this FX conversion.",
+                                "example": 89.16538295208768
+                              },
+                              "final": {
+                                "type": "object",
+                                "description": "Final converted amount details.",
+                                "properties": {
+                                  "amount": {
+                                    "type": "integer",
+                                    "description": "Final converted amount in smallest currency unit.",
+                                    "example": -44583
+                                  },
+                                  "currency": {
+                                    "type": "string",
+                                    "description": "Final currency after conversion.",
+                                    "example": "INR"
+                                  }
+                                }
+                              },
+                              "initial": {
+                                "type": "object",
+                                "description": "Original amount before conversion.",
+                                "properties": {
+                                  "amount": {
+                                    "type": "integer",
+                                    "description": "Initial amount before conversion in smallest currency unit.",
+                                    "example": -500
+                                  },
+                                  "currency": {
+                                    "type": "string",
+                                    "description": "Initial currency before conversion.",
+                                    "example": "USD"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "example": [
+                            {
+                              "exchange_rate": 89.16538295208768,
+                              "final": {
+                                "amount": -44583,
+                                "currency": "INR"
+                              },
+                              "initial": {
+                                "amount": -500,
+                                "currency": "USD"
+                              }
+                            },
+                            {
+                              "exchange_rate": 96.55501288867562,
+                              "final": {
+                                "amount": -1497,
+                                "currency": "EUR"
+                              },
+                              "initial": {
+                                "amount": -144583,
+                                "currency": "INR"
+                              }
+                            }
+                          ]
+                        },
+                        "id": {
+                          "type": "string",
+                          "description": "Unique identifier for the balance transaction.",
+                          "example": "btr_d1jpk38qm9cnvqjgn7e0"
+                        },
+                        "metadata": {
+                          "type": "object",
+                          "description": "Additional metadata or custom attributes related to the transaction.",
+                          "example": {}
+                        },
+                        "net": {
+                          "type": "object",
+                          "description": "Net amount after fees and FX adjustments.",
+                          "properties": {
+                            "amount": {
+                              "type": "integer",
+                              "description": "Net amount after fees and FX conversions, in smallest currency unit.",
+                              "example": -1497
+                            },
+                            "currency": {
+                              "type": "string",
+                              "description": "Currency of the net balance after all adjustments.",
+                              "example": "EUR"
+                            }
+                          }
+                        },
+                        "object": {
+                          "type": "string",
+                          "description": "Type of object represented, typically 'balance_transaction'.",
+                          "example": "balance_transaction"
+                        },
+                        "operation_type": {
+                          "type": "string",
+                          "description": "Indicates whether the balance transaction is a credit or debit.",
+                          "example": "debit"
+                        },
+                        "source": {
+                          "type": "string",
+                          "description": "ID of the source object (e.g., payout, payin) linked to this balance transaction.",
+                          "example": "pot_d1jpk30qm9cnvqjgn7a0"
+                        },
+                        "type": {
+                          "type": "string",
+                          "description": "Specifies the transaction type, such as payout, payin, or refund.",
+                          "example": "payout"
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
