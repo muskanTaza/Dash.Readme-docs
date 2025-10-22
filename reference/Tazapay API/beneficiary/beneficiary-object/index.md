@@ -45,6 +45,7 @@ next:
     "calling_code": "91",
     "number": "9231231231"
   },
+  "registration_number": "",
   "tax_id": "",
   "type": "individual"
 }
