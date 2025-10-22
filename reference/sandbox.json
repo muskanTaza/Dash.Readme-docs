@@ -11364,7 +11364,50 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{}{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"address\": {\n            \"city\": \"Test\",\n            \"country\": \"IN\",\n            \"line1\": \"Test\",\n            \"line2\": \"Test\",\n            \"postal_code\": \"110017\",\n            \"state\": \"Test\"\n        },\n        \"created_at\": \"2024-10-03T11:03:40.326462Z\",\n        \"destination\": \"bnk_crv7k337eoqgk10pqp40\",\n        \"destination_details\": {\n            \"bank\": {\n                \"account_number\": \"Test\",\n                \"account_type\": \"\",\n                \"bank_codes\": {\n                    \"ifsc_code\": \"Test\",\n                    \"swift_code\": \"Test\"\n                },\n                \"bank_name\": \"hdfc\",\n                \"branch_name\": \"\",\n                \"country\": \"IN\",\n                \"currency\": \"INR\",\n                \"firc_required\": true,\n                \"purpose_code\": \"Test\"\n            },\n            \"type\": \"bank\"\n        },\n        \"documents\": [],\n        \"email\": \"test@example.com\",\n        \"id\": \"bnf_crv7k31h1l071n2fkbjg\",\n        \"metadata\": null,\n        \"name\": \"test\",\n        \"object\": \"beneficiary\",\n        \"phone\": {\n            \"calling_code\": \"91\"\n        },\n        \"tax_id\": \"\",\n        \"type\": \"individual\"\n    }\n}"
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "address": {
+                          "city": "Test",
+                          "country": "IN",
+                          "line1": "Test",
+                          "line2": "Test",
+                          "postal_code": "110017",
+                          "state": "Test"
+                        },
+                        "created_at": "2024-10-03T11:03:40.326462Z",
+                        "destination": "bnk_crv7k337eoqgk10pqp40",
+                        "destination_details": {
+                          "bank": {
+                            "account_number": "Test",
+                            "account_type": "",
+                            "bank_codes": {
+                              "ifsc_code": "Test",
+                              "swift_code": "Test"
+                            },
+                            "bank_name": "hdfc",
+                            "branch_name": "",
+                            "country": "IN",
+                            "currency": "INR",
+                            "firc_required": true,
+                            "purpose_code": "Test"
+                          },
+                          "type": "bank"
+                        },
+                        "documents": [],
+                        "email": "test@example.com",
+                        "id": "bnf_crv7k31h1l071n2fkbjg",
+                        "metadata": null,
+                        "name": "test",
+                        "object": "beneficiary",
+                        "phone": {
+                          "calling_code": "91"
+                        },
+                        "tax_id": "",
+                        "type": "individual"
+                      }
+                    }
                   }
                 }
               }
