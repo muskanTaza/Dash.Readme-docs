@@ -9327,72 +9327,93 @@
                   "properties": {
                     "status": {
                       "type": "string",
+                      "description": "Indicates whether the refund creation request was successful.",
                       "example": "success"
                     },
                     "message": {
                       "type": "string",
+                      "description": "Describes the outcome of the refund operation.",
                       "example": "refund created successfully"
                     },
                     "data": {
                       "type": "object",
+                      "description": "Contains detailed information about the created refund.",
                       "properties": {
                         "id": {
                           "type": "string",
+                          "description": "Unique identifier for the refund object.",
                           "example": "rfd_afiuabfia23wifaiofnioa12nfianf"
                         },
                         "object": {
                           "type": "string",
+                          "description": "Type of object returned, typically 'refund'.",
                           "example": "refund"
                         },
                         "payin": {
                           "type": "string",
+                          "description": "Unique identifier of the payin linked to this refund.",
                           "example": "chk_cirsp2sl4ar024j0akj0"
                         },
                         "amount": {
                           "type": "integer",
+                          "description": "Refund amount in the smallest currency unit (e.g., cents).",
                           "example": 90000,
                           "default": 0
                         },
                         "currency": {
                           "type": "string",
+                          "description": "Currency of the refund (ISO 4217 format).",
                           "example": "USD"
                         },
                         "customer_receives": {
                           "type": "object",
+                          "description": "Information about the amount and currency the customer will receive after processing the refund.",
                           "properties": {
                             "currency": {
                               "type": "string",
+                              "description": "Currency in which the customer will receive the refund.",
                               "example": ""
                             },
-                            "amount": {}
+                            "amount": {
+                              "type": "integer",
+                              "description": "Amount that the customer will receive after processing the refund.",
+                              "example": ""
+                            }
                           }
                         },
                         "payment_attempt": {
                           "type": "string",
+                          "description": "Unique identifier of the payment attempt associated with this refund.",
                           "example": "pat_ahbfiuahfiuaiofnioain"
                         },
                         "reason": {
                           "type": "string",
+                          "description": "Reason provided for initiating the refund.",
                           "example": "Customer Returns"
                         },
                         "metadata": {
                           "type": "object",
-                          "properties": {}
+                          "description": "Custom metadata or key-value pairs associated with this refund for additional context.",
+                          "example": {}
                         },
                         "status": {
                           "type": "string",
+                          "description": "Current status of the refund process (e.g., pending, processing, succeeded, failed).",
                           "example": "pending"
                         },
                         "status_description": {
                           "type": "string",
+                          "description": "Detailed explanation of the current refund status.",
                           "example": ""
                         },
                         "webhook_url": {
                           "type": "string",
+                          "description": "Webhook URL to which refund updates will be sent.",
                           "example": "https://mystore.webhook.tazapay.refund/"
                         },
                         "created_at": {
                           "type": "string",
+                          "description": "Timestamp indicating when the refund was created (ISO 8601 format).",
                           "example": "2023-07-23 23:59:56"
                         }
                       }
@@ -9467,56 +9488,72 @@
                   "properties": {
                     "status": {
                       "type": "string",
+                      "description": "Indicates whether the refund creation request was successful.",
                       "example": "success"
                     },
                     "message": {
                       "type": "string",
+                      "description": "Describes the outcome of the refund operation.",
                       "example": "refund updated successfully"
                     },
                     "data": {
                       "type": "object",
+                      "description": "Contains detailed information about the created refund.",
                       "properties": {
                         "id": {
                           "type": "string",
+                          "description": "Unique identifier for the refund object.",
                           "example": "rfd_afiuabfia23wifaiofnioa12nfianf"
                         },
                         "object": {
                           "type": "string",
+                          "description": "Type of object returned, typically 'refund'.",
                           "example": "refund"
                         },
                         "payin": {
                           "type": "string",
+                          "description": "Unique identifier of the payin linked to this refund.",
                           "example": "chk_cirsp2sl4ar024j0akj0"
                         },
                         "amount": {
                           "type": "integer",
-                          "example": 90000,
-                          "default": 0
+                          "description": "Refund amount in the smallest currency unit (e.g., cents).",
+                          "example": 90000
                         },
                         "currency": {
                           "type": "string",
+                          "description": "Currency of the refund (ISO 4217 format).",
                           "example": "USD"
                         },
                         "customer_receives": {
                           "type": "object",
+                          "description": "Information about the amount and currency the customer will receive after processing the refund.",
                           "properties": {
                             "currency": {
                               "type": "string",
+                              "description": "Currency in which the customer will receive the refund.",
                               "example": ""
                             },
-                            "amount": {}
+                            "amount": {
+                              "type": "integer",
+                              "description": "Amount that the customer will receive after processing the refund.",
+                              "example": ""
+                            }
                           }
                         },
                         "payment_attempt": {
                           "type": "string",
+                          "description": "Unique identifier of the payment attempt associated with this refund.",
                           "example": "pat_ahbfiuahfiuaiofnioain"
                         },
                         "reason": {
                           "type": "string",
-                          "example": "Damaged Goods"
+                          "description": "Reason provided for initiating the refund.",
+                          "example": "Customer Returns"
                         },
                         "metadata": {
                           "type": "object",
+                          "description": "Custom metadata or key-value pairs associated with this refund for additional context.",
                           "properties": {
                             "key1": {
                               "type": "string",
@@ -9530,18 +9567,22 @@
                         },
                         "status": {
                           "type": "string",
+                          "description": "Current status of the refund process (e.g., pending, processing, succeeded, failed).",
                           "example": "pending"
                         },
                         "status_description": {
                           "type": "string",
+                          "description": "Detailed explanation of the current refund status.",
                           "example": ""
                         },
                         "webhook_url": {
                           "type": "string",
+                          "description": "Webhook URL to which refund updates will be sent.",
                           "example": "https://mystore.webhook.tazapay.refund/"
                         },
                         "created_at": {
                           "type": "string",
+                          "description": "Timestamp indicating when the refund was created (ISO 8601 format).",
                           "example": "2023-07-23 23:59:56"
                         }
                       }
@@ -9585,85 +9626,92 @@
                   "properties": {
                     "status": {
                       "type": "string",
+                      "description": "Indicates whether the refund creation request was successful.",
                       "example": "success"
                     },
                     "message": {
                       "type": "string",
-                      "example": "refund updated successfully"
+                      "description": "Describes the outcome of the refund operation.",
+                      "example": ""
                     },
                     "data": {
                       "type": "object",
+                      "description": "Contains detailed information about the created refund.",
                       "properties": {
                         "id": {
                           "type": "string",
+                          "description": "Unique identifier for the refund object.",
                           "example": "rfd_afiuabfia23wifaiofnioa12nfianf"
                         },
                         "object": {
                           "type": "string",
+                          "description": "Type of object returned, typically 'refund'.",
                           "example": "refund"
                         },
                         "payin": {
                           "type": "string",
+                          "description": "Unique identifier of the payin linked to this refund.",
                           "example": "chk_cirsp2sl4ar024j0akj0"
                         },
                         "amount": {
                           "type": "integer",
-                          "example": 90000,
-                          "default": 0
+                          "description": "Refund amount in the smallest currency unit (e.g., cents).",
+                          "example": 90000
                         },
                         "currency": {
                           "type": "string",
+                          "description": "Currency of the refund (ISO 4217 format).",
                           "example": "USD"
                         },
                         "customer_receives": {
                           "type": "object",
+                          "description": "Information about the amount and currency the customer will receive after processing the refund.",
                           "properties": {
                             "currency": {
                               "type": "string",
-                              "example": "SGD"
+                              "description": "Currency in which the customer will receive the refund.",
+                              "example": ""
                             },
                             "amount": {
                               "type": "integer",
-                              "example": 133200,
-                              "default": 0
+                              "description": "Amount that the customer will receive after processing the refund.",
+                              "example": ""
                             }
                           }
                         },
                         "payment_attempt": {
                           "type": "string",
+                          "description": "Unique identifier of the payment attempt associated with this refund.",
                           "example": "pat_ahbfiuahfiuaiofnioain"
                         },
                         "reason": {
                           "type": "string",
-                          "example": "Damaged Goods"
+                          "description": "Reason provided for initiating the refund.",
+                          "example": "Customer Returns"
                         },
                         "metadata": {
                           "type": "object",
-                          "properties": {
-                            "key1": {
-                              "type": "string",
-                              "example": "value1"
-                            },
-                            "key2": {
-                              "type": "string",
-                              "example": "value2"
-                            }
-                          }
+                          "description": "Custom metadata or key-value pairs associated with this refund for additional context.",
+                          "example": {}
                         },
                         "status": {
                           "type": "string",
-                          "example": "succeeded"
+                          "description": "Current status of the refund process (e.g., pending, processing, succeeded, failed).",
+                          "example": "pending"
                         },
                         "status_description": {
                           "type": "string",
+                          "description": "Detailed explanation of the current refund status.",
                           "example": ""
                         },
                         "webhook_url": {
                           "type": "string",
+                          "description": "Webhook URL to which refund updates will be sent.",
                           "example": "https://mystore.webhook.tazapay.refund/"
                         },
                         "created_at": {
                           "type": "string",
+                          "description": "Timestamp indicating when the refund was created (ISO 8601 format).",
                           "example": "2023-07-23 23:59:56"
                         }
                       }
@@ -9708,66 +9756,93 @@
                   "properties": {
                     "status": {
                       "type": "string",
+                      "description": "Indicates whether the refund creation request was successful.",
                       "example": "success"
                     },
                     "message": {
                       "type": "string",
+                      "description": "Describes the outcome of the refund operation.",
                       "example": "refund cancelled successfully"
                     },
                     "data": {
                       "type": "object",
+                      "description": "Contains detailed information about the created refund.",
                       "properties": {
                         "id": {
                           "type": "string",
-                          "example": "rfd_afiuabfia23wifaiofnioa12nfianff"
+                          "description": "Unique identifier for the refund object.",
+                          "example": "rfd_afiuabfia23wifaiofnioa12nfianf"
                         },
                         "object": {
                           "type": "string",
+                          "description": "Type of object returned, typically 'refund'.",
                           "example": "refund"
                         },
                         "payin": {
                           "type": "string",
+                          "description": "Unique identifier of the payin linked to this refund.",
                           "example": "chk_cirsp2sl4ar024j0akj0"
                         },
                         "amount": {
                           "type": "integer",
-                          "example": 5000,
+                          "description": "Refund amount in the smallest currency unit (e.g., cents).",
+                          "example": 90000,
                           "default": 0
                         },
                         "currency": {
                           "type": "string",
+                          "description": "Currency of the refund (ISO 4217 format).",
                           "example": "USD"
                         },
                         "customer_receives": {
                           "type": "object",
-                          "properties": {}
+                          "description": "Information about the amount and currency the customer will receive after processing the refund.",
+                          "properties": {
+                            "currency": {
+                              "type": "string",
+                              "description": "Currency in which the customer will receive the refund.",
+                              "example": "USD"
+                            },
+                            "amount": {
+                              "type": "integer",
+                              "description": "Amount that the customer will receive after processing the refund.",
+                              "example": "90000"
+                            }
+                          }
                         },
                         "payment_attempt": {
                           "type": "string",
+                          "description": "Unique identifier of the payment attempt associated with this refund.",
                           "example": "pat_ahbfiuahfiuaiofnioain"
                         },
                         "reason": {
                           "type": "string",
-                          "example": "Damaged Goods"
+                          "description": "Reason provided for initiating the refund.",
+                          "example": "Customer Returns"
                         },
                         "metadata": {
                           "type": "object",
-                          "properties": {}
+                          "description": "Custom metadata or key-value pairs associated with this refund for additional context.",
+                          "example": {}
                         },
                         "status": {
                           "type": "string",
-                          "example": "cancelled"
+                          "description": "Current status of the refund process (e.g., pending, processing, succeeded, failed).",
+                          "example": "pending"
                         },
                         "status_description": {
                           "type": "string",
+                          "description": "Detailed explanation of the current refund status.",
                           "example": ""
                         },
                         "webhook_url": {
                           "type": "string",
+                          "description": "Webhook URL to which refund updates will be sent.",
                           "example": "https://mystore.webhook.tazapay.refund/"
                         },
                         "created_at": {
                           "type": "string",
+                          "description": "Timestamp indicating when the refund was created (ISO 8601 format).",
                           "example": "2023-07-23 23:59:56"
                         }
                       }
