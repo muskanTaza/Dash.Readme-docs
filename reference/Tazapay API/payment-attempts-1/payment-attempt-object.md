@@ -7,7 +7,7 @@ excerpt: >-
   details of the transaction, including the amount, currency, payment method,
   status, and any relevant metadata.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''
