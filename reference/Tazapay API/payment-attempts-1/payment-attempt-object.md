@@ -17,35 +17,35 @@ next:
 ---
 ## Object
 
-```
+```json
 {
-			"id": "pat_ahbfiuahfiuaiofnioain",
-			"object": "payment_attempt",
-			"created_at": "2023-07-21T14:00:02.576356Z",
-			"amount": 148000,
-			"charge_currency": "SGD",
-			"payin": "chk_cirsp2sl4ar024j0akj0",
-			"payment_method_details": {
-				"type": "paynow_sgd",
-				"paynow_sgd": {}
-			},
-			"refunded": false,
-			"status": "succeeded",
-			"status_description": null,
-			"final_currency": "USD",
-			"fx_transaction": {
-				"initial": {
-					"currency": "SGD",
-					"amount": 148000
-				},
-				"final": {
-					"currency": "USD",
-					"amount": 100000
-				},
-				"exchange_rate": 1.48
-			},
-			"metadata": null
-		}
+  "id": "pat_ahbfiuahfiuaiofnioain",
+  "object": "payment_attempt",
+  "created_at": "2023-07-21T14:00:02.576356Z",
+  "amount": 148000,
+  "charge_currency": "SGD",
+  "payin": "chk_cirsp2sl4ar024j0akj0",
+  "payment_method_details": {
+        "type": "paynow_sgd",
+        "paynow_sgd": {}
+      },
+  "refunded": false,
+  "status": "succeeded",
+  "status_description": null,
+  "final_currency": "USD",
+  "fx_transaction": {
+        "initial": {
+          "currency": "SGD",
+          "amount": 148000
+        },
+        "final": {
+          "currency": "USD",
+          "amount": 100000
+        },
+        "exchange_rate": 1.48
+      },
+  "metadata": null
+}
 ```
 
 <br />
