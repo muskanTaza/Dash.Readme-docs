@@ -10632,271 +10632,140 @@
                   "properties": {
                     "status": {
                       "type": "string",
-                      "description": "Indicates whether the request was successful.",
                       "example": "success"
                     },
                     "message": {
                       "type": "string",
-                      "description": "Additional message or details about the request outcome.",
                       "example": ""
                     },
                     "data": {
                       "type": "object",
-                      "description": "Contains information about the payment attempt and its details.",
                       "properties": {
                         "amount": {
                           "type": "integer",
-                          "description": "Amount charged or processed in the transaction, in the smallest currency unit.",
-                          "example": 9899
-                        },
-                        "balance_transaction": {
-                          "type": "string",
-                          "description": "Unique identifier of the balance transaction associated with this payment attempt.",
-                          "example": "btr_d679f6dqd9ne66lsngb0"
+                          "example": 178119,
+                          "default": 0
                         },
                         "charge_currency": {
                           "type": "string",
-                          "description": "Currency used for the charge, in ISO 4217 format.",
-                          "example": "PLN"
+                          "example": "NZD"
                         },
                         "created_at": {
                           "type": "string",
-                          "description": "Timestamp when the payment attempt was created (ISO 8601 format).",
-                          "example": "2023-07-23T08:03:29.718275Z"
-                        },
-                        "customer": {
-                          "type": "string",
-                          "description": "Unique identifier of the customer associated with the payment.",
-                          "example": "cus_d209e84kspu2df5phfm0"
-                        },
-                        "customer_details": {
-                          "type": "object",
-                          "description": "Details of the customer making the payment.",
-                          "properties": {
-                            "country": {
-                              "type": "string",
-                              "description": "Country code of the customer (ISO 3166-1 alpha-2).",
-                              "example": "PL"
-                            },
-                            "email": {
-                              "type": "string",
-                              "description": "Customer's email address.",
-                              "example": "sowajan1010@gmail.com"
-                            },
-                            "name": {
-                              "type": "string",
-                              "description": "Customer's full name.",
-                              "example": "Jan"
-                            },
-                            "phone": {
-                              "type": "object",
-                              "description": "Customer's phone information.",
-                              "properties": {
-                                "calling_code": {
-                                  "type": "string",
-                                  "description": "Country calling code for the phone number.",
-                                  "example": "48"
-                                },
-                                "number": {
-                                  "type": "string",
-                                  "description": "Phone number of the customer.",
-                                  "example": "1234369"
-                                }
-                              }
-                            }
-                          }
+                          "example": "2023-09-26T11:24:30.365364Z"
                         },
                         "fx_transaction": {
                           "type": "object",
-                          "description": "Foreign exchange details related to this payment attempt.",
                           "properties": {
                             "exchange_rate": {
                               "type": "number",
-                              "description": "Exchange rate applied for currency conversion.",
-                              "example": 0.219768
+                              "example": 0.581354,
+                              "default": 0
                             },
                             "final": {
                               "type": "object",
-                              "description": "Details of the final converted amount.",
                               "properties": {
                                 "amount": {
                                   "type": "integer",
-                                  "description": "Final amount after conversion, in smallest currency unit.",
-                                  "example": 2173
+                                  "example": 103550,
+                                  "default": 0
                                 },
                                 "currency": {
                                   "type": "string",
-                                  "description": "Currency of the final amount after conversion.",
-                                  "example": "EUR"
+                                  "example": "USD"
                                 }
                               }
                             },
                             "id": {
                               "type": "string",
-                              "description": "Unique identifier for the FX transaction.",
-                              "example": "fx_d209ek2fhufa9pkp5c4g"
+                              "example": "fx_ck9burm2ug8qevron93g"
                             },
                             "initial": {
                               "type": "object",
-                              "description": "Details of the original amount before conversion.",
                               "properties": {
                                 "amount": {
                                   "type": "integer",
-                                  "description": "Original amount before conversion, in smallest currency unit.",
-                                  "example": 9888
+                                  "example": 178119,
+                                  "default": 0
                                 },
                                 "currency": {
                                   "type": "string",
-                                  "description": "Currency of the original amount.",
-                                  "example": "PLN"
+                                  "example": "NZD"
                                 }
                               }
                             },
                             "object": {
                               "type": "string",
-                              "description": "Indicates the type of FX object.",
                               "example": "fx_transaction"
                             }
                           }
                         },
                         "id": {
                           "type": "string",
-                          "description": "Unique identifier of the payment attempt.",
-                          "example": "pat_d209ek5qd9ne66lsn6gg"
+                          "example": "pat_ck9burng1tqjeffhetmg"
                         },
-                        "metadata": {
-                          "type": "object",
-                          "description": "Additional metadata or custom fields associated with the payment attempt.",
-                          "example": null
-                        },
+                        "metadata": {},
                         "object": {
                           "type": "string",
-                          "description": "Type of object returned by the API, typically 'payment_attempt'.",
                           "example": "payment_attempt"
                         },
                         "payin": {
                           "type": "string",
-                          "description": "Unique identifier for the related payin object.",
-                          "example": "chk_d209e85qd65u66lsn1g0"
+                          "example": "chk_ck9bu8ng1tqjeffhetd0"
                         },
                         "payment_method_details": {
                           "type": "object",
-                          "description": "Details of the payment method used in this attempt.",
                           "properties": {
                             "card": {
                               "type": "object",
-                              "description": "Card details used for the transaction.",
                               "properties": {
-                                "cardholder_name": {
-                                  "type": "string",
-                                  "description": "Name of the cardholder.",
-                                  "example": "jan cebella"
+                                "amount": {
+                                  "type": "integer",
+                                  "example": 178119,
+                                  "default": 0
                                 },
                                 "checks": {
                                   "type": "object",
-                                  "description": "Verification check results for the card.",
-                                  "properties": {
-                                    "cvc_check": {
-                                      "type": "string",
-                                      "description": "Result of the CVC (Card Verification Code) check.",
-                                      "example": "pass"
-                                    }
-                                  }
+                                  "properties": {}
+                                },
+                                "currency": {
+                                  "type": "string",
+                                  "example": "NZD"
                                 },
                                 "expiry": {
                                   "type": "object",
-                                  "description": "Expiry details of the card.",
-                                  "properties": {
-                                    "month": {
-                                      "type": "integer",
-                                      "description": "Card expiry month.",
-                                      "example": 7
-                                    },
-                                    "year": {
-                                      "type": "integer",
-                                      "description": "Card expiry year.",
-                                      "example": 2031
-                                    }
-                                  }
-                                },
-                                "first6": {
-                                  "type": "string",
-                                  "description": "First six digits of the card number (BIN).",
-                                  "example": "428771"
-                                },
-                                "funding": {
-                                  "type": "string",
-                                  "description": "Type of card funding source (credit, debit, prepaid).",
-                                  "example": "debit"
-                                },
-                                "issuer": {
-                                  "type": "string",
-                                  "description": "Name of the issuing bank.",
-                                  "example": "ing bank slaski sa"
+                                  "properties": {}
                                 },
                                 "issuing_country": {
                                   "type": "string",
-                                  "description": "Country code of the issuing bank.",
-                                  "example": "pl"
+                                  "example": "GB"
                                 },
-                                "last4": {
+                                "payer_name": {
                                   "type": "string",
-                                  "description": "Last four digits of the card number.",
-                                  "example": "6095"
-                                },
-                                "scheme": {
-                                  "type": "string",
-                                  "description": "Card network or scheme used (e.g., Visa, Mastercard).",
-                                  "example": "visa"
+                                  "example": "dsf"
                                 },
                                 "three_d_secure": {
                                   "type": "object",
-                                  "description": "3D Secure authentication details for the transaction.",
-                                  "properties": {
-                                    "eci": {
-                                      "type": "string",
-                                      "description": "Electronic Commerce Indicator value for 3DS authentication.",
-                                      "example": "05"
-                                    },
-                                    "result": {
-                                      "type": "string",
-                                      "description": "Result of the 3DS authentication process.",
-                                      "example": "attempt_acknowledged"
-                                    },
-                                    "version": {
-                                      "type": "string",
-                                      "description": "Version of the 3D Secure protocol used.",
-                                      "example": "2.2.0"
-                                    }
-                                  }
+                                  "properties": {}
                                 }
                               }
                             },
                             "type": {
                               "type": "string",
-                              "description": "Type of payment method used (e.g., card, bank_transfer).",
                               "example": "card"
                             }
                           }
                         },
-                        "reference_id": {
-                          "type": "string",
-                          "description": "Reference ID associated with this payment attempt, typically an external transaction or order reference.",
-                          "example": "TR000001385673188"
-                        },
                         "refunded": {
                           "type": "string",
-                          "description": "Indicates whether the payment has been refunded.",
-                          "example": "true"
+                          "example": ""
                         },
                         "status": {
                           "type": "string",
-                          "description": "Current status of the payment attempt.",
                           "example": "succeeded"
                         },
                         "status_description": {
                           "type": "string",
-                          "description": "Additional descriptive text about the payment attempt’s status.",
                           "example": ""
                         }
                       }
@@ -10972,271 +10841,152 @@
                   "properties": {
                     "status": {
                       "type": "string",
-                      "description": "Indicates whether the request was successful.",
                       "example": "success"
                     },
                     "message": {
                       "type": "string",
-                      "description": "Additional message or details about the request outcome.",
                       "example": ""
                     },
                     "data": {
                       "type": "object",
-                      "description": "Contains information about the payment attempt and its details.",
                       "properties": {
                         "amount": {
                           "type": "integer",
-                          "description": "Amount charged or processed in the transaction, in the smallest currency unit.",
-                          "example": 9899
-                        },
-                        "balance_transaction": {
-                          "type": "string",
-                          "description": "Unique identifier of the balance transaction associated with this payment attempt.",
-                          "example": "btr_d679f6dqd9ne66lsngb0"
+                          "example": 178119,
+                          "default": 0
                         },
                         "charge_currency": {
                           "type": "string",
-                          "description": "Currency used for the charge, in ISO 4217 format.",
-                          "example": "PLN"
+                          "example": "NZD"
                         },
                         "created_at": {
                           "type": "string",
-                          "description": "Timestamp when the payment attempt was created (ISO 8601 format).",
-                          "example": "2023-07-23T08:03:29.718275Z"
-                        },
-                        "customer": {
-                          "type": "string",
-                          "description": "Unique identifier of the customer associated with the payment.",
-                          "example": "cus_d209e84kspu2df5phfm0"
-                        },
-                        "customer_details": {
-                          "type": "object",
-                          "description": "Details of the customer making the payment.",
-                          "properties": {
-                            "country": {
-                              "type": "string",
-                              "description": "Country code of the customer (ISO 3166-1 alpha-2).",
-                              "example": "PL"
-                            },
-                            "email": {
-                              "type": "string",
-                              "description": "Customer's email address.",
-                              "example": "sowajan1010@gmail.com"
-                            },
-                            "name": {
-                              "type": "string",
-                              "description": "Customer's full name.",
-                              "example": "Jan"
-                            },
-                            "phone": {
-                              "type": "object",
-                              "description": "Customer's phone information.",
-                              "properties": {
-                                "calling_code": {
-                                  "type": "string",
-                                  "description": "Country calling code for the phone number.",
-                                  "example": "48"
-                                },
-                                "number": {
-                                  "type": "string",
-                                  "description": "Phone number of the customer.",
-                                  "example": "1234369"
-                                }
-                              }
-                            }
-                          }
+                          "example": "2023-09-26T11:24:30.365364Z"
                         },
                         "fx_transaction": {
                           "type": "object",
-                          "description": "Foreign exchange details related to this payment attempt.",
                           "properties": {
                             "exchange_rate": {
                               "type": "number",
-                              "description": "Exchange rate applied for currency conversion.",
-                              "example": 0.219768
+                              "example": 0.581354,
+                              "default": 0
                             },
                             "final": {
                               "type": "object",
-                              "description": "Details of the final converted amount.",
                               "properties": {
                                 "amount": {
                                   "type": "integer",
-                                  "description": "Final amount after conversion, in smallest currency unit.",
-                                  "example": 2173
+                                  "example": 103550,
+                                  "default": 0
                                 },
                                 "currency": {
                                   "type": "string",
-                                  "description": "Currency of the final amount after conversion.",
-                                  "example": "EUR"
+                                  "example": "USD"
                                 }
                               }
                             },
                             "id": {
                               "type": "string",
-                              "description": "Unique identifier for the FX transaction.",
-                              "example": "fx_d209ek2fhufa9pkp5c4g"
+                              "example": "fx_ck9burm2ug8qevron93g"
                             },
                             "initial": {
                               "type": "object",
-                              "description": "Details of the original amount before conversion.",
                               "properties": {
                                 "amount": {
                                   "type": "integer",
-                                  "description": "Original amount before conversion, in smallest currency unit.",
-                                  "example": 9888
+                                  "example": 178119,
+                                  "default": 0
                                 },
                                 "currency": {
                                   "type": "string",
-                                  "description": "Currency of the original amount.",
-                                  "example": "PLN"
+                                  "example": "NZD"
                                 }
                               }
                             },
                             "object": {
                               "type": "string",
-                              "description": "Indicates the type of FX object.",
                               "example": "fx_transaction"
                             }
                           }
                         },
                         "id": {
                           "type": "string",
-                          "description": "Unique identifier of the payment attempt.",
-                          "example": "pat_d209ek5qd9ne66lsn6gg"
+                          "example": "pat_ck9burng1tqjeffhetmg"
                         },
                         "metadata": {
                           "type": "object",
-                          "description": "Additional metadata or custom fields associated with the payment attempt.",
-                          "example": null
+                          "properties": {
+                            "key1": {
+                              "type": "string",
+                              "example": "value1"
+                            },
+                            "key2": {
+                              "type": "string",
+                              "example": "value2"
+                            }
+                          }
                         },
                         "object": {
                           "type": "string",
-                          "description": "Type of object returned by the API, typically 'payment_attempt'.",
                           "example": "payment_attempt"
                         },
                         "payin": {
                           "type": "string",
-                          "description": "Unique identifier for the related payin object.",
-                          "example": "chk_d209e85qd65u66lsn1g0"
+                          "example": "chk_ck9bu8ng1tqjeffhetd0"
                         },
                         "payment_method_details": {
                           "type": "object",
-                          "description": "Details of the payment method used in this attempt.",
                           "properties": {
                             "card": {
                               "type": "object",
-                              "description": "Card details used for the transaction.",
                               "properties": {
-                                "cardholder_name": {
-                                  "type": "string",
-                                  "description": "Name of the cardholder.",
-                                  "example": "jan cebella"
+                                "amount": {
+                                  "type": "integer",
+                                  "example": 178119,
+                                  "default": 0
                                 },
                                 "checks": {
                                   "type": "object",
-                                  "description": "Verification check results for the card.",
-                                  "properties": {
-                                    "cvc_check": {
-                                      "type": "string",
-                                      "description": "Result of the CVC (Card Verification Code) check.",
-                                      "example": "pass"
-                                    }
-                                  }
+                                  "properties": {}
+                                },
+                                "currency": {
+                                  "type": "string",
+                                  "example": "NZD"
                                 },
                                 "expiry": {
                                   "type": "object",
-                                  "description": "Expiry details of the card.",
-                                  "properties": {
-                                    "month": {
-                                      "type": "integer",
-                                      "description": "Card expiry month.",
-                                      "example": 7
-                                    },
-                                    "year": {
-                                      "type": "integer",
-                                      "description": "Card expiry year.",
-                                      "example": 2031
-                                    }
-                                  }
-                                },
-                                "first6": {
-                                  "type": "string",
-                                  "description": "First six digits of the card number (BIN).",
-                                  "example": "428771"
-                                },
-                                "funding": {
-                                  "type": "string",
-                                  "description": "Type of card funding source (credit, debit, prepaid).",
-                                  "example": "debit"
-                                },
-                                "issuer": {
-                                  "type": "string",
-                                  "description": "Name of the issuing bank.",
-                                  "example": "ing bank slaski sa"
+                                  "properties": {}
                                 },
                                 "issuing_country": {
                                   "type": "string",
-                                  "description": "Country code of the issuing bank.",
-                                  "example": "pl"
+                                  "example": "GB"
                                 },
-                                "last4": {
+                                "payer_name": {
                                   "type": "string",
-                                  "description": "Last four digits of the card number.",
-                                  "example": "6095"
-                                },
-                                "scheme": {
-                                  "type": "string",
-                                  "description": "Card network or scheme used (e.g., Visa, Mastercard).",
-                                  "example": "visa"
+                                  "example": "dsf"
                                 },
                                 "three_d_secure": {
                                   "type": "object",
-                                  "description": "3D Secure authentication details for the transaction.",
-                                  "properties": {
-                                    "eci": {
-                                      "type": "string",
-                                      "description": "Electronic Commerce Indicator value for 3DS authentication.",
-                                      "example": "05"
-                                    },
-                                    "result": {
-                                      "type": "string",
-                                      "description": "Result of the 3DS authentication process.",
-                                      "example": "attempt_acknowledged"
-                                    },
-                                    "version": {
-                                      "type": "string",
-                                      "description": "Version of the 3D Secure protocol used.",
-                                      "example": "2.2.0"
-                                    }
-                                  }
+                                  "properties": {}
                                 }
                               }
                             },
                             "type": {
                               "type": "string",
-                              "description": "Type of payment method used (e.g., card, bank_transfer).",
                               "example": "card"
                             }
                           }
                         },
-                        "reference_id": {
-                          "type": "string",
-                          "description": "Reference ID associated with this payment attempt, typically an external transaction or order reference.",
-                          "example": "TR000001385673188"
-                        },
                         "refunded": {
                           "type": "string",
-                          "description": "Indicates whether the payment has been refunded.",
-                          "example": "true"
+                          "example": ""
                         },
                         "status": {
                           "type": "string",
-                          "description": "Current status of the payment attempt.",
                           "example": "succeeded"
                         },
                         "status_description": {
                           "type": "string",
-                          "description": "Additional descriptive text about the payment attempt’s status.",
                           "example": ""
                         }
                       }
@@ -12159,11 +11909,13 @@
                   "properties": {
                     "status": {
                       "type": "string",
-                      "example": "success"
+                      "example": "success",
+                      "description": "Indicated whether the request is successful"
                     },
                     "message": {
                       "type": "string",
-                      "example": ""
+                      "example": "",
+                      "description": "Additional message and details about the request outcome. "
                     },
                     "data": {
                       "type": "object",
@@ -12175,24 +11927,29 @@
                             "properties": {
                               "amount": {
                                 "type": "string",
-                                "example": "1286628"
+                                "example": "1286628",
+                                "description": "The balance amount available in your account."
                               },
                               "currency": {
                                 "type": "string",
-                                "example": "CAD"
+                                "example": "CAD",
+                                "description": "The balance currency."
                               }
                             }
                           }
                         },
                         "object": {
                           "type": "string",
-                          "example": "balance"
+                          "example": "balance",
+                          "description": "Type of object returned by the API. In this case - Balance."
                         },
                         "updated_at": {
                           "type": "string",
-                          "example": "2024-08-20T06:18:11.475605Z"
+                          "example": "2024-08-20T06:18:11.475605Z",
+                          "description": "Timestamp when the balance was last updated (ISO 8601 format)"
                         }
-                      }
+                      },
+                      "description": "Contains information about the balance and its details"
                     }
                   }
                 }
