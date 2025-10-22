@@ -13911,36 +13911,42 @@
                   "properties": {
                     "status": {
                       "type": "string",
+                      "description": "Indicates whether the API call was successful.",
                       "example": "success"
                     },
                     "message": {
                       "type": "string",
+                      "description": "Optional message providing additional context about the response.",
                       "example": ""
                     },
                     "data": {
                       "type": "object",
+                      "description": "Contains pagination and result details for the list of transaction records.",
                       "properties": {
                         "has_more": {
                           "type": "boolean",
-                          "example": false,
-                          "default": true
+                          "description": "Indicates whether there are additional records available beyond the current result set.",
+                          "example": false
                         },
                         "object": {
                           "type": "string",
+                          "description": "Specifies the type of object returned, typically 'list'.",
                           "example": "list"
                         },
-                        "results": {
+                        "result": {
                           "type": "array",
+                          "description": "List of payout or transaction items included in the current response.",
                           "items": {
                             "type": "object",
                             "properties": {
                               "balance_transaction_id": {
                                 "type": "string",
+                                "description": "Unique identifier of the balance transaction associated with this record.",
                                 "example": "btr_d013fgtin2debfvbjv1g"
                               },
                               "id": {
                                 "type": "string",
-                                "example": "pat_d013felin2debfvbjus0"
+                                "description": "Unique identifier for the transaction record."
                               }
                             }
                           }
@@ -14012,36 +14018,42 @@
                   "properties": {
                     "status": {
                       "type": "string",
+                      "description": "Indicates whether the API call was successful.",
                       "example": "success"
                     },
                     "message": {
                       "type": "string",
+                      "description": "Optional message providing additional context about the response.",
                       "example": ""
                     },
                     "data": {
                       "type": "object",
+                      "description": "Contains pagination and result details for the list of transaction records.",
                       "properties": {
                         "has_more": {
                           "type": "boolean",
-                          "example": false,
-                          "default": true
+                          "description": "Indicates whether there are additional records available beyond the current result set.",
+                          "example": false
                         },
                         "object": {
                           "type": "string",
+                          "description": "Specifies the type of object returned, typically 'list'.",
                           "example": "list"
                         },
-                        "results": {
+                        "result": {
                           "type": "array",
+                          "description": "List of payout or transaction items included in the current response.",
                           "items": {
                             "type": "object",
                             "properties": {
                               "balance_transaction_id": {
                                 "type": "string",
+                                "description": "Unique identifier of the balance transaction associated with this record.",
                                 "example": "btr_d013fgtin2debfvbjv1g"
                               },
                               "id": {
                                 "type": "string",
-                                "example": "rfd_d013felin2debfvbjus0"
+                                "description": "Unique identifier for the transaction record."
                               }
                             }
                           }
@@ -14113,36 +14125,42 @@
                   "properties": {
                     "status": {
                       "type": "string",
+                      "description": "Indicates whether the API call was successful.",
                       "example": "success"
                     },
                     "message": {
                       "type": "string",
+                      "description": "Optional message providing additional context about the response.",
                       "example": ""
                     },
                     "data": {
                       "type": "object",
+                      "description": "Contains pagination and result details for the list of transaction records.",
                       "properties": {
                         "has_more": {
                           "type": "boolean",
-                          "example": false,
-                          "default": true
+                          "description": "Indicates whether there are additional records available beyond the current result set.",
+                          "example": false
                         },
                         "object": {
                           "type": "string",
+                          "description": "Specifies the type of object returned, typically 'list'.",
                           "example": "list"
                         },
                         "result": {
                           "type": "array",
+                          "description": "List of payout or transaction items included in the current response.",
                           "items": {
                             "type": "object",
                             "properties": {
                               "balance_transaction_id": {
                                 "type": "string",
-                                "example": ""
+                                "description": "Unique identifier of the balance transaction associated with this record.",
+                                "example": "btr_d013fgtin2debfvbjv1g"
                               },
                               "id": {
                                 "type": "string",
-                                "example": "col_coah2ucoc78qp6pbv7f0"
+                                "description": "Unique identifier for the transaction record."
                               }
                             }
                           }
@@ -14214,36 +14232,42 @@
                   "properties": {
                     "status": {
                       "type": "string",
+                      "description": "Indicates whether the API call was successful.",
                       "example": "success"
                     },
                     "message": {
                       "type": "string",
+                      "description": "Optional message providing additional context about the response.",
                       "example": ""
                     },
                     "data": {
                       "type": "object",
+                      "description": "Contains pagination and result details for the list of transaction records.",
                       "properties": {
                         "has_more": {
                           "type": "boolean",
-                          "example": false,
-                          "default": true
+                          "description": "Indicates whether there are additional records available beyond the current result set.",
+                          "example": false
                         },
                         "object": {
                           "type": "string",
+                          "description": "Specifies the type of object returned, typically 'list'.",
                           "example": "list"
                         },
-                        "results": {
+                        "result": {
                           "type": "array",
+                          "description": "List of payout or transaction items included in the current response.",
                           "items": {
                             "type": "object",
                             "properties": {
                               "balance_transaction_id": {
                                 "type": "string",
+                                "description": "Unique identifier of the balance transaction associated with this record.",
                                 "example": "btr_d013fgtin2debfvbjv1g"
                               },
                               "id": {
                                 "type": "string",
-                                "example": "adj_d013felin2debfvbjus0"
+                                "description": "Unique identifier for the transaction record."
                               }
                             }
                           }
@@ -14315,35 +14339,42 @@
                   "properties": {
                     "status": {
                       "type": "string",
+                      "description": "Indicates whether the API call was successful.",
                       "example": "success"
                     },
                     "message": {
                       "type": "string",
+                      "description": "Optional message providing additional context about the response.",
                       "example": ""
                     },
                     "data": {
                       "type": "object",
+                      "description": "Contains pagination and result details for the list of payout or transaction records.",
                       "properties": {
                         "has_more": {
                           "type": "boolean",
-                          "example": false,
-                          "default": true
+                          "description": "Indicates whether there are additional records available beyond the current result set.",
+                          "example": false
                         },
                         "object": {
                           "type": "string",
+                          "description": "Specifies the type of object returned, typically 'list'.",
                           "example": "list"
                         },
                         "result": {
                           "type": "array",
+                          "description": "List of payout or transaction items included in the current response.",
                           "items": {
                             "type": "object",
                             "properties": {
                               "balance_transaction_id": {
                                 "type": "string",
-                                "example": "btr_46294287492"
+                                "description": "Unique identifier of the balance transaction associated with this payout or record.",
+                                "example": "btr_d013fgtin2debfvbjv1g"
                               },
                               "id": {
                                 "type": "string",
+                                "description": "Unique identifier for the payout or transaction record.",
                                 "example": "pot_coai2bk30hnb6csf6500"
                               }
                             }
