@@ -1,7 +1,7 @@
+- entity-object
 - create-entity
 - submit-entity
 - fetch-entity
 - update-entity
 - list-entity
 - entity-webhooks
-- entity-object
