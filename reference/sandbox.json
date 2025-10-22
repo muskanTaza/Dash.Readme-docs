@@ -1221,7 +1221,10 @@
                           }
                         },
                         "metadata": {
-                          "type": ["object", "null"],
+                          "type": [
+                            "object",
+                            "null"
+                          ],
                           "description": "Custom metadata key-value pairs attached to this payin for reference.",
                           "example": null
                         },
@@ -1890,7 +1893,7 @@
                           "example": ""
                         },
                         "latest_payment_attempt_data": {
-                          "type":  "object",
+                          "type": "object",
                           "description": "Detailed data of the latest payment attempt if available.",
                           "example": null
                         },
@@ -5175,12 +5178,30 @@
                         "address": {
                           "type": "object",
                           "properties": {
-                            "city": { "type": "string", "description": "City of the beneficiary" },
-                            "country": { "type": "string", "description": "Country of the beneficiary" },
-                            "line1": { "type": "string", "description": "Address line 1" },
-                            "line2": { "type": "string", "description": "Address line 2" },
-                            "postal_code": { "type": "string", "description": "Postal code" },
-                            "state": { "type": "string", "description": "State or province" }
+                            "city": {
+                              "type": "string",
+                              "description": "City of the beneficiary"
+                            },
+                            "country": {
+                              "type": "string",
+                              "description": "Country of the beneficiary"
+                            },
+                            "line1": {
+                              "type": "string",
+                              "description": "Address line 1"
+                            },
+                            "line2": {
+                              "type": "string",
+                              "description": "Address line 2"
+                            },
+                            "postal_code": {
+                              "type": "string",
+                              "description": "Postal code"
+                            },
+                            "state": {
+                              "type": "string",
+                              "description": "State or province"
+                            }
                           }
                         },
                         "destination": {
@@ -5193,24 +5214,57 @@
                             "bank": {
                               "type": "object",
                               "properties": {
-                                "account_number": { "type": "string", "description": "Bank account number" },
-                                "account_type": { "type": "string", "description": "Type of bank account" },
+                                "account_number": {
+                                  "type": "string",
+                                  "description": "Bank account number"
+                                },
+                                "account_type": {
+                                  "type": "string",
+                                  "description": "Type of bank account"
+                                },
                                 "bank_codes": {
                                   "type": "object",
                                   "properties": {
-                                    "aba_code": { "type": "string", "description": "ABA routing code" },
-                                    "swift_code": { "type": "string", "description": "SWIFT/BIC code" }
+                                    "aba_code": {
+                                      "type": "string",
+                                      "description": "ABA routing code"
+                                    },
+                                    "swift_code": {
+                                      "type": "string",
+                                      "description": "SWIFT/BIC code"
+                                    }
                                   }
                                 },
-                                "bank_name": { "type": "string", "description": "Name of the bank" },
-                                "branch_name": { "type": "string", "description": "Branch name of the bank" },
-                                "country": { "type": "string", "description": "Bank country" },
-                                "currency": { "type": "string", "description": "Currency of the bank account" },
-                                "firc_required": { "type": "boolean", "description": "Whether FIRC document is required" },
-                                "purpose_code": { "type": "string", "description": "Purpose code for the transaction" }
+                                "bank_name": {
+                                  "type": "string",
+                                  "description": "Name of the bank"
+                                },
+                                "branch_name": {
+                                  "type": "string",
+                                  "description": "Branch name of the bank"
+                                },
+                                "country": {
+                                  "type": "string",
+                                  "description": "Bank country"
+                                },
+                                "currency": {
+                                  "type": "string",
+                                  "description": "Currency of the bank account"
+                                },
+                                "firc_required": {
+                                  "type": "boolean",
+                                  "description": "Whether FIRC document is required"
+                                },
+                                "purpose_code": {
+                                  "type": "string",
+                                  "description": "Purpose code for the transaction"
+                                }
                               }
                             },
-                            "type": { "type": "string", "description": "Destination type (e.g. bank)" }
+                            "type": {
+                              "type": "string",
+                              "description": "Destination type (e.g. bank)"
+                            }
                           }
                         },
                         "documents": {
@@ -5229,8 +5283,14 @@
                         "phone": {
                           "type": "object",
                           "properties": {
-                            "calling_code": { "type": "string", "description": "Country calling code" },
-                            "number": { "type": "string", "description": "Phone number" }
+                            "calling_code": {
+                              "type": "string",
+                              "description": "Country calling code"
+                            },
+                            "number": {
+                              "type": "string",
+                              "description": "Phone number"
+                            }
                           }
                         },
                         "tax_id": {
@@ -5268,23 +5328,44 @@
                       "type": "object",
                       "description": "FX transaction details for holding currency",
                       "properties": {
-                        "exchange_rate": { "type": "number", "description": "FX exchange rate used" },
+                        "exchange_rate": {
+                          "type": "number",
+                          "description": "FX exchange rate used"
+                        },
                         "final": {
                           "type": "object",
                           "properties": {
-                            "amount": { "type": "number", "description": "Final amount after FX" },
-                            "currency": { "type": "string", "description": "Final currency" }
+                            "amount": {
+                              "type": "number",
+                              "description": "Final amount after FX"
+                            },
+                            "currency": {
+                              "type": "string",
+                              "description": "Final currency"
+                            }
                           }
                         },
-                        "id": { "type": "string", "description": "FX transaction ID" },
+                        "id": {
+                          "type": "string",
+                          "description": "FX transaction ID"
+                        },
                         "initial": {
                           "type": "object",
                           "properties": {
-                            "amount": { "type": "number", "description": "Initial amount before FX" },
-                            "currency": { "type": "string", "description": "Initial currency" }
+                            "amount": {
+                              "type": "number",
+                              "description": "Initial amount before FX"
+                            },
+                            "currency": {
+                              "type": "string",
+                              "description": "Initial currency"
+                            }
                           }
                         },
-                        "object": { "type": "string", "description": "Object type (fx_transaction)" }
+                        "object": {
+                          "type": "string",
+                          "description": "Object type (fx_transaction)"
+                        }
                       }
                     },
                     "id": {
@@ -5307,23 +5388,44 @@
                       "type": "object",
                       "description": "FX transaction details for payout currency",
                       "properties": {
-                        "exchange_rate": { "type": "number", "description": "Exchange rate for payout FX" },
+                        "exchange_rate": {
+                          "type": "number",
+                          "description": "Exchange rate for payout FX"
+                        },
                         "final": {
                           "type": "object",
                           "properties": {
-                            "amount": { "type": "number", "description": "Final amount" },
-                            "currency": { "type": "string", "description": "Final currency" }
+                            "amount": {
+                              "type": "number",
+                              "description": "Final amount"
+                            },
+                            "currency": {
+                              "type": "string",
+                              "description": "Final currency"
+                            }
                           }
                         },
-                        "id": { "type": "string", "description": "FX transaction ID" },
+                        "id": {
+                          "type": "string",
+                          "description": "FX transaction ID"
+                        },
                         "initial": {
                           "type": "object",
                           "properties": {
-                            "amount": { "type": "number", "description": "Initial amount" },
-                            "currency": { "type": "string", "description": "Initial currency" }
+                            "amount": {
+                              "type": "number",
+                              "description": "Initial amount"
+                            },
+                            "currency": {
+                              "type": "string",
+                              "description": "Initial currency"
+                            }
                           }
                         },
-                        "object": { "type": "string", "description": "Object type (fx_transaction)" }
+                        "object": {
+                          "type": "string",
+                          "description": "Object type (fx_transaction)"
+                        }
                       }
                     },
                     "purpose": {
@@ -5364,7 +5466,6 @@
                     }
                   }
                 }
-
               }
             }
           },
@@ -8835,7 +8936,7 @@
                                   }
                                 }
                               },
-                              "label":{
+                              "label": {
                                 "type": "string",
                                 "description": "Denotes the type of address (Example - home, work).",
                                 "example": "home"
@@ -8906,7 +9007,7 @@
                                   }
                                 }
                               },
-                              "label":{
+                              "label": {
                                 "type": "string",
                                 "description": "Denotes the type of address (Example - home, work).",
                                 "example": "home"
@@ -9135,7 +9236,7 @@
                                   }
                                 }
                               },
-                              "label":{
+                              "label": {
                                 "type": "string",
                                 "description": "Denotes the type of address (Example - home, work).",
                                 "example": "home"
@@ -9206,7 +9307,7 @@
                                   }
                                 }
                               },
-                              "label":{
+                              "label": {
                                 "type": "string",
                                 "description": "Denotes the type of address (Example - home, work).",
                                 "example": "home"
@@ -9443,7 +9544,7 @@
             "required": true
           }
         ],
-          "requestBody": {
+        "requestBody": {
           "content": {
             "application/json": {
               "schema": {
@@ -10053,7 +10154,7 @@
                         "converted_amount": {
                           "type": "integer",
                           "description": "The amount converted into the final currency, expressed in the smallest currency unit (e.g., cents).",
-                          "example": 84902                         
+                          "example": 84902
                         },
                         "exchange_rate": {
                           "type": "number",
@@ -10117,7 +10218,69 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{}"
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "payout_methods": [
+                          {
+                            "beneficiary_type": [
+                              "individual",
+                              "business"
+                            ],
+                            "country": "DK",
+                            "currency": "EUR",
+                            "custom_remitter_support": true,
+                            "payout_type": "swift",
+                            "required_bank_codes": [
+                              "swift_code"
+                            ],
+                            "required_bank_fields": [
+                              "account_holder_name",
+                              "bank_name",
+                              "iban"
+                            ],
+                            "required_beneficiary_fields": [],
+                            "supported_destinations": [],
+                            "transfer_limit": {
+                              "currency": "EUR",
+                              "maximum": 8621591261,
+                              "minimum": 86
+                            }
+                          },
+                          {
+                            "beneficiary_type": [
+                              "individual",
+                              "business"
+                            ],
+                            "country": "DK",
+                            "currency": "EUR",
+                            "custom_remitter_support": false,
+                            "payout_type": "local",
+                            "required_bank_codes": [
+                              "swift_code"
+                            ],
+                            "required_bank_fields": [
+                              "account_holder_name",
+                              "bank_name",
+                              "iban"
+                            ],
+                            "required_beneficiary_fields": [
+                              "address.line1",
+                              "address.city",
+                              "address.state",
+                              "address.postal_code"
+                            ],
+                            "supported_destinations": [],
+                            "transfer_limit": {
+                              "currency": "EUR",
+                              "maximum": 431079563,
+                              "minimum": 1
+                            }
+                          }
+                        ]
+                      }
+                    }
                   }
                 },
                 "schema": {
@@ -10150,7 +10313,10 @@
                                   "type": "string",
                                   "example": "individual"
                                 },
-                                "example": ["individual", "business"]
+                                "example": [
+                                  "individual",
+                                  "business"
+                                ]
                               },
                               "country": {
                                 "type": "string",
@@ -10179,7 +10345,9 @@
                                   "type": "string",
                                   "example": "swift_code"
                                 },
-                                "example": ["swift_code"]
+                                "example": [
+                                  "swift_code"
+                                ]
                               },
                               "required_bank_fields": {
                                 "type": "array",
@@ -10188,7 +10356,11 @@
                                   "type": "string",
                                   "example": "account_number"
                                 },
-                                "example": ["account_holder_name", "bank_name", "account_number"]
+                                "example": [
+                                  "account_holder_name",
+                                  "bank_name",
+                                  "account_number"
+                                ]
                               },
                               "required_beneficiary_fields": {
                                 "type": "array",
@@ -14414,8 +14586,6 @@
                     }
                   }
                 }
-
-
               }
             }
           }
@@ -14554,7 +14724,7 @@
                     "summary": "OK",
                     "value": "{\n  \"amount\": 5000,\n  \"balance_transaction\": \"btr_d24adsvfccunngaiu2bg\",\n  \"beneficiary\": \"bnf_d24adp7fccunngaiu20g\",\n  \"beneficiary_details\": {\n    \"address\": null,\n    \"date_of_birth\": \"\",\n    \"destination\": \"\",\n    \"destination_details\": {\n      \"bank\": {\n        \"account_type\": \"\",\n        \"bank_codes\": {},\n        \"bank_name\": \"testfxbank\",\n        \"branch_name\": \"\",\n        \"country\": \"FR\",\n        \"currency\": \"EUR\",\n        \"firc_required\": false,\n        \"iban\": \"31\",\n        \"purpose_code\": \"\",\n        \"transfer_type\": \"local\"\n      },\n      \"type\": \"bank\"\n    },\n    \"documents\": [],\n    \"email\": \"\",\n    \"name\": \"Jackie Morissette\",\n    \"national_identification_number\": \"\",\n    \"party_classification\": \"\",\n    \"phone\": {\n      \"calling_code\": \"33\"\n    },\n    \"registration_number\": \"\",\n    \"tax_id\": \"\",\n    \"type\": \"individual\"\n  },\n  \"charge_type\": \"\",\n  \"confirmation_documents\": [],\n  \"created_at\": \"2025-07-29T10:48:19.014533Z\",\n  \"currency\": \"EUR\",\n  \"documents\": [],\n  \"holding_currency\": \"USD\",\n  \"holding_fx_transaction\": {\n    \"exchange_rate\": 0.828672,\n    \"final\": {\n      \"amount\": 5000,\n      \"currency\": \"EUR\"\n    },\n    \"id\": \"fx_d24adsmp89reuemeaujg\",\n    \"initial\": {\n      \"amount\": 6034,\n      \"currency\": \"USD\"\n    },\n    \"object\": \"fx_transaction\"\n  },\n  \"id\": \"pot_d24adsnfccunngaiu280\",\n  \"local\": {\n    \"fund_transfer_network\": \"\"\n  },\n  \"logistics_tracking_details\": [],\n  \"metadata\": {\n    \"collect_id\": \"col_d24ae102tsfj74sj23s0\",\n    \"transaction_hash\": \"0xie4el49kctwen8rf6urv7wirrtemva9bqhjlct7j1v9jp8r4eya4zg08c80xkgxo\"\n  },\n  \"mt103\": \"\",\n  \"object\": \"payout\",\n  \"on_behalf_of\": \"\",\n  \"payout_fx_transaction\": {\n    \"exchange_rate\": 1,\n    \"final\": {\n      \"amount\": 5000,\n      \"currency\": \"EUR\"\n    },\n    \"id\": \"fx_d24adsmp89reuemeauj0\",\n    \"initial\": {\n      \"amount\": 5000,\n      \"currency\": \"EUR\"\n    },\n    \"object\": \"fx_transaction\"\n  },\n  \"purpose\": \"PYR008\",\n  \"reference_id\": \"\",\n  \"source\": \"col_d24ae102tsfj74sj23s0\",\n  \"statement_descriptor\": \"\",\n  \"status\": \"processing\",\n  \"status_description\": \"\",\n  \"tracking_details\": null,\n  \"transaction_description\": \"Payout Description\",\n  \"type\": \"local\"\n}}"
                   }
-                },                
+                },
                 "schema": {
                   "type": "object",
                   "properties": {
@@ -15260,7 +15430,10 @@
                                   "type": "string",
                                   "example": "Bank1"
                                 },
-                                "example": ["Bank1", "Bank2"]
+                                "example": [
+                                  "Bank1",
+                                  "Bank2"
+                                ]
                               },
                               "logo": {
                                 "type": "array",
@@ -15269,7 +15442,10 @@
                                   "type": "string",
                                   "example": "downloadable_logo_url_1"
                                 },
-                                "example": ["downloadable_logo_url_1", "downloadable_logo_url_2"]
+                                "example": [
+                                  "downloadable_logo_url_1",
+                                  "downloadable_logo_url_2"
+                                ]
                               },
                               "notification_type": {
                                 "type": "string",
