@@ -8,7 +8,7 @@ excerpt: >-
   the correct transaction, enhancing transparency and operational efficiency
   across the platform.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''
