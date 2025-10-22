@@ -32,8 +32,8 @@ next:
             "email": "sowajan1010@gmail.com",
             "name": "Jan",
             "phone": {
-                "calling_code": "",
-                "number": ""
+                "calling_code": "48",
+                "number": "1234369"
             }
         },
         "fx_transaction": {
