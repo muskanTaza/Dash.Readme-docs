@@ -10517,46 +10517,61 @@
                   "properties": {
                     "status": {
                       "type": "string",
+                      "description": "Indicates whether the document upload or retrieval operation was successful.",
                       "example": "success"
                     },
                     "message": {
                       "type": "string",
+                      "description": "Additional message or status detail for the API response.",
                       "example": ""
                     },
                     "data": {
                       "type": "object",
+                      "description": "Contains detailed information about the uploaded or retrieved document.",
                       "properties": {
                         "created_at": {
                           "type": "string",
+                          "description": "Timestamp when the document was created (ISO 8601 format).",
                           "example": "2023-09-13T10:22:12.711645400Z"
                         },
                         "description": {
                           "type": "string",
+                          "description": "Description or note associated with the document.",
                           "example": "This is a sample document"
                         },
                         "id": {
                           "type": "string",
+                          "description": "Unique identifier for the document in the system.",
                           "example": "doc_ck0oql7oclf1aqlh4jdg"
                         },
-                        "metadata": {},
+                        "metadata": {
+                          "type": "object",
+                          "description": "Additional metadata or custom key-value pairs related to the document, if any.",
+                          "example": null
+                        },
                         "name": {
                           "type": "string",
-                          "example": ""
+                          "description": "Display name or title of the document.",
+                          "example": "Purchase proof"
                         },
                         "object": {
                           "type": "string",
+                          "description": "Indicates the type of object returned, typically 'document'.",
                           "example": "document"
                         },
                         "reference": {
                           "type": "string",
+                          "description": "ID of the object (such as escrow or payout) that this document is associated with.",
                           "example": "esc_ck0og8noclf1aqlh4icg"
                         },
                         "type": {
                           "type": "string",
+                          "description": "Type of the document (e.g., 'invoice', 'proof_of_payment', 'tracking_url').",
                           "example": "tracking_url"
                         },
                         "url": {
                           "type": "string",
+                          "description": "Public or signed URL for accessing or downloading the document.",
                           "example": "https://drive.google.com/file/d/1q5kk5YKcCojdTYir-rONXjN7szuXE16m/view?usp=sharing"
                         }
                       }
