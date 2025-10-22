@@ -9896,56 +9896,69 @@
                   "properties": {
                     "status": {
                       "type": "string",
+                      "description": "Indicates whether the request to retrieve external account details was successful.",
                       "example": "success"
                     },
                     "message": {
                       "type": "string",
+                      "description": "Additional message providing context about the response.",
                       "example": ""
                     },
                     "data": {
                       "type": "object",
+                      "description": "Contains details about the linked external accounts and their associated information.",
                       "properties": {
                         "accounts": {
                           "type": "array",
+                          "description": "List of external accounts linked to the user or entity.",
                           "items": {
                             "type": "object",
                             "properties": {
                               "bank": {
                                 "type": "object",
+                                "description": "Bank account information for the external account.",
                                 "properties": {
                                   "account_number": {
                                     "type": "string",
+                                    "description": "Bank account number for the external account.",
                                     "example": "361023"
                                   },
                                   "account_type": {
                                     "type": "string",
+                                    "description": "Type of bank account (e.g., savings, checking).",
                                     "example": "checking"
                                   },
                                   "bank_codes": {
                                     "type": "object",
+                                    "description": "Bank code details used for identifying bank and branch.",
                                     "properties": {
                                       "bank_code": {
                                         "type": "string",
+                                        "description": "Unique identifier for the bank.",
                                         "example": "237"
                                       },
                                       "branch_code": {
                                         "type": "string",
+                                        "description": "Branch code identifying the specific branch of the bank.",
                                         "example": "345"
                                       }
                                     }
                                   },
                                   "bank_name": {
                                     "type": "string",
+                                    "description": "Official name of the bank.",
                                     "example": "BCO BRADESCO S.A."
                                   },
                                   "currency": {
                                     "type": "string",
+                                    "description": "Currency of the external account (ISO 4217 format).",
                                     "example": "BRL"
                                   }
                                 }
                               },
                               "type": {
                                 "type": "string",
+                                "description": "Specifies the type of external account, typically 'bank'.",
                                 "example": "bank"
                               }
                             }
@@ -9953,14 +9966,17 @@
                         },
                         "country": {
                           "type": "string",
+                          "description": "Country code (ISO 3166-1 alpha-2) associated with the external account.",
                           "example": "BR"
                         },
                         "object": {
                           "type": "string",
+                          "description": "Type of object returned, typically 'external_account_details'.",
                           "example": "external_account_details"
                         },
                         "tax_id": {
                           "type": "string",
+                          "description": "Tax identification number linked to the external account holder.",
                           "example": "03655157363"
                         }
                       }
@@ -10022,35 +10038,41 @@
                   "properties": {
                     "status": {
                       "type": "string",
+                      "description": "Indicates whether the FX conversion request was successful.",
                       "example": "success"
                     },
                     "message": {
                       "type": "string",
+                      "description": "Additional information about the FX conversion operation, if any.",
                       "example": ""
                     },
                     "data": {
                       "type": "object",
+                      "description": "Contains detailed information about the currency conversion result.",
                       "properties": {
                         "converted_amount": {
                           "type": "integer",
-                          "example": 84902,
-                          "default": 0
+                          "description": "The amount converted into the final currency, expressed in the smallest currency unit (e.g., cents).",
+                          "example": 84902                         
                         },
                         "exchange_rate": {
                           "type": "number",
-                          "example": 84.90246799733201,
-                          "default": 0
+                          "description": "The exchange rate applied for converting from the initial to the final currency.",
+                          "example": 84.90246799733201
                         },
                         "final_currency": {
                           "type": "string",
+                          "description": "The target currency after conversion (ISO 4217 format).",
                           "example": "INR"
                         },
                         "initial_currency": {
                           "type": "string",
+                          "description": "The source currency before conversion (ISO 4217 format).",
                           "example": "USD"
                         },
                         "timestamp": {
                           "type": "string",
+                          "description": "Timestamp indicating when the FX conversion was performed (ISO 8601 format).",
                           "example": "2025-01-09T09:51:40.229346267Z"
                         }
                       }
@@ -10100,7 +10122,124 @@
                 },
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "description": "Indicates whether the request to retrieve available payout methods was successful.",
+                      "example": "success"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Additional message providing context or status information about the request.",
+                      "example": ""
+                    },
+                    "data": {
+                      "type": "object",
+                      "description": "Contains the list of available payout methods and their associated details.",
+                      "properties": {
+                        "payout_methods": {
+                          "type": "array",
+                          "description": "List of payout methods available for the specified country and currency.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "beneficiary_type": {
+                                "type": "array",
+                                "description": "Specifies the types of beneficiaries supported for this payout method (e.g., individual or business).",
+                                "items": {
+                                  "type": "string",
+                                  "example": "individual"
+                                },
+                                "example": ["individual", "business"]
+                              },
+                              "country": {
+                                "type": "string",
+                                "description": "Country code (ISO 3166-1 alpha-2) for which the payout method is available.",
+                                "example": "SG"
+                              },
+                              "currency": {
+                                "type": "string",
+                                "description": "Currency supported for the payout method (ISO 4217 format).",
+                                "example": "SGD"
+                              },
+                              "custom_remitter_support": {
+                                "type": "boolean",
+                                "description": "Indicates whether the payout method supports custom remitters (different sender names).",
+                                "example": true
+                              },
+                              "payout_type": {
+                                "type": "string",
+                                "description": "Specifies the payout delivery channel or type (e.g., 'local', 'swift').",
+                                "example": "swift"
+                              },
+                              "required_bank_codes": {
+                                "type": "array",
+                                "description": "List of bank codes required for this payout method (e.g., SWIFT, IFSC).",
+                                "items": {
+                                  "type": "string",
+                                  "example": "swift_code"
+                                },
+                                "example": ["swift_code"]
+                              },
+                              "required_bank_fields": {
+                                "type": "array",
+                                "description": "List of required bank information fields that must be provided to initiate the payout.",
+                                "items": {
+                                  "type": "string",
+                                  "example": "account_number"
+                                },
+                                "example": ["account_holder_name", "bank_name", "account_number"]
+                              },
+                              "required_beneficiary_fields": {
+                                "type": "array",
+                                "description": "List of required beneficiary information fields that must be provided to complete the payout, typically address-related fields.",
+                                "items": {
+                                  "type": "string",
+                                  "example": "address.line1"
+                                },
+                                "example": [
+                                  "address.line1",
+                                  "address.city",
+                                  "address.state",
+                                  "address.postal_code"
+                                ]
+                              },
+                              "supported_destinations": {
+                                "type": "array",
+                                "description": "List of supported destination countries or payout corridors for this method, if applicable.",
+                                "items": {
+                                  "type": "string",
+                                  "example": ""
+                                },
+                                "example": []
+                              },
+                              "transfer_limit": {
+                                "type": "object",
+                                "description": "Defines the minimum and maximum payout limits for the given payout method.",
+                                "properties": {
+                                  "currency": {
+                                    "type": "string",
+                                    "description": "Currency in which the transfer limits are defined.",
+                                    "example": "SGD"
+                                  },
+                                  "maximum": {
+                                    "type": "integer",
+                                    "description": "Maximum allowable payout amount in the smallest currency unit (e.g., cents).",
+                                    "example": 12981911697
+                                  },
+                                  "minimum": {
+                                    "type": "integer",
+                                    "description": "Minimum allowable payout amount in the smallest currency unit (e.g., cents).",
+                                    "example": 130
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -15045,84 +15184,101 @@
                   "properties": {
                     "status": {
                       "type": "string",
+                      "description": "Indicates whether the request to fetch available payment methods or quote was successful.",
                       "example": "success"
                     },
                     "data": {
                       "type": "object",
+                      "description": "Contains details about country, currency, amount, and available payment methods.",
                       "properties": {
                         "country": {
                           "type": "string",
+                          "description": "Country code (ISO 3166-1 alpha-2) where the payment is being made.",
                           "example": "SG"
                         },
                         "invoice_currency": {
                           "type": "string",
+                          "description": "Currency of the invoice or payment (ISO 4217 format).",
                           "example": "USD"
                         },
                         "amount": {
                           "type": "integer",
+                          "description": "Invoice amount in the smallest currency unit (e.g., cents).",
                           "example": 67000,
                           "default": 0
                         },
                         "payment_methods": {
                           "type": "array",
+                          "description": "List of available payment methods with corresponding rates, limits, and display details.",
                           "items": {
                             "type": "object",
                             "properties": {
                               "type": {
                                 "type": "string",
+                                "description": "Unique code representing the payment method type.",
                                 "example": "paynow_sgd"
                               },
                               "display_name": {
                                 "type": "string",
+                                "description": "Display-friendly name for the payment method.",
                                 "example": "Paynow QR"
                               },
                               "family": {
                                 "type": "string",
+                                "description": "Family category of the payment method, indicating its type of transfer or operation.",
                                 "example": "real_time_payment"
                               },
                               "group": {
                                 "type": "string",
+                                "description": "Classification group of the payment method, such as 'APM' or 'Card'.",
                                 "example": "APM"
                               },
                               "currency": {
                                 "type": "string",
+                                "description": "Currency supported by this payment method (ISO 4217 format).",
                                 "example": "SGD"
                               },
                               "exchange_rate": {
                                 "type": "number",
-                                "example": 1.3,
-                                "default": 0
+                                "description": "Exchange rate applied from the invoice currency to the payment method currency.",
+                                "example": 1.3
                               },
                               "amount": {
                                 "type": "integer",
-                                "example": 89110,
-                                "default": 0
+                                "description": "Converted amount the payer will pay in the payment method currency.",
+                                "example": 89110
                               },
                               "transaction_fee": {
                                 "type": "integer",
-                                "example": 1603,
-                                "default": 0
+                                "description": "Transaction fee applicable for this payment method in the payment method currency's smallest unit.",
+                                "example": 1603
                               },
                               "banks": {
                                 "type": "array",
+                                "description": "List of supported banks for this payment method, if applicable.",
                                 "items": {
                                   "type": "string",
                                   "example": "Bank1"
-                                }
+                                },
+                                "example": ["Bank1", "Bank2"]
                               },
                               "logo": {
                                 "type": "array",
+                                "description": "List of downloadable logo URLs for displaying the payment method branding.",
                                 "items": {
                                   "type": "string",
                                   "example": "downloadable_logo_url_1"
-                                }
+                                },
+                                "example": ["downloadable_logo_url_1", "downloadable_logo_url_2"]
                               },
                               "notification_type": {
                                 "type": "string",
+                                "description": "Indicates if payment confirmation is synchronous or asynchronous.",
                                 "example": "synchronous"
                               },
                               "experience_type": {
                                 "type": "string",
+                                "description": "Indicates the payment experience type, such as 'redirect' or 'inline'.",
                                 "example": "redirect"
                               }
                             }
