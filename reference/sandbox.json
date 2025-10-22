@@ -11402,7 +11402,8 @@
                         "name": "test",
                         "object": "beneficiary",
                         "phone": {
-                          "calling_code": "91"
+                          "calling_code": "91",
+                          "number": "9362987920"
                         },
                         "tax_id": "",
                         "type": "individual"
