@@ -19,11 +19,11 @@ next:
 ```json Individual
 {
   "address": {
-        "city": "Vrtmore",
-        "country": "JM",
-        "line1": "it12 3cwth",
-        "postal_code": "00000",
-        "state": "Vortmore"
+        "city": "Vijay",
+        "country": "IN",
+        "line1": "street 30th",
+        "postal_code": "110018",
+        "state": "Delhi"
       },
   "date_of_birth": "2003-04-04",
   "destination": "",
