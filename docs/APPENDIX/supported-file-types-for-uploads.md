@@ -2,7 +2,8 @@
 title: Supported File Types For Uploads
 excerpt: >-
   This guide outlines the file types supported by our stack. Please refer to the
-  sections below for details on each category.
+  sections below for details on each category. Maximum file size supported is 50
+  MB.
 deprecated: false
 hidden: false
 metadata:
