@@ -13415,9 +13415,80 @@
                         },
                         "representatives": {
                           "type": "array",
-                          "description": "List of authorized representatives for this entity.",
-                          "items": { "type": "object" },
-                          "example": []
+                          "description": "List of authorized representatives associated with the entity, such as directors, beneficial owners, or shareholders.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "first_name": {
+                                "type": "string",
+                                "description": "The first name of the representative.",
+                                "example": "Msk"
+                              },
+                              "last_name": {
+                                "type": "string",
+                                "description": "The last name of the representative.",
+                                "example": "Msk"
+                              },
+                              "date_of_birth": {
+                                "type": "string",
+                                "description": "Date of birth of the representative (ISO 8601).",
+                                "example": "2119-11-09"
+                              },
+                              "address": {
+                                "type": "object",
+                                "description": "Residential or business address of the representative.",
+                                "properties": {
+                                  "line1": { "type": "string", "example": "123 Main Street" },
+                                  "line2": { "type": "string", "example": "Apt 5B" },
+                                  "city": { "type": "string", "example": "New Delhi" },
+                                  "state": { "type": "string", "example": "Delhi" },
+                                  "postal_code": { "type": "string", "example": "110018" },
+                                  "country": { "type": "string", "example": "IN" }
+                                }
+                              },
+                              "nationality": {
+                                "type": "string",
+                                "description": "Two-letter ISO country code for nationality.",
+                                "example": "IN"
+                              },
+                              "phone": {
+                                "type": "object",
+                                "description": "Phone details of the representative.",
+                                "properties": {
+                                  "calling_code": { "type": "string", "example": "91" },
+                                  "number": { "type": "string", "example": "9876543210" }
+                                }
+                              },
+                              "ownership_percentage": {
+                                "type": "number",
+                                "description": "The ownership percentage held by this representative in the entity.",
+                                "example": 20
+                              },
+                              "roles": {
+                                "type": "array",
+                                "description": "Roles or designations of the representative within the entity.",
+                                "items": { "type": "string" },
+                                "example": ["beneficial_owner"]
+                              },
+                              "documents": {
+                                "type": "array",
+                                "description": "List of documents submitted for this representative.",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "description": { "type": "string", "example": "Passport front" },
+                                    "document_id": { "type": "string", "example": "doc_csbm1ta5grahc4olhpe0" },
+                                    "file_name": { "type": "string", "example": "kyb_doc91055_22October2024_PassportFront.png" },
+                                    "sub_type": { "type": "string", "example": "passport" },
+                                    "tag": { "type": "string", "example": "identityProofTypeFrontDoc" },
+                                    "type": { "type": "string", "example": "identity" },
+                                    "updated_at": { "type": "string", "example": "2024-10-22T08:23:21.528098Z" },
+                                    "url": { "type": "string", "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-onboarding-service-qa/kyb_doc91055_22October2024_PassportFront.png" }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         },
                         "source_of_wealth": {
                           "type": "string",
@@ -14092,9 +14163,80 @@
                         },
                         "representatives": {
                           "type": "array",
-                          "description": "List of authorized representatives for this entity.",
-                          "items": { "type": "object" },
-                          "example": []
+                          "description": "List of authorized representatives associated with the entity, such as directors, beneficial owners, or shareholders.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "first_name": {
+                                "type": "string",
+                                "description": "The first name of the representative.",
+                                "example": "Msk"
+                              },
+                              "last_name": {
+                                "type": "string",
+                                "description": "The last name of the representative.",
+                                "example": "Msk"
+                              },
+                              "date_of_birth": {
+                                "type": "string",
+                                "description": "Date of birth of the representative (ISO 8601).",
+                                "example": "2119-11-09"
+                              },
+                              "address": {
+                                "type": "object",
+                                "description": "Residential or business address of the representative.",
+                                "properties": {
+                                  "line1": { "type": "string", "example": "123 Main Street" },
+                                  "line2": { "type": "string", "example": "Apt 5B" },
+                                  "city": { "type": "string", "example": "New Delhi" },
+                                  "state": { "type": "string", "example": "Delhi" },
+                                  "postal_code": { "type": "string", "example": "110018" },
+                                  "country": { "type": "string", "example": "IN" }
+                                }
+                              },
+                              "nationality": {
+                                "type": "string",
+                                "description": "Two-letter ISO country code for nationality.",
+                                "example": "IN"
+                              },
+                              "phone": {
+                                "type": "object",
+                                "description": "Phone details of the representative.",
+                                "properties": {
+                                  "calling_code": { "type": "string", "example": "91" },
+                                  "number": { "type": "string", "example": "9876543210" }
+                                }
+                              },
+                              "ownership_percentage": {
+                                "type": "number",
+                                "description": "The ownership percentage held by this representative in the entity.",
+                                "example": 20
+                              },
+                              "roles": {
+                                "type": "array",
+                                "description": "Roles or designations of the representative within the entity.",
+                                "items": { "type": "string" },
+                                "example": ["beneficial_owner"]
+                              },
+                              "documents": {
+                                "type": "array",
+                                "description": "List of documents submitted for this representative.",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "description": { "type": "string", "example": "Passport front" },
+                                    "document_id": { "type": "string", "example": "doc_csbm1ta5grahc4olhpe0" },
+                                    "file_name": { "type": "string", "example": "kyb_doc91055_22October2024_PassportFront.png" },
+                                    "sub_type": { "type": "string", "example": "passport" },
+                                    "tag": { "type": "string", "example": "identityProofTypeFrontDoc" },
+                                    "type": { "type": "string", "example": "identity" },
+                                    "updated_at": { "type": "string", "example": "2024-10-22T08:23:21.528098Z" },
+                                    "url": { "type": "string", "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-onboarding-service-qa/kyb_doc91055_22October2024_PassportFront.png" }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         },
                         "source_of_wealth": {
                           "type": "string",
@@ -14370,9 +14512,80 @@
                         },
                         "representatives": {
                           "type": "array",
-                          "description": "List of authorized representatives for this entity.",
-                          "items": { "type": "object" },
-                          "example": []
+                          "description": "List of authorized representatives associated with the entity, such as directors, beneficial owners, or shareholders.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "first_name": {
+                                "type": "string",
+                                "description": "The first name of the representative.",
+                                "example": "Msk"
+                              },
+                              "last_name": {
+                                "type": "string",
+                                "description": "The last name of the representative.",
+                                "example": "Msk"
+                              },
+                              "date_of_birth": {
+                                "type": "string",
+                                "description": "Date of birth of the representative (ISO 8601).",
+                                "example": "2119-11-09"
+                              },
+                              "address": {
+                                "type": "object",
+                                "description": "Residential or business address of the representative.",
+                                "properties": {
+                                  "line1": { "type": "string", "example": "123 Main Street" },
+                                  "line2": { "type": "string", "example": "Apt 5B" },
+                                  "city": { "type": "string", "example": "New Delhi" },
+                                  "state": { "type": "string", "example": "Delhi" },
+                                  "postal_code": { "type": "string", "example": "110018" },
+                                  "country": { "type": "string", "example": "IN" }
+                                }
+                              },
+                              "nationality": {
+                                "type": "string",
+                                "description": "Two-letter ISO country code for nationality.",
+                                "example": "IN"
+                              },
+                              "phone": {
+                                "type": "object",
+                                "description": "Phone details of the representative.",
+                                "properties": {
+                                  "calling_code": { "type": "string", "example": "91" },
+                                  "number": { "type": "string", "example": "9876543210" }
+                                }
+                              },
+                              "ownership_percentage": {
+                                "type": "number",
+                                "description": "The ownership percentage held by this representative in the entity.",
+                                "example": 20
+                              },
+                              "roles": {
+                                "type": "array",
+                                "description": "Roles or designations of the representative within the entity.",
+                                "items": { "type": "string" },
+                                "example": ["beneficial_owner"]
+                              },
+                              "documents": {
+                                "type": "array",
+                                "description": "List of documents submitted for this representative.",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "description": { "type": "string", "example": "Passport front" },
+                                    "document_id": { "type": "string", "example": "doc_csbm1ta5grahc4olhpe0" },
+                                    "file_name": { "type": "string", "example": "kyb_doc91055_22October2024_PassportFront.png" },
+                                    "sub_type": { "type": "string", "example": "passport" },
+                                    "tag": { "type": "string", "example": "identityProofTypeFrontDoc" },
+                                    "type": { "type": "string", "example": "identity" },
+                                    "updated_at": { "type": "string", "example": "2024-10-22T08:23:21.528098Z" },
+                                    "url": { "type": "string", "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-onboarding-service-qa/kyb_doc91055_22October2024_PassportFront.png" }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         },
                         "source_of_wealth": {
                           "type": "string",
@@ -14684,9 +14897,80 @@
                         },
                         "representatives": {
                           "type": "array",
-                          "description": "List of authorized representatives for this entity.",
-                          "items": { "type": "object" },
-                          "example": []
+                          "description": "List of authorized representatives associated with the entity, such as directors, beneficial owners, or shareholders.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "first_name": {
+                                "type": "string",
+                                "description": "The first name of the representative.",
+                                "example": "Msk"
+                              },
+                              "last_name": {
+                                "type": "string",
+                                "description": "The last name of the representative.",
+                                "example": "Msk"
+                              },
+                              "date_of_birth": {
+                                "type": "string",
+                                "description": "Date of birth of the representative (ISO 8601).",
+                                "example": "2119-11-09"
+                              },
+                              "address": {
+                                "type": "object",
+                                "description": "Residential or business address of the representative.",
+                                "properties": {
+                                  "line1": { "type": "string", "example": "123 Main Street" },
+                                  "line2": { "type": "string", "example": "Apt 5B" },
+                                  "city": { "type": "string", "example": "New Delhi" },
+                                  "state": { "type": "string", "example": "Delhi" },
+                                  "postal_code": { "type": "string", "example": "110018" },
+                                  "country": { "type": "string", "example": "IN" }
+                                }
+                              },
+                              "nationality": {
+                                "type": "string",
+                                "description": "Two-letter ISO country code for nationality.",
+                                "example": "IN"
+                              },
+                              "phone": {
+                                "type": "object",
+                                "description": "Phone details of the representative.",
+                                "properties": {
+                                  "calling_code": { "type": "string", "example": "91" },
+                                  "number": { "type": "string", "example": "9876543210" }
+                                }
+                              },
+                              "ownership_percentage": {
+                                "type": "number",
+                                "description": "The ownership percentage held by this representative in the entity.",
+                                "example": 20
+                              },
+                              "roles": {
+                                "type": "array",
+                                "description": "Roles or designations of the representative within the entity.",
+                                "items": { "type": "string" },
+                                "example": ["beneficial_owner"]
+                              },
+                              "documents": {
+                                "type": "array",
+                                "description": "List of documents submitted for this representative.",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "description": { "type": "string", "example": "Passport front" },
+                                    "document_id": { "type": "string", "example": "doc_csbm1ta5grahc4olhpe0" },
+                                    "file_name": { "type": "string", "example": "kyb_doc91055_22October2024_PassportFront.png" },
+                                    "sub_type": { "type": "string", "example": "passport" },
+                                    "tag": { "type": "string", "example": "identityProofTypeFrontDoc" },
+                                    "type": { "type": "string", "example": "identity" },
+                                    "updated_at": { "type": "string", "example": "2024-10-22T08:23:21.528098Z" },
+                                    "url": { "type": "string", "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-onboarding-service-qa/kyb_doc91055_22October2024_PassportFront.png" }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         },
                         "source_of_wealth": {
                           "type": "string",
