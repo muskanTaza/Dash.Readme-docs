@@ -155,7 +155,7 @@ metadata:
 | website                     | string  | The entity’s website URL. Example: `https://example.com`.                                                                                                            |
 | documents                   | array   | List of submitted documents for verification. See **[Document Object](https://docs.tazapay.com/update/reference/document-object#/)**.                                |
 | pending_documents           | array   | List of pending documents required for completion.                                                                                                                   |
-| representatives             | array   | List of authorised representatives of the entity. Check the [representatives](#Representative) table below.                                                          |
+| representatives             | array   | List of authorised representatives of the entity. Check the [Representative](https://docs.tazapay.com/reference/entity-object#representative) table below.           |
 | metadata                    | object  | Custom key-value metadata attached to the entity.                                                                                                                    |
 | on_behalf_of                | string  | Account ID if the entity was created on behalf of another account.                                                                                                   |
 | onboarding_package_url      | string  | URL to download or view the onboarding package for the entity.                                                                                                       |
