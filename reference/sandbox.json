@@ -13236,7 +13236,232 @@
                 },
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "description": "Indicates the result of the API call.",
+                      "example": "success"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Optional message providing context or additional information about the response. Can be empty.",
+                      "example": ""
+                    },
+                    "data": {
+                      "type": "object",
+                      "description": "Details of the entity or KYB record returned in the response.",
+                      "properties": {
+                        "approval_status": {
+                          "type": "string",
+                          "description": "Current approval status of the entity record.",
+                          "example": "approved"
+                        },
+                        "approval_status_description": {
+                          "type": "string",
+                          "description": "Additional description or remarks regarding the approval status.",
+                          "example": "Approved for payouts only"
+                        },
+                        "approved_at": {
+                          "type": "string",
+                          "description": "Timestamp when the entity was approved (ISO 8601 format). Can be null if not yet approved.",
+                          "example": "2025-10-09T02:55:52.284767Z"
+                        },
+                        "created_at": {
+                          "type": "string",
+                          "description": "Timestamp when the entity record was created (ISO 8601 format).",
+                          "example": "2025-10-08T05:18:11.700575Z"
+                        },
+                        "description": {
+                          "type": "string",
+                          "description": "Description or additional information about the entity.",
+                          "example": ""
+                        },
+                        "documents": {
+                          "type": "array",
+                          "description": "List of documents associated with this entity, such as proof of address or identity.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "description": {
+                                "type": "string",
+                                "example": "Recent utility bill"
+                              },
+                              "document_id": {
+                                "type": "string",
+                                "example": "doc_d3iv85v58tg9dlpipu2g"
+                              },
+                              "file_name": {
+                                "type": "string",
+                                "example": "kyb_doc82697_2October2025_202590_894374483.pdf"
+                              },
+                              "sub_type": {
+                                "type": "string",
+                                "example": "other"
+                              },
+                              "tag": {
+                                "type": "string",
+                                "example": ""
+                              },
+                              "type": {
+                                "type": "string",
+                                "example": "address"
+                              },
+                              "updated_at": {
+                                "type": "string",
+                                "example": "2025-09-08T05:18:15.228195Z"
+                              },
+                              "url": {
+                                "type": "string",
+                                "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-test-doc"
+                              }
+                            }
+                          }
+                        },
+                        "email": {
+                          "type": "string",
+                          "description": "Email address associated with the entity. May be empty.",
+                          "example": ""
+                        },
+                        "id": {
+                          "type": "string",
+                          "description": "Unique identifier for the entity record.",
+                          "example": "ent_d3iv84vs8ud68hm8dba40"
+                        },
+                        "metadata": {
+                          "type": "object",
+                          "description": "Custom metadata attached to the entity record.",
+                          "example": {}
+                        },
+                        "name": {
+                          "type": "string",
+                          "description": "Name of the entity or individual.",
+                          "example": "James Brwon"
+                        },
+                        "object": {
+                          "type": "string",
+                          "example": "entity"
+                        },
+                        "on_behalf_of": {
+                          "type": "string",
+                          "description": "Identifier of another entity on whose behalf this record is created, if applicable.",
+                          "example": ""
+                        },
+                        "onboarding_package_url": {
+                          "type": "string",
+                          "description": "Link to the onboarding package for this entity. May be empty.",
+                          "example": ""
+                        },
+                        "operating_address": {
+                          "type": "string",
+                          "description": "Operating address details for the entity. May be null or empty if not provided.",
+                          "example": ""
+                        },
+                        "pending_documents": {
+                          "type": "array",
+                          "description": "List of documents pending submission or verification.",
+                          "items": { "type": "object" },
+                          "example": []
+                        },
+                        "phone": {
+                          "type": "object",
+                          "description": "Phone details of the entity.",
+                          "properties": {
+                            "calling_code": { "type": "string", "example": "" },
+                            "number": { "type": "string", "example": "" }
+                          }
+                        },
+                        "purpose_of_use": {
+                          "type": "array",
+                          "description": "List of purposes for which the entity account is used.",
+                          "items": { "type": "string" },
+                          "example": ["payout"]
+                        },
+                        "reference_id": {
+                          "type": "string",
+                          "description": "External reference identifier linked to this entity.",
+                          "example": ""
+                        },
+                        "registration_address": {
+                          "type": "object",
+                          "description": "Registered business or residential address of the entity.",
+                          "properties": {
+                            "city": { "type": "string", "example": "Bangkok" },
+                            "country": { "type": "string", "example": "TH" },
+                            "line1": { "type": "string", "example": "151/1 Richmond Boulevard, Lumpini" },
+                            "line2": { "type": "string", "example": "" },
+                            "postal_code": { "type": "string", "example": "10330" },
+                            "state": { "type": "string", "example": "Pathumwan" }
+                          }
+                        },
+                        "registration_date": {
+                          "type": "string",
+                          "description": "Date of business registration or incorporation. May be empty.",
+                          "example": ""
+                        },
+                        "registration_number": {
+                          "type": "string",
+                          "description": "Official registration number of the entity.",
+                          "example": ""
+                        },
+                        "rejected_at": {
+                          "type": "string",
+                          "description": "Timestamp when the entity was rejected, if applicable. May be null or empty.",
+                          "example": ""
+                        },
+                        "relationship": {
+                          "type": "string",
+                          "description": "Defines the relationship type of this entity (e.g., customer, partner).",
+                          "example": "customer"
+                        },
+                        "representatives": {
+                          "type": "array",
+                          "description": "List of authorized representatives for this entity.",
+                          "items": { "type": "object" },
+                          "example": []
+                        },
+                        "source_of_wealth": {
+                          "type": "string",
+                          "description": "Details of the entity’s source of wealth, if applicable. May be empty.",
+                          "example": ""
+                        },
+                        "statement_descriptor": {
+                          "type": "string",
+                          "description": "Custom statement descriptor for this entity’s transactions.",
+                          "example": ""
+                        },
+                        "submit": {
+                          "type": "boolean",
+                          "description": "Indicates whether the KYB submission has been completed.",
+                          "example": true
+                        },
+                        "submitted_at": {
+                          "type": "string",
+                          "description": "Timestamp when the entity submission was made.",
+                          "example": "2025-10-01T05:18:15.228732Z"
+                        },
+                        "tax_id": {
+                          "type": "string",
+                          "description": "Tax identification number of the entity.",
+                          "example": ""
+                        },
+                        "type": {
+                          "type": "string",
+                          "description": "Type of entity (e.g., individual, business).",
+                          "example": "individual"
+                        },
+                        "vertical": {
+                          "type": "string",
+                          "description": "Industry vertical of the entity, if specified.",
+                          "example": ""
+                        },
+                        "website": {
+                          "type": "string",
+                          "description": "Website URL of the entity.",
+                          "example": ""
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -13688,7 +13913,232 @@
                 },
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "description": "Indicates the result of the API call.",
+                      "example": "success"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Optional message providing context or additional information about the response. Can be empty.",
+                      "example": ""
+                    },
+                    "data": {
+                      "type": "object",
+                      "description": "Details of the entity or KYB record returned in the response.",
+                      "properties": {
+                        "approval_status": {
+                          "type": "string",
+                          "description": "Current approval status of the entity record.",
+                          "example": "approved"
+                        },
+                        "approval_status_description": {
+                          "type": "string",
+                          "description": "Additional description or remarks regarding the approval status.",
+                          "example": "Approved for payouts only"
+                        },
+                        "approved_at": {
+                          "type": "string",
+                          "description": "Timestamp when the entity was approved (ISO 8601 format). Can be null if not yet approved.",
+                          "example": "2025-10-09T02:55:52.284767Z"
+                        },
+                        "created_at": {
+                          "type": "string",
+                          "description": "Timestamp when the entity record was created (ISO 8601 format).",
+                          "example": "2025-10-08T05:18:11.700575Z"
+                        },
+                        "description": {
+                          "type": "string",
+                          "description": "Description or additional information about the entity.",
+                          "example": ""
+                        },
+                        "documents": {
+                          "type": "array",
+                          "description": "List of documents associated with this entity, such as proof of address or identity.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "description": {
+                                "type": "string",
+                                "example": "Recent utility bill"
+                              },
+                              "document_id": {
+                                "type": "string",
+                                "example": "doc_d3iv85v58tg9dlpipu2g"
+                              },
+                              "file_name": {
+                                "type": "string",
+                                "example": "kyb_doc82697_2October2025_202590_894374483.pdf"
+                              },
+                              "sub_type": {
+                                "type": "string",
+                                "example": "other"
+                              },
+                              "tag": {
+                                "type": "string",
+                                "example": ""
+                              },
+                              "type": {
+                                "type": "string",
+                                "example": "address"
+                              },
+                              "updated_at": {
+                                "type": "string",
+                                "example": "2025-09-08T05:18:15.228195Z"
+                              },
+                              "url": {
+                                "type": "string",
+                                "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-test-doc"
+                              }
+                            }
+                          }
+                        },
+                        "email": {
+                          "type": "string",
+                          "description": "Email address associated with the entity. May be empty.",
+                          "example": ""
+                        },
+                        "id": {
+                          "type": "string",
+                          "description": "Unique identifier for the entity record.",
+                          "example": "ent_d3iv84vs8ud68hm8dba40"
+                        },
+                        "metadata": {
+                          "type": "object",
+                          "description": "Custom metadata attached to the entity record.",
+                          "example": {}
+                        },
+                        "name": {
+                          "type": "string",
+                          "description": "Name of the entity or individual.",
+                          "example": "James Brwon"
+                        },
+                        "object": {
+                          "type": "string",
+                          "example": "entity"
+                        },
+                        "on_behalf_of": {
+                          "type": "string",
+                          "description": "Identifier of another entity on whose behalf this record is created, if applicable.",
+                          "example": ""
+                        },
+                        "onboarding_package_url": {
+                          "type": "string",
+                          "description": "Link to the onboarding package for this entity. May be empty.",
+                          "example": ""
+                        },
+                        "operating_address": {
+                          "type": "string",
+                          "description": "Operating address details for the entity. May be null or empty if not provided.",
+                          "example": ""
+                        },
+                        "pending_documents": {
+                          "type": "array",
+                          "description": "List of documents pending submission or verification.",
+                          "items": { "type": "object" },
+                          "example": []
+                        },
+                        "phone": {
+                          "type": "object",
+                          "description": "Phone details of the entity.",
+                          "properties": {
+                            "calling_code": { "type": "string", "example": "" },
+                            "number": { "type": "string", "example": "" }
+                          }
+                        },
+                        "purpose_of_use": {
+                          "type": "array",
+                          "description": "List of purposes for which the entity account is used.",
+                          "items": { "type": "string" },
+                          "example": ["payout"]
+                        },
+                        "reference_id": {
+                          "type": "string",
+                          "description": "External reference identifier linked to this entity.",
+                          "example": ""
+                        },
+                        "registration_address": {
+                          "type": "object",
+                          "description": "Registered business or residential address of the entity.",
+                          "properties": {
+                            "city": { "type": "string", "example": "Bangkok" },
+                            "country": { "type": "string", "example": "TH" },
+                            "line1": { "type": "string", "example": "151/1 Richmond Boulevard, Lumpini" },
+                            "line2": { "type": "string", "example": "" },
+                            "postal_code": { "type": "string", "example": "10330" },
+                            "state": { "type": "string", "example": "Pathumwan" }
+                          }
+                        },
+                        "registration_date": {
+                          "type": "string",
+                          "description": "Date of business registration or incorporation. May be empty.",
+                          "example": ""
+                        },
+                        "registration_number": {
+                          "type": "string",
+                          "description": "Official registration number of the entity.",
+                          "example": ""
+                        },
+                        "rejected_at": {
+                          "type": "string",
+                          "description": "Timestamp when the entity was rejected, if applicable. May be null or empty.",
+                          "example": ""
+                        },
+                        "relationship": {
+                          "type": "string",
+                          "description": "Defines the relationship type of this entity (e.g., customer, partner).",
+                          "example": "customer"
+                        },
+                        "representatives": {
+                          "type": "array",
+                          "description": "List of authorized representatives for this entity.",
+                          "items": { "type": "object" },
+                          "example": []
+                        },
+                        "source_of_wealth": {
+                          "type": "string",
+                          "description": "Details of the entity’s source of wealth, if applicable. May be empty.",
+                          "example": ""
+                        },
+                        "statement_descriptor": {
+                          "type": "string",
+                          "description": "Custom statement descriptor for this entity’s transactions.",
+                          "example": ""
+                        },
+                        "submit": {
+                          "type": "boolean",
+                          "description": "Indicates whether the KYB submission has been completed.",
+                          "example": true
+                        },
+                        "submitted_at": {
+                          "type": "string",
+                          "description": "Timestamp when the entity submission was made.",
+                          "example": "2025-10-01T05:18:15.228732Z"
+                        },
+                        "tax_id": {
+                          "type": "string",
+                          "description": "Tax identification number of the entity.",
+                          "example": ""
+                        },
+                        "type": {
+                          "type": "string",
+                          "description": "Type of entity (e.g., individual, business).",
+                          "example": "individual"
+                        },
+                        "vertical": {
+                          "type": "string",
+                          "description": "Industry vertical of the entity, if specified.",
+                          "example": ""
+                        },
+                        "website": {
+                          "type": "string",
+                          "description": "Website URL of the entity.",
+                          "example": ""
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -13741,7 +14191,232 @@
                 },
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "description": "Indicates the result of the API call.",
+                      "example": "success"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Optional message providing context or additional information about the response. Can be empty.",
+                      "example": ""
+                    },
+                    "data": {
+                      "type": "object",
+                      "description": "Details of the entity or KYB record returned in the response.",
+                      "properties": {
+                        "approval_status": {
+                          "type": "string",
+                          "description": "Current approval status of the entity record.",
+                          "example": "approved"
+                        },
+                        "approval_status_description": {
+                          "type": "string",
+                          "description": "Additional description or remarks regarding the approval status.",
+                          "example": "Approved for payouts only"
+                        },
+                        "approved_at": {
+                          "type": "string",
+                          "description": "Timestamp when the entity was approved (ISO 8601 format). Can be null if not yet approved.",
+                          "example": "2025-10-09T02:55:52.284767Z"
+                        },
+                        "created_at": {
+                          "type": "string",
+                          "description": "Timestamp when the entity record was created (ISO 8601 format).",
+                          "example": "2025-10-08T05:18:11.700575Z"
+                        },
+                        "description": {
+                          "type": "string",
+                          "description": "Description or additional information about the entity.",
+                          "example": ""
+                        },
+                        "documents": {
+                          "type": "array",
+                          "description": "List of documents associated with this entity, such as proof of address or identity.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "description": {
+                                "type": "string",
+                                "example": "Recent utility bill"
+                              },
+                              "document_id": {
+                                "type": "string",
+                                "example": "doc_d3iv85v58tg9dlpipu2g"
+                              },
+                              "file_name": {
+                                "type": "string",
+                                "example": "kyb_doc82697_2October2025_202590_894374483.pdf"
+                              },
+                              "sub_type": {
+                                "type": "string",
+                                "example": "other"
+                              },
+                              "tag": {
+                                "type": "string",
+                                "example": ""
+                              },
+                              "type": {
+                                "type": "string",
+                                "example": "address"
+                              },
+                              "updated_at": {
+                                "type": "string",
+                                "example": "2025-09-08T05:18:15.228195Z"
+                              },
+                              "url": {
+                                "type": "string",
+                                "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-test-doc"
+                              }
+                            }
+                          }
+                        },
+                        "email": {
+                          "type": "string",
+                          "description": "Email address associated with the entity. May be empty.",
+                          "example": ""
+                        },
+                        "id": {
+                          "type": "string",
+                          "description": "Unique identifier for the entity record.",
+                          "example": "ent_d3iv84vs8ud68hm8dba40"
+                        },
+                        "metadata": {
+                          "type": "object",
+                          "description": "Custom metadata attached to the entity record.",
+                          "example": {}
+                        },
+                        "name": {
+                          "type": "string",
+                          "description": "Name of the entity or individual.",
+                          "example": "James Brwon"
+                        },
+                        "object": {
+                          "type": "string",
+                          "example": "entity"
+                        },
+                        "on_behalf_of": {
+                          "type": "string",
+                          "description": "Identifier of another entity on whose behalf this record is created, if applicable.",
+                          "example": ""
+                        },
+                        "onboarding_package_url": {
+                          "type": "string",
+                          "description": "Link to the onboarding package for this entity. May be empty.",
+                          "example": ""
+                        },
+                        "operating_address": {
+                          "type": "string",
+                          "description": "Operating address details for the entity. May be null or empty if not provided.",
+                          "example": ""
+                        },
+                        "pending_documents": {
+                          "type": "array",
+                          "description": "List of documents pending submission or verification.",
+                          "items": { "type": "object" },
+                          "example": []
+                        },
+                        "phone": {
+                          "type": "object",
+                          "description": "Phone details of the entity.",
+                          "properties": {
+                            "calling_code": { "type": "string", "example": "" },
+                            "number": { "type": "string", "example": "" }
+                          }
+                        },
+                        "purpose_of_use": {
+                          "type": "array",
+                          "description": "List of purposes for which the entity account is used.",
+                          "items": { "type": "string" },
+                          "example": ["payout"]
+                        },
+                        "reference_id": {
+                          "type": "string",
+                          "description": "External reference identifier linked to this entity.",
+                          "example": ""
+                        },
+                        "registration_address": {
+                          "type": "object",
+                          "description": "Registered business or residential address of the entity.",
+                          "properties": {
+                            "city": { "type": "string", "example": "Bangkok" },
+                            "country": { "type": "string", "example": "TH" },
+                            "line1": { "type": "string", "example": "151/1 Richmond Boulevard, Lumpini" },
+                            "line2": { "type": "string", "example": "" },
+                            "postal_code": { "type": "string", "example": "10330" },
+                            "state": { "type": "string", "example": "Pathumwan" }
+                          }
+                        },
+                        "registration_date": {
+                          "type": "string",
+                          "description": "Date of business registration or incorporation. May be empty.",
+                          "example": ""
+                        },
+                        "registration_number": {
+                          "type": "string",
+                          "description": "Official registration number of the entity.",
+                          "example": ""
+                        },
+                        "rejected_at": {
+                          "type": "string",
+                          "description": "Timestamp when the entity was rejected, if applicable. May be null or empty.",
+                          "example": ""
+                        },
+                        "relationship": {
+                          "type": "string",
+                          "description": "Defines the relationship type of this entity (e.g., customer, partner).",
+                          "example": "customer"
+                        },
+                        "representatives": {
+                          "type": "array",
+                          "description": "List of authorized representatives for this entity.",
+                          "items": { "type": "object" },
+                          "example": []
+                        },
+                        "source_of_wealth": {
+                          "type": "string",
+                          "description": "Details of the entity’s source of wealth, if applicable. May be empty.",
+                          "example": ""
+                        },
+                        "statement_descriptor": {
+                          "type": "string",
+                          "description": "Custom statement descriptor for this entity’s transactions.",
+                          "example": ""
+                        },
+                        "submit": {
+                          "type": "boolean",
+                          "description": "Indicates whether the KYB submission has been completed.",
+                          "example": true
+                        },
+                        "submitted_at": {
+                          "type": "string",
+                          "description": "Timestamp when the entity submission was made.",
+                          "example": "2025-10-01T05:18:15.228732Z"
+                        },
+                        "tax_id": {
+                          "type": "string",
+                          "description": "Tax identification number of the entity.",
+                          "example": ""
+                        },
+                        "type": {
+                          "type": "string",
+                          "description": "Type of entity (e.g., individual, business).",
+                          "example": "individual"
+                        },
+                        "vertical": {
+                          "type": "string",
+                          "description": "Industry vertical of the entity, if specified.",
+                          "example": ""
+                        },
+                        "website": {
+                          "type": "string",
+                          "description": "Website URL of the entity.",
+                          "example": ""
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -13830,7 +14505,232 @@
                 },
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "description": "Indicates the result of the API call.",
+                      "example": "success"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Optional message providing context or additional information about the response. Can be empty.",
+                      "example": ""
+                    },
+                    "data": {
+                      "type": "object",
+                      "description": "Details of the entity or KYB record returned in the response.",
+                      "properties": {
+                        "approval_status": {
+                          "type": "string",
+                          "description": "Current approval status of the entity record.",
+                          "example": "approved"
+                        },
+                        "approval_status_description": {
+                          "type": "string",
+                          "description": "Additional description or remarks regarding the approval status.",
+                          "example": "Approved for payouts only"
+                        },
+                        "approved_at": {
+                          "type": "string",
+                          "description": "Timestamp when the entity was approved (ISO 8601 format). Can be null if not yet approved.",
+                          "example": "2025-10-09T02:55:52.284767Z"
+                        },
+                        "created_at": {
+                          "type": "string",
+                          "description": "Timestamp when the entity record was created (ISO 8601 format).",
+                          "example": "2025-10-08T05:18:11.700575Z"
+                        },
+                        "description": {
+                          "type": "string",
+                          "description": "Description or additional information about the entity.",
+                          "example": ""
+                        },
+                        "documents": {
+                          "type": "array",
+                          "description": "List of documents associated with this entity, such as proof of address or identity.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "description": {
+                                "type": "string",
+                                "example": "Recent utility bill"
+                              },
+                              "document_id": {
+                                "type": "string",
+                                "example": "doc_d3iv85v58tg9dlpipu2g"
+                              },
+                              "file_name": {
+                                "type": "string",
+                                "example": "kyb_doc82697_2October2025_202590_894374483.pdf"
+                              },
+                              "sub_type": {
+                                "type": "string",
+                                "example": "other"
+                              },
+                              "tag": {
+                                "type": "string",
+                                "example": ""
+                              },
+                              "type": {
+                                "type": "string",
+                                "example": "address"
+                              },
+                              "updated_at": {
+                                "type": "string",
+                                "example": "2025-09-08T05:18:15.228195Z"
+                              },
+                              "url": {
+                                "type": "string",
+                                "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-test-doc"
+                              }
+                            }
+                          }
+                        },
+                        "email": {
+                          "type": "string",
+                          "description": "Email address associated with the entity. May be empty.",
+                          "example": ""
+                        },
+                        "id": {
+                          "type": "string",
+                          "description": "Unique identifier for the entity record.",
+                          "example": "ent_d3iv84vs8ud68hm8dba40"
+                        },
+                        "metadata": {
+                          "type": "object",
+                          "description": "Custom metadata attached to the entity record.",
+                          "example": {}
+                        },
+                        "name": {
+                          "type": "string",
+                          "description": "Name of the entity or individual.",
+                          "example": "James Brwon"
+                        },
+                        "object": {
+                          "type": "string",
+                          "example": "entity"
+                        },
+                        "on_behalf_of": {
+                          "type": "string",
+                          "description": "Identifier of another entity on whose behalf this record is created, if applicable.",
+                          "example": ""
+                        },
+                        "onboarding_package_url": {
+                          "type": "string",
+                          "description": "Link to the onboarding package for this entity. May be empty.",
+                          "example": ""
+                        },
+                        "operating_address": {
+                          "type": "string",
+                          "description": "Operating address details for the entity. May be null or empty if not provided.",
+                          "example": ""
+                        },
+                        "pending_documents": {
+                          "type": "array",
+                          "description": "List of documents pending submission or verification.",
+                          "items": { "type": "object" },
+                          "example": []
+                        },
+                        "phone": {
+                          "type": "object",
+                          "description": "Phone details of the entity.",
+                          "properties": {
+                            "calling_code": { "type": "string", "example": "" },
+                            "number": { "type": "string", "example": "" }
+                          }
+                        },
+                        "purpose_of_use": {
+                          "type": "array",
+                          "description": "List of purposes for which the entity account is used.",
+                          "items": { "type": "string" },
+                          "example": ["payout"]
+                        },
+                        "reference_id": {
+                          "type": "string",
+                          "description": "External reference identifier linked to this entity.",
+                          "example": ""
+                        },
+                        "registration_address": {
+                          "type": "object",
+                          "description": "Registered business or residential address of the entity.",
+                          "properties": {
+                            "city": { "type": "string", "example": "Bangkok" },
+                            "country": { "type": "string", "example": "TH" },
+                            "line1": { "type": "string", "example": "151/1 Richmond Boulevard, Lumpini" },
+                            "line2": { "type": "string", "example": "" },
+                            "postal_code": { "type": "string", "example": "10330" },
+                            "state": { "type": "string", "example": "Pathumwan" }
+                          }
+                        },
+                        "registration_date": {
+                          "type": "string",
+                          "description": "Date of business registration or incorporation. May be empty.",
+                          "example": ""
+                        },
+                        "registration_number": {
+                          "type": "string",
+                          "description": "Official registration number of the entity.",
+                          "example": ""
+                        },
+                        "rejected_at": {
+                          "type": "string",
+                          "description": "Timestamp when the entity was rejected, if applicable. May be null or empty.",
+                          "example": ""
+                        },
+                        "relationship": {
+                          "type": "string",
+                          "description": "Defines the relationship type of this entity (e.g., customer, partner).",
+                          "example": "customer"
+                        },
+                        "representatives": {
+                          "type": "array",
+                          "description": "List of authorized representatives for this entity.",
+                          "items": { "type": "object" },
+                          "example": []
+                        },
+                        "source_of_wealth": {
+                          "type": "string",
+                          "description": "Details of the entity’s source of wealth, if applicable. May be empty.",
+                          "example": ""
+                        },
+                        "statement_descriptor": {
+                          "type": "string",
+                          "description": "Custom statement descriptor for this entity’s transactions.",
+                          "example": ""
+                        },
+                        "submit": {
+                          "type": "boolean",
+                          "description": "Indicates whether the KYB submission has been completed.",
+                          "example": true
+                        },
+                        "submitted_at": {
+                          "type": "string",
+                          "description": "Timestamp when the entity submission was made.",
+                          "example": "2025-10-01T05:18:15.228732Z"
+                        },
+                        "tax_id": {
+                          "type": "string",
+                          "description": "Tax identification number of the entity.",
+                          "example": ""
+                        },
+                        "type": {
+                          "type": "string",
+                          "description": "Type of entity (e.g., individual, business).",
+                          "example": "individual"
+                        },
+                        "vertical": {
+                          "type": "string",
+                          "description": "Industry vertical of the entity, if specified.",
+                          "example": ""
+                        },
+                        "website": {
+                          "type": "string",
+                          "description": "Website URL of the entity.",
+                          "example": ""
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
