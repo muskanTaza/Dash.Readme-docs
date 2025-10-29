@@ -54,15 +54,15 @@ next:
 }
 ```
 
-| **Field**           | **type**  | **Description**                                                                                                          |
-| ------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------ |
-| id                  | string    | Unique ID for the beneficiary. Begins with 'bnf\_'                                                                       |
-| object              | string    | This is 'beneficiary' here                                                                                               |
-| created_at          | timestamp | Timestamp at which the beneficiary object is created. (ISO 8601 format - YYYY-MM-DDTHH:MM:SS±hh:mm)                      |
-| beneficiary_details | json      | Details of the beneficiary. Refer here for beneficiary_details sub-fields                                                |
-| purpose             | enum      | The reason for payout. Refer &lt;https://docs.tazapay.com/docs/reasons-for-payout&gt; for the possible values.           |
-| firc_required       | boolean   | Whether FIRC is required for the payout made for this beneficiary. Only applicable when the destination currency is INR. |
-| metadata            | json      | Set of key-value pairs to attach to the payout                                                                           |
+| **Field**           | **type**  | **Description**                                                                                                                                               |
+| ------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id                  | string    | Unique ID for the beneficiary. Begins with 'bnf_'                                                                                                             |
+| object              | string    | This is 'beneficiary' here                                                                                                                                    |
+| created_at          | timestamp | Timestamp at which the beneficiary object is created. (ISO 8601 format - YYYY-MM-DDTHH:MM:SS±hh:mm)                                                           |
+| beneficiary_details | json      | Details of the beneficiary. Refer here for beneficiary_details sub-fields                                                                                     |
+| purpose             | enum      | The reason for payout. Refer \<[https://docs.tazapay.com/docs/reasons-for-payout](https://docs.tazapay.com/docs/reasons-for-payout)> for the possible values. |
+| firc_required       | boolean   | Whether FIRC is required for the payout made for this beneficiary. Only applicable when the destination currency is INR.                                      |
+| metadata            | json      | Set of key-value pairs to attach to the payout                                                                                                                |
 
 ### **beneficiary_details**
 
@@ -97,11 +97,12 @@ next:
 
 ### **wallet**
 
-| **Field**       | **type** | **Description**                                  |
-| --------------- | -------- | ------------------------------------------------ |
-| deposit_address | string   | Deposit Address                                  |
-| type            | enum     | Name of the wallet (Type of the deposit address) |
-| currency        | string   | currency                                         |
+| **Field**       | **type** | **Description**                                                                     |
+| --------------- | -------- | ----------------------------------------------------------------------------------- |
+| deposit_address | string   | Deposit Address                                                                     |
+| type            | enum     | Blockchain of the wallet. Possible values include - Ethereum, Tron, Polygon, Solana |
+| currency        | string   | currency                                                                            |
+| hosted          | string   |                                                                                     |
 
 ### **local_payment_method**
 
