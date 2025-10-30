@@ -11222,6 +11222,10 @@
                           "currency": {
                             "type": "string",
                             "description": "Currency of the wallet"
+                          },
+                          "hosted": {
+                            "type": "string",
+                            "description": "ndicates whether the wallet is custodial (hosted) or non-custodial (unhosted). Possible values: yes – The wallet is hosted by a Virtual Asset Service Provider (VASP) or exchange. no – The wallet is non-custodial and controlled directly by the user (e.g., MetaMask, Ledger)  Mandatory if party_classification is 'self' and destination_details.type is 'wallet'."
                           }
                         }
                       },
@@ -13359,22 +13363,34 @@
                         "pending_documents": {
                           "type": "array",
                           "description": "List of documents pending submission or verification.",
-                          "items": { "type": "object" },
+                          "items": {
+                            "type": "object"
+                          },
                           "example": []
                         },
                         "phone": {
                           "type": "object",
                           "description": "Phone details of the entity.",
                           "properties": {
-                            "calling_code": { "type": "string", "example": "" },
-                            "number": { "type": "string", "example": "" }
+                            "calling_code": {
+                              "type": "string",
+                              "example": ""
+                            },
+                            "number": {
+                              "type": "string",
+                              "example": ""
+                            }
                           }
                         },
                         "purpose_of_use": {
                           "type": "array",
                           "description": "List of purposes for which the entity account is used.",
-                          "items": { "type": "string" },
-                          "example": ["payout"]
+                          "items": {
+                            "type": "string"
+                          },
+                          "example": [
+                            "payout"
+                          ]
                         },
                         "reference_id": {
                           "type": "string",
@@ -13385,12 +13401,30 @@
                           "type": "object",
                           "description": "Registered business or residential address of the entity.",
                           "properties": {
-                            "city": { "type": "string", "example": "Bangkok" },
-                            "country": { "type": "string", "example": "TH" },
-                            "line1": { "type": "string", "example": "151/1 Richmond Boulevard, Lumpini" },
-                            "line2": { "type": "string", "example": "" },
-                            "postal_code": { "type": "string", "example": "10330" },
-                            "state": { "type": "string", "example": "Pathumwan" }
+                            "city": {
+                              "type": "string",
+                              "example": "Bangkok"
+                            },
+                            "country": {
+                              "type": "string",
+                              "example": "TH"
+                            },
+                            "line1": {
+                              "type": "string",
+                              "example": "151/1 Richmond Boulevard, Lumpini"
+                            },
+                            "line2": {
+                              "type": "string",
+                              "example": ""
+                            },
+                            "postal_code": {
+                              "type": "string",
+                              "example": "10330"
+                            },
+                            "state": {
+                              "type": "string",
+                              "example": "Pathumwan"
+                            }
                           }
                         },
                         "registration_date": {
@@ -13438,12 +13472,30 @@
                                 "type": "object",
                                 "description": "Residential or business address of the representative.",
                                 "properties": {
-                                  "line1": { "type": "string", "example": "123 Main Street" },
-                                  "line2": { "type": "string", "example": "Apt 5B" },
-                                  "city": { "type": "string", "example": "New Delhi" },
-                                  "state": { "type": "string", "example": "Delhi" },
-                                  "postal_code": { "type": "string", "example": "110018" },
-                                  "country": { "type": "string", "example": "IN" }
+                                  "line1": {
+                                    "type": "string",
+                                    "example": "123 Main Street"
+                                  },
+                                  "line2": {
+                                    "type": "string",
+                                    "example": "Apt 5B"
+                                  },
+                                  "city": {
+                                    "type": "string",
+                                    "example": "New Delhi"
+                                  },
+                                  "state": {
+                                    "type": "string",
+                                    "example": "Delhi"
+                                  },
+                                  "postal_code": {
+                                    "type": "string",
+                                    "example": "110018"
+                                  },
+                                  "country": {
+                                    "type": "string",
+                                    "example": "IN"
+                                  }
                                 }
                               },
                               "nationality": {
@@ -13455,8 +13507,14 @@
                                 "type": "object",
                                 "description": "Phone details of the representative.",
                                 "properties": {
-                                  "calling_code": { "type": "string", "example": "91" },
-                                  "number": { "type": "string", "example": "9876543210" }
+                                  "calling_code": {
+                                    "type": "string",
+                                    "example": "91"
+                                  },
+                                  "number": {
+                                    "type": "string",
+                                    "example": "9876543210"
+                                  }
                                 }
                               },
                               "ownership_percentage": {
@@ -13467,8 +13525,12 @@
                               "roles": {
                                 "type": "array",
                                 "description": "Roles or designations of the representative within the entity.",
-                                "items": { "type": "string" },
-                                "example": ["beneficial_owner"]
+                                "items": {
+                                  "type": "string"
+                                },
+                                "example": [
+                                  "beneficial_owner"
+                                ]
                               },
                               "documents": {
                                 "type": "array",
@@ -13476,14 +13538,38 @@
                                 "items": {
                                   "type": "object",
                                   "properties": {
-                                    "description": { "type": "string", "example": "Passport front" },
-                                    "document_id": { "type": "string", "example": "doc_csbm1ta5grahc4olhpe0" },
-                                    "file_name": { "type": "string", "example": "kyb_doc91055_22October2024_PassportFront.png" },
-                                    "sub_type": { "type": "string", "example": "passport" },
-                                    "tag": { "type": "string", "example": "identityProofTypeFrontDoc" },
-                                    "type": { "type": "string", "example": "identity" },
-                                    "updated_at": { "type": "string", "example": "2024-10-22T08:23:21.528098Z" },
-                                    "url": { "type": "string", "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-onboarding-service-qa/kyb_doc91055_22October2024_PassportFront.png" }
+                                    "description": {
+                                      "type": "string",
+                                      "example": "Passport front"
+                                    },
+                                    "document_id": {
+                                      "type": "string",
+                                      "example": "doc_csbm1ta5grahc4olhpe0"
+                                    },
+                                    "file_name": {
+                                      "type": "string",
+                                      "example": "kyb_doc91055_22October2024_PassportFront.png"
+                                    },
+                                    "sub_type": {
+                                      "type": "string",
+                                      "example": "passport"
+                                    },
+                                    "tag": {
+                                      "type": "string",
+                                      "example": "identityProofTypeFrontDoc"
+                                    },
+                                    "type": {
+                                      "type": "string",
+                                      "example": "identity"
+                                    },
+                                    "updated_at": {
+                                      "type": "string",
+                                      "example": "2024-10-22T08:23:21.528098Z"
+                                    },
+                                    "url": {
+                                      "type": "string",
+                                      "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-onboarding-service-qa/kyb_doc91055_22October2024_PassportFront.png"
+                                    }
                                   }
                                 }
                               }
@@ -14107,22 +14193,34 @@
                         "pending_documents": {
                           "type": "array",
                           "description": "List of documents pending submission or verification.",
-                          "items": { "type": "object" },
+                          "items": {
+                            "type": "object"
+                          },
                           "example": []
                         },
                         "phone": {
                           "type": "object",
                           "description": "Phone details of the entity.",
                           "properties": {
-                            "calling_code": { "type": "string", "example": "" },
-                            "number": { "type": "string", "example": "" }
+                            "calling_code": {
+                              "type": "string",
+                              "example": ""
+                            },
+                            "number": {
+                              "type": "string",
+                              "example": ""
+                            }
                           }
                         },
                         "purpose_of_use": {
                           "type": "array",
                           "description": "List of purposes for which the entity account is used.",
-                          "items": { "type": "string" },
-                          "example": ["payout"]
+                          "items": {
+                            "type": "string"
+                          },
+                          "example": [
+                            "payout"
+                          ]
                         },
                         "reference_id": {
                           "type": "string",
@@ -14133,12 +14231,30 @@
                           "type": "object",
                           "description": "Registered business or residential address of the entity.",
                           "properties": {
-                            "city": { "type": "string", "example": "Bangkok" },
-                            "country": { "type": "string", "example": "TH" },
-                            "line1": { "type": "string", "example": "151/1 Richmond Boulevard, Lumpini" },
-                            "line2": { "type": "string", "example": "" },
-                            "postal_code": { "type": "string", "example": "10330" },
-                            "state": { "type": "string", "example": "Pathumwan" }
+                            "city": {
+                              "type": "string",
+                              "example": "Bangkok"
+                            },
+                            "country": {
+                              "type": "string",
+                              "example": "TH"
+                            },
+                            "line1": {
+                              "type": "string",
+                              "example": "151/1 Richmond Boulevard, Lumpini"
+                            },
+                            "line2": {
+                              "type": "string",
+                              "example": ""
+                            },
+                            "postal_code": {
+                              "type": "string",
+                              "example": "10330"
+                            },
+                            "state": {
+                              "type": "string",
+                              "example": "Pathumwan"
+                            }
                           }
                         },
                         "registration_date": {
@@ -14186,12 +14302,30 @@
                                 "type": "object",
                                 "description": "Residential or business address of the representative.",
                                 "properties": {
-                                  "line1": { "type": "string", "example": "123 Main Street" },
-                                  "line2": { "type": "string", "example": "Apt 5B" },
-                                  "city": { "type": "string", "example": "New Delhi" },
-                                  "state": { "type": "string", "example": "Delhi" },
-                                  "postal_code": { "type": "string", "example": "110018" },
-                                  "country": { "type": "string", "example": "IN" }
+                                  "line1": {
+                                    "type": "string",
+                                    "example": "123 Main Street"
+                                  },
+                                  "line2": {
+                                    "type": "string",
+                                    "example": "Apt 5B"
+                                  },
+                                  "city": {
+                                    "type": "string",
+                                    "example": "New Delhi"
+                                  },
+                                  "state": {
+                                    "type": "string",
+                                    "example": "Delhi"
+                                  },
+                                  "postal_code": {
+                                    "type": "string",
+                                    "example": "110018"
+                                  },
+                                  "country": {
+                                    "type": "string",
+                                    "example": "IN"
+                                  }
                                 }
                               },
                               "nationality": {
@@ -14203,8 +14337,14 @@
                                 "type": "object",
                                 "description": "Phone details of the representative.",
                                 "properties": {
-                                  "calling_code": { "type": "string", "example": "91" },
-                                  "number": { "type": "string", "example": "9876543210" }
+                                  "calling_code": {
+                                    "type": "string",
+                                    "example": "91"
+                                  },
+                                  "number": {
+                                    "type": "string",
+                                    "example": "9876543210"
+                                  }
                                 }
                               },
                               "ownership_percentage": {
@@ -14215,8 +14355,12 @@
                               "roles": {
                                 "type": "array",
                                 "description": "Roles or designations of the representative within the entity.",
-                                "items": { "type": "string" },
-                                "example": ["beneficial_owner"]
+                                "items": {
+                                  "type": "string"
+                                },
+                                "example": [
+                                  "beneficial_owner"
+                                ]
                               },
                               "documents": {
                                 "type": "array",
@@ -14224,14 +14368,38 @@
                                 "items": {
                                   "type": "object",
                                   "properties": {
-                                    "description": { "type": "string", "example": "Passport front" },
-                                    "document_id": { "type": "string", "example": "doc_csbm1ta5grahc4olhpe0" },
-                                    "file_name": { "type": "string", "example": "kyb_doc91055_22October2024_PassportFront.png" },
-                                    "sub_type": { "type": "string", "example": "passport" },
-                                    "tag": { "type": "string", "example": "identityProofTypeFrontDoc" },
-                                    "type": { "type": "string", "example": "identity" },
-                                    "updated_at": { "type": "string", "example": "2024-10-22T08:23:21.528098Z" },
-                                    "url": { "type": "string", "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-onboarding-service-qa/kyb_doc91055_22October2024_PassportFront.png" }
+                                    "description": {
+                                      "type": "string",
+                                      "example": "Passport front"
+                                    },
+                                    "document_id": {
+                                      "type": "string",
+                                      "example": "doc_csbm1ta5grahc4olhpe0"
+                                    },
+                                    "file_name": {
+                                      "type": "string",
+                                      "example": "kyb_doc91055_22October2024_PassportFront.png"
+                                    },
+                                    "sub_type": {
+                                      "type": "string",
+                                      "example": "passport"
+                                    },
+                                    "tag": {
+                                      "type": "string",
+                                      "example": "identityProofTypeFrontDoc"
+                                    },
+                                    "type": {
+                                      "type": "string",
+                                      "example": "identity"
+                                    },
+                                    "updated_at": {
+                                      "type": "string",
+                                      "example": "2024-10-22T08:23:21.528098Z"
+                                    },
+                                    "url": {
+                                      "type": "string",
+                                      "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-onboarding-service-qa/kyb_doc91055_22October2024_PassportFront.png"
+                                    }
                                   }
                                 }
                               }
@@ -14456,22 +14624,34 @@
                         "pending_documents": {
                           "type": "array",
                           "description": "List of documents pending submission or verification.",
-                          "items": { "type": "object" },
+                          "items": {
+                            "type": "object"
+                          },
                           "example": []
                         },
                         "phone": {
                           "type": "object",
                           "description": "Phone details of the entity.",
                           "properties": {
-                            "calling_code": { "type": "string", "example": "" },
-                            "number": { "type": "string", "example": "" }
+                            "calling_code": {
+                              "type": "string",
+                              "example": ""
+                            },
+                            "number": {
+                              "type": "string",
+                              "example": ""
+                            }
                           }
                         },
                         "purpose_of_use": {
                           "type": "array",
                           "description": "List of purposes for which the entity account is used.",
-                          "items": { "type": "string" },
-                          "example": ["payout"]
+                          "items": {
+                            "type": "string"
+                          },
+                          "example": [
+                            "payout"
+                          ]
                         },
                         "reference_id": {
                           "type": "string",
@@ -14482,12 +14662,30 @@
                           "type": "object",
                           "description": "Registered business or residential address of the entity.",
                           "properties": {
-                            "city": { "type": "string", "example": "Bangkok" },
-                            "country": { "type": "string", "example": "TH" },
-                            "line1": { "type": "string", "example": "151/1 Richmond Boulevard, Lumpini" },
-                            "line2": { "type": "string", "example": "" },
-                            "postal_code": { "type": "string", "example": "10330" },
-                            "state": { "type": "string", "example": "Pathumwan" }
+                            "city": {
+                              "type": "string",
+                              "example": "Bangkok"
+                            },
+                            "country": {
+                              "type": "string",
+                              "example": "TH"
+                            },
+                            "line1": {
+                              "type": "string",
+                              "example": "151/1 Richmond Boulevard, Lumpini"
+                            },
+                            "line2": {
+                              "type": "string",
+                              "example": ""
+                            },
+                            "postal_code": {
+                              "type": "string",
+                              "example": "10330"
+                            },
+                            "state": {
+                              "type": "string",
+                              "example": "Pathumwan"
+                            }
                           }
                         },
                         "registration_date": {
@@ -14535,12 +14733,30 @@
                                 "type": "object",
                                 "description": "Residential or business address of the representative.",
                                 "properties": {
-                                  "line1": { "type": "string", "example": "123 Main Street" },
-                                  "line2": { "type": "string", "example": "Apt 5B" },
-                                  "city": { "type": "string", "example": "New Delhi" },
-                                  "state": { "type": "string", "example": "Delhi" },
-                                  "postal_code": { "type": "string", "example": "110018" },
-                                  "country": { "type": "string", "example": "IN" }
+                                  "line1": {
+                                    "type": "string",
+                                    "example": "123 Main Street"
+                                  },
+                                  "line2": {
+                                    "type": "string",
+                                    "example": "Apt 5B"
+                                  },
+                                  "city": {
+                                    "type": "string",
+                                    "example": "New Delhi"
+                                  },
+                                  "state": {
+                                    "type": "string",
+                                    "example": "Delhi"
+                                  },
+                                  "postal_code": {
+                                    "type": "string",
+                                    "example": "110018"
+                                  },
+                                  "country": {
+                                    "type": "string",
+                                    "example": "IN"
+                                  }
                                 }
                               },
                               "nationality": {
@@ -14552,8 +14768,14 @@
                                 "type": "object",
                                 "description": "Phone details of the representative.",
                                 "properties": {
-                                  "calling_code": { "type": "string", "example": "91" },
-                                  "number": { "type": "string", "example": "9876543210" }
+                                  "calling_code": {
+                                    "type": "string",
+                                    "example": "91"
+                                  },
+                                  "number": {
+                                    "type": "string",
+                                    "example": "9876543210"
+                                  }
                                 }
                               },
                               "ownership_percentage": {
@@ -14564,8 +14786,12 @@
                               "roles": {
                                 "type": "array",
                                 "description": "Roles or designations of the representative within the entity.",
-                                "items": { "type": "string" },
-                                "example": ["beneficial_owner"]
+                                "items": {
+                                  "type": "string"
+                                },
+                                "example": [
+                                  "beneficial_owner"
+                                ]
                               },
                               "documents": {
                                 "type": "array",
@@ -14573,14 +14799,38 @@
                                 "items": {
                                   "type": "object",
                                   "properties": {
-                                    "description": { "type": "string", "example": "Passport front" },
-                                    "document_id": { "type": "string", "example": "doc_csbm1ta5grahc4olhpe0" },
-                                    "file_name": { "type": "string", "example": "kyb_doc91055_22October2024_PassportFront.png" },
-                                    "sub_type": { "type": "string", "example": "passport" },
-                                    "tag": { "type": "string", "example": "identityProofTypeFrontDoc" },
-                                    "type": { "type": "string", "example": "identity" },
-                                    "updated_at": { "type": "string", "example": "2024-10-22T08:23:21.528098Z" },
-                                    "url": { "type": "string", "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-onboarding-service-qa/kyb_doc91055_22October2024_PassportFront.png" }
+                                    "description": {
+                                      "type": "string",
+                                      "example": "Passport front"
+                                    },
+                                    "document_id": {
+                                      "type": "string",
+                                      "example": "doc_csbm1ta5grahc4olhpe0"
+                                    },
+                                    "file_name": {
+                                      "type": "string",
+                                      "example": "kyb_doc91055_22October2024_PassportFront.png"
+                                    },
+                                    "sub_type": {
+                                      "type": "string",
+                                      "example": "passport"
+                                    },
+                                    "tag": {
+                                      "type": "string",
+                                      "example": "identityProofTypeFrontDoc"
+                                    },
+                                    "type": {
+                                      "type": "string",
+                                      "example": "identity"
+                                    },
+                                    "updated_at": {
+                                      "type": "string",
+                                      "example": "2024-10-22T08:23:21.528098Z"
+                                    },
+                                    "url": {
+                                      "type": "string",
+                                      "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-onboarding-service-qa/kyb_doc91055_22October2024_PassportFront.png"
+                                    }
                                   }
                                 }
                               }
@@ -14841,22 +15091,34 @@
                         "pending_documents": {
                           "type": "array",
                           "description": "List of documents pending submission or verification.",
-                          "items": { "type": "object" },
+                          "items": {
+                            "type": "object"
+                          },
                           "example": []
                         },
                         "phone": {
                           "type": "object",
                           "description": "Phone details of the entity.",
                           "properties": {
-                            "calling_code": { "type": "string", "example": "" },
-                            "number": { "type": "string", "example": "" }
+                            "calling_code": {
+                              "type": "string",
+                              "example": ""
+                            },
+                            "number": {
+                              "type": "string",
+                              "example": ""
+                            }
                           }
                         },
                         "purpose_of_use": {
                           "type": "array",
                           "description": "List of purposes for which the entity account is used.",
-                          "items": { "type": "string" },
-                          "example": ["payout"]
+                          "items": {
+                            "type": "string"
+                          },
+                          "example": [
+                            "payout"
+                          ]
                         },
                         "reference_id": {
                           "type": "string",
@@ -14867,12 +15129,30 @@
                           "type": "object",
                           "description": "Registered business or residential address of the entity.",
                           "properties": {
-                            "city": { "type": "string", "example": "Bangkok" },
-                            "country": { "type": "string", "example": "TH" },
-                            "line1": { "type": "string", "example": "151/1 Richmond Boulevard, Lumpini" },
-                            "line2": { "type": "string", "example": "" },
-                            "postal_code": { "type": "string", "example": "10330" },
-                            "state": { "type": "string", "example": "Pathumwan" }
+                            "city": {
+                              "type": "string",
+                              "example": "Bangkok"
+                            },
+                            "country": {
+                              "type": "string",
+                              "example": "TH"
+                            },
+                            "line1": {
+                              "type": "string",
+                              "example": "151/1 Richmond Boulevard, Lumpini"
+                            },
+                            "line2": {
+                              "type": "string",
+                              "example": ""
+                            },
+                            "postal_code": {
+                              "type": "string",
+                              "example": "10330"
+                            },
+                            "state": {
+                              "type": "string",
+                              "example": "Pathumwan"
+                            }
                           }
                         },
                         "registration_date": {
@@ -14920,12 +15200,30 @@
                                 "type": "object",
                                 "description": "Residential or business address of the representative.",
                                 "properties": {
-                                  "line1": { "type": "string", "example": "123 Main Street" },
-                                  "line2": { "type": "string", "example": "Apt 5B" },
-                                  "city": { "type": "string", "example": "New Delhi" },
-                                  "state": { "type": "string", "example": "Delhi" },
-                                  "postal_code": { "type": "string", "example": "110018" },
-                                  "country": { "type": "string", "example": "IN" }
+                                  "line1": {
+                                    "type": "string",
+                                    "example": "123 Main Street"
+                                  },
+                                  "line2": {
+                                    "type": "string",
+                                    "example": "Apt 5B"
+                                  },
+                                  "city": {
+                                    "type": "string",
+                                    "example": "New Delhi"
+                                  },
+                                  "state": {
+                                    "type": "string",
+                                    "example": "Delhi"
+                                  },
+                                  "postal_code": {
+                                    "type": "string",
+                                    "example": "110018"
+                                  },
+                                  "country": {
+                                    "type": "string",
+                                    "example": "IN"
+                                  }
                                 }
                               },
                               "nationality": {
@@ -14937,8 +15235,14 @@
                                 "type": "object",
                                 "description": "Phone details of the representative.",
                                 "properties": {
-                                  "calling_code": { "type": "string", "example": "91" },
-                                  "number": { "type": "string", "example": "9876543210" }
+                                  "calling_code": {
+                                    "type": "string",
+                                    "example": "91"
+                                  },
+                                  "number": {
+                                    "type": "string",
+                                    "example": "9876543210"
+                                  }
                                 }
                               },
                               "ownership_percentage": {
@@ -14949,8 +15253,12 @@
                               "roles": {
                                 "type": "array",
                                 "description": "Roles or designations of the representative within the entity.",
-                                "items": { "type": "string" },
-                                "example": ["beneficial_owner"]
+                                "items": {
+                                  "type": "string"
+                                },
+                                "example": [
+                                  "beneficial_owner"
+                                ]
                               },
                               "documents": {
                                 "type": "array",
@@ -14958,14 +15266,38 @@
                                 "items": {
                                   "type": "object",
                                   "properties": {
-                                    "description": { "type": "string", "example": "Passport front" },
-                                    "document_id": { "type": "string", "example": "doc_csbm1ta5grahc4olhpe0" },
-                                    "file_name": { "type": "string", "example": "kyb_doc91055_22October2024_PassportFront.png" },
-                                    "sub_type": { "type": "string", "example": "passport" },
-                                    "tag": { "type": "string", "example": "identityProofTypeFrontDoc" },
-                                    "type": { "type": "string", "example": "identity" },
-                                    "updated_at": { "type": "string", "example": "2024-10-22T08:23:21.528098Z" },
-                                    "url": { "type": "string", "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-onboarding-service-qa/kyb_doc91055_22October2024_PassportFront.png" }
+                                    "description": {
+                                      "type": "string",
+                                      "example": "Passport front"
+                                    },
+                                    "document_id": {
+                                      "type": "string",
+                                      "example": "doc_csbm1ta5grahc4olhpe0"
+                                    },
+                                    "file_name": {
+                                      "type": "string",
+                                      "example": "kyb_doc91055_22October2024_PassportFront.png"
+                                    },
+                                    "sub_type": {
+                                      "type": "string",
+                                      "example": "passport"
+                                    },
+                                    "tag": {
+                                      "type": "string",
+                                      "example": "identityProofTypeFrontDoc"
+                                    },
+                                    "type": {
+                                      "type": "string",
+                                      "example": "identity"
+                                    },
+                                    "updated_at": {
+                                      "type": "string",
+                                      "example": "2024-10-22T08:23:21.528098Z"
+                                    },
+                                    "url": {
+                                      "type": "string",
+                                      "example": "https://s3.ap-southeast-1.amazonaws.com/tazapay-onboarding-service-qa/kyb_doc91055_22October2024_PassportFront.png"
+                                    }
                                   }
                                 }
                               }
