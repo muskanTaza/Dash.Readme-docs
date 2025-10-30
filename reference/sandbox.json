@@ -11217,7 +11217,7 @@
                           },
                           "type": {
                             "type": "string",
-                            "description": "Blockchain of the wallet. Possible values include - Ethereum, Tron, Polygon, Solana"
+                            "description": "Type of the wallet"
                           },
                           "currency": {
                             "type": "string",
