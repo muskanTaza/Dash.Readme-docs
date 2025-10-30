@@ -11225,7 +11225,11 @@
                           },
                           "hosted": {
                             "type": "string",
-                            "description": "Indicates whether the wallet is custodial (hosted) or non-custodial (unhosted). Possible values: yes – The wallet is hosted by a Virtual Asset Service Provider (VASP) or exchange. no – The wallet is non-custodial and controlled directly by the user (e.g., MetaMask, Ledger)  Mandatory if party_classification is 'self' and destination_details.type is 'wallet'."
+                            "description": "Indicates whether the wallet is custodial (hosted) or non-custodial (unhosted). Possible values: yes – The wallet is hosted by a Virtual Asset Service Provider (VASP) or exchange. no – The wallet is non-custodial and controlled directly by the user (e.g., MetaMask, Ledger)  Mandatory if party_classification is 'self' and destination_details.type is 'wallet'.",
+                            "enum": [
+                              "yes",
+                              "no"
+                            ]
                           }
                         }
                       },
