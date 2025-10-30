@@ -2,7 +2,10 @@
 title: Beneficiary Webhooks
 excerpt: >-
   These are currently relevant for wallet beneficiaries (i.e. where
-  `destination_details.type` is 'wallet')
+  `destination_details.type` is 'wallet'). Whenever a 1st party wallet
+  beneficiary is created (i.e. where `party_classification` is self),
+  beneficiaries will go through an approval flow and only when
+  verification_status of a beneficiary is succeeded, payout to it can happen 
 deprecated: false
 hidden: false
 metadata:
