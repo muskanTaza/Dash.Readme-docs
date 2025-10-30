@@ -66,21 +66,24 @@ next:
 
 ### **beneficiary_details**
 
-| **Field**           | **Sub-fields**                        | **type** | **Description**                                                 |
-| ------------------- | ------------------------------------- | -------- | --------------------------------------------------------------- |
-| type                |                                       | enum     | Beneficiary type - business or individual                       |
-| name                |                                       | string   | Name of the beneficiary                                         |
-| email               |                                       | string   | Email of the beneficiary                                        |
-| address             |                                       | json     | Address of the beneficiary                                      |
-|                     | line1                                 | string   | Address line 1                                                  |
-|                     | line2                                 | string   | Address Line 2                                                  |
-|                     | city                                  | string   | City                                                            |
-|                     | state                                 | string   | State                                                           |
-|                     | country                               | string   | ISO 3166-1 alpha-2 country code, in uppercase                   |
-|                     | postal_code                           | string   | Postal Code                                                     |
-| destination_details |                                       |          |                                                                 |
-|                     | type                                  | enum     | Type of the destination - bank, wallet or local_payment_network |
-|                     | bank / waleet / local_payment_network | json     | A JSON containing the destination details                       |
+| **Field**            | **Sub-fields**                        | **type** | **Description**                                                                                                                                             |
+| -------------------- | ------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type                 |                                       | enum     | Beneficiary type - business or individual                                                                                                                   |
+| name                 |                                       | string   | Name of the beneficiary                                                                                                                                     |
+| email                |                                       | string   | Email of the beneficiary                                                                                                                                    |
+| party_classification |                                       | enum     | Type of relationship between beneficiary and creator of beneficiary Possible values - self, third_party (Mandatory if destination_details.type is a wallet) |
+| registration_number  |                                       | string   | Registration number of the business (Mandatory if destination_details.type is a wallet and type is business)                                                |
+| date_of_birth        |                                       | string   | Date of birth of individual, Format DD-MM-YYYY (Mandatory if destination_details.type is a wallet and type is individual                                    |
+| address              |                                       | json     | Address of the beneficiary                                                                                                                                  |
+|                      | line1                                 | string   | Address line 1                                                                                                                                              |
+|                      | line2                                 | string   | Address Line 2                                                                                                                                              |
+|                      | city                                  | string   | City                                                                                                                                                        |
+|                      | state                                 | string   | State                                                                                                                                                       |
+|                      | country                               | string   | ISO 3166-1 alpha-2 country code, in uppercase                                                                                                               |
+|                      | postal_code                           | string   | Postal Code                                                                                                                                                 |
+| destination_details  |                                       |          |                                                                                                                                                             |
+|                      | type                                  | enum     | Type of the destination - bank, wallet or local_payment_network                                                                                             |
+|                      | bank / waleet / local_payment_network | json     | A JSON containing the destination details                                                                                                                   |
 
 ### **bank**
 
@@ -97,12 +100,116 @@ next:
 
 ### **wallet**
 
-| **Field**       | **type** | **Description**                                                                     |
-| --------------- | -------- | ----------------------------------------------------------------------------------- |
-| deposit_address | string   | Deposit Address                                                                     |
-| type            | enum     | Blockchain of the wallet. Possible values include - Ethereum, Tron, Polygon, Solana |
-| currency        | string   | currency                                                                            |
-| hosted          | string   |                                                                                     |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        **Field**
+      </th>
+
+      <th>
+        **type**
+      </th>
+
+      <th>
+        **Description**
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        deposit_address
+      </td>
+
+      <td>
+        string
+      </td>
+
+      <td>
+        Deposit Address
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        type
+      </td>
+
+      <td>
+        enum
+      </td>
+
+      <td>
+        Blockchain of the wallet. Possible values include - Ethereum, Tron, Polygon, Solana
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        currency
+      </td>
+
+      <td>
+        string
+      </td>
+
+      <td>
+        currency
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        hosted
+      </td>
+
+      <td>
+        enum
+      </td>
+
+      <td>
+        Indicates whether the wallet is custodial (hosted) or non-custodial (unhosted).
+        Possible values:  
+        yes – The wallet is hosted by a Virtual Asset Service Provider (VASP) or exchange.  
+        no – The wallet is non-custodial and controlled directly by the user (e.g., MetaMask, Ledger)  
+
+        Mandatory if `party_classification` is 'self' and `destination_details.type` is 'wallet'.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        vasp_name
+      </td>
+
+      <td>
+        string
+      </td>
+
+      <td>
+        The registered name of the Virtual Asset Service Provider (VASP) or exchange that hosts or manages the wallet  
+        Mandatory if `party_classification` is 'self', `destination_details.type` is 'wallet'  and `hosted` is 'yes'
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        vasp_website
+      </td>
+
+      <td>
+        string
+      </td>
+
+      <td>
+        The official website URL of the VASP or exchange that manages the wallet. Used for VASP identification and due diligence under Travel Rule requirements  
+        Mandatory if `party_classification` is 'self', `destination_details.type` is 'wallet'  and `hosted` is 'yes'
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### **local_payment_method**
 
