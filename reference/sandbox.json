@@ -11217,7 +11217,7 @@
                           },
                           "type": {
                             "type": "string",
-                            "description": "Type of the wallet"
+                            "description": "Blockchain of the wallet. Possible values include - Ethereum, Tron, Polygon, Solana"
                           },
                           "currency": {
                             "type": "string",
@@ -11231,8 +11231,13 @@
                               "no"
                             ]
                           },
-                          "name": {
-                            "type": "string"
+                          "vasp_name": {
+                            "type": "string",
+                            "description": "The registered name of the Virtual Asset Service Provider (VASP) or exchange that hosts or manages the wallet Mandatory if party_classification is 'self', destination_details.type is 'wallet' and hosted is 'yes'"
+                          },
+                          "vasp_website": {
+                            "type": "string",
+                            "description": "The official website URL of the VASP or exchange that manages the wallet. Used for VASP identification and due diligence under Travel Rule requirements Mandatory if party_classification is 'self', destination_details.type is 'wallet' and hosted is 'yes'"
                           }
                         }
                       },
