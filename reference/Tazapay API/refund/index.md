@@ -1,6 +1,9 @@
 ---
 title: Refund
-excerpt: ''
+excerpt: >-
+  A Tazapay API object that is used to return money to a customer after a
+  payment has been made. It simplifies the process of issuing refunds for
+  products or services, helping businesses maintain customer satisfaction.
 deprecated: false
 hidden: false
 icon: far fa-money-bill-transfer
@@ -11,8 +14,6 @@ metadata:
 next:
   description: ''
 ---
-A Tazapay API object that is used to return money to a customer after a payment has been made. It simplifies the process of issuing refunds for products or services, helping businesses maintain customer satisfaction.
-
 ## Object Structure
 
 ```json
