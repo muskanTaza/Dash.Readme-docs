@@ -1,6 +1,11 @@
 ---
 title: Payment Attempts
-excerpt: ''
+excerpt: >-
+  A Tazapay Payment Attempt refers to an instance where a transaction is
+  attempted through the Tazapay platform, either as part of a checkout process
+  or other payment-related workflows. Each payment attempt captures essential
+  details of the transaction, including the amount, currency, payment method,
+  status, and any relevant metadata.
 deprecated: false
 hidden: false
 icon: far fa-money-check-dollar-pen
@@ -11,9 +16,7 @@ metadata:
 next:
   description: ''
 ---
-Tazapay API object that tracks each payment attempt, including successful and failed ones. It provides valuable insights into the payment process, helping businesses optimize their revenue streams.
-
-## Object
+## Object Structure
 
 ```json
 {
