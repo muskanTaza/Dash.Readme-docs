@@ -1,6 +1,8 @@
 ---
 title: Balance
-excerpt: ''
+excerpt: >-
+  This is an object representing your real time Tazapay balance across different
+  currencies.
 deprecated: false
 hidden: false
 icon: far fa-scale-balanced
@@ -11,8 +13,6 @@ metadata:
 next:
   description: ''
 ---
-This is an object representing your real time Tazapay balance across different currencies.
-
 # The Balance Object
 
 ```Text JSON
