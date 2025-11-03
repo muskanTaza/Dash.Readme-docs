@@ -1,6 +1,11 @@
 ---
 title: Payout
-excerpt: ''
+excerpt: >-
+  Payout allows businesses to disburse payments to individuals or other
+  businesses globally. It facilitates cross-border payouts by enabling transfers
+  to local bank accounts, ensuring compliance with international regulations,
+  and offering multiple payout options such as bank transfers, digital wallets,
+  or local payment methods
 deprecated: false
 hidden: false
 icon: far fa-money-check-dollar-pen
