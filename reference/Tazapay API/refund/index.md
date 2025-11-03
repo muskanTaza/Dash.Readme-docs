@@ -13,6 +13,36 @@ next:
 ---
 A Tazapay API object that is used to return money to a customer after a payment has been made. It simplifies the process of issuing refunds for products or services, helping businesses maintain customer satisfaction.
 
+## Object Structure
+
+```json
+{
+  "id": "rfd_afiuabfia23wifaiofnioa12nfianf",
+  "object": "refund",
+  "payin": "chk_cirsp2sl4ar024j0akj0",
+  "amount": 90000,
+  "currency": "USD",
+  "customer_receives": {
+      "currency": "SGD",
+      "amount": 133200
+    },
+  "payment_attempt": "pat_ahbfiuahfiuaiofnioain",
+  "reason": "Damaged Goods",
+  "metadata": {
+      "key1": "value1",
+      "key2": "value2"
+    },
+  "status": "succeeded",
+  "status_description": "",
+  "webhook_url": "https://mystore.webhook.tazapay.refund/",
+  "created_at": "2023-07-23 23:59:56"
+}
+```
+
+<br />
+
+## Parameters
+
 ### Refund
 
 | Field              | Subfield | Type                   | Description                                                                                            |
