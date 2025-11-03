@@ -28,3 +28,24 @@ metadata:
   "updated_at": "2025-09-28T08:20:45Z"
 }
 ```
+
+<br />
+
+## Object Parameters
+
+<br />
+
+| Field           | type      | Description                                                                                                 |
+| :-------------- | :-------- | :---------------------------------------------------------------------------------------------------------- |
+| id              | string    | Unique ID of the object                                                                                     |
+| object          | enum      | This is lightning_invoice_bolt11 here                                                                       |
+| amount          | integer   | Amount in BTC. The precision is 8 decimal places                                                            |
+| d_tag_memo      | string    | This will be included in the d-tag. If both d_tag_memo and h_tag_memo are provided, only h_tag will be used |
+| h_tag_memo      | string    | SHA-256 of the d_tag_memo. If both d_tag_memo and h_tag_memo are provided, only h_tag_memo will be used     |
+| expiry_interval | integer   | The expiry of the invoice in seconds. Default value is 3600 (1 hour).                                       |
+| collect         | string    | Collect ID which is created when the invoice gets funded                                                    |
+| status          | enum      | active, expired                                                                                             |
+| payment_status  | enum      | paid, unpaid                                                                                                |
+| created_at      | timestamp | Timestamp at which this object was created                                                                  |
+| updated_at      | timestamp | Timestamp at which this object was last updated                                                             |
+| metadata        | json      | Set of key-value pairs attached to the object                                                               |
