@@ -38,7 +38,7 @@ Create a payout on your server using **Tazapay’s Payout API** with the followi
 * **Reason for Payout**
 * **Transaction Description** – Additional description for the payout
 
-## **Validations for E-Wallet Account Number**
+## **Validations for Mobile Wallet Account Number**
 
 Proper error handling must be implemented for cases where validations fail.
 
