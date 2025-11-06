@@ -42,9 +42,9 @@ Create a payout on your server using **Tazapay’s Payout API** with the followi
 
 Proper error handling must be implemented for cases where validations fail.
 
-| Country            | Description                      | Validation                                                                                                                                      | Example                          |
-| :----------------- | :------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------- |
-| **ID – Indonesia** | E-Wallet account number (mobile) | Must be a valid Indonesian mobile number:`^(?:+62\|62\|0)8[1-9][0-9]{6,9}$` Starts with +62/62/0 followed by 8; total 9–12 digits after prefix. | `+628123456789` or `08123456789` |
+| Country            | Description                           | Validation                                                                                                                                      | Example                          |
+| :----------------- | :------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------- |
+| **ID – Indonesia** | Mobile Wallet account number (mobile) | Must be a valid Indonesian mobile number:`^(?:+62\|62\|0)8[1-9][0-9]{6,9}$` Starts with +62/62/0 followed by 8; total 9–12 digits after prefix. | `+628123456789` or `08123456789` |
 
 <Callout icon="❌" theme="default">
   ### Invalid examples: +627123456789 (wrong for ID)
