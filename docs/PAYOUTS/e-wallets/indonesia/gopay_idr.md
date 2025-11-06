@@ -32,7 +32,7 @@ Create a payout on your server using **Tazapay’s Payout API** with the followi
   * **Type** – `business` or `individual`
 * **Destination Details**
   * **Destination Type**: `local_payment_network`
-  * **E-wallet Type**: `gopay_idr`
+  * **Mobile Wallet Type**: `gopay_idr`
   * **Deposit key type**: `phone`
   * **Deposit key**: `+62 XXXXXXXXXX`
 * **Reason for Payout**
