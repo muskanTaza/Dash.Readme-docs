@@ -1,7 +1,7 @@
 ---
 title: Indonesia
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
