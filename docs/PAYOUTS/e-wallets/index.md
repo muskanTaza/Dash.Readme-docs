@@ -1,5 +1,5 @@
 ---
-title: E-wallets
+title: Mobile Wallets
 deprecated: false
 hidden: true
 metadata:
