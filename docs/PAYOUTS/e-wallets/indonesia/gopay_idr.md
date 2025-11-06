@@ -49,4 +49,121 @@ Proper error handling must be implemented for cases where validations fail.
   ### Invalid examples: +627123456789 (wrong for ID)
 </Callout>
 
-##
+### Sample Request cURL
+
+```json
+curl --request POST \
+     --url https://service-sandbox.tazapay.com/v3/payout \
+     --header 'accept: application/json' \
+     --header 'authorization: Basic XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
+     --header 'content-type: application/json' \
+     --data '
+{
+  "beneficiary_details": {
+    "destination_details": {
+      "type": "local_payment_network",
+      "local_payment_network": {
+        "type": "gopay_idr",
+        "deposit_key_type": "phone",
+        "deposit_key": "+628123456789"
+      }
+    },
+    "name": "John Doe",
+    "type": "individual"
+  },
+  "purpose": "PYR010",
+  "amount": 1000,
+  "currency": "IDR",
+  "transaction_description": "Payout for 2 PCs"
+}
+```
+
+### Response
+
+```json
+{
+    "status": "success",
+    "message": "",
+    "data": {
+        "amount": 1000,
+        "balance_transaction": "",
+        "beneficiary": "bnf_d464knig6mi0so65mr9g",
+        "beneficiary_details": {
+            "address": null,
+            "date_of_birth": "",
+            "destination": "",
+            "destination_details": {
+                "local_payment_network": {
+                    "currency": "IDR",
+                    "deposit_key": "+628123456789",
+                    "type": "gopay_idr"
+                },
+                "type": "local_payment_network"
+            },
+            "documents": [],
+            "email": "",
+            "is_doc_verification_required": false,
+            "name": "John Doe",
+            "name_local": "",
+            "national_identification_number": "",
+            "party_classification": "",
+            "phone": null,
+            "registration_number": "",
+            "tax_id": "",
+            "type": "individual",
+            "verification_status": ""
+        },
+        "charge_type": "",
+        "confirmation_documents": [],
+        "created_at": "2025-11-06T07:12:31.089369Z",
+        "currency": "IDR",
+        "destination_fx_quote": "fx_d464knhbcijftsa0na40",
+        "documents": [],
+        "holding_currency": "IDR",
+        "holding_fx_quote": "fx_d464knhbcijftsa0na3g",
+        "holding_fx_transaction": {
+            "exchange_rate": 1,
+            "final": {
+                "amount": 1000,
+                "currency": "IDR"
+            },
+            "id": "fx_d464knhbcijftsa0na3g",
+            "initial": {
+                "amount": 1000,
+                "currency": "IDR"
+            },
+            "object": "fx_transaction"
+        },
+        "id": "pot_d464knig6mi0so65mr90",
+        "local": {
+            "fund_transfer_network": ""
+        },
+        "logistics_tracking_details": [],
+        "metadata": null,
+        "mt103": "",
+        "object": "payout",
+        "payout_fx_transaction": {
+            "exchange_rate": 1,
+            "final": {
+                "amount": 1000,
+                "currency": "IDR"
+            },
+            "id": "fx_d464knhbcijftsa0na40",
+            "initial": {
+                "amount": 1000,
+                "currency": "IDR"
+            },
+            "object": "fx_transaction"
+        },
+        "purpose": "PYR010",
+        "quote": "",
+        "reference_id": "",
+        "statement_descriptor": "",
+        "status": "processing",
+        "status_description": "",
+        "tracking_details": null,
+        "transaction_description": "Payout for 2 PCs",
+        "type": "local_payment_network"
+    }
+}
+```
