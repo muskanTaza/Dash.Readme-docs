@@ -16785,7 +16785,8 @@
                 },
                 "type": "object",
                 "required": [
-                  "payout_type"
+                  "payout_type",
+                  "payout_info"
                 ]
               }
             }
