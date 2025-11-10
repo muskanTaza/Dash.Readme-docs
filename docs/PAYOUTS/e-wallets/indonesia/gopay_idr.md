@@ -310,8 +310,6 @@ Tazapay delivers **webhooks** to your registered endpoint notifying you of any p
 > 📘 Note:
 >
 > The payout will fail if the **account_number** (mobile) does not match the wallet account details registered with the provider.
->
-> Display this message to users when collecting their wallet account number.
 
 ***
 
