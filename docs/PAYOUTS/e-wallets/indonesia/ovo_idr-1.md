@@ -11,7 +11,7 @@ hidden: true
 metadata:
   robots: index
 ---
-**Key Features**
+## **Key Features**
 
 * Payouts are **instant (real-time)**
 * **Minimum limits** – IDR 1
