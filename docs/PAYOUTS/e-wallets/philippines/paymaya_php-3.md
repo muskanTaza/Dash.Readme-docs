@@ -21,7 +21,7 @@ metadata:
 
 ### **Step 1: Initiate a payout request**
 
-Tazapay uses a **payout object** to represent your intent to initiate a payout. The payout object tracks state changes from initiation to the moment the beneficiary’s e-wallet account is credited.
+Tazapay uses a **payout object** to represent your intent to initiate a payout. The payout object tracks state changes from initiation to the moment the beneficiary’s wallet account is credited.
 
 Create a payout on your server using **Tazapay’s Payout API** with the following information:
 
