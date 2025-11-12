@@ -18589,7 +18589,172 @@
         "operationId": "get_new-endpoint-1",
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "success"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": ""
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "has_more": {
+                          "type": "boolean",
+                          "example": true,
+                          "default": true
+                        },
+                        "object": {
+                          "type": "string",
+                          "example": "list"
+                        },
+                        "results": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "amount": {
+                                "type": "integer",
+                                "example": 89,
+                                "default": 0
+                              },
+                              "created_at": {
+                                "type": "string",
+                                "example": "2025-10-22T10:19:51.542Z"
+                              },
+                              "currency": {
+                                "type": "string",
+                                "example": "USD"
+                              },
+                              "description": {
+                                "type": "string",
+                                "example": "<pot_id>"
+                              },
+                              "fee_details": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {}
+                                }
+                              },
+                              "fx_conversions": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {}
+                                }
+                              },
+                              "id": {
+                                "type": "string",
+                                "example": "<btr_id>"
+                              },
+                              "metadata": {
+                                "type": "object",
+                                "properties": {}
+                              },
+                              "net": {
+                                "type": "object",
+                                "properties": {
+                                  "amount": {
+                                    "type": "integer",
+                                    "example": 89,
+                                    "default": 0
+                                  },
+                                  "currency": {
+                                    "type": "string",
+                                    "example": "USD"
+                                  }
+                                }
+                              },
+                              "object": {
+                                "type": "string",
+                                "example": "balance_transaction"
+                              },
+                              "operation_type": {
+                                "type": "string",
+                                "example": "credit"
+                              },
+                              "source": {
+                                "type": "string",
+                                "example": "<btr_id>"
+                              },
+                              "type": {
+                                "type": "string",
+                                "example": "payout_reversal"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "OK": {
+                    "summary": "OK",
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "has_more": true,
+                        "object": "list",
+                        "results": [
+                          {
+                            "amount": 89,
+                            "created_at": "2025-10-22T10:19:51.542Z",
+                            "currency": "USD",
+                            "description": "<pot_id>",
+                            "fee_details": [],
+                            "fx_conversions": [],
+                            "id": "<btr_id>",
+                            "metadata": {},
+                            "net": {
+                              "amount": 89,
+                              "currency": "USD"
+                            },
+                            "object": "balance_transaction",
+                            "operation_type": "credit",
+                            "source": "<btr_id>",
+                            "type": "payout_reversal"
+                          },
+                          {
+                            "amount": -88,
+                            "created_at": "2025-10-16T10:01:10.924Z",
+                            "currency": "USD",
+                            "description": "",
+                            "fee_details": [
+                              {
+                                "amount": -1,
+                                "currency": "USD",
+                                "type": "variable_fee"
+                              }
+                            ],
+                            "fx_conversions": [],
+                            "id": "<btr_id>",
+                            "metadata": {},
+                            "net": {
+                              "amount": -89,
+                              "currency": "USD"
+                            },
+                            "object": "balance_transaction",
+                            "operation_type": "debit",
+                            "source": "pot_id",
+                            "type": "payout"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "parameters": [
