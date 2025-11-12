@@ -4644,6 +4644,10 @@
                     "type": "string",
                     "description": "ISO 4217 standard. This is the payout currency. The amount will be in the payout currency"
                   },
+                  "test-field":{
+                    "type": "string"
+                
+                  },
                   "beneficiary_details": {
                     "type": "object",
                     "description": "Beneficiary Details",
