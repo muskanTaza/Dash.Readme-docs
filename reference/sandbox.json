@@ -18583,7 +18583,7 @@
         }
       }
     },
-    "/new-endpoint-1": {
+    "/v3/balance_transaction": {
       "get": {
         "description": "",
         "operationId": "get_new-endpoint-1",
@@ -18592,7 +18592,64 @@
             "description": ""
           }
         },
-        "parameters": []
+        "parameters": [
+          {
+            "in": "query",
+            "name": "starting_after",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "description": "A cursor for use in pagination. Takes balance transaction object ID as input"
+          },
+          {
+            "in": "query",
+            "name": "ending_before",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "description": "A cursor for use in pagination. Takes balance transaction object ID as input"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "The number of objects to be fetched, by default 10, can be from 1 to 100"
+          },
+          {
+            "in": "query",
+            "name": "created",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "gt": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "greater than"
+                },
+                "gte": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "greater than equal to"
+                },
+                "lt": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "less than"
+                },
+                "lte": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "less than equal to"
+                }
+              }
+            },
+            "description": "Returns balance transactions that were created during the time interval"
+          }
+        ]
       }
     }
   },
