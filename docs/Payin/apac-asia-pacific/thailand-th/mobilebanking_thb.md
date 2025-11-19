@@ -27,8 +27,8 @@ next:
 
 ## Step 1: Create a payin
 
-Tazapay uses a `payin` object to represent your intent to collect a payment from your customer. The payin object tracks state changes from transaction creation to payment completion via mobile banking.\
-Create a payin on your server with an amount, invoice\_currency `THB` and a transaction\_description using the [create payin API](https://docs.tazapay.com/reference/create-payin)
+Tazapay uses a `payin` object to represent your intent to collect a payment from your customer. The payin object tracks state changes from transaction creation to payment completion via mobile banking.  
+Create a payin on your server with an amount, invoice_currency `THB` and a transaction_description using the [create payin API](https://docs.tazapay.com/reference/create-payin)
 
 A payin is created with the status `requires_payment_method`.
 
@@ -71,7 +71,13 @@ curl --request POST \
     "country": "TH"
   },
   "payment_method_details": {
-    "type": "mobilebanking_thb"
+    "type": "mobilebanking_thb",
+		"mobilebanking_thb" : {
+      "bank_name": "K-Bank",
+      "phone": {
+          "calling_code": "66",
+          "number": "98765432"
+      }		
   }
 }
 '
@@ -107,7 +113,13 @@ curl --request POST \
   "amount": 10000,
   "transaction_description": "test",
   "payment_method_details": {
-    "type": "mobilebanking_thb"
+    "type": "mobilebanking_thb",
+		"mobilebanking_thb" : {
+      "bank_name": "K-Bank",
+      "phone": {
+          "calling_code": "66",
+          "number": "98765432"
+      }
   }
 }
 '
@@ -161,6 +173,13 @@ After confirming the payin, you will receive the following response
     "partially_paid": false,
     "payment_attempts": [],
     "payment_method_details": {
+      "mobilebanking_thb": {
+              "bank_name": "K-Bank",
+              "phone": {
+                  "calling_code": "66",
+                  "number": "98765432"
+                }
+            },
       "type": "mobilebanking_thb"
     },
     "redirect_url": "https://checkout-sandbox.tazapay.com/simulate/MIykUpsyrxRgjWOu1U5csBzZOqk9RaNPzDhMMDErEgc=/pay_cu3oqvd3t210o3k432k0/mobilebanking_thb",
@@ -191,20 +210,20 @@ Tazapay sends a `payin.succeeded` event as soon as the funds are received from
 
 If the payment is not made by the customer and the URL expires, Tazapay sends a `payment_attempt.failed`  event. To generate a new URL, confirm the payin again using Step 2.
 
-| Event                   | Description                                   | Next Steps                                                                                  |
-| ----------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| payin.succeeded         | The customer paid before 30 days              | Fulfill the goods or services that the customer purchased                                   |
-| payment\_attempt.failed | The customer did not pay, and the URL expired | Allow the customer to generate a new URL or complete the payment via another payment method |
+| Event                  | Description                                   | Next Steps                                                                                  |
+| ---------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| payin.succeeded        | The customer paid before 30 days              | Fulfill the goods or services that the customer purchased                                   |
+| payment_attempt.failed | The customer did not pay, and the URL expired | Allow the customer to generate a new URL or complete the payment via another payment method |
 
 # Test the Integration
 
 ## Simulating success
 
-Click on `Simulate Success` CTA on the redirect\_url. You will receive a `payin.succeeded` event.
+Click on `Simulate Success` CTA on the redirect_url. You will receive a `payin.succeeded` event.
 
 ## Simulating Failure / Expiry
 
-Click on  `Simulate Expire` CTA on the redirect\_url. You will receive a `payment_attempt.failed` event.
+Click on  `Simulate Expire` CTA on the redirect_url. You will receive a `payment_attempt.failed` event.
 
 # Integrating Refunds
 
