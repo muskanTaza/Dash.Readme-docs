@@ -1,7 +1,7 @@
 ---
-title: Bank Push
+title: bank_push_idr
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
