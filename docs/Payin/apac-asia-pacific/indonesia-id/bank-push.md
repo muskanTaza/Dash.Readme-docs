@@ -61,6 +61,8 @@ curl --request POST \
 
 Instead of making 2 API calls, you can also combine steps 1 and 2 into a single API call. To do so, pass the parameters in both the create payin and confirm payin endpoints to the create payin API.
 
+**Supported Banks - BNI, BRI, BSI, Danamon, Mandiri, Permata**
+
 Also, pass the following field and set confirm equals true.
 
 | Field   | type    | Mandatory (Y/N) | Description                              |
