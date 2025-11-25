@@ -55,6 +55,8 @@ Confirm the payin created in step 1 using the confirm payin API. Upon confirmati
 
 Refer the below for the fields to be passed in `payment_method_details`
 
+**Supported Bank Names - Krungsri Bank, K-Bank, SCB Bank, BBL Bank, KTB Bank**
+
 ### Sample cURL
 
 ```json
