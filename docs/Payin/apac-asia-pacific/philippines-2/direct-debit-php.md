@@ -39,7 +39,10 @@ curl --request POST \
 
 ## Step 2: Confirm a payin
 
-Confirm the payin created in step 1 using the [confirm payin API](https://docs.tazapay.com/reference/confirm-payin). Upon confirmation of the payin, a redirection URL is generated. The status of the payin moves to requires_action
+Confirm the payin created in step 1 using the [confirm payin API](https://docs.tazapay.com/reference/confirm-payin). Upon confirmation of the payin, a redirection URL is generated. The status of the payin moves to requires_action.   
+
+
+**Supported Banks - BPI, RCBC, UnionBank, ChinaBank**
 
 ### Sample cURL
 
