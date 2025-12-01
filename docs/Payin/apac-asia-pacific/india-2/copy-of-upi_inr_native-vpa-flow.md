@@ -46,16 +46,14 @@ Confirm the payin created in step 1 using the confirm payin API. Upon confirmati
 
 Refer the below for the fields to be passed in `payment_method_details`
 
-| Field          | Subfield    | type             | Mandatory (Y/N) | Description                                                                                                                                                                                           |
-| -------------- | :---------- | ---------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type           |             | enum             | Y               | The type of the payment method. In this case, the value is `upi_inr_native`                                                                                                                           |
-| upi_inr_native |             | json             | Y               | Details of the UPI payment method                                                                                                                                                                     |
-|                | payer_vpa   | string           | Y               | VPA (Virtual Payment Address) entered by the customer. This must be alphanumeric and can include valid UPI separators (e.g., dot . and at-sign @). No spaces or other special characters are allowed. |
-| items          |             | array of objects | Y               | List of items                                                                                                                                                                                         |
-|                | name        | string           | Y               | Item name                                                                                                                                                                                             |
-|                | description | string           | N               | Item description                                                                                                                                                                                      |
-|                | amount      | int64            | Y               | Item unit price                                                                                                                                                                                       |
-|                | quantity    | int64            | Y               | Item quantity                                                                                                                                                                                         |
+| Field | Subfield    | type             | Mandatory (Y/N) | Description                                                                 |
+| ----- | :---------- | ---------------- | --------------- | --------------------------------------------------------------------------- |
+| type  |             | enum             | Y               | The type of the payment method. In this case, the value is `upi_inr_native` |
+| items |             | array of objects | Y               | List of items                                                               |
+|       | name        | string           | Y               | Item name                                                                   |
+|       | description | string           | N               | Item description                                                            |
+|       | amount      | int64            | Y               | Item unit price                                                             |
+|       | quantity    | int64            | Y               | Item quantity                                                               |
 
 ### Sample cURL
 
@@ -81,10 +79,7 @@ curl --request POST \
     }
   ],
   "payment_method_details": {
-    "type": "upi_inr_native",
-    "upi_inr_native": {
-      "payer_vpa": "test@bank"
-    }
+    "type": "upi_inr_native"
   }
 }
 '
@@ -129,9 +124,6 @@ curl --request POST \
   "transaction_description": "test",
   "payment_method_details": {
     "type": "upi_inr_native"
-    "upi_inr_native": {
-      "payer_vpa": "test@bank,"
-    }
   }
 }
 '
@@ -183,10 +175,7 @@ After confirming the payin, you will receive the following response
     "partially_paid": false,
     "payment_attempts": [],
     "payment_method_details": {
-      "type": "upi_inr_native",
-      "upi_inr_native": {
-        "payer_vpa": "test@bank"
-      }
+      "type": "upi_inr_native"
     },
     "reference_id": "",
     "shipping_details": null,
