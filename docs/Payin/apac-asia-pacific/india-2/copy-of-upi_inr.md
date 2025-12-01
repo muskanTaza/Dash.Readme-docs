@@ -1,5 +1,5 @@
 ---
-title: upi_inr_native (Collect Flow-VPA)
+title: upi_inr_native (VPA Flow)
 excerpt: >-
   UPI (Unified Payments Interface) in India: A revolutionary real-time mobile
   payment system developed by the National Payments Corporation of India (NPCI).
