@@ -1,5 +1,5 @@
 ---
-title: Copy of upi_inr
+title: upi_inr_native (Collect Flow-VPA)
 excerpt: >-
   UPI (Unified Payments Interface) in India: A revolutionary real-time mobile
   payment system developed by the National Payments Corporation of India (NPCI).
@@ -18,8 +18,8 @@ metadata:
 
 ## Step 1: Create a payin
 
-Tazapay uses a `payin` object to represent your intent to collect a payment from your customer. The payin object tracks state changes from transaction creation to payment completion via UPI payment method.\
-Create a payin on your server with an amount, invoice\_currency `INR` and a transaction\_description using the [create payin API](https://docs.tazapay.com/reference/create-payin)
+Tazapay uses a `payin` object to represent your intent to collect a payment from your customer. The payin object tracks state changes from transaction creation to payment completion via UPI payment method.  
+Create a payin on your server with an amount, invoice_currency `INR` and a transaction_description using the [create payin API](https://docs.tazapay.com/reference/create-payin)
 
 A payin is created with the status `requires_payment_method`.
 
@@ -46,6 +46,17 @@ Confirm the payin created in step 1 using the confirm payin API. Upon confirmati
 
 Refer the below for the fields to be passed in `payment_method_details`
 
+| Field          | Subfield    | type             | Mandatory (Y/N) | Description                                                                                                                                                                                           |
+| -------------- | :---------- | ---------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type           |             | enum             | Y               | The type of the payment method. In this case, the value is `upi_inr_native`                                                                                                                           |
+| upi_inr_native |             | json             | Y               | Details of the UPI payment method                                                                                                                                                                     |
+|                | payer_vpa   | string           | Y               | VPA (Virtual Payment Address) entered by the customer. This must be alphanumeric and can include valid UPI separators (e.g., dot . and at-sign @). No spaces or other special characters are allowed. |
+| items          |             | array of objects | Y               | List of items                                                                                                                                                                                         |
+|                | name        | string           | Y               | Item name                                                                                                                                                                                             |
+|                | description | string           | N               | Item description                                                                                                                                                                                      |
+|                | amount      | int64            | Y               | Item unit price                                                                                                                                                                                       |
+|                | quantity    | int64            | Y               | Item quantity                                                                                                                                                                                         |
+
 ### Sample cURL
 
 ```json
@@ -61,8 +72,19 @@ curl --request POST \
     "email": "andrea@example.com",
     "country": "IN"
   },
+  "items": [
+    {
+      "name": "Software Service for Antivirus",
+      "description": "Firewall Antivirus",
+      "amount": 10000,
+      "quantity": 1
+    }
+  ],
   "payment_method_details": {
-    "type": "upi_inr"
+    "type": "upi_inr_native",
+    "upi_inr_native": {
+      "payer_vpa": "test@bank"
+    }
   }
 }
 '
@@ -93,100 +115,58 @@ curl --request POST \
     "email": "andrea@example.com",
     "country": "IN"
   },
+  "items": [
+    {
+      "name": "Software Service for Antivirus",
+      "description": "Firewall Antivirus",
+      "amount": 10000,
+      "quantity": 1
+    }
+  ],
   "confirm": true,
   "invoice_currency": "INR",
   "amount": 10000,
   "transaction_description": "test",
   "payment_method_details": {
-    "type": "upi_inr"
+    "type": "upi_inr_native"
+    "upi_inr_native": {
+      "payer_vpa": "test@bank,"
+    }
   }
 }
 '
 ```
 
-## Step 3: Redirect the customer to the redirect URL
-
-After confirming the payin, you will receive the following response
-
-```json
-{
-  "status": "success",
-  "message": "",
-  "data": {
-    "amount": 10000,
-    "amount_paid": 0,
-    "billing_details": null,
-    "cancel_url": "",
-    "cancelled_at": null,
-    "client_token": "6QpenlhKl9BBuJwEcedbt-Xn-0wYHB5dPUlJpUJxNXs=",
-    "confirm": true,
-    "created_at": "2025-01-23T08:20:41.263657123Z",
-    "customer": "cus_cu8vnm4lppnoaibo23sg",
-    "customer_details": {
-      "country": "IN",
-      "email": "andrea@example.com",
-      "name": "Andrea Lark",
-      "phone": null
-    },
-    "holding_currency": "USD",
-    "id": "pay_cu8vnm2nbet4snrm0t9g",
-    "invoice_currency": "INR",
-    "items": [],
-    "latest_payment_attempt": "pat_cu8vnmanbet4snrm0tc0",
-    "latest_payment_attempt_data": {
-      "expires_at": "2025-01-23T08:25:41Z",
-      "redirect_url": "https://checkout-sandbox.tazapay.com/single-payment.html?tzid=6QpenlhKl9BBuJwEcedbt-Xn-0wYHB5dPUlJpUJxNXs=&spid=aHR0cHM6Ly9jaGVja291dC1zYW5kYm94LnRhemFwYXkuY29tL3NpbXVsYXRlLzZRcGVubGhLbDlCQnVKd0VjZWRidC1Ybi0wd1lIQjVkUFVsSnBVSnhOWHM9L3BheV9jdTh2bm0ybmJldDRzbnJtMHQ5Zy91cGlfaW5y&ref_url_req=true"
-    },
-    "metadata": null,
-    "object": "payin",
-    "paid_in_excess": false,
-    "partially_paid": false,
-    "payment_attempts": [],
-    "payment_method_details": {
-      "type": "upi_inr"
-    },
-    "reference_id": "",
-    "shipping_details": null,
-    "statement_descriptor": "",
-    "status": "requires_action",
-    "status_description": "",
-    "success_url": "",
-    "transaction_data": [],
-    "transaction_description": "Test",
-    "transaction_documents": [],
-    "webhook_url": ""
-  }
-}
-```
-
-> You must redirect the customer to `latest_payment_attempt_data.redirect_url` in order to enable them to complete the payment.
+> The buyer will receive a payment request in their UPI app and can authenticate the transaction by entering their UPI PIN.
+>
+> Note: A UPI Collect request remains valid for 5 minutes. If the buyer does not authorise it within this timeframe, the request will expire.
 
 ## Step 4: Handle post-payment events
 
 Tazapay sends a `payin.succeeded` event as soon as the funds are received from the customer.  Tazapay sends these events to the endpoint configured from your dashboard. You can receive these events and run actions (for example, sending an order confirmation email to your customers, logging the sale in a database, starting a shipping workflow, etc.)
 
-If the payment is not made by the customer and the URL expires, Tazapay sends a `payment_attempt.failed`  event. To generate a new URL, confirm the payin again using Step 2.
+If the payment is not made by the customer within the expiry and the request expires, Tazapay sends a `payment_attempt.failed`  event. To generate a new payment attempt, confirm the payin again using Step 2.
 
-| Event                   | Description                                   | Next Steps                                                                                  |
-| ----------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| payin.succeeded         | The customer paid before 24 hours.            | Fulfill the goods or services that the customer purchased                                   |
-| payment\_attempt.failed | The customer did not pay, and the URL expired | Allow the customer to generate a new URL or complete the payment via another payment method |
+| Event                  | Description                                            | Next Steps                                                                                  |
+| ---------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| payin.succeeded        | The customer paid before the expiration of the request | Fulfill the goods or services that the customer purchased                                   |
+| payment_attempt.failed | The customer did not pay, and the URL expired          | Allow the customer to generate a new URL or complete the payment via another payment method |
 
 # Test the Integration
 
 ## Simulating success
 
-Click on `Simulate Success` CTA on the redirect\_url. You will receive a `payin.succeeded` event.
+Click on `Simulate Success` CTA on the redirect_url. You will receive a `payin.succeeded` event.
 
 ## Simulating Failure
 
-Click on  `Simulate failure` CTA on the redirect\_url. You will receive a `payment_attempt.failed` event.
+Click on  `Simulate failure` CTA on the redirect_url. You will receive a `payment_attempt.failed` event.
 
 # Integrating Refunds
 
 You can refund a transaction in two ways - using the [dashboard](https://dashboard.tazapay.com) or using [Refund API](https://docs.tazapay.com/reference/refund-api).
 
-UPI doesnt support partial refunds. 
+`upi_inr_native` supports partial refunds.
 
 ### Refunding using dashboard
 
