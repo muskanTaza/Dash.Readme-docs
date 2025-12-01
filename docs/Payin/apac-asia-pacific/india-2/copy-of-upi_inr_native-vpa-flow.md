@@ -137,9 +137,75 @@ curl --request POST \
 '
 ```
 
-> The buyer will receive a payment request in their UPI app and can authenticate the transaction by entering their UPI PIN.
+<br />
+
+## Step 3: Display the QR code on your screen
+
+After confirming the payin, you will receive the following response
+
+```json
+{
+  "status": "success",
+  "message": "",
+  "data": {
+    "amount": 10000,
+    "amount_paid": 0,
+    "billing_details": null,
+    "cancel_url": "",
+    "cancelled_at": null,
+    "client_token": "I2XZrhJ356-r6nHEj9jlGsL0mdCCQwP04vSF2w7B0aE=",
+    "confirm": true,
+    "created_at": "2024-02-06T10:25:09.333189785Z",
+    "customer": "cus_cn10i0p8ukl9ae235oeg",
+    "customer_details": {
+      "country": "IN",
+      "email": "andrea.lark@me.com",
+      "name": "Andrea Lark",
+      "phone": null
+    },
+    "items": [
+      {
+        "name": "Software Service for Antivirus",
+        "description": "Firewall Antivirus",
+        "amount": 10000,
+        "quantity": 1
+      }
+    ],
+    "id": "pay_cn10i0s6bt2fq1jlr0e0",
+    "invoice_currency": "INR",
+    "latest_payment_attempt": "pat_cn10i0s6bt2fq1jlr0fg",
+    "latest_payment_attempt_data": {
+      "qr_code": "MDAwMjAxMjY1ODAwMDlTRy5QQVlOT1cwMTAxMjAyMTMyMDExMjA3OTdSMDAxMDMwMTAwNDE0MjAyNDAyMDYxODQwMDk1MjA0MDAwMDUzMDM3MDI1NDA2MTAwLjAwNTgwMlNHNTkyM1JFRCBET1QgUEFZTUVOVCBQVEUgTFRENjAwOVNpbmdhcG9yZTYyMjAwMTE2UVIyMDI0MDIwNlM5OTdIODYzMDQyRjA3"
+    },
+    "metadata": null,
+    "object": "payin",
+    "paid_in_excess": false,
+    "partially_paid": false,
+    "payment_attempts": [],
+    "payment_method_details": {
+      "type": "upi_inr_native",
+      "upi_inr_native": {
+        "payer_vpa": "test@bank"
+      }
+    },
+    "reference_id": "",
+    "shipping_details": null,
+    "statement_descriptor": "",
+    "status": "requires_action",
+    "status_description": "",
+    "success_url": "",
+    "transaction_data": [],
+    "transaction_description": "test",
+    "transaction_documents": [],
+    "webhook_url": "https://webhook.site/ref8y92937922"
+  }
+}
+
+```
+
+> The buyer can scan the dynamic UPI QR code using any UPI app and authenticate the transaction by entering their UPI PIN.
 >
-> Note: A UPI Collect request remains valid for 5 minutes. If the buyer does not authorise it within this timeframe, the request will expire.
+> Note: The UPI QR payment request remains valid for 5 minutes. If the buyer does not complete the payment within this timeframe, the QR code will expire.
 
 ## Step 4: Handle post-payment events
 
