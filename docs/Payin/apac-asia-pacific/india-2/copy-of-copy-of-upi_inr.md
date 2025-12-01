@@ -1,5 +1,5 @@
 ---
-title: Copy of Copy of upi_inr
+title: upi_inr (QR Flow)
 excerpt: >-
   UPI (Unified Payments Interface) in India: A revolutionary real-time mobile
   payment system developed by the National Payments Corporation of India (NPCI).
