@@ -5163,7 +5163,11 @@
                         "tracking_details": null,
                         "transaction_description": "Test Payout",
                         "type": "swift",
-                        "on_behalf_of": ""
+                        "on_behalf_of": "",
+                        "logistic_tracking_details": [],
+                        "confirmation_documents": [],
+                        "destination_fx_quote": "fx_d4hu4786bhdq534ritlg",
+                        "quote": ""
                       }
                     }
                   }
@@ -5475,6 +5479,45 @@
                     "on_behalf_of": {
                       "type": "string",
                       "description": "Entity on whose behalf payout is made"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "default": "",
+                      "description": "Quote ID from the payout quote API"
+                    },
+                    "destination_fx_quote": {
+                      "type": "string",
+                      "description": "ID of the quote to use locked exchange for conversion from payout to destination currency"
+                    },
+                    "confirmation_documents": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "format": "json"
+                      }
+                    },
+                    "logistics_tracking_details": {
+                      "type": "array",
+                      "items": {
+                        "properties": {
+                          "logistics_provider": {
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "type": "string"
+                              },
+                              "code": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "tracking_number": {
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "description": "Logistics tracking details of the order"
                     }
                   }
                 }
