@@ -5139,6 +5139,10 @@
                           "object": "fx_transaction"
                         },
                         "id": "pot_crv5u81h1l071n2fk1ng",
+                        "local": {
+                          "fund_transfer_network": ""
+                        },
+                        "logistics_tracking_details":[],
                         "metadata": null,
                         "mt103": "",
                         "object": "payout",
@@ -5156,6 +5160,9 @@
                           "object": "fx_transaction"
                         },
                         "purpose": "PYR001",
+                        "quote":{},
+                        "confirmation_documents": [],
+                        "destination_fx_quote":"fx_d34hc7loipp34fm0",
                         "reference_id": "Test_Ref",
                         "statement_descriptor": "tzp*Test",
                         "status": "processing",
@@ -5549,14 +5556,17 @@
                           },
                           "documents": [],
                           "email": "info@trading.com",
+                          "is_doc_verification_required": false,
                           "name": "T Co., Limited",
                           "name_local": "",
                           "national_identification_number": "",
                           "party_classification": "",
                           "phone": {},
                           "registration_number": "",
+                          "status":"active",
                           "tax_id": "",
-                          "type": "business"
+                          "type": "business",
+                          "verification_status": "succeeded"
                         },
                         "charge_type": "",
                         "confirmation_documents": [],
@@ -5603,6 +5613,7 @@
                         },
                         "payout_quote": "",
                         "purpose": "PYR003",
+                        "quote":"",
                         "reference_id": "",
                         "statement_descriptor": "",
                         "status": "succeeded",
@@ -6599,6 +6610,7 @@
                       "example": 1000000,
                       "description": "Amount of the payout in payout currency"
                     },
+                    "available_balance": 1233333,
                     "balance_transaction": {
                       "type": "string",
                       "example": "btr_fahfaniaf0023902",
@@ -6706,10 +6718,35 @@
                           "example": "",
                           "description": "Email address of the beneficiary"
                         },
+                        "is_doc_verification_required": {
+                          "type": "boolean",
+                          "example": false,
+                          "description": "Indicates if document verification is required for the beneficiary"
+                        },
                         "name": {
                           "type": "string",
                           "example": "Test Account USA",
                           "description": "Name of the payout beneficiary"
+                        },
+                        "name_local": {
+                          "type": "string",
+                          "example": "",
+                          "description": "Local language name of the beneficiary"
+                        },
+                        "national_identification_number": {
+                          "type": "string",
+                          "example": "",
+                          "description": "National ID number of the beneficiary"
+                        },
+                        "party_classification": {
+                          "type": "string",
+                          "example": "third_party",
+                          "description": "Classification of the party (self, third_party, etc.)"
+                        },
+                        "registration_number": {
+                          "type": "string",
+                          "example": "",
+                          "description": "Registration number of the beneficiary (for businesses)"
                         },
                         "phone": {
                           "type": "object",
@@ -6738,6 +6775,11 @@
                       "type": "string",
                       "example": "shared",
                       "description": "Charge type for the payout (e.g., ours, shared, beneficiary)"
+                    },
+                    "confirmation_documents": {
+                      "type": "array",
+                      "example": [],
+                      "description": "List of confirmation documents for the payout"
                     },
                     "created_at": {
                       "type": "string",
@@ -6822,6 +6864,10 @@
                       "type": "string",
                       "example": "pot_ctgia0ng9n1vh5ns81cg",
                       "description": "Unique payout ID"
+                    },
+                    "is_balance_sufficient": false,
+                    "local":{
+
                     },
                     "metadata": {
                       "type": "null",
@@ -10054,6 +10100,11 @@
                       "type": "object",
                       "description": "Contains details about the linked external accounts and their associated information.",
                       "properties": {
+                        "account_holder_name": {
+                          "type": "string",
+                          "description": "Name of the account holder associated with the external account.",
+                          "example": "John Doe"
+                        },
                         "accounts": {
                           "type": "array",
                           "description": "List of external accounts linked to the user or entity.",
@@ -10196,6 +10247,11 @@
                       "type": "object",
                       "description": "Contains detailed information about the currency conversion result.",
                       "properties": {
+                        "amount": {
+                          "type": "integer",
+                          "description": "The amount to be converted from the initial currency, expressed in the smallest currency unit (e.g., cents).",
+                          "example": 1000
+                        },
                         "converted_amount": {
                           "type": "integer",
                           "description": "The amount converted into the final currency, expressed in the smallest currency unit (e.g., cents).",
@@ -10285,6 +10341,8 @@
                               "bank_name",
                               "iban"
                             ],
+                            "fund_transfer_networks": [],
+                            "recommended_fields": {},
                             "required_beneficiary_fields": [],
                             "supported_destinations": [],
                             "transfer_limit": {
@@ -16529,6 +16587,12 @@
                     "summary": "OK",
                     "value": {
                       "id": "poq_aohnraoinrfaoinrao",
+                      "local": {
+                        "fund_transfer_network": ""
+                      },
+                      "local_payment_network": {
+                        "payment_network": ""
+                      },
                       "object": "payout_quote",
                       "payout_type": "local",
                       "holding_info": {
@@ -16560,7 +16624,8 @@
                       "valid_until": "2025-06-23T20:17:00+08:00",
                       "status": "active",
                       "created_at": "2025-06-23T20:16:00+08:00",
-                      "updated_at": "2025-06-23T20:16:00+08:00"
+                      "updated_at": "2025-06-23T20:16:00+08:00",
+                      "wallet":{}
                     }
                   }
                 },
@@ -16960,11 +17025,17 @@
                           "example": "",
                           "description": "Email address of the beneficiary"
                         },
+                        "is_doc_verification_required": {
+                          "type": "boolean",
+                          "example": false,
+                          "description": "Indicates if document verification is required for the beneficiary"
+                        },
                         "name": {
                           "type": "string",
                           "example": "Jackie Morissette",
                           "description": "Full name of the beneficiary"
                         },
+                        "name_local":"",
                         "national_identification_number": {
                           "type": "string",
                           "example": "",
@@ -16986,6 +17057,11 @@
                             }
                           }
                         },
+                        "status": {
+                          "type": "string",
+                          "example": "",
+                          "description": "Current status of the beneficiary"
+                        },
                         "registration_number": {
                           "type": "string",
                           "example": "",
@@ -17000,7 +17076,12 @@
                           "type": "string",
                           "example": "individual",
                           "description": "Type of beneficiary (individual or business)"
-                        }
+                        },
+                        "verification_status": {
+                          "type": "string",
+                          "example": "verified",
+                          "description": "Verification status of the beneficiary"
+                        } 
                       }
                     },
                     "charge_type": {
@@ -17482,7 +17563,7 @@
                       "type": "object",
                       "description": "Contains details about country, currency, amount, and available payment methods.",
                       "properties": {
-                        "country": {
+                        "customer_country": {
                           "type": "string",
                           "description": "Country code (ISO 3166-1 alpha-2) where the payment is being made.",
                           "example": "SG"
@@ -17492,6 +17573,11 @@
                           "description": "Currency of the invoice or payment (ISO 4217 format).",
                           "example": "USD"
                         },
+                        "is_items_required": {
+                          "type": "boolean",
+                          "description": "Indicates if itemized details are required for the payment method.",
+                          "example": false
+                        },
                         "amount": {
                           "type": "integer",
                           "description": "Invoice amount in the smallest currency unit (e.g., cents).",
@@ -17499,6 +17585,7 @@
                           "default": 0
                         },
                         "payment_methods": {
+                          "name":"",
                           "type": "array",
                           "description": "List of available payment methods with corresponding rates, limits, and display details.",
                           "items": {
