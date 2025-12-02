@@ -10029,6 +10029,18 @@
                           "type": "string",
                           "description": "Timestamp indicating when the refund was created (ISO 8601 format).",
                           "example": "2023-07-23 23:59:56"
+                        },
+                        "balance_transaction": {
+                          "type": "string",
+                          "description": "Balance transaction associated with the refund"
+                        },
+                        "reference_id": {
+                          "type": "string",
+                          "description": "Reference id linked to the refund"
+                        },
+                        "holding_currency": {
+                          "type": "string",
+                          "description": "Holding currency to which the refund is credited"
                         }
                       }
                     }
