@@ -9471,6 +9471,13 @@
                           "description": "Additional custom metadata associated with the customer record."
                         }
                       }
+                    },
+                    "reference_id": {
+                      "type": "string",
+                      "description": "Reference id attached to a customer."
+                    },
+                    "risk_rule": {
+                      "type": "string"
                     }
                   }
                 }
