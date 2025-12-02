@@ -17069,7 +17069,7 @@
                         },
                         "is_doc_verification_required": {
                           "type": "string",
-                          "description": "Signifies if  doc verification is required"
+                          "description": "Signifies if doc verification is required"
                         }
                       }
                     },
