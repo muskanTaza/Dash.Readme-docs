@@ -10374,7 +10374,18 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{\n  \"status\": \"success\",\n  \"message\": \"\",\n  \"data\": {\n    \"converted_amount\": 84902,\n    \"exchange_rate\": 84.90246799733201,\n    \"final_currency\": \"INR\",\n    \"initial_currency\": \"USD\",\n    \"timestamp\": \"2025-01-09T09:51:40.229346267Z\"\n  }\n}"
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "amount": 100,
+                        "converted_amount": 84902,
+                        "exchange_rate": 84.90246799733201,
+                        "final_currency": "INR",
+                        "initial_currency": "USD",
+                        "timestamp": "2025-01-09T09:51:40.229346267Z"
+                      }
+                    }
                   }
                 },
                 "schema": {
@@ -10418,6 +10429,10 @@
                           "type": "string",
                           "description": "Timestamp indicating when the FX conversion was performed (ISO 8601 format).",
                           "example": "2025-01-09T09:51:40.229346267Z"
+                        },
+                        "amount": {
+                          "type": "number",
+                          "description": "The amount that needs to be exchanged"
                         }
                       }
                     }
