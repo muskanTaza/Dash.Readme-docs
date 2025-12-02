@@ -10228,7 +10228,31 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{\n  \"status\": \"success\",\n  \"message\": \"\",\n  \"data\": {\n    \"accounts\": [\n      {\n        \"bank\": {\n          \"account_number\": \"361023\",\n          \"account_type\": \"checking\",\n          \"bank_codes\": {\n            \"bank_code\": \"237\",\n            \"branch_code\": \"345\"\n          },\n          \"bank_name\": \"BCO BRADESCO S.A.\",\n          \"currency\": \"BRL\"\n        },\n        \"type\": \"bank\"\n      }\n    ],\n    \"country\": \"BR\",\n    \"object\": \"external_account_details\",\n    \"tax_id\": \"03655157363\"\n  }\n}"
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "accounts": [
+                          {
+                            "bank": {
+                              "account_number": "361023",
+                              "account_type": "checking",
+                              "account_holder_name": "muskan",
+                              "bank_codes": {
+                                "bank_code": "237",
+                                "branch_code": "345"
+                              },
+                              "bank_name": "BCO BRADESCO S.A.",
+                              "currency": "BRL"
+                            },
+                            "type": "bank"
+                          }
+                        ],
+                        "country": "BR",
+                        "object": "external_account_details",
+                        "tax_id": "03655157363"
+                      }
+                    }
                   }
                 },
                 "schema": {
