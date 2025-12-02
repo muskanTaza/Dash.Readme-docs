@@ -17774,6 +17774,10 @@
                         "stablecoin_usdt"
                       ],
                       "description": "Type of collect"
+                    },
+                    "on_behalf_of": {
+                      "type": "string",
+                      "description": "Id of the entity on behalf of which the collect is created"
                     }
                   }
                 },
