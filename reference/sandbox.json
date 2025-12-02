@@ -10293,6 +10293,10 @@
                                     "type": "string",
                                     "description": "Currency of the external account (ISO 4217 format).",
                                     "example": "BRL"
+                                  },
+                                  "account_holder_name": {
+                                    "type": "string",
+                                    "description": "Name of the account holder"
                                   }
                                 }
                               },
