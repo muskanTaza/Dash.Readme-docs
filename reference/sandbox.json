@@ -992,9 +992,9 @@
                     "description": "Configure the description of the payment on your customer's statements. It must contain at least one letter and be 1-22 characters long"
                   },
                   "payment_method_details": {
-                    "type": "string",
+                    "type": "object",
                     "description": "Pass the data specific to a payment method to confirm a payin and create a payment attempt",
-                    "format": "json"
+                    "properties": {}
                   },
                   "session_id": {
                     "type": "string",
