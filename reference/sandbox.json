@@ -6546,7 +6546,96 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{\n  \"status\": \"success\",\n  \"message\": \"\",\n  \"data\": {\n    \"amount\": 1000000,\n    \"balance_transaction\": \"btr_fahfaniaf0023902\",\n    \"beneficiary\": \"bnf_cta4erf3l65o6mqvace0\",\n    \"beneficiary_details\": {\n      \"address\": null,\n      \"destination\": \"\",\n      \"destination_details\": {\n        \"bank\": {\n          \"account_number\": \"6492749274\",\n          \"account_type\": \"\",\n          \"bank_codes\": {\n            \"aba_code\": \"AIOHFAONF\",\n            \"swift_code\": \"SWIFT CODE\"\n          },\n          \"bank_name\": \"Bank of America\",\n          \"branch_name\": \"\",\n          \"country\": \"US\",\n          \"currency\": \"USD\",\n          \"firc_required\": false,\n          \"purpose_code\": \"\"\n        },\n        \"type\": \"bank\"\n      },\n      \"documents\": [],\n      \"email\": \"\",\n      \"name\": \"Test Account USA\",\n      \"phone\": {\n        \"calling_code\": \"1\"\n      },\n      \"tax_id\": \"\",\n      \"type\": \"business\"\n    },\n    \"charge_type\": \"shared\",\n    \"created_at\": \"2024-12-17T07:15:14.691660Z\",\n    \"currency\": \"USD\",\n    \"documents\": [\n      {\n        \"id\": \"doc_ctgia0ng9n1vh5ns81f0\",\n        \"type\": \"invoice\",\n        \"url\": \"https://s3.ap-southeast-1.amazonaws.com/tazapay-payout-document/pot_ctgia0ng9n1vh5ns81cg/1734419711360340856_image%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAUGJYD3OSSENYIX45%2F20241217%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20241217T072015Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHYaDmFwLXNvdXRoZWFzdC0xIkcwRQIhAM9um7eR7Mr0x9x7nPCUHqNfsNQOl%2FGYlyBCZU25t1ZaAiA1Qg%2BnFaZXl0ynXNu9cEvoGFXfz86d%2B2CSrPacMzDaOSr0Awg%2FEAEaDDI4ODQxNzM3MzA5MyIM41LZ42vlF4tAc69tKtED12ChC8dNuaNE3xjx6BuhDm6SFBy58FENrzdHcI%2FBV2AA1cjmom4CzMLgXvv29Sf8Iy7s12Kxq3dz5pct5ya9ZVzh8iFjlIX52iQo%2BslhQNiCUKrQqEpwLMiUmDyAb7OV4tARhttrSvbLUOC51KTdyIS4bKqJrncHKzDlzTIRoO9PdM%2BPEFFXUY786C2a23W1sM5GqgnhKd1EUb1iN3AxO7fd7wPhXC6o%2Fym6Wh2TNTGz0uaxXHtLzcDAZJwMNEeKQDaa1YD%2BG3xWSN9m6yyysaDoGewhqrUAeqr1AQvTR47sbdIkFKn7m%2B6wDjK86cQNxpHU61FpgCYwbXBNCaMKqIrXcmamSAiK8m7C4BfxWlrCz7iQXqR3vKGf3Y%2BHhqpkXGk0mHRk%2FI4VWWAeoDxEogdfarZ%2FMk1BEAThH689NDSiCwrf%2FcWw3B0AlRfXWuy5oKyXgDPlku9WYzN7XnbR3ACCOW8NbzJ0nSCiZb71932okKiEpYyrU10BivAboncdGfHpwcQerBlz40ESSpVzKJFFaIRL6LALRzd8ybzofdFgzs5GAoU%2Bbbn6ZqbGXFIGzsoIh4umuOMMEbhoCJnY3np%2FS5pdSjqaZ%2FhKLMipnAoeMNKuhLsGOqUBBIcJEaO3lTmzl9%2B3Kwkun6q5OVe0fLnarcASVwfK12G4TQEfKimM9EbAoOtGqSbIduTaDaW8PbJndpSVHue%2FC%2BeAgjGhIC%2FoUFpUxoGoVuxBdI%2BAuHEf%2FNKnplTjBTT2YBraCnEGjiRLE38owzZ8M1fU3Iymp9KlBTNhCCkp%2BZKPhUD81sv0T3Rh%2FQTSygt3ML9wakZBxvTFosGDKy%2BIbAUUxQ6h&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B&response-content-type=image%2Fpng&x-id=GetObject&X-Amz-Signature=8be0fdb60f69daad7d4cb4b92b2790b5ff3e8f5ef8a5ecebe6f84140a211ec91\"\n      }\n    ],\n    \"holding_currency\": \"SEK\",\n    \"holding_fx_transaction\": {\n      \"exchange_rate\": 0.087096,\n      \"final\": {\n        \"amount\": 1000000,\n        \"currency\": \"USD\"\n      },\n      \"id\": \"fx_ctgia0lpk5p8ci902fsg\",\n      \"initial\": {\n        \"amount\": 11481567,\n        \"currency\": \"SEK\"\n      },\n      \"object\": \"fx_transaction\"\n    },\n    \"id\": \"pot_ctgia0ng9n1vh5ns81cg\",\n    \"metadata\": null,\n    \"mt103\": \"\",\n    \"object\": \"payout\",\n    \"on_behalf_of\": \"\",\n    \"payout_fx_transaction\": {\n      \"exchange_rate\": 1,\n      \"final\": {\n        \"amount\": 1000000,\n        \"currency\": \"USD\"\n      },\n      \"id\": \"fx_ctgia0lpk5p8ci902fs0\",\n      \"initial\": {\n        \"amount\": 1000000,\n        \"currency\": \"USD\"\n      },\n      \"object\": \"fx_transaction\"\n    },\n    \"purpose\": \"PYR002\",\n    \"reference_id\": \"\",\n    \"statement_descriptor\": \"\",\n    \"status\": \"processing\",\n    \"status_description\": \"\",\n    \"tracking_details\": null,\n    \"transaction_description\": \"\",\n    \"type\": \"swift\"\n  }\n}"
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "amount": 1000000,
+                        "available_balance": -1038,
+                        "is_balance_sufficient": false,
+                        "balance_transaction": "btr_fahfaniaf0023902",
+                        "beneficiary": "bnf_cta4erf3l65o6mqvace0",
+                        "beneficiary_details": {
+                          "address": null,
+                          "destination": "",
+                          "destination_details": {
+                            "bank": {
+                              "account_number": "6492749274",
+                              "account_type": "",
+                              "bank_codes": {
+                                "aba_code": "AIOHFAONF",
+                                "swift_code": "SWIFT CODE"
+                              },
+                              "bank_name": "Bank of America",
+                              "branch_name": "",
+                              "country": "US",
+                              "currency": "USD",
+                              "firc_required": false,
+                              "purpose_code": ""
+                            },
+                            "type": "bank"
+                          },
+                          "documents": [],
+                          "email": "",
+                          "name": "Test Account USA",
+                          "phone": {
+                            "calling_code": "1"
+                          },
+                          "tax_id": "",
+                          "type": "business"
+                        },
+                        "charge_type": "shared",
+                        "created_at": "2024-12-17T07:15:14.691660Z",
+                        "currency": "USD",
+                        "documents": [
+                          {
+                            "id": "doc_ctgia0ng9n1vh5ns81f0",
+                            "type": "invoice",
+                            "url": "https://s3.ap-southeast-1.amazonaws.com/tazapay-payout-document/pot_ctgia0ng9n1vh5ns81cg/1734419711360340856_image%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAUGJYD3OSSENYIX45%2F20241217%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20241217T072015Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHYaDmFwLXNvdXRoZWFzdC0xIkcwRQIhAM9um7eR7Mr0x9x7nPCUHqNfsNQOl%2FGYlyBCZU25t1ZaAiA1Qg%2BnFaZXl0ynXNu9cEvoGFXfz86d%2B2CSrPacMzDaOSr0Awg%2FEAEaDDI4ODQxNzM3MzA5MyIM41LZ42vlF4tAc69tKtED12ChC8dNuaNE3xjx6BuhDm6SFBy58FENrzdHcI%2FBV2AA1cjmom4CzMLgXvv29Sf8Iy7s12Kxq3dz5pct5ya9ZVzh8iFjlIX52iQo%2BslhQNiCUKrQqEpwLMiUmDyAb7OV4tARhttrSvbLUOC51KTdyIS4bKqJrncHKzDlzTIRoO9PdM%2BPEFFXUY786C2a23W1sM5GqgnhKd1EUb1iN3AxO7fd7wPhXC6o%2Fym6Wh2TNTGz0uaxXHtLzcDAZJwMNEeKQDaa1YD%2BG3xWSN9m6yyysaDoGewhqrUAeqr1AQvTR47sbdIkFKn7m%2B6wDjK86cQNxpHU61FpgCYwbXBNCaMKqIrXcmamSAiK8m7C4BfxWlrCz7iQXqR3vKGf3Y%2BHhqpkXGk0mHRk%2FI4VWWAeoDxEogdfarZ%2FMk1BEAThH689NDSiCwrf%2FcWw3B0AlRfXWuy5oKyXgDPlku9WYzN7XnbR3ACCOW8NbzJ0nSCiZb71932okKiEpYyrU10BivAboncdGfHpwcQerBlz40ESSpVzKJFFaIRL6LALRzd8ybzofdFgzs5GAoU%2Bbbn6ZqbGXFIGzsoIh4umuOMMEbhoCJnY3np%2FS5pdSjqaZ%2FhKLMipnAoeMNKuhLsGOqUBBIcJEaO3lTmzl9%2B3Kwkun6q5OVe0fLnarcASVwfK12G4TQEfKimM9EbAoOtGqSbIduTaDaW8PbJndpSVHue%2FC%2BeAgjGhIC%2FoUFpUxoGoVuxBdI%2BAuHEf%2FNKnplTjBTT2YBraCnEGjiRLE38owzZ8M1fU3Iymp9KlBTNhCCkp%2BZKPhUD81sv0T3Rh%2FQTSygt3ML9wakZBxvTFosGDKy%2BIbAUUxQ6h&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B&response-content-type=image%2Fpng&x-id=GetObject&X-Amz-Signature=8be0fdb60f69daad7d4cb4b92b2790b5ff3e8f5ef8a5ecebe6f84140a211ec91"
+                          }
+                        ],
+                        "holding_currency": "SEK",
+                        "holding_fx_transaction": {
+                          "exchange_rate": 0.087096,
+                          "final": {
+                            "amount": 1000000,
+                            "currency": "USD"
+                          },
+                          "id": "fx_ctgia0lpk5p8ci902fsg",
+                          "initial": {
+                            "amount": 11481567,
+                            "currency": "SEK"
+                          },
+                          "object": "fx_transaction"
+                        },
+                        "id": "pot_ctgia0ng9n1vh5ns81cg",
+                        "metadata": null,
+                        "mt103": "",
+                        "object": "payout",
+                        "on_behalf_of": "",
+                        "payout_fx_transaction": {
+                          "exchange_rate": 1,
+                          "final": {
+                            "amount": 1000000,
+                            "currency": "USD"
+                          },
+                          "id": "fx_ctgia0lpk5p8ci902fs0",
+                          "initial": {
+                            "amount": 1000000,
+                            "currency": "USD"
+                          },
+                          "object": "fx_transaction"
+                        },
+                        "purpose": "PYR002",
+                        "reference_id": "",
+                        "statement_descriptor": "",
+                        "status": "processing",
+                        "status_description": "",
+                        "tracking_details": null,
+                        "transaction_description": "",
+                        "type": "swift"
+                      }
+                    }
                   }
                 },
                 "schema": {
@@ -6893,6 +6982,13 @@
                       "type": "string",
                       "example": "swift",
                       "description": "Type of payout (e.g., swift, local)"
+                    },
+                    "available_balance": {
+                      "type": "number",
+                      "description": "Available balance in your Tazapay account in primary holding currency."
+                    },
+                    "is_balance_sufficient": {
+                      "type": "boolean"
                     }
                   }
                 }
