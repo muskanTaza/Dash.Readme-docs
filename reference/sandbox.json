@@ -5665,104 +5665,7 @@
                   },
                   "Local Bank Payout": {
                     "summary": "Local Bank Payout",
-                    "value": {
-                      "status": "success",
-                      "message": "",
-                      "data": {
-                        "amount": 3000000,
-                        "balance_transaction": "btr_dhuvflvi5frlneafr0",
-                        "beneficiary": "bnf_d0dla9u8dpp4edio0",
-                        "beneficiary_details": {
-                          "address": null,
-                          "date_of_birth": "",
-                          "destination": "",
-                          "destination_details": {
-                            "bank": {
-                              "account_type": "",
-                              "bank_codes": {
-                                "swift_code": "FBDEFF"
-                              },
-                              "bank_name": "ER VOLKSBANK EG",
-                              "branch_name": "",
-                              "country": "DE",
-                              "currency": "EUR",
-                              "firc_required": false,
-                              "iban": "DE535019045650474185",
-                              "purpose_code": "",
-                              "transfer_type": "any"
-                            },
-                            "type": "bank"
-                          },
-                          "documents": [],
-                          "email": "",
-                          "name": "GMBH",
-                          "name_local": "",
-                          "national_identification_number": "",
-                          "party_classification": "",
-                          "phone": {
-                            "calling_code": "49"
-                          },
-                          "registration_number": "",
-                          "tax_id": "",
-                          "type": "business"
-                        },
-                        "charge_type": "",
-                        "confirmation_documents": [],
-                        "created_at": "2025-09-16T08:27:41.832790Z",
-                        "currency": "EUR",
-                        "destination_fx_quote": "fx_d34hc7loipp34fm0",
-                        "documents": [],
-                        "holding_currency": "USD",
-                        "holding_fx_quote": "fx_d34hc7loipp34fmg",
-                        "holding_fx_transaction": {
-                          "exchange_rate": 0.846438,
-                          "final": {
-                            "amount": 3000000,
-                            "currency": "EUR"
-                          },
-                          "id": "fx_d34flc7loipp34fmg",
-                          "initial": {
-                            "amount": 3544266,
-                            "currency": "USD"
-                          },
-                          "object": "fx_transaction"
-                        },
-                        "id": "pot_d34hlvi5frlneafo0",
-                        "local": {
-                          "fund_transfer_network": ""
-                        },
-                        "logistics_tracking_details": [],
-                        "metadata": null,
-                        "mt103": "",
-                        "object": "payout",
-                        "on_behalf_of": "",
-                        "payout_fx_transaction": {
-                          "exchange_rate": 1,
-                          "final": {
-                            "amount": 3000000,
-                            "currency": "EUR"
-                          },
-                          "id": "fx_d34huvflc7pp34fm0",
-                          "initial": {
-                            "amount": 3000000,
-                            "currency": "EUR"
-                          },
-                          "object": "fx_transaction"
-                        },
-                        "payout_quote": "",
-                        "purpose": "PYR001",
-                        "reference_id": "",
-                        "statement_descriptor": "",
-                        "status": "succeeded",
-                        "status_description": "",
-                        "tracking_details": {
-                          "tracking_number": "098771252590P9A",
-                          "tracking_type": "UTR"
-                        },
-                        "transaction_description": "Payment for logistic services 9-09",
-                        "type": "local"
-                      }
-                    }
+                    "value": "{\n  \"status\": \"success\",\n  \"message\": \"\",\n  \"data\": {\n    \"amount\": 3000000,\n    \"balance_transaction\": \"btr_dhuvflvi5frlneafr0\",\n    \"beneficiary\": \"bnf_d0dla9u8dpp4edio0\",\n    \"beneficiary_details\": {\n      \"address\": null,\n      \"date_of_birth\": \"\",\n      \"destination\": \"\",\n      \"destination_details\": {\n        \"bank\": {\n          \"account_type\": \"\",\n          \"bank_codes\": {\n            \"swift_code\": \"FBDEFF\"\n          },\n          \"bank_name\": \"ER VOLKSBANK EG\",\n          \"branch_name\": \"\",\n          \"country\": \"DE\",\n          \"currency\": \"EUR\",\n          \"firc_required\": false,\n          \"iban\": \"DE535019045650474185\",\n          \"purpose_code\": \"\",\n          \"transfer_type\": \"any\"\n        },\n        \"type\": \"bank\"\n      },\n      \"documents\": [],\n      \"email\": \"\",\n      \"name\": \"GMBH\",\n      \"name_local\": \"\",\n      \"national_identification_number\": \"\",\n      \"party_classification\": \"\",\n      \"phone\": {\n        \"calling_code\": \"49\"\n      },\n      \"registration_number\": \"\",\n      \"tax_id\": \"\",\n      \"type\": \"business\",\n      \"status\": \"active\",\n\t\t\t\"verification_status\": \"succeeded\"\n    },\n    \"charge_type\": \"\",\n    \"confirmation_documents\": [],\n    \"created_at\": \"2025-09-16T08:27:41.832790Z\",\n    \"currency\": \"EUR\",\n    \"destination_fx_quote\": \"fx_d34hc7loipp34fm0\",\n    \"documents\": [],\n    \"holding_currency\": \"USD\",\n    \"holding_fx_quote\": \"fx_d34hc7loipp34fmg\",\n    \"holding_fx_transaction\": {\n      \"exchange_rate\": 0.846438,\n      \"final\": {\n        \"amount\": 3000000,\n        \"currency\": \"EUR\"\n      },\n      \"id\": \"fx_d34flc7loipp34fmg\",\n      \"initial\": {\n        \"amount\": 3544266,\n        \"currency\": \"USD\"\n      },\n      \"object\": \"fx_transaction\"\n    },\n    \"id\": \"pot_d34hlvi5frlneafo0\",\n    \"local\": {\n      \"fund_transfer_network\": \"\"\n    },\n    \"logistics_tracking_details\": [],\n    \"metadata\": null,\n    \"mt103\": \"\",\n    \"object\": \"payout\",\n    \"on_behalf_of\": \"\",\n    \"payout_fx_transaction\": {\n      \"exchange_rate\": 1,\n      \"final\": {\n        \"amount\": 3000000,\n        \"currency\": \"EUR\"\n      },\n      \"id\": \"fx_d34huvflc7pp34fm0\",\n      \"initial\": {\n        \"amount\": 3000000,\n        \"currency\": \"EUR\"\n      },\n      \"object\": \"fx_transaction\"\n    },\n    \"payout_quote\": \"\",\n    \"purpose\": \"PYR001\",\n    \"reference_id\": \"\",\n    \"statement_descriptor\": \"\",\n    \"status\": \"succeeded\",\n    \"status_description\": \"\",\n    \"tracking_details\": {\n      \"tracking_number\": \"098771252590P9A\",\n      \"tracking_type\": \"UTR\"\n    },\n    \"transaction_description\": \"Payment for logistic services 9-09\",\n    \"type\": \"local\"\n  }\n},\""
                   },
                   "Local Payment Network Payout": {
                     "summary": "Local Payment Network Payout",
@@ -6231,6 +6134,14 @@
                                 "individual"
                               ],
                               "example": "business"
+                            },
+                            "status": {
+                              "type": "string",
+                              "description": "The status of the beneficiary"
+                            },
+                            "verification_status": {
+                              "type": "string",
+                              "description": "The verification status of the beneficiary"
                             }
                           }
                         },
