@@ -17054,6 +17054,22 @@
                           "type": "string",
                           "example": "individual",
                           "description": "Type of beneficiary (individual or business)"
+                        },
+                        "name_local": {
+                          "type": "string",
+                          "description": "Name of the beneficiary in local language"
+                        },
+                        "status": {
+                          "type": "string",
+                          "description": "status of the beneficiary"
+                        },
+                        "verification_status": {
+                          "type": "string",
+                          "description": "Verification status of beneficiary"
+                        },
+                        "is_doc_verification_required": {
+                          "type": "string",
+                          "description": "Signifies if  doc verification is required"
                         }
                       }
                     },
