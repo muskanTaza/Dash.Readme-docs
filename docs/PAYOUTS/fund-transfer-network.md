@@ -30,4 +30,41 @@ To achieve our goal of making payouts more and more predictable, we now allow us
 
 Checkout the API reference for complete API request and response.
 
-<br />
+## Get the list of fund transfer networks available in a particular corridor
+
+You can access the complete list of fund transfer networks available in a particular corridor through the [Payout metadata API](https://docs.tazapay.com/reference/payout-bank#/). Access `payout_method.fund_transfer_networks` for a `payout_type` equals to local to get the details.
+
+```json
+"fund_transfer_networks": [
+  {
+    "additional_information": "",
+    "name": "imps",
+    "remitter_preference_support": true,
+    "transfer_limit": {
+      "currency": "INR",
+      "maximum": 152739587,
+      "minimum": 90
+    }
+  },
+  {
+    "additional_information": "",
+    "name": "neft",
+    "remitter_preference_support": true,
+    "transfer_limit": {
+      "currency": "INR",
+      "maximum": 152739587,
+      "minimum": 90
+    }
+  },
+  {
+    "additional_information": "",
+    "name": "rtgs",
+    "remitter_preference_support": true,
+    "transfer_limit": {
+      "currency": "INR",
+      "maximum": 152739587,
+      "minimum": 90
+    }
+  }
+]
+```
