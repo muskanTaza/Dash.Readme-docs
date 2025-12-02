@@ -10523,6 +10523,11 @@
                               "iban"
                             ],
                             "required_beneficiary_fields": [],
+                            "recommended_fields": {
+                              "recommended_bank_codes": [],
+                              "recommended_bank_fields": [],
+                              "recommended_beneficiary_fields": []
+                            },
                             "supported_destinations": [],
                             "transfer_limit": {
                               "currency": "EUR",
@@ -10685,6 +10690,33 @@
                                     "type": "integer",
                                     "description": "Minimum allowable payout amount in the smallest currency unit (e.g., cents).",
                                     "example": 130
+                                  }
+                                }
+                              },
+                              "recommended_fields": {
+                                "type": "object",
+                                "description": "These are conditionally required fields. Recommend to add them to make your payouts compatible with all our PSPs and hence lower the failure rates.",
+                                "properties": {
+                                  "recommended_bank_codes": {
+                                    "type": "array",
+                                    "description": "Recommended Bank codes",
+                                    "items": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "recommended_bank_fields": {
+                                    "type": "array",
+                                    "description": "Recommended Bank Fields",
+                                    "items": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "recommended_beneficiary_fields": {
+                                    "type": "array",
+                                    "description": "Recommended Beneficiary Fields",
+                                    "items": {
+                                      "type": "string"
+                                    }
                                   }
                                 }
                               }
