@@ -8,13 +8,19 @@ hidden: true
 metadata:
   robots: index
 ---
-To achieve our goal of making payouts more and more predictable, we now allow users to specify a fund transfer network in case of a local payout. You can do so by both API as well as the dashboard.
+To achieve our goal of making payouts more and more predictable, we now allow users to specify a fund transfer network in case of a local payout. For example, 
+
+* IMPS, NEFT, RTGS are the fund transfer networks that we support for INR
+* SEPA, SEPA Instant, Target2 are the fund transfer networks that we support for EUR
+* Fedwire and FedACH are the fund transfer networks that we support for USD
+
+You can add FTN for a payout by both API as well as the dashboard.
 
 ## Dashboard
 
 1. Click on `Create Payout`under the Payouts tab in the merchant dashboard.
 2. Select the beneficiary for the payout.
-3. Enter the payout amount and currency, once you do, you will get an option to select the fund transfer network
+3. Enter the payout amount and currency, once you do, you will get an option to select the fund transfer network that can be used to clear this payout.
 
 <Image border={false} src="https://files.readme.io/d5e55f4888a3273a18f9f719d7038f869241a64de413c1dcfa25045410727c68-Screenshot_2025-12-02_at_2.03.59PM.png" />
 
