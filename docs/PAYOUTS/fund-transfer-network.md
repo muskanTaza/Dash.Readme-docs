@@ -1,7 +1,7 @@
 ---
 title: Fund Transfer Network
 excerpt: >-
-  Fund transfer network is the underlying payment clearing network used to
+  Fund transfer network (FTN) is the underlying payment clearing network used to
   process your local payout. FTN affects payout speed, limits, cutoffs etc.
 deprecated: false
 hidden: true
