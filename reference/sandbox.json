@@ -19021,33 +19021,39 @@
           },
           {
             "in": "query",
-            "name": "created",
+            "name": "created.gt",
             "schema": {
-              "type": "object",
-              "properties": {
-                "gt": {
-                  "type": "string",
-                  "format": "date-time",
-                  "description": "greater than"
-                },
-                "gte": {
-                  "type": "string",
-                  "format": "date-time",
-                  "description": "greater than equal to"
-                },
-                "lt": {
-                  "type": "string",
-                  "format": "date-time",
-                  "description": "less than"
-                },
-                "lte": {
-                  "type": "string",
-                  "format": "date-time",
-                  "description": "less than equal to"
-                }
-              }
+              "type": "string",
+              "format": "date-time"
             },
-            "description": "Returns balance transactions that were created during the time interval"
+            "description": "Returns balance transactions created after this timestamp (greater than)"
+          },
+          {
+            "in": "query",
+            "name": "created.gte",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "description": "Returns balance transactions created on or after this timestamp (greater than or equal to)"
+          },
+          {
+            "in": "query",
+            "name": "created.lt",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "description": "Returns balance transactions created before this timestamp (less than)"
+          },
+          {
+            "in": "query",
+            "name": "created.lte",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "description": "Returns balance transactions created on or before this timestamp (less than or equal to)"
           }
         ]
       }
