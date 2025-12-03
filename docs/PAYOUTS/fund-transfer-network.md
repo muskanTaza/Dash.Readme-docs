@@ -14,7 +14,7 @@ To achieve our goal of making payouts more and more predictable, we now allow us
 
 1. Click on `Create Payout`under the Payouts tab in the merchant dashboard.
 2. Select the beneficiary for the payout.
-3. Enter the payout amount and currency, one you do, you will get an option to select the fund transfer network
+3. Enter the payout amount and currency, once you do, you will get an option to select the fund transfer network
 
 <Image border={false} src="https://files.readme.io/d5e55f4888a3273a18f9f719d7038f869241a64de413c1dcfa25045410727c68-Screenshot_2025-12-02_at_2.03.59PM.png" />
 
