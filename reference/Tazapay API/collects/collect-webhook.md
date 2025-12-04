@@ -203,7 +203,7 @@ metadata:
 
 ### Wallet
 
-```
+```json
 {
   "type": "collect.failed",
   "id": "evt_cus74j6228ka51i3glog",
