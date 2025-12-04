@@ -17,42 +17,56 @@ metadata:
 
 ### Virtual Account
 
-```Text JSON
+```json JSON
 {
   "type": "collect.succeeded",
-  "id": "evt_cn1m86nnt3hkq7385qd0",
+  "id": "evt_d30mfcg3obm733raoh7g",
   "object": "event",
-  "created_at": "2024-02-07T11:06:02.538953779Z",
+  "created_at": "2025-09-10T11:57:38.761234462Z",
   "data": {
-    "metadata": {},
-    "created_at": "2024-02-07T11:06:00.421853Z",
+    "id": "col_d30mfargpkanp3hrmqhg",
+    "object": "collect",
+    "amount": 10000,
+    "currency": "SGD",
+    "status": "succeeded",
+    "type": "local_bank_transfer_sgd",
     "payer_details": {
-      "name": "Hrithik Agarwal",
+      "name": "John Doe",
       "payer_bank": {
-        "account_number":"9876542321",
-        "name":"State Bank of Mars",
-        "address":{
-          "line1":"Address Line 1",
-          "line2":"Address Line 2",
-          "city":"City",
-          "state":"state",
-          "country":"country",
-          "postal_code":"postal code"
-        },
-        "bank_codes":{
-          "swift_code":"SBM001"
+        "account_number": "",
+        "name": "",
+        "address": null,
+        "bank_codes": {
+          "swift_code": "sdasd93e"
         }
       },
-      "reference_id": "reffffff",
-      "additional_information": "Additional Information for the transaction"
+      "reference_id": "",
+      "additional_information": ""
     },
-    "id": "col_cn1m8651ed8dn2517esg",
-    "object": "collect",
-    "currency": "USD",
-    "status": "succeeded",
-    "type": "wire_transfer",
-    "destination": "cca_uafanfianknon792nfak",
-    "amount": 100000
+    "destination": "cva_d3006st6pi1o9ggqkuh0",
+    "metadata": {},
+    "created_at": "2025-09-10T11:57:31.967513Z",
+    "destination_details": {
+      "type": "virtual_account",
+      "virtual_account": {
+        "account_holder_name": "Tazapay Pte Ltd",
+        "account_number": "RS0001",
+        "bank_address": null,
+        "bank_codes": {},
+        "bank_branch": "",
+        "bank_name": "",
+        "id": "cva_d3006st6pi1o9ggqkuh0",
+        "object": "virtual_account",
+        "currencies": [
+          "SGD"
+        ],
+        "iban": "1233"
+      }
+    },
+    "holding_currency": "THB",
+    "balance_transaction": "btr_d30mfcjgpkanp3hrmql0",
+    "on_behalf_of": "",
+    "tracking_details": null
   }
 }
 ```
