@@ -49,18 +49,27 @@ metadata:
     "destination_details": {
       "type": "virtual_account",
       "virtual_account": {
-        "account_holder_name": "Tazapay Pte Ltd",
-        "account_number": "RS0001",
-        "bank_address": null,
-        "bank_codes": {},
-        "bank_branch": "",
-        "bank_name": "",
-        "id": "cva_d3006st6pi1o9ggqkuh0",
-        "object": "virtual_account",
+        "account_holder_name": "OM Grand Limited",
+        "account_number": "0109866363",
+        "bank_address": {
+          "address_line_1": "",
+          "address_line_2": "",
+          "city": "",
+          "country": "Singapore",
+          "postal_code": "",
+          "state": ""
+        },
+        "bank_branch": "8 MARINA BOULEVARD, 27-01, MARINA BAY FINANCIAL CENTRE",
+        "bank_codes": {
+            "swift_code": "SLSGO2XXX"
+         },
+        "bank_name": "STANDARD BANK LIMITED",
         "currencies": [
-          "SGD"
-        ],
-        "iban": "1233"
+            "SGD"
+         ],
+        "iban": "",
+        "id": "cva_d2dgk0552psfuj1he0",
+        "object": "virtual_account"
       }
     },
     "holding_currency": "THB",
@@ -125,7 +134,7 @@ metadata:
 
 ### Virtual Account
 
-```Text JSON
+```json JSON
 {
   "type": "collect.failed",
   "id": "evt_cn1m86nnt3jbkq7385qd0",
@@ -151,12 +160,39 @@ metadata:
           "swift_code":"SBM001"
         }
       },
-      "reference_id": "reffffff",
+      "reference_id": "ref",
       "additional_information": "Additional Information for the transaction"
     },
+		"destination_details": {
+      "type": "virtual_account",
+      "virtual_account": {
+        "account_holder_name": "OM Grand Limited",
+        "account_number": "0109866363",
+        "bank_address": {
+          "address_line_1": "",
+          "address_line_2": "",
+          "city": "",
+          "country": "Singapore",
+          "postal_code": "",
+          "state": ""
+        },
+        "bank_branch": "8 MARINA BOULEVARD, 27-01, MARINA BAY FINANCIAL CENTRE",
+        "bank_codes": {
+                "swift_code": "SLSGO2XXX"
+              },
+        "bank_name": "STANDARD BANK LIMITED",
+        "currencies": [
+           "SGD"
+         ],
+        "iban": "",
+        "id": "cva_d2dgk0552psfuj1he0",
+        "object": "virtual_account"
+      }
+     },
     "id": "col_cn1m8651ed8dn2517esg",
     "object": "collect",
     "currency": "USD",
+		"holding_currency" : "INR",
     "status": "failed",
     "type": "wire_transfer",
     "destination": "cca_uafanfianknon792nfak",
@@ -219,7 +255,7 @@ metadata:
 
 ### Virtual Account
 
-```Text JSON
+```json JSON
 {
   "type": "collect.on_hold",
   "id": "evt_cn1m86nnt3jbkq7385qd0",
@@ -248,9 +284,36 @@ metadata:
       "reference_id": "reffffff",
       "additional_information": "Additional Information for the transaction"
     },
+		"destination_details": {
+      "type": "virtual_account",
+      "virtual_account": {
+        "account_holder_name": "OM Grand Limited",
+        "account_number": "0109866363",
+        "bank_address": {
+          "address_line_1": "",
+          "address_line_2": "",
+          "city": "",
+          "country": "Singapore",
+          "postal_code": "",
+          "state": ""
+        },
+        "bank_branch": "8 MARINA BOULEVARD, 27-01, MARINA BAY FINANCIAL CENTRE",
+        "bank_codes": {
+            "swift_code": "SLSGO2XXX"
+         },
+        "bank_name": "STANDARD BANK LIMITED",
+        "currencies": [
+            "SGD"
+         ],
+        "iban": "",
+        "id": "cva_d2dgk0552psfuj1he0",
+        "object": "virtual_account"
+      }
+     },
     "id": "col_cn1m8651ed8dn2517esg",
     "object": "collect",
     "currency": "USD",
+		"holding_currency" : "INR",
     "status": "on_hold",
     "type": "wire_transfer",
     "destination": "cca_uafanfianknon792nfak",
@@ -343,6 +406,32 @@ metadata:
           "swift_code":"SBM001"
         }
       },
+			"destination_details": {
+        "type": "virtual_account",
+        "virtual_account": {
+          "account_holder_name": "OM Grand Limited",
+          "account_number": "0109866363",
+          "bank_address": {
+                "address_line_1": "",
+                "address_line_2": "",
+                "city": "",
+                "country": "Singapore",
+                "postal_code": "",
+                "state": ""
+              },
+          "bank_branch": "8 MARINA BOULEVARD, 27-01, MARINA BAY FINANCIAL CENTRE",
+          "bank_codes": {
+                "swift_code": "SLSGO2XXX"
+              },
+          "bank_name": "STANDARD BANK LIMITED",
+          "currencies": [
+                "SGD"
+              ],
+          "iban": "",
+          "id": "cva_d2dgk0552psfuj1he0",
+          "object": "virtual_account"
+        }
+        },
       "reference_id": "reffffff",
       "additional_information": "Additional Information for the transaction"
     },
@@ -351,6 +440,7 @@ metadata:
     "currency": "USD",
     "status": "succeeded",
     "type": "wire_transfer",
+		"holding_currency" : "INR",
     "destination": "cca_uafanfianknon792nfak",
     "amount": 100000
   }
