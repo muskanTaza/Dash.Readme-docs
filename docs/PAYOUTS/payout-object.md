@@ -82,12 +82,24 @@ next:
   },
   "mt103": "Test MT103",
   "local": {
-    "fund_transfer_network": ""
+    "fund_transfer_network": "sepa"
   },
-  "logistics_tracking_details": [],
-  "confirmation_documents": [],
+  "logistics_tracking_details": [
+    {
+      "tracking_number": "1Z999AA10123456784",
+      "logistics_provider": "UPS",
+      "description": "Shipment batch A"
+    }
+  ],
+  "confirmation_documents": [
+    {
+      "key": "mt103",
+      "type": "application/pdf",
+      "value": "https://docs.tazapay.com/confirmations/mt103_pot_example.pdf"
+    }
+  ],
   "destination_fx_quote": "fx_coka64uof3laaslak1ah",
-  "quote": "",
+  "quote": "poq_d3inm6ami8u10oqfk",
   "available_balance": 5000000,
   "is_balance_sufficient": true
 }

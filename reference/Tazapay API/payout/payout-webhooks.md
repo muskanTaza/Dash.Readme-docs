@@ -208,7 +208,7 @@ metadata:
     "balance_transaction": "btr_ctbvv9ehi567m07e7q80",
     "amount": 10000,
     "local": {
-      "fund_transfer_network": ""
+      "fund_transfer_network": "sepa"
     },
     "logistics_tracking_details": [],
     "confirmation_documents": [
@@ -218,7 +218,7 @@ metadata:
         "value": "https://docs.tazapay.com/confirmations/pot_ctbvv96hi567m07e7q40_mt103.pdf"
       }
     ],
-    "quote": "",
+    "quote": "poq_ctbvv96hi567m07e7q3z",
     "destination_fx_quote": "fx_ctbvv905ha8onnfg24s1"
   }
 }        
@@ -290,11 +290,11 @@ metadata:
     "available_balance": 50000000,
     "is_balance_sufficient": false,
     "local": {
-      "fund_transfer_network": ""
+      "fund_transfer_network": "rtgs"
     },
     "logistics_tracking_details": [],
     "confirmation_documents": [],
-    "quote": "",
+    "quote": "poq_ctc025mhi567m07e7r4z",
     "destination_fx_quote": "fx_ctc025g5ha8onnfg2511"
   }
 }
@@ -568,11 +568,11 @@ metadata:
     "on_behalf_of": "ent_ctc0kk9sgkgeelcl87i0",
     "amount": 1000,
     "local": {
-      "fund_transfer_network": ""
+      "fund_transfer_network": "ach"
     },
     "logistics_tracking_details": [],
     "confirmation_documents": [],
-    "quote": "",
+    "quote": "poq_ctgjipfg9n1vh5nsbcu9",
     "destination_fx_quote": "fx_ctgjipdpk5p8ci903nt1"
   }
 }
