@@ -206,7 +206,20 @@ metadata:
     "beneficiary": "bnf_cs8bf4m6rf9979b4isq0",
     "object": "payout",
     "balance_transaction": "btr_ctbvv9ehi567m07e7q80",
-    "amount": 10000
+    "amount": 10000,
+    "local": {
+      "fund_transfer_network": ""
+    },
+    "logistics_tracking_details": [],
+    "confirmation_documents": [
+      {
+        "key": "mt103",
+        "type": "application/pdf",
+        "value": "https://docs.tazapay.com/confirmations/pot_ctbvv96hi567m07e7q40_mt103.pdf"
+      }
+    ],
+    "quote": "",
+    "destination_fx_quote": "fx_ctbvv905ha8onnfg24s1"
   }
 }        
 ```
@@ -273,7 +286,16 @@ metadata:
     "currency": "INR",
     "beneficiary": "bnf_crv7k31h1l071n2fkbjg",
     "object": "payout",
-    "amount": 1000000000
+    "amount": 1000000000,
+    "available_balance": 50000000,
+    "is_balance_sufficient": false,
+    "local": {
+      "fund_transfer_network": ""
+    },
+    "logistics_tracking_details": [],
+    "confirmation_documents": [],
+    "quote": "",
+    "destination_fx_quote": "fx_ctc025g5ha8onnfg2511"
   }
 }
 ```
@@ -511,7 +533,14 @@ metadata:
       "name": "Roman",
       "email": "test@example.com",
       "type": "individual",
-      "tax_id": "911-92-3333"
+      "tax_id": "911-92-3333",
+      "is_doc_verification_required": true,
+      "verification_status": "requires_action",
+      "status": "active",
+      "name_local": "",
+      "national_identification_number": "",
+      "party_classification": "third_party",
+      "registration_number": ""
     },
     "payout_fx_transaction": {
       "initial": {
@@ -537,7 +566,14 @@ metadata:
     "statement_descriptor": "Muskan",
     "balance_transaction": "btr_ctgjipng9n1vh5nsbd20",
     "on_behalf_of": "ent_ctc0kk9sgkgeelcl87i0",
-    "amount": 1000
+    "amount": 1000,
+    "local": {
+      "fund_transfer_network": ""
+    },
+    "logistics_tracking_details": [],
+    "confirmation_documents": [],
+    "quote": "",
+    "destination_fx_quote": "fx_ctgjipdpk5p8ci903nt1"
   }
 }
 ```

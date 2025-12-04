@@ -5049,7 +5049,7 @@
                 }
               },
               "examples": {
-                "Request Example": {
+                "Swift Bank Payout": {
                   "value": {
                     "beneficiary": "bnf_crv5r71h1l071n2fjvog",
                     "beneficiary_details": null,
@@ -5059,10 +5059,49 @@
                     "type": "swift",
                     "charge_type": "ours",
                     "purpose": "PYR001",
-                    "reference_id": "Test_Ref",
-                    "transaction_description": "Test Payout",
-                    "statement_descriptor": "Test",
+                    "reference_id": "INV-2024-0912",
+                    "transaction_description": "Payment for consulting services",
+                    "statement_descriptor": "Consulting Fee",
                     "documents": []
+                  }
+                },
+                "Local Payout with Fund Transfer Network (Hong Kong)": {
+                  "value": {
+                    "beneficiary": "bnf_d3inm6ami8u10oqfh",
+                    "amount": 50000,
+                    "currency": "HKD",
+                    "holding_currency": "USD",
+                    "type": "local",
+                    "charge_type": "shared",
+                    "purpose": "PYR003",
+                    "reference_id": "HK-PAY-2024-156",
+                    "transaction_description": "Supplier payment - electronics",
+                    "statement_descriptor": "Supplier Payment",
+                    "local": {
+                      "fund_transfer_network": "chats"
+                    }
+                  }
+                },
+                "Payout with Quote and Logistics Tracking": {
+                  "value": {
+                    "beneficiary": "bnf_d3inm6ami8u10oqfj",
+                    "amount": 250000,
+                    "currency": "EUR",
+                    "holding_currency": "USD",
+                    "type": "swift",
+                    "charge_type": "ours",
+                    "purpose": "PYR002",
+                    "reference_id": "ORDER-2024-7834",
+                    "transaction_description": "Payment for textile shipment",
+                    "statement_descriptor": "Goods Purchase",
+                    "quote": "poq_d3inm6ami8u10oqfk",
+                    "logistics_tracking_details": [
+                      {
+                        "tracking_number": "1Z999AA10123456784",
+                        "logistics_provider": "UPS",
+                        "description": "Shipment batch A"
+                      }
+                    ]
                   }
                 }
               }
@@ -5160,15 +5199,15 @@
                           "object": "fx_transaction"
                         },
                         "purpose": "PYR001",
-                        "quote":{},
+                        "quote": "",
                         "confirmation_documents": [],
                         "destination_fx_quote":"fx_d34hc7loipp34fm0",
-                        "reference_id": "Test_Ref",
-                        "statement_descriptor": "tzp*Test",
+                        "reference_id": "INV-2024-0912",
+                        "statement_descriptor": "tzp*Consulting Fee",
                         "status": "processing",
                         "status_description": "",
                         "tracking_details": null,
-                        "transaction_description": "Test Payout",
+                        "transaction_description": "Payment for consulting services",
                         "type": "swift",
                         "on_behalf_of": ""
                       }
@@ -5602,7 +5641,7 @@
                           "exchange_rate": 1,
                           "final": {
                             "amount": 44000,
-                            "currency": ""
+                            "currency": "USD"
                           },
                           "id": "fx_d35sqe7figo4psvt00",
                           "initial": {
@@ -5613,14 +5652,14 @@
                         },
                         "payout_quote": "",
                         "purpose": "PYR003",
-                        "quote":"",
-                        "reference_id": "",
-                        "statement_descriptor": "",
+                        "quote": "",
+                        "reference_id": "TZP-ACC-2024-1892",
+                        "statement_descriptor": "Trading Payment",
                         "status": "succeeded",
                         "status_description": "",
                         "tracking_details": {
-                          "tracking_number": "",
-                          "tracking_type": ""
+                          "tracking_number": "TZP-001-2024-9876",
+                          "tracking_type": "internal"
                         },
                         "transaction_description": "Payment for goods acc 001",
                         "type": "tazapay_account"
@@ -5697,7 +5736,7 @@
                         },
                         "id": "pot_d34hlvi5frlneafo0",
                         "local": {
-                          "fund_transfer_network": ""
+                          "fund_transfer_network": "sepa"
                         },
                         "logistics_tracking_details": [],
                         "metadata": null,
@@ -5719,8 +5758,8 @@
                         },
                         "payout_quote": "",
                         "purpose": "PYR001",
-                        "reference_id": "",
-                        "statement_descriptor": "",
+                        "reference_id": "DE-LOG-2024-0909",
+                        "statement_descriptor": "Logistics Payment",
                         "status": "succeeded",
                         "status_description": "",
                         "tracking_details": {
@@ -5809,15 +5848,15 @@
                         },
                         "payout_quote": "",
                         "purpose": "PYR001",
-                        "reference_id": "",
-                        "statement_descriptor": "",
+                        "reference_id": "BR-PIX-2024-3879",
+                        "statement_descriptor": "Freelancer Payment",
                         "status": "succeeded",
                         "status_description": "",
                         "tracking_details": {
-                          "tracking_number": "",
-                          "tracking_type": "utr"
+                          "tracking_number": "E1234567820240918115635627",
+                          "tracking_type": "pix_id"
                         },
-                        "transaction_description": "",
+                        "transaction_description": "Freelance design services payment",
                         "type": "local_payment_network"
                       }
                     }
@@ -6610,7 +6649,11 @@
                       "example": 1000000,
                       "description": "Amount of the payout in payout currency"
                     },
-                    "available_balance": 1233333,
+                    "available_balance": {
+                      "type": "integer",
+                      "example": 1233333,
+                      "description": "Available balance in the holding currency account after this payout is processed"
+                    },
                     "balance_transaction": {
                       "type": "string",
                       "example": "btr_fahfaniaf0023902",
@@ -6865,9 +6908,21 @@
                       "example": "pot_ctgia0ng9n1vh5ns81cg",
                       "description": "Unique payout ID"
                     },
-                    "is_balance_sufficient": false,
-                    "local":{
-
+                    "is_balance_sufficient": {
+                      "type": "boolean",
+                      "example": false,
+                      "description": "Indicates whether the account has sufficient balance to process this payout"
+                    },
+                    "local": {
+                      "type": "object",
+                      "description": "Local payout configuration containing fund transfer network details",
+                      "properties": {
+                        "fund_transfer_network": {
+                          "type": "string",
+                          "example": "chats",
+                          "description": "The fund transfer network used for local payouts (e.g., chats, fps, sepa)"
+                        }
+                      }
                     },
                     "metadata": {
                       "type": "null",
@@ -10329,8 +10384,8 @@
                               "individual",
                               "business"
                             ],
-                            "country": "DK",
-                            "currency": "EUR",
+                            "country": "HK",
+                            "currency": "HKD",
                             "custom_remitter_support": true,
                             "payout_type": "swift",
                             "required_bank_codes": [
@@ -10339,16 +10394,18 @@
                             "required_bank_fields": [
                               "account_holder_name",
                               "bank_name",
-                              "iban"
+                              "account_number"
                             ],
                             "fund_transfer_networks": [],
-                            "recommended_fields": {},
+                            "recommended_fields": {
+                              "bank_branch": "optional"
+                            },
                             "required_beneficiary_fields": [],
                             "supported_destinations": [],
                             "transfer_limit": {
-                              "currency": "EUR",
-                              "maximum": 8621591261,
-                              "minimum": 86
+                              "currency": "HKD",
+                              "maximum": 78000000000,
+                              "minimum": 100
                             }
                           },
                           {
@@ -10356,8 +10413,8 @@
                               "individual",
                               "business"
                             ],
-                            "country": "DK",
-                            "currency": "EUR",
+                            "country": "HK",
+                            "currency": "HKD",
                             "custom_remitter_support": false,
                             "payout_type": "local",
                             "required_bank_codes": [
@@ -10366,18 +10423,24 @@
                             "required_bank_fields": [
                               "account_holder_name",
                               "bank_name",
-                              "iban"
+                              "account_number"
                             ],
+                            "fund_transfer_networks": [
+                              "chats",
+                              "fps"
+                            ],
+                            "recommended_fields": {
+                              "bank_branch": "optional",
+                              "account_type": "recommended"
+                            },
                             "required_beneficiary_fields": [
                               "address.line1",
-                              "address.city",
-                              "address.state",
-                              "address.postal_code"
+                              "address.city"
                             ],
                             "supported_destinations": [],
                             "transfer_limit": {
-                              "currency": "EUR",
-                              "maximum": 431079563,
+                              "currency": "HKD",
+                              "maximum": 78000000000,
                               "minimum": 1
                             }
                           }
@@ -10478,6 +10541,29 @@
                                   "address.state",
                                   "address.postal_code"
                                 ]
+                              },
+                              "fund_transfer_networks": {
+                                "type": "array",
+                                "description": "List of supported fund transfer networks for local payouts (e.g., 'chats', 'fps' for Hong Kong, 'sepa' for Europe). Only applicable for local payout types.",
+                                "items": {
+                                  "type": "string",
+                                  "example": "chats"
+                                },
+                                "example": [
+                                  "chats",
+                                  "fps"
+                                ]
+                              },
+                              "recommended_fields": {
+                                "type": "object",
+                                "description": "Map of recommended but non-mandatory fields with their requirement level (e.g., 'optional', 'recommended'). Helps improve payout success rates.",
+                                "additionalProperties": {
+                                  "type": "string"
+                                },
+                                "example": {
+                                  "bank_branch": "optional",
+                                  "account_type": "recommended"
+                                }
                               },
                               "supported_destinations": {
                                 "type": "array",
@@ -16583,12 +16669,12 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "OK": {
-                    "summary": "OK",
+                  "Local Payout with Fund Transfer Network": {
+                    "summary": "Local Payout - Hong Kong CHATS",
                     "value": {
-                      "id": "poq_aohnraoinrfaoinrao",
+                      "id": "poq_d3inm6ami8u10oqfm",
                       "local": {
-                        "fund_transfer_network": ""
+                        "fund_transfer_network": "chats"
                       },
                       "local_payment_network": {
                         "payment_network": ""
@@ -16596,36 +16682,129 @@
                       "object": "payout_quote",
                       "payout_type": "local",
                       "holding_info": {
-                        "currency": "sats",
-                        "amount": 9876800
+                        "currency": "USD",
+                        "amount": 640000
                       },
                       "payout_info": {
-                        "currency": "usd",
-                        "amount": 9000
+                        "currency": "HKD",
+                        "amount": 5000000
                       },
                       "destination_info": {
-                        "currency": "inr",
-                        "amount": 765000
+                        "currency": "HKD",
+                        "amount": 5000000
                       },
                       "fee_info": {
                         "fixed": {
-                          "in_holding_currency": 0,
-                          "in_payout_currency": 0
+                          "in_holding_currency": 200,
+                          "in_payout_currency": 15
                         },
                         "variable": {
-                          "in_holding_currency": 987680,
+                          "in_holding_currency": 1280,
+                          "in_payout_currency": 100
+                        }
+                      },
+                      "exchange_rates": {
+                        "holding_to_payout": 7.81,
+                        "payout_to_destination": 1
+                      },
+                      "valid_until": "2024-12-03T14:30:00+08:00",
+                      "status": "active",
+                      "created_at": "2024-12-03T14:00:00+08:00",
+                      "updated_at": "2024-12-03T14:00:00+08:00",
+                      "wallet": {}
+                    }
+                  },
+                  "Local Payment Network - PIX": {
+                    "summary": "PIX Payout Brazil",
+                    "value": {
+                      "id": "poq_d3inm6ami8u10oqfn",
+                      "local": {
+                        "fund_transfer_network": ""
+                      },
+                      "local_payment_network": {
+                        "payment_network": "pix_brl"
+                      },
+                      "object": "payout_quote",
+                      "payout_type": "local_payment_network",
+                      "holding_info": {
+                        "currency": "USD",
+                        "amount": 19600
+                      },
+                      "payout_info": {
+                        "currency": "BRL",
+                        "amount": 100000
+                      },
+                      "destination_info": {
+                        "currency": "BRL",
+                        "amount": 100000
+                      },
+                      "fee_info": {
+                        "fixed": {
+                          "in_holding_currency": 150,
+                          "in_payout_currency": 765
+                        },
+                        "variable": {
+                          "in_holding_currency": 196,
                           "in_payout_currency": 1000
                         }
                       },
                       "exchange_rates": {
-                        "holding_to_payout": 0.000911,
-                        "payout_to_destination": 85
+                        "holding_to_payout": 5.10,
+                        "payout_to_destination": 1
                       },
-                      "valid_until": "2025-06-23T20:17:00+08:00",
+                      "valid_until": "2024-12-03T17:00:00-03:00",
                       "status": "active",
-                      "created_at": "2025-06-23T20:16:00+08:00",
-                      "updated_at": "2025-06-23T20:16:00+08:00",
-                      "wallet":{}
+                      "created_at": "2024-12-03T16:30:00-03:00",
+                      "updated_at": "2024-12-03T16:30:00-03:00",
+                      "wallet": {}
+                    }
+                  },
+                  "Crypto Wallet Payout": {
+                    "summary": "USDC on Ethereum",
+                    "value": {
+                      "id": "poq_d3inm6ami8u10oqfp",
+                      "local": {
+                        "fund_transfer_network": ""
+                      },
+                      "local_payment_network": {
+                        "payment_network": ""
+                      },
+                      "object": "payout_quote",
+                      "payout_type": "wallet",
+                      "holding_info": {
+                        "currency": "USD",
+                        "amount": 100000
+                      },
+                      "payout_info": {
+                        "currency": "USDC",
+                        "amount": 100000000
+                      },
+                      "destination_info": {
+                        "currency": "USDC",
+                        "amount": 100000000
+                      },
+                      "fee_info": {
+                        "fixed": {
+                          "in_holding_currency": 100,
+                          "in_payout_currency": 1000000
+                        },
+                        "variable": {
+                          "in_holding_currency": 0,
+                          "in_payout_currency": 0
+                        }
+                      },
+                      "exchange_rates": {
+                        "holding_to_payout": 1000,
+                        "payout_to_destination": 1
+                      },
+                      "valid_until": "2024-12-03T20:45:00+00:00",
+                      "status": "active",
+                      "created_at": "2024-12-03T20:30:00+00:00",
+                      "updated_at": "2024-12-03T20:30:00+00:00",
+                      "wallet": {
+                        "type": "ethereum",
+                        "network": "mainnet"
+                      }
                     }
                   }
                 },
