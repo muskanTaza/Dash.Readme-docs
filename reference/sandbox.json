@@ -5130,29 +5130,24 @@
                   "quote": {
                     "type": "string",
                     "description": "Quote ID from the payout quote API"
+                  },
+                  "local": {
+                    "type": "object",
+                    "description": "Local payout configuration object",
+                    "properties": {
+                      "fund_transfer_network": {
+                        "type": "string",
+                        "description": "The local fund transfer network to use for local payouts (e.g., 'chats', 'fps', 'sepa', 'rtgs', 'ach', 'pix')"
+                      }
+                    }
                   }
                 }
               },
               "examples": {
-                "Swift Bank Payout": {
-                  "value": {
-                    "beneficiary": "bnf_crv5r71h1l071n2fjvog",
-                    "beneficiary_details": null,
-                    "amount": 100000,
-                    "currency": "USD",
-                    "holding_currency": "EUR",
-                    "type": "swift",
-                    "charge_type": "ours",
-                    "purpose": "PYR001",
-                    "reference_id": "INV-2024-0912",
-                    "transaction_description": "Payment for consulting services",
-                    "statement_descriptor": "Consulting Fee",
-                    "documents": []
-                  }
-                },
-                "Local Payout with Fund Transfer Network (Hong Kong)": {
+                "Request Example": {
                   "value": {
                     "beneficiary": "bnf_d3inm6ami8u10oqfh",
+                    "beneficiary_details": null,
                     "amount": 50000,
                     "currency": "HKD",
                     "holding_currency": "USD",
@@ -5160,33 +5155,24 @@
                     "charge_type": "shared",
                     "purpose": "PYR003",
                     "reference_id": "HK-PAY-2024-156",
-                    "transaction_description": "Supplier payment - electronics",
+                    "transaction_description": "Supplier payment for electronics order",
                     "statement_descriptor": "Supplier Payment",
+                    "documents": [],
                     "local": {
                       "fund_transfer_network": "chats"
-                    }
-                  }
-                },
-                "Payout with Quote and Logistics Tracking": {
-                  "value": {
-                    "beneficiary": "bnf_d3inm6ami8u10oqfj",
-                    "amount": 250000,
-                    "currency": "EUR",
-                    "holding_currency": "USD",
-                    "type": "swift",
-                    "charge_type": "ours",
-                    "purpose": "PYR002",
-                    "reference_id": "ORDER-2024-7834",
-                    "transaction_description": "Payment for textile shipment",
-                    "statement_descriptor": "Goods Purchase",
+                    },
                     "quote": "poq_d3inm6ami8u10oqfk",
+                    "destination_fx_quote": "fx_d3inm6ami8u10oqfl",
                     "logistics_tracking_details": [
                       {
                         "tracking_number": "1Z999AA10123456784",
-                        "logistics_provider": "UPS",
-                        "description": "Shipment batch A"
+                        "logistics_provider": {
+                          "name": "UPS",
+                          "code": "UPS"
+                        }
                       }
-                    ]
+                    ],
+                    "on_behalf_of": "ent_d3inm6ami8u10oqfm"
                   }
                 }
               }
@@ -5649,6 +5635,24 @@
                         "type": "object"
                       },
                       "description": "Logistics tracking details of the order"
+                    },
+                    "available_balance": {
+                      "type": "integer",
+                      "description": "Available balance in the account for processing payouts"
+                    },
+                    "is_balance_sufficient": {
+                      "type": "boolean",
+                      "description": "Indicates whether the account has sufficient balance to process this payout"
+                    },
+                    "local": {
+                      "type": "object",
+                      "description": "Local payout configuration object",
+                      "properties": {
+                        "fund_transfer_network": {
+                          "type": "string",
+                          "description": "The local fund transfer network to use for local payouts (e.g., 'chats', 'fps', 'sepa', 'rtgs', 'ach', 'pix')"
+                        }
+                      }
                     }
                   }
                 }
@@ -5790,12 +5794,14 @@
                           "tracking_type": "internal"
                         },
                         "transaction_description": "Payment for goods acc 001",
-                        "type": "tazapay_account"
+                        "type": "tazapay_account",
+                        "available_balance": 150000000,
+                        "is_balance_sufficient": true
                       }
                     }
                   },
                   "Swift Bank Payout": {
-                    "value": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"amount\": 100000,\n        \"balance_transaction\": \"btr_d35pv4qcl8imrv60\",\n        \"beneficiary\": \"bnf_d3inm6ami8u10oqfg\",\n        \"beneficiary_details\": {\n            \"address\": {\n                \"country\": \"CN\"\n                \"line1\": \"Zhen Rui Yun Lu 66\",\n                \"postal_code\": \"311011\"\n            },\n            \"date_of_birth\": \"\",\n            \"destination\": \"\",\n            \"destination_details\": {\n                \"bank\": {\n                    \"account_number\": \"33050167624000001030\",\n                    \"account_type\": \"\",\n                    \"bank_codes\": {\n                        \"swift_code\": \"PCBCCNBJZJX\"\n                    },\n                    \"bank_name\": \"CHINA CONSTRUCTION BANK, ZHEJIANG BRANCH\",\n                    \"branch_name\": \"\",\n                    \"country\": \"CN\",\n                    \"currency\": \"USD\",\n                    \"firc_required\": false,\n                    \"purpose_code\": \"\",\n                    \"transfer_type\": \"swift\"\n                },\n                \"type\": \"bank\"\n            },\n            \"documents\": [],\n            \"email\": \"\",\n            \"name\": \"IMPORT AND EXPORT CO., LTD\",\n            \"name_local\": \"\",\n            \"national_identification_number\": \"\",\n            \"party_classification\": \"\",\n            \"phone\": {\n                \"calling_code\": \"86\"\n            },\n            \"registration_number\": \"\",\n            \"tax_id\": \"\",\n            \"type\": \"business\"\n        },\n        \"charge_type\": \"ours\",\n        \"confirmation_documents\": [],\n        \"created_at\": \"2025-09-18T10:07:35.101708Z\",\n        \"currency\": \"USD\",\n        \"destination_fx_quote\": \"fx_d35tjpnfi4p2dt2hh0\",\n        \"documents\": [],\n        \"holding_currency\": \"USD\",\n        \"holding_fx_quote\": \"fx_d35tjpnfigp2dt2hgg\",\n        \"holding_fx_transaction\": {\n            \"exchange_rate\": 1,\n            \"final\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"id\": \"fx_d35tjpnfigp2dt2hgg\",\n            \"initial\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"object\": \"fx_transaction\"\n        },\n        \"id\": \"pot_d35tjpn4qcl8iv30\",\n        \"logistics_tracking_details\": [],\n        \"metadata\": null,\n        \"mt103\": \"\",\n        \"object\": \"payout\",\n        \"on_behalf_of\": \"\",\n        \"payout_fx_transaction\": {\n            \"exchange_rate\": 1,\n            \"final\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"id\": \"fx_d35tfigo4p2dt2hh0\",\n            \"initial\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"object\": \"fx_transaction\"\n        },\n        \"payout_quote\": \"\",\n        \"purpose\": \"PYR003\",\n        \"reference_id\": \"\",\n        \"statement_descriptor\": \"\",\n        \"status\": \"succeeded\",\n        \"status_description\": \"\",\n        \"tracking_details\": {\n            \"tracking_number\": \"7833d-34b4-478-aac8-1184beae\",\n            \"tracking_type\": \"uetr\"\n        },\n        \"transaction_description\": \"Payment for goods acc 125\",\n        \"type\": \"swift\"\n    }\n}",
+                    "value": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"amount\": 100000,\n        \"balance_transaction\": \"btr_d35pv4qcl8imrv60\",\n        \"beneficiary\": \"bnf_d3inm6ami8u10oqfg\",\n        \"beneficiary_details\": {\n            \"address\": {\n                \"country\": \"CN\"\n                \"line1\": \"Zhen Rui Yun Lu 66\",\n                \"postal_code\": \"311011\"\n            },\n            \"date_of_birth\": \"\",\n            \"destination\": \"\",\n            \"destination_details\": {\n                \"bank\": {\n                    \"account_number\": \"33050167624000001030\",\n                    \"account_type\": \"\",\n                    \"bank_codes\": {\n                        \"swift_code\": \"PCBCCNBJZJX\"\n                    },\n                    \"bank_name\": \"CHINA CONSTRUCTION BANK, ZHEJIANG BRANCH\",\n                    \"branch_name\": \"\",\n                    \"country\": \"CN\",\n                    \"currency\": \"USD\",\n                    \"firc_required\": false,\n                    \"purpose_code\": \"\",\n                    \"transfer_type\": \"swift\"\n                },\n                \"type\": \"bank\"\n            },\n            \"documents\": [],\n            \"email\": \"\",\n            \"name\": \"IMPORT AND EXPORT CO., LTD\",\n            \"name_local\": \"\",\n            \"national_identification_number\": \"\",\n            \"party_classification\": \"\",\n            \"phone\": {\n                \"calling_code\": \"86\"\n            },\n            \"registration_number\": \"\",\n            \"tax_id\": \"\",\n            \"type\": \"business\"\n        },\n        \"charge_type\": \"ours\",\n        \"confirmation_documents\": [],\n        \"created_at\": \"2025-09-18T10:07:35.101708Z\",\n        \"currency\": \"USD\",\n        \"destination_fx_quote\": \"fx_d35tjpnfi4p2dt2hh0\",\n        \"documents\": [],\n        \"holding_currency\": \"USD\",\n        \"holding_fx_quote\": \"fx_d35tjpnfigp2dt2hgg\",\n        \"holding_fx_transaction\": {\n            \"exchange_rate\": 1,\n            \"final\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"id\": \"fx_d35tjpnfigp2dt2hgg\",\n            \"initial\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"object\": \"fx_transaction\"\n        },\n        \"id\": \"pot_d35tjpn4qcl8iv30\",\n        \"logistics_tracking_details\": [],\n        \"metadata\": null,\n        \"mt103\": \"\",\n        \"object\": \"payout\",\n        \"on_behalf_of\": \"\",\n        \"payout_fx_transaction\": {\n            \"exchange_rate\": 1,\n            \"final\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"id\": \"fx_d35tfigo4p2dt2hh0\",\n            \"initial\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"object\": \"fx_transaction\"\n        },\n        \"payout_quote\": \"\",\n        \"purpose\": \"PYR003\",\n        \"reference_id\": \"\",\n        \"statement_descriptor\": \"\",\n        \"status\": \"succeeded\",\n        \"status_description\": \"\",\n        \"tracking_details\": {\n            \"tracking_number\": \"7833d-34b4-478-aac8-1184beae\",\n            \"tracking_type\": \"uetr\"\n        },\n        \"transaction_description\": \"Payment for goods acc 125\",\n        \"type\": \"swift\",\n        \"available_balance\": 120000000,\n        \"is_balance_sufficient\": true\n    }\n}",
                     "summary": "Swift Bank Payout"
                   },
                   "Local Bank Payout": {
@@ -5895,7 +5901,9 @@
                           "tracking_type": "UTR"
                         },
                         "transaction_description": "Payment for logistic services 9-09",
-                        "type": "local"
+                        "type": "local",
+                        "available_balance": 75000000,
+                        "is_balance_sufficient": true
                       }
                     }
                   },
@@ -5985,7 +5993,9 @@
                           "tracking_type": "pix_id"
                         },
                         "transaction_description": "Freelance design services payment",
-                        "type": "local_payment_network"
+                        "type": "local_payment_network",
+                        "available_balance": 60000000,
+                        "is_balance_sufficient": true
                       }
                     }
                   },
@@ -6081,7 +6091,9 @@
                           "tracking_type": "transaction_hash"
                         },
                         "transaction_description": "commision",
-                        "type": "wallet"
+                        "type": "wallet",
+                        "available_balance": 85000000,
+                        "is_balance_sufficient": true
                       }
                     }
                   }
@@ -6634,6 +6646,21 @@
                             "tazapay_account"
                           ],
                           "example": "swift"
+                        },
+                        "quote": {
+                          "type": "string",
+                          "example": "poq_d3inm6ami8u10oqfk",
+                          "description": "Quote ID from the payout quote API used to lock exchange rates"
+                        },
+                        "available_balance": {
+                          "type": "integer",
+                          "example": 50000000,
+                          "description": "Available balance in the account for processing payouts"
+                        },
+                        "is_balance_sufficient": {
+                          "type": "boolean",
+                          "example": true,
+                          "description": "Indicates whether the account has sufficient balance to process this payout"
                         }
                       }
                     }
@@ -6730,7 +6757,22 @@
                 },
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "success",
+                      "description": "Status of API request"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "",
+                      "description": "Message returned as part of the API response"
+                    },
+                    "data": {
+                      "type": "object",
+                      "description": "Returns the complete payout object with all fields including amount, beneficiary, beneficiary_details, currency, type, status, local (with fund_transfer_network), logistics_tracking_details, confirmation_documents, quote, available_balance, is_balance_sufficient, and other payout properties"
+                    }
+                  }
                 }
               }
             }
@@ -7266,12 +7308,56 @@
                       "example": "swift",
                       "description": "Type of payout (e.g., swift, local)"
                     },
-                    "available_balance": {
-                      "type": "number",
-                      "description": "Available balance in your Tazapay account in primary holding currency."
+                    "logistics_tracking_details": {
+                      "type": "array",
+                      "description": "Logistics tracking details for the payout",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "tracking_number": {
+                            "type": "string"
+                          },
+                          "logistics_provider": {
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "type": "string"
+                              },
+                              "code": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
                     },
-                    "is_balance_sufficient": {
-                      "type": "boolean"
+                    "confirmation_documents": {
+                      "type": "array",
+                      "description": "Array of confirmation documents like MT103, MT199, FIRC",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "key": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string"
+                          },
+                          "value": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "quote": {
+                      "type": "string",
+                      "description": "Quote ID from the payout quote API",
+                      "example": "poq_d3inm6ami8u10oqfk"
+                    },
+                    "destination_fx_quote": {
+                      "type": "string",
+                      "description": "ID of the quote to use locked exchange for conversion from payout to destination currency",
+                      "example": "fx_d3inm6ami8u10oqfl"
                     }
                   }
                 }

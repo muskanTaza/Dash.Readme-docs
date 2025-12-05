@@ -546,3 +546,9 @@ next:
 | --------------- | ------ | -------------------------------------------------------------- |
 | tracking_number | string | The tracking number (UETR, UTR, transaction hash, etc.).       |
 | tracking_type   | enum   | The tracking type. [Values: `uetr`, `utr`, `transaction_hash`] |
+
+## Local
+
+| Field                 | Type   | Description                                                                                           |
+| :-------------------- | :----- | :---------------------------------------------------------------------------------------------------- |
+| fund_transfer_network | string | The local fund transfer network used for local payouts (e.g., "chats", "fps", "sepa", "rtgs", "ach") |
