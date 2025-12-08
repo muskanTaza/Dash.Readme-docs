@@ -13528,6 +13528,42 @@
                       "type": "object"
                     }
                   },
+                  "individual": {
+                    "type": "object",
+                    "description": "Individual Details -> Required for Entity Type: individual",
+                    "properties": {
+                      "national_identification_number": {
+                        "type": "object",
+                        "description": "National identification details",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "description": "Type of identification document",
+                            "enum": [
+                              "passport",
+                              "driving_license",
+                              "national_id",
+                              "tax_id",
+                              "residence_permit",
+                              "other"
+                            ]
+                          },
+                          "number": {
+                            "type": "string",
+                            "description": "Identification document number"
+                          }
+                        }
+                      },
+                      "date_of_birth": {
+                        "type": "string",
+                        "description": "Date of Birth in ISO format (YYYY-MM-DD)"
+                      },
+                      "nationality": {
+                        "type": "string",
+                        "description": "Two-letter country code (ISO 3166-1 alpha-2)"
+                      }
+                    }
+                  },
                   "documents": {
                     "type": "array",
                     "description": "Documents for the entity",
@@ -14356,6 +14392,42 @@
                         "roles"
                       ],
                       "type": "object"
+                    }
+                  },
+                  "individual": {
+                    "type": "object",
+                    "description": "Individual Details",
+                    "properties": {
+                      "national_identification_number": {
+                        "type": "object",
+                        "description": "National identification details",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "description": "Type of identification document",
+                            "enum": [
+                              "passport",
+                              "driving_license",
+                              "national_id",
+                              "tax_id",
+                              "residence_permit",
+                              "other"
+                            ]
+                          },
+                          "number": {
+                            "type": "string",
+                            "description": "Identification document number"
+                          }
+                        }
+                      },
+                      "date_of_birth": {
+                        "type": "string",
+                        "description": "Date of Birth in ISO format (YYYY-MM-DD)"
+                      },
+                      "nationality": {
+                        "type": "string",
+                        "description": "Two-letter country code (ISO 3166-1 alpha-2)"
+                      }
                     }
                   },
                   "documents": {

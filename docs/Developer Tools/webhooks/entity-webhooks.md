@@ -56,6 +56,14 @@ next:
     "registration_date": "2024-12-02T18:30:00.000Z",
     "statement_descriptor": "Muskan",
     "id": "ent_ctc0kk9sgkgeelcl87i0",
+    "individual": {
+      "national_identification_number": {
+          "type": "passport",
+          "number": "XZ1234567"
+      },
+      "date_of_birth": "2001-09-21",
+      "nationality": "IN"
+    },
     "type": "company",
     "representatives": [
       {
@@ -179,6 +187,14 @@ next:
     "registration_date": "2024-12-02T18:30:00.000Z",
     "statement_descriptor": "Muskan",
     "id": "ent_ctc0kk9sgkgeelcl87i0",
+    "individual": {
+      "national_identification_number": {
+          "type": "passport",
+          "number": "XZ1234567"
+      },
+      "date_of_birth": "2001-09-21",
+      "nationality": "IN"
+    },
     "type": "company",
     "representatives": [
       {
@@ -314,6 +330,14 @@ next:
     "statement_descriptor": "Muskan",
     "id": "ent_ctc0kk9sgkgeelcl87i0",
     "type": "company",
+    "individual": {
+      "national_identification_number": {
+          "type": "passport",
+          "number": "XZ1234567"
+      },
+      "date_of_birth": "2001-09-21",
+      "nationality": "IN"
+    },
     "representatives": [
       {
         "address": {
@@ -446,6 +470,14 @@ next:
     "registration_date": "2024-11-02T18:30:00.000Z",
     "statement_descriptor": "Muskan",
     "id": "ent_ct2ovl9f5lhf6huap5cg",
+    "individual": {
+      "national_identification_number": {
+          "type": "passport",
+          "number": "XZ1234567"
+      },
+      "date_of_birth": "2001-09-21",
+      "nationality": "IN"
+    },
     "type": "company",
     "representatives": [
       {
