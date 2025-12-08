@@ -13830,7 +13830,7 @@
                   },
                   "individual": {
                     "type": "object",
-                    "description": "Individual Details -> Required for Entity Type: individual",
+                    "description": "Individual Details",
                     "properties": {
                       "national_identification_number": {
                         "type": "object",
@@ -14696,7 +14696,7 @@
                   },
                   "individual": {
                     "type": "object",
-                    "description": "Individual Details",
+                    "description": "Individual Details -> Required for Entity Type: individual",
                     "properties": {
                       "national_identification_number": {
                         "type": "object",
