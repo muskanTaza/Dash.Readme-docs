@@ -279,7 +279,7 @@ next:
     },
     "id": "pot_d35v6sp8dp1ul1m0",
     "local": {
-      "fund_transfer_network": ""
+      "fund_transfer_network": "sepa"
     },
     "logistics_tracking_details": [],
     "metadata": null,
@@ -367,7 +367,7 @@ next:
     },
     "id": "pot_d5sqe7cl8imrh4810",
     "local": {
-      "fund_transfer_network": ""
+      "fund_transfer_network": "sepa"
     },
     "logistics_tracking_details": [],
     "metadata": null,
@@ -463,7 +463,7 @@ next:
     },
     "id": "pot_d35eag4ekl94qri0",
     "local": {
-      "fund_transfer_network": ""
+      "fund_transfer_network": "sepa"
     },
     "logistics_tracking_details": [],
     "metadata": null,

@@ -375,7 +375,7 @@ metadata:
     "on_behalf_of": "ent_csorc2c1kl1roj58r2hg",
     "amount": 1000,
     "local": {
-      "fund_transfer_network": ""
+      "fund_transfer_network": "ach"
     },
     "logistics_tracking_details": [],
     "confirmation_documents": [],
@@ -447,7 +447,7 @@ metadata:
     "on_behalf_of": "ent_ct2ovl9f5lhf6huap5cg",
     "amount": 100,
     "local": {
-      "fund_transfer_network": ""
+      "fund_transfer_network": "ach"
     },
     "logistics_tracking_details": [],
     "confirmation_documents": [],
@@ -686,7 +686,7 @@ metadata:
     "mt103": "{1:F01SCBLSG22AXXX0740170000}{2:I103CHASSGSGXXXXN}{3:{103:MEP}{113:NORQ}{108:SE1\n0502503040286}{111:001}{121:0c795041-3248-4dac-9c60-f0e916452bc5}}{4:\n:20:SE10502503040286\n:23B:CRED\n:32A:250304SGD4300,00\n:33B:SGD4300,00\n:50K:/7540731\nNreach Online Services Inc\n8th The Green Ste A Delaware 19901\nUNITED STATES\n:52D:/0105553026\nTAZAPAY PTE. LTD.\n7 TEMASEK BOULEVARD,20-06 SUNTEC TO\nWER ONE,SINGAPORE,ZIP 038987\n/SINGAPORE\n:57A:CHASSGSGXXX\n:59:/8830045245\nQWIKCILVER SOLUTIONS PTE. LTD.\n:70:Xoxo Day Payout on 03rd March 2025\n:71A:OUR\n-}",
     "amount": 10000,
     "local": {
-      "fund_transfer_network": ""
+      "fund_transfer_network": "ach"
     },
     "logistics_tracking_details": [],
     "confirmation_documents": [

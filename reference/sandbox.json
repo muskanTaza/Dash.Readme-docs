@@ -5137,7 +5137,7 @@
                     "properties": {
                       "fund_transfer_network": {
                         "type": "string",
-                        "description": "The local fund transfer network to use for local payouts (e.g., 'chats', 'fps', 'sepa', 'rtgs', 'ach', 'pix')"
+                        "description": "The local fund transfer network to use for local payouts (e.g., 'chats', 'fps', 'sepa', 'rtgs', 'ach', 'pix'). Fetch the entire list of available fund transfer networks from the <a href=\"https://docs.tazapay.com/reference/payout-bank\">Payout Bank Metadata API</a>."
                       }
                     }
                   }
@@ -5250,7 +5250,7 @@
                         },
                         "id": "pot_crv5u81h1l071n2fk1ng",
                         "local": {
-                          "fund_transfer_network": ""
+                          "fund_transfer_network": "ach"
                         },
                         "logistics_tracking_details":[],
                         "metadata": null,
@@ -5270,7 +5270,7 @@
                           "object": "fx_transaction"
                         },
                         "purpose": "PYR001",
-                        "quote": "",
+                        "quote": "poq_crv5u81h1l071n2fk1n0",
                         "confirmation_documents": [],
                         "destination_fx_quote":"fx_d34hc7loipp34fm0",
                         "reference_id": "INV-2024-0912",
@@ -5284,7 +5284,7 @@
                         "logistic_tracking_details": [],
                         "confirmation_documents": [],
                         "destination_fx_quote": "fx_d4hu4786bhdq534ritlg",
-                        "quote": ""
+                        "quote": "poq_crv5u81h1l071n2fk1n0"
                       }
                     }
                   }
@@ -5650,7 +5650,7 @@
                       "properties": {
                         "fund_transfer_network": {
                           "type": "string",
-                          "description": "The local fund transfer network to use for local payouts (e.g., 'chats', 'fps', 'sepa', 'rtgs', 'ach', 'pix')"
+                          "description": "The local fund transfer network to use for local payouts (e.g., 'chats', 'fps', 'sepa', 'rtgs', 'ach', 'pix'). Fetch the entire list of available fund transfer networks from the <a href=\"https://docs.tazapay.com/reference/payout-bank\">Payout Bank Metadata API</a>."
                         }
                       }
                     }
@@ -5762,7 +5762,7 @@
                         },
                         "id": "pot_d5sqe7cl8imrh4810",
                         "local": {
-                          "fund_transfer_network": ""
+                          "fund_transfer_network": "ach"
                         },
                         "logistics_tracking_details": [],
                         "metadata": null,
@@ -5784,7 +5784,7 @@
                         },
                         "payout_quote": "",
                         "purpose": "PYR003",
-                        "quote": "",
+                        "quote": "poq_d5sqe7cl8imrh4811",
                         "reference_id": "TZP-ACC-2024-1892",
                         "statement_descriptor": "Trading Payment",
                         "status": "succeeded",
@@ -5962,7 +5962,7 @@
                         },
                         "id": "pot_d35v6sp8dp1ul1m0",
                         "local": {
-                          "fund_transfer_network": ""
+                          "fund_transfer_network": "pix"
                         },
                         "logistics_tracking_details": [],
                         "metadata": null,
@@ -6060,7 +6060,7 @@
                         },
                         "id": "pot_d35eag4ekl94qri0",
                         "local": {
-                          "fund_transfer_network": ""
+                          "fund_transfer_network": "ethereum"
                         },
                         "logistics_tracking_details": [],
                         "metadata": null,
@@ -17242,7 +17242,7 @@
                     "value": {
                       "id": "poq_d3inm6ami8u10oqfn",
                       "local": {
-                        "fund_transfer_network": ""
+                        "fund_transfer_network": "pix"
                       },
                       "local_payment_network": {
                         "payment_network": "pix_brl"
@@ -17287,7 +17287,7 @@
                     "value": {
                       "id": "poq_d3inm6ami8u10oqfp",
                       "local": {
-                        "fund_transfer_network": ""
+                        "fund_transfer_network": "ethereum"
                       },
                       "local_payment_network": {
                         "payment_network": ""
