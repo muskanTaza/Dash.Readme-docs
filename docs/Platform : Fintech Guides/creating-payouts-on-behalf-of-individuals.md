@@ -168,7 +168,7 @@ curl --request POST \
   "individual": {
         "national_identification_number": {
             "type": "passport",
-            "number": "2345678"
+            "number": "XZ1234567"
         },
         "date_of_birth": "2001-09-21",
         "nationality": "IN"
@@ -232,7 +232,7 @@ curl --request POST \
     "individual": {
       "national_identification_number": {
           "type": "passport",
-          "number": "2345678"
+          "number": "XZ1234567"
       },
       "date_of_birth": "2001-09-21",
       "nationality": "IN"
@@ -309,7 +309,7 @@ curl --request POST \
   "individual": {
     "national_identification_number": {
         "type": "passport",
-        "number": "2345678"
+        "number": "XZ1234567"
     },
     "date_of_birth": "2001-09-21",
     "nationality": "IN"
@@ -375,7 +375,7 @@ curl --request POST \
     "individual": {
       "national_identification_number": {
           "type": "passport",
-          "number": "2345678"
+          "number": "XZ1234567"
       },
       "date_of_birth": "2001-09-21",
       "nationality": "IN"
@@ -474,7 +474,7 @@ Sample Webhook Payload
     "individual": {
       "national_identification_number": {
           "type": "passport",
-          "number": "2345678"
+          "number": "XZ1234567"
       },
       "date_of_birth": "2001-09-21",
       "nationality": "IN"

@@ -13556,7 +13556,7 @@
                       },
                       "date_of_birth": {
                         "type": "string",
-                        "description": "Date of birth in YYYY-MM-DD format"
+                        "description": "Date of Birth in ISO format (YYYY-MM-DD)"
                       },
                       "nationality": {
                         "type": "string",
@@ -14422,7 +14422,7 @@
                       },
                       "date_of_birth": {
                         "type": "string",
-                        "description": "Date of birth in YYYY-MM-DD format"
+                        "description": "Date of Birth in ISO format (YYYY-MM-DD)"
                       },
                       "nationality": {
                         "type": "string",
