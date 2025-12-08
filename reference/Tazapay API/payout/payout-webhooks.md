@@ -84,7 +84,16 @@ metadata:
     "beneficiary": "bnf_cs8bf4m6rf9979b4isq0",
     "object": "payout",
     "balance_transaction": "btr_ctbvv9ehi567m07e7q80",
-    "amount": 10000
+    "amount": 10000,
+    "local": {
+      "fund_transfer_network": "pix"
+    },
+    "logistics_tracking_details": [],
+    "confirmation_documents": [],
+    "quote": "poq_ctbvv96hi567m07e7q3y",
+    "destination_fx_quote": "fx_ctbvv905ha8onnfg24s2",
+    "available_balance": 25000000,
+    "is_balance_sufficient": true
   }
 }
 ```
@@ -143,7 +152,16 @@ metadata:
     "beneficiary": "bnf_cs8bf4m6rf9979b4isq0",
     "object": "payout",
     "balance_transaction": "btr_ctbvv9ehi567m07e7q80",
-    "amount": 10000
+    "amount": 10000,
+    "local": {
+      "fund_transfer_network": "pix"
+    },
+    "logistics_tracking_details": [],
+    "confirmation_documents": [],
+    "quote": "poq_ctbvv96hi567m07e7q3x",
+    "destination_fx_quote": "fx_ctbvv905ha8onnfg24s3",
+    "available_balance": 30000000,
+    "is_balance_sufficient": true
   }
 }
 ```
@@ -206,9 +224,24 @@ metadata:
     "beneficiary": "bnf_cs8bf4m6rf9979b4isq0",
     "object": "payout",
     "balance_transaction": "btr_ctbvv9ehi567m07e7q80",
-    "amount": 10000
+    "amount": 10000,
+    "local": {
+      "fund_transfer_network": "sepa"
+    },
+    "logistics_tracking_details": [],
+    "confirmation_documents": [
+      {
+        "key": "mt103",
+        "type": "application/pdf",
+        "value": "https://docs.tazapay.com/confirmations/pot_ctbvv96hi567m07e7q40_mt103.pdf"
+      }
+    ],
+    "quote": "poq_ctbvv96hi567m07e7q3z",
+    "destination_fx_quote": "fx_ctbvv905ha8onnfg24s1",
+    "available_balance": 110000000,
+    "is_balance_sufficient": true
   }
-}        
+}
 ```
 
 ### payout.requires_funding
@@ -273,7 +306,16 @@ metadata:
     "currency": "INR",
     "beneficiary": "bnf_crv7k31h1l071n2fkbjg",
     "object": "payout",
-    "amount": 1000000000
+    "amount": 1000000000,
+    "available_balance": 50000000,
+    "is_balance_sufficient": false,
+    "local": {
+      "fund_transfer_network": "rtgs"
+    },
+    "logistics_tracking_details": [],
+    "confirmation_documents": [],
+    "quote": "poq_ctc025mhi567m07e7r4z",
+    "destination_fx_quote": "fx_ctc025g5ha8onnfg2511"
   }
 }
 ```
@@ -331,7 +373,16 @@ metadata:
     "object": "payout",
     "statement_descriptor": "Muskan",
     "on_behalf_of": "ent_csorc2c1kl1roj58r2hg",
-    "amount": 1000
+    "amount": 1000,
+    "local": {
+      "fund_transfer_network": "ach"
+    },
+    "logistics_tracking_details": [],
+    "confirmation_documents": [],
+    "quote": "poq_ctc0bidf9sjsk2si3qp5",
+    "destination_fx_quote": "fx_ctc0bidpk5p8ci8rf57h",
+    "available_balance": 100000000,
+    "is_balance_sufficient": true
   }
 }
 ```
@@ -394,7 +445,16 @@ metadata:
     "object": "payout",
     "statement_descriptor": "Muskan",
     "on_behalf_of": "ent_ct2ovl9f5lhf6huap5cg",
-    "amount": 100
+    "amount": 100,
+    "local": {
+      "fund_transfer_network": "ach"
+    },
+    "logistics_tracking_details": [],
+    "confirmation_documents": [],
+    "quote": "poq_ctc0djtf9sjsk2si3uf1",
+    "destination_fx_quote": "fx_ctc0djtpk5p8ci8rf701",
+    "available_balance": 95000000,
+    "is_balance_sufficient": true
   }
 }
 ```
@@ -463,7 +523,16 @@ metadata:
     "object": "payout",
     "statement_descriptor": "erf",
     "on_behalf_of": "ent_ctdv4tt97ubkibq2km2g",
-    "amount": 100000
+    "amount": 100000,
+    "local": {
+      "fund_transfer_network": "ach"
+    },
+    "logistics_tracking_details": [],
+    "confirmation_documents": [],
+    "quote": "poq_ctgjeqvg9n1vh5nsb3n7",
+    "destination_fx_quote": "fx_ctgjeqtpk5p8ci903jch",
+    "available_balance": 80000000,
+    "is_balance_sufficient": true
   }
 }
 ```
@@ -511,7 +580,14 @@ metadata:
       "name": "Roman",
       "email": "test@example.com",
       "type": "individual",
-      "tax_id": "911-92-3333"
+      "tax_id": "911-92-3333",
+      "is_doc_verification_required": true,
+      "verification_status": "requires_action",
+      "status": "active",
+      "name_local": "",
+      "national_identification_number": "",
+      "party_classification": "third_party",
+      "registration_number": ""
     },
     "payout_fx_transaction": {
       "initial": {
@@ -537,7 +613,16 @@ metadata:
     "statement_descriptor": "Muskan",
     "balance_transaction": "btr_ctgjipng9n1vh5nsbd20",
     "on_behalf_of": "ent_ctc0kk9sgkgeelcl87i0",
-    "amount": 1000
+    "amount": 1000,
+    "local": {
+      "fund_transfer_network": "ach"
+    },
+    "logistics_tracking_details": [],
+    "confirmation_documents": [],
+    "quote": "poq_ctgjipfg9n1vh5nsbcu9",
+    "destination_fx_quote": "fx_ctgjipdpk5p8ci903nt1",
+    "available_balance": 45000000,
+    "is_balance_sufficient": false
   }
 }
 ```
@@ -599,7 +684,22 @@ metadata:
     "object": "payout",
     "balance_transaction": "btr_cv4m1po9mkr4ca8pbu9g",
     "mt103": "{1:F01SCBLSG22AXXX0740170000}{2:I103CHASSGSGXXXXN}{3:{103:MEP}{113:NORQ}{108:SE1\n0502503040286}{111:001}{121:0c795041-3248-4dac-9c60-f0e916452bc5}}{4:\n:20:SE10502503040286\n:23B:CRED\n:32A:250304SGD4300,00\n:33B:SGD4300,00\n:50K:/7540731\nNreach Online Services Inc\n8th The Green Ste A Delaware 19901\nUNITED STATES\n:52D:/0105553026\nTAZAPAY PTE. LTD.\n7 TEMASEK BOULEVARD,20-06 SUNTEC TO\nWER ONE,SINGAPORE,ZIP 038987\n/SINGAPORE\n:57A:CHASSGSGXXX\n:59:/8830045245\nQWIKCILVER SOLUTIONS PTE. LTD.\n:70:Xoxo Day Payout on 03rd March 2025\n:71A:OUR\n-}",
-    "amount": 10000
+    "amount": 10000,
+    "local": {
+      "fund_transfer_network": "ach"
+    },
+    "logistics_tracking_details": [],
+    "confirmation_documents": [
+      {
+        "key": "mt103",
+        "type": "application/pdf",
+        "value": "https://docs.tazapay.com/confirmations/pot_cv4m1po9mkr4ca8pbu5g_mt103.pdf"
+      }
+    ],
+    "quote": "poq_cv4m1po9mkr4ca8pbu67",
+    "destination_fx_quote": "fx_cv4m1pr6tce7o3q54es1",
+    "available_balance": 120000000,
+    "is_balance_sufficient": true
   }
 }
 ```
@@ -668,7 +768,9 @@ metadata:
         "value": "test"
       }
     ],
-    "amount": 78700
+    "amount": 78700,
+    "available_balance": 135000000,
+    "is_balance_sufficient": true
   }
 }
 ```
@@ -742,7 +844,9 @@ metadata:
           "value": "test"
         }
     ],
-    "amount": 78700
+    "amount": 78700,
+    "available_balance": 140000000,
+    "is_balance_sufficient": true
   }
 }
 ```
@@ -811,7 +915,9 @@ metadata:
         "value": "https://s3.ap-southeast-1.amazonaws.com/tazapay-onboarding-service/kyb_ct2ovlfvfes2ls2icfig/kyb_doc96573_26November2024_Screenshot%202024-11-26%20at%202.31.42%20PM.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=ASIAUGJYD3OSULG77W43%2F20241210%2Fap-southeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241210T100403Z&amp;X-Amz-Expires=3600&amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEM7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLXNvdXRoZWFzdC0xIkcwRQIgSy1gj4k2zToD2pZE1PSMWAY70e2nKcroRpipB4S4ImECIQCEeblV2ql1kb3PXqgB%2FU8upPkQyqMLqSh1KmsWGHhCPCr9AwiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAEaDDI4ODQxNzM3MzA5MyIM4ZfXfG6g3ceTQd2XKtED44GmL%2FOCSPsHUdqVeBsPjh%2FW4%2Bksc5fleV7%2FA3Aoy%2FRo8teNG5xFjmU%2FWpBJ0cgZuoJJnVhyMrPnqZIBm%2BIst6u80PPxwdUYEYgv4hI7%2B24lTEoeiNYjFIwSPeMkAx%2BRtyzilTFzMOnIUD4QLn%2B%2FP7U96c0JUHw8DNImaG8OajPTV8OtxW0S0HWdO%2FsbrviEv4bOQMhWo9m2%2BvWHibILNLGh6FeTtVC2fTddRhtMuPpJKtUnbFLf4%2F%2B7x2RXi%2BwRyT7X%2FOUl4V9Hs%2F9FDwZhiDSr3xKKEOzlDgEmSBQpWDlV7XtevPn%2FEpQ3QnDyQcSPhLg6BxuZpjElf%2FSaPsKdZbt2XynisR87S6pfsEESLRFHbv68ARGDy7cnO2x%2Fif9bzgFE31M4Y74EjHnNV%2Fc1%2F%2FSg5KxRedCZ35IW%2BE9R9geeAVp5DI7FcoSYibkgseoF2Ysr903Mg9KWjQrI4vqUsgSsV6nAJC%2FiAwQZDVGOUQyfAJn1SxQpcIDnTWwBnbJcB7GS1HPuMlg0%2FMvM%2FJDXTmgPsSCPmFjhmsjVypIbSV2YjKQiPOvEJYAGn54IdkkhtohIUa5jR0%2FTDkOLDXWzkG279LpebCwFug92bFFaES8zMPS137oGOqUBF8I%2BhtHyPcwLIei2om2Wa8tXua2SSBauLK2kcvVFz7r7Syk7ZUWqMVZUPibolxSxnH1P5lrsbWbpuG4kJj5qOCyWm6v8MHMQ%2FkUFewvJ8bL6xTeOub1N8cr2WnjkfXpmYvoV70amooUPUJ0HRw%2FYMVTJXJhMJ0r2HyZYnFLz%2B14VPgRufOTdgz28YhY%2BYslIjv8OLvlGCVR0AkPwColVc9ZaqPY2&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=attachment%3B&amp;response-content-type=image%2Fpng&amp;x-id=GetObject&amp;X-Amz-Signature=f9df595274faec769a77a7712a87954db65003702ea055782404fdd75a3fdcd1"
       }
     ],
-    "amount": 78700
+    "amount": 78700,
+    "available_balance": 95000000,
+    "is_balance_sufficient": true
   }
 }
 ```
@@ -880,7 +986,9 @@ metadata:
         "value": "https://s3.ap-southeast-1.amazonaws.com/tazapay-onboarding-service/kyb_ct2ovlfvfes2ls2icfig/kyb_doc96573_26November2024_Screenshot%202024-11-26%20at%202.31.42%20PM.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=ASIAUGJYD3OSULG77W43%2F20241210%2Fap-southeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241210T100403Z&amp;X-Amz-Expires=3600&amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEM7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLXNvdXRoZWFzdC0xIkcwRQIgSy1gj4k2zToD2pZE1PSMWAY70e2nKcroRpipB4S4ImECIQCEeblV2ql1kb3PXqgB%2FU8upPkQyqMLqSh1KmsWGHhCPCr9AwiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAEaDDI4ODQxNzM3MzA5MyIM4ZfXfG6g3ceTQd2XKtED44GmL%2FOCSPsHUdqVeBsPjh%2FW4%2Bksc5fleV7%2FA3Aoy%2FRo8teNG5xFjmU%2FWpBJ0cgZuoJJnVhyMrPnqZIBm%2BIst6u80PPxwdUYEYgv4hI7%2B24lTEoeiNYjFIwSPeMkAx%2BRtyzilTFzMOnIUD4QLn%2B%2FP7U96c0JUHw8DNImaG8OajPTV8OtxW0S0HWdO%2FsbrviEv4bOQMhWo9m2%2BvWHibILNLGh6FeTtVC2fTddRhtMuPpJKtUnbFLf4%2F%2B7x2RXi%2BwRyT7X%2FOUl4V9Hs%2F9FDwZhiDSr3xKKEOzlDgEmSBQpWDlV7XtevPn%2FEpQ3QnDyQcSPhLg6BxuZpjElf%2FSaPsKdZbt2XynisR87S6pfsEESLRFHbv68ARGDy7cnO2x%2Fif9bzgFE31M4Y74EjHnNV%2Fc1%2F%2FSg5KxRedCZ35IW%2BE9R9geeAVp5DI7FcoSYibkgseoF2Ysr903Mg9KWjQrI4vqUsgSsV6nAJC%2FiAwQZDVGOUQyfAJn1SxQpcIDnTWwBnbJcB7GS1HPuMlg0%2FMvM%2FJDXTmgPsSCPmFjhmsjVypIbSV2YjKQiPOvEJYAGn54IdkkhtohIUa5jR0%2FTDkOLDXWzkG279LpebCwFug92bFFaES8zMPS137oGOqUBF8I%2BhtHyPcwLIei2om2Wa8tXua2SSBauLK2kcvVFz7r7Syk7ZUWqMVZUPibolxSxnH1P5lrsbWbpuG4kJj5qOCyWm6v8MHMQ%2FkUFewvJ8bL6xTeOub1N8cr2WnjkfXpmYvoV70amooUPUJ0HRw%2FYMVTJXJhMJ0r2HyZYnFLz%2B14VPgRufOTdgz28YhY%2BYslIjv8OLvlGCVR0AkPwColVc9ZaqPY2&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=attachment%3B&amp;response-content-type=image%2Fpng&amp;x-id=GetObject&amp;X-Amz-Signature=f9df595274faec769a77a7712a87954db65003702ea055782404fdd75a3fdcd1"
       }
     ],
-    "amount": 78700
+    "amount": 78700,
+    "available_balance": 125000000,
+    "is_balance_sufficient": true
   }
 }
 ```
@@ -946,7 +1054,12 @@ metadata:
         "url": "https://s3.ap-southeast-1.amazonaws.com/tazapay-payout-document-qa/pot_d3n3i7t2amni271p7qd0"
       }
     ],
-    "amount": 10000
+    "amount": 10000,
+    "quote": "poq_d3n3i7t2amni271p7qd9",
+    "logistics_tracking_details": [],
+    "confirmation_documents": [],
+    "available_balance": 55000000,
+    "is_balance_sufficient": true
   }
 }
 ```

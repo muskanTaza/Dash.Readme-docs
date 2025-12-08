@@ -29,28 +29,32 @@ next:
         "state": "Delhi"
       },
   "date_of_birth": "2003-04-04",
-  "destination": "",
+  "destination": "wal_d3inm6ami8u10oqfk",
   "destination_details": {
         "type": "wallet",
         "wallet": {
           "currency": "USDC",
           "deposit_address": "09e53bcac0f2edxnjsui87f8bb7a9faf64789ed8",
-          "type": "ethereum"
+          "type": "ethereum",
+          "hosted": "no"
         }
       },
   "documents": [],
   "email": "abc@gmail.com",
   "name": "Scott",
-  "name_local": "",
-  "national_identification_number": "",
+  "name_local": "स्कॉट",
+  "national_identification_number": "AIDPK1234M",
   "party_classification": "third_party",
   "phone": {
     "calling_code": "91",
     "number": "9231231231"
   },
   "registration_number": "",
-  "tax_id": "",
-  "type": "individual"
+  "tax_id": "29ABCDE1234F1Z5",
+  "type": "individual",
+  "is_doc_verification_required": true,
+  "status": "active",
+  "verification_status": "succeeded"
 }
 ```
 ```json Business
@@ -62,15 +66,16 @@ next:
         "postal_code": "00000",
         "state": "Vortmore"
   },
-  "destination": "",
+  "destination": "bnk_d05lmjuq59csbboqt9d0",
   "destination_details": {
         "bank": {
+          "account_number": "DE535019045650474185",
           "account_type": "savings",
           "bank_codes": {
             "swift_code": "FBDEFF"
           },
           "bank_name": "ER VOLKSBANK EG",
-          "branch_name": "",
+          "branch_name": "Frankfurt am Main",
           "country": "DE",
           "currency": "EUR",
           "firc_required": false,
@@ -81,19 +86,22 @@ next:
         "type": "bank"
       },
   "documents": [],
-  "email": "",
+  "email": "finance@gmbh-company.de",
   "name": "GMBH",
   "name_local": "",
   "national_identification_number": "",
-  "party_classification": "",
+  "party_classification": "third_party",
   "phone": {
     "calling_code": "49",
     "number": "9231231231"
   },
-  "registration_number": "",
-  "tax_id": "",
-  "type": "business"
-},
+  "registration_number": "HRB 123456",
+  "tax_id": "DE123456789",
+  "type": "business",
+  "is_doc_verification_required": false,
+  "status": "active",
+  "verification_status": "succeeded"
+}
 ```
 
 ### Beneficiary Details
@@ -116,6 +124,9 @@ next:
 | tax_id                         | string                 | The tax identification number of the beneficiary.                                                                                                 |
 | created_at                     | string (ISO timestamp) | The date and time when the beneficiary was created.                                                                                               |
 | metadata                       | json                   | Additional  key-value pairs associated with the beneficiary (optional).                                                                           |
+| is_doc_verification_required   | boolean                | Indicates if document verification is required for this beneficiary. Applicable for wallet beneficiaries.                                         |
+| status                         | enum                   | Current status of the beneficiary. Possible values: `active`, `inactive`                                                                          |
+| verification_status            | enum                   | Document verification status for wallet beneficiaries. Possible values: `processing`, `requires_action`, `succeeded`, `failed`                   |
 
 <br />
 
@@ -129,19 +140,23 @@ next:
     "wallet": {
             "currency": "USDC",
             "deposit_address": "09e53bcac0f2edxnjsui87f8bb7a9faf64789ed8",
-             "type": "ethereum"
+             "type": "ethereum",
+             "hosted": "yes",
+             "vasp_name": "Binance",
+             "vasp_website": "https://www.binance.com"
     }
 }
 ```
 ```json Bank
 {
   "bank": {
-    "account_type": "",
+    "account_number": "DE535019045650474185",
+    "account_type": "savings",
     "bank_codes": {
             "swift_code": "FBDEFF"
           },
     "bank_name": "ER VOLKSBANK EG",
-    "branch_name": "",
+    "branch_name": "Frankfurt am Main",
     "country": "DE",
     "currency": "EUR",
     "firc_required": false,
@@ -157,6 +172,7 @@ next:
   "local_payment_network": {
           "currency": "BRL",
           "deposit_key": "fep@gmail.com",
+          "deposit_key_type": "email",
           "type": "pix_brl"
   },
   "type": "local_payment_network"
@@ -191,19 +207,23 @@ next:
 
 ### Wallet
 
-| Subfield        | Type   | Description                                                            |
-| :-------------- | :----- | :--------------------------------------------------------------------- |
-| currency        | string | The cryptocurrency type (e.g., `USDC`).                                |
-| deposit_address | string | The wallet deposit address.                                            |
-| type            | enum   | The blockchain type. [Values: `ethereum`, `tron`, `polygon`, `solana`] |
+| Subfield        | Type   | Description                                                                                                                                                                                                                                                                                           |
+| :-------------- | :----- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| currency        | string | The cryptocurrency type (e.g., `USDC`).                                                                                                                                                                                                                                                               |
+| deposit_address | string | The wallet deposit address.                                                                                                                                                                                                                                                                           |
+| type            | enum   | The blockchain type. [Values: `ethereum`, `tron`, `polygon`, `solana`]                                                                                                                                                                                                                                |
+| hosted          | enum   | Indicates whether the wallet is custodial (hosted) or non-custodial (unhosted). Possible values: `yes` – The wallet is hosted by a Virtual Asset Service Provider (VASP) or exchange. `no` – The wallet is non-custodial and controlled directly by the user (e.g., MetaMask, Ledger). Mandatory if `party_classification` is 'self' and `destination_details.type` is 'wallet'. |
+| vasp_name       | string | The registered name of the Virtual Asset Service Provider (VASP) or exchange that hosts or manages the wallet. Mandatory if `party_classification` is 'self', `destination_details.type` is 'wallet' and `hosted` is 'yes'                                                                            |
+| vasp_website    | string | The official website URL of the VASP or exchange that manages the wallet. Used for VASP identification and due diligence under Travel Rule requirements. Mandatory if `party_classification` is 'self', `destination_details.type` is 'wallet' and `hosted` is 'yes'                                  |
 
 ### Local Payment Network
 
-| Subfield    | Type   | Description                                         |
-| :---------- | :----- | :-------------------------------------------------- |
-| currency    | string | The currency used in the local payment network.     |
-| deposit_key | string | The deposit key (e.g., PIX key in Brazil).          |
-| type        | enum   | The local payment network type. [Values: `pix_brl`] |
+| Subfield         | Type   | Description                                                                                  |
+| :--------------- | :----- | :------------------------------------------------------------------------------------------- |
+| currency         | string | The currency used in the local payment network.                                              |
+| deposit_key      | string | The deposit key corresponding to the type of local payment network (e.g., PIX key, UPI handle). |
+| deposit_key_type | enum   | Type of the deposit key. Conditionally mandatory depending on the value of type              |
+| type             | enum   | The local payment network type. [Values: `pix_brl`, `upi_inr`, `promptpay_thb`]             |
 
 ### Tazapay Account
 

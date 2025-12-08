@@ -39,6 +39,7 @@ next:
 | 20299 | Please provide a valid fx quote fx quote is expired or mismatch in from and to currency                                                                                                                     | 400         |
 | 20110 | When the txn source is bfi funding interval should be configured please configure funding interval and try again later                                                                                      | 400         |
 | 20035 | INR payouts purpose code validation is failing. Please check [https://docs.tazapay.com/docs/purpose-codes-valid-for-india-payouts#/](https://docs.tazapay.com/docs/purpose-codes-valid-for-india-payouts#/) | 400         |
+| 20326 | Invalid fund_transfer_network provided. The specified fund transfer network is not supported for this country and currency. Please use the Payout Bank Metadata API to get the list of supported networks.  | 400         |
 
 ***
 
@@ -65,6 +66,7 @@ next:
 |       1054 | URL you have provided does not have a downloadable document available                                                                     |              404 |
 |       1000 | country %s is not supported at this moment                                                                                                |              404 |
 |       1011 | given currency %s is not supported                                                                                                        |              404 |
+|       1100 | Invalid fund_transfer_network provided. The specified fund transfer network is not supported for this country and currency combination.   |              400 |
 
 ***
 
