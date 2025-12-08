@@ -81,6 +81,14 @@ curl --request POST \
     "documents": [],
     "email": "",
     "id": "ent_cvjc82u8su5b6k0dqccg",
+    "individual": {
+        "national_identification_number": {
+            "type": "",
+            "number": ""
+        },
+        "date_of_birth": "",
+        "nationality": ""
+    },
     "metadata": null,
     "name": "John Doe",
     "object": "entity",
@@ -157,6 +165,14 @@ curl --request POST \
   "purpose_of_use": [
     "payout"
   ],
+  "individual": {
+        "national_identification_number": {
+            "type": "passport",
+            "number": "2345678"
+        },
+        "date_of_birth": "2001-09-21",
+        "nationality": "IN"
+  },
   "documents": [
     {
       "type": "identity",
@@ -213,6 +229,14 @@ curl --request POST \
     ],
     "email": "",
     "id": "ent_cvlru8b1d43oq387u9og",
+    "individual": {
+      "national_identification_number": {
+          "type": "passport",
+          "number": "2345678"
+      },
+      "date_of_birth": "2001-09-21",
+      "nationality": "IN"
+    },
     "metadata": {},
     "name": "John Doe",
     "object": "entity",
@@ -282,6 +306,14 @@ curl --request POST \
   "purpose_of_use": [
     "payout"
   ],
+  "individual": {
+    "national_identification_number": {
+        "type": "passport",
+        "number": "2345678"
+    },
+    "date_of_birth": "2001-09-21",
+    "nationality": "IN"
+  },
   "documents": [
     {
       "type": "identity",
@@ -340,6 +372,14 @@ curl --request POST \
     ],
     "email": "alice.evans@me.com",
     "id": "ent_cvls1pj1d43oq387uf3g",
+    "individual": {
+      "national_identification_number": {
+          "type": "passport",
+          "number": "2345678"
+      },
+      "date_of_birth": "2001-09-21",
+      "nationality": "IN"
+    },
     "metadata": null,
     "name": "Alice Evans",
     "object": "entity",
@@ -431,6 +471,14 @@ Sample Webhook Payload
     "vertical": "Ecommerce-AgriProducts-Florists and Novelty Products",
     "registration_number": "RG001",
     "id": "ent_csmd6741kl1roj57ereg",
+    "individual": {
+      "national_identification_number": {
+          "type": "passport",
+          "number": "2345678"
+      },
+      "date_of_birth": "2001-09-21",
+      "nationality": "IN"
+    },
     "type": "company",
     "representatives": [
       {
