@@ -155,7 +155,7 @@ The function takes the following parameters as input
 | client_token           | Mandatory               | Refer response of the payin API                                                                                                                               |
 | payment_method_details | Mandatory               | This contains two parameters - `type` and `card`                                                                                                              |
 | customer_details       | Conditionally Mandatory | Only required if the customer_details are not passed from the server-side                                                                                     |
-| billing_details        | Conditionally Mandatory | Refer to the guide <a href="https://docs.tazapay.com/docs/address-validations"> here</a>.                                                                     |
+| billing_details        | Conditionally Mandatory | Refer to the guide <a href="https://docs.tazapay.com/docs/address-validation"> here</a>.                                                                      |
 | success_url            | Mandatory               | The customer will be redirected to this URL after a successful charge creation. The customer may be redirected externally to authenticate themselves for 3DS. |
 | cancel_url             | Mandatory               | The customer will be redirected to this URL after a failed charge. The customer may be redirected externally to authenticate themselves for 3DS.              |
 

@@ -1,7 +1,7 @@
 ---
 title: United Kingdom (GB)
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---

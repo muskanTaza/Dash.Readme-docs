@@ -124,7 +124,8 @@ curl --location 'https://service-sandbox.tazapay.com/v3/payin' \
 
 ## Step 3: Redirect the customer to LinkAja
 
-After confirming the payin, you will receive the following response. You will receive a redirect_url where you can redirect your customer to
+After confirming the payin, access the form field in the response from the data object. This form will
+be used to redirect the user to the payment page
 
 ```json
 {
@@ -134,24 +135,26 @@ After confirming the payin, you will receive the following response. You will re
         "amount": 10000000,
         "amount_paid": 0,
         "billing_details": null,
-        "cancel_url": "",
+        "cancel_url": "https://mypage.failure",
         "cancelled_at": null,
-        "client_token": "lSMRSARnIHkJtaf4jkal04Fag5FWrQokejmRe-6rCno=",
+        "client_token": "_Rrgfj9OSfEUoeQozz81HH7aRonzXeNSQ9CcgMhB4a0=",
         "confirm": true,
-        "created_at": "2024-02-28T17:56:18.293247360Z",
-        "customer": "cus_cnfn7ftk11f1q7gge7dg",
+        "created_at": "2025-11-20T08:42:43.565683551Z",
+        "customer": "cus_d4fd90np3mil5glh0fh0",
         "customer_details": {
             "country": "ID",
             "email": "andrea.lark@tazapay.com",
             "name": "Andrea Lark",
             "phone": null
         },
-        "id": "pay_cnfn7fr5pbnta9her7k0",
+        "form": "Jmx0O2h0bWwmZ3Q7Jmx0O2hlYWQmZ3Q7Jmx0O21ldGEgY2hhcnNldD0mIzM0O3V0Zi04JiMzNDsmZ3Q7Jmx0Oy9oZWFkJmd0OyZsdDtib2R5Jmd0OyZsdDtmb3JtIGlkPSYjMzQ7Zm9ybXN1Ym1pdCYjMzQ7IG5hbWU9JiMzNDtmb3Jtc3VibWl0JiMzNDsgYWN0aW9uPSYjMzQ7aHR0cHM6Ly9wYXltZW50LmxpbmthamEuaWQvY2hlY2tvdXQvcGF5bWVudCYjMzQ7IG1ldGhvZD0mIzM0O3Bvc3QmIzM0OyZndDsgJmx0O2lucHV0IHR5cGU9JiMzNDtoaWRkZW4mIzM0OyBuYW1lPSYjMzQ7TWVzc2FnZSYjMzQ7IHZhbHVlPSYjMzQ7TFMwdExTMUNSVWRKVGlCTlpYTnpZV2RsTFMwdExTMEtDbmRqUmsxQmVtdElhVXBxTlZRd1dtNUJVa0ZCV0VOWE9GUlhZa0pIV0hnMGJuSjVaazVGVVU5TGEyZHpNak5vU1hwQk4xQlZiR1pXZUZweFpYbE9XRW9LUjI4NE9ESTBlUzg1V25wR2FWWkZha1E1VXpGemVDOUhSbmxTUW5kclNFMVlSSFpXZGtkR1Z6RkdRVEJTTUV4U1JUbFRjRmREUkZSc0sxbERWalZvYndwR2JERnhTVGRqYjFkU1NIaGpjM2x0VTFOUWRYbHlhR3cwU21adlRubEpkbkJzTUROM2VGbDBRVnBIZGtvMU9VWXJSV3d3Y1dWd1MyOWllR1ZYZDFwNkNsbDFaRU0wVjFWSFNFVnFUV1V4ZW1ZMk9HSk9RbHBGVFdweVJsbEZTRTAwVjNCT1MwMDRPREV5TmpWVmJtNTRhR1V3UnpCNlRtcExibFVyYjJRM01Xb0tjbEpMU1hCU1pWWTVhVGRtTVZWTVQwUjJXRXBFYkhWSU16UmlRVk5KWm1GNVluUnVUa0pGUVVSRk5WQkRiVWs0VWs5QmRrZGlRMFF5UldGdU9ERnRjd29yWW5WUlVVVlhiRk5ZTWsxeVNFUXhURXBUWmpKcWEwMXlZV2hEYURoNlRYb3ZTREV2TlROd1owMUxObVY1U2tGamRuTlllbWRuS3k4NFFXd3laVzFKQ21jdlMycHFjbFpMZDJSNE16WlZUbnBMZDNGdmNsQXljMDlzVkRrd1RuQlRXV2t3V1ZrNFpXZFhRbVJUWWxWbmRESldSRnBsTmxncllWa3dWRUpVUm1VS1ltRkVTMUF3Vmtoc1RXeHJkblZTVFc0clVrNUZXbUZTUlRJMWNVVkdhMVV5V1VWWFEwTjZaRVJxTldoV1FUTjRhVGt6V1ZoS2JIUlVOUzk0TDNSaWR3cFlRM1ZVUkU4eE1qUjBiRnBPT1M5RVp6Z3ZUMWMxUkhGUFVHcEZObGh0VUcxT2VuRjBibkkxYWpoNVJHUjBaRWRQUzNWRGNsaFJPWEpRVTFKWmR6QkpDalJwVEVvNVNtdFNhRmhNWjJFek1DODVSVGR5UW5WM2REZFFOVEJCU1RkRGMxaFFMMGcyUzBkVFQzazRXVmROZG5aQmQyd3lTMlJPYVRCbFdIVTBNVVFLYVZwMlVVWkhNVEJtT1ZreFJFbE9aR3RsYTJRNFlpdDNWbXBYUnl0NmEzZDJUVTlIVmtFck5ubDJZbWQ2VFZjMVN5OHhVbGxXTUN0WmFXRlFVMjVxVXdvMlFVVmpWbkJRT0RGcFVrWkxURlF6YlVkM1FtRmFaV3B1Wm5sTVJtTkZUV0ZMWW5KemNVRTNjVlkxUWtVd1Z6WndTM1pNUmpSQmJsVnNWV0ZQUzNaU0NrOUpVVk13VFVaMFNrMVlWVVZUTm1vNVIyd3liRmhQTVhCSFRHOTZMMGRZYm14SVJFTjJSRU50YVc1VGF6QlZVM05aWm1KaU9WQllhRVJDU0V4dk5qVUtRbmhEZERScVduVXZaekUxU1ZGNlNrWjJZMjVHVWs5SVkwNXBXbXhNVkRrd2N6TmhPVGcyYkVOblpWcEVTR05tT1dWWFYyZDFWbGszVEhkdlMxbHJZZ3BYWkRCcWRpOUViM2g2VEZGc1JWbHlUekpyTmpSUFl6WlJUbGRUUTB0NGMwSktVemszTHpCRFNVZzJUelU1YWxWS1UwZEpSbHBMVEd4RVNESkZUVkpoQ2trM1JFODFjRWRvWlZsbFNYRkVhR016YVhWUVYzSnljVUp3Um1KUFR6aFdNMmx1YmpSb1EwUnJiVGw2VjBaaVRrVTNVWEZMTjNOeGQySjZSbVZsTkVrS1RYRm1lVTlPV2pSeE5FVmxUSGRvWVZoaFJHbGlWVmhzUTNsVFEzUnpjMk00TjJWMGVIQmFZMHM1V0VWQ1owWlNRWGhSV0ZnM1RHaElLMEZ6U1hGQ1NBcEVRMGhyUmxacVFtcE1ZbXh6YTBneWEyUmtaM1JUVWs1SlpVOUtjbVJ2SzFSbVlUUnpaVXBqTTJwNFZFRkJQVDBLUFZsSWJGUUtMUzB0TFMxRlRrUWdUV1Z6YzJGblpTMHRMUzB0fnRhemExNzYzNjI4MTYzNDE2NTc0OTI3JiMzNDsgLyZndDsmbHQ7aW5wdXQgdHlwZT0mIzM0O2hpZGRlbiYjMzQ7IG5hbWU9JiMzNDt1cmwmIzM0OyB2YWx1ZT0mIzM0O2h0dHBzOi8vcGF5bWVudC5saW5rYWphLmlkL2NoZWNrb3V0L3BheW1lbnQmIzM0OyAvJmd0OyZsdDtpbnB1dCB0eXBlPSYjMzQ7c3VibWl0JiMzNDsgdmFsdWU9JiMzNDtzdWJtaXQmIzM0OyBzdHlsZT0mIzM0O2Rpc3BsYXk6IG5vbmUmIzM0OyAvJmd0OyZsdDsvZm9ybSZndDsmbHQ7c2NyaXB0IHR5cGU9JiMzNDt0ZXh0L2phdmFzY3JpcHQmIzM0OyZndDtkb2N1bWVudC5mb3Jtc1smIzM5O2Zvcm1zdWJtaXQmIzM5O10uc3VibWl0KCk7Jmx0Oy9zY3JpcHQmZ3Q7Jmx0Oy9ib2R5Jmd0OyZsdDsvaHRtbCZndDs=",
+        "holding_currency": "IDR",
+        "id": "pay_d4fd90jksan48piqmve0",
         "invoice_currency": "IDR",
-        "latest_payment_attempt": "pat_cnfn7g35pbnta9her7lg",
+        "items": [],
+        "latest_payment_attempt": "pat_d4fd90jksan48piqmvg0",
         "latest_payment_attempt_data": {
-            "expires_at": "2024-03-04T17:56:18Z",
-            "redirect_url": "https://checkout.tazapay.com/single-payment.html?tzid=lSMRSARnIHkJtaf4jkal04Fag5FWrQokejmRe-6rCno=&spid=aHR0cHM6Ly9wYXkuZGxvY2FsLmNvbS9nbWYtYXBtL3BheW1lbnRzLXJlZGlyZWN0L00tMWM4YzExZGItZjYyYi00NTRmLWE3YmUtYWY4NDBjMjQ0ZDZm"
+            "expires_at": "2025-11-20T08:47:43Z"
         },
         "metadata": null,
         "object": "payin",
@@ -166,7 +169,7 @@ After confirming the payin, you will receive the following response. You will re
         "statement_descriptor": "",
         "status": "requires_action",
         "status_description": "",
-        "success_url": "",
+        "success_url": "https://mypage.success",
         "transaction_data": [],
         "transaction_description": "1 X Good",
         "transaction_documents": [],
@@ -175,11 +178,40 @@ After confirming the payin, you will receive the following response. You will re
 }
 ```
 
+## Integration Steps 
+
+The data obtained in the form field is a base64 encoded html form. This form contains POST action methods which will make the user land on the appropriate page to make payment.
+
+1. Access the `form` field from api response and decode it to get the actual form
+
+```javascript
+let form = response.data.form;
+let decodedForm = window.atob(form);
+```
+
+2. Parse the decoded form to remove the tags
+
+```javascript
+const element = document.createElement("div");
+element.innerHTML  decodedForm;
+let html = element.textContent;
+```
+
+3. Assign this html content to the window object
+
+```javascript
+window.document.write(html);
+```
+
+4. After this step, Linkaja payment page will be opened on the same tab
+
+<Image align="center" border={false} src="https://files.readme.io/ed44ae56f4fd3b19cddacc9fbaf49487120ec3dccabb2e8370ef46c35223d5bc-Screenshot_2025-11-20_at_2.17.18_PM.png" />
+
 ## Step 4: Handle post-payment events
 
 Tazapay sends a `payin.succeeded` event as soon as the funds are received from the customer. Use the `webhook_url` field in the payin API to receive these events and run actions (for example, sending an order confirmation email to your customers, logging the sale in a database, starting a shipping workflow, etc.)
 
-Post a successful payment, the customer will be redirected back to the `success_url`. You will also receive a `payin.succeeded` event on your webhook_url. 
+Post a successful payment, the customer will be redirected back to the `success_url`. You will also receive a `payin.succeeded` event on your webhook_url.
 
 In case the customer does not complete the payment within the expiry time or the charge is not successful, the customer is redirected back to the `cancel_url` . From the cancel_url, you can display the list of payment methods again to the customer. To generate a new request, confirm the payin again using Step 2. You will also receive a `payment_attempt.failed` webhook.
 
@@ -207,7 +239,7 @@ LinkAja does not support partial refunds, the refund has to be for the full valu
 
 ### Refunding using dashboard
 
-Refer to this guide: \<https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard>
+Refer to this guide: \<[https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard>](https://support.tazapay.com/how-do-i-request-a-refund-from-my-dashboard>)
 
 ### Refund using API
 
