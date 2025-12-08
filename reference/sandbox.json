@@ -5252,7 +5252,7 @@
                         "local": {
                           "fund_transfer_network": "ach"
                         },
-                        "logistics_tracking_details":[],
+                        "logistics_tracking_details": [],
                         "metadata": null,
                         "mt103": "",
                         "object": "payout",
@@ -5272,7 +5272,7 @@
                         "purpose": "PYR001",
                         "quote": "poq_crv5u81h1l071n2fk1n0",
                         "confirmation_documents": [],
-                        "destination_fx_quote":"fx_d34hc7loipp34fm0",
+                        "destination_fx_quote": "fx_d4hu4786bhdq534ritlg",
                         "reference_id": "INV-2024-0912",
                         "statement_descriptor": "tzp*Consulting Fee",
                         "status": "processing",
@@ -5281,10 +5281,7 @@
                         "transaction_description": "Payment for consulting services",
                         "type": "swift",
                         "on_behalf_of": "",
-                        "logistic_tracking_details": [],
-                        "confirmation_documents": [],
-                        "destination_fx_quote": "fx_d4hu4786bhdq534ritlg",
-                        "quote": "poq_crv5u81h1l071n2fk1n0"
+                        "logistic_tracking_details": []
                       }
                     }
                   }
@@ -5734,7 +5731,7 @@
                           "party_classification": "",
                           "phone": {},
                           "registration_number": "",
-                          "status":"active",
+                          "status": "active",
                           "tax_id": "",
                           "type": "business",
                           "verification_status": "succeeded"
@@ -7092,8 +7089,21 @@
                     },
                     "confirmation_documents": {
                       "type": "array",
-                      "example": [],
-                      "description": "List of confirmation documents for the payout"
+                      "description": "Array of confirmation documents like MT103, MT199, FIRC",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "key": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string"
+                          },
+                          "value": {
+                            "type": "string"
+                          }
+                        }
+                      }
                     },
                     "created_at": {
                       "type": "string",
@@ -7327,24 +7337,6 @@
                                 "type": "string"
                               }
                             }
-                          }
-                        }
-                      }
-                    },
-                    "confirmation_documents": {
-                      "type": "array",
-                      "description": "Array of confirmation documents like MT103, MT199, FIRC",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "key": {
-                            "type": "string"
-                          },
-                          "type": {
-                            "type": "string"
-                          },
-                          "value": {
-                            "type": "string"
                           }
                         }
                       }
@@ -10719,9 +10711,8 @@
                       "description": "Contains detailed information about the currency conversion result.",
                       "properties": {
                         "amount": {
-                          "type": "integer",
-                          "description": "The amount to be converted from the initial currency, expressed in the smallest currency unit (e.g., cents).",
-                          "example": 1000
+                          "type": "number",
+                          "description": "The amount that needs to be exchanged"
                         },
                         "converted_amount": {
                           "type": "integer",
@@ -10747,10 +10738,6 @@
                           "type": "string",
                           "description": "Timestamp indicating when the FX conversion was performed (ISO 8601 format).",
                           "example": "2025-01-09T09:51:40.229346267Z"
-                        },
-                        "amount": {
-                          "type": "number",
-                          "description": "The amount that needs to be exchanged"
                         }
                       }
                     }
@@ -10818,14 +10805,11 @@
                             ],
                             "fund_transfer_networks": [],
                             "recommended_fields": {
-                              "bank_branch": "optional"
-                            },
-                            "required_beneficiary_fields": [],
-                            "recommended_fields": {
                               "recommended_bank_codes": [],
                               "recommended_bank_fields": [],
                               "recommended_beneficiary_fields": []
                             },
+                            "required_beneficiary_fields": [],
                             "supported_destinations": [],
                             "transfer_limit": {
                               "currency": "HKD",
@@ -10981,13 +10965,29 @@
                               },
                               "recommended_fields": {
                                 "type": "object",
-                                "description": "Map of recommended but non-mandatory fields with their requirement level (e.g., 'optional', 'recommended'). Helps improve payout success rates.",
-                                "additionalProperties": {
-                                  "type": "string"
-                                },
-                                "example": {
-                                  "bank_branch": "optional",
-                                  "account_type": "recommended"
+                                "description": "These are conditionally required fields. Recommend to add them to make your payouts compatible with all our PSPs and hence lower the failure rates.",
+                                "properties": {
+                                  "recommended_bank_codes": {
+                                    "type": "array",
+                                    "description": "Recommended Bank codes",
+                                    "items": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "recommended_bank_fields": {
+                                    "type": "array",
+                                    "description": "Recommended Bank Fields",
+                                    "items": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "recommended_beneficiary_fields": {
+                                    "type": "array",
+                                    "description": "Recommended Beneficiary Fields",
+                                    "items": {
+                                      "type": "string"
+                                    }
+                                  }
                                 }
                               },
                               "supported_destinations": {
@@ -11017,33 +11017,6 @@
                                     "type": "integer",
                                     "description": "Minimum allowable payout amount in the smallest currency unit (e.g., cents).",
                                     "example": 130
-                                  }
-                                }
-                              },
-                              "recommended_fields": {
-                                "type": "object",
-                                "description": "These are conditionally required fields. Recommend to add them to make your payouts compatible with all our PSPs and hence lower the failure rates.",
-                                "properties": {
-                                  "recommended_bank_codes": {
-                                    "type": "array",
-                                    "description": "Recommended Bank codes",
-                                    "items": {
-                                      "type": "string"
-                                    }
-                                  },
-                                  "recommended_bank_fields": {
-                                    "type": "array",
-                                    "description": "Recommended Bank Fields",
-                                    "items": {
-                                      "type": "string"
-                                    }
-                                  },
-                                  "recommended_beneficiary_fields": {
-                                    "type": "array",
-                                    "description": "Recommended Beneficiary Fields",
-                                    "items": {
-                                      "type": "string"
-                                    }
                                   }
                                 }
                               }
@@ -17344,7 +17317,7 @@
                         }
                       },
                       "exchange_rates": {
-                        "holding_to_payout": 5.10,
+                        "holding_to_payout": 5.1,
                         "payout_to_destination": 1
                       },
                       "valid_until": "2024-12-03T17:00:00-03:00",
@@ -17678,7 +17651,7 @@
                 "examples": {
                   "OK": {
                     "summary": "OK",
-                    "value": "{\n  \"amount\": 5000,\n  \"balance_transaction\": \"btr_d24adsvfccunngaiu2bg\",\n  \"beneficiary\": \"bnf_d24adp7fccunngaiu20g\",\n  \"beneficiary_details\": {\n    \"address\": null,\n    \"date_of_birth\": \"\",\n    \"destination\": \"\",\n    \"destination_details\": {\n      \"bank\": {\n        \"account_type\": \"\",\n        \"bank_codes\": {},\n        \"bank_name\": \"testfxbank\",\n        \"branch_name\": \"\",\n        \"country\": \"FR\",\n        \"currency\": \"EUR\",\n        \"firc_required\": false,\n        \"iban\": \"31\",\n        \"purpose_code\": \"\",\n        \"transfer_type\": \"local\"\n      },\n      \"type\": \"bank\"\n    },\n    \"documents\": [],\n    \"email\": \"\",\n    \"name\": \"Jackie Morissette\",\n    \"national_identification_number\": \"\",\n    \"party_classification\": \"\",\n    \"phone\": {\n      \"calling_code\": \"33\"\n    },\n    \"registration_number\": \"\",\n    \"tax_id\": \"\",\n    \"type\": \"individual\",\n    \"status\": \"active\",\n    \"verification_status\": \"succeeded\",\n\t\t\"is_doc_verification_required\": false\n\t\t\n  },\n  \"charge_type\": \"\",\n  \"confirmation_documents\": [],\n  \"created_at\": \"2025-07-29T10:48:19.014533Z\",\n  \"currency\": \"EUR\",\n  \"documents\": [],\n  \"holding_currency\": \"USD\",\n  \"holding_fx_transaction\": {\n    \"exchange_rate\": 0.828672,\n    \"final\": {\n      \"amount\": 5000,\n      \"currency\": \"EUR\"\n    },\n    \"id\": \"fx_d24adsmp89reuemeaujg\",\n    \"initial\": {\n      \"amount\": 6034,\n      \"currency\": \"USD\"\n    },\n    \"object\": \"fx_transaction\"\n  },\n  \"id\": \"pot_d24adsnfccunngaiu280\",\n  \"local\": {\n    \"fund_transfer_network\": \"\"\n  },\n  \"logistics_tracking_details\": [],\n  \"metadata\": {\n    \"collect_id\": \"col_d24ae102tsfj74sj23s0\",\n    \"transaction_hash\": \"0xie4el49kctwen8rf6urv7wirrtemva9bqhjlct7j1v9jp8r4eya4zg08c80xkgxo\"\n  },\n  \"mt103\": \"\",\n  \"object\": \"payout\",\n  \"on_behalf_of\": \"\",\n  \"payout_fx_transaction\": {\n    \"exchange_rate\": 1,\n    \"final\": {\n      \"amount\": 5000,\n      \"currency\": \"EUR\"\n    },\n    \"id\": \"fx_d24adsmp89reuemeauj0\",\n    \"initial\": {\n      \"amount\": 5000,\n      \"currency\": \"EUR\"\n    },\n    \"object\": \"fx_transaction\"\n  },\n  \"purpose\": \"PYR008\",\n  \"reference_id\": \"\",\n  \"source\": \"col_d24ae102tsfj74sj23s0\",\n  \"statement_descriptor\": \"\",\n  \"status\": \"processing\",\n  \"status_description\": \"\",\n  \"tracking_details\": null,\n  \"transaction_description\": \"Payout Description\",\n  \"type\": \"local\"\n}}"
+                    "value": "{\n  \"amount\": 5000,\n  \"balance_transaction\": \"btr_d24adsvfccunngaiu2bg\",\n  \"beneficiary\": \"bnf_d24adp7fccunngaiu20g\",\n  \"beneficiary_details\": {\n    \"address\": null,\n    \"date_of_birth\": \"\",\n    \"destination\": \"\",\n    \"destination_details\": {\n      \"bank\": {\n        \"account_type\": \"\",\n        \"bank_codes\": {},\n        \"bank_name\": \"testfxbank\",\n        \"branch_name\": \"\",\n        \"country\": \"FR\",\n        \"currency\": \"EUR\",\n        \"firc_required\": false,\n        \"iban\": \"31\",\n        \"purpose_code\": \"\",\n        \"transfer_type\": \"local\"\n      },\n      \"type\": \"bank\"\n    },\n    \"documents\": [],\n    \"email\": \"\",\n    \"name\": \"Jackie Morissette\",\n    \"national_identification_number\": \"\",\n    \"party_classification\": \"\",\n    \"phone\": {\n      \"calling_code\": \"33\"\n    },\n    \"registration_number\": \"\",\n    \"tax_id\": \"\",\n    \"type\": \"individual\",\n    \"status\": \"active\",\n    \"verification_status\": \"succeeded\",\n\t\t\"is_doc_verification_required\": false\n\t\t\n  },\n  \"charge_type\": \"\",\n  \"confirmation_documents\": [],\n  \"created_at\": \"2025-07-29T10:48:19.014533Z\",\n  \"currency\": \"EUR\",\n  \"documents\": [],\n  \"holding_currency\": \"USD\",\n  \"holding_fx_transaction\": {\n    \"exchange_rate\": 0.828672,\n    \"final\": {\n      \"amount\": 5000,\n      \"currency\": \"EUR\"\n    },\n    \"id\": \"fx_d24adsmp89reuemeaujg\",\n    \"initial\": {\n      \"amount\": 6034,\n      \"currency\": \"USD\"\n    },\n    \"object\": \"fx_transaction\"\n  },\n  \"id\": \"pot_d24adsnfccunngaiu280\",\n  \"local\": {\n    \"fund_transfer_network\": \"sepa\"\n  },\n  \"logistics_tracking_details\": [],\n  \"metadata\": {\n    \"collect_id\": \"col_d24ae102tsfj74sj23s0\",\n    \"transaction_hash\": \"0xie4el49kctwen8rf6urv7wirrtemva9bqhjlct7j1v9jp8r4eya4zg08c80xkgxo\"\n  },\n  \"mt103\": \"\",\n  \"object\": \"payout\",\n  \"on_behalf_of\": \"\",\n  \"payout_fx_transaction\": {\n    \"exchange_rate\": 1,\n    \"final\": {\n      \"amount\": 5000,\n      \"currency\": \"EUR\"\n    },\n    \"id\": \"fx_d24adsmp89reuemeauj0\",\n    \"initial\": {\n      \"amount\": 5000,\n      \"currency\": \"EUR\"\n    },\n    \"object\": \"fx_transaction\"\n  },\n  \"purpose\": \"PYR008\",\n  \"reference_id\": \"\",\n  \"source\": \"col_d24ae102tsfj74sj23s0\",\n  \"statement_descriptor\": \"\",\n  \"status\": \"processing\",\n  \"status_description\": \"\",\n  \"tracking_details\": null,\n  \"transaction_description\": \"Payout Description\",\n  \"type\": \"local\"\n}}"
                   }
                 },
                 "schema": {
@@ -17796,16 +17769,18 @@
                           "description": "Email address of the beneficiary"
                         },
                         "is_doc_verification_required": {
-                          "type": "boolean",
-                          "example": false,
-                          "description": "Indicates if document verification is required for the beneficiary"
+                          "type": "string",
+                          "description": "Signifies if doc verification is required"
                         },
                         "name": {
                           "type": "string",
                           "example": "Jackie Morissette",
                           "description": "Full name of the beneficiary"
                         },
-                        "name_local":"",
+                        "name_local": {
+                          "type": "string",
+                          "description": "Name of the beneficiary in local language"
+                        },
                         "national_identification_number": {
                           "type": "string",
                           "example": "",
@@ -17829,8 +17804,7 @@
                         },
                         "status": {
                           "type": "string",
-                          "example": "",
-                          "description": "Current status of the beneficiary"
+                          "description": "status of the beneficiary"
                         },
                         "registration_number": {
                           "type": "string",
@@ -17847,21 +17821,9 @@
                           "example": "individual",
                           "description": "Type of beneficiary (individual or business)"
                         },
-                        "name_local": {
-                          "type": "string",
-                          "description": "Name of the beneficiary in local language"
-                        },
-                        "status": {
-                          "type": "string",
-                          "description": "status of the beneficiary"
-                        },
                         "verification_status": {
                           "type": "string",
                           "description": "Verification status of beneficiary"
-                        },
-                        "is_doc_verification_required": {
-                          "type": "string",
-                          "description": "Signifies if doc verification is required"
                         }
                       }
                     },
@@ -18366,7 +18328,7 @@
                           "default": 0
                         },
                         "payment_methods": {
-                          "name":"",
+                          "name": "",
                           "type": "array",
                           "description": "List of available payment methods with corresponding rates, limits, and display details.",
                           "items": {
