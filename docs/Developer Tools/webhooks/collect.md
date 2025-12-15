@@ -2,7 +2,7 @@
 title: Collect
 excerpt: Following are the collect events for which you will receive webhooks
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''

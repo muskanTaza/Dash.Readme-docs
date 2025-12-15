@@ -16,3 +16,139 @@ metadata:
 next:
   description: ''
 ---
+## Object Structure
+
+```json
+{
+  "amount": 100,
+  "amount_paid": 0,
+  "billing_details": {
+          "address": {
+              "city": "Singapore",
+              "country": "SG",
+              "line1": "1st Street",
+              "line2": "2nd Avenue",
+              "postal_code": "43004",
+              "state": "Singapore"
+            },
+          "label": "Home",
+          "name": "Andrea Lark",
+          "phone": {
+              "calling_code": "65",
+              "number": "87654321"
+            }
+        },
+  "cancel_url": "https://mystore.com/try_again",
+  "cancelled_at": null,
+  "client_token": "JsU19R_Li9cwVksJGUfAajZ3r2A9ArU7Qk3j5r0cpVg=",
+  "confirm": false,
+  "created_at": "2024-10-07T07:10:21.894488Z",
+  "customer": "cus_crtqrhth90j0121gpt50",
+  "customer_details": {
+          "country": "SG",
+          "email": "andrea@example.com",
+          "name": "Andrea Lark",
+          "phone": {
+              "calling_code": "65",
+              "number": "87654321"
+            }
+        },
+  "holding_currency": "INR",
+  "id": "pay_cs1oina7a5ng2a3ng12g",
+  "invoice_currency": "INR",
+  "items": [],
+  "latest_payment_attempt": "",
+  "latest_payment_attempt_data": null,
+  "metadata": {
+          "key1": "value1",
+          "key2": "value2",
+          "key3": "value3"
+        },
+  "object": "payin",
+  "paid_in_excess": false,
+  "partially_paid": false,
+  "payment_attempts": [],
+  "payment_method_details": {
+          "paynow_sgd": {},
+          "type": "paynow_sgd"
+        },
+  "reference_id": "123",
+  "shipping_details": {
+          "address": {
+              "city": "Singapore",
+              "country": "SG",
+              "line1": "1st Street",
+              "line2": "2nd Avenue",
+              "postal_code": "43004",
+              "state": "Singapore"
+            },
+          "label": "Home",
+          "name": "Andrea Lark",
+          "phone": {
+              "calling_code": "65",
+              "number": "87654321"
+            }
+        },
+  "statement_descriptor": "tzp*string",
+  "status": "requires_payment_method",
+  "status_description": "",
+  "success_url": "https://mystore.com/success_page",
+  "transaction_data": [],
+  "transaction_description": "test",
+  "transaction_documents": [],
+  "webhook_url": "https://mystore.com/internal/webhook"
+}
+```
+
+## Object Parameters
+
+### Payin
+
+| Field                       | Subfield   | Type                   | Description                                                                                                                      |
+| --------------------------- | ---------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| amount                      |            | number                 | The total amount of the payin transaction.                                                                                       |
+| amount_paid                 |            | number                 | The amount that has already been paid.                                                                                           |
+| billing_details             |            | object                 | The billing information for the transaction.                                                                                     |
+|                             | address    | object                 | The address associated with the billing details. [Address Object](https://docs.tazapay.com/update/reference/address-object#/)    |
+|                             | label      | string                 | A label for the billing address (e.g., Home, Office).                                                                            |
+|                             | name       | string                 | The name associated with the billing details.                                                                                    |
+|                             | phone      | object                 | The phone details associated with the billing address. (See Phone Table).                                                        |
+| cancel_url                  |            | string                 | The URL to redirect the user to if the transaction is canceled.                                                                  |
+| cancelled_at                |            | string(ISO timestamp)  | The timestamp when the transaction was canceled, if applicable.                                                                  |
+| client_token                |            | string                 | The client token associated with the payin.                                                                                      |
+| confirm                     |            | boolean                | Indicates if the transaction is confirmed.                                                                                       |
+| created_at                  |            | string (ISO timestamp) | The timestamp when the transaction was created.                                                                                  |
+| customer                    |            | string                 | The unique identifier for the customer.                                                                                          |
+| customer_details            |            | object                 | The customer details related to the transaction.                                                                                 |
+|                             | country    | string                 | The country of the customer.                                                                                                     |
+|                             | email      | string                 | The email address of the customer.                                                                                               |
+|                             | name       | string                 | The name of the customer.                                                                                                        |
+|                             | phone      | object                 | The phone details of the customer. [Phone Object.](https://docs.tazapay.com/update/reference/phone-object#/)                     |
+| holding_currency            |            | string                 | The holding currency used for the transaction (e.g., INR).                                                                       |
+| id                          |            | string                 | The unique Tazapay identifier for the payin transaction.                                                                         |
+| invoice_currency            |            | string                 | The invoice currency for the transaction.                                                                                        |
+| items                       |            | array                  | The list of items related to the transaction.                                                                                    |
+| latest_payment_attempt      |            | string                 | The Tazapay ID of the latest payment attempt.                                                                                    |
+| latest_payment_attempt_data |            | object/null            | Data related to the latest payment attempt, if available.                                                                        |
+| metadata                    |            | object                 | Set of key-value pairs attached to the transaction.                                                                              |
+| object                      |            | string                 | The type of object, which is "payin".                                                                                            |
+| paid_in_excess              |            | boolean                | Indicates if the payment was made in excess.                                                                                     |
+| partially_paid              |            | boolean                | Indicates if the payment was partially paid.                                                                                     |
+| payment_attempts            |            | array                  | The list of payment attempts for this transaction.                                                                               |
+| payment_method_details      |            | object                 | The details of the payment method used.                                                                                          |
+|                             | paynow_sgd | object                 | Details of the paynow_sgd payment method                                                                                         |
+|                             | type       | string                 | The type of payment method used (e.g., paynow_sgd).                                                                              |
+| reference_id                |            | string                 | The reference ID for the transaction.                                                                                            |
+| shipping_details            |            | object                 | Shipping information for the transaction.                                                                                        |
+|                             | address    | object                 | The address associated with the shipping details. [Address object](https://docs.tazapay.com/update/reference/address-object#/)   |
+|                             | label      | string                 | A label for the shipping address (e.g., Home, Office).                                                                           |
+|                             | name       | string                 | The name associated with the shipping details.                                                                                   |
+|                             | phone      | object                 | The phone details associated with the shipping address. [Phone Object](https://docs.tazapay.com/update/reference/phone-object#/) |
+| statement_descriptor        |            | string                 | The descriptor to appear on the customer’s statement.                                                                            |
+| status                      |            | string                 | The current status of the transaction (e.g., requires_payment_method).                                                           |
+| status_description          |            | string                 | A description of the transaction status, if available.                                                                           |
+| success_url                 |            | string                 | The URL to redirect the user to upon a successful transaction.                                                                   |
+| transaction_data            |            | array                  | Additional data related to the transaction.                                                                                      |
+| transaction_description     |            | string                 | A description of the transaction.                                                                                                |
+| transaction_documents       |            | array                  | List of transaction-related documents.                                                                                           |
+| webhook_url                 |            | string                 | The URL for webhook notifications related to this transaction.                                                                   |

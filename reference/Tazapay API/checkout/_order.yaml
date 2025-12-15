@@ -1,5 +1,5 @@
-- checkout-object
 - create-checkout
 - update-checkout-session
 - get-checkout-session
 - update-checkout-copy
+- checkout-webhooks

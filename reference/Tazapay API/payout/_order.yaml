@@ -1,4 +1,3 @@
-- payout-object-1
 - create-payout
 - fetch-payout
 - update-payout
@@ -6,3 +5,4 @@
 - payout-quote
 - confirm-payout
 - simulating-payouts-on-test-environment-sandbox
+- payout-webhooks

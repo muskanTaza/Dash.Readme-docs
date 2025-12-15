@@ -1,25 +1,20 @@
 ---
-title: bank_push_php
-excerpt: ''
+title: bank_push_idr
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
   robots: index
-next:
-  description: ''
 ---
-Online Banking enables secure real-time payments directly from Philippine bank accounts, offering a convenient option for e-commerce and bill payments.
+Online Banking enables secure real-time payments directly from Indonesia bank accounts, offering a convenient option for e-commerce and bill payments.
 
 # Integrating on your website / application
 
 ## Step 1: Create a payin
 
-Tazapay uses a payin object to represent your intent to collect a payment from your customer. The payin object tracks state changes from bank\_push transaction creation to payment completion.\
-Create a payin on your server with an amount, invoice\_currency PHP and a transaction\_description using the create payin API
+Tazapay uses a payin object to represent your intent to collect a payment from your customer. The payin object tracks state changes from bank_push transaction creation to payment completion.  
+Create a payin on your server with an amount, invoice_currency IDR and a transaction_description using the create payin API
 
-A payin is created with the status requires\_payment\_method.
+A payin is created with the status requires_payment_method.
 
 ### Sample cURL
 
@@ -30,7 +25,7 @@ curl --request POST \
      --header 'authorization: Basic YWtfdGVzdF9ZTFNVQUUwVjRCSEpIOFg0ODZPQzpza190ZXN0X0hNOEM3SEVSV1BmODVPZnFCMXhLTUJJMWlENnVWYTEyUWN2VE5ZeVJhSHhRZjVTOW9pZUtoOVZzejg3cnhtSEpaSlcyTHdVc0NSY2RWbUR0d0U4Q0VkdWNIUXRnNVQzVjl1NkltQWludkdiMjhWeXhTVVlsTTFMWWllbU80THFt' \
      --header 'content-type: application/json' \
      --data '{
-  "invoice_currency": "PHP",
+  "invoice_currency": "IDR",
   "amount": 100000,
   "transaction_description": "1 X Goods",
   "webhook_url": "https://webhook.site/ref8y92937922"
@@ -39,7 +34,7 @@ curl --request POST \
 
 ## Step 2: Confirm a payin
 
-Confirm the payin created in step 1 using the [confirm payin API.](https://docs.tazapay.com/reference/confirm-payin) Upon confirmation of the payin, a redirection URL is generated. The status of the payin moves to requires\_action
+Confirm the payin created in step 1 using the [confirm payin API.](https://docs.tazapay.com/reference/confirm-payin) Upon confirmation of the payin, a redirection URL is generated. The status of the payin moves to requires_action
 
 ### Sample cURL
 
@@ -51,13 +46,13 @@ curl --request POST \
      --header 'content-type: application/json' \
      --data '
 {
-  "customer_details": {
-    "name": "Lily",
-    "email": "lily@tazapay.com",
-    "country": "PH"
+	"customer_details": {
+    "name": "Andrea Lark",
+    "email": "andrea.lark@tazapay.com",
+    "country": "ID"
   },
   "payment_method_details": {
-    "type": "bank_push_php"
+    "type": "bank_push_idr"
   }
 }'
 ```
@@ -65,6 +60,8 @@ curl --request POST \
 ## Combining Steps 1 and 2 into a single step
 
 Instead of making 2 API calls, you can also combine steps 1 and 2 into a single API call. To do so, pass the parameters in both the create payin and confirm payin endpoints to the create payin API.
+
+**Supported Banks - BNI, BRI, BSI, Danamon, Mandiri, Permata**
 
 Also, pass the following field and set confirm equals true.
 
@@ -80,20 +77,23 @@ curl --location 'https://service-sandbox.tazapay.com/v3/payin' \
 --header 'authorization: Basic YWtfdGVzdF9ZTFNVQUUwVjRCSEpIOFg0ODZPQzpza190ZXN0X0hNOEMSEVSV1BmODVPZnFCMXhLTUJJMWlENnVWYTEyUWN2VE5ZeVJhSHhRZjVTOW9pZUtoOVZzejg3cnhtSEpaSlcyTHdVc0NSY2RWbUR0d0U4Q0VkdWNIUXRnNVQzVjl1NkltQWludkdiMjhWeXhTVVlsTTFMWWllbU80THFt' \
 --header 'content-type: application/json' \
 --data-raw '{
-  "invoice_currency": "PHP",
-  "amount": 100000,
+  "invoice_currency": "IDR",
+  "amount": 10000000,
   "transaction_description": "1 X Good",
   "webhook_url": "https://webhook.site/ref8y92937922",
+  "confirm":true,
 	"success_url":"https://mypage.success",
   "cancel_url":"https://mypage.failure",
-  "confirm":true,
   "customer_details": {
-    "name": "Lily",
-    "email": "lily@tazapay.com",
-    "country": "PH"
+    "name": "Andrea Lark",
+    "email": "andrea.lark@tazapay.com",
+    "country": "ID"
   },
   "payment_method_details": {
-    "type": "bank_push_php"
+    "type": "bank_push_idr",
+    "bank_push_idr": {
+        "bank_name":"BNI"
+    }
     }
   }
 '
@@ -101,36 +101,40 @@ curl --location 'https://service-sandbox.tazapay.com/v3/payin' \
 
 ## Step 3: Redirect the customer to the payment URL
 
-After confirming the payin, you will receive the following response. You will receive a redirect\_url where you can redirect your customer to. You must redirect the customer to `latest_payment_attempt_data.redirect_url` in order to enable them to complete the payment.
+After confirming the payin, you will receive the following response. You will receive a redirect_url where you can redirect your customer to. You must redirect the customer to `latest_payment_attempt_data.redirect_url` in order to enable them to complete the payment.
 
 ```
 {
     "status": "success",
     "message": "",
     "data": {
-        "amount": 100000,
+        "amount": 10000000,
         "amount_paid": 0,
         "billing_details": null,
         "cancel_url": "https://mypage.failure",
         "cancelled_at": null,
-        "client_token": "JE_QBNNsUELC3z-58JLx0rlU4BVTn8sUBju91gt_FB8=",
+        "client_token": "FVRgT8_kJGtt3MYj3J5zoben-wl4_mJJkNcmse_ykHU=",
         "confirm": true,
-        "created_at": "2025-01-07T10:34:27.533572406Z",
-        "customer": "cus_ctudcp970g0h95qqvb30",
+        "created_at": "2025-11-25T06:27:17.633557362Z",
+        "customer": "cus_d4fd90np3mil5glh0fh0",
         "customer_details": {
-            "country": "PH",
-            "email": "lily@tazapay.com",
-            "name": "Lily",
+            "country": "ID",
+            "email": "andrea.lark@tazapay.com",
+            "name": "Andrea Lark",
             "phone": null
         },
-        "holding_currency": "USD",
-        "id": "pay_ctug6ck2ukmk385tago0",
-        "invoice_currency": "PHP",
+        "form": "",
+        "holding_currency": "IDR",
+        "id": "pay_d4ikoh03f4q3iicmm2a0",
+        "invoice_currency": "IDR",
         "items": [],
-        "latest_payment_attempt": "pat_ctug6cs2ukmk385tagq0",
+        "latest_payment_attempt": "pat_d4ikoh03f4q3iicmm2c0",
         "latest_payment_attempt_data": {
-            "expires_at": "2025-01-07T10:39:27Z",
-            "redirect_url": "https://checkout-sandbox.tazapay.com/single-payment.html?tzid=JE_QBNNsUELC3z-58JLx0rlU4BVTn8sUBju91gt_FB8=&spid=aHR0cHM6Ly9jaGVja291dC1zYW5kYm94LnRhemFwYXkuY29tL3NpbXVsYXRlL0pFX1FCTk5zVUVMQzN6LTU4Skx4MHJsVTRCVlRuOHNVQmp1OTFndF9GQjg9L3BheV9jdHVnNmNrMnVrbWszODV0YWdvMC9iYW5rX3B1c2hfcGhw"
+            "bank": {
+                "account_number": "9882917230376055",
+                "bank_name": "BNI",
+                "reference_id": "2511-cmm2a0"
+            }
         },
         "metadata": null,
         "object": "payin",
@@ -138,7 +142,10 @@ After confirming the payin, you will receive the following response. You will re
         "partially_paid": false,
         "payment_attempts": [],
         "payment_method_details": {
-            "type": "bank_push_php"
+            "bank_push_idr": {
+                "bank_name": "BNI"
+            },
+            "type": "bank_push_idr"
         },
         "reference_id": "",
         "shipping_details": null,
@@ -158,12 +165,10 @@ After confirming the payin, you will receive the following response. You will re
 
 Tazapay sends a `payin.succeeded` event as soon as the funds are received from the customer. Tazapay sends these events to the endpoint configured from your dashboard. You can receive these events and run actions (for example, sending an order confirmation email to your customers, logging the sale in a database, starting a shipping workflow, etc.)
 
-| Event                   | Description                                             | Next Steps                                                                     |
-| ----------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| payin.succeeded         | The customer successfully completed the payment request | Fulfill the goods or services that the customer purchased                      |
-| payment\_attempt.failed | The customer payment attempt failed                     | Allow the customer to do the payment again with same or another payment method |
-
-<br />
+| Event                  | Description                                             | Next Steps                                                                     |
+| ---------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| payin.succeeded        | The customer successfully completed the payment request | Fulfill the goods or services that the customer purchased                      |
+| payment_attempt.failed | The customer payment attempt failed                     | Allow the customer to do the payment again with same or another payment method |
 
 ## Expiration and cancellation
 
@@ -200,7 +205,7 @@ curl --request POST \
 {
   "payin": "pay_ctrt9l1jbc4tc23vsmdg",
   "amount":1000,
-  "currency": "PHP",
+  "currency": "IDR",
   "reason": "Customer Return",
   "webhook_url": "https://webhook.site/ref8y92937922"
 }

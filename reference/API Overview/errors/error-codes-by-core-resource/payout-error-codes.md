@@ -12,33 +12,57 @@ next:
 ---
 ### POST v3/payout
 
-| Code  | Message                                                                                                                                                                                                     | HTTP Status |
-| ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| 20165 | Please provide either the beneficiary details or a beneficiary ID. One of these fields is mandatory for processing.                                                                                         | 422         |
-| 20166 | Payout risk is not enabled to initiate payout                                                                                                                                                               | 403         |
-| 20167 | Please provide a valid payout currency                                                                                                                                                                      | 400         |
-| 20168 | Please provide a valid holding currency                                                                                                                                                                     | 400         |
-| 20169 | Please provide a valid bank swift_code                                                                                                                                                                      | 400         |
-| 20170 | Payout creation failed: The bank transfer type is swift which is incompatible with the local payout type                                                                                                    | 422         |
-| 20171 | Please provide a valid purpose code to create payout                                                                                                                                                        | 400         |
-| 20172 | The requested payout type does not match the beneficiary destination type                                                                                                                                   | 422         |
-| 20173 | The requested beneficiary is not associated with the account                                                                                                                                                | 403         |
-| 20174 | Please provide valid transaction source                                                                                                                                                                     | 400         |
-| 20175 | Payout invoice document is not found. Please provide valid invoice document                                                                                                                                 | 400         |
-| 20198 | Field on_behalf_of is required for creating this payout                                                                                                                                                     | 400         |
-| 20199 | Please provide valid on_behalf_of should be valid xid type with prefix 'ent_'                                                                                                                               | 400         |
-| 20200 | Entity doesn't match with tazapay compliance policy. Please contact us at [ops@tazapay.com](mailto:ops@tazapay.com)                                                                                         | 403         |
-| 20201 | There is insufficient balance in your account to make the desired payout. Please ensure you have added sufficient funds to your account.                                                                    | 422         |
-| 20296 | Requested payout config is not supported please check the payout config                                                                                                                                     | 400         |
-| 20297 | Invalid or missing bank fields. Please provide a valid bank fields                                                                                                                                          | 400         |
-| 20298 | The specified transaction amount does not meet the required minimum or maximum limits.                                                                                                                      | 422         |
-| 20300 | Field is required and must be either one of cpf/cnpj/email/phone/random                                                                                                                                     | 400         |
-| 20320 | Please provide the common bank fields to create a payout either through local or swift:%s                                                                                                                   | 400         |
-| 20321 | Please provide all the valid bank local_fields to create a local payout:%s                                                                                                                                  | 400         |
-| 20322 | Please provide all the valid bank swift_fields to create a swift payout:%s                                                                                                                                  | 400         |
-| 20299 | Please provide a valid fx quote fx quote is expired or mismatch in from and to currency                                                                                                                     | 400         |
-| 20110 | When the txn source is bfi funding interval should be configured please configure funding interval and try again later                                                                                      | 400         |
-| 20035 | INR payouts purpose code validation is failing. Please check [https://docs.tazapay.com/docs/purpose-codes-valid-for-india-payouts#/](https://docs.tazapay.com/docs/purpose-codes-valid-for-india-payouts#/) | 400         |
+| error_code | error_message                                                                                                                                            | http_status |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| 20003      | Please provide a valid amount                                                                                                                            | 400         |
+| 20028      | Please provide beneficiary name in Chinese                                                                                                               | 400         |
+| 20029      | Please provide valid beneficiary national identification number                                                                                          | 400         |
+| 20030      | Field is required and must be valid logistic tracking details                                                                                            | 400         |
+| 20035      | Transaction not allowed                                                                                                                                  | 400         |
+| 20036      | Account holder name is required and cannot be empty                                                                                                      | 400         |
+| 20038      | Both holding_fx_quote and destination_fx_quote cannot be provided                                                                                        | 400         |
+| 20039      | The amount locked in fx quote is not the same as the amount in request                                                                                   | 400         |
+| 20040      | this purpose code is not supported for the Remitter and Beneficiary type combination                                                                     | 422         |
+| 20041      | Invalid source for providing destination_info                                                                                                            | 400         |
+| 20042      | EURC currency is not supported                                                                                                                           | 400         |
+| 20043      | Mismatch detected: The provided destination currency does not align with our system records                                                              | 422         |
+| 20044      | Non-fiat currency is not supported or invalid                                                                                                            | 400         |
+| 20061      | Field is required and must be valid ISO 4217 alpha-3 currency code                                                                                       | 400         |
+| 20067      | Holding currency not found for the specified account                                                                                                     | 400         |
+| 20152      | Please provide a valid type                                                                                                                              | 400         |
+| 20165      | Please provide either the beneficiary details or a beneficiary ID. One of these fields is mandatory for processing.                                      | 422         |
+| 20167      | Please provide a valid payout currency                                                                                                                   | 400         |
+| 20168      | Please provide a valid holding currency                                                                                                                  | 400         |
+| 20170      | Payout creation failed: The bank transfer type is swift, which is incompatible with the local payout type                                                | 422         |
+| 20171      | Please provide a valid purpose code to create payout                                                                                                     | 400         |
+| 20172      | The requested payout type does not match the beneficiary destination type                                                                                | 422         |
+| 20173      | The requested beneficiary is not associated with the account                                                                                             | 403         |
+| 20174      | Please provide valid transaction source                                                                                                                  | 400         |
+| 20175      | Payout invoice document is not found. Please provide valid invoice document                                                                              | 400         |
+| 20196      | Field on_behalf_of is required for creating this payout                                                                                                  | 400         |
+| 20197      | Please provide valid on_behalf_of, should be valid xid type with prefix ent_                                                                             | 400         |
+| 20199      | There is insufficient balance in your account to make the desired payout. Please ensure you have added sufficient funds to your account before retrying. | 422         |
+| 20231      | Field is required and must be a valid document type.                                                                                                     | 400         |
+| 20283      | Provided document is not sufficient to create payout                                                                                                     | 400         |
+| 20296      | Requested payout config is not supported, please check the payout config                                                                                 | 400         |
+| 20298      | The specified transaction amount does not meet the required minimum or maximum limits.                                                                   | 422         |
+| 20299      | Please provide a valid quote, payout or fx quote is expired or mismatch in from and to currency                                                          | 400         |
+| 20323      | Please provide a valid transfer type for the selected beneficiary                                                                                        | 400         |
+| 20380      | Mismatch detected: The provided beneficiary registration number does not align with our system records                                                   | 400         |
+| 20381      | Mismatch detected: The provided beneficiary business name does not align with our system records                                                         | 400         |
+| 20382      | Mismatch detected: The provided beneficiary business address country does not align with our system records                                              | 400         |
+| 20383      | Beneficiary date of birth is required and can't be empty when beneficiary type is individual                                                             | 400         |
+| 20385      | Beneficiary registration number is required and can't be empty                                                                                           | 400         |
+| 20386      | Beneficiary address details are required and can't be empty                                                                                              | 400         |
+| 20387      | Beneficiary party classification is required, please pass valid party classification                                                                     | 400         |
+| 20388      | Mismatch detected: The provided individual name does not align with our system records                                                                   | 400         |
+| 20389      | Individual business must be a sole proprietorship                                                                                                        | 400         |
+| 20400      | Mismatch detected: The provided date of birth does not align with our system records                                                                     | 400         |
+| 20401      | VASP name is required for wallet beneficiary                                                                                                             | 400         |
+| 20403      | This wallet beneficiary is not yet approved, please get your beneficiary approved before creating a payout                                               | 400         |
+| 20426      | Payout Quote cannot be validated if either holding_fx_quote or destination_fx_quote is present                                                           | 400         |
+| 20427      | Payout quote mismatch with Create Payout request                                                                                                         | 400         |
+| 20433      | Please provide a valid payout quote, payout quote is expired                                                                                             | 400         |
 
 ***
 
@@ -65,6 +89,7 @@ next:
 |       1054 | URL you have provided does not have a downloadable document available                                                                     |              404 |
 |       1000 | country %s is not supported at this moment                                                                                                |              404 |
 |       1011 | given currency %s is not supported                                                                                                        |              404 |
+|       1100 | Invalid fund_transfer_network provided. The specified fund transfer network is not supported for this country and currency combination.   |              400 |
 
 ***
 
@@ -93,27 +118,47 @@ next:
 
 ### POST v3/beneficiary
 
-| Code  | Message                                                                                                                     | HTTP Status |
-| ----- | --------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| 20150 | Field is required please provide a valid name                                                                               | 400         |
-| 20151 | PLease provide a valid email address                                                                                        | 400         |
-| 20152 | Please provide a valid type                                                                                                 | 400         |
-| 20153 | Please provide a valid beneficiary_details                                                                                  | 400         |
-| 20154 | Please provide a valid bank_name                                                                                            | 400         |
-| 20155 | Please provide a valid country. Must be alpha-2 country code. Ex: IN SG                                                     | 400         |
-| 20156 | Please provide a valid currency                                                                                             | 400         |
-| 20157 | Please provide a valid bank codes                                                                                           | 400         |
-| 20158 | Please provide a valid payout_wallet deposit_address                                                                        | 400         |
-| 20159 | Bank payout functionality is currently disabled. Please contact support for assistance.                                     | 403         |
-| 20160 | Wallet payout functionality is currently disabled. Please contact support for assistance.                                   | 403         |
-| 20163 | Field is required please provide a valid tax_id                                                                             | 400         |
-| 20164 | Field 'url' is required and must be a valid url                                                                             | 400         |
-| 20270 | Invalid or missing account type. Please provide a valid account type. Accepted values are 'savings' 'checking' or 'payment' | 400         |
-| 20320 | Please provide the common bank fields to create a payout either through local or swift:%s                                   | 400         |
-| 20321 | Please provide all the valid bank local_fields to create a local payout:%s                                                  | 400         |
-| 20322 | Please provide all the valid bank swift_fields to create a swift payout:%s                                                  | 400         |
-| 20325 | Invalid bank fields. Please provide a valid value for following fields:%s                                                   | 400         |
-| 20361 | Please provide the missing required beneficiary fields:%s                                                                   | 400         |
+<br />
+
+| error_code | error_message                                                                                   | http_status |
+| ---------- | ----------------------------------------------------------------------------------------------- | ----------- |
+| 3500       | Account id is required. Please pass a valid account id                                          | 400         |
+| 3505       | Bank id is required                                                                             | 400         |
+| 3509       | Bank account does not exist for requested account                                               | 400         |
+| 3510       | Field is required and must be ISO 3166-1 alpha-2 country code                                   | 400         |
+| 3511       | Field is required and must be ISO 4217 alpha-3 currency code                                    | 400         |
+| 3513       | Bank details not found. Please pass a valid bank id                                             | 400         |
+| 3519       | Not allowed to change the account holder's name                                                 | 400         |
+| 3520       | KYB entity type is required. Please select valid entity type to add bank                        | 400         |
+| 3521       | A bank with the currency code already exists use a different currency code                      | 400         |
+| 3523       | Invalid beneficiary, should have prefix 'bnf_' and should be followed by valid xid              | 400         |
+| 3524       | Invalid or missing account number. Please provide a valid account number.                       | 400         |
+| 3525       | Invalid or missing account holder name. Please provide a valid account holder name.             | 400         |
+| 3526       | Invalid or missing bank name. Please provide a valid bank name                                  | 400         |
+| 3527       | Invalid or missing bank codes. Please provide a valid bank codes                                | 400         |
+| 3528       | Invalid or missing IBAN. Please provide a valid IBAN                                            | 400         |
+| 3529       | Invalid or missing Swift code. Please provide a valid Swift code                                | 400         |
+| 3530       | Invalid or missing wallet address. Please provide a valid wallet address.                       | 400         |
+| 3531       | Invalid or missing email. Please provide a valid email address.                                 | 400         |
+| 3532       | Invalid or missing tax id. Please provide a valid tax id.                                       | 400         |
+| 3533       | Invalid or missing url. Please provide a valid url.                                             | 400         |
+| 3534       | Invalid or missing account type. Please provide a valid account type.                           | 400         |
+| 3535       | Invalid or missing country. Please provide a valid country.                                     | 400         |
+| 3536       | Field is required, please provide a valid beneficiaryID                                         | 400         |
+| 3537       | Field is required, please provide a valid beneficiary type                                      | 400         |
+| 3544       | Field is required, please provide a valid deposit_key                                           | 400         |
+| 3545       | Field is required, please provide a valid local_payment_network type                            | 400         |
+| 3546       | Field is required and value must be one of cpf/cnpj/email/phone/random                          | 400         |
+| 3547       | Field is required, please provide a valid deposit_address                                       | 400         |
+| 3800       | Please provide the common fields for the bank:%s                                                | 400         |
+| 3801       | Please provide all the valid bank local_fields:%s                                               | 400         |
+| 3802       | Please provide all the valid bank swift_fields:%s                                               | 400         |
+| 3803       | Invalid bank fields. Please provide a valid value for following fields:%s                       | 400         |
+| 3805       | Beneficiary details not found. Please pass a valid beneficiary id                               | 400         |
+| 3806       | Field is conditionally required: please provide either a valid beneficiary ID or a bank object. | 400         |
+| 3807       | Field is conditionally required: please provide either a bank object or a valid beneficiary ID. | 400         |
+| 3850       | Field is required, please provide a valid vasp_id                                               | 400         |
+| 3851       | Field is required, please provide a valid vasp_website                                          | 400         |
 
 ***
 
