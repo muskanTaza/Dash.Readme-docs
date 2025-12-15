@@ -30,6 +30,7 @@ next:
             "postal_code": "311011"
           },
         "date_of_birth": "2003-04-04",
+        "nationality": "CN",
         "destination": "bnk_crv7k337eoqgk10pqp40",
         "destination_details": {
             "bank": {
@@ -133,6 +134,7 @@ next:
     "beneficiary_details": {
       "address": null,
       "date_of_birth": "",
+      "nationality": "DE",
       "destination": "",
       "destination_details": {
         "bank": {
@@ -236,6 +238,7 @@ next:
     "beneficiary_details": {
       "address": null,
       "date_of_birth": "",
+      "nationality": "BR",
       "destination": "",
       "destination_details": {
         "local_payment_network": {
@@ -326,6 +329,7 @@ next:
     "beneficiary_details": {
       "address": {},
       "date_of_birth": "",
+      "nationality": "SG",
       "destination": "",
       "destination_details": {
         "tazapay_account": {
@@ -420,6 +424,7 @@ next:
         "state": "Vortmore"
       },
       "date_of_birth": "2003-04-04",
+      "nationality": "JM",
       "destination": "",
       "destination_details": {
         "type": "wallet",

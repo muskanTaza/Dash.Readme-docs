@@ -26,6 +26,8 @@ next:
             "country": "SG",
             "postal_code": "10090"
         },
+        "date_of_birth": "15-02-1985",
+        "nationality": "SG",
         "destination": "bnk_d05lmjuq59csbboqt9d0",
         "destination_details": {
             "bank": {
@@ -78,7 +80,8 @@ next:
 | national_identification_number   |                                       | string   | National identification number of the individual beneficiary (e.g., SSN, National ID)                                                                       |
 | party_classification             |                                       | enum     | Type of relationship between beneficiary and creator of beneficiary Possible values - self, third_party (Mandatory if destination_details.type is a wallet) |
 | registration_number              |                                       | string   | Registration number of the business (Mandatory if destination_details.type is a wallet and type is business)                                                |
-| date_of_birth                    |                                       | string   | Date of birth of individual, Format DD-MM-YYYY (Mandatory if destination_details.type is a wallet and type is individual                                    |
+| date_of_birth                    |                                       | string   | Date of birth of individual, Format DD-MM-YYYY (Mandatory if destination_details.type is a wallet and type is individual
+nationality         |                                       | string   | ISO 3166-1 alpha-2 country code representing beneficiary's nationality (e.g., US, GB, IN, FR) |                                    |
 | address                          |                                       | json     | Address of the beneficiary                                                                                                                                  |
 |                                  | line1                                 | string   | Address line 1                                                                                                                                              |
 |                                  | line2                                 | string   | Address Line 2                                                                                                                                              |

@@ -29,6 +29,7 @@ next:
         "state": "Delhi"
       },
   "date_of_birth": "2003-04-04",
+  "nationality": "IN",
   "destination": "wal_d3inm6ami8u10oqfk",
   "destination_details": {
         "type": "wallet",
@@ -87,6 +88,7 @@ next:
       },
   "documents": [],
   "email": "finance@gmbh-company.de",
+  "nationality": "DE",
   "name": "GMBH",
   "name_local": "",
   "national_identification_number": "",
@@ -111,6 +113,7 @@ next:
 | id                             | string                 | The unique Tazapay identifier for the beneficiary.                                                                                                |
 | address                        | object                 | The address of the beneficiary. **[Address Object](https://docs.tazapay.com/update/reference/address-object#/)**                                  |
 | date_of_birth                  | string                 | Date of birth of the beneficiary (for individuals).                                                                                               |
+| nationality                    | string                 | ISO 3166-1 alpha-2 country code representing the beneficiary's nationality (e.g., US, GB, IN, FR). Optional field used for enhanced compliance screening. |
 | destination                    | string                 | The destination identifier (if applicable).                                                                                                       |
 | destination_details            | object                 | The details of the destination account. (**[Destination Details Object](https://docs.tazapay.com/update/reference/destination-deatils-object/)**) |
 | documents                      | array                  | The list of documents related to the beneficiary.                                                                                                 |

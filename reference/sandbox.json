@@ -4981,6 +4981,10 @@
                         "type": "string",
                         "description": "Date of birth of individual, Format DD-MM-YYYY (Mandatory if destination_details.type is a wallet and type is individual)"
                       },
+                      "nationality": {
+                        "type": "string",
+                        "description": "ISO 3166-1 alpha-2 country code representing the beneficiary's nationality (e.g., US, GB, IN, FR). Optional field used for enhanced compliance screening."
+                      },
                       "party_classification": {
                         "type": "string",
                         "description": "Type of relationship between beneficiary and creator of beneficiary Possible values - self, third_party (Mandatory if destination_details.type is a wallet)"
@@ -12002,6 +12006,10 @@
                     "type": "string",
                     "description": "Date of birth of individual, Format DD-MM-YYYY (Mandatory if destination_details.type is a wallet and type is individual)"
                   },
+                  "nationality": {
+                    "type": "string",
+                    "description": "ISO 3166-1 alpha-2 country code representing the beneficiary's nationality (e.g., US, GB, IN, FR). Optional field used for enhanced compliance screening."
+                  },
                   "party_classification": {
                     "type": "string",
                     "description": "Type of relationship between beneficiary and creator of beneficiary Possible values - self, third_party (Mandatory if destination_details.type is a wallet)",
@@ -12051,7 +12059,8 @@
                     "phone": {
                       "number": "",
                       "calling_code": "91"
-                    }
+                    },
+                    "nationality": "IN"
                   }
                 }
               }
@@ -12151,6 +12160,11 @@
                       "type": "string",
                       "description": "Date of birth of the beneficiary in YYYY-MM-DD format.",
                       "example": "2003-04-04"
+                    },
+                    "nationality": {
+                      "type": "string",
+                      "description": "ISO 3166-1 alpha-2 country code representing the beneficiary's nationality.",
+                      "example": "IN"
                     },
                     "destination": {
                       "type": "string",
@@ -12343,6 +12357,11 @@
                       "type": "string",
                       "description": "Date of birth of the beneficiary in YYYY-MM-DD format.",
                       "example": "2003-04-04"
+                    },
+                    "nationality": {
+                      "type": "string",
+                      "description": "ISO 3166-1 alpha-2 country code representing the beneficiary's nationality.",
+                      "example": "IN"
                     },
                     "destination": {
                       "type": "string",
@@ -12790,6 +12809,11 @@
                       "type": "string",
                       "description": "Date of birth of the beneficiary in YYYY-MM-DD format.",
                       "example": "2003-04-04"
+                    },
+                    "nationality": {
+                      "type": "string",
+                      "description": "ISO 3166-1 alpha-2 country code representing the beneficiary's nationality.",
+                      "example": "IN"
                     },
                     "destination": {
                       "type": "string",
