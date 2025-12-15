@@ -4449,6 +4449,10 @@
                         "type": "string",
                         "description": "Date of birth of individual, Format DD-MM-YYYY (Mandatory if destination_details.type is a wallet and type is individual)"
                       },
+                      "nationality": {
+                        "type": "string",
+                        "description": "ISO 3166-1 alpha-2 country code representing the beneficiary's nationality (e.g., US, GB, IN, FR). Optional field used for enhanced compliance screening."
+                      },
                       "party_classification": {
                         "type": "string",
                         "description": "Type of relationship between beneficiary and creator of beneficiary Possible values - self, third_party (Mandatory if destination_details.type is a wallet)"
@@ -10545,6 +10549,10 @@
                     "type": "string",
                     "description": "Date of birth of individual, Format DD-MM-YYYY (Mandatory if destination_details.type is a wallet and type is individual)"
                   },
+                  "nationality": {
+                    "type": "string",
+                    "description": "ISO 3166-1 alpha-2 country code representing the beneficiary's nationality (e.g., US, GB, IN, FR). Optional field used for enhanced compliance screening."
+                  },
                   "party_classification": {
                     "type": "string",
                     "description": "Type of relationship between beneficiary and creator of beneficiary Possible values - self, third_party (Mandatory if destination_details.type is a wallet)",
@@ -10594,7 +10602,8 @@
                     "phone": {
                       "number": "",
                       "calling_code": "91"
-                    }
+                    },
+                    "nationality": "IN"
                   }
                 }
               }
@@ -10608,7 +10617,199 @@
               "application/json": {
                 "examples": {
                   "Result": {
-                    "value": "{}{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"address\": {\n            \"city\": \"Test\",\n            \"country\": \"IN\",\n            \"line1\": \"Test\",\n            \"line2\": \"Test\",\n            \"postal_code\": \"110017\",\n            \"state\": \"Test\"\n        },\n        \"created_at\": \"2024-10-03T11:03:40.326462Z\",\n        \"destination\": \"bnk_crv7k337eoqgk10pqp40\",\n        \"destination_details\": {\n            \"bank\": {\n                \"account_number\": \"Test\",\n                \"account_type\": \"\",\n                \"bank_codes\": {\n                    \"ifsc_code\": \"Test\",\n                    \"swift_code\": \"Test\"\n                },\n                \"bank_name\": \"hdfc\",\n                \"branch_name\": \"\",\n                \"country\": \"IN\",\n                \"currency\": \"INR\",\n                \"firc_required\": true,\n                \"purpose_code\": \"Test\"\n            },\n            \"type\": \"bank\"\n        },\n        \"documents\": [],\n        \"email\": \"test@example.com\",\n        \"id\": \"bnf_crv7k31h1l071n2fkbjg\",\n        \"metadata\": null,\n        \"name\": \"test\",\n        \"object\": \"beneficiary\",\n        \"phone\": {\n            \"calling_code\": \"91\"\n        },\n        \"tax_id\": \"\",\n        \"type\": \"individual\"\n    }\n}"
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "address": {
+                          "city": "Test",
+                          "country": "IN",
+                          "line1": "Test",
+                          "line2": "Test",
+                          "postal_code": "110017",
+                          "state": "Test"
+                        },
+                        "created_at": "2024-10-03T11:03:40.326462Z",
+                        "destination": "bnk_crv7k337eoqgk10pqp40",
+                        "destination_details": {
+                          "bank": {
+                            "account_number": "Test",
+                            "account_type": "",
+                            "bank_codes": {
+                              "ifsc_code": "Test",
+                              "swift_code": "Test"
+                            },
+                            "bank_name": "hdfc",
+                            "branch_name": "",
+                            "country": "IN",
+                            "currency": "INR",
+                            "firc_required": true,
+                            "purpose_code": "Test"
+                          },
+                          "type": "bank"
+                        },
+                        "documents": [],
+                        "email": "test@example.com",
+                        "id": "bnf_crv7k31h1l071n2fkbjg",
+                        "metadata": null,
+                        "name": "test",
+                        "object": "beneficiary",
+                        "phone": {
+                          "calling_code": "91",
+                          "number": "9362987920"
+                        },
+                        "tax_id": "",
+                        "type": "individual"
+                      }
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "description": "Represents a payout beneficiary with personal, contact, and destination details.",
+                  "properties": {
+                    "address": {
+                      "type": "object",
+                      "description": "Address details of the beneficiary.",
+                      "properties": {
+                        "city": {
+                          "type": "string",
+                          "description": "City of the beneficiary's address.",
+                          "example": "Vijay"
+                        },
+                        "country": {
+                          "type": "string",
+                          "description": "Country code (ISO 3166-1 alpha-2) of the beneficiary.",
+                          "example": "IN"
+                        },
+                        "line1": {
+                          "type": "string",
+                          "description": "First line of the beneficiary's address.",
+                          "example": "street 30th"
+                        },
+                        "postal_code": {
+                          "type": "string",
+                          "description": "Postal or ZIP code of the beneficiary.",
+                          "example": "110018"
+                        },
+                        "state": {
+                          "type": "string",
+                          "description": "State or province of the beneficiary.",
+                          "example": "Delhi"
+                        }
+                      }
+                    },
+                    "date_of_birth": {
+                      "type": "string",
+                      "description": "Date of birth of the beneficiary in YYYY-MM-DD format.",
+                      "example": "2003-04-04"
+                    },
+                    "nationality": {
+                      "type": "string",
+                      "description": "ISO 3166-1 alpha-2 country code representing the beneficiary's nationality.",
+                      "example": "IN"
+                    },
+                    "destination": {
+                      "type": "string",
+                      "description": "Identifier or reference to the beneficiary's payment destination (bank account, wallet, etc.).",
+                      "example": ""
+                    },
+                    "destination_details": {
+                      "type": "object",
+                      "description": "Details about the payout destination, such as wallet or bank.",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "description": "Type of destination, such as 'wallet' or 'bank'.",
+                          "example": "wallet"
+                        },
+                        "wallet": {
+                          "type": "object",
+                          "description": "Details of the wallet destination if applicable.",
+                          "properties": {
+                            "currency": {
+                              "type": "string",
+                              "description": "Currency supported by the wallet.",
+                              "example": "USDC"
+                            },
+                            "deposit_address": {
+                              "type": "string",
+                              "description": "Wallet deposit address for receiving funds.",
+                              "example": "09e53bcac0f2edxnjsui87f8bb7a9faf64789ed8"
+                            },
+                            "type": {
+                              "type": "string",
+                              "description": "Blockchain network type (e.g., ethereum, arbitrum).",
+                              "example": "ethereum"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "documents": {
+                      "type": "array",
+                      "description": "List of documents associated with the beneficiary (e.g., ID proof, address proof).",
+                      "items": {
+                        "type": "object"
+                      },
+                      "example": []
+                    },
+                    "email": {
+                      "type": "string",
+                      "description": "Email address of the beneficiary.",
+                      "example": "abc@gmail.com"
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "Full name of the beneficiary.",
+                      "example": "Scott"
+                    },
+                    "name_local": {
+                      "type": "string",
+                      "description": "Local language representation of the beneficiary's name, if applicable.",
+                      "example": ""
+                    },
+                    "national_identification_number": {
+                      "type": "string",
+                      "description": "National identification number or equivalent ID.",
+                      "example": ""
+                    },
+                    "party_classification": {
+                      "type": "string",
+                      "description": "Classification of the beneficiary, such as 'self', 'third_party', etc.",
+                      "example": "third_party"
+                    },
+                    "phone": {
+                      "type": "object",
+                      "description": "Contact phone information of the beneficiary.",
+                      "properties": {
+                        "calling_code": {
+                          "type": "string",
+                          "description": "Country calling code for the phone number.",
+                          "example": "91"
+                        },
+                        "number": {
+                          "type": "string",
+                          "description": "Phone number of the beneficiary.",
+                          "example": "9231231231"
+                        }
+                      }
+                    },
+                    "registration_number": {
+                      "type": "string",
+                      "description": "Registration or incorporation number for business beneficiaries.",
+                      "example": ""
+                    },
+                    "tax_id": {
+                      "type": "string",
+                      "description": "Tax identification number for the beneficiary.",
+                      "example": ""
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "Specifies whether the beneficiary is an 'individual' or a 'business'.",
+                      "example": "individual"
+                    }
                   }
                 }
               }
@@ -10695,6 +10896,11 @@
                     "created_at": {
                       "type": "string",
                       "example": "2024-10-03T11:03:40.326462Z"
+                    },
+                    "nationality": {
+                      "type": "string",
+                      "description": "ISO 3166-1 alpha-2 country code representing the beneficiary's nationality.",
+                      "example": "IN"
                     },
                     "destination": {
                       "type": "string",
@@ -11108,7 +11314,151 @@
                 },
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "description": "Represents a payout beneficiary with personal, contact, and destination details.",
+                  "properties": {
+                    "address": {
+                      "type": "object",
+                      "description": "Address details of the beneficiary.",
+                      "properties": {
+                        "city": {
+                          "type": "string",
+                          "description": "City of the beneficiary's address.",
+                          "example": "Vijay"
+                        },
+                        "country": {
+                          "type": "string",
+                          "description": "Country code (ISO 3166-1 alpha-2) of the beneficiary.",
+                          "example": "IN"
+                        },
+                        "line1": {
+                          "type": "string",
+                          "description": "First line of the beneficiary's address.",
+                          "example": "street 30th"
+                        },
+                        "postal_code": {
+                          "type": "string",
+                          "description": "Postal or ZIP code of the beneficiary.",
+                          "example": "110018"
+                        },
+                        "state": {
+                          "type": "string",
+                          "description": "State or province of the beneficiary.",
+                          "example": "Delhi"
+                        }
+                      }
+                    },
+                    "date_of_birth": {
+                      "type": "string",
+                      "description": "Date of birth of the beneficiary in YYYY-MM-DD format.",
+                      "example": "2003-04-04"
+                    },
+                    "nationality": {
+                      "type": "string",
+                      "description": "ISO 3166-1 alpha-2 country code representing the beneficiary's nationality.",
+                      "example": "IN"
+                    },
+                    "destination": {
+                      "type": "string",
+                      "description": "Identifier or reference to the beneficiary's payment destination (bank account, wallet, etc.).",
+                      "example": ""
+                    },
+                    "destination_details": {
+                      "type": "object",
+                      "description": "Details about the payout destination, such as wallet or bank.",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "description": "Type of destination, such as 'wallet' or 'bank'.",
+                          "example": "wallet"
+                        },
+                        "wallet": {
+                          "type": "object",
+                          "description": "Details of the wallet destination if applicable.",
+                          "properties": {
+                            "currency": {
+                              "type": "string",
+                              "description": "Currency supported by the wallet.",
+                              "example": "USDC"
+                            },
+                            "deposit_address": {
+                              "type": "string",
+                              "description": "Wallet deposit address for receiving funds.",
+                              "example": "09e53bcac0f2edxnjsui87f8bb7a9faf64789ed8"
+                            },
+                            "type": {
+                              "type": "string",
+                              "description": "Blockchain network type (e.g., ethereum, arbitrum).",
+                              "example": "ethereum"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "documents": {
+                      "type": "array",
+                      "description": "List of documents associated with the beneficiary (e.g., ID proof, address proof).",
+                      "items": {
+                        "type": "object"
+                      },
+                      "example": []
+                    },
+                    "email": {
+                      "type": "string",
+                      "description": "Email address of the beneficiary.",
+                      "example": "abc@gmail.com"
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "Full name of the beneficiary.",
+                      "example": "Scott"
+                    },
+                    "name_local": {
+                      "type": "string",
+                      "description": "Local language representation of the beneficiary's name, if applicable.",
+                      "example": ""
+                    },
+                    "national_identification_number": {
+                      "type": "string",
+                      "description": "National identification number or equivalent ID.",
+                      "example": ""
+                    },
+                    "party_classification": {
+                      "type": "string",
+                      "description": "Classification of the beneficiary, such as 'self', 'third_party', etc.",
+                      "example": "third_party"
+                    },
+                    "phone": {
+                      "type": "object",
+                      "description": "Contact phone information of the beneficiary.",
+                      "properties": {
+                        "calling_code": {
+                          "type": "string",
+                          "description": "Country calling code for the phone number.",
+                          "example": "91"
+                        },
+                        "number": {
+                          "type": "string",
+                          "description": "Phone number of the beneficiary.",
+                          "example": "9231231231"
+                        }
+                      }
+                    },
+                    "registration_number": {
+                      "type": "string",
+                      "description": "Registration or incorporation number for business beneficiaries.",
+                      "example": ""
+                    },
+                    "tax_id": {
+                      "type": "string",
+                      "description": "Tax identification number for the beneficiary.",
+                      "example": ""
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "Specifies whether the beneficiary is an 'individual' or a 'business'.",
+                      "example": "individual"
+                    }
+                  }
                 }
               }
             }

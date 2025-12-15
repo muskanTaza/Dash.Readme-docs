@@ -28,6 +28,8 @@ next:
       "country": "SG",
       "postal_code": "10090"
     },
+    "date_of_birth": "15-02-1985",
+    "nationality": "SG",
     "destination_details": {
       "bank": {
         "account_number": "90980778",
@@ -113,6 +115,8 @@ next:
 | type                |                      | enum   | Beneficiary type - business or individual       |
 | name                |                      | string | Name of the beneficiary                         |
 | email               |                      | string | Email of the beneficiary                        |
+| date_of_birth       |                      | string | Date of birth of the beneficiary (Format DD-MM-YYYY) |
+| nationality         |                      | string | ISO 3166-1 alpha-2 country code representing beneficiary's nationality (e.g., US, GB, IN, FR) |
 | address             |                      | json   | Address of the beneficiary                      |
 |                     | line1                | string | Address line 1                                  |
 |                     | line2                | string | Address Line 2                                  |
