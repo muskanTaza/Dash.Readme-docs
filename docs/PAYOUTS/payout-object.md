@@ -135,6 +135,9 @@ next:
 | quote                       | string    | ID of the payout quote used to lock exchange rates for this payout. Begins with 'poq\_'                                                                      |
 | available_balance           | integer   | Available balance in the holding currency account after this payout is processed                                                                             |
 | is_balance_sufficient       | boolean   | Indicates whether the account has sufficient balance to process this payout                                                                                  |
+| reverse_balance_transaction | string    | ID of the reverse balance transaction object linked to this payout. Only present when status is 'reversed'                                                   |
+| reversal_holding_fx_transaction | json  | Reversal FX transaction details for holding currency. Only present when status is 'reversed'. Follows the same structure as payout_fx_transaction.           |
+| reversal_payout_fx_transaction  | json  | Reversal FX transaction details for payout currency. Only present when status is 'reversed'. Follows the same structure as payout_fx_transaction.            |
 
 ### beneficiary_details
 

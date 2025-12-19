@@ -6662,6 +6662,98 @@
                           "type": "boolean",
                           "example": true,
                           "description": "Indicates whether the account has sufficient balance to process this payout"
+                        },
+                        "reverse_balance_transaction": {
+                          "type": "string",
+                          "description": "Id of the reverse balance transaction object linked to this payout. Only present when status is 'reversed'"
+                        },
+                        "reversal_holding_fx_transaction": {
+                          "type": "object",
+                          "description": "Reversal FX transaction details for holding currency. Only present when status is 'reversed'",
+                          "properties": {
+                            "exchange_rate": {
+                              "type": "number",
+                              "description": "FX exchange rate used"
+                            },
+                            "final": {
+                              "type": "object",
+                              "properties": {
+                                "amount": {
+                                  "type": "number",
+                                  "description": "Final amount after FX"
+                                },
+                                "currency": {
+                                  "type": "string",
+                                  "description": "Final currency"
+                                }
+                              }
+                            },
+                            "id": {
+                              "type": "string",
+                              "description": "FX transaction ID"
+                            },
+                            "initial": {
+                              "type": "object",
+                              "properties": {
+                                "amount": {
+                                  "type": "number",
+                                  "description": "Initial amount before FX"
+                                },
+                                "currency": {
+                                  "type": "string",
+                                  "description": "Initial currency"
+                                }
+                              }
+                            },
+                            "object": {
+                              "type": "string",
+                              "description": "Object type (fx_transaction)"
+                            }
+                          }
+                        },
+                        "reversal_payout_fx_transaction": {
+                          "type": "object",
+                          "description": "Reversal FX transaction details for payout currency. Only present when status is 'reversed'",
+                          "properties": {
+                            "exchange_rate": {
+                              "type": "number",
+                              "description": "Exchange rate for payout FX"
+                            },
+                            "final": {
+                              "type": "object",
+                              "properties": {
+                                "amount": {
+                                  "type": "number",
+                                  "description": "Final amount"
+                                },
+                                "currency": {
+                                  "type": "string",
+                                  "description": "Final currency"
+                                }
+                              }
+                            },
+                            "id": {
+                              "type": "string",
+                              "description": "FX transaction ID"
+                            },
+                            "initial": {
+                              "type": "object",
+                              "properties": {
+                                "amount": {
+                                  "type": "number",
+                                  "description": "Initial amount"
+                                },
+                                "currency": {
+                                  "type": "string",
+                                  "description": "Initial currency"
+                                }
+                              }
+                            },
+                            "object": {
+                              "type": "string",
+                              "description": "Object type (fx_transaction)"
+                            }
+                          }
                         }
                       }
                     }
