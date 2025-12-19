@@ -39,6 +39,7 @@ metadata:
   "object": "event",
   "created_at": "2024-12-10T08:45:27.349281559Z",
   "data": {
+    "local": {},
     "created_at": "2024-12-10T08:45:25.12005Z",
     "beneficiary_details": {
       "destination_details": {
@@ -47,6 +48,7 @@ metadata:
             "bank_code": "INGBAU2SXXX",
             "branch_code": "INGBAU2SXXX"
           },
+          "account_number":"78393933",
           "bank_name": "Central Bank",
           "country": "BR",
           "currency": "BRL",
@@ -58,7 +60,7 @@ metadata:
         "calling_code": "55"
       },
       "name": "Roman",
-      "email": "musk@gmail.com",
+      "email": "akash@example.com",
       "type": "individual",
       "tax_id": "123.456.789-87"
     },
@@ -995,7 +997,7 @@ metadata:
 
 <br />
 
-### payout.compliance_hold 
+### payout.compliance_hold
 
 ```json
 {
