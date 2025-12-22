@@ -593,37 +593,7 @@ metadata:
     "beneficiary": "bnf_cs8bf4m6rf9979b4isq0",
     "object": "payout",
     "balance_transaction": "btr_d4a2b7ehi567m07e7q80",
-    "reverse_balance_transaction": "btr_d4a2b8ehi567m07e7r90",
-    "reversal_holding_fx_transaction": {
-      "exchange_rate": 1,
-      "final": {
-        "amount": 100000,
-        "currency": "USD"
-      },
-      "id": "fx_d4a2b8k5ha8onnfg25a0",
-      "initial": {
-        "amount": 100000,
-        "currency": "USD"
-      },
-      "object": "fx_transaction"
-    },
-    "reversal_payout_fx_transaction": {
-      "exchange_rate": 1,
-      "final": {
-        "amount": 100000,
-        "currency": "USD"
-      },
-      "id": "fx_d4a2b8p5ha8onnfg25b0",
-      "initial": {
-        "amount": 100000,
-        "currency": "USD"
-      },
-      "object": "fx_transaction"
-    },
-    "amount": 100000,
-    "local": {
-      "fund_transfer_network": "ach"
-    },
+    "reversal_balance_transaction": "btr_d4a2b8ehi567m07e7r90",
     "logistics_tracking_details": [],
     "confirmation_documents": [],
     "quote": "poq_d4a2b76hi567m07e7q3y",
