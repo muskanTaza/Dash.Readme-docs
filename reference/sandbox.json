@@ -53,11 +53,7 @@
                   "customer_details": {
                     "type": "object",
                     "description": "Details about the customer",
-                    "required": [
-                      "name",
-                      "email",
-                      "country"
-                    ],
+                    "required": ["name", "email", "country"],
                     "properties": {
                       "name": {
                         "type": "string",
@@ -305,10 +301,7 @@
                     "success_url": "https://mystore.com/success_page",
                     "cancel_url": "https://mystore.com/try_again",
                     "webhook_url": "https://mystore.com/internal/webhook",
-                    "payment_methods": [
-                      "paynow_sgd",
-                      "card"
-                    ],
+                    "payment_methods": ["paynow_sgd", "card"],
                     "transaction_description": "test",
                     "metadata": {
                       "key1": "value1",
@@ -774,9 +767,7 @@
         },
         "deprecated": false,
         "x-readme": {
-          "samples-languages": [
-            "shell"
-          ]
+          "samples-languages": ["shell"]
         }
       }
     },
@@ -812,11 +803,7 @@
                   "customer_details": {
                     "type": "object",
                     "description": "Details about the customer",
-                    "required": [
-                      "name",
-                      "email",
-                      "country"
-                    ],
+                    "required": ["name", "email", "country"],
                     "properties": {
                       "name": {
                         "type": "string",
@@ -1306,10 +1293,7 @@
                           }
                         },
                         "metadata": {
-                          "type": [
-                            "object",
-                            "null"
-                          ],
+                          "type": ["object", "null"],
                           "description": "Custom metadata key-value pairs attached to this payin for reference.",
                           "example": null
                         },
@@ -1472,9 +1456,7 @@
         },
         "deprecated": false,
         "x-readme": {
-          "samples-languages": [
-            "shell"
-          ]
+          "samples-languages": ["shell"]
         }
       }
     },
@@ -1503,11 +1485,7 @@
                   "customer_details": {
                     "type": "object",
                     "description": "Details about the customer",
-                    "required": [
-                      "name",
-                      "email",
-                      "country"
-                    ],
+                    "required": ["name", "email", "country"],
                     "properties": {
                       "name": {
                         "type": "string",
@@ -2141,9 +2119,7 @@
         },
         "deprecated": false,
         "x-readme": {
-          "samples-languages": [
-            "shell"
-          ]
+          "samples-languages": ["shell"]
         }
       },
       "get": {
@@ -2932,11 +2908,7 @@
                   "customer_details": {
                     "type": "object",
                     "description": "Details about the customer",
-                    "required": [
-                      "name",
-                      "email",
-                      "country"
-                    ],
+                    "required": ["name", "email", "country"],
                     "properties": {
                       "name": {
                         "type": "string",
@@ -3159,11 +3131,7 @@
                           "description": "Description of the product"
                         }
                       },
-                      "required": [
-                        "name",
-                        "quantity",
-                        "amount"
-                      ],
+                      "required": ["name", "quantity", "amount"],
                       "type": "object"
                     }
                   },
@@ -3222,10 +3190,7 @@
                     "success_url": "https://mystore.com/success_page",
                     "cancel_url": "https://mystore.com/try_again",
                     "webhook_url": "https://mystore.com/internal/webhook",
-                    "payment_methods": [
-                      "paynow_sgd",
-                      "card"
-                    ],
+                    "payment_methods": ["paynow_sgd", "card"],
                     "transaction_description": "1 x T-shirt",
                     "expires_at": "2024-07-21T14:01:04.576356Z",
                     "reference_id": "mystore_order_00001"
@@ -4735,10 +4700,7 @@
                   "beneficiary_details": {
                     "type": "object",
                     "description": "Beneficiary Details",
-                    "required": [
-                      "name",
-                      "type"
-                    ],
+                    "required": ["name", "type"],
                     "properties": {
                       "name": {
                         "type": "string",
@@ -4799,27 +4761,22 @@
                       "destination_details": {
                         "type": "object",
                         "description": "Beneficiary destination details",
-                        "required": [
-                          "type"
-                        ],
+                        "required": ["type"],
                         "properties": {
                           "type": {
                             "type": "string",
-                            "description": "bank, wallet or local_payment_network",
+                            "description": "bank, wallet, local_payment_network, tazapay_account",
                             "enum": [
                               "bank",
                               "wallet",
-                              "local_payment_network"
+                              "local_payment_network",
+                              "tazapay_account"
                             ]
                           },
                           "bank": {
                             "type": "object",
                             "description": "Bank details if the destination_details.type is a bank account",
-                            "required": [
-                              "bank_name",
-                              "country",
-                              "currency"
-                            ],
+                            "required": ["bank_name", "country", "currency"],
                             "properties": {
                               "account_number": {
                                 "type": "string",
@@ -4898,22 +4855,14 @@
                               "account_type": {
                                 "type": "string",
                                 "description": "Type of bank account",
-                                "enum": [
-                                  "savings",
-                                  "checking",
-                                  "payment"
-                                ]
+                                "enum": ["savings", "checking", "payment"]
                               }
                             }
                           },
                           "wallet": {
                             "type": "object",
                             "description": "Wallet details if the destination_details.type is a wallet",
-                            "required": [
-                              "deposit_address",
-                              "type",
-                              "currency"
-                            ],
+                            "required": ["deposit_address", "type", "currency"],
                             "properties": {
                               "deposit_address": {
                                 "type": "string",
@@ -4944,10 +4893,7 @@
                           "local_payment_network": {
                             "type": "object",
                             "description": "Destination details if the destination_details.type is local_payment_network",
-                            "required": [
-                              "type",
-                              "deposit_key"
-                            ],
+                            "required": ["type", "deposit_key"],
                             "properties": {
                               "type": {
                                 "type": "string",
@@ -4960,6 +4906,17 @@
                               "deposit_key": {
                                 "type": "string",
                                 "description": "Deposit key corresponding to the type of local payment network (Example, PIX key for PIX, UPI handle for UPI, etc.)"
+                              }
+                            }
+                          },
+                          "tazapay_account": {
+                            "type": "object",
+                            "description": "Destination details if the destination.type is tazapay_account",
+                            "required": ["deposit_adress"],
+                            "properties": {
+                              "deposit_address": {
+                                "type": "string",
+                                "description": "Deposit Address corresponding to a Tazapay account"
                               }
                             }
                           }
@@ -4992,9 +4949,6 @@
                       "name_local": {
                         "type": "string",
                         "description": "Name in local language"
-                      },
-                      "property1": {
-                        "type": "string"
                       }
                     }
                   },
@@ -5013,20 +4967,19 @@
                   },
                   "type": {
                     "type": "string",
-                    "description": "Type of payout",
+                    "description": "Type of payout - local, swift, wallet, tazapay_account, local_payment_network",
                     "enum": [
                       "local",
                       "swift",
-                      "wallet"
+                      "wallet",
+                      "local_payment_network",
+                      "tazapay_account"
                     ]
                   },
                   "charge_type": {
                     "type": "string",
                     "description": "For wire transfers only",
-                    "enum": [
-                      "shared",
-                      "ours"
-                    ]
+                    "enum": ["shared", "ours"]
                   },
                   "purpose": {
                     "type": "string",
@@ -5059,7 +5012,13 @@
                       "PYR025",
                       "PYR026",
                       "PYR027",
-                      "PYR028"
+                      "PYR028",
+                      "PYR029",
+                      "PYR030",
+                      "PYR031",
+                      "PYR032",
+                      "PYR033",
+                      "PYR034"
                     ]
                   },
                   "statement_descriptor": {
@@ -5082,21 +5041,14 @@
                         "type": {
                           "type": "string",
                           "description": "A string mentioning the type of document. Possible values - invoice, other",
-                          "enum": [
-                            "invoice",
-                            "contract",
-                            "other"
-                          ]
+                          "enum": ["invoice", "contract", "other"]
                         },
                         "url": {
                           "type": "string",
                           "description": "Dynamically downloadable URL"
                         }
                       },
-                      "required": [
-                        "type",
-                        "url"
-                      ],
+                      "required": ["type", "url"],
                       "type": "object"
                     }
                   },
@@ -5679,9 +5631,7 @@
         },
         "deprecated": false,
         "x-readme": {
-          "samples-languages": [
-            "shell"
-          ]
+          "samples-languages": ["shell"]
         }
       }
     },
@@ -6280,9 +6230,7 @@
                                     "type": {
                                       "type": "string",
                                       "description": "Local payment network type",
-                                      "enum": [
-                                        "pix_brl"
-                                      ]
+                                      "enum": ["pix_brl"]
                                     }
                                   }
                                 },
@@ -6312,9 +6260,7 @@
                                     "type": {
                                       "type": "string",
                                       "description": "Blockchain type",
-                                      "enum": [
-                                        "ethereum"
-                                      ]
+                                      "enum": ["ethereum"]
                                     }
                                   }
                                 }
@@ -6374,10 +6320,7 @@
                             "type": {
                               "type": "string",
                               "description": "Beneficiary type",
-                              "enum": [
-                                "business",
-                                "individual"
-                              ],
+                              "enum": ["business", "individual"],
                               "example": "business"
                             },
                             "status": {
@@ -6397,10 +6340,7 @@
                         "charge_type": {
                           "type": "string",
                           "description": "Charge type of payout",
-                          "enum": [
-                            "ours",
-                            "shared"
-                          ],
+                          "enum": ["ours", "shared"],
                           "example": "ours"
                         },
                         "confirmation_documents": {
@@ -6622,11 +6562,7 @@
                             "tracking_type": {
                               "type": "string",
                               "description": "Tracking type used for payout",
-                              "enum": [
-                                "uetr",
-                                "utr",
-                                "transaction_hash"
-                              ],
+                              "enum": ["uetr", "utr", "transaction_hash"],
                               "example": "uetr"
                             }
                           }
@@ -7408,11 +7344,7 @@
                   "customer_details": {
                     "type": "object",
                     "description": "Details about the customer",
-                    "required": [
-                      "name",
-                      "email",
-                      "country"
-                    ],
+                    "required": ["name", "email", "country"],
                     "properties": {
                       "name": {
                         "type": "string",
@@ -7674,10 +7606,7 @@
                     "success_url": "https://mystore.com/success_page",
                     "cancel_url": "https://mystore.com/try_again",
                     "webhook_url": "https://mystore.com/internal/webhook",
-                    "payment_methods": [
-                      "paynow_sgd",
-                      "card"
-                    ],
+                    "payment_methods": ["paynow_sgd", "card"],
                     "transaction_description": "1 x T-shirt",
                     "expires_at": "2029-07-21T14:01:04.576356Z",
                     "reference_id": "mystore_order_00001"
@@ -8998,11 +8927,7 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": [
-                  "name",
-                  "email",
-                  "country"
-                ],
+                "required": ["name", "email", "country"],
                 "properties": {
                   "name": {
                     "type": "string",
@@ -9778,9 +9703,7 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": [
-                  "payin"
-                ],
+                "required": ["payin"],
                 "properties": {
                   "payin": {
                     "type": "string",
@@ -9811,9 +9734,7 @@
                   "customer_details": {
                     "type": "object",
                     "description": "Customer Details for the refund",
-                    "required": [
-                      "email"
-                    ],
+                    "required": ["email"],
                     "properties": {
                       "email": {
                         "type": "string",
@@ -10791,17 +10712,12 @@
                       "data": {
                         "payout_methods": [
                           {
-                            "beneficiary_type": [
-                              "individual",
-                              "business"
-                            ],
+                            "beneficiary_type": ["individual", "business"],
                             "country": "HK",
                             "currency": "HKD",
                             "custom_remitter_support": true,
                             "payout_type": "swift",
-                            "required_bank_codes": [
-                              "swift_code"
-                            ],
+                            "required_bank_codes": ["swift_code"],
                             "required_bank_fields": [
                               "account_holder_name",
                               "bank_name",
@@ -10822,26 +10738,18 @@
                             }
                           },
                           {
-                            "beneficiary_type": [
-                              "individual",
-                              "business"
-                            ],
+                            "beneficiary_type": ["individual", "business"],
                             "country": "HK",
                             "currency": "HKD",
                             "custom_remitter_support": false,
                             "payout_type": "local",
-                            "required_bank_codes": [
-                              "swift_code"
-                            ],
+                            "required_bank_codes": ["swift_code"],
                             "required_bank_fields": [
                               "account_holder_name",
                               "bank_name",
                               "account_number"
                             ],
-                            "fund_transfer_networks": [
-                              "chats",
-                              "fps"
-                            ],
+                            "fund_transfer_networks": ["chats", "fps"],
                             "recommended_fields": {
                               "bank_branch": "optional",
                               "account_type": "recommended"
@@ -10892,10 +10800,7 @@
                                   "type": "string",
                                   "example": "individual"
                                 },
-                                "example": [
-                                  "individual",
-                                  "business"
-                                ]
+                                "example": ["individual", "business"]
                               },
                               "country": {
                                 "type": "string",
@@ -10924,9 +10829,7 @@
                                   "type": "string",
                                   "example": "swift_code"
                                 },
-                                "example": [
-                                  "swift_code"
-                                ]
+                                "example": ["swift_code"]
                               },
                               "required_bank_fields": {
                                 "type": "array",
@@ -10962,10 +10865,7 @@
                                   "type": "string",
                                   "example": "chats"
                                 },
-                                "example": [
-                                  "chats",
-                                  "fps"
-                                ]
+                                "example": ["chats", "fps"]
                               },
                               "recommended_fields": {
                                 "type": "object",
@@ -11064,11 +10964,7 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": [
-                  "url",
-                  "type",
-                  "reference"
-                ],
+                "required": ["url", "type", "reference"],
                 "properties": {
                   "url": {
                     "type": "string",
@@ -11715,10 +11611,7 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": [
-                  "name",
-                  "type"
-                ],
+                "required": ["name", "type"],
                 "properties": {
                   "name": {
                     "type": "string",
@@ -11731,10 +11624,7 @@
                   "type": {
                     "type": "string",
                     "description": "business or individual",
-                    "enum": [
-                      "business",
-                      "individual"
-                    ]
+                    "enum": ["business", "individual"]
                   },
                   "address": {
                     "type": "object",
@@ -11783,9 +11673,7 @@
                   "destination_details": {
                     "type": "object",
                     "description": "Destination Details",
-                    "required": [
-                      "type"
-                    ],
+                    "required": ["type"],
                     "properties": {
                       "type": {
                         "type": "string",
@@ -11800,11 +11688,7 @@
                       "bank": {
                         "type": "object",
                         "description": "Bank details if the destination_details.type is a bank account",
-                        "required": [
-                          "bank_name",
-                          "country",
-                          "currency"
-                        ],
+                        "required": ["bank_name", "country", "currency"],
                         "properties": {
                           "account_number": {
                             "type": "string",
@@ -11883,22 +11767,14 @@
                           "account_type": {
                             "type": "string",
                             "description": "Type of bank account",
-                            "enum": [
-                              "savings",
-                              "checking",
-                              "payment"
-                            ]
+                            "enum": ["savings", "checking", "payment"]
                           }
                         }
                       },
                       "wallet": {
                         "type": "object",
                         "description": "Wallet details if the destination_details.type is a wallet",
-                        "required": [
-                          "deposit_address",
-                          "type",
-                          "currency"
-                        ],
+                        "required": ["deposit_address", "type", "currency"],
                         "properties": {
                           "deposit_address": {
                             "type": "string",
@@ -11915,10 +11791,7 @@
                           "hosted": {
                             "type": "string",
                             "description": "Indicates whether the wallet is custodial (hosted) or non-custodial (unhosted). Possible values: yes – The wallet is hosted by a Virtual Asset Service Provider (VASP) or exchange. no – The wallet is non-custodial and controlled directly by the user (e.g., MetaMask, Ledger)  Mandatory if party_classification is 'self' and destination_details.type is 'wallet'.",
-                            "enum": [
-                              "yes",
-                              "no"
-                            ]
+                            "enum": ["yes", "no"]
                           },
                           "vasp_name": {
                             "type": "string",
@@ -11933,10 +11806,7 @@
                       "local_payment_network": {
                         "type": "object",
                         "description": "Destination details if the destination_details.type is local_payment_network",
-                        "required": [
-                          "type",
-                          "deposit_key"
-                        ],
+                        "required": ["type", "deposit_key"],
                         "properties": {
                           "type": {
                             "type": "string",
@@ -11961,9 +11831,7 @@
                           }
                         },
                         "description": "Destination details if the destination_details.type is tazapay_account",
-                        "required": [
-                          "deposit_address"
-                        ]
+                        "required": ["deposit_address"]
                       }
                     }
                   },
@@ -12014,10 +11882,7 @@
                     "type": "string",
                     "description": "Type of relationship between beneficiary and creator of beneficiary Possible values - self, third_party (Mandatory if destination_details.type is a wallet)",
                     "default": "",
-                    "enum": [
-                      "self",
-                      "third_party"
-                    ]
+                    "enum": ["self", "third_party"]
                   },
                   "name_local": {
                     "type": "string",
@@ -12564,27 +12429,17 @@
                   "destination_details": {
                     "type": "object",
                     "description": "Destination Details",
-                    "required": [
-                      "type"
-                    ],
+                    "required": ["type"],
                     "properties": {
                       "type": {
                         "type": "string",
                         "description": "bank, wallet or local_payment_network",
-                        "enum": [
-                          "bank",
-                          "wallet",
-                          "local_payment_network"
-                        ]
+                        "enum": ["bank", "wallet", "local_payment_network"]
                       },
                       "bank": {
                         "type": "object",
                         "description": "Bank details if the destination_details.type is a bank account",
-                        "required": [
-                          "bank_name",
-                          "country",
-                          "currency"
-                        ],
+                        "required": ["bank_name", "country", "currency"],
                         "properties": {
                           "account_number": {
                             "type": "string",
@@ -12663,22 +12518,14 @@
                           "account_type": {
                             "type": "string",
                             "description": "Type of bank account",
-                            "enum": [
-                              "savings",
-                              "checking",
-                              "payment"
-                            ]
+                            "enum": ["savings", "checking", "payment"]
                           }
                         }
                       },
                       "wallet": {
                         "type": "object",
                         "description": "Wallet details if the destination_details.type is a wallet",
-                        "required": [
-                          "deposit_address",
-                          "type",
-                          "currency"
-                        ],
+                        "required": ["deposit_address", "type", "currency"],
                         "properties": {
                           "deposit_address": {
                             "type": "string",
@@ -12697,10 +12544,7 @@
                       "local_payment_network": {
                         "type": "object",
                         "description": "Destination details if the destination_details.type is local_payment_network",
-                        "required": [
-                          "type",
-                          "deposit_key"
-                        ],
+                        "required": ["type", "deposit_key"],
                         "properties": {
                           "type": {
                             "type": "string",
@@ -13575,10 +13419,7 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": [
-                  "name",
-                  "type"
-                ],
+                "required": ["name", "type"],
                 "properties": {
                   "name": {
                     "type": "string",
@@ -13791,11 +13632,7 @@
                               "type": {
                                 "type": "string",
                                 "description": "Type of document",
-                                "enum": [
-                                  "identity",
-                                  "address",
-                                  "other"
-                                ]
+                                "enum": ["identity", "address", "other"]
                               },
                               "sub_type": {
                                 "type": "string",
@@ -13896,18 +13733,12 @@
                         "type": {
                           "type": "string",
                           "description": "Type of the document",
-                          "enum": [
-                            "business",
-                            "address",
-                            "other"
-                          ]
+                          "enum": ["business", "address", "other"]
                         },
                         "sub_type": {
                           "type": "string",
                           "description": "Subtype of the document",
-                          "enum": [
-                            "other"
-                          ]
+                          "enum": ["other"]
                         },
                         "tag": {
                           "type": "string",
@@ -13958,12 +13789,7 @@
                   "relationship": {
                     "type": "string",
                     "description": "The entity's relationship with you",
-                    "enum": [
-                      "customer",
-                      "vendor",
-                      "fourth_party",
-                      "other"
-                    ]
+                    "enum": ["customer", "vendor", "fourth_party", "other"]
                   },
                   "purpose_of_use": {
                     "type": "array",
@@ -14145,9 +13971,7 @@
                           "items": {
                             "type": "string"
                           },
-                          "example": [
-                            "payout"
-                          ]
+                          "example": ["payout"]
                         },
                         "reference_id": {
                           "type": "string",
@@ -14285,9 +14109,7 @@
                                 "items": {
                                   "type": "string"
                                 },
-                                "example": [
-                                  "beneficial_owner"
-                                ]
+                                "example": ["beneficial_owner"]
                               },
                               "documents": {
                                 "type": "array",
@@ -14657,11 +14479,7 @@
                               "type": {
                                 "type": "string",
                                 "description": "Type of document",
-                                "enum": [
-                                  "identity",
-                                  "address",
-                                  "other"
-                                ]
+                                "enum": ["identity", "address", "other"]
                               },
                               "sub_type": {
                                 "type": "string",
@@ -14762,18 +14580,12 @@
                         "type": {
                           "type": "string",
                           "description": "Type of the document",
-                          "enum": [
-                            "business",
-                            "address",
-                            "other"
-                          ]
+                          "enum": ["business", "address", "other"]
                         },
                         "sub_type": {
                           "type": "string",
                           "description": "Subtype of the document",
-                          "enum": [
-                            "other"
-                          ]
+                          "enum": ["other"]
                         },
                         "tag": {
                           "type": "string",
@@ -14824,12 +14636,7 @@
                   "relationship": {
                     "type": "string",
                     "description": "The entity's relationship with you",
-                    "enum": [
-                      "customer",
-                      "vendor",
-                      "fourth_party",
-                      "other"
-                    ]
+                    "enum": ["customer", "vendor", "fourth_party", "other"]
                   },
                   "purpose_of_use": {
                     "type": "array",
@@ -15011,9 +14818,7 @@
                           "items": {
                             "type": "string"
                           },
-                          "example": [
-                            "payout"
-                          ]
+                          "example": ["payout"]
                         },
                         "reference_id": {
                           "type": "string",
@@ -15151,9 +14956,7 @@
                                 "items": {
                                   "type": "string"
                                 },
-                                "example": [
-                                  "beneficial_owner"
-                                ]
+                                "example": ["beneficial_owner"]
                               },
                               "documents": {
                                 "type": "array",
@@ -15442,9 +15245,7 @@
                           "items": {
                             "type": "string"
                           },
-                          "example": [
-                            "payout"
-                          ]
+                          "example": ["payout"]
                         },
                         "reference_id": {
                           "type": "string",
@@ -15582,9 +15383,7 @@
                                 "items": {
                                   "type": "string"
                                 },
-                                "example": [
-                                  "beneficial_owner"
-                                ]
+                                "example": ["beneficial_owner"]
                               },
                               "documents": {
                                 "type": "array",
@@ -15909,9 +15708,7 @@
                           "items": {
                             "type": "string"
                           },
-                          "example": [
-                            "payout"
-                          ]
+                          "example": ["payout"]
                         },
                         "reference_id": {
                           "type": "string",
@@ -16049,9 +15846,7 @@
                                 "items": {
                                   "type": "string"
                                 },
-                                "example": [
-                                  "beneficial_owner"
-                                ]
+                                "example": ["beneficial_owner"]
                               },
                               "documents": {
                                 "type": "array",
@@ -16695,10 +16490,7 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": [
-                  "initial_currency",
-                  "final_currency"
-                ],
+                "required": ["initial_currency", "final_currency"],
                 "properties": {
                   "initial_currency": {
                     "type": "string",
@@ -16921,11 +16713,7 @@
                   }
                 },
                 "type": "object",
-                "required": [
-                  "type",
-                  "currencies",
-                  "payment_method_type"
-                ]
+                "required": ["type", "currencies", "payment_method_type"]
               }
             }
           }
@@ -16948,10 +16736,7 @@
                       "data": {
                         "account_id": "cva_1234567890abcdef",
                         "account_name": "Acme Corp Collection Account",
-                        "currencies": [
-                          "USD",
-                          "EUR"
-                        ],
+                        "currencies": ["USD", "EUR"],
                         "created_at": "2025-06-16T12:45:30Z",
                         "status": "requested",
                         "status_description": "",
@@ -16980,9 +16765,7 @@
               "name": ""
             }
           ],
-          "samples-languages": [
-            "shell"
-          ]
+          "samples-languages": ["shell"]
         }
       }
     },
@@ -17004,10 +16787,7 @@
                       "data": {
                         "account_id": "cva_1234567890abcdef",
                         "account_name": "Acme Corp Collection Account",
-                        "currencies": [
-                          "USD",
-                          "EUR"
-                        ],
+                        "currencies": ["USD", "EUR"],
                         "created_at": "2025-06-16T12:45:30Z",
                         "status": "requested",
                         "status_description": "",
@@ -17030,10 +16810,7 @@
                       "data": {
                         "account_id": "cva_1234567890abcdef",
                         "account_name": "Acme Corp Collection Account",
-                        "currencies": [
-                          "USD",
-                          "EUR"
-                        ],
+                        "currencies": ["USD", "EUR"],
                         "created_at": "2025-06-16T12:45:30Z",
                         "status": "requested",
                         "status_description": "",
@@ -17081,10 +16858,7 @@
                         "description": "Virtual Account Location - The country in which you are requesting VA. Format - ISO 3166 standard alpha-2 code. eg: SG, IN, US, etc. "
                       }
                     },
-                    "required": [
-                      "currencies",
-                      "country"
-                    ]
+                    "required": ["currencies", "country"]
                   },
                   "wallet": {
                     "type": "object",
@@ -17094,9 +16868,7 @@
                         "description": "Type of Blockchain"
                       }
                     },
-                    "required": [
-                      "type"
-                    ]
+                    "required": ["type"]
                   },
                   "payment_method_type": {
                     "type": "string",
@@ -17104,11 +16876,7 @@
                   }
                 },
                 "type": "object",
-                "required": [
-                  "type",
-                  "Description",
-                  "payment_method_type"
-                ]
+                "required": ["type", "Description", "payment_method_type"]
               }
             }
           }
@@ -17126,9 +16894,7 @@
               "name": "Wallet Request"
             }
           ],
-          "samples-languages": [
-            "shell"
-          ]
+          "samples-languages": ["shell"]
         }
       },
       "get": {
@@ -17208,9 +16974,7 @@
                       "object": "collection_account",
                       "payment_method_type": "local_bank_transfer_cad",
                       "status": "disabled",
-                      "currencies": [
-                        "CAD"
-                      ],
+                      "currencies": ["CAD"],
                       "metadata": {
                         "usecase": "This account is used for USD payouts"
                       }
@@ -17230,9 +16994,7 @@
               "name": ""
             }
           ],
-          "samples-languages": [
-            "shell"
-          ]
+          "samples-languages": ["shell"]
         },
         "requestBody": {
           "content": {
@@ -17577,9 +17339,7 @@
                       }
                     },
                     "description": "Amount in balance (holding) currency",
-                    "required": [
-                      "currency"
-                    ]
+                    "required": ["currency"]
                   },
                   "payout_info": {
                     "type": "object",
@@ -17594,10 +17354,7 @@
                       }
                     },
                     "description": "Amount in payout currency",
-                    "required": [
-                      "currency",
-                      "amount"
-                    ]
+                    "required": ["currency", "amount"]
                   },
                   "destination_info": {
                     "type": "object",
@@ -17616,10 +17373,7 @@
                       }
                     },
                     "description": "Amount in destination currency (currency in which beneficiary receives the funds)",
-                    "required": [
-                      "currency",
-                      "country"
-                    ]
+                    "required": ["currency", "country"]
                   },
                   "local_payment_network": {
                     "type": "object",
@@ -17653,10 +17407,7 @@
                   }
                 },
                 "type": "object",
-                "required": [
-                  "payout_type",
-                  "payout_info"
-                ]
+                "required": ["payout_type", "payout_info"]
               }
             }
           }
@@ -18113,9 +17864,7 @@
                   }
                 },
                 "type": "object",
-                "required": [
-                  "source"
-                ]
+                "required": ["source"]
               }
             }
           }
@@ -18180,9 +17929,7 @@
               "name": "curl"
             }
           ],
-          "samples-languages": [
-            "shell"
-          ]
+          "samples-languages": ["shell"]
         }
       },
       "post": {
@@ -18405,10 +18152,7 @@
                                   "type": "string",
                                   "example": "Bank1"
                                 },
-                                "example": [
-                                  "Bank1",
-                                  "Bank2"
-                                ]
+                                "example": ["Bank1", "Bank2"]
                               },
                               "logo": {
                                 "type": "array",
@@ -18588,9 +18332,7 @@
                         "destination_details": {
                           "type": "wallet",
                           "wallet": {
-                            "currencies": [
-                              "USD"
-                            ],
+                            "currencies": ["USD"],
                             "deposit_address": "0x5gtj035ad25fnhioerfujhguri587y43894hfie2",
                             "id": "cwa_jhrv4sad4tf55jrvp0",
                             "object": "wallet",
@@ -18637,9 +18379,7 @@
           }
         ],
         "x-readme": {
-          "samples-languages": [
-            "shell"
-          ]
+          "samples-languages": ["shell"]
         }
       }
     },
@@ -18732,9 +18472,7 @@
                     "format": "json"
                   }
                 },
-                "required": [
-                  "amount"
-                ]
+                "required": ["amount"]
               }
             }
           }
@@ -18747,9 +18485,7 @@
               "name": ""
             }
           ],
-          "samples-languages": [
-            "json"
-          ]
+          "samples-languages": ["json"]
         }
       }
     },
@@ -18810,9 +18546,7 @@
               "name": ""
             }
           ],
-          "samples-languages": [
-            "shell"
-          ]
+          "samples-languages": ["shell"]
         }
       },
       "put": {
@@ -18900,10 +18634,7 @@
             "name": "type",
             "schema": {
               "type": "string",
-              "enum": [
-                "billing",
-                "shipping"
-              ]
+              "enum": ["billing", "shipping"]
             },
             "required": true,
             "description": "The type of address you want to add."
@@ -19314,9 +19045,7 @@
         },
         "deprecated": false,
         "x-readme": {
-          "samples-languages": [
-            "shell"
-          ]
+          "samples-languages": ["shell"]
         }
       }
     },
