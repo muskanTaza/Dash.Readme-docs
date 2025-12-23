@@ -34,7 +34,7 @@ Tazapay's Global Collection Accounts (also known as virtual accounts) provide yo
   * **Local Bank Transfers:** For receiving payments like a local entity in specific currencies (SWIFT transfers sent to these local details will fail). Supported currencies include:\
     `USD, CAD, EUR, GBP, IDR, SGD, PHP, KRW, NGN, VND, AUD, NZD`
   * **SWIFT Network:** For receiving international wire transfers in a wider range of currencies. Supported currencies include:\
-    `USD, GBP, EUR, AUD, CAD, SGD, AED, HKD, JPY, KWD, NZD, OMR, QAR, SAR, THB, TRY, ZAR, BGN, BHD, CHF, CZK, DKK, HUF, ILS, KES, NOK, PLN, RON, SEK, UGX, CNH  ` 
+    `USD, GBP, EUR, AUD, CAD, SGD, AED, HKD, JPY, KWD, NZD, OMR, QAR, SAR, THB, TRY, ZAR, BHD, CHF, CZK, DKK, HUF, ILS, KES, NOK, PLN, RON, SEK, UGX, CNH  ` 
 * **Managing and Accessing Funds**:
   * You can monitor your collection accounts and view individual "collects" (incoming transfers) through the [Tazapay's dashboard.](https://dashboard.tazapay.com)
   * Collected funds are held in your Tazapay account balance.

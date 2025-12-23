@@ -13,7 +13,7 @@ metadata:
 |                  | Wire Transfer (SWIFT)                            | JPY, AUD, HKD, CNH, USD, SGD, CAD, GBP, EUR, CHF, DKK, NOK, SEK, NZD                                                                            |
 | CA               | Local Bank Transfer                              | CAD                                                                                                                                             |
 | GB               | Local Bank Transfer                              | EUR, GBP                                                                                                                                        |
-|                  | Wire Transfer (SWIFT)                            | USD, EUR, GBP, SGD, AED, HKD, JPY, KWD, NZD, OMR, QAR, SAR, THB, TRY, USD, BGN, BHD, CHF, CZK, DKK, HUF, ILS, KES, NOK, PLN, RON, SEK, EUR, GBP |
+|                  | Wire Transfer (SWIFT)                            | USD, EUR, GBP, SGD, AED, HKD, JPY, KWD, NZD, OMR, QAR, SAR, THB, TRY, USD, BHD, CHF, CZK, DKK, HUF, ILS, KES, NOK, PLN, RON, SEK, EUR, GBP |
 | ID               | Local Bank Transfer                              | IDR                                                                                                                                             |
 | US               | Local Bank Transfer                              | USD                                                                                                                                             |
 | NG               | Local Bank Transfer                              | NGN                                                                                                                                             |
