@@ -18,5 +18,5 @@ Tazapay provides collection accounts in the following currencies
 
 | Mode of Transfer (SWIFT / Local Transfer)  | Currencies supported (ISO-currency codes)                                                                                                                  |
 | :----------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SWIFT                                      | USD, GBP, EUR, AUD, CAD, SGD, AED,  HKD, JPY, KWD, NZD, OMR, QAR, SAR, THB, TRY, ZAR, BGN, BHD, CHF, CZK, DKK, HUF, ILS, KES, NOK, PLN, RON, SEK, UGX, CNH |
+| SWIFT                                      | USD, GBP, EUR, AUD, CAD, SGD, AED,  HKD, JPY, KWD, NZD, OMR, QAR, SAR, THB, TRY, ZAR, BHD, CHF, CZK, DKK, HUF, ILS, KES, NOK, PLN, RON, SEK, UGX, CNH |
 | Local Transfer (SWIFT Transfers will fail) | USD, CAD, EUR, GBP, IDR, SGD, PHP, KRW, NGN, VND, AUD, NZD                                                                                                 |
