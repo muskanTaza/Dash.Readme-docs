@@ -16,6 +16,7 @@ metadata:
 | `payout.succeeded`                  | Triggered when the status is succeeded         | On      |
 | `payout.failed`                     | Triggered when the status is failed            | On      |
 | `payout.cancelled`                  | Triggered when the payout is cancelled         | On      |
+| `payout.reversed`                   | Triggered when the payout is reversed          | On      |
 | `payout.proof_of_payment_generated` | Triggered when the proof of payment is updated | On      |
 
 ## Other Events
@@ -534,6 +535,70 @@ metadata:
     "quote": "poq_ctgjeqvg9n1vh5nsb3n7",
     "destination_fx_quote": "fx_ctgjeqtpk5p8ci903jch",
     "available_balance": 80000000,
+    "is_balance_sufficient": true
+  }
+}
+```
+
+### payout.reversed
+
+```
+{
+  "type": "payout.reversed",
+  "id": "evt_d4a2b7o1l435sdu92340",
+  "object": "event",
+  "created_at": "2025-12-19T10:15:45.123456789Z",
+  "data": {
+    "created_at": "2025-12-19T09:45:25.120050Z",
+    "beneficiary_details": {
+      "destination_details": {
+        "bank": {
+          "bank_codes": {
+            "swift_code": "INGBAU2SXXX"
+          },
+          "account_number": "1234567890",
+          "bank_name": "Central Bank",
+          "country": "US",
+          "currency": "USD"
+        },
+        "type": "bank"
+      },
+      "phone": {
+        "calling_code": "1"
+      },
+      "name": "John Doe",
+      "email": "john@example.com",
+      "type": "business"
+    },
+    "payout_fx_transaction": {
+      "initial": {
+        "currency": "USD",
+        "amount": 100000
+      },
+      "final": {
+        "currency": "USD",
+        "amount": 100000
+      },
+      "id": "fx_d4a2b705ha8onnfg24s0",
+      "object": "fx_transaction",
+      "exchange_rate": 1
+    },
+    "type": "swift",
+    "status": "reversed",
+    "charge_type": "ours",
+    "purpose": "PYR001",
+    "id": "pot_d4a2b76hi567m07e7q40",
+    "holding_currency": "USD",
+    "currency": "USD",
+    "beneficiary": "bnf_cs8bf4m6rf9979b4isq0",
+    "object": "payout",
+    "balance_transaction": "btr_d4a2b7ehi567m07e7q80",
+    "reversal_balance_transaction": "btr_d4a2b8ehi567m07e7r90",
+    "logistics_tracking_details": [],
+    "confirmation_documents": [],
+    "quote": "poq_d4a2b76hi567m07e7q3y",
+    "destination_fx_quote": "fx_d4a2b705ha8onnfg24s2",
+    "available_balance": 125000000,
     "is_balance_sufficient": true
   }
 }

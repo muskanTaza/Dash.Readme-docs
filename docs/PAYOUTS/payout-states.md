@@ -25,3 +25,4 @@ next:
 | succeeded          | The payout has succeeded.                                                                                                                      |
 | requires\_action   | An action is required by the account to continue with the payout (e.g., Document Upload, Incorrect bank details, etc).                         |
 | failed             | The payout has failed.                                                                                                                         |
+| reversed           | The payout has been reversed. Funds have been returned to the original account.                                                                |
