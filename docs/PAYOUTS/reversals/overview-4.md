@@ -16,4 +16,6 @@ In certain scenarios, a payout may be reversed by downstream banking or payment 
 
 <Image border={false} src="https://files.readme.io/292cf268a58e59d863be1123a4d7011d0b83fc1e2e26b3eb0fea1ffe38563094-image.png" />
 
+<Image border={false} src="https://files.readme.io/467487163b04792dcdcfd6a3c559401c393a3a9a1cbf2cd37509f65a272c7fb8-image.png" />
+
 <br />
