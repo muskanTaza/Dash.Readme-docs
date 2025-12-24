@@ -55,7 +55,3 @@ Important points to note:
   * FX rate differences between payout time and reversal time
   * Intermediary charges applied by downstream institutions
 * All such differences are transparently itemized in the reversal balance transaction
-
-Merchants should not assume full payout recovery and should reconcile using the amounts reflected in balance transactions.
-
-<br />
