@@ -16,7 +16,7 @@ next:
 
 | State             | Description                                                                                                                                    |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| requires_approval | Payout requires approval from an authorized user.                                                                                              |
+| requires_approval | Payout requires approval from an authorized user. This is applicable to payouts initiated using the Tazapay dashboard                          |
 | approval_hold     | This is only applicable for payouts created on behalf of an entity. The payout will be processed after the entity has been approved by Tazapay |
 | requires_funding  | The payout needs to be funded to be processed                                                                                                  |
 | screening         | The payout is being screened for compliance                                                                                                    |
