@@ -6933,7 +6933,14 @@
                             "calling_code": "1"
                           },
                           "tax_id": "",
-                          "type": "business"
+                          "type": "business",
+                          "status": "active",
+                          "verification_status": "succeeded",
+                          "is_doc_verification_required": true,
+                          "name_local": "",
+                          "national_identification_number": "",
+                          "party_classification": "",
+                          "registration_number": ""
                         },
                         "charge_type": "shared",
                         "created_at": "2024-12-17T07:15:14.691660Z",
