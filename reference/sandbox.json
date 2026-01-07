@@ -6944,6 +6944,7 @@
                         },
                         "charge_type": "shared",
                         "created_at": "2024-12-17T07:15:14.691660Z",
+                        "confirmation_documents": [],
                         "currency": "USD",
                         "documents": [
                           {
