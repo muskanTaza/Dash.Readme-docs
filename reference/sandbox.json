@@ -17507,6 +17507,55 @@
                         "network": "mainnet"
                       }
                     }
+                  },
+                  "Swift Payout": {
+                    "summary": "Swift Payout",
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "created_at": "2025-11-24T03:18:54.132949264Z",
+                        "destination_info": {
+                          "amount": 56589,
+                          "country": "PH",
+                          "currency": "PHP"
+                        },
+                        "exchange_rates": {
+                          "holding_to_payout": 84314.93778955308,
+                          "payout_to_destination": 56.58907276420345
+                        },
+                        "fee_info": {
+                          "fixed": {
+                            "in_holding_currency": 41511,
+                            "in_payout_currency": 3500
+                          },
+                          "variable": {
+                            "in_holding_currency": 0,
+                            "in_payout_currency": 0
+                          }
+                        },
+                        "holding_info": {
+                          "amount": 53371,
+                          "currency": "BTC"
+                        },
+                        "id": "poq_d4hst78hp4hhl31bio0g",
+                        "local": null,
+                        "local_payment_network": null,
+                        "object": "payout_quote",
+                        "payout_info": {
+                          "amount": 1000,
+                          "currency": "USD"
+                        },
+                        "payout_type": "swift",
+                        "status": "active",
+                        "swift": {
+                          "charge_type": "ours"
+                        },
+                        "updated_at": "2025-11-24T03:18:54.132949807Z",
+                        "valid_until": "2025-11-24T03:21:53.981519581Z",
+                        "wallet": null
+                      }
+                    }
                   }
                 },
                 "schema": {
