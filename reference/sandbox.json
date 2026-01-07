@@ -53,7 +53,11 @@
                   "customer_details": {
                     "type": "object",
                     "description": "Details about the customer",
-                    "required": ["name", "email", "country"],
+                    "required": [
+                      "name",
+                      "email",
+                      "country"
+                    ],
                     "properties": {
                       "name": {
                         "type": "string",
@@ -301,7 +305,10 @@
                     "success_url": "https://mystore.com/success_page",
                     "cancel_url": "https://mystore.com/try_again",
                     "webhook_url": "https://mystore.com/internal/webhook",
-                    "payment_methods": ["paynow_sgd", "card"],
+                    "payment_methods": [
+                      "paynow_sgd",
+                      "card"
+                    ],
                     "transaction_description": "test",
                     "metadata": {
                       "key1": "value1",
@@ -767,7 +774,9 @@
         },
         "deprecated": false,
         "x-readme": {
-          "samples-languages": ["shell"]
+          "samples-languages": [
+            "shell"
+          ]
         }
       }
     },
@@ -803,7 +812,11 @@
                   "customer_details": {
                     "type": "object",
                     "description": "Details about the customer",
-                    "required": ["name", "email", "country"],
+                    "required": [
+                      "name",
+                      "email",
+                      "country"
+                    ],
                     "properties": {
                       "name": {
                         "type": "string",
@@ -1293,7 +1306,10 @@
                           }
                         },
                         "metadata": {
-                          "type": ["object", "null"],
+                          "type": [
+                            "object",
+                            "null"
+                          ],
                           "description": "Custom metadata key-value pairs attached to this payin for reference.",
                           "example": null
                         },
@@ -1456,7 +1472,9 @@
         },
         "deprecated": false,
         "x-readme": {
-          "samples-languages": ["shell"]
+          "samples-languages": [
+            "shell"
+          ]
         }
       }
     },
@@ -1485,7 +1503,11 @@
                   "customer_details": {
                     "type": "object",
                     "description": "Details about the customer",
-                    "required": ["name", "email", "country"],
+                    "required": [
+                      "name",
+                      "email",
+                      "country"
+                    ],
                     "properties": {
                       "name": {
                         "type": "string",
@@ -2119,7 +2141,9 @@
         },
         "deprecated": false,
         "x-readme": {
-          "samples-languages": ["shell"]
+          "samples-languages": [
+            "shell"
+          ]
         }
       },
       "get": {
@@ -2908,7 +2932,11 @@
                   "customer_details": {
                     "type": "object",
                     "description": "Details about the customer",
-                    "required": ["name", "email", "country"],
+                    "required": [
+                      "name",
+                      "email",
+                      "country"
+                    ],
                     "properties": {
                       "name": {
                         "type": "string",
@@ -3131,7 +3159,11 @@
                           "description": "Description of the product"
                         }
                       },
-                      "required": ["name", "quantity", "amount"],
+                      "required": [
+                        "name",
+                        "quantity",
+                        "amount"
+                      ],
                       "type": "object"
                     }
                   },
@@ -3190,7 +3222,10 @@
                     "success_url": "https://mystore.com/success_page",
                     "cancel_url": "https://mystore.com/try_again",
                     "webhook_url": "https://mystore.com/internal/webhook",
-                    "payment_methods": ["paynow_sgd", "card"],
+                    "payment_methods": [
+                      "paynow_sgd",
+                      "card"
+                    ],
                     "transaction_description": "1 x T-shirt",
                     "expires_at": "2024-07-21T14:01:04.576356Z",
                     "reference_id": "mystore_order_00001"
@@ -4700,7 +4735,10 @@
                   "beneficiary_details": {
                     "type": "object",
                     "description": "Beneficiary Details",
-                    "required": ["name", "type"],
+                    "required": [
+                      "name",
+                      "type"
+                    ],
                     "properties": {
                       "name": {
                         "type": "string",
@@ -4761,7 +4799,9 @@
                       "destination_details": {
                         "type": "object",
                         "description": "Beneficiary destination details",
-                        "required": ["type"],
+                        "required": [
+                          "type"
+                        ],
                         "properties": {
                           "type": {
                             "type": "string",
@@ -4776,7 +4816,11 @@
                           "bank": {
                             "type": "object",
                             "description": "Bank details if the destination_details.type is a bank account",
-                            "required": ["bank_name", "country", "currency"],
+                            "required": [
+                              "bank_name",
+                              "country",
+                              "currency"
+                            ],
                             "properties": {
                               "account_number": {
                                 "type": "string",
@@ -4855,14 +4899,22 @@
                               "account_type": {
                                 "type": "string",
                                 "description": "Type of bank account",
-                                "enum": ["savings", "checking", "payment"]
+                                "enum": [
+                                  "savings",
+                                  "checking",
+                                  "payment"
+                                ]
                               }
                             }
                           },
                           "wallet": {
                             "type": "object",
                             "description": "Wallet details if the destination_details.type is a wallet",
-                            "required": ["deposit_address", "type", "currency"],
+                            "required": [
+                              "deposit_address",
+                              "type",
+                              "currency"
+                            ],
                             "properties": {
                               "deposit_address": {
                                 "type": "string",
@@ -4893,7 +4945,10 @@
                           "local_payment_network": {
                             "type": "object",
                             "description": "Destination details if the destination_details.type is local_payment_network",
-                            "required": ["type", "deposit_key"],
+                            "required": [
+                              "type",
+                              "deposit_key"
+                            ],
                             "properties": {
                               "type": {
                                 "type": "string",
@@ -4912,7 +4967,9 @@
                           "tazapay_account": {
                             "type": "object",
                             "description": "Destination details if the destination.type is tazapay_account",
-                            "required": ["deposit_adress"],
+                            "required": [
+                              "deposit_adress"
+                            ],
                             "properties": {
                               "deposit_address": {
                                 "type": "string",
@@ -4979,7 +5036,10 @@
                   "charge_type": {
                     "type": "string",
                     "description": "For wire transfers only",
-                    "enum": ["shared", "ours"]
+                    "enum": [
+                      "shared",
+                      "ours"
+                    ]
                   },
                   "purpose": {
                     "type": "string",
@@ -5041,14 +5101,21 @@
                         "type": {
                           "type": "string",
                           "description": "A string mentioning the type of document. Possible values - invoice, other",
-                          "enum": ["invoice", "contract", "other"]
+                          "enum": [
+                            "invoice",
+                            "contract",
+                            "other"
+                          ]
                         },
                         "url": {
                           "type": "string",
                           "description": "Dynamically downloadable URL"
                         }
                       },
-                      "required": ["type", "url"],
+                      "required": [
+                        "type",
+                        "url"
+                      ],
                       "type": "object"
                     }
                   },
@@ -5631,7 +5698,9 @@
         },
         "deprecated": false,
         "x-readme": {
-          "samples-languages": ["shell"]
+          "samples-languages": [
+            "shell"
+          ]
         }
       }
     },
@@ -5752,7 +5821,7 @@
                     }
                   },
                   "Swift Bank Payout": {
-                    "value": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"amount\": 100000,\n        \"balance_transaction\": \"btr_d35pv4qcl8imrv60\",\n        \"beneficiary\": \"bnf_d3inm6ami8u10oqfg\",\n        \"beneficiary_details\": {\n            \"address\": {\n                \"country\": \"CN\"\n                \"line1\": \"Zhen Rui Yun Lu 66\",\n                \"postal_code\": \"311011\"\n            },\n            \"date_of_birth\": \"\",\n            \"destination\": \"\",\n            \"destination_details\": {\n                \"bank\": {\n                    \"account_number\": \"33050167624000001030\",\n                    \"account_type\": \"\",\n                    \"bank_codes\": {\n                        \"swift_code\": \"PCBCCNBJZJX\"\n                    },\n                    \"bank_name\": \"CHINA CONSTRUCTION BANK, ZHEJIANG BRANCH\",\n                    \"branch_name\": \"\",\n                    \"country\": \"CN\",\n                    \"currency\": \"USD\",\n                    \"firc_required\": false,\n                    \"purpose_code\": \"\",\n                    \"transfer_type\": \"swift\"\n                },\n                \"type\": \"bank\"\n            },\n            \"documents\": [],\n            \"email\": \"\",\n            \"name\": \"IMPORT AND EXPORT CO., LTD\",\n            \"name_local\": \"\",\n            \"national_identification_number\": \"\",\n            \"party_classification\": \"\",\n            \"phone\": {\n                \"calling_code\": \"86\"\n            },\n            \"registration_number\": \"\",\n            \"tax_id\": \"\",\n            \"type\": \"business\"\n        },\n        \"charge_type\": \"ours\",\n        \"confirmation_documents\": [],\n        \"created_at\": \"2025-09-18T10:07:35.101708Z\",\n        \"currency\": \"USD\",\n        \"destination_fx_quote\": \"fx_d35tjpnfi4p2dt2hh0\",\n        \"documents\": [],\n        \"holding_currency\": \"USD\",\n        \"holding_fx_quote\": \"fx_d35tjpnfigp2dt2hgg\",\n        \"holding_fx_transaction\": {\n            \"exchange_rate\": 1,\n            \"final\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"id\": \"fx_d35tjpnfigp2dt2hgg\",\n            \"initial\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"object\": \"fx_transaction\"\n        },\n        \"id\": \"pot_d35tjpn4qcl8iv30\",\n        \"logistics_tracking_details\": [],\n        \"metadata\": null,\n        \"mt103\": \"\",\n        \"object\": \"payout\",\n        \"on_behalf_of\": \"\",\n        \"payout_fx_transaction\": {\n            \"exchange_rate\": 1,\n            \"final\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"id\": \"fx_d35tfigo4p2dt2hh0\",\n            \"initial\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"object\": \"fx_transaction\"\n        },\n        \"payout_quote\": \"\",\n        \"purpose\": \"PYR003\",\n        \"reference_id\": \"\",\n        \"statement_descriptor\": \"\",\n        \"status\": \"succeeded\",\n        \"status_description\": \"\",\n        \"tracking_details\": {\n            \"tracking_number\": \"7833d-34b4-478-aac8-1184beae\",\n            \"tracking_type\": \"uetr\"\n        },\n        \"transaction_description\": \"Payment for goods acc 125\",\n        \"type\": \"swift\",\n        \"available_balance\": 120000000,\n        \"is_balance_sufficient\": true\n    }\n}",
+                    "value": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"amount\": 100000,\n        \"balance_transaction\": \"btr_d35pv4qcl8imrv60\",\n        \"beneficiary\": \"bnf_d3inm6ami8u10oqfg\",\n        \"beneficiary_details\": {\n            \"address\": {\n                \"country\": \"CN\"\n                \"line1\": \"Zhen Rui Yun Lu 66\",\n                \"postal_code\": \"311011\"\n            },\n            \"date_of_birth\": \"\",\n            \"destination\": \"\",\n            \"destination_details\": {\n                \"bank\": {\n                    \"account_number\": \"33050167624000001030\",\n                    \"account_type\": \"\",\n                    \"bank_codes\": {\n                        \"swift_code\": \"PCBCCNBJZJX\"\n                    },\n                    \"bank_name\": \"CHINA CONSTRUCTION BANK, ZHEJIANG BRANCH\",\n                    \"branch_name\": \"\",\n                    \"country\": \"CN\",\n                    \"currency\": \"USD\",\n                    \"firc_required\": false,\n                    \"purpose_code\": \"\",\n                    \"transfer_type\": \"swift\"\n                },\n                \"type\": \"bank\"\n            },\n            \"documents\": [],\n            \"email\": \"\",\n            \"name\": \"IMPORT AND EXPORT CO., LTD\",\n            \"name_local\": \"\",\n            \"national_identification_number\": \"\",\n            \"party_classification\": \"\",\n            \"phone\": {\n                \"calling_code\": \"86\"\n            },\n            \"registration_number\": \"\",\n            \"tax_id\": \"\",\n            \"type\": \"business\"\n        },\n        \"charge_type\": \"ours\",\n        \"confirmation_documents\": [],\n        \"created_at\": \"2025-09-18T10:07:35.101708Z\",\n        \"currency\": \"USD\",\n        \"destination_fx_quote\": \"fx_d35tjpnfi4p2dt2hh0\",\n        \"documents\": [],\n        \"holding_currency\": \"USD\",\n        \"holding_fx_quote\": \"fx_d35tjpnfigp2dt2hgg\",\n        \"holding_fx_transaction\": {\n            \"exchange_rate\": 1,\n            \"final\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"id\": \"fx_d35tjpnfigp2dt2hgg\",\n            \"initial\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"object\": \"fx_transaction\"\n        },\n        \"id\": \"pot_d35tjpn4qcl8iv30\",\n        \"logistics_tracking_details\": [],\n        \"metadata\": null,\n        \"mt103\": \"\",\n        \"object\": \"payout\",\n        \"on_behalf_of\": \"\",\n        \"payout_fx_transaction\": {\n            \"exchange_rate\": 1,\n            \"final\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"id\": \"fx_d35tfigo4p2dt2hh0\",\n            \"initial\": {\n                \"amount\": 10000000,\n                \"currency\": \"USD\"\n            },\n            \"object\": \"fx_transaction\"\n        },\n        \"quote\": \"\",\n        \"purpose\": \"PYR003\",\n        \"reference_id\": \"\",\n        \"statement_descriptor\": \"\",\n        \"status\": \"succeeded\",\n        \"status_description\": \"\",\n        \"tracking_details\": {\n            \"tracking_number\": \"7833d-34b4-478-aac8-1184beae\",\n            \"tracking_type\": \"uetr\"\n        },\n        \"transaction_description\": \"Payment for goods acc 125\",\n        \"type\": \"swift\",\n        \"available_balance\": 120000000,\n        \"is_balance_sufficient\": true\n    }\n}",
                     "summary": "Swift Bank Payout"
                   },
                   "Local Bank Payout": {
@@ -5841,7 +5910,7 @@
                           },
                           "object": "fx_transaction"
                         },
-                        "payout_quote": "",
+                        "quote": "",
                         "purpose": "PYR001",
                         "reference_id": "DE-LOG-2024-0909",
                         "statement_descriptor": "Logistics Payment",
@@ -5933,7 +6002,7 @@
                           },
                           "object": "fx_transaction"
                         },
-                        "payout_quote": "",
+                        "quote": "",
                         "purpose": "PYR001",
                         "reference_id": "BR-PIX-2024-3879",
                         "statement_descriptor": "Freelancer Payment",
@@ -6031,7 +6100,7 @@
                           },
                           "object": "fx_transaction"
                         },
-                        "payout_quote": "",
+                        "quote": "",
                         "purpose": "PYR030",
                         "reference_id": "",
                         "statement_descriptor": "",
@@ -6230,7 +6299,9 @@
                                     "type": {
                                       "type": "string",
                                       "description": "Local payment network type",
-                                      "enum": ["pix_brl"]
+                                      "enum": [
+                                        "pix_brl"
+                                      ]
                                     }
                                   }
                                 },
@@ -6260,7 +6331,9 @@
                                     "type": {
                                       "type": "string",
                                       "description": "Blockchain type",
-                                      "enum": ["ethereum"]
+                                      "enum": [
+                                        "ethereum"
+                                      ]
                                     }
                                   }
                                 }
@@ -6320,7 +6393,10 @@
                             "type": {
                               "type": "string",
                               "description": "Beneficiary type",
-                              "enum": ["business", "individual"],
+                              "enum": [
+                                "business",
+                                "individual"
+                              ],
                               "example": "business"
                             },
                             "status": {
@@ -6340,7 +6416,10 @@
                         "charge_type": {
                           "type": "string",
                           "description": "Charge type of payout",
-                          "enum": ["ours", "shared"],
+                          "enum": [
+                            "ours",
+                            "shared"
+                          ],
                           "example": "ours"
                         },
                         "confirmation_documents": {
@@ -6562,7 +6641,11 @@
                             "tracking_type": {
                               "type": "string",
                               "description": "Tracking type used for payout",
-                              "enum": ["uetr", "utr", "transaction_hash"],
+                              "enum": [
+                                "uetr",
+                                "utr",
+                                "transaction_hash"
+                              ],
                               "example": "uetr"
                             }
                           }
@@ -7392,7 +7475,11 @@
                   "customer_details": {
                     "type": "object",
                     "description": "Details about the customer",
-                    "required": ["name", "email", "country"],
+                    "required": [
+                      "name",
+                      "email",
+                      "country"
+                    ],
                     "properties": {
                       "name": {
                         "type": "string",
@@ -7654,7 +7741,10 @@
                     "success_url": "https://mystore.com/success_page",
                     "cancel_url": "https://mystore.com/try_again",
                     "webhook_url": "https://mystore.com/internal/webhook",
-                    "payment_methods": ["paynow_sgd", "card"],
+                    "payment_methods": [
+                      "paynow_sgd",
+                      "card"
+                    ],
                     "transaction_description": "1 x T-shirt",
                     "expires_at": "2029-07-21T14:01:04.576356Z",
                     "reference_id": "mystore_order_00001"
@@ -8975,7 +9065,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["name", "email", "country"],
+                "required": [
+                  "name",
+                  "email",
+                  "country"
+                ],
                 "properties": {
                   "name": {
                     "type": "string",
@@ -9751,7 +9845,9 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["payin"],
+                "required": [
+                  "payin"
+                ],
                 "properties": {
                   "payin": {
                     "type": "string",
@@ -9782,7 +9878,9 @@
                   "customer_details": {
                     "type": "object",
                     "description": "Customer Details for the refund",
-                    "required": ["email"],
+                    "required": [
+                      "email"
+                    ],
                     "properties": {
                       "email": {
                         "type": "string",
@@ -10760,12 +10858,17 @@
                       "data": {
                         "payout_methods": [
                           {
-                            "beneficiary_type": ["individual", "business"],
+                            "beneficiary_type": [
+                              "individual",
+                              "business"
+                            ],
                             "country": "HK",
                             "currency": "HKD",
                             "custom_remitter_support": true,
                             "payout_type": "swift",
-                            "required_bank_codes": ["swift_code"],
+                            "required_bank_codes": [
+                              "swift_code"
+                            ],
                             "required_bank_fields": [
                               "account_holder_name",
                               "bank_name",
@@ -10786,18 +10889,26 @@
                             }
                           },
                           {
-                            "beneficiary_type": ["individual", "business"],
+                            "beneficiary_type": [
+                              "individual",
+                              "business"
+                            ],
                             "country": "HK",
                             "currency": "HKD",
                             "custom_remitter_support": false,
                             "payout_type": "local",
-                            "required_bank_codes": ["swift_code"],
+                            "required_bank_codes": [
+                              "swift_code"
+                            ],
                             "required_bank_fields": [
                               "account_holder_name",
                               "bank_name",
                               "account_number"
                             ],
-                            "fund_transfer_networks": ["chats", "fps"],
+                            "fund_transfer_networks": [
+                              "chats",
+                              "fps"
+                            ],
                             "recommended_fields": {
                               "bank_branch": "optional",
                               "account_type": "recommended"
@@ -10848,7 +10959,10 @@
                                   "type": "string",
                                   "example": "individual"
                                 },
-                                "example": ["individual", "business"]
+                                "example": [
+                                  "individual",
+                                  "business"
+                                ]
                               },
                               "country": {
                                 "type": "string",
@@ -10877,7 +10991,9 @@
                                   "type": "string",
                                   "example": "swift_code"
                                 },
-                                "example": ["swift_code"]
+                                "example": [
+                                  "swift_code"
+                                ]
                               },
                               "required_bank_fields": {
                                 "type": "array",
@@ -10913,7 +11029,10 @@
                                   "type": "string",
                                   "example": "chats"
                                 },
-                                "example": ["chats", "fps"]
+                                "example": [
+                                  "chats",
+                                  "fps"
+                                ]
                               },
                               "recommended_fields": {
                                 "type": "object",
@@ -11012,7 +11131,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["url", "type", "reference"],
+                "required": [
+                  "url",
+                  "type",
+                  "reference"
+                ],
                 "properties": {
                   "url": {
                     "type": "string",
@@ -11659,7 +11782,10 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["name", "type"],
+                "required": [
+                  "name",
+                  "type"
+                ],
                 "properties": {
                   "name": {
                     "type": "string",
@@ -11672,7 +11798,10 @@
                   "type": {
                     "type": "string",
                     "description": "business or individual",
-                    "enum": ["business", "individual"]
+                    "enum": [
+                      "business",
+                      "individual"
+                    ]
                   },
                   "address": {
                     "type": "object",
@@ -11721,7 +11850,9 @@
                   "destination_details": {
                     "type": "object",
                     "description": "Destination Details",
-                    "required": ["type"],
+                    "required": [
+                      "type"
+                    ],
                     "properties": {
                       "type": {
                         "type": "string",
@@ -11736,7 +11867,11 @@
                       "bank": {
                         "type": "object",
                         "description": "Bank details if the destination_details.type is a bank account",
-                        "required": ["bank_name", "country", "currency"],
+                        "required": [
+                          "bank_name",
+                          "country",
+                          "currency"
+                        ],
                         "properties": {
                           "account_number": {
                             "type": "string",
@@ -11815,14 +11950,22 @@
                           "account_type": {
                             "type": "string",
                             "description": "Type of bank account",
-                            "enum": ["savings", "checking", "payment"]
+                            "enum": [
+                              "savings",
+                              "checking",
+                              "payment"
+                            ]
                           }
                         }
                       },
                       "wallet": {
                         "type": "object",
                         "description": "Wallet details if the destination_details.type is a wallet",
-                        "required": ["deposit_address", "type", "currency"],
+                        "required": [
+                          "deposit_address",
+                          "type",
+                          "currency"
+                        ],
                         "properties": {
                           "deposit_address": {
                             "type": "string",
@@ -11839,7 +11982,10 @@
                           "hosted": {
                             "type": "string",
                             "description": "Indicates whether the wallet is custodial (hosted) or non-custodial (unhosted). Possible values: yes – The wallet is hosted by a Virtual Asset Service Provider (VASP) or exchange. no – The wallet is non-custodial and controlled directly by the user (e.g., MetaMask, Ledger)  Mandatory if party_classification is 'self' and destination_details.type is 'wallet'.",
-                            "enum": ["yes", "no"]
+                            "enum": [
+                              "yes",
+                              "no"
+                            ]
                           },
                           "vasp_name": {
                             "type": "string",
@@ -11854,7 +12000,10 @@
                       "local_payment_network": {
                         "type": "object",
                         "description": "Destination details if the destination_details.type is local_payment_network",
-                        "required": ["type", "deposit_key"],
+                        "required": [
+                          "type",
+                          "deposit_key"
+                        ],
                         "properties": {
                           "type": {
                             "type": "string",
@@ -11879,7 +12028,9 @@
                           }
                         },
                         "description": "Destination details if the destination_details.type is tazapay_account",
-                        "required": ["deposit_address"]
+                        "required": [
+                          "deposit_address"
+                        ]
                       }
                     }
                   },
@@ -11930,7 +12081,10 @@
                     "type": "string",
                     "description": "Type of relationship between beneficiary and creator of beneficiary Possible values - self, third_party (Mandatory if destination_details.type is a wallet)",
                     "default": "",
-                    "enum": ["self", "third_party"]
+                    "enum": [
+                      "self",
+                      "third_party"
+                    ]
                   },
                   "name_local": {
                     "type": "string",
@@ -12477,17 +12631,27 @@
                   "destination_details": {
                     "type": "object",
                     "description": "Destination Details",
-                    "required": ["type"],
+                    "required": [
+                      "type"
+                    ],
                     "properties": {
                       "type": {
                         "type": "string",
                         "description": "bank, wallet or local_payment_network",
-                        "enum": ["bank", "wallet", "local_payment_network"]
+                        "enum": [
+                          "bank",
+                          "wallet",
+                          "local_payment_network"
+                        ]
                       },
                       "bank": {
                         "type": "object",
                         "description": "Bank details if the destination_details.type is a bank account",
-                        "required": ["bank_name", "country", "currency"],
+                        "required": [
+                          "bank_name",
+                          "country",
+                          "currency"
+                        ],
                         "properties": {
                           "account_number": {
                             "type": "string",
@@ -12566,14 +12730,22 @@
                           "account_type": {
                             "type": "string",
                             "description": "Type of bank account",
-                            "enum": ["savings", "checking", "payment"]
+                            "enum": [
+                              "savings",
+                              "checking",
+                              "payment"
+                            ]
                           }
                         }
                       },
                       "wallet": {
                         "type": "object",
                         "description": "Wallet details if the destination_details.type is a wallet",
-                        "required": ["deposit_address", "type", "currency"],
+                        "required": [
+                          "deposit_address",
+                          "type",
+                          "currency"
+                        ],
                         "properties": {
                           "deposit_address": {
                             "type": "string",
@@ -12592,7 +12764,10 @@
                       "local_payment_network": {
                         "type": "object",
                         "description": "Destination details if the destination_details.type is local_payment_network",
-                        "required": ["type", "deposit_key"],
+                        "required": [
+                          "type",
+                          "deposit_key"
+                        ],
                         "properties": {
                           "type": {
                             "type": "string",
@@ -13237,40 +13412,40 @@
                         "description": "pot_d52grubk90bi91v246s0",
                         "fee_details": [
                           {
-                              "amount": 1000000,
-                              "currency": "INR",
-                              "type": "fixed_fee"
+                            "amount": 1000000,
+                            "currency": "INR",
+                            "type": "fixed_fee"
                           }
                         ],
                         "fx_conversions": [
                           {
                             "exchange_rate": 8.4682,
                             "final": {
-                                "amount": 140847,
-                                "currency": "HKD"
+                              "amount": 140847,
+                              "currency": "HKD"
                             },
                             "initial": {
-                                "amount": 16632,
-                                "currency": "USD"
+                              "amount": 16632,
+                              "currency": "USD"
                             }
                           },
                           {
                             "exchange_rate": 0.012007,
                             "final": {
-                                "amount": 12007,
-                                "currency": "USD"
+                              "amount": 12007,
+                              "currency": "USD"
                             },
                             "initial": {
-                                "amount": 1000000,
-                                "currency": "INR"
+                              "amount": 1000000,
+                              "currency": "INR"
                             }
                           }
                         ],
                         "id": "btr_d52hd93k90bi91v2493g",
                         "metadata": {},
                         "net": {
-                            "amount": 4625,
-                            "currency": "USD"
+                          "amount": 4625,
+                          "currency": "USD"
                         },
                         "object": "balance_transaction",
                         "operation_type": "credit",
@@ -13496,7 +13671,10 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["name", "type"],
+                "required": [
+                  "name",
+                  "type"
+                ],
                 "properties": {
                   "name": {
                     "type": "string",
@@ -13709,7 +13887,11 @@
                               "type": {
                                 "type": "string",
                                 "description": "Type of document",
-                                "enum": ["identity", "address", "other"]
+                                "enum": [
+                                  "identity",
+                                  "address",
+                                  "other"
+                                ]
                               },
                               "sub_type": {
                                 "type": "string",
@@ -13810,12 +13992,18 @@
                         "type": {
                           "type": "string",
                           "description": "Type of the document",
-                          "enum": ["business", "address", "other"]
+                          "enum": [
+                            "business",
+                            "address",
+                            "other"
+                          ]
                         },
                         "sub_type": {
                           "type": "string",
                           "description": "Subtype of the document",
-                          "enum": ["other"]
+                          "enum": [
+                            "other"
+                          ]
                         },
                         "tag": {
                           "type": "string",
@@ -13866,7 +14054,12 @@
                   "relationship": {
                     "type": "string",
                     "description": "The entity's relationship with you",
-                    "enum": ["customer", "vendor", "fourth_party", "other"]
+                    "enum": [
+                      "customer",
+                      "vendor",
+                      "fourth_party",
+                      "other"
+                    ]
                   },
                   "purpose_of_use": {
                     "type": "array",
@@ -14048,7 +14241,9 @@
                           "items": {
                             "type": "string"
                           },
-                          "example": ["payout"]
+                          "example": [
+                            "payout"
+                          ]
                         },
                         "reference_id": {
                           "type": "string",
@@ -14186,7 +14381,9 @@
                                 "items": {
                                   "type": "string"
                                 },
-                                "example": ["beneficial_owner"]
+                                "example": [
+                                  "beneficial_owner"
+                                ]
                               },
                               "documents": {
                                 "type": "array",
@@ -14556,7 +14753,11 @@
                               "type": {
                                 "type": "string",
                                 "description": "Type of document",
-                                "enum": ["identity", "address", "other"]
+                                "enum": [
+                                  "identity",
+                                  "address",
+                                  "other"
+                                ]
                               },
                               "sub_type": {
                                 "type": "string",
@@ -14657,12 +14858,18 @@
                         "type": {
                           "type": "string",
                           "description": "Type of the document",
-                          "enum": ["business", "address", "other"]
+                          "enum": [
+                            "business",
+                            "address",
+                            "other"
+                          ]
                         },
                         "sub_type": {
                           "type": "string",
                           "description": "Subtype of the document",
-                          "enum": ["other"]
+                          "enum": [
+                            "other"
+                          ]
                         },
                         "tag": {
                           "type": "string",
@@ -14713,7 +14920,12 @@
                   "relationship": {
                     "type": "string",
                     "description": "The entity's relationship with you",
-                    "enum": ["customer", "vendor", "fourth_party", "other"]
+                    "enum": [
+                      "customer",
+                      "vendor",
+                      "fourth_party",
+                      "other"
+                    ]
                   },
                   "purpose_of_use": {
                     "type": "array",
@@ -14895,7 +15107,9 @@
                           "items": {
                             "type": "string"
                           },
-                          "example": ["payout"]
+                          "example": [
+                            "payout"
+                          ]
                         },
                         "reference_id": {
                           "type": "string",
@@ -15033,7 +15247,9 @@
                                 "items": {
                                   "type": "string"
                                 },
-                                "example": ["beneficial_owner"]
+                                "example": [
+                                  "beneficial_owner"
+                                ]
                               },
                               "documents": {
                                 "type": "array",
@@ -15322,7 +15538,9 @@
                           "items": {
                             "type": "string"
                           },
-                          "example": ["payout"]
+                          "example": [
+                            "payout"
+                          ]
                         },
                         "reference_id": {
                           "type": "string",
@@ -15460,7 +15678,9 @@
                                 "items": {
                                   "type": "string"
                                 },
-                                "example": ["beneficial_owner"]
+                                "example": [
+                                  "beneficial_owner"
+                                ]
                               },
                               "documents": {
                                 "type": "array",
@@ -15785,7 +16005,9 @@
                           "items": {
                             "type": "string"
                           },
-                          "example": ["payout"]
+                          "example": [
+                            "payout"
+                          ]
                         },
                         "reference_id": {
                           "type": "string",
@@ -15923,7 +16145,9 @@
                                 "items": {
                                   "type": "string"
                                 },
-                                "example": ["beneficial_owner"]
+                                "example": [
+                                  "beneficial_owner"
+                                ]
                               },
                               "documents": {
                                 "type": "array",
@@ -16567,7 +16791,10 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["initial_currency", "final_currency"],
+                "required": [
+                  "initial_currency",
+                  "final_currency"
+                ],
                 "properties": {
                   "initial_currency": {
                     "type": "string",
@@ -16790,7 +17017,11 @@
                   }
                 },
                 "type": "object",
-                "required": ["type", "currencies", "payment_method_type"]
+                "required": [
+                  "type",
+                  "currencies",
+                  "payment_method_type"
+                ]
               }
             }
           }
@@ -16813,7 +17044,10 @@
                       "data": {
                         "account_id": "cva_1234567890abcdef",
                         "account_name": "Acme Corp Collection Account",
-                        "currencies": ["USD", "EUR"],
+                        "currencies": [
+                          "USD",
+                          "EUR"
+                        ],
                         "created_at": "2025-06-16T12:45:30Z",
                         "status": "requested",
                         "status_description": "",
@@ -16842,7 +17076,9 @@
               "name": ""
             }
           ],
-          "samples-languages": ["shell"]
+          "samples-languages": [
+            "shell"
+          ]
         }
       }
     },
@@ -16864,7 +17100,10 @@
                       "data": {
                         "account_id": "cva_1234567890abcdef",
                         "account_name": "Acme Corp Collection Account",
-                        "currencies": ["USD", "EUR"],
+                        "currencies": [
+                          "USD",
+                          "EUR"
+                        ],
                         "created_at": "2025-06-16T12:45:30Z",
                         "status": "requested",
                         "status_description": "",
@@ -16887,7 +17126,10 @@
                       "data": {
                         "account_id": "cva_1234567890abcdef",
                         "account_name": "Acme Corp Collection Account",
-                        "currencies": ["USD", "EUR"],
+                        "currencies": [
+                          "USD",
+                          "EUR"
+                        ],
                         "created_at": "2025-06-16T12:45:30Z",
                         "status": "requested",
                         "status_description": "",
@@ -16935,7 +17177,10 @@
                         "description": "Virtual Account Location - The country in which you are requesting VA. Format - ISO 3166 standard alpha-2 code. eg: SG, IN, US, etc. "
                       }
                     },
-                    "required": ["currencies", "country"]
+                    "required": [
+                      "currencies",
+                      "country"
+                    ]
                   },
                   "wallet": {
                     "type": "object",
@@ -16945,7 +17190,9 @@
                         "description": "Type of Blockchain"
                       }
                     },
-                    "required": ["type"]
+                    "required": [
+                      "type"
+                    ]
                   },
                   "payment_method_type": {
                     "type": "string",
@@ -16953,7 +17200,11 @@
                   }
                 },
                 "type": "object",
-                "required": ["type", "Description", "payment_method_type"]
+                "required": [
+                  "type",
+                  "Description",
+                  "payment_method_type"
+                ]
               }
             }
           }
@@ -16971,7 +17222,9 @@
               "name": "Wallet Request"
             }
           ],
-          "samples-languages": ["shell"]
+          "samples-languages": [
+            "shell"
+          ]
         }
       },
       "get": {
@@ -17051,7 +17304,9 @@
                       "object": "collection_account",
                       "payment_method_type": "local_bank_transfer_cad",
                       "status": "disabled",
-                      "currencies": ["CAD"],
+                      "currencies": [
+                        "CAD"
+                      ],
                       "metadata": {
                         "usecase": "This account is used for USD payouts"
                       }
@@ -17071,7 +17326,9 @@
               "name": ""
             }
           ],
-          "samples-languages": ["shell"]
+          "samples-languages": [
+            "shell"
+          ]
         },
         "requestBody": {
           "content": {
@@ -17416,7 +17673,9 @@
                       }
                     },
                     "description": "Amount in balance (holding) currency",
-                    "required": ["currency"]
+                    "required": [
+                      "currency"
+                    ]
                   },
                   "payout_info": {
                     "type": "object",
@@ -17431,7 +17690,10 @@
                       }
                     },
                     "description": "Amount in payout currency",
-                    "required": ["currency", "amount"]
+                    "required": [
+                      "currency",
+                      "amount"
+                    ]
                   },
                   "destination_info": {
                     "type": "object",
@@ -17450,7 +17712,10 @@
                       }
                     },
                     "description": "Amount in destination currency (currency in which beneficiary receives the funds)",
-                    "required": ["currency", "country"]
+                    "required": [
+                      "currency",
+                      "country"
+                    ]
                   },
                   "local_payment_network": {
                     "type": "object",
@@ -17484,7 +17749,10 @@
                   }
                 },
                 "type": "object",
-                "required": ["payout_type", "payout_info"]
+                "required": [
+                  "payout_type",
+                  "payout_info"
+                ]
               }
             }
           }
@@ -17941,7 +18209,9 @@
                   }
                 },
                 "type": "object",
-                "required": ["source"]
+                "required": [
+                  "source"
+                ]
               }
             }
           }
@@ -18006,7 +18276,9 @@
               "name": "curl"
             }
           ],
-          "samples-languages": ["shell"]
+          "samples-languages": [
+            "shell"
+          ]
         }
       },
       "post": {
@@ -18229,7 +18501,10 @@
                                   "type": "string",
                                   "example": "Bank1"
                                 },
-                                "example": ["Bank1", "Bank2"]
+                                "example": [
+                                  "Bank1",
+                                  "Bank2"
+                                ]
                               },
                               "logo": {
                                 "type": "array",
@@ -18409,7 +18684,9 @@
                         "destination_details": {
                           "type": "wallet",
                           "wallet": {
-                            "currencies": ["USD"],
+                            "currencies": [
+                              "USD"
+                            ],
                             "deposit_address": "0x5gtj035ad25fnhioerfujhguri587y43894hfie2",
                             "id": "cwa_jhrv4sad4tf55jrvp0",
                             "object": "wallet",
@@ -18456,7 +18733,9 @@
           }
         ],
         "x-readme": {
-          "samples-languages": ["shell"]
+          "samples-languages": [
+            "shell"
+          ]
         }
       }
     },
@@ -18549,7 +18828,9 @@
                     "format": "json"
                   }
                 },
-                "required": ["amount"]
+                "required": [
+                  "amount"
+                ]
               }
             }
           }
@@ -18562,7 +18843,9 @@
               "name": ""
             }
           ],
-          "samples-languages": ["json"]
+          "samples-languages": [
+            "json"
+          ]
         }
       }
     },
@@ -18623,7 +18906,9 @@
               "name": ""
             }
           ],
-          "samples-languages": ["shell"]
+          "samples-languages": [
+            "shell"
+          ]
         }
       },
       "put": {
@@ -18711,7 +18996,10 @@
             "name": "type",
             "schema": {
               "type": "string",
-              "enum": ["billing", "shipping"]
+              "enum": [
+                "billing",
+                "shipping"
+              ]
             },
             "required": true,
             "description": "The type of address you want to add."
@@ -19122,7 +19410,9 @@
         },
         "deprecated": false,
         "x-readme": {
-          "samples-languages": ["shell"]
+          "samples-languages": [
+            "shell"
+          ]
         }
       }
     },
