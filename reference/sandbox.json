@@ -760,11 +760,11 @@
                           "type": "string",
                           "description": "Merchant webhook endpoint for asynchronous payin updates.",
                           "example": "https://mystore.com/internal/webhook"
+                        },
+                        "form": {
+                          "type": "string"
                         }
                       }
-                    },
-                    "form": {
-                      "type": "string"
                     }
                   }
                 }
