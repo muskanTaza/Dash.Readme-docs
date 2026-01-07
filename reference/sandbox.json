@@ -17423,9 +17423,7 @@
                     "summary": "PIX Payout Brazil",
                     "value": {
                       "id": "poq_d3inm6ami8u10oqfn",
-                      "local": {
-                        "fund_transfer_network": "pix"
-                      },
+                      "local": {},
                       "local_payment_network": {
                         "payment_network": "pix_brl"
                       },
@@ -17468,9 +17466,7 @@
                     "summary": "USDC on Ethereum",
                     "value": {
                       "id": "poq_d3inm6ami8u10oqfp",
-                      "local": {
-                        "fund_transfer_network": "ethereum"
-                      },
+                      "local": {},
                       "local_payment_network": {
                         "payment_network": ""
                       },
