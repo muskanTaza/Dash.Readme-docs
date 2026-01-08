@@ -16580,107 +16580,6 @@
         "deprecated": false
       }
     },
-    "/v3/settlement/{id}/adjustment": {
-      "get": {
-        "summary": "Fetch Adjustments",
-        "description": "",
-        "operationId": "fetch-adjustments",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "ID of the settlement you want to fetch the list of adjustments for",
-            "schema": {
-              "type": "string"
-            },
-            "required": true
-          },
-          {
-            "name": "ending_before",
-            "in": "query",
-            "description": "A cursor for use in pagination. Takes an adjustment ID as input",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "starting_after",
-            "in": "query",
-            "description": "A cursor for use in pagination. Takes an adjustment ID as input",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "The number of objects to be fetched. By default 10; can be from 1 to 100",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "200",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "Result": {
-                    "value": "{\n  \"status\": \"success\",\n  \"message\": \"\",\n  \"data\": {\n    \"has_more\": false,\n    \"object\": \"list\",\n    \"results\": [\n      {\n        \"balance_transaction_id\": \"btr_d013fgtin2debfvbjv1g\",\n        \"id\": \"adj_d013felin2debfvbjus0\"\n      },\n      {\n        \"balance_transaction_id\": \"btr_d013h95in2debfvbjvkg\",\n        \"id\": \"adj_d013h6lin2debfvbjvf0\"\n      }\n    ]\n  }\n}"
-                  }
-                },
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "status": {
-                      "type": "string",
-                      "example": "success"
-                    },
-                    "message": {
-                      "type": "string",
-                      "example": ""
-                    },
-                    "data": {
-                      "type": "object",
-                      "properties": {
-                        "has_more": {
-                          "type": "boolean",
-                          "example": false,
-                          "default": true
-                        },
-                        "object": {
-                          "type": "string",
-                          "example": "list"
-                        },
-                        "results": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "properties": {
-                              "balance_transaction_id": {
-                                "type": "string",
-                                "example": "btr_d013fgtin2debfvbjv1g"
-                              },
-                              "id": {
-                                "type": "string",
-                                "example": "adj_d013felin2debfvbjus0"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": false
-      }
-    },
     "/v3/settlement/{id}/transactions/payout": {
       "get": {
         "summary": "Fetch Payouts",
@@ -19716,6 +19615,107 @@
             "description": "Returns balance transactions created on or before this timestamp (less than or equal to)"
           }
         ]
+      }
+    },
+    "/v3/settlement/{id}/transactions/adjustment": {
+      "get": {
+        "summary": "Fetch Adjustments",
+        "description": "",
+        "operationId": "fetch-adjustments",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the settlement you want to fetch the list of adjustments for",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "ending_before",
+            "in": "query",
+            "description": "A cursor for use in pagination. Takes an adjustment ID as input",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "starting_after",
+            "in": "query",
+            "description": "A cursor for use in pagination. Takes an adjustment ID as input",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "The number of objects to be fetched. By default 10; can be from 1 to 100",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"status\": \"success\",\n  \"message\": \"\",\n  \"data\": {\n    \"has_more\": false,\n    \"object\": \"list\",\n    \"results\": [\n      {\n        \"balance_transaction_id\": \"btr_d013fgtin2debfvbjv1g\",\n        \"id\": \"adj_d013felin2debfvbjus0\"\n      },\n      {\n        \"balance_transaction_id\": \"btr_d013h95in2debfvbjvkg\",\n        \"id\": \"adj_d013h6lin2debfvbjvf0\"\n      }\n    ]\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "success"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": ""
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "has_more": {
+                          "type": "boolean",
+                          "example": false,
+                          "default": true
+                        },
+                        "object": {
+                          "type": "string",
+                          "example": "list"
+                        },
+                        "results": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "balance_transaction_id": {
+                                "type": "string",
+                                "example": "btr_d013fgtin2debfvbjv1g"
+                              },
+                              "id": {
+                                "type": "string",
+                                "example": "adj_d013felin2debfvbjus0"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
       }
     }
   },
