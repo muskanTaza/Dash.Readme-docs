@@ -7,11 +7,13 @@ metadata:
 ---
 # Collect status specific events
 
-| Event             | Description                              | Default (On / Off) |
-| :---------------- | :--------------------------------------- | :----------------- |
-| collect.succeeded | Triggered when the status is `succeeded` | On                 |
-| collect.failed    | Triggered when the status is `failed`    | On                 |
-| collect.on_hold   | Triggered when the status is `on_hold`   | On                 |
+| Event               | Description                                | Default (On / Off) |
+| :------------------ | :----------------------------------------- | :----------------- |
+| collect.succeeded   | Triggered when the status is `succeeded`   | On                 |
+| collect.failed      | Triggered when the status is `failed`      | On                 |
+| collect.on_hold     | Triggered when the status is `on_hold`     | On                 |
+| collect.created     | Triggered when the status is `created`     | On                 |
+| collect.broadcasted | Triggered when the status is `broadcasted` | On                 |
 
 ## collect.succeeded
 
@@ -374,9 +376,9 @@ metadata:
 
 # Other Events
 
-| Event           | Description                         | Default (On / Off) |
-| :-------------- | :---------------------------------- | :----------------- |
-| collect.created | Triggered when a collect is created | Off                |
+| Event               | Description                                | Default (On / Off) |
+| :------------------ | :----------------------------------------- | :----------------- |
+| collect.broadcasted | Triggered when the status is `broadcasted` | On                 |
 
 ## collect.created
 
@@ -438,11 +440,132 @@ metadata:
     "id": "col_cn1m8651ed8dn2517esg",
     "object": "collect",
     "currency": "USD",
-    "status": "succeeded",
+    "status": "created",
     "type": "wire_transfer",
 		"holding_currency" : "INR",
     "destination": "cca_uafanfianknon792nfak",
     "amount": 100000
+  }
+}
+```
+
+## collect.broadcasted
+
+### Virtual Account
+
+```json JSON
+{
+  "type": "collect.broadcasted",
+  "id": "evt_cn1m86nnt3hkq7385qd0",
+  "object": "event",
+  "created_at": "2024-02-07T11:06:02.538953779Z",
+  "data": {
+    "metadata": {},
+    "created_at": "2024-02-07T11:06:00.421853Z",
+    "payer_details": {
+      "name": "Hrithik Agarwal",
+      "payer_bank": {
+        "account_number":"9876542321",
+        "name":"State Bank of Mars",
+        "address":{
+          "line1":"Address Line 1",
+          "line2":"Address Line 2",
+          "city":"City",
+          "state":"state",
+          "country":"country",
+          "postal_code":"postal code"
+        },
+        "bank_codes":{
+          "swift_code":"SBM001"
+        }
+      },
+			"destination_details": {
+        "type": "virtual_account",
+        "virtual_account": {
+          "account_holder_name": "OM Grand Limited",
+          "account_number": "0109866363",
+          "bank_address": {
+                "address_line_1": "",
+                "address_line_2": "",
+                "city": "",
+                "country": "Singapore",
+                "postal_code": "",
+                "state": ""
+              },
+          "bank_branch": "8 MARINA BOULEVARD, 27-01, MARINA BAY FINANCIAL CENTRE",
+          "bank_codes": {
+                "swift_code": "SLSGO2XXX"
+              },
+          "bank_name": "STANDARD BANK LIMITED",
+          "currencies": [
+                "SGD"
+              ],
+          "iban": "",
+          "id": "cva_d2dgk0552psfuj1he0",
+          "object": "virtual_account"
+        }
+        },
+      "reference_id": "reffffff",
+      "additional_information": "Additional Information for the transaction"
+    },
+    "id": "col_cn1m8651ed8dn2517esg",
+    "object": "collect",
+    "currency": "USD",
+    "status": "broadcasted",
+    "type": "wire_transfer",
+		"holding_currency" : "INR",
+    "destination": "cca_uafanfianknon792nfak",
+    "amount": 100000
+  }
+}
+```
+
+### Wallet
+
+```json
+{
+  "type": "collect.broadcasted",
+  "id": "evt_cus736u228ka51i3g0pg",
+  "object": "event",
+  "created_at": "2025-02-21T12:29:15.4554149Z",
+  "data": {
+    "id": "col_cus735e5ainf6ati9dlg",
+    "object": "collect",
+    "amount": 1000,
+    "currency": "USD",
+    "status": "broadcasted",
+    "type": "stablecoin_usdc",
+    "payer_details": {
+      "name": "",
+      "payer_bank": null,
+      "reference_id": "",
+      "additional_information": "",
+      "payer_wallet": {
+        "type": "Ethereum",
+        "deposit_address": "addrss23423423"
+      }
+    },
+    "destination": "cwa_cuivfrvkk61qlul7c8g0",
+    "metadata": {},
+    "created_at": "2025-02-21T12:29:09.412049Z",
+    "destination_details": {
+      "type": "wallet",
+      "wallet": {
+        "id": "cwa_cuivfrvkk61qlul7c8g0",
+        "object": "wallet",
+        "type": "ethereum",
+        "deposit_address": "wead",
+        "currencies": [
+          "USD"
+        ]
+      }
+    },
+    "holding_currency": "USD",
+    "balance_transaction": "btr_cus736u5ainf6ati9edg",
+    "on_behalf_of": "",
+    "tracking_details": {
+      "transaction_hash": "fhjkdfi9823720@#"
+    }
   }
 }
 ```
