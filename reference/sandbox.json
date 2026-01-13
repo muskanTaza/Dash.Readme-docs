@@ -7309,9 +7309,10 @@
                       }
                     },
                     "metadata": {
-                      "type": "null",
+                      "type": "object",
                       "example": null,
-                      "description": "Metadata associated with the payout"
+                      "description": "Metadata associated with the payout",
+                      "properties": {}
                     },
                     "mt103": {
                       "type": "string",
@@ -7407,9 +7408,24 @@
                       "description": "Detailed status description"
                     },
                     "tracking_details": {
-                      "type": "null",
+                      "type": "object",
                       "example": null,
-                      "description": "Tracking information if applicable"
+                      "description": "Tracking information if applicable",
+                      "properties": {
+                        "tracking_type": {
+                          "type": "string",
+                          "description": "Tracking type used for payout",
+                          "enum": [
+                            "utr",
+                            "uetr",
+                            "transaction_hash"
+                          ]
+                        },
+                        "tracking_number": {
+                          "type": "string",
+                          "description": "Tracking number (UETR, UTR, transaction hash, etc.)"
+                        }
+                      }
                     },
                     "transaction_description": {
                       "type": "string",
