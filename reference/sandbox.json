@@ -5602,8 +5602,23 @@
                       "description": "Description of payout status"
                     },
                     "tracking_details": {
-                      "type": "null",
-                      "description": "Tracking information if applicable"
+                      "type": "object",
+                      "description": "Tracking information if applicable",
+                      "properties": {
+                        "tracking_number": {
+                          "type": "string",
+                          "description": "Tracking number (UETR, UTR, transaction hash, etc.)"
+                        },
+                        "tracking_type": {
+                          "type": "string",
+                          "enum": [
+                            "utr",
+                            "uetr",
+                            "transaction_hash"
+                          ],
+                          "description": "Tracking type used for payout"
+                        }
+                      }
                     },
                     "transaction_description": {
                       "type": "string",
