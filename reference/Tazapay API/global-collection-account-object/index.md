@@ -65,7 +65,7 @@ next:
     "metadata": {},
     "wallet": {
       "type": "ethereum",
-      "deposit_address": "test"
+      "deposit_address": "0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B"
     },
     "created_at": "2024-09-19T08:07:06.576777Z",
     "updated_at": "2024-09-19T08:07:06.576777Z",
@@ -83,33 +83,33 @@ next:
 
 ## Object Paramaters
 
-### collection\_account
+### collection_account
 
-| Parameter               | Type              | Description                                                                                                                                                                                                                                                 |
-| :---------------------- | :---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| metadata                | json              | Set of key-value pairs attached to the collection\_account object                                                                                                                                                                                           |
-| virtual\_account/wallet | object            | Consists of all the bank account/wallet details. Please check [virtual\_account](https://docs.tazapay.com/reference/global-collection-account-object#virtual_account), [wallet](https://docs.tazapay.com/reference/global-collection-account-object#wallet) |
-| created\_at             | string (ISO Date) | Collection Account creation timestamp                                                                                                                                                                                                                       |
-| updated\_at             | string (ISO Date) | Collection account last updated timestamp                                                                                                                                                                                                                   |
-| id                      | string            | Unique identifier (ID) associated with the collection\_account                                                                                                                                                                                              |
-| object                  | string            | Object structure name - collection\_account in this case.                                                                                                                                                                                                   |
-| payment\_method\_type   | enum              | Payment Method Type used for the account. Refer [List](https://docs.tazapay.com/update/docs/collection-accounts-payment-method-type#/)                                                                                                                      |
-| status                  | enum              | Current status of the collection account. It can either be enabled or disabled, enablement\_requested, disablement\_requested, enablement\_rejected.                                                                                                        |
-| currencies              | array             | List of supported currencies the collection account can receive funds in                                                                                                                                                                                    |
+| Parameter              | Type              | Description                                                                                                                                                                                                                                                |
+| :--------------------- | :---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| metadata               | json              | Set of key-value pairs attached to the collection_account object                                                                                                                                                                                           |
+| virtual_account/wallet | object            | Consists of all the bank account/wallet details. Please check [virtual_account](https://docs.tazapay.com/reference/global-collection-account-object#virtual_account), [wallet](https://docs.tazapay.com/reference/global-collection-account-object#wallet) |
+| created_at             | string (ISO Date) | Collection Account creation timestamp                                                                                                                                                                                                                      |
+| updated_at             | string (ISO Date) | Collection account last updated timestamp                                                                                                                                                                                                                  |
+| id                     | string            | Unique identifier (ID) associated with the collection_account                                                                                                                                                                                              |
+| object                 | string            | Object structure name - collection_account in this case.                                                                                                                                                                                                   |
+| payment_method_type    | enum              | Payment Method Type used for the account. Refer [List](https://docs.tazapay.com/update/docs/collection-accounts-payment-method-type#/)                                                                                                                     |
+| status                 | enum              | Current status of the collection account. It can either be enabled or disabled, enablement_requested, disablement_requested, enablement_rejected.                                                                                                          |
+| currencies             | array             | List of supported currencies the collection account can receive funds in                                                                                                                                                                                   |
 
 <br />
 
-### virtual\_account
+### virtual_account
 
-| Parameter             | Type   | Description                                 |
-| --------------------- | :----- | ------------------------------------------- |
-| account\_holder\_name | string | Name of the account holder                  |
-| account\_number       | string | Account number of the collection account    |
-| bank\_address         | json   | Bank address of the collection account bank |
-| bank\_codes           | json   | Bank codes of the collection account bank   |
-| bank\_branch          | string | Bank branch of the collection account bank  |
-| bank\_name            | string | Bank name of the collection account bank    |
-| iban                  | string | IBAN of the collection account bank         |
+| Parameter           | Type   | Description                                 |
+| ------------------- | :----- | ------------------------------------------- |
+| account_holder_name | string | Name of the account holder                  |
+| account_number      | string | Account number of the collection account    |
+| bank_address        | json   | Bank address of the collection account bank |
+| bank_codes          | json   | Bank codes of the collection account bank   |
+| bank_branch         | string | Bank branch of the collection account bank  |
+| bank_name           | string | Bank name of the collection account bank    |
+| iban                | string | IBAN of the collection account bank         |
 
 <br />
 
