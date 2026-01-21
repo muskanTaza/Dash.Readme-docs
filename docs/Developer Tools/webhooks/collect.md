@@ -306,51 +306,10 @@ next:
 
 | Event               | Description                                | Default (On / Off) |
 | :------------------ | :----------------------------------------- | :----------------- |
+| collect.created     | Triggered when the status is `created`     | On                 |
 | collect.broadcasted | Triggered when the status is `broadcasted` | On                 |
 
 ## collect.created
-
-### Virtual Account
-
-```Text JSON
-{
-  "type": "collect.created",
-  "id": "evt_cn1m86nnt3hkq7385qd0",
-  "object": "event",
-  "created_at": "2024-02-07T11:06:02.538953779Z",
-  "data": {
-    "metadata": {},
-    "created_at": "2024-02-07T11:06:00.421853Z",
-    "payer_details": {
-      "name": "Hrithik Agarwal",
-      "payer_bank": {
-        "account_number":"9876542321",
-        "name":"State Bank of Mars",
-        "address":{
-          "line1":"Address Line 1",
-          "line2":"Address Line 2",
-          "city":"City",
-          "state":"state",
-          "country":"country",
-          "postal_code":"postal code"
-        },
-        "bank_codes":{
-          "swift_code":"SBM001"
-        }
-      },
-      "reference_id": "reffffff",
-      "additional_information": "Additional Information for the transaction"
-    },
-    "id": "col_cn1m8651ed8dn2517esg",
-    "object": "collect",
-    "currency": "USD",
-    "status": "created",
-    "type": "wire_transfer",
-    "destination": "cca_uafanfianknon792nfak",
-    "amount": 100000
-  }
-}
-```
 
 ### Wallet
 
@@ -403,48 +362,6 @@ next:
 ```
 
 ## collect.broadcasted
-
-### Virtual Account
-
-```Text JSON
-{
-  "type": "collect.broadcasted",
-  "id": "evt_cn1m86nnt3hkq7385qd0",
-  "object": "event",
-  "created_at": "2024-02-07T11:06:02.538953779Z",
-  "data": {
-    "metadata": {},
-    "created_at": "2024-02-07T11:06:00.421853Z",
-    "payer_details": {
-      "name": "Hrithik Agarwal",
-      "payer_bank": {
-        "account_number":"9876542321",
-        "name":"State Bank of Mars",
-        "address":{
-          "line1":"Address Line 1",
-          "line2":"Address Line 2",
-          "city":"City",
-          "state":"state",
-          "country":"country",
-          "postal_code":"postal code"
-        },
-        "bank_codes":{
-          "swift_code":"SBM001"
-        }
-      },
-      "reference_id": "reffffff",
-      "additional_information": "Additional Information for the transaction"
-    },
-    "id": "col_cn1m8651ed8dn2517esg",
-    "object": "collect",
-    "currency": "USD",
-    "status": "broadcasted",
-    "type": "wire_transfer",
-    "destination": "cca_uafanfianknon792nfak",
-    "amount": 100000
-  }
-}
-```
 
 ### Wallet
 
