@@ -11074,8 +11074,35 @@
                                 "type": "array",
                                 "description": "List of supported fund transfer networks for local payouts (e.g., 'chats', 'fps' for Hong Kong, 'sepa' for Europe). Only applicable for local payout types.",
                                 "items": {
-                                  "type": "string",
-                                  "example": "chats"
+                                  "properties": {
+                                    "name": {
+                                      "type": "string",
+                                      "description": "Name of the fund transfer network"
+                                    },
+                                    "remitter_preference_support": {
+                                      "type": "boolean",
+                                      "description": "This field indicates if you can send this network as your preference for a payout"
+                                    },
+                                    "transfer_limit": {
+                                      "type": "object",
+                                      "properties": {
+                                        "currency": {
+                                          "type": "string",
+                                          "description": "Currency in which the min and max limits are specified"
+                                        },
+                                        "minimum": {
+                                          "type": "string",
+                                          "description": "Minimum limit of payout"
+                                        },
+                                        "maximum": {
+                                          "type": "string",
+                                          "description": "Maximum limit of payout"
+                                        }
+                                      },
+                                      "description": "The transfer limits supported by this fund transfer network"
+                                    }
+                                  },
+                                  "type": "object"
                                 },
                                 "example": [
                                   "chats",
