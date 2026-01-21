@@ -6,7 +6,7 @@ excerpt: >-
   you can choose to route you payouts through a particular FTN depending on your
   speed, limit and cut off requirements.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
