@@ -52,7 +52,7 @@ To view the expanded details for a collect, you can simply click on the Payment 
 | Fees                            | Tazapay Fees for the payment                                                                      |
 | Payment Method                  | The payment method                                                                                |
 | Receiving Account Number / IBAN | The account number (or IBAN in case the currency is EUR) of the receiving account for the payment |
-| Status                          | The status of the collect - can be `created`, `broadcasted`, `succeeded`, `on_hold` or `failed`    |
+| Status                          | The status of the collect - can be `created`, `broadcasted`, `succeeded`, `on_hold` or `failed`. Collect status can be `created` or `broadcasted` for wallets. |
 | Transaction Hash                | Unique identifier assigned to this blockchain transaction                                         |
 
 **Sender Details**
