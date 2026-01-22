@@ -10,7 +10,16 @@ metadata:
 next:
   description: ''
 ---
-* Payouts created on sandbox will automatically move to `succeeded` triggering relevant webhook events in the process.
-* For invoice amount between 200000 and 250000, payouts will move to `failed`
-* For invoice amount between 300000 and 350000, payouts will move to `compliance_hold` and then `succeeded`
-* For invoice amount between 400000 and 450000, payouts will move to `compliance_hold` and then `failed`
+
+To test different payout scenarios, use the following invoice amounts:
+
+| Invoice Amount    | Simulated Behavior                                                          |
+| :---------------- | :-------------------------------------------------------------------------- |
+| Any other amount  | Payout `succeeds` normally                                                  |
+| Exactly 100,000   | Payout stays in `processing` indefinitely                                   |
+| 200,000 – 250,000 | Payout `failed`                                                             |
+| 300,000 – 350,000 | Payout goes to `compliance_hold`, then `succeeds`                           |
+| 400,000 – 450,000 | Payout goes to `compliance_hold`, then `failed`                             |
+| Exactly 500,000   | Payout stays in `compliance_hold` indefinitely                              |
+| 500,000 – 550,000 | Payout `succeeds`, then gets `reversed`                                     |
+| 550,000 – 600,000 | Payout `succeeds`, then gets `reversed` with fx impact and third-party fees |
