@@ -30,7 +30,6 @@ To ensure the SDK functions correctly, add *.csftr.com/* to your CSP directives:
 Content-Security-Policy: connect-src 'self' *.csftr.com; script-src 'self' *.csftr.com;
 ```
 
-
 # Integrate the risk SDK
 
 ## Set up tazapay.js
