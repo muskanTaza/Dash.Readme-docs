@@ -17,9 +17,6 @@ For the best performance of Tazapay's Fraud Detection system, you should integra
 * Spoofing Attempts
 * Fingerprinting Data
 
-# How it works
-
-<Image align="center" className="border" border={true} src="https://files.readme.io/fc3ef89-image.png" />
 
 > 📘 Content Security Policy (CSP) Configuration
 >
