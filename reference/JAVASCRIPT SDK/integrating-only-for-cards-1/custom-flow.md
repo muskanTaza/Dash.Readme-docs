@@ -10,6 +10,16 @@ metadata:
 next:
   description: ''
 ---
+
+> 📘 Content Security Policy (CSP) Configuration
+>
+> Our SDK internally loads the Shield SDK, which makes API calls to the *.csftr.com/* domain to track the customer browser details. If your website has Content Security Policy (CSP) headers configured, these calls will be blocked unless you whitelist shield's domain.
+To ensure the SDK functions correctly, add *.csftr.com/* to your CSP directives:
+>
+> ```Example CSP header
+Content-Security-Policy: connect-src 'self' *.csftr.com; script-src 'self' *.csftr.com;
+```
+
 # Step 1: Set up tazapay.js
 
 The Card Embed is automatically available as a feature of tazapay.js. Include the tazapay.js script on your checkout page by adding it to the head of your HTML file. Always load tazapay.js directly from js.tazapay.com to remain PCI compliant. Don’t include the script in a bundle or host a copy of it yourself.

@@ -20,7 +20,7 @@ For the best performance of Tazapay's Fraud Detection system, you should integra
 
 > 📘 Content Security Policy (CSP) Configuration
 >
-> Our Risk SDK internally loads the Shield SDK, which makes API calls to the *.csftr.com/* domain. If your website has Content Security Policy (CSP) headers configured, these calls will be blocked unless you whitelist our domain.
+> Our Risk SDK internally loads the Shield SDK, which makes API calls to the *.csftr.com/* domain. If your website has Content Security Policy (CSP) headers configured, these calls will be blocked unless you whitelist shield's domain.
 To ensure the SDK functions correctly, add *.csftr.com/* to your CSP directives:
 >
 > ```Example CSP header
