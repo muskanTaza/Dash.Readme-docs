@@ -18,8 +18,8 @@ next:
 > To ensure the SDK functions correctly, add *.csftr.com/* to your CSP directives:
 >
 > ```Example CSP header
-Content-Security-Policy: connect-src 'self' *.csftr.com; script-src 'self' *.csftr.com;
-```
+> Content-Security-Policy: connect-src 'self' *.csftr.com; script-src 'self' *.csftr.com;
+> ```
 
 # Step 1: Set up tazapay.js
 
