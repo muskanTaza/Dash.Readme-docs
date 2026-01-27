@@ -12146,7 +12146,7 @@
                   },
                   "date_of_birth": {
                     "type": "string",
-                    "description": "Date of birth of individual, Format DD-MM-YYYY (Mandatory if destination_details.type is a wallet and type is individual)"
+                    "description": "Date of birth of individual, Format YYYY-MM-DD (Mandatory if destination_details.type is a wallet and type is individual)"
                   },
                   "nationality": {
                     "type": "string",
