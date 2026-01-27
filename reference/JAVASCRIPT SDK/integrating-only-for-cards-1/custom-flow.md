@@ -13,8 +13,9 @@ next:
 
 > 📘 Content Security Policy (CSP) Configuration
 >
-> Our SDK internally loads the Shield SDK, which makes API calls to the *.csftr.com/* domain to track the customer browser details. If your website has Content Security Policy (CSP) headers configured, these calls will be blocked unless you whitelist shield's domain.
-To ensure the SDK functions correctly, add *.csftr.com/* to your CSP directives:
+> Our SDK makes API calls to the *.csftr.com/* domain to collect fingerprinting data
+> If your website has Content Security Policy (CSP) headers configured, these calls will be blocked unless you whitelist this domain.
+> To ensure the SDK functions correctly, add *.csftr.com/* to your CSP directives:
 >
 > ```Example CSP header
 Content-Security-Policy: connect-src 'self' *.csftr.com; script-src 'self' *.csftr.com;
