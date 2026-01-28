@@ -1,5 +1,5 @@
 ---
-title: Copy of Upload Document to Tazapay
+title: Upload Document to Tazapay
 excerpt: This lets you generate a temporary pre-signed URL to upload your document
 api:
   file: sandbox.json
