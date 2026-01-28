@@ -19775,6 +19775,18 @@
         },
         "deprecated": false
       }
+    },
+    "/new-endpoint-1": {
+      "post": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "parameters": [],
+        "operationId": "post_new-endpoint-1"
+      }
     }
   },
   "x-readme": {
