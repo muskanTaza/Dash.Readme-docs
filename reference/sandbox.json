@@ -18290,7 +18290,7 @@
         "x-readme": {
           "code-samples": [
             {
-              "code": "curl --request POST \\\n     --url https://service-sandbox.tazapay.com/v3/metadata/doc/upload \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data '\n{\n  \"file_name\": \"checkout_and_payin_type_1750763277.csv\"\n}\n'",
+              "code": "curl --request GET \\\n     --url https://service-sandbox.tazapay.com/v3/metadata/doc/upload \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data '\n{\n  \"file_name\": \"checkout_and_payin_type_1750763277.csv\"\n}\n'",
               "language": "shell",
               "name": "curl"
             }
