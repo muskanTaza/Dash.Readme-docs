@@ -19773,7 +19773,7 @@
       }
     },
     "/v3/metadata/doc/upload-1": {
-      "get": {
+      "post": {
         "description": "",
         "operationId": "get_v3metadatadocupload-1",
         "responses": {
