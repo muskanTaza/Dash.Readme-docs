@@ -17183,23 +17183,7 @@
             }
           }
         },
-        "x-readme": {
-          "code-samples": [
-            {
-              "code": "{\n\t\"type\" : \"virtual_account\",\n  \"on_behalf_of\": \"ent_1234545tf3\",\n  \"description\":\"This account is used for USD payouts\",\n  \"virtual_account\": {\n  \t\"currencies\": [\"CAD\"],\n    \"country\": \"CA\",\n\t}\n}",
-              "language": "shell",
-              "name": "Virtual Account Request"
-            },
-            {
-              "code": "{\n\t\"type\" : \"wallet\",\n  \"on_behalf_of\": \"ent_1234545tf3\",\n  \"description\":\"This account is used for USD payouts\",\n  \"wallet\": {\n  \t\"type\": \"ethereum\",\n\t}\n}",
-              "language": "shell",
-              "name": "Wallet Request"
-            }
-          ],
-          "samples-languages": [
-            "shell"
-          ]
-        }
+        "x-readme": {}
       },
       "get": {
         "description": "",
