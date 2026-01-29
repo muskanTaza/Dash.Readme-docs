@@ -18,7 +18,7 @@ metadata:
 
 # Payment Method type
 
-Users can use the below payment method type to create a transaction using ShopeePay in the available geography
+Users can use the below payment method type to create a transaction using Korean Cards in the available geography
 
 * South Korea: `card_local_krw`
 
