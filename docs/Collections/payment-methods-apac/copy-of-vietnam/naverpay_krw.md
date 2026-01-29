@@ -13,7 +13,7 @@ metadata:
 
 # How It Works
 
-* Users link their Korean bank accounts or cards to their Naver Pay wallets.
+* Users link their Korean bank accounts or cards to their NaverPay wallets.
 * Payments are authorized within the Naver Pay app or via Naver services using PIN or biometric authentication.
 * Commonly used for seamless and secure payments across e-commerce, apps, and partner merchants.
 
