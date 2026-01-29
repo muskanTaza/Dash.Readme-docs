@@ -21,7 +21,7 @@ metadata:
 
   # Payment Method type
 
-  Users can use the below payment method type to create a transaction using ShopeePay in the available geography
+  Users can use the below payment method type to create a transaction using KakaoPay in the available geography
 
   * South Korea: `kakaopay_krw`
 
