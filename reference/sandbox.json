@@ -11074,8 +11074,35 @@
                                 "type": "array",
                                 "description": "List of supported fund transfer networks for local payouts (e.g., 'chats', 'fps' for Hong Kong, 'sepa' for Europe). Only applicable for local payout types.",
                                 "items": {
-                                  "type": "string",
-                                  "example": "chats"
+                                  "properties": {
+                                    "name": {
+                                      "type": "string",
+                                      "description": "Name of the fund transfer network"
+                                    },
+                                    "remitter_preference_support": {
+                                      "type": "boolean",
+                                      "description": "This field indicates if you can send this network as your preference for a payout"
+                                    },
+                                    "transfer_limit": {
+                                      "type": "object",
+                                      "properties": {
+                                        "currency": {
+                                          "type": "string",
+                                          "description": "Currency in which the min and max limits are specified"
+                                        },
+                                        "minimum": {
+                                          "type": "string",
+                                          "description": "Minimum limit of payout"
+                                        },
+                                        "maximum": {
+                                          "type": "string",
+                                          "description": "Maximum limit of payout"
+                                        }
+                                      },
+                                      "description": "The transfer limits supported by this fund transfer network"
+                                    }
+                                  },
+                                  "type": "object"
                                 },
                                 "example": [
                                   "chats",
@@ -11191,7 +11218,7 @@
                   },
                   "type": {
                     "type": "string",
-                    "description": "Type of document uploaded",
+                    "description": "Type of document uploaded. This field is not restricted to the values shared below but these are a few examples for your reference.",
                     "enum": [
                       "goods_delivery_proof",
                       "service_delivery_proof",
@@ -12119,7 +12146,7 @@
                   },
                   "date_of_birth": {
                     "type": "string",
-                    "description": "Date of birth of individual, Format DD-MM-YYYY (Mandatory if destination_details.type is a wallet and type is individual)"
+                    "description": "Date of birth of individual, Format YYYY-MM-DD (Mandatory if destination_details.type is a wallet and type is individual)"
                   },
                   "nationality": {
                     "type": "string",
@@ -17156,23 +17183,7 @@
             }
           }
         },
-        "x-readme": {
-          "code-samples": [
-            {
-              "code": "{\n\t\"type\" : \"virtual_account\",\n  \"on_behalf_of\": \"ent_1234545tf3\",\n  \"description\":\"This account is used for USD payouts\",\n  \"virtual_account\": {\n  \t\"currencies\": [\"CAD\"],\n    \"country\": \"CA\",\n\t}\n}",
-              "language": "shell",
-              "name": "Virtual Account Request"
-            },
-            {
-              "code": "{\n\t\"type\" : \"wallet\",\n  \"on_behalf_of\": \"ent_1234545tf3\",\n  \"description\":\"This account is used for USD payouts\",\n  \"wallet\": {\n  \t\"type\": \"ethereum\",\n\t}\n}",
-              "language": "shell",
-              "name": "Wallet Request"
-            }
-          ],
-          "samples-languages": [
-            "shell"
-          ]
-        }
+        "x-readme": {}
       },
       "get": {
         "description": "",
@@ -18211,68 +18222,6 @@
       }
     },
     "/v3/metadata/doc/upload": {
-      "get": {
-        "description": "",
-        "operationId": "get_v3metadatadocupload",
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "file_name": {
-                      "type": "string",
-                      "description": "File Name of the document that needs to be uploaded"
-                    },
-                    "url": {
-                      "type": "string",
-                      "description": "Pre-signed url where the document needs to be uploaded. The url will only be valid for 1 hour."
-                    }
-                  },
-                  "type": "object"
-                },
-                "examples": {
-                  "New Example": {
-                    "summary": "New Example",
-                    "value": {
-                      "status": "success",
-                      "message": "",
-                      "data": {
-                        "file_name": "1753786909477561713_checkout_and_payin_type_1750763277.csv",
-                        "url": "https://s3.ap-southeast-1.amazonaws.com/tazapay-temp-doc-qa/1753175183427867519_Business.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAQKC7OY4N2U7MEUJ7%2F20250722%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20250722T090623Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLXNvdXRoZWFzdC0xIkgwRgIhAKi73Tb9EF4fXtPRSBgeOaJyR7U99BWI4Zhj3knl9DG2AiEA4gcn9eF315LIe8bY4GITJUa85IebTe%2BlsYZDa%2BSQ948qiwQI5f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgwwMjE2NzUwMzQzOTUiDOpccsZalyTF4%2F1GOirfA01v0iF0UZ0ZVVmtbKS9Mb2qgd4Mkk8la86molWPcTzuctEsdKne0i08Yx1bXFDEl2HBzsEyXdqpmnndEFqNO3asPjNGBMJrXpuWuvTroXTJm0wTcEid4g6nyQa7PgRYPnKBnfU8WigkSXie3o5YgzV1n1U5kWviQgjf0LUreqX7d5f6qW%2Ba3bq4nCJ%2Fvg90ilGmw1leYbKUjO2LKJZUaRQIY2Xc3d866f7vTAzDg%2BnH6zGeNgAUYQiu%2BU39vGNiRcumFI6eWB%2BJSLtEZXM6gYxk7Gwj35zlj1MbCLz4sMCHpL71KADGuTfXxo129KuXZ%2BTzDEBQ4gZB0P8faPuBZQJinH%2BTrsWLxcyaUKRVHIlxpU%2B%2BWSu5Xir%2FZt4N%2BanoXIcNPqeTCN6uy6vMwVlxygKh%2Fv9h9UTwAdmzL4ouVqNJ%2B6Z0%2F7ydH2KeYd80JedyeBsOPWc1hfCOyDlgLXUSM1hCNqgFt55Z60r3YDGbOs7Xc55fXXNNKiye8sfJgLsBFdjtrdOucyZrlooq0phklra6P5MyNm9fgE%2BJyLkc7AdKAhiYpWny4AOQfkFrLxwW5N%2FXpr4dYDLlRoUSaYuhDLVbYli67R7WJVgEY%2Fgd0ND2sKBXOvsGLngZ%2F4BlmJFkMPyS%2FMMGOqQB2K4Y29YW5eGpMv4My4rE1qbjWpg3KyrdyYtX5rXC9DW87krfcUncaSBf4spXvxnOhrqmis392K4oVEIUlzPusRMnPUpohjAIxNBck2jJErqzfJXHMvrMXSrwZTskxQiotkrii8Z4HZyjG84FYAGLmnqgePiReOUTBLHWOSi%2F6N6Du%2FImD3mmtJCnO%2F9vvmbb4HmFMdP3sSPj7dCZhleNm17sJdY%3D&X-Amz-SignedHeaders=host&x-id=PutObject&X-Amz-Signature=493d3f95c747dbade0f21f18c588700dd67bdafaa019ea5eaab4ee442b6359f8"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "in": "query",
-            "name": "file_name",
-            "schema": {
-              "type": "string"
-            },
-            "required": true,
-            "description": "File Name of the document that needs to be uploaded. "
-          }
-        ],
-        "x-readme": {
-          "code-samples": [
-            {
-              "code": "curl --request POST \\\n     --url https://service-sandbox.tazapay.com/v3/metadata/doc/upload \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data '\n{\n  \"file_name\": \"checkout_and_payin_type_1750763277.csv\"\n}\n'",
-              "language": "shell",
-              "name": "curl"
-            }
-          ],
-          "samples-languages": [
-            "shell"
-          ]
-        }
-      },
       "post": {
         "description": "",
         "operationId": "get_v3metadatadocupload",
@@ -19747,6 +19696,83 @@
           }
         },
         "deprecated": false
+      }
+    },
+    "/new-endpoint-1": {
+      "post": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "parameters": [],
+        "operationId": "post_new-endpoint-1"
+      }
+    },
+    "/v3/metadata/doc/upload-1": {
+      "post": {
+        "description": "",
+        "operationId": "get_v3metadatadocupload-1",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "file_name": {
+                      "type": "string",
+                      "description": "File Name of the document that needs to be uploaded"
+                    },
+                    "url": {
+                      "type": "string",
+                      "description": "Pre-signed url where the document needs to be uploaded. The url will only be valid for 1 hour."
+                    }
+                  },
+                  "type": "object"
+                },
+                "examples": {
+                  "New Example": {
+                    "summary": "New Example",
+                    "value": {
+                      "status": "success",
+                      "message": "",
+                      "data": {
+                        "file_name": "1753786909477561713_checkout_and_payin_type_1750763277.csv",
+                        "url": "https://s3.ap-southeast-1.amazonaws.com/tazapay-temp-doc-qa/1753175183427867519_Business.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAQKC7OY4N2U7MEUJ7%2F20250722%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20250722T090623Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLXNvdXRoZWFzdC0xIkgwRgIhAKi73Tb9EF4fXtPRSBgeOaJyR7U99BWI4Zhj3knl9DG2AiEA4gcn9eF315LIe8bY4GITJUa85IebTe%2BlsYZDa%2BSQ948qiwQI5f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgwwMjE2NzUwMzQzOTUiDOpccsZalyTF4%2F1GOirfA01v0iF0UZ0ZVVmtbKS9Mb2qgd4Mkk8la86molWPcTzuctEsdKne0i08Yx1bXFDEl2HBzsEyXdqpmnndEFqNO3asPjNGBMJrXpuWuvTroXTJm0wTcEid4g6nyQa7PgRYPnKBnfU8WigkSXie3o5YgzV1n1U5kWviQgjf0LUreqX7d5f6qW%2Ba3bq4nCJ%2Fvg90ilGmw1leYbKUjO2LKJZUaRQIY2Xc3d866f7vTAzDg%2BnH6zGeNgAUYQiu%2BU39vGNiRcumFI6eWB%2BJSLtEZXM6gYxk7Gwj35zlj1MbCLz4sMCHpL71KADGuTfXxo129KuXZ%2BTzDEBQ4gZB0P8faPuBZQJinH%2BTrsWLxcyaUKRVHIlxpU%2B%2BWSu5Xir%2FZt4N%2BanoXIcNPqeTCN6uy6vMwVlxygKh%2Fv9h9UTwAdmzL4ouVqNJ%2B6Z0%2F7ydH2KeYd80JedyeBsOPWc1hfCOyDlgLXUSM1hCNqgFt55Z60r3YDGbOs7Xc55fXXNNKiye8sfJgLsBFdjtrdOucyZrlooq0phklra6P5MyNm9fgE%2BJyLkc7AdKAhiYpWny4AOQfkFrLxwW5N%2FXpr4dYDLlRoUSaYuhDLVbYli67R7WJVgEY%2Fgd0ND2sKBXOvsGLngZ%2F4BlmJFkMPyS%2FMMGOqQB2K4Y29YW5eGpMv4My4rE1qbjWpg3KyrdyYtX5rXC9DW87krfcUncaSBf4spXvxnOhrqmis392K4oVEIUlzPusRMnPUpohjAIxNBck2jJErqzfJXHMvrMXSrwZTskxQiotkrii8Z4HZyjG84FYAGLmnqgePiReOUTBLHWOSi%2F6N6Du%2FImD3mmtJCnO%2F9vvmbb4HmFMdP3sSPj7dCZhleNm17sJdY%3D&X-Amz-SignedHeaders=host&x-id=PutObject&X-Amz-Signature=493d3f95c747dbade0f21f18c588700dd67bdafaa019ea5eaab4ee442b6359f8"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "file_name",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "File Name of the document that needs to be uploaded. "
+          }
+        ],
+        "x-readme": {
+          "code-samples": [
+            {
+              "code": "curl --request POST \\\n     --url https://service-sandbox.tazapay.com/v3/metadata/doc/upload \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data '\n{\n  \"file_name\": \"checkout_and_payin_type_1750763277.csv\"\n}\n'",
+              "language": "shell",
+              "name": "curl"
+            }
+          ],
+          "samples-languages": [
+            "shell"
+          ]
+        },
+        "summary": "Copy of "
       }
     }
   },

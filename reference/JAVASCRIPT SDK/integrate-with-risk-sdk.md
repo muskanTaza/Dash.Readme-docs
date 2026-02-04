@@ -17,9 +17,15 @@ For the best performance of Tazapay's Fraud Detection system, you should integra
 * Spoofing Attempts
 * Fingerprinting Data
 
-# How it works
-
-<Image align="center" className="border" border={true} src="https://files.readme.io/fc3ef89-image.png" />
+> 📘 Content Security Policy (CSP) Configuration
+>
+> Our Risk SDK makes API calls to the *.csftr.com/* domain to collect fingerprinting data
+> If your website has Content Security Policy (CSP) headers configured, these calls will be blocked unless you whitelist this domain.
+> To ensure the SDK functions correctly, add *.csftr.com/* to your CSP directives:
+>
+> ```Example CSP header
+> Content-Security-Policy: connect-src 'self' *.csftr.com; script-src 'self' *.csftr.com;
+>```
 
 # Integrate the risk SDK
 
