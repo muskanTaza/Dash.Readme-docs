@@ -50,7 +50,7 @@ next:
 | object        |                        | string    | This is `collect` here                                                                                                                                        |
 | amount        |                        | integer   | Amount of the collect in the lowest denomination. Learn more about decimal currencies <a href="https://docs.tazapay.com/docs/decimal-currencies">here</a>. |
 | currency      |                        | string    | Currency of the collect                                                                                                                                      |
-| status        |                        | enum      | Status of the collect. Can be `succeeded`, `on_hold` or `failed`                                                                                              |
+| status        |                        | enum      | Status of the collect. Can be `succeeded`, `detected`, `on_hold` or `failed`                                                                                  |
 | metadata      |                        | json      | Set of key-value pairs attached to the collect object                                                                                                        |
 | created_at    |                        | timestamp | Timestamp at which the collect object is created                                                                                                             |
 | payer_details |                        | json      | Details of the payer                                                                                                                                         |
