@@ -44,4 +44,4 @@ The following is the upper and lower limits for NaverPay transactions:
 
 Redirect Experience
 
-For more details, please click [here](https://tazapay.com/payment-methods/shopeepay).
+<br />
