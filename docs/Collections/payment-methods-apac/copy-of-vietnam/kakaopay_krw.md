@@ -46,4 +46,4 @@ metadata:
 
   Redirect Experience
 
-  For more details, please click [here](https://tazapay.com/payment-methods/shopeepay).
+  <br />
