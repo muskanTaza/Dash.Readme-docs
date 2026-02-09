@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-It's hard to imagine daily commerce without them. From grabbing a coffee to booking flights online, payment cards – primarily those bearing the Visa or Mastercard logos, alongside others like RuPay, American Express, and Discover – have become the dominant way people pay globally. But why are they so popular, and how do they actually work
+It's hard to imagine daily commerce without them. From grabbing a coffee to booking flights online, payment cards – primarily those bearing the Visa or Mastercard logos, alongside others like RuPay, American Express, and Discover – have become the dominant way people pay globally. But why are they so popular, and how do they actually work?
 
 ### Why Cards Rule the Payment World
 
