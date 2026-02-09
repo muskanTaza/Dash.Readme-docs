@@ -24,8 +24,8 @@ For the best performance of Tazapay's Fraud Detection system, you should integra
 > To ensure the SDK functions correctly, add *.csftr.com/* to your CSP directives:
 >
 > ```Example CSP header
-> Content-Security-Policy: connect-src 'self' *.csftr.com; script-src 'self' *.csftr.com;
->```
+Content-Security-Policy: connect-src 'self' *.csftr.com; script-src 'self' *.csftr.com;
+```
 
 # Integrate the risk SDK
 
