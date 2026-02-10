@@ -12,11 +12,12 @@ next:
 ---
 # Collect status specific events
 
-| Event             | Description                              | Default (On / Off) |
-| :---------------- | :--------------------------------------- | :----------------- |
-| collect.succeeded | Triggered when the status is `succeeded` | On                 |
-| collect.failed    | Triggered when the status is `failed`    | On                 |
-| collect.on\_hold  | Triggered when the status is `on_hold`   | On                 |
+| Event               | Description                                | Default (On / Off) |
+| :------------------ | :----------------------------------------- | :----------------- |
+| collect.succeeded   | Triggered when the status is `succeeded`   | On                 |
+| collect.failed      | Triggered when the status is `failed`      | On                 |
+| collect.on\_hold    | Triggered when the status is `on_hold`     | On                 |
+| collect.detected    | Triggered when the status is `detected`    | On                 |
 
 ## collect.succeeded
 
@@ -206,6 +207,58 @@ next:
 }
 ```
 
+## collect.detected
+
+### Wallet
+
+```
+{
+  "type": "collect.detected",
+  "id": "evt_cus74bm228ka51i3gihg",
+  "object": "event",
+  "created_at": "2025-02-21T12:31:42.609555864Z",
+  "data": {
+    "id": "col_cus74a65ainf6atia7m0",
+    "object": "collect",
+    "amount": 1000,
+    "currency": "USD",
+    "status": "detected",
+    "type": "stablecoin_usdc",
+    "payer_details": {
+      "name": "",
+      "payer_bank": null,
+      "reference_id": "",
+      "additional_information": "",
+      "payer_wallet": {
+        "type": "Ethereum",
+        "deposit_address": "addrss23423423"
+      }
+    },
+    "destination": "cwa_cuivfrvkk61qlul7c8g0",
+    "metadata": {},
+    "created_at": "2025-02-21T12:31:36.335350Z",
+    "destination_details": {
+      "type": "wallet",
+      "wallet": {
+        "id": "cwa_cuivfrvkk61qlul7c8g0",
+        "object": "wallet",
+        "type": "ethereum",
+        "deposit_address": "wead",
+        "currencies": [
+          "USD"
+        ]
+      }
+    },
+    "holding_currency": "USD",
+    "balance_transaction": "",
+    "on_behalf_of": "",
+    "tracking_details": {
+      "transaction_hash": "fhjkdfi9823720@#"
+    }
+  }
+}
+```
+
 ## collect.on\_hold
 
 ### Virtual Account
@@ -300,50 +353,3 @@ next:
 }
 ```
 
-# Other Events
-
-| Event           | Description                         | Default (On / Off) |
-| :-------------- | :---------------------------------- | :----------------- |
-| collect.created | Triggered when a collect is created | Off                |
-
-## collect.created
-
-```Text JSON
-{
-  "type": "collect.created",
-  "id": "evt_cn1m86nnt3hkq7385qd0",
-  "object": "event",
-  "created_at": "2024-02-07T11:06:02.538953779Z",
-  "data": {
-    "metadata": {},
-    "created_at": "2024-02-07T11:06:00.421853Z",
-    "payer_details": {
-      "name": "Hrithik Agarwal",
-      "payer_bank": {
-        "account_number":"9876542321",
-        "name":"State Bank of Mars",
-        "address":{
-          "line1":"Address Line 1",
-          "line2":"Address Line 2",
-          "city":"City",
-          "state":"state",
-          "country":"country",
-          "postal_code":"postal code"
-        },
-        "bank_codes":{
-          "swift_code":"SBM001"
-        }
-      },
-      "reference_id": "reffffff",
-      "additional_information": "Additional Information for the transaction"
-    },
-    "id": "col_cn1m8651ed8dn2517esg",
-    "object": "collect",
-    "currency": "USD",
-    "status": "succeeded",
-    "type": "wire_transfer",
-    "destination": "cca_uafanfianknon792nfak",
-    "amount": 100000
-  }
-}
-```

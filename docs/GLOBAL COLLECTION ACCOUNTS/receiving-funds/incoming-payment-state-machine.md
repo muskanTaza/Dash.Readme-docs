@@ -7,9 +7,11 @@ metadata:
   robots: index
 ---
 * Each incoming payment to the virtual account is represented by a collect object.
-* A collect can be created in either of the following states
-  * succeeded (it is a terminal state)
-  * compliance_hold (in case Tazapay requires more remitter information); The collect will transition to either failed or succeeded from this state.
+* A collect can be created in any of the following states and transitions through the state machine:
+  * **detected** - Intermediate state when an inbound transaction is first detected on-chain, prior to final confirmation (applies to crypto/stablecoin collections)
+  * **succeeded** - Terminal state when payment is successfully processed
+  * **failed** - Terminal state when payment processing fails
+  * **on_hold** (compliance_hold) - Payment is on hold requiring additional verification; The collect will transition to either failed or succeeded from this state
 
 ### State Machine for Collects
 

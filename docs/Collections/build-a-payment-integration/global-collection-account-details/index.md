@@ -40,7 +40,7 @@ You can view collects in your collection accounts on [Tazapay's dashboard](https
 * Once logged in, click on the`Transactions` tab located on the left-hand side vertical navigation bar.
 * A listing screen will appear displaying the following columns:
   * **Payment ID:** A unique identifier for each collect, starts with `col_`
-  * **Status:** The status of the collect - succeeded, failed or on\_hold
+  * **Status:** The status of the collect - succeeded, detected, failed or on\_hold
   * **Invoice Amt:** The amount in the currency collected
   * **Date:** The timestamp at which the collect was created
   * **Payment Method:** Indicates whether the collect was made using Local bank Transfer or Wire Transfer
@@ -75,7 +75,7 @@ To view the expanded details for a collect, you can simply click on the Payment 
 | Fees                            | Tazapay Fees for the payment                                                                      |
 | Payment Method                  | The payment method                                                                                |
 | Receiving Account Number / IBAN | The account number (or IBAN in case the currency is EUR) of the receiving account for the payment |
-| Status                          | The status of the collect - its usually `succeeded`. Rarely can be `on_hold` or `failed`          |
+| Status                          | The status of the collect - its usually `succeeded`. Can also be `detected` (for crypto), `on_hold` or `failed` |
 
 **Sender Details**
 
