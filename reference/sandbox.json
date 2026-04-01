@@ -44,6 +44,11 @@
                     "description": "Invoice currency for the checkout session (in uppercase, iso-4217 standard). By default, the invoice currency is the holding currency for the transaction.",
                     "default": ""
                   },
+                  "test_field": {
+                    "type": "string",
+                    "description": "test field.",
+                    "default": ""
+                  },
                   "amount": {
                     "type": "integer",
                     "description": "Amount in cents. For example if you want to charge $10.12 pass 1012 as the value. For decimal handling for various currencies, refer to <a href=\"https://docs.tazapay.com/docs/decimal-currencies\" target=\"_blank\"> the guide here</a>",
@@ -4731,6 +4736,10 @@
                   "currency": {
                     "type": "string",
                     "description": "ISO 4217 standard. This is the payout currency. The amount will be in the payout currency"
+                  },
+                  "test": {
+                    "type": "string",
+                    "description": ""
                   },
                   "beneficiary_details": {
                     "type": "object",
